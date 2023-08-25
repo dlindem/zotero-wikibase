@@ -153,22 +153,22 @@ def itemwrite(itemdata, clear=False): # statements = {'append':[],'replace':[]}
 
 	return xwbitem.id
 
-def importitem(importqid, process_claims=True, classqid=None):
+def importitem(wdqid, wbqid=False, process_claims=True, classqid=None):
 	languages_to_consider = "eu es en de fr".split(" ")
 	
-	print('Will get ' + importqid + ' from wikidata...')
+	print('Will get ' + wdqid + ' from wikidata...')
 	
-	apiurl = 'https://www.wikidata.org/w/api.php?action=wbgetentities&ids=' + importqid + '&format=json'
+	apiurl = 'https://www.wikidata.org/w/api.php?action=wbgetentities&ids=' + wdqid + '&format=json'
 	# print(apiurl)
 	wdjsonsource = requests.get(url=apiurl)
-	if importqid in wdjsonsource.json()['entities']:
-		importitemjson = wdjsonsource.json()['entities'][importqid]
+	if wdqid in wdjsonsource.json()['entities']:
+		importitemjson = wdjsonsource.json()['entities'][wdqid]
 	else:
 		print('Error: Recieved no valid item JSON from Wikidata.')
 		return False
 
 	wbitemjson = {'labels': [], 'aliases': [], 'descriptions': [],
-				  'statements': [{'prop_nr': 'P2', 'type': 'externalid', 'value': importqid}]}
+				  'statements': [{'prop_nr': 'P2', 'type': 'externalid', 'value': wdqid}]}
 
 	# ontology class
 	if classqid:
@@ -212,7 +212,7 @@ def importitem(importqid, process_claims=True, classqid=None):
 					# 	statement = {'prop_nr': wbprop, 'type': 'Item', 'value': targetqid}
 					# else:
 					statement = {'prop_nr': wbprop, 'type': claimtype, 'value': claimval,'action': 'keep'}
-					statement['references'] = [{'prop_nr': 'P2', 'type': 'externalid', 'value': importqid}]
+					statement['references'] = [{'prop_nr': 'P2', 'type': 'externalid', 'value': wdqid}]
 				wbitemjson['statements'].append(statement)
 	# process sitelinks
 	if 'sitelinks' in importitemjson:
@@ -222,7 +222,7 @@ def importitem(importqid, process_claims=True, classqid=None):
 				print(wpurl)
 				wbitemjson['statements'].append({'prop_nr':config.wd_sitelinks_prop,'type':'url','value':wpurl})
 
-	wbitemjson['qid'] = False  # if False, then create new item
+	wbitemjson['qid'] = wbqid  # if False, then create new item. If wbqid given, prop-values are transferred to that item using action 'keep' [existing values]
 	result_qid = itemwrite(wbitemjson)
 	print('Wikidata item import successful.')
 	return result_qid

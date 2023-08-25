@@ -1,5 +1,6 @@
 {
   "filename": "languages.json",
+  "comment": "Keys are ISO3 three-letter codes. This data was got from Wikidata, in August 2ß23",
   "mapping": {
     "aar": {
       "enlabel": "Afar",

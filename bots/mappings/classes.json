@@ -1,0 +1,13 @@
+{
+  "filename": "classes.json",
+  "comment": "These ontology classes are used for instance-of statements (e.g. 'English' instance of 'Language'). 'ontology_class' is the class that groups these classes.",
+  "mapping:" {
+  "ontology_class": "",
+  "language": "",
+  "bibitem": "",
+  "bibitem_type": "",
+  "person": "",
+  "organization": "",
+  "journal": ""
+}
+}

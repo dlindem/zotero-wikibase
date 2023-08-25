@@ -1,0 +1,31 @@
+{
+  "filename": "properties.json",
+  "comment": "mapping keys are wikibase properties",
+  "mapping:" {
+  "P1": {
+    "wdprop": null,
+    "type": "ExternalId",
+    "enlabel": "Wikidata Entity"
+  },
+  "P2": {
+    "wdprop": "P1630",
+    "type": "String",
+    "enlabel": "formatter URL"
+  },
+  "P3": {
+    "wdprop": "P1921",
+    "type": "String",
+    "enlabel": "formatter URI for RDF resource"
+  },
+  "P4": {
+    "wdprop": "P279",
+    "type": "WikibaseItem",
+    "enlabel": "subclass of"
+  },
+  "P5": {
+    "wdprop": "P31",
+    "type": "WikibaseItem",
+    "enlabel": "instance of"
+  }
+}
+}

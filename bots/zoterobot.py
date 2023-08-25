@@ -1,5 +1,8 @@
-import requests, time, re, json, config
-from config_private import zotero_group_id, zotero_api_key
+import requests, time, re, json
+from config import zotero_group_id
+from config.private import zotero_api_key
+from pyzotero import zotero
+pyzot = zotero.Zotero(zotero_group_id,'group',zotero_api_key) # Zotero LexBib group
 
 citations_cache = {}
 with open('data/citations_cache.jsonl') as jsonlfile:
@@ -45,4 +48,7 @@ def getcitation(zotitemid):
 
 # testitem = "HERCJU9P"
 # print(getcitation(testitem))
+
+def getzotitem(zotitemid):
+	pass
 
