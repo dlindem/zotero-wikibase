@@ -45,9 +45,9 @@ def packstatements(statements, wbitem=None, qualifiers=False, references=False):
 			packed_references = []
 		snaktype = WikibaseSnakType.KNOWN_VALUE
 		if 'value' in statement:
-			if statement['value'] == False: # novalue statement
+			if statement['value'] == False: # unknown value statement
 				statement['value'] == None
-				snaktype = WikibaseSnakType.NO_VALUE
+				snaktype = WikibaseSnakType.UNKNOWN_VALUE
 
 		actions = {
 		'append': ActionIfExists.APPEND_OR_REPLACE,
@@ -91,13 +91,13 @@ def packstatements(statements, wbitem=None, qualifiers=False, references=False):
 def itemwrite(itemdata, clear=False): # statements = {'append':[],'replace':[]}
 	if itemdata['qid'] == False:
 		xwbitem = wbi.item.new()
-		print('Will write to new Q-item')
+		print('Will write to new Q-item', end="")
 	elif itemdata['qid'].startswith('Q'):
 		xwbitem = wbi.item.get(entity_id=itemdata['qid'])
-		print('Will write to existing item '+itemdata['qid'])
+		print('Will write to existing item '+itemdata['qid'], end="")
 	elif itemdata['qid'].startswith('P'):
 		xwbitem = wbi.property.get(entity_id=itemdata['qid'])
-		print('Will write to existing property '+itemdata['qid'])
+		print('Will write to existing property '+itemdata['qid'], end="")
 	else:
 		print('No Qid given.')
 		return False
@@ -137,10 +137,10 @@ def itemwrite(itemdata, clear=False): # statements = {'append':[],'replace':[]}
 	d = False
 	while d == False:
 		try:
-			print('Writing to LexBib Wikibase...')
+			print(f"...now writing to {config.wikibase_name}...", end="")
 			r = xwbitem.write(clear=clear)
 			d = True
-			print('Successfully written to entity: '+xwbitem.id)
+			print('successfully written to entity: '+xwbitem.id)
 		except Exception:
 			ex = traceback.format_exc()
 			print(ex)
