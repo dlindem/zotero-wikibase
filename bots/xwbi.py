@@ -10,9 +10,8 @@ from wikibaseintegrator.datatypes.url import URL
 from wikibaseintegrator.wbi_config import config as wbi_config
 from wikibaseintegrator import wbi_helpers
 from wikibaseintegrator.wbi_enums import ActionIfExists, WikibaseSnakType
-import config
-from config_private import wb_bot_user
-from config_private import wb_bot_pwd
+from bots import config
+from bots import config_private
 
 # from wikibaseintegrator.models.claims import Claims
 
@@ -21,11 +20,11 @@ wbi_config['MEDIAWIKI_API_URL'] = config.api_url
 wbi_config['SPARQL_ENDPOINT_URL'] = config.sparql_endpoint
 wbi_config['WIKIBASE_URL'] = config.wikibase_url
 
-login_instance = wbi_login.Login(user=wb_bot_user, password=wb_bot_pwd)
+login_instance = wbi_login.Login(user=config_private.wb_bot_user, password=config_private.wb_bot_pwd)
 
 wbi = WikibaseIntegrator(login=login_instance)
 
-wd_user_agent = config.wikibase_url+", User "+wb_bot_user
+wd_user_agent = config.wikibase_url+", User "+config_private.wb_bot_user
 
 
 
@@ -96,6 +95,9 @@ def itemwrite(itemdata, clear=False): # statements = {'append':[],'replace':[]}
 	elif itemdata['qid'].startswith('Q'):
 		xwbitem = wbi.item.get(entity_id=itemdata['qid'])
 		print('Will write to existing item '+itemdata['qid'])
+	elif itemdata['qid'].startswith('P'):
+		xwbitem = wbi.property.get(entity_id=itemdata['qid'])
+		print('Will write to existing property '+itemdata['qid'])
 	else:
 		print('No Qid given.')
 		return False
@@ -138,7 +140,7 @@ def itemwrite(itemdata, clear=False): # statements = {'append':[],'replace':[]}
 			print('Writing to LexBib Wikibase...')
 			r = xwbitem.write(clear=clear)
 			d = True
-			print('Successfully written to item: '+xwbitem.id)
+			print('Successfully written to entity: '+xwbitem.id)
 		except Exception:
 			ex = traceback.format_exc()
 			print(ex)

@@ -1,11 +1,11 @@
 import requests, time, re, json
-from config import zotero_group_id
-from config.private import zotero_api_key
+from bots import config
+from bots import config_private
 from pyzotero import zotero
-pyzot = zotero.Zotero(zotero_group_id,'group',zotero_api_key) # Zotero LexBib group
+pyzot = zotero.Zotero(config.zotero_group_id,'group',config_private.zotero_api_key) # Zotero LexBib group
 
 citations_cache = {}
-with open('data/citations_cache.jsonl') as jsonlfile:
+with open('bots/data/citations_cache.jsonl') as jsonlfile:
 	jsonl = jsonlfile.read().split('\n')
 	for line in jsonl:
 		if line.startswith("{"):
@@ -18,7 +18,7 @@ def getcitation(zotitemid):
 		print(f"Will take citation from cache: {zotitemid}")
 		return citations_cache[zotitemid]
 	print(f'Will now get citation for Zotero ID {zotitemid}')
-	zotapid = 'https://api.zotero.org/groups/'+zotero_group_id+'/items/'+zotitemid
+	zotapid = 'https://api.zotero.org/groups/'+config.zotero_group_id+'/items/'+zotitemid
 	attempts = 0
 	while attempts < 5:
 		attempts += 1
@@ -51,4 +51,9 @@ def getcitation(zotitemid):
 
 def getzotitem(zotitemid):
 	pass
+
+def getexport():
+	exportitems = pyzot.items(tag=config.zotero_export_tag)
+	return exportitems
+
 
