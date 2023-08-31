@@ -1,12 +1,12 @@
 {
   "filename": "zotero_bibtypes.json",
-  "comment": "This mapping (Zotero Item Types to Wikidata) stems from https://github.com/zotero/translators/blob/master/Wikidata%20QuickStatements.js (P. Zumstein)",
+  "comment": "This mapping (Zotero Item Types to Wikidata) is based on https://github.com/zotero/translators/blob/master/Wikidata%20QuickStatements.js (P. Zumstein)",
   "mapping": {
     "artwork": "Q838948",
     "audioRecording": "Q30070318",
     "bill": "Q686822",
     "blogPost": "Q17928402",
-    "book": "Q3331189",
+    "book": "Q571",
     "bookSection": "Q1980247",
     "case": "Q2334719",
     "computerProgram": "Q40056",
