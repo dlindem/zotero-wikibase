@@ -2,6 +2,7 @@ from bots import xwbi
 from bots import config
 import requests
 
+
 def rewrite_properties_mapping():
     properties = config.load_mapping('properties')
 
@@ -38,8 +39,8 @@ def rewrite_properties_mapping():
 
     print('\nSuccessfully stored properties mapping.')
 
+
 def import_wikidata_entity(wdid, wbid=False, process_claims=True, classqid=None):
-    
     print('Will get ' + wdid + ' from wikidata...')
     apiurl = 'https://www.wikidata.org/w/api.php?action=wbgetentities&ids=' + wdid + '&format=json'
     # print(apiurl)
@@ -49,12 +50,12 @@ def import_wikidata_entity(wdid, wbid=False, process_claims=True, classqid=None)
     else:
         print('Error: Received no valid item JSON from Wikidata.')
         return False
-        
+
     wbitemjson = {'labels': [], 'aliases': [], 'descriptions': [],
                   'statements': [{'prop_nr': config.prop_wikidata_entity, 'type': 'ExternalId', 'value': wdid}]}
     if classqid:
         wbitemjson['statements'].append({'prop_nr': config.prop_instanceof, 'type': 'Item', 'value': classqid})
-        
+
     # process labels
     for lang in importitemjson['labels']:
         if lang in config.label_languages:
