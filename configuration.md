@@ -6,7 +6,7 @@ By default, it represents the following using 'item statements' (object properti
 
 Creator names, or any 'string' (literal string value) property you specify are prepared for entity reconciliation using OpenRefine. Reconciliation results from Wikidata and/or from your own Wikibase (that makes sense if the entities you want to find already exist on your Wikibase) are accepted for re-feeding your Wikibase.
 
-Identifiers (ISBN, ISSN, OCLC, and what you specify that my occur in the EXTRA field) are normalized and linked using 'external-id' properties.
+Identifiers (the Zotero Item ID, ISBN, ISSN, OCLC, and what you specify that my occur in the EXTRA field) are normalized and linked using 'external-id' properties.
 
 # Installation and Configuration
 
@@ -41,4 +41,12 @@ You need a zotero user with read and write access to the Zotero group you want t
     * You can specify existing properties to use, or create new properties along the process. You are able to map fields differently according to the item type. For example, you may want to have titles of books mapped to a different property than titles of television broadcasts.
   * The script asks you then whether you want to do the same with the creator types present in the ingested dataset.
   * When that is done, the script transforms the Zotero API output, and uploads it to your Wikibase.
-    * Zotero items are patched in a way you specify (you can have the Wikibase URI written to the EXTRA field, attached as URI link attachment). In any case, successfully exported items will be tagged with the tag you specify, such as `on-wikibase`. 
+    * Zotero items are patched in a way you specify (you can have the Wikibase URI written to the EXTRA field, attached as URI link attachment). In any case, successfully exported items will be tagged with the tag you specify, such as `on-wikibase`.
+
+## Details about Zotero fields and how they are processed
+* Creators: Creator given and family names, together with a string consisting of the full name, and the list position number, are stored as 'string' qualifiers to an 'unknown value' statement. After reconciliation, the 'unknown value' of that statement will be replaced with the item representing the natural person (or organization).
+* Languages: The tool expects by default a three-digit ISO-639-3 or a two-digit ISO-639-1 language code. Language names (e.g. worldcat pushes names like 'English' to the language field) can also be mapped to language items; the user is prompted for providing the correspondent ISO-639-3 code in cases where the literal is not already mapped.
+* ISBN are converted into pure digits (deleting the hyphens), and linked to a ISBN-13 or ISBN-10 property, according to their length. This is how Wikidata does this.
+* ISSN are normalized: four digits - hyphen - four digits.
+* OCLC (and other identifiers that Zotero import 'translators' send to the EXTRA field) are found using regex patterns, and linked to the specified 'external-id' property. The user can specify 'formatter URL' and 'formatter URI for RDF resource' patterns on the wikibase, so that the identifiers become clickable and accessible as full URI.
+* Any other field is mapped to a 'string' property. As said above, you are able to link fields differently per item type (this is also true for creators, e.g., that you may want to use different properties for authors of articles and authors of audio recordings.) If you want to reconcile e.g. publishers, or places, you provide an 'item' property which is used for replacing the 'string' property statement after reconciliation.
