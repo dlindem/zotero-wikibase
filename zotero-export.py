@@ -32,19 +32,23 @@ for item in data:
         choices = ["0", "1", "2"]
         choice = None
         while choice not in choices:
-            choice = input(f"\nDo you want to import that item to your Wikibase and use it to represent '{itemtype}'?\n Enter 1 for import as new item, 2 for import to a known Wikibase Qid, 0 for no.")
+            choice = input(
+                f"\nDo you want to import that item to your Wikibase and use it to represent '{itemtype}'?\n Enter 1 for import as new item, 2 for import to a known Wikibase Qid, 0 for no.")
             print(f"\n{choice}")
         if choice == "1":
-            newitem = littlehelpers.import_wikidata_entity(wikidatamapping['mapping'][itemtype], wbid=False, classqid=config.class_bibitem_type)
+            newitem = littlehelpers.import_wikidata_entity(wikidatamapping['mapping'][itemtype], wbid=False,
+                                                           classqid=config.class_bibitem_type)
             zoteromapping['mapping'][itemtype]['bibtypeqid'] = newitem
             config.dump_mapping(zoteromapping)
         elif choice == "2":
             qid = input('Enter Qid to use for item import (e.g. "Q15"): ')
-            newitem = littlehelpers.import_wikidata_entity(wikidatamapping['mapping'][itemtype], wbid=qid, classqid=config.class_bibitem_type)
+            newitem = littlehelpers.import_wikidata_entity(wikidatamapping['mapping'][itemtype], wbid=qid,
+                                                           classqid=config.class_bibitem_type)
             zoteromapping['mapping'][itemtype]['bibtypeqid'] = newitem
             config.dump_mapping(zoteromapping)
         elif choice == "0":
-            print('OK. This item type will be excluded from be processed, until you define a mapping in a future run of this script.')
+            print(
+                'OK. This item type will be excluded from be processed, until you define a mapping in a future run of this script.')
             excluded_types.append(itemtype)
     else:
         print(f"Will use existing mapping: {itemtype} > {zoteromapping['mapping'][itemtype]['bibtypeqid']}")
@@ -62,9 +66,10 @@ if fieldcheck == "1":
     for item in data:
         itemtype = item['data']['itemType']
         for fieldname in item['data']:
-            if item['data'][fieldname] == "": # empty field, won't ask for a mapping
+            if item['data'][fieldname] == "":  # empty field, won't ask for a mapping
                 continue
-            if fieldname in fields_to_exclude or itemtype+fieldname in seen_fields or fieldname not in zoteromapping['mapping'][itemtype]['fields']:
+            if fieldname in fields_to_exclude or itemtype + fieldname in seen_fields or fieldname not in \
+                    zoteromapping['mapping'][itemtype]['fields']:
                 print(f"Skipping {itemtype}>{fieldname}")
                 continue
             if zoteromapping['mapping'][itemtype]['fields'][fieldname]['wbprop'] == False:
@@ -73,7 +78,8 @@ if fieldcheck == "1":
             print(f"\nWe'll now define how to proceed with '{fieldname}' in item type '{itemtype}'...")
             datatype = zoteromapping['mapping'][itemtype]['fields'][fieldname]['dtype']
             if zoteromapping['mapping'][itemtype]['fields'][fieldname]['wbprop']:
-                print(f"Will use existing mapping: {fieldname} > {zoteromapping['mapping'][itemtype]['fields'][fieldname]['wbprop']}")
+                print(
+                    f"Will use existing mapping: {fieldname} > {zoteromapping['mapping'][itemtype]['fields'][fieldname]['wbprop']}")
             else:
                 # check if same fieldname is mapped elsewhere
                 print(f"Checking if a field with name {fieldname} is mapped for other item types...")
@@ -83,7 +89,8 @@ if fieldcheck == "1":
                     if fieldname in zoteromapping['mapping'][zoterotype]['fields']:
                         if zoteromapping['mapping'][zoterotype]['fields'][fieldname]['wbprop']:
                             suggested_wbprop = zoteromapping['mapping'][zoterotype]['fields'][fieldname]['wbprop']
-                            print(f"For a field with the name {fieldname}, in type {zoterotype}, '{suggested_wbprop}' is used.")
+                            print(
+                                f"For a field with the name {fieldname}, in type {zoterotype}, '{suggested_wbprop}' is used.")
                 choice = ""
                 choices = ["1", "2", "3", "4"]
                 while choice not in choices:
@@ -126,13 +133,17 @@ if fieldcheck == "1":
                         choice2 = ""
                         choices2 = ["1", "2", "3", "4"]
                         while choice2 not in choices2:
-                            choice2 = input(f"\nInput '1' for importing a Wikidata property for this as new property;\nInput '2' for overriding an existing property of datatype {datatype} with a Wikidata import;\nInput '3' for creating a new one without Wikidata import;\nInput '4' for using an existing Wikibase property with datatype {datatype}.")
+                            choice2 = input(
+                                f"\nInput '1' for importing a Wikidata property for this as new property;\nInput '2' for overriding an existing property of datatype {datatype} with a Wikidata import;\nInput '3' for creating a new one without Wikidata import;\nInput '4' for using an existing Wikibase property with datatype {datatype}.")
                             if choice2 == "1":
-                                wdprop = input("Input the wikidata property ID to import with the preceding letter, e.g. 'P121': ")
+                                wdprop = input(
+                                    "Input the wikidata property ID to import with the preceding letter, e.g. 'P121': ")
                                 wbprop_to_use = littlehelpers.import_wikidata_entity(wdprop)
                             if choice2 == "2":
-                                wdprop = input("Write the wikidata property ID to import with the preceding letter, e.g. 'P121': ")
-                                wbprop = input("Write the ID of the wikibase property to be enriched with the Wikidata import, with the preceding letter, e.g. 'P21': ")
+                                wdprop = input(
+                                    "Write the wikidata property ID to import with the preceding letter, e.g. 'P121': ")
+                                wbprop = input(
+                                    "Write the ID of the wikibase property to be enriched with the Wikidata import, with the preceding letter, e.g. 'P21': ")
                                 wbprop_to_use = littlehelpers.import_wikidata_entity(wdprop, wbid=wbprop)
                             if choice2 == "3":
                                 wbprop_to_useentity = xwbi.wbi.property.new(datatype=config.datatypes_mapping[datatype])
@@ -151,15 +162,17 @@ if fieldcheck == "1":
                                         print(ex)
                                         presskey = input('Press key for retry.')
                             if choice2 == "4":
-                                wbprop = input("Write the ID of the wikibase property to be used for this, with the preceding letter, e.g. 'P21': ")
+                                wbprop = input(
+                                    "Write the ID of the wikibase property to be used for this, with the preceding letter, e.g. 'P21': ")
                                 wbprop_to_use = wbprop
                             zoteromapping['mapping'][itemtype]['fields'][fieldname]['wbprop'] = wbprop_to_use
                             config.dump_mapping(zoteromapping)
-                            seen_fields.append(itemtype+fieldname)
+                            seen_fields.append(itemtype + fieldname)
 
 creatorcheck = None
 while creatorcheck != "1" and creatorcheck != "0":
-    creatorcheck = input(f"\nDo you want to check the creatorTypes mapping of the ingested dataset? '1' for yes, '0' for no.")
+    creatorcheck = input(
+        f"\nDo you want to check the creatorTypes mapping of the ingested dataset? '1' for yes, '0' for no.")
 if creatorcheck == "1":
     # check mapping of zotero creators
     creators_to_exclude = []
@@ -170,7 +183,7 @@ if creatorcheck == "1":
             continue
         for creatordict in item['data']['creators']:
             creatortype = creatordict['creatorType']
-            if itemtype+creatortype in seen_creators:
+            if itemtype + creatortype in seen_creators:
                 continue
             print(f"\nWe'll now define how to proceed with '{creatortype}' in item type '{itemtype}'...")
             if zoteromapping['mapping'][itemtype]['creatorTypes'][creatortype]['wbprop'] == False:
@@ -189,8 +202,10 @@ if creatorcheck == "1":
                 for zoterotype in zoteromapping['mapping']:
                     if creatortype in zoteromapping['mapping'][zoterotype]['creatorTypes']:
                         if zoteromapping['mapping'][zoterotype]['creatorTypes'][creatortype]['wbprop']:
-                            suggested_wbprop = zoteromapping['mapping'][zoterotype]['creatorTypes'][creatortype]['wbprop']
-                            print(f"For a creatorType with the name {creatortype}, in type {zoterotype}, '{suggested_wbprop}' is used.")
+                            suggested_wbprop = zoteromapping['mapping'][zoterotype]['creatorTypes'][creatortype][
+                                'wbprop']
+                            print(
+                                f"For a creatorType with the name {creatortype}, in type {zoterotype}, '{suggested_wbprop}' is used.")
                 choice = ""
                 choices = ["1", "2", "3", "4"]
                 while choice not in choices:
@@ -219,16 +234,21 @@ if creatorcheck == "1":
                         choice2 = ""
                         choices2 = ["1", "2", "3", "4"]
                         while choice2 not in choices2:
-                            choice2 = input(f"\nInput '1' for importing a Wikidata property of type WikibaseItem for this as new property;\nInput '2' for overriding an existing property of datatype WikibaseItem with a Wikidata import;\nInput '3' for creating a new one without Wikidata import;\nInput '4' for using an existing Wikibase property with datatype WikibaseItem.")
+                            choice2 = input(
+                                f"\nInput '1' for importing a Wikidata property of type WikibaseItem for this as new property;\nInput '2' for overriding an existing property of datatype WikibaseItem with a Wikidata import;\nInput '3' for creating a new one without Wikidata import;\nInput '4' for using an existing Wikibase property with datatype WikibaseItem.")
                             if choice2 == "1":
-                                wdprop = input("Input the wikidata property ID to import with the preceding letter, e.g. 'P121': ")
+                                wdprop = input(
+                                    "Input the wikidata property ID to import with the preceding letter, e.g. 'P121': ")
                                 wbprop_to_use = littlehelpers.import_wikidata_entity(wdprop)
                             if choice2 == "2":
-                                wdprop = input("Write the wikidata property ID to import with the preceding letter, e.g. 'P121': ")
-                                wbprop = input("Write the ID of the wikibase property to be enriched with the Wikidata import, with the preceding letter, e.g. 'P21': ")
+                                wdprop = input(
+                                    "Write the wikidata property ID to import with the preceding letter, e.g. 'P121': ")
+                                wbprop = input(
+                                    "Write the ID of the wikibase property to be enriched with the Wikidata import, with the preceding letter, e.g. 'P21': ")
                                 wbprop_to_use = littlehelpers.import_wikidata_entity(wdprop, wbid=wbprop)
                             if choice2 == "3":
-                                wbprop_to_useentity = xwbi.wbi.property.new(datatype=config.datatypes_mapping[WikibaseItem])
+                                wbprop_to_useentity = xwbi.wbi.property.new(
+                                    datatype=config.datatypes_mapping[WikibaseItem])
                                 wbprop_to_useentity.labels.set('en', creatortype)
                                 print('enlabel set: ' + creatortype)
                                 d = False
@@ -244,11 +264,12 @@ if creatorcheck == "1":
                                         print(ex)
                                         presskey = input('Press key for retry.')
                             if choice2 == "4":
-                                wbprop = input("Write the ID of the wikibase property to be used for this, with the preceding letter, e.g. 'P21': ")
+                                wbprop = input(
+                                    "Write the ID of the wikibase property to be used for this, with the preceding letter, e.g. 'P21': ")
                                 wbprop_to_use = wbprop
                             zoteromapping['mapping'][itemtype]['creatorTypes'][creatortype]['wbprop'] = wbprop_to_use
                             config.dump_mapping(zoteromapping)
-                            seen_creators.append(itemtype+creatortype)
+                            seen_creators.append(itemtype + creatortype)
 
 # iterate through items / zotero fields and produce wikibase upload
 iso3mapping = config.load_mapping('iso-639-3')
@@ -263,8 +284,9 @@ for item in data:
     # instance of and bibItem type
     itemtype = item['data']['itemType']
     statements = [
-        {'type': 'WikibaseItem', 'prop_nr':config.prop_instanceof, 'value': config.class_bibitem},
-        {'type': 'WikibaseItem', 'prop_nr':config.prop_itemtype, 'value': zoteromapping['mapping'][itemtype]['bibtypeqid']}
+        {'type': 'WikibaseItem', 'prop_nr': config.prop_instanceof, 'value': config.class_bibitem},
+        {'type': 'WikibaseItem', 'prop_nr': config.prop_itemtype,
+         'value': zoteromapping['mapping'][itemtype]['bibtypeqid']}
     ]
     # fields with special meaning / special procedure
     ## Zotero ID and Fulltext PDF attachment(s)
@@ -273,21 +295,26 @@ for item in data:
         children = zoterobot.getchildren(item['data']['key'])
         for child in children:
             if child['data']['contentType'] == "application/pdf":
-                attqualis.append({'prop_nr': config.prop_zotero_PDF, 'type':'ExternalId', 'value': child['data']['key']})
-            if config.store_qid_in_attachment and child['data']['contentType'] == "" and child['data']['url'].startswith(config.entity_ns):
-                qid = child['data']['url'].replace(config.entity_ns,"")
-                print('Found link attachment: This item is linked to '+config.entity_ns+qid)
+                attqualis.append(
+                    {'prop_nr': config.prop_zotero_PDF, 'type': 'ExternalId', 'value': child['data']['key']})
+            if config.store_qid_in_attachment and child['data']['contentType'] == "" and child['data'][
+                'url'].startswith(config.entity_ns):
+                qid = child['data']['url'].replace(config.entity_ns, "")
+                print('Found link attachment: This item is linked to ' + config.entity_ns + qid)
                 newitem = False
     else:
         children = []
-    statements.append({'prop_nr': config.prop_zotero_item, 'type': 'ExternalId', 'value': item['data']['key'], 'qualifiers': attqualis})
+    statements.append({'prop_nr': config.prop_zotero_item, 'type': 'ExternalId', 'value': item['data']['key'],
+                       'qualifiers': attqualis})
 
     ## archiveLocation (special for items stemming from LexBib)
     if 'archiveLocation' in item['data']:
         if item['data']['archiveLocation'].startswith('https://lexbib.elex.is/entity/'):
-            statements.append({'type': 'externalid', 'prop_nr':'P10', 'value': item['data']['archiveLocation'].replace("https://lexbib.elex.is/entity/","")})
+            statements.append({'type': 'externalid', 'prop_nr': 'P10',
+                               'value': item['data']['archiveLocation'].replace("https://lexbib.elex.is/entity/", "")})
         if item['data']['archiveLocation'].startswith('http://lexbib.elex.is/entity/'):
-            statements.append({'type': 'externalid', 'prop_nr':'P10', 'value': item['data']['archiveLocation'].replace("http://lexbib.elex.is/entity/","")})
+            statements.append({'type': 'externalid', 'prop_nr': 'P10',
+                               'value': item['data']['archiveLocation'].replace("http://lexbib.elex.is/entity/", "")})
         item['data']['archiveLocation'] = ""
 
     ## title to labels
@@ -299,38 +326,46 @@ for item in data:
     ## language
     if 'language' in item['data']:
         languageqid = False
-        if len(item['data']['language']) == 2: # should be a ISO-639-1 code
+        if len(item['data']['language']) == 2:  # should be a ISO-639-1 code
             if item['data']['language'].lower() in iso1mapping['mapping']:
                 item['data']['language'] = iso1mapping['mapping'][item['data']['language'].lower()]
                 languageqid = iso3mapping['mapping'][item['data']['language']]['wbqid']
-                print('Language field: Found two-digit language code, mapped to '+iso3mapping['mapping'][item['data']['language'].lower()]['enlabel'], languageqid)
-        elif len(item['data']['language']) == 3: # should be a ISO-639-3 code
+                print('Language field: Found two-digit language code, mapped to ' +
+                      iso3mapping['mapping'][item['data']['language'].lower()]['enlabel'], languageqid)
+        elif len(item['data']['language']) == 3:  # should be a ISO-639-3 code
             if item['data']['language'].lower() in iso3mapping['mapping']:
                 languageqid = iso3mapping['mapping'][item['data']['language'].lower()]['wbqid']
-                print('Language field: Found three-digit language code, mapped to '+iso3mapping['mapping'][item['data']['language'].lower()]['enlabel'],languageqid)
-        if languageqid == False: # Can't identify language using ISO 639-1 or 639-3
+                print('Language field: Found three-digit language code, mapped to ' +
+                      iso3mapping['mapping'][item['data']['language'].lower()]['enlabel'], languageqid)
+        if languageqid == False:  # Can't identify language using ISO 639-1 or 639-3
             if item['data']['language'] in language_literals['mapping']:
                 languageqid = iso3mapping['mapping'][language_literals['mapping'][item['data']['language']]]['wbqid']
-                print('Language field: Found stored language literal, mapped to '+iso3mapping['mapping'][language_literals['mapping'][item['data']['language']]]['enlabel'])
-            elif len(item['data']['language']) > 1: # if there is a string that could be useful
+                print('Language field: Found stored language literal, mapped to ' +
+                      iso3mapping['mapping'][language_literals['mapping'][item['data']['language']]]['enlabel'])
+            elif len(item['data']['language']) > 1:  # if there is a string that could be useful
                 print(f"Could not match the field content '{item['data']['language']}' to any language.")
                 choice = None
                 choices = ["0", "1"]
                 while choice not in choices:
-                    choice = input(f"Do you want to store '{item['data']['language']}' and associate that string to a language? '1' for yes, '0' for no.")
+                    choice = input(
+                        f"Do you want to store '{item['data']['language']}' and associate that string to a language? '1' for yes, '0' for no.")
                 if choice == "1":
                     iso3 = None
                     while iso3 not in iso3mapping['mapping']:
-                        iso3 = input(f"Provide the ISO-639-3 three-letter code you want to associate to '{item['data']['language']}':")
+                        iso3 = input(
+                            f"Provide the ISO-639-3 three-letter code you want to associate to '{item['data']['language']}':")
                     languageqid = iso3mapping['mapping'][iso3]['wbqid']
-        if languageqid == None: # Language item is still not on the wikibase (got 'None' from iso3mapping)
+        if languageqid == None:  # Language item is still not on the wikibase (got 'None' from iso3mapping)
             languagewdqid = iso3mapping['mapping'][item['data']['language']]['wdqid']
-            print(f"No item defined for this language on your Wikibase. This language is {languagewdqid} on Wikidata. I'll import that and use it from now on.")
+            print(
+                f"No item defined for this language on your Wikibase. This language is {languagewdqid} on Wikidata. I'll import that and use it from now on.")
             languageqid = littlehelpers.import_wikidata_entity(languagewdqid, classqid=config.class_language)
             iso3mapping['mapping'][item['data']['language']]['wbqid'] = languageqid
             config.dump_mapping(iso3mapping)
         if languageqid and zoteromapping['mapping'][itemtype]['fields']['language']['wbprop']:
-            statements.append({'prop_nr':zoteromapping['mapping'][itemtype]['fields']['language']['wbprop'], 'type':'WikibaseItem', 'value':languageqid})
+            statements.append(
+                {'prop_nr': zoteromapping['mapping'][itemtype]['fields']['language']['wbprop'], 'type': 'WikibaseItem',
+                 'value': languageqid})
 
     ## date (write parsedDate not date to prop foreseen for date in this itemtype)
     if 'parsedDate' in item['meta'] and zoteromapping['mapping'][itemtype]['fields']['date']['wbprop']:
@@ -352,12 +387,14 @@ for item in data:
                 precision = 11
             else:
                 timestr += "-01T00:00:00Z"
-            statements.append({'prop_nr': zoteromapping['mapping'][itemtype]['fields']['date']['wbprop'], 'type': 'Time', 'value': timestr, 'precision': precision})
+            statements.append(
+                {'prop_nr': zoteromapping['mapping'][itemtype]['fields']['date']['wbprop'], 'type': 'Time',
+                 'value': timestr, 'precision': precision})
 
     ## ISBN
     if 'ISBN' in item['data']:
         val = item['data']['ISBN'].replace("-", "")  # normalize ISBN
-        valsearch = re.search(r'^\d+', val) # only take the first block of digits (i.e., only the first ISBN listed)
+        valsearch = re.search(r'^\d+', val)  # only take the first block of digits (i.e., only the first ISBN listed)
         if valsearch:
             val = valsearch.group(0)
             if len(val) == 10:
@@ -365,7 +402,7 @@ for item in data:
             elif len(val) == 13:
                 statements.append({"prop_nr": config.prop_isbn_13, "type": "ExternalId", "value": val})
             else:
-                print('Could not process ISBN field content: '+item['data']['ISBN'])
+                print('Could not process ISBN field content: ' + item['data']['ISBN'])
 
     ## normalize ISSN (writing is in main field iteration below)
     if 'ISSN' in item['data']:
@@ -377,14 +414,14 @@ for item in data:
     ## Identifiers in EXTRA field
     if 'extra' in item['data']:
         # Qid of the Wikibase to use
-        if config.store_qid_in_extra and qid == False: # if user has specified that Qid should be stored in EXTRA field (and it has not been found in a link attachment)
+        if config.store_qid_in_extra and qid == False:  # if user has specified that Qid should be stored in EXTRA field (and it has not been found in a link attachment)
             qid_regex = re.search(config.entity_ns + r"(Q[0-9]+)", item['data']['extra'])
             if qid_regex:
                 qid = qid_regex.group(1)
                 newitem = False
-                print('This BibItem already exists on the wikibase as '+qid)
+                print('This BibItem already exists on the wikibase as ' + qid)
             else:
-                qid = False # a new BibItem will be created on the Wikibase
+                qid = False  # a new BibItem will be created on the Wikibase
                 newitem = True
                 print('This BibItem still does not exist on the wikibase')
         # user-defined identifier patterns
@@ -424,23 +461,29 @@ for item in data:
             #     creator["given"] = "Various"
             ### TODO: non dropping particles / middle names
 
-            creatorqualis = [{"prop_nr": config.prop_series_ordinal, "type": "string", "value": str(listpos[creator['creatorType']])}]
+            creatorqualis = [{"prop_nr": config.prop_series_ordinal, "type": "string",
+                              "value": str(listpos[creator['creatorType']])}]
             if 'name' in creator:
-                creatorqualis.append({"prop_nr": config.prop_source_literal, "type": "string", "value": creator['name']})
+                creatorqualis.append(
+                    {"prop_nr": config.prop_source_literal, "type": "string", "value": creator['name']})
             elif 'firstName' in creator:
                 if creator['firstName'] != "":
                     creatorqualis += [{"prop_nr": config.prop_source_literal, "type": "string",
                                        "value": creator["firstName"] + " " + creator["lastName"]},
-                                      {"prop_nr": config.prop_given_name_source_literal, "type": "string", "value": creator["firstName"]},
-                                      {"prop_nr": config.prop_family_name_source_literal, "type": "string", "value": creator["lastName"]}]
+                                      {"prop_nr": config.prop_given_name_source_literal, "type": "string",
+                                       "value": creator["firstName"]},
+                                      {"prop_nr": config.prop_family_name_source_literal, "type": "string",
+                                       "value": creator["lastName"]}]
                 else:
-                    creatorqualis.append({"prop_nr": config.prop_source_literal, "type": "string", "value": creator["lastName"]})
+                    creatorqualis.append(
+                        {"prop_nr": config.prop_source_literal, "type": "string", "value": creator["lastName"]})
             else:
-                creatorqualis.append({"prop_nr": config.prop_source_literal, "type": "string", "value": creator["lastName"]})
+                creatorqualis.append(
+                    {"prop_nr": config.prop_source_literal, "type": "string", "value": creator["lastName"]})
             statements.append({
                 "prop_nr": creatorprop,
                 "type": "item",
-                "value": False, # this produces an "UNKNOWN VALUE" statement
+                "value": False,  # this produces an "UNKNOWN VALUE" statement
                 "qualifiers": creatorqualis
             })
 
@@ -449,7 +492,7 @@ for item in data:
     for fieldname in item['data']:
         if fieldname in fields_to_exclude or fieldname not in zoteromapping['mapping'][itemtype]['fields']:
             continue
-        if item['data'][fieldname] == "": # no empty strings
+        if item['data'][fieldname] == "":  # no empty strings
             continue
         if zoteromapping['mapping'][itemtype]['fields'][fieldname]['wbprop']:
             if zoteromapping['mapping'][itemtype]['fields'][fieldname]['dtype'] == "String":
@@ -463,33 +506,23 @@ for item in data:
                     'prop_nr': zoteromapping['mapping'][itemtype]['fields'][fieldname]['wbprop'],
                     'type': "WikibaseItem",
                     'value': False,
-                    'qualifiers': [{'type': 'String', 'prop_nr': config.prop_source_literal, 'value': item['data'][fieldname].strip()}]
+                    'qualifiers': [{'type': 'String', 'prop_nr': config.prop_source_literal,
+                                    'value': item['data'][fieldname].strip()}]
                 })
     # add description
     descriptions = []
     for lang in config.label_languages:
-        descriptions.append({'lang':lang, 'value':f"{item['meta']['creatorSummary']} {pubyear}"})
+        descriptions.append({'lang': lang, 'value': f"{item['meta']['creatorSummary']} {pubyear}"})
 
-    itemdata = {'qid':qid, 'statements': statements, 'descriptions': descriptions, 'labels': labels}
+    itemdata = {'qid': qid, 'statements': statements, 'descriptions': descriptions, 'labels': labels}
     # debug output
     with open(f"parking/testout_{item['data']['key']}.json", 'w', encoding="utf-8") as file:
-        json.dump({'zotero':item, 'output':itemdata}, file, indent=2)
+        json.dump({'zotero': item, 'output': itemdata}, file, indent=2)
     # do upload
     qid = xwbi.itemwrite(itemdata, clear=False)
     if newitem:
         zoterobot.patch_item(qid=qid, zotitem=item, children=children)
 
 zoterobot.pyzot.delete_tags(config.zotero_export_tag)
-print(f"\nFinished exporting the dataset marked with the tag '{config.zotero_export_tag}'.\nAll the exported items should now have the tag '{config.zotero_on_wikibase_tag}' instead.")
-
-
-
-
-
-
-
-
-
-
-
-
+print(
+    f"\nFinished exporting the dataset marked with the tag '{config.zotero_export_tag}'.\nAll the exported items should now have the tag '{config.zotero_on_wikibase_tag}' instead.")
