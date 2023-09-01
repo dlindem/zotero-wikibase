@@ -69,9 +69,20 @@ def getchildren(zotitemid):
 
 def patch_item(qid=None, zotitem=None, children=[]):
     # communicate with Zotero, write Wikibase entity URI to "extra" and attach URI as link attachment
+    if config.store_qid_in_extra:
+        if config.entity_ns+qid in zotitem['data']['extra']:
+            print('This item already has its Wikibase item URI stored in EXTRA.')
+        else:
+            zotitem['data']['extra'] = config.entity_ns + qid + "\n" + zotitem['data']['extra']
+    tagpresent = False
+    for tag in zotitem['data']['tags']:
+        if tag['tag'] == config.zotero_on_wikibase_tag:
+            tagpresent = True
+    if not tagpresent:
+        zotitem['data']['tags'].append({'tag': config.zotero_on_wikibase_tag})
+    pyzot.update_item(zotitem, last_modified=None)
+        # pyzot.add_tags(zotitem, config.zotero_on_wikibase_tag)
 
-    zotitem['data']['extra'] = config.entity_ns + qid + "\n" + zotitem['data']['extra']
-    pyzot.update_item(zotitem)
     # attempts = 0
     # while attempts < 5:
     # 	attempts += 1
@@ -95,63 +106,66 @@ def patch_item(qid=None, zotitem=None, children=[]):
     # 	sys.exit()
 
     # check for presence of link attachment
-    linkattachment = False
-    for child in children:
-        if child['data']['url'].startswith(config.entity_ns):
-            if child['data']['url'].endswith(qid):
-                print('Correct link attachment already present.')
+
+    if config.store_qid_in_attachment:
+        for child in children:
+            if child['data']['url'].startswith(config.entity_ns):
+                if child['data']['url'].endswith(qid):
+                    print('Correct link attachment already present.')
+                else:
+                    print('Fatal error: Zotero item was linked before to some other Q-id')
             else:
-                print('Fatal error: Zotero item was linked before to some other Q-id')
-        else:
 
-            # attempts = 0
-            # while attempts < 5:
-            # 	attempts += 1
-            # 	r = requests.get(zotapid + "/children")
-            # 	if "200" in str(r):
-            # 		zotitem = r.json()
-            # 		print(zotitemid + ': got zotitem attachment data')
-            # 		break
-            # 	if "400" or "404" in str(r):
-            # 		print(
-            # 			'*** Fatal error: Item ' + zotitemid + ' got ' + str(r) + ', does not exist on Zotero. Will skip.')
-            # 		time.sleep(5)
-            # 		break
-            # 	print('Zotero API GET request failed (' + zotitemid + '), will repeat. Response was ' + str(r))
-            # 	time.sleep(2)
-            #
-            # if attempts < 5:
-            # 	att_presence = None
-            # 	for attachmnt in r.json():
-            # 		if 'title' in attachmnt['data']:
-            # 			if attachmnt['data']['title'] == "LexBib Linked Data":
-            # 				att_presence = True
-            # 				break
-            #
-            # if not att_presence:
-            # attach link to wikibase
-            attachment = [
-                {
-                    "itemType": "attachment",
-                    "parentItem": zotitem['data']['key'],
-                    "linkMode": "linked_url",
-                    "title": config.wikibase_name,
-                    "accessDate": time.strftime("%Y-%m-%dT%H:%M:%SZ"),
-                    "url": config.entity_ns + qid,
-                    "note": '<p>See this item as linked data at <a href="' + config.wikibase_url + '/wiki/Item:' + qid + '">' + config.entity_ns + qid + '</a>',
-                    "tags": [],
-                    "collections": [],
-                    "relations": {},
-                    "contentType": "",
-                    "charset": ""
-                }
-            ]
+                # attempts = 0
+                # while attempts < 5:
+                # 	attempts += 1
+                # 	r = requests.get(zotapid + "/children")
+                # 	if "200" in str(r):
+                # 		zotitem = r.json()
+                # 		print(zotitemid + ': got zotitem attachment data')
+                # 		break
+                # 	if "400" or "404" in str(r):
+                # 		print(
+                # 			'*** Fatal error: Item ' + zotitemid + ' got ' + str(r) + ', does not exist on Zotero. Will skip.')
+                # 		time.sleep(5)
+                # 		break
+                # 	print('Zotero API GET request failed (' + zotitemid + '), will repeat. Response was ' + str(r))
+                # 	time.sleep(2)
+                #
+                # if attempts < 5:
+                # 	att_presence = None
+                # 	for attachmnt in r.json():
+                # 		if 'title' in attachmnt['data']:
+                # 			if attachmnt['data']['title'] == "LexBib Linked Data":
+                # 				att_presence = True
+                # 				break
+                #
+                # if not att_presence:
+                # attach link to wikibase
+                attachment = [
+                    {
+                        "itemType": "attachment",
+                        "parentItem": zotitem['data']['key'],
+                        "linkMode": "linked_url",
+                        "title": config.wikibase_name,
+                        "accessDate": time.strftime("%Y-%m-%dT%H:%M:%SZ"),
+                        "url": config.entity_ns + qid,
+                        "note": '<p>See this item as linked data at <a href="' + config.wikibase_url + '/wiki/Item:' + qid + '">' + config.entity_ns + qid + '</a>',
+                        "tags": [],
+                        "collections": [],
+                        "relations": {},
+                        "contentType": "",
+                        "charset": ""
+                    }
+                ]
 
-            r = requests.post('https://api.zotero.org/groups/' + str(config.zotero_group_id) + '/items',
-                              headers={"Zotero-API-key": config_private.zotero_api_key,
-                                       "Content-Type": "application/json"}, json=attachment)
+                r = requests.post('https://api.zotero.org/groups/' + str(config.zotero_group_id) + '/items',
+                                  headers={"Zotero-API-key": config_private.zotero_api_key,
+                                           "Content-Type": "application/json"}, json=attachment)
 
-            if "200" in str(r):
-                print(f"Link attachment successfully attached to Zotero item {zotitem['data']['key']}.")
+                if "200" in str(r):
+                    print(f"Link attachment successfully attached to Zotero item {zotitem['data']['key']}.")
 
-            pyzot.add_tags(zotitem, config.zotero_on_wikibase_tag)
+
+                # zotitem = pyzot.item(zotitem['data']['key'])
+
