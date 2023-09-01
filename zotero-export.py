@@ -368,11 +368,12 @@ for item in data:
                  'value': languageqid})
 
     ## date (write parsedDate not date to prop foreseen for date in this itemtype)
+    pubyear = ""
     if 'parsedDate' in item['meta'] and zoteromapping['mapping'][itemtype]['fields']['date']['wbprop']:
         year_regex = re.search(r'^[0-9]{4}', item['meta']['parsedDate'])
         month_regex = re.search(r'^[0-9]{4}\-([0-9]{2})', item['meta']['parsedDate'])
         day_regex = re.search(r'^[0-9]{4}\-[0-9]{2}\-([0-9]{2})', item['meta']['parsedDate'])
-        pubyear = ""
+
         if year_regex:
             pubyear = year_regex.group(0)
             timestr = f"+{pubyear}"
@@ -512,7 +513,8 @@ for item in data:
     # add description
     descriptions = []
     for lang in config.label_languages:
-        descriptions.append({'lang': lang, 'value': f"{item['meta']['creatorSummary']} {pubyear}"})
+        creatorsummary = item['meta']['creatorSummary'] if 'creatorSummary' in item['meta'] else ""
+        descriptions.append({'lang': lang, 'value': f"{creatorsummary} {pubyear}"})
 
     itemdata = {'qid': qid, 'statements': statements, 'descriptions': descriptions, 'labels': labels}
     # debug output
@@ -520,8 +522,7 @@ for item in data:
         json.dump({'zotero': item, 'output': itemdata}, file, indent=2)
     # do upload
     qid = xwbi.itemwrite(itemdata, clear=False)
-    if newitem:
-        zoterobot.patch_item(qid=qid, zotitem=item, children=children)
+    zoterobot.patch_item(qid=qid, zotitem=item, children=children)
 
 zoterobot.pyzot.delete_tags(config.zotero_export_tag)
 print(
