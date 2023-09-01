@@ -479,6 +479,9 @@ for item in data:
     if newitem:
         zoterobot.patch_item(qid=qid, zotitem=item, children=children)
 
+zoterobot.pyzot.delete_tags(config.zotero_export_tag)
+print(f"\nFinished exporting the dataset marked with the tag '{config.zotero_export_tag}'.\nAll the exported items should now have the tag '{config.zotero_on_wikibase_tag}' instead.")
+
 
 
 
