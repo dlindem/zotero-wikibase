@@ -58,6 +58,7 @@ identifier_patterns = {
 
 zotero_group_id = 5165329 # integer not string
 zotero_export_tag = "wikibase-export" # exact form of the Zotero tag you use for marking records to be exported
+zotero_on_wikibase_tag = "on-wikibase" # form of the Zotero tag written to successfully exported items
 # zotero_api_key is stored in config.private.py
 
 
