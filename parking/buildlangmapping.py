@@ -3,7 +3,7 @@ import csv, json
 with open('wdlangs.csv', encoding="utf-8") as file:
 	table = csv.DictReader(file)
 
-	langmapping = {'filename': 'languages.json', 'mapping':{}}
+	langmapping = {'filename': 'iso-639-3.json', 'mapping':{}}
 	for row in table:
 		print(str(row))
 		langmapping['mapping'][row['iso3']] = {
