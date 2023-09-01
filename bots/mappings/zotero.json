@@ -359,7 +359,7 @@
           "dtype": "String"
         },
         "series": {
-          "wbprop": null,
+          "wbprop": "P142",
           "dtype": "String"
         },
         "seriesNumber": {
@@ -391,7 +391,7 @@
           "dtype": "Time"
         },
         "numPages": {
-          "wbprop": null,
+          "wbprop": "P140",
           "dtype": "String"
         },
         "language": {
@@ -411,7 +411,7 @@
           "dtype": "Url"
         },
         "accessDate": {
-          "wbprop": null,
+          "wbprop": false,
           "dtype": "Time"
         },
         "archive": {
@@ -480,7 +480,7 @@
           "baseField": "publicationTitle"
         },
         "series": {
-          "wbprop": null,
+          "wbprop": "P142",
           "dtype": "String"
         },
         "seriesNumber": {
@@ -520,7 +520,7 @@
           "dtype": "WikibaseItem"
         },
         "ISBN": {
-          "wbprop": null,
+          "wbprop": false,
           "dtype": "ExternalId"
         },
         "shortTitle": {
@@ -544,7 +544,7 @@
           "dtype": "String"
         },
         "libraryCatalog": {
-          "wbprop": null,
+          "wbprop": false,
           "dtype": "String"
         },
         "callNumber": {
@@ -1258,11 +1258,11 @@
           "dtype": "String"
         },
         "abstractNote": {
-          "wbprop": null,
+          "wbprop": false,
           "dtype": "String"
         },
         "encyclopediaTitle": {
-          "wbprop": null,
+          "wbprop": "P139",
           "dtype": "String",
           "baseField": "publicationTitle"
         },
@@ -1339,11 +1339,11 @@
           "dtype": "String"
         },
         "rights": {
-          "wbprop": null,
+          "wbprop": false,
           "dtype": "String"
         },
         "extra": {
-          "wbprop": null,
+          "wbprop": false,
           "dtype": "String"
         }
       },
@@ -1763,7 +1763,7 @@
           "dtype": "String"
         },
         "publicationTitle": {
-          "wbprop": null,
+          "wbprop": "P143",
           "dtype": "String"
         },
         "volume": {
@@ -1827,7 +1827,7 @@
           "dtype": "String"
         },
         "archiveLocation": {
-          "wbprop": null,
+          "wbprop": false,
           "dtype": "String"
         },
         "libraryCatalog": {
@@ -2056,7 +2056,7 @@
           "dtype": "String"
         },
         "manuscriptType": {
-          "wbprop": null,
+          "wbprop": "P141",
           "dtype": "String",
           "baseField": "type"
         },
@@ -2101,7 +2101,7 @@
           "dtype": "String"
         },
         "callNumber": {
-          "wbprop": null,
+          "wbprop": false,
           "dtype": "String"
         },
         "rights": {
@@ -3130,7 +3130,7 @@
           "dtype": "WikibaseItem"
         },
         "numPages": {
-          "wbprop": null,
+          "wbprop": "P140",
           "dtype": "String"
         },
         "language": {
