@@ -294,6 +294,8 @@ for item in data:
     if item['meta']['numChildren'] > 0:
         children = zoterobot.getchildren(item['data']['key'])
         for child in children:
+            if 'contentType' not in child['data']: # these are notes attachments
+                continue
             if child['data']['contentType'] == "application/pdf":
                 attqualis.append(
                     {'prop_nr': config.prop_zotero_PDF, 'type': 'ExternalId', 'value': child['data']['key']})
@@ -522,8 +524,9 @@ for item in data:
         json.dump({'zotero': item, 'output': itemdata}, file, indent=2)
     # do upload
     qid = xwbi.itemwrite(itemdata, clear=False)
-    zoterobot.patch_item(qid=qid, zotitem=item, children=children)
+    if qid: # if writing was successful (if not, qid is still False)
+        zoterobot.patch_item(qid=qid, zotitem=item, children=children)
 
-zoterobot.pyzot.delete_tags(config.zotero_export_tag)
+# zoterobot.pyzot.delete_tags(config.zotero_export_tag)
 print(
     f"\nFinished exporting the dataset marked with the tag '{config.zotero_export_tag}'.\nAll the exported items should now have the tag '{config.zotero_on_wikibase_tag}' instead.")
