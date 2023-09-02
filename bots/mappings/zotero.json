@@ -427,7 +427,7 @@
           "dtype": "String"
         },
         "callNumber": {
-          "wbprop": null,
+          "wbprop": false,
           "dtype": "String"
         },
         "rights": {
@@ -532,7 +532,7 @@
           "dtype": "Url"
         },
         "accessDate": {
-          "wbprop": null,
+          "wbprop": false,
           "dtype": "Time"
         },
         "archive": {
@@ -567,7 +567,7 @@
           "primary": true
         },
         "contributor": {
-          "wbprop": null,
+          "wbprop": "P131",
           "dtype": "WikibaseItem"
         },
         "editor": {
@@ -1858,7 +1858,7 @@
           "dtype": "WikibaseItem"
         },
         "editor": {
-          "wbprop": null,
+          "wbprop": "P14",
           "dtype": "WikibaseItem"
         },
         "translator": {
@@ -2069,7 +2069,7 @@
           "dtype": "Time"
         },
         "numPages": {
-          "wbprop": null,
+          "wbprop": "P140",
           "dtype": "String"
         },
         "language": {

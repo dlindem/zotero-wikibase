@@ -24,7 +24,7 @@ store_qid_in_attachment = True # if set True, a URI attachment will be created f
 # essential properties, to be defined here manually:
 prop_wikidata_entity = "P1" # externalId-prop for "Wikidata entity"
 prop_zotero_item = "P17" # externalId-prop for linking items to your Zotero group collection. formatter URL will be "https://www.zotero.org/groups/[group_num]/[group_name]/items/$1/item-details"
-prop_zotero_PDF = "P70" # externalId-prop for linking items to its full text PDF stored as Zotero attachment. formatter URL will be "https://www.zotero.org/groups/[group_num]/[group_name]/items/$1/item-details"
+prop_zotero_PDF = "P62" # externalId-prop for linking items to its full text PDF stored as Zotero attachment. formatter URL will be "https://www.zotero.org/groups/[group_num]/[group_name]/items/$1/item-details"
 prop_instanceof = "P5" # datatype WikibaseItem, Wikidata P31
 prop_itemtype = "P78" # datatype WikibaseItem, bibliographical item type (used for pointing to the Zotero item type, e.g. 'journal article')
 prop_formatterurl = "P2" # datatype String, Wikidata P1630
