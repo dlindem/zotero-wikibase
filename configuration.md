@@ -41,7 +41,8 @@ You need a zotero user with read and write access to the Zotero group you want t
     * You can specify existing properties to use, or create new properties along the process. You are able to map fields differently according to the item type. For example, you may want to have titles of books mapped to a different property than titles of television broadcasts.
   * The script asks you then whether you want to do the same with the creator types present in the ingested dataset.
   * When that is done, the script transforms the Zotero API output, and uploads it to your Wikibase.
-    * Zotero items are patched in a way you specify (you can have the Wikibase URI written to the EXTRA field, attached as URI link attachment). In any case, successfully exported items will be tagged with the tag you specify, such as `on-wikibase`.
+    * The Zotero API will deliver you chunks of 100 items. That is, if you tag more than 100 with your export tag, only one hundred of these will be processed in one run. Those that are not processed in one run will stay with the export tag.
+    * Zotero items are patched in a way you specify (you can have the Wikibase URI written to the EXTRA field, and/or attached as URI link attachment). In any case, successfully exported items will be tagged with the tag you specify, such as `on-wikibase`.
 
 ## Details about Zotero fields and how they are processed
 * Creators: Creator given and family names, together with a string consisting of the full name, and the list position number, are stored as 'string' qualifiers to an 'unknown value' statement. After reconciliation, the 'unknown value' of that statement will be replaced with the item representing the natural person (or organization).
