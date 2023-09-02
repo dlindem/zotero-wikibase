@@ -109,6 +109,7 @@ def patch_item(qid=None, zotitem=None, children=[]):
             print('This item already has its Wikibase item URI stored in EXTRA.')
         else:
             zotitem['data']['extra'] = config.entity_ns + qid + "\n" + zotitem['data']['extra']
+            print('Successfully written Wikibase item URI to EXTRA.')
     tagpresent = False
     tagpos = 0
     while tagpos < len(zotitem['data']['tags']):

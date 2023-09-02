@@ -248,7 +248,7 @@ if creatorcheck == "1":
                                 wbprop_to_use = littlehelpers.import_wikidata_entity(wdprop, wbid=wbprop)
                             if choice2 == "3":
                                 wbprop_to_useentity = xwbi.wbi.property.new(
-                                    datatype=config.datatypes_mapping[WikibaseItem])
+                                    datatype=config.datatypes_mapping['WikibaseItem'])
                                 wbprop_to_useentity.labels.set('en', creatortype)
                                 print('enlabel set: ' + creatortype)
                                 d = False
@@ -271,6 +271,7 @@ if creatorcheck == "1":
                             config.dump_mapping(zoteromapping)
                             seen_creators.append(itemtype + creatortype)
 
+input(f"\nPress Enter for starting to process the ingested dataset of {str(len(data))} items.')
 # iterate through items / zotero fields and produce wikibase upload
 iso3mapping = config.load_mapping('iso-639-3')
 iso1mapping = config.load_mapping('iso-639-1')
@@ -278,7 +279,7 @@ language_literals = config.load_mapping('language-literals')
 count = 0
 for item in data:
     count += 1
-    print(f"\n[{str(count)}] Now processing item '{item['data']['key']}'...")
+    print(f"\n[{str(count)}] Now processing item '{item['links']['alternate']['href']}'...")
     qid = False
     newitem = True
     # instance of and bibItem type
@@ -519,14 +520,13 @@ for item in data:
         descriptions.append({'lang': lang, 'value': f"{creatorsummary} {pubyear}"})
 
     itemdata = {'qid': qid, 'statements': statements, 'descriptions': descriptions, 'labels': labels}
-    # debug output
-    with open(f"parking/testout_{item['data']['key']}.json", 'w', encoding="utf-8") as file:
-        json.dump({'zotero': item, 'output': itemdata}, file, indent=2)
+    # # debug output
+    # with open(f"parking/testout_{item['data']['key']}.json", 'w', encoding="utf-8") as file:
+    #     json.dump({'zotero': item, 'output': itemdata}, file, indent=2)
     # do upload
     qid = xwbi.itemwrite(itemdata, clear=False)
     if qid: # if writing was successful (if not, qid is still False)
         zoterobot.patch_item(qid=qid, zotitem=item, children=children)
 
-# zoterobot.pyzot.delete_tags(config.zotero_export_tag)
 print(
-    f"\nFinished exporting the dataset marked with the tag '{config.zotero_export_tag}'.\nAll the exported items should now have the tag '{config.zotero_on_wikibase_tag}' instead.")
+    f"\nFinished exporting the dataset of {str(len(data))} items marked with the tag '{config.zotero_export_tag}'.\nSuccessfully exported items should now have the tag '{config.zotero_on_wikibase_tag}' instead.")

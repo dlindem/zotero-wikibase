@@ -458,7 +458,7 @@
           "dtype": "WikibaseItem"
         },
         "seriesEditor": {
-          "wbprop": null,
+          "wbprop": "P146",
           "dtype": "WikibaseItem"
         }
       }
@@ -484,7 +484,7 @@
           "dtype": "String"
         },
         "seriesNumber": {
-          "wbprop": null,
+          "wbprop": "P144",
           "dtype": "String"
         },
         "volume": {
@@ -524,7 +524,7 @@
           "dtype": "ExternalId"
         },
         "shortTitle": {
-          "wbprop": null,
+          "wbprop": false,
           "dtype": "String"
         },
         "url": {
@@ -548,7 +548,7 @@
           "dtype": "String"
         },
         "callNumber": {
-          "wbprop": null,
+          "wbprop": false,
           "dtype": "String"
         },
         "rights": {
@@ -775,7 +775,7 @@
           "dtype": "String"
         },
         "abstractNote": {
-          "wbprop": null,
+          "wbprop": false,
           "dtype": "String"
         },
         "date": {
@@ -808,7 +808,7 @@
           "dtype": "String"
         },
         "series": {
-          "wbprop": null,
+          "wbprop": "P142",
           "dtype": "String"
         },
         "language": {
@@ -840,7 +840,7 @@
           "dtype": "String"
         },
         "archiveLocation": {
-          "wbprop": null,
+          "wbprop": false,
           "dtype": "String"
         },
         "libraryCatalog": {
@@ -1315,7 +1315,7 @@
           "dtype": "Url"
         },
         "accessDate": {
-          "wbprop": null,
+          "wbprop": false,
           "dtype": "String"
         },
         "language": {
@@ -1331,7 +1331,7 @@
           "dtype": "String"
         },
         "libraryCatalog": {
-          "wbprop": null,
+          "wbprop": false,
           "dtype": "String"
         },
         "callNumber": {
@@ -3117,7 +3117,7 @@
           "baseField": "type"
         },
         "university": {
-          "wbprop": null,
+          "wbprop": "P145",
           "dtype": "String",
           "baseField": "publisher"
         },
@@ -3142,7 +3142,7 @@
           "dtype": "String"
         },
         "url": {
-          "wbprop": null,
+          "wbprop": "P86",
           "dtype": "Url"
         },
         "accessDate": {
@@ -3154,11 +3154,11 @@
           "dtype": "String"
         },
         "archiveLocation": {
-          "wbprop": null,
+          "wbprop": false,
           "dtype": "String"
         },
         "libraryCatalog": {
-          "wbprop": null,
+          "wbprop": false,
           "dtype": "String"
         },
         "callNumber": {
