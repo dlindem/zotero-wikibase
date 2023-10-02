@@ -1,9 +1,9 @@
 # zotero-wikibase
- an app for migrating bibliographical data
+ **A python app for migrating bibliographical data**
 
-This tool exports records in a Zotero group library to a custom Wikibase, prepares datasets to be sent to OpenRefine, and feeds OpenRefine reconciliaton results back to the Wikibase.
+This tool exports records in a Zotero group library to a custom Wikibase, prepares datasets to be sent to OpenRefine, and feeds OpenRefine reconciliaton results back to the Wikibase. Wikidata is envolved in the entity reconciliation.
 
-By default, it represents the following using 'item statements' (object properties), so that further steps for LOD-ification are not needed:
+The following are represented by default using 'item statements' (object properties), so that further steps for LOD-ification are not needed:
 * Bibliographical item type
 * Publication language
 
