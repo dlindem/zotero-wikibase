@@ -1,0 +1,152 @@
+{
+  "filename": "config.json",
+  "comment": "This contains basic configurations for the zotero-wikibase tool.",
+  "mapping": {
+    "wikibase_name": "Monumenta Linguae Vasconum",
+    "wikibase_url": "https://monumenta.wikibase.cloud",
+    "label_languages": [
+      "eu",
+      "es",
+      "en",
+      "de",
+      "fr"
+    ],
+    "prop_wikidata_entity": {
+      "wikibase": "P1",
+      "type": "ExternalId",
+      "wikidata": null,
+      "comment": "externalId-prop for \"Wikidata entity\"; this points to the exact-match Wikidata entity, and has formatter URL and formatter URI \"http://www.wikidata.org/entity/\".",
+      "formatter_url": "http://www.wikidata.org/entity/"
+    },
+    "prop_zotero_item": {
+      "wikibase": "P17",
+      "type": "ExternalId",
+      "wikidata": null,
+      "comment": "ExternalId-prop for linking bibliographical items to your Zotero group collection. formatter URL will be "
+      https:
+      //www.zotero.org/groups/[group_num]/[group_name]/items/$1/item-details\"."
+    },
+    "prop_zotero_PDF": {
+      "wikibase": "P62",
+      "type": "ExternalId",
+      "wikidata": null,
+      "comment": "externalId-prop for linking items to its full text PDF stored as Zotero attachment. formatter URL will be \"https://www.zotero.org/groups/[group_num]/[group_name]/items/$1/item-details\"."
+    },
+    "prop_instanceof": {
+      "wikibase": "P5",
+      "type": "WikibaseItem",
+      "wikidata": "P31",
+      "comment": "A property of datatype WikibaseItem, Wikidata P31."
+    },
+    "prop_itemtype": {
+      "wikibase": "P78",
+      "type": "WikibaseItem",
+      "wikidata": null,
+      "comment": "A property of datatype WikibaseItem, bibliographical item type (used for pointing to the Zotero item type, e.g. 'journal article')."
+    },
+    "prop_formatterurl": {
+      "wikibase": "P2",
+      "type": "String",
+      "wikidata": "P1630",
+      "comment": "A property needed for building URL out of ExternalId values, datatype String, Wikidata P1630."
+    },
+    "prop_formatterurirdf": {
+      "wikibase": "P3",
+      "type": "String",
+      "wikidata": "P1921",
+      "comment": "A property needed for building URI out of ExternalId values, datatype String, Wikidata P1921."
+    },
+    "prop_inverseprop": {
+      "wikibase": "P73",
+      "type": "Property",
+      "wikidata": "P1696",
+      "comment": "A property needed for linking inverse properties to each other, Wikidata P1696."
+    },
+    "prop_series_ordinal": {
+      "wikibase": "P32",
+      "type": "String",
+      "wikidata": "P1545",
+      "comment": "Datatype String, Wikidata P1545, used e.g. in crator statements for representing the order in ordered lists."
+    },
+    "prop_source_literal": {
+      "wikibase": "P36",
+      "type": "String",
+      "wikidata": null,
+      "comment": "A datatype String property, used as qualifier, e.g. in creator statements."
+    },
+    "prop_given_name_source_literal": {
+      "wikibase": "P38",
+      "type": "String",
+      "wikidata": null,
+      "comment": "A datatype String property, used as qualifier in creator statements."
+    },
+    "prop_family_name_source_literal": {
+      "wikibase": "P39",
+      "type": "String",
+      "wikidata": null,
+      "comment": "A datatype String property, used as qualifier in creator statements."
+    },
+    "prop_isbn_10": {
+      "wikibase": "P20",
+      "type": "ExternalId",
+      "wikidata": "P967",
+      "comment": "Datatype ExternalId, Wikidata P967. Used for 10-digit-ISBN identifiers. Most conveniently with formatter URL \"https://worldcat.org/isbn/$1\".",
+      "formatter_url": "https://worldcat.org/isbn/$1"
+    },
+    "prop_isbn_13": {
+      "wikibase": "P19",
+      "type": "ExternalId",
+      "wikidata": "P212",
+      "comment": "Datatype ExternalId, Wikidata P212. Used for 10-digit-ISBN identifiers. Most conveniently with formatter URL \"https://worldcat.org/isbn/$1\".",
+      "formatter_url": "https://worldcat.org/isbn/$1"
+    },
+    "prop_wikidata_sitelinks": {
+      "wikibase": "P59",
+      "type": "URL",
+      "comment": "Datatype URL, for Wikipedia sitelinks from Wikidata"
+    },
+    "prop_exactmatch": {
+      "wikibase": "P157",
+      "type": "URL",
+      "comment": "Datatype URL, skos:exactMatch, points to a URI describing the same entity. Use 'Wikidata Entity' for Wikidata matches.",
+      "exactmatches": ["http://www.w3.org/2004/02/skos/core#exactMatch"]
+    },
+    "class_bibitem": {
+      "wikibase": "Q4",
+      "comment": "The class that groups bibliographical records."
+    },
+    "class_bibitem_type": {
+      "wikibase": "Q6",
+      "comment": "The class that groups bibliographical item types (journal article, book, etc.)"
+    },
+    "class_creator_role": {
+      "wikibase": "Q7",
+      "comment": "The class that groups creator role properties (e.g. author, translator)."
+    },
+    "class_journal": {
+      "wikibase": "Q8",
+      "comment": "The class that groups periodical publications."
+    },
+    "class_language": {
+      "wikibase": "Q9",
+      "comment": "The class that groups natural languages."
+    },
+    "class_ontology_class": {
+      "wikibase": "Q1",
+      "comment": "The class that groups all ontology classes."
+    },
+    "class_organization": {
+      "wikibase": "Q10",
+      "comment": "The class that groups organizations (can be creators, publishers,...)."
+    },
+    "class_person": {
+      "wikibase": "Q5",
+      "comment": "The class that groups natural persons."
+    },
+    "identifier_patterns": {
+      "^OCLC: ([0-9]+)": "P55"
+    },
+    "zotero_group_id": 5165329,
+    "zotero_export_tag": "wikibase-export",
+    "zotero_on_wikibase_tag": "on-wikibase"
+  }
