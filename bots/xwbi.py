@@ -156,7 +156,7 @@ def itemwrite(itemdata, clear=False): # statements = {'append':[],'replace':[]}
 	return xwbitem.id
 
 def importitem(wdqid, wbqid=False, process_claims=True, classqid=None):
-	languages_to_consider = "eu es en de fr".split(" ")
+	languages_to_consider = config.label_languages
 	
 	print('Will get ' + wdqid + ' from wikidata...')
 	
@@ -170,11 +170,11 @@ def importitem(wdqid, wbqid=False, process_claims=True, classqid=None):
 		return False
 
 	wbitemjson = {'labels': [], 'aliases': [], 'descriptions': [],
-				  'statements': [{'prop_nr': 'P2', 'type': 'externalid', 'value': wdqid}]}
+				  'statements': [{'prop_nr': config.prop_wikidata_entity, 'type': 'externalid', 'value': wdqid}]}
 
 	# ontology class
 	if classqid:
-		wbitemjson['statements'].append({'prop_nr': 'P5', 'type': 'Item', 'value': classqid})
+		wbitemjson['statements'].append({'prop_nr': config.prop_instanceof, 'type': 'Item', 'value': classqid})
 
 	# process labels
 	for lang in importitemjson['labels']:
@@ -220,9 +220,9 @@ def importitem(wdqid, wbqid=False, process_claims=True, classqid=None):
 	if 'sitelinks' in importitemjson:
 		for site in importitemjson['sitelinks']:
 			if site.replace('wiki', '') in languages_to_consider:
-				wpurl = "https://"+site.replace('wiki', '')+".wikipedia.org/wiki/"+importitemjson['sitelinks'][site]['title']
+				wpurl = "https://"+site.replace('wiki', '')+".wikipedia.org/wiki/"+importitemjson['sitelinks'][site]['title'].replace(' ','_')
 				print(wpurl)
-				wbitemjson['statements'].append({'prop_nr':config.wd_sitelinks_prop,'type':'url','value':wpurl})
+				wbitemjson['statements'].append({'prop_nr':config.prop_wd_sitelinks,'type':'url','value':wpurl})
 
 	wbitemjson['qid'] = wbqid  # if False, then create new item. If wbqid given, prop-values are transferred to that item using action 'keep' [existing values]
 	result_qid = itemwrite(wbitemjson)

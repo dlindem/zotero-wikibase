@@ -74,7 +74,7 @@ def patch_item(qid=None, zotitem=None, children=[]):
         for child in children:
             if 'url' not in child['data']:
                 continue
-            if child['data']['url'].startswith(config.entity_ns):
+            if child['data']['url'].startswith(config.wikibase_entity_ns):
                 if child['data']['url'].endswith(qid):
                     print('Correct link attachment already present.')
                     attachment_present = True
@@ -89,8 +89,8 @@ def patch_item(qid=None, zotitem=None, children=[]):
                     "linkMode": "linked_url",
                     "title": config.wikibase_name,
                     "accessDate": time.strftime("%Y-%m-%dT%H:%M:%SZ"),
-                    "url": config.entity_ns + qid,
-                    "note": '<p>See this item as linked data at <a href="' + config.wikibase_url + '/wiki/Item:' + qid + '">' + config.entity_ns + qid + '</a>',
+                    "url": config.wikibase_entity_ns + qid,
+                    "note": '<p>See this item as linked data at <a href="' + config.wikibase_url + '/wiki/Item:' + qid + '">' + config.wikibase_entity_ns + qid + '</a>',
                     "tags": [],
                     "collections": [],
                     "relations": {},
@@ -105,10 +105,10 @@ def patch_item(qid=None, zotitem=None, children=[]):
                 print(f"Link attachment successfully attached to Zotero item {zotitem['data']['key']}.")
 
     if config.store_qid_in_extra:
-        if config.entity_ns+qid in zotitem['data']['extra']:
+        if config.wikibase_entity_ns+qid in zotitem['data']['extra']:
             print('This item already has its Wikibase item URI stored in EXTRA.')
         else:
-            zotitem['data']['extra'] = config.entity_ns + qid + "\n" + zotitem['data']['extra']
+            zotitem['data']['extra'] = config.wikibase_entity_ns + qid + "\n" + zotitem['data']['extra']
             print('Successfully written Wikibase item URI to EXTRA.')
     tagpresent = False
     tagpos = 0

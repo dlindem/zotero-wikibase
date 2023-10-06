@@ -301,9 +301,9 @@ for item in data:
                 attqualis.append(
                     {'prop_nr': config.prop_zotero_PDF, 'type': 'ExternalId', 'value': child['data']['key']})
             if config.store_qid_in_attachment and child['data']['contentType'] == "" and child['data'][
-                'url'].startswith(config.entity_ns):
-                qid = child['data']['url'].replace(config.entity_ns, "")
-                print('Found link attachment: This item is linked to ' + config.entity_ns + qid)
+                'url'].startswith(config.wikibase_entity_ns):
+                qid = child['data']['url'].replace(config.wikibase_entity_ns, "")
+                print('Found link attachment: This item is linked to ' + config.wikibase_entity_ns + qid)
                 newitem = False
     else:
         children = []
@@ -419,7 +419,7 @@ for item in data:
     if 'extra' in item['data']:
         # Qid of the Wikibase to use
         if config.store_qid_in_extra and qid == False:  # if user has specified that Qid should be stored in EXTRA field (and it has not been found in a link attachment)
-            qid_regex = re.search(config.entity_ns + r"(Q[0-9]+)", item['data']['extra'])
+            qid_regex = re.search(config.wikibase_entity_ns + r"(Q[0-9]+)", item['data']['extra'])
             if qid_regex:
                 qid = qid_regex.group(1)
                 newitem = False
@@ -431,7 +431,7 @@ for item in data:
         # user-defined identifier patterns
         for pattern in config.identifier_patterns:
             try:
-                identifier_regex = re.search(pattern, item['data']['extra'])
+                identifier_regex = re.search(rf"{pattern}", item['data']['extra'])
                 if identifier_regex:
                     print(f"Extra field: Found identifier {identifier_regex.group(0)}")
                     identifier = identifier_regex.group(1)

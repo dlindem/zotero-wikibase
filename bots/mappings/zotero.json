@@ -769,6 +769,7 @@
     },
     "conferencePaper": {
       "bibtypeqid": "Q204",
+      "exactmatches": ["http://purl.org/spar/fabio/ProceedingsPaper"],
       "fields": {
         "title": {
           "wbprop": "P11",

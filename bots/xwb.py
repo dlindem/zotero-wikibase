@@ -11,20 +11,13 @@ import sys
 import unidecode
 # import sparql
 import logging
-# import romanize3
-# hebrewdict = romanize3.__dict__['heb']
-from wikidataintegrator import wdi_core, wdi_login
-# import os
-# import sys
-# sys.path.insert(1, os.path.realpath(os.path.pardir))
-# from wikibase import config
-import config, config_private
+from bots import config, config_private
 
 # Properties with constraint: max. 1 value
 card1props = config.card1props
 
 # Logging config
-logging.basicConfig(filename=config_private.datafolder+'logs/lwb.log', filemode='a', format='%(asctime)s - %(levelname)s - %(message)s', datefmt='%d-%m-%y %H:%M:%S')
+# logging.basicConfig(filename=config_private.datafolder+'logs/lwb.log', filemode='a', format='%(asctime)s - %(levelname)s - %(message)s', datefmt='%d-%m-%y %H:%M:%S')
 
 #WDI setup
 def wdi_setup():
@@ -40,7 +33,7 @@ wdisetup = None # If WDI is needed, login is done.
 
 # LexBib wikibase OAuth for mwclient
 
-site = mwclient.Site('lexbib.elex.is')
+site = mwclient.Site(re.sub(r'https?://','',config.wikibase_url))
 def get_token():
 	global site
 
@@ -50,65 +43,39 @@ def get_token():
 			login = site.login(username=config_private.wb_bot_user, password=config_private.wb_bot_pwd)
 			break
 		except Exception as ex:
-			print('lwb login via mwclient raised error: '+str(ex))
-			time.sleep(60)
+			print('Wikibase login via mwclient raised error (will try again in 20 seconds...): \n'+str(ex))
+			time.sleep(20)
 	# get token
 	csrfquery = site.api('query', meta='tokens')
 	token = csrfquery['query']['tokens']['csrftoken']
-	print("Got fresh CSRF token for lexbib.elex.is.")
+	print(f"Got fresh CSRF token for {config.wikibase_name}.")
 	return token
 token = get_token()
 
-# Loads known lwbqid-lexbibUri mappings and lwbqid-Wikidataqid mappins from jsonl-files
-def load_legacyID():
-	legacyID = {}
-	try:
-		with open(config_private.datafolder+'legacymappings.jsonl', encoding="utf-8") as jsonl_file:
-			mappings = jsonl_file.read().split('\n')
-			count = 0
-			for mapping in mappings:
-				count += 1
-				if mapping != "":
-					try:
-						mappingjson = json.loads(mapping)
-						#print(mapping)
-						legacyID[mappingjson['legacyID']] = mappingjson['lwbid']
-					except Exception as ex:
-						print('Found unparsable mapping json in legacymappings.jsonl line ['+str(count)+']: '+mapping)
-						print(str(ex))
-						pass
-	except Exception as ex:
-		print ('Error: legacyID file does not exist. Will start a new one.')
-		print (str(ex))
-	#print(str(legacyID))
-	print('Known LWB Qid loaded.')
-	return legacyID
-legacyID = load_legacyID()
-
-def load_wdmappings():
-	wdids = {}
-	try:
-		with open(config_private.datafolder+'lwb_wd.jsonl', encoding="utf-8") as f:
-			mappings = f.read().split('\n')
-			count = 0
-			for mapping in mappings:
-				count += 1
-				if mapping != "":
-					try:
-						mappingjson = json.loads(mapping)
-						#print(mapping)
-						wdids[mappingjson['lwbid']] = mappingjson['wdid']
-					except Exception as ex:
-						print('Found unparsable mapping json in lwb_wd.jsonl line ['+str(count)+']: '+mapping)
-						print(str(ex))
-						pass
-	except Exception as ex:
-		print ('Error: wdmappings file does not exist. Will start a new one.')
-		print (str(ex))
-
-	print('Known LWB-WD item mappings loaded.')
-	return wdids
-wdids = load_wdmappings()
+# def load_wdmappings():
+# 	wdids = {}
+# 	try:
+# 		with open(config_private.datafolder+'lwb_wd.jsonl', encoding="utf-8") as f:
+# 			mappings = f.read().split('\n')
+# 			count = 0
+# 			for mapping in mappings:
+# 				count += 1
+# 				if mapping != "":
+# 					try:
+# 						mappingjson = json.loads(mapping)
+# 						#print(mapping)
+# 						wdids[mappingjson['lwbid']] = mappingjson['wdid']
+# 					except Exception as ex:
+# 						print('Found unparsable mapping json in lwb_wd.jsonl line ['+str(count)+']: '+mapping)
+# 						print(str(ex))
+# 						pass
+# 	except Exception as ex:
+# 		print ('Error: wdmappings file does not exist. Will start a new one.')
+# 		print (str(ex))
+#
+# 	print('Known LWB-WD item mappings loaded.')
+# 	return wdids
+# wdids = load_wdmappings()
 
 # def load_wppageplaces():
 # 	wpplaces = {}
@@ -134,47 +101,47 @@ wdids = load_wdmappings()
 	# print('Known wikipedia places loaded.')
 	# return wpplaces
 
-# Adds a new lexbibUri-qid mapping to legacyID.jsonl mapping file
-def save_legacyID(legid,lwbid):
-	with open(config_private.datafolder+'legacymappings.jsonl', 'a', encoding="utf-8") as jsonl_file:
-		jsonline = {"legacyID":legid,"lwbid":lwbid}
-		jsonl_file.write(json.dumps(jsonline)+'\n')
-		global legacyID
-		legacyID[legid] = lwbid
+# # Adds a new lexbibUri-qid mapping to legacyID.jsonl mapping file
+# def save_legacyID(legid,lwbid):
+# 	with open(config_private.datafolder+'legacymappings.jsonl', 'a', encoding="utf-8") as jsonl_file:
+# 		jsonline = {"legacyID":legid,"lwbid":lwbid}
+# 		jsonl_file.write(json.dumps(jsonline)+'\n')
+# 		global legacyID
+# 		legacyID[legid] = lwbid
 
-# Adds a new lwbqid-wdqid mapping to wdmappings.jsonl mapping file
-def save_wdmapping(mapping): # example {"lwbid": "P32", "wdid": "P220"}
-	with open(config_private.datafolder+'lwb_wd.jsonl', 'a', encoding="utf-8") as jsonl_file:
-		jsonl_file.write(json.dumps(mapping)+'\n')
-	global wdids
-	wdids[mapping['lwbid']] = mapping['wdid']
+# # Adds a new lwbqid-wdqid mapping to wdmappings.jsonl mapping file
+# def save_wdmapping(mapping): # example {"lwbid": "P32", "wdid": "P220"}
+# 	with open(config_private.datafolder+'lwb_wd.jsonl', 'a', encoding="utf-8") as jsonl_file:
+# 		jsonl_file.write(json.dumps(mapping)+'\n')
+# 	global wdids
+# 	wdids[mapping['lwbid']] = mapping['wdid']
+#
 
+# # Get equivalent lwb item qidnum from wikidata Qid
+# def wdid2lwbid(wdid):
+# 	print('Will try to find lwbqid for '+wdid+'...')
+# 	global wdids
+# 	# Try to find lwbqid from known mappings
+# 	for key, value in wdids.items():
+# 		if wdid == value:
+# 			print('Found lwbqid in wdids known mappings: '+key)
+# 			return key
 
-# Get equivalent lwb item qidnum from wikidata Qid
-def wdid2lwbid(wdid):
-	print('Will try to find lwbqid for '+wdid+'...')
-	global wdids
-	# Try to find lwbqid from known mappings
-	for key, value in wdids.items():
-		if wdid == value:
-			print('Found lwbqid in wdids known mappings: '+key)
-			return key
-
-# Get equivalent lwb item qidnum from wikidata Qid
-def v3id2v2id(v3id):
-	global legacyID
-	for key, value in legacyID.items():
-		if v3id == value:
-			print('Found v2 legacy ID for '+v3id+': '+key)
-			return key
-
-	print('*** Found no v2 legacy ID for '+v3id)
-	return None
+# # Get equivalent lwb item qidnum from wikidata Qid
+# def v3id2v2id(v3id):
+# 	global legacyID
+# 	for key, value in legacyID.items():
+# 		if v3id == value:
+# 			print('Found v2 legacy ID for '+v3id+': '+key)
+# 			return key
+#
+# 	print('*** Found no v2 legacy ID for '+v3id)
+# 	return None
 
 # creates a new item
 def newitemwithlabel(lwbclasses, labellang, label): # lwbclass: object of 'instance of' (P5)
 	global token
-	global legacyID
+	# global legacyID
 	if isinstance(lwbclasses, str) == True: # if a single value is passed as string, not as list
 		lwbclasses = [lwbclasses]
 	data = {"labels":{labellang:{"language":labellang,"value":label}}}

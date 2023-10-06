@@ -24,7 +24,7 @@ def rewrite_properties_mapping():
     print('Found ' + str(len(bindings)) + ' results to process.\n')
     count = 0
     for item in bindings:
-        prop_nr = item['prop']['value'].replace(config.entity_ns, "")
+        prop_nr = item['prop']['value'].replace(config.wikibase_entity_ns, "")
         properties['mapping'][prop_nr] = {
             'enlabel': item['propLabel']['value'],
             'type': item['datatype']['value'],

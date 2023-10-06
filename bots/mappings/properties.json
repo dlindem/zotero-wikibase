@@ -53,7 +53,7 @@
       "enlabel": "LexBib entity",
       "type": "ExternalId",
       "wdprop": null,
-      "formatter_url": "https://lexbib.elex.is/wiki/$1",
+      "formatter_url": "https://lexbib.elex.is/entity/$1",
       "formatter_uri": "https://lexbib.elex.is/entity/$1"
     },
     "P11": {
