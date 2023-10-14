@@ -7,40 +7,54 @@ from wikibaseintegrator.datatypes.monolingualtext import MonolingualText
 from wikibaseintegrator.datatypes.time import Time
 from wikibaseintegrator.datatypes.globecoordinate import GlobeCoordinate
 from wikibaseintegrator.datatypes.url import URL
-from wikibaseintegrator.wbi_config import config as wbi_config
 from wikibaseintegrator import wbi_helpers
 from wikibaseintegrator.wbi_enums import ActionIfExists, WikibaseSnakType
-from bots import config
+from bots import botconfig
 from bots import config_private
+from wikibaseintegrator.wbi_config import config as wbi_config
 
 # from wikibaseintegrator.models.claims import Claims
 
+# wbi_config = {
+#     'BACKOFF_MAX_TRIES': 5,
+#     'BACKOFF_MAX_VALUE': 3600,
+#     'USER_AGENT': None,
+#     'PROPERTY_CONSTRAINT_PID': 'P2302',
+#     'DISTINCT_VALUES_CONSTRAINT_QID': 'Q21502410',
+#     'COORDINATE_GLOBE_QID': 'http://www.wikidata.org/entity/Q2',
+#     'CALENDAR_MODEL_QID': 'http://www.wikidata.org/entity/Q1985727',
+#  #   'MEDIAWIKI_API_URL': 'https://www.wikidata.org/w/api.php',
+#  #   'MEDIAWIKI_INDEX_URL': 'https://www.wikidata.org/w/index.php',
+#  #   'MEDIAWIKI_REST_URL': 'https://www.wikidata.org/w/rest.php',
+#  #   'SPARQL_ENDPOINT_URL': 'https://query.wikidata.org/sparql',
+#  #   'WIKIBASE_URL': 'http://www.wikidata.org',
+#     'DEFAULT_LANGUAGE': 'en',
+#     'DEFAULT_LEXEME_LANGUAGE': 'Q1860'
+# }
 
-wbi_config['MEDIAWIKI_API_URL'] = config.api_url
-wbi_config['SPARQL_ENDPOINT_URL'] = config.sparql_endpoint
-wbi_config['WIKIBASE_URL'] = config.wikibase_url
+config = botconfig.load_mapping('config')
+
+wbi_config['MEDIAWIKI_API_URL'] = config['mapping']['api_url']
+wbi_config['SPARQL_ENDPOINT_URL'] = config['mapping']['sparql_endpoint']
+wbi_config['WIKIBASE_URL'] = "https://monumenta.wikibase.cloud"
 
 login_instance = wbi_login.Login(user=config_private.wb_bot_user, password=config_private.wb_bot_pwd)
 
 wbi = WikibaseIntegrator(login=login_instance)
 
-wd_user_agent = config.wikibase_url+", User "+config_private.wb_bot_user
-
-
+wd_user_agent = config['mapping']['mwclient_site']+", User "+config_private.wb_bot_user
 
 # functions for interaction with wbi
 def packstatements(statements, wbitem=None, qualifiers=False, references=False):
 	packed_statements = []
 	for statement in statements:
 		packed_statement = None
-		# print(str(statement))
 		if "qualifiers" in statement:
 			packed_qualifiers = packstatements(statement['qualifiers'], qualifiers=True)
 		else:
 			packed_qualifiers = []
 		if "references" in statement:
 			packed_references = packstatements(statement['references'], references=True)
-			# print('FOUND REF',statement['references'])
 		else:
 			packed_references = []
 		snaktype = WikibaseSnakType.KNOWN_VALUE
@@ -88,7 +102,7 @@ def packstatements(statements, wbitem=None, qualifiers=False, references=False):
 		return packed_statements
 	return wbitem
 
-def itemwrite(itemdata, clear=False): # statements = {'append':[],'replace':[]}
+def itemwrite(itemdata, clear=False):
 	if itemdata['qid'] == False:
 		xwbitem = wbi.item.new()
 		print('Will write to new Q-item', end="")
@@ -103,7 +117,6 @@ def itemwrite(itemdata, clear=False): # statements = {'append':[],'replace':[]}
 		return False
 	if clear:
 		xwbitem.claims = Claims()
-	# 	r = xwbitem.write(is_bot=1, clear=clear)
 
 	# labels
 	if 'labels' in itemdata:
@@ -111,7 +124,6 @@ def itemwrite(itemdata, clear=False): # statements = {'append':[],'replace':[]}
 		for langstring in langstrings:
 			lang = langstring['lang']
 			stringval = langstring['value']
-			#print('Found wikidata label: ',lang,stringval)
 			xwbitem.labels.set(lang,stringval)
 	# altlabels
 	if 'aliases' in itemdata:
@@ -119,7 +131,6 @@ def itemwrite(itemdata, clear=False): # statements = {'append':[],'replace':[]}
 		for langstring in langstrings:
 			lang = langstring['lang']
 			stringval = langstring['value']
-			#print('Found wikidata altlabel: ',lang,stringval)
 			xwbitem.aliases.set(lang,stringval)
 	# descriptions
 	if 'descriptions' in itemdata:
@@ -137,7 +148,7 @@ def itemwrite(itemdata, clear=False): # statements = {'append':[],'replace':[]}
 	d = False
 	while d == False:
 		try:
-			print(f"...now writing to {config.wikibase_name}...", end="")
+			print(f"...now writing to {config['mapping']['wikibase_name']}...", end="")
 			r = xwbitem.write(clear=clear)
 			d = True
 			print('successfully written to entity: '+xwbitem.id)
@@ -156,7 +167,7 @@ def itemwrite(itemdata, clear=False): # statements = {'append':[],'replace':[]}
 	return xwbitem.id
 
 def importitem(wdqid, wbqid=False, process_claims=True, classqid=None):
-	languages_to_consider = config.label_languages
+	languages_to_consider = config['mapping']['label_languages']
 	
 	print('Will get ' + wdqid + ' from wikidata...')
 	
@@ -170,11 +181,11 @@ def importitem(wdqid, wbqid=False, process_claims=True, classqid=None):
 		return False
 
 	wbitemjson = {'labels': [], 'aliases': [], 'descriptions': [],
-				  'statements': [{'prop_nr': config.prop_wikidata_entity, 'type': 'externalid', 'value': wdqid}]}
+				  'statements': [{'prop_nr': config['mapping']['prop_wikidata_entity']['wikibase'], 'type': 'externalid', 'value': wdqid}]}
 
 	# ontology class
 	if classqid:
-		wbitemjson['statements'].append({'prop_nr': config.prop_instanceof, 'type': 'Item', 'value': classqid})
+		wbitemjson['statements'].append({'prop_nr': config['mapping']['prop_instanceof']['wikibase'], 'type': 'Item', 'value': classqid})
 
 	# process labels
 	for lang in importitemjson['labels']:
@@ -222,7 +233,7 @@ def importitem(wdqid, wbqid=False, process_claims=True, classqid=None):
 			if site.replace('wiki', '') in languages_to_consider:
 				wpurl = "https://"+site.replace('wiki', '')+".wikipedia.org/wiki/"+importitemjson['sitelinks'][site]['title'].replace(' ','_')
 				print(wpurl)
-				wbitemjson['statements'].append({'prop_nr':config.prop_wd_sitelinks,'type':'url','value':wpurl})
+				wbitemjson['statements'].append({'prop_nr':config['mapping']['prop_wikidata_sitelinks']['wikibase'],'type':'url','value':wpurl})
 
 	wbitemjson['qid'] = wbqid  # if False, then create new item. If wbqid given, prop-values are transferred to that item using action 'keep' [existing values]
 	result_qid = itemwrite(wbitemjson)

@@ -1,9 +1,9 @@
 import requests, time, re, json
-from bots import config
+from bots import botconfig
 from bots import config_private
 from pyzotero import zotero
 
-pyzot = zotero.Zotero(config.zotero_group_id, 'group', config_private.zotero_api_key)  # Zotero LexBib group
+pyzot = zotero.Zotero(config['mapping']['zotero_group_id'], 'group', config_private.zotero_api_key)  # Zotero LexBib group
 
 citations_cache = {}
 with open('bots/data/citations_cache.jsonl') as jsonlfile:
@@ -20,7 +20,7 @@ def getcitation(zotitemid):
         print(f"Will take citation from cache: {zotitemid}")
         return citations_cache[zotitemid]
     print(f'Will now get citation for Zotero ID {zotitemid}')
-    zotapid = 'https://api.zotero.org/groups/' + config.zotero_group_id + '/items/' + zotitemid
+    zotapid = 'https://api.zotero.org/groups/' + config['mapping']['zotero_group_id'] + '/items/' + zotitemid
     attempts = 0
     while attempts < 5:
         attempts += 1
@@ -58,7 +58,7 @@ def getzotitem(zotitemid):
 
 
 def getexport():
-    exportitems = pyzot.items(tag=config.zotero_export_tag)
+    exportitems = pyzot.items(tag=config['mapping']['zotero_export_tag'])
     return exportitems
 
 
@@ -69,12 +69,12 @@ def getchildren(zotitemid):
 
 def patch_item(qid=None, zotitem=None, children=[]):
     # communicate with Zotero, write Wikibase entity URI to "extra" and attach URI as link attachment
-    if config.store_qid_in_attachment:
+    if config['mapping']['store_qid_in_attachment']:
         attachment_present = False
         for child in children:
             if 'url' not in child['data']:
                 continue
-            if child['data']['url'].startswith(config.wikibase_entity_ns):
+            if child['data']['url'].startswith(config['mapping']['wikibase_entity_ns']):
                 if child['data']['url'].endswith(qid):
                     print('Correct link attachment already present.')
                     attachment_present = True
@@ -87,10 +87,10 @@ def patch_item(qid=None, zotitem=None, children=[]):
                     "itemType": "attachment",
                     "parentItem": zotitem['data']['key'],
                     "linkMode": "linked_url",
-                    "title": config.wikibase_name,
+                    "title": config['mapping']['wikibase_name'],
                     "accessDate": time.strftime("%Y-%m-%dT%H:%M:%SZ"),
-                    "url": config.wikibase_entity_ns + qid,
-                    "note": '<p>See this item as linked data at <a href="' + config.wikibase_url + '/wiki/Item:' + qid + '">' + config.wikibase_entity_ns + qid + '</a>',
+                    "url": config['mapping']['wikibase_entity_ns'] + qid,
+                    "note": '<p>See this item as linked data at <a href="' + config['mapping']['wikibase_url'] + '/wiki/Item:' + qid + '">' + config['mapping']['wikibase_entity_ns'] + qid + '</a>',
                     "tags": [],
                     "collections": [],
                     "relations": {},
@@ -98,27 +98,27 @@ def patch_item(qid=None, zotitem=None, children=[]):
                     "charset": ""
                 }
             ]
-            r = requests.post('https://api.zotero.org/groups/' + str(config.zotero_group_id) + '/items',
+            r = requests.post('https://api.zotero.org/groups/' + str(config['mapping']['zotero_group_id']) + '/items',
                               headers={"Zotero-API-key": config_private.zotero_api_key,
                                        "Content-Type": "application/json"}, json=attachment)
             if "200" in str(r):
                 print(f"Link attachment successfully attached to Zotero item {zotitem['data']['key']}.")
 
-    if config.store_qid_in_extra:
-        if config.wikibase_entity_ns+qid in zotitem['data']['extra']:
+    if config['mapping']['store_qid_in_extra']:
+        if config['mapping']['wikibase_entity_ns']+qid in zotitem['data']['extra']:
             print('This item already has its Wikibase item URI stored in EXTRA.')
         else:
-            zotitem['data']['extra'] = config.wikibase_entity_ns + qid + "\n" + zotitem['data']['extra']
+            zotitem['data']['extra'] = config['mapping']['wikibase_entity_ns'] + qid + "\n" + zotitem['data']['extra']
             print('Successfully written Wikibase item URI to EXTRA.')
     tagpresent = False
     tagpos = 0
     while tagpos < len(zotitem['data']['tags']):
-        if zotitem['data']['tags'][tagpos]['tag'] == config.zotero_on_wikibase_tag:
+        if zotitem['data']['tags'][tagpos]['tag'] == config['mapping']['zotero_on_wikibase_tag']:
             tagpresent = True
         # remove export tag
-        if zotitem['data']['tags'][tagpos]['tag'] == config.zotero_export_tag:
+        if zotitem['data']['tags'][tagpos]['tag'] == config['mapping']['zotero_export_tag']:
             del zotitem['data']['tags'][tagpos]
         tagpos += 1
     if not tagpresent:
-        zotitem['data']['tags'].append({'tag': config.zotero_on_wikibase_tag})
+        zotitem['data']['tags'].append({'tag': config['mapping']['zotero_on_wikibase_tag']})
     pyzot.update_item(zotitem, last_modified=None)

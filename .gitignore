@@ -1,3 +1,4 @@
 /bots/config_private.py
 *.pyc
 .idea/*
+zotwbenv/*

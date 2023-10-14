@@ -1,8 +1,8 @@
-from bots import xwbi, config
+from bots import xwbi, botconfig
 import csv, traceback
 
-zoteromapping = config.load_mapping('zotero')
-propertymapping = config.load_mapping('properties')
+zoteromapping = botconfig.load_mapping('zotero')
+propertymapping = botconfig.load_mapping('properties')
 
 datatypesmapping = {
     'ExternalId' : 'external-id',
@@ -46,7 +46,7 @@ with open('zotero-wikibase-props.csv', 'r', encoding="utf-8") as file:
 			newprop.labels.set('en',enlabel)
 			print('enlabel set: '+enlabel)
 			if wdpid:
-				newprop.claims.add(xwbi.ExternalID(value=wdpid,prop_nr=config.prop_wikidata_entity))
+				newprop.claims.add(xwbi.ExternalID(value=wdpid,prop_nr=config['mapping']['prop_wikidata_entity']['wikibase']))
 				print('P1 set: '+wdpid)
 			# if formatterUrl.startswith('http'):
 			# 	newprop.claims.add(xwbi.String(value=formatterUrl,prop_nr=config.formatter_url_prop))
@@ -76,7 +76,7 @@ with open('zotero-wikibase-props.csv', 'r', encoding="utf-8") as file:
 					if creatortype == zoterofield:
 						zoteromapping['mapping'][itemtype]['creatorTypes'][creatortype]['wbprop'] = newpropid
 						zoteromapping['mapping'][itemtype]['creatorTypes'][creatortype]['dtype'] = dtype
-			config.dump_mapping(zoteromapping)
+			botconfig.dump_mapping(zoteromapping)
 
 		# write properties mapping
 		propertymapping['mapping'][newpropid] = {
@@ -84,4 +84,4 @@ with open('zotero-wikibase-props.csv', 'r', encoding="utf-8") as file:
 			'type': dtype,
 			'wdprop': wdpid
 		}
-		config.dump_mapping(propertymapping)
+		botconfig.dump_mapping(propertymapping)

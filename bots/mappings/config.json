@@ -1,9 +1,11 @@
 {
-  "filename": "config.json",
+  "filename": "onfig.json",
   "comment": "This contains basic configurations for the zotero-wikibase tool.",
   "mapping": {
     "wikibase_name": "Monumenta Linguae Vasconum",
     "wikibase_url": "https://monumenta.wikibase.cloud",
+    "mwclient_site": "monumenta.wikibase.cloud",
+    "wikibase_entity_ns": "https://monumenta.wikibase.cloud/entity/",
     "label_languages": [
       "eu",
       "es",
@@ -11,6 +13,7 @@
       "de",
       "fr"
     ],
+    "sparql_prefixes": "PREFIX xwb: <https://monumenta.wikibase.cloud/entity/>\nPREFIX xdp: <https://monumenta.wikibase.cloud/prop/direct/>\nPREFIX xp: <https://monumenta.wikibase.cloud/prop/>\nPREFIX xps: <https://monumenta.wikibase.cloud/prop/statement/>\nPREFIX xpq: <https://monumenta.wikibase.cloud/prop/qualifier/>\nPREFIX xpr: <https://monumenta.wikibase.cloud/prop/reference/>\nPREFIX xno: <https://monumenta.wikibase.cloud/prop/novalue/>\n",
     "prop_wikidata_entity": {
       "wikibase": "P1",
       "type": "ExternalId",
@@ -18,25 +21,31 @@
       "comment": "externalId-prop for \"Wikidata entity\"; this points to the exact-match Wikidata entity, and has formatter URL and formatter URI \"http://www.wikidata.org/entity/\".",
       "formatter_url": "http://www.wikidata.org/entity/"
     },
+    "sparql_endpoint": "https://monumenta.wikibase.cloud/query/sparql",
+    "api_url": "https://monumenta.wikibase.cloud/w/api.php",
     "prop_zotero_item": {
       "wikibase": "P17",
       "type": "ExternalId",
       "wikidata": null,
-      "comment": "ExternalId-prop for linking bibliographical items to your Zotero group collection. formatter URL will be "
-      https:
-      //www.zotero.org/groups/[group_num]/[group_name]/items/$1/item-details\"."
+      "comment": "ExternalId-prop for linking bibliographical items to your Zotero group collection. formatter URL will be 'https://www.zotero.org/groups/[group_num]/[group_name]/items/$1/item-details'."
     },
     "prop_zotero_PDF": {
       "wikibase": "P62",
       "type": "ExternalId",
       "wikidata": null,
-      "comment": "externalId-prop for linking items to its full text PDF stored as Zotero attachment. formatter URL will be \"https://www.zotero.org/groups/[group_num]/[group_name]/items/$1/item-details\"."
+      "comment": "externalId-prop for linking items to its full text PDF stored as Zotero attachment. formatter URL will be 'https://www.zotero.org/groups/[group_num]/[group_name]/items/$1/item-details'."
     },
     "prop_instanceof": {
       "wikibase": "P5",
       "type": "WikibaseItem",
       "wikidata": "P31",
       "comment": "A property of datatype WikibaseItem, Wikidata P31."
+    },
+    "prop_subclassof": {
+      "wikibase": "P4",
+      "type": "WikibaseItem",
+      "wikidata": "P279",
+      "comment": "A property of datatype WikibaseItem, Wikidata P279."
     },
     "prop_itemtype": {
       "wikibase": "P78",
@@ -109,7 +118,9 @@
       "wikibase": "P157",
       "type": "URL",
       "comment": "Datatype URL, skos:exactMatch, points to a URI describing the same entity. Use 'Wikidata Entity' for Wikidata matches.",
-      "exactmatches": ["http://www.w3.org/2004/02/skos/core#exactMatch"]
+      "exactmatches": [
+        "http://www.w3.org/2004/02/skos/core#exactMatch"
+      ]
     },
     "class_bibitem": {
       "wikibase": "Q4",
@@ -150,3 +161,4 @@
     "zotero_export_tag": "wikibase-export",
     "zotero_on_wikibase_tag": "on-wikibase"
   }
+}

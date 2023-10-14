@@ -1,10 +1,10 @@
 from bots import xwbi
-from bots import config
+from bots import botconfig
 import requests
 
 
 def rewrite_properties_mapping():
-    properties = config.load_mapping('properties')
+    properties = botconfig.load_mapping('properties')
 
     query = """select ?order ?prop ?propLabel ?datatype ?wikidata_prop ?formatter_url ?formatter_uri
     
@@ -13,18 +13,18 @@ def rewrite_properties_mapping():
              wikibase:propertyType ?dtype ;
              rdfs:label ?propLabel . filter (lang(?propLabel)="en")
              bind (strafter(str(?dtype),"http://wikiba.se/ontology#") as ?datatype)
-      OPTIONAL {?prop xdp:""" + config.prop_wikidata_entity + """ ?wikidata_prop.}
-      OPTIONAL {?prop xdp:""" + config.prop_formatterurl + """ ?formatter_url.}
-      OPTIONAL {?prop xdp:""" + config.prop_formatterurirdf + """ ?formatter_uri.}
+      OPTIONAL {?prop xdp:""" + config['mapping']['prop_wikidata_entity']['wikibase'] + """ ?wikidata_prop.}
+      OPTIONAL {?prop xdp:""" + config['mapping']['prop_formatterurl']['wikibase'] + """ ?formatter_url.}
+      OPTIONAL {?prop xdp:""" + config['mapping']['prop_formatterurirdf']['wikibase'] + """ ?formatter_uri.}
         BIND (xsd:integer(strafter(str(?prop), "https://monumenta.wikibase.cloud/entity/P")) as ?order )
     } group by ?order ?prop ?propLabel ?datatype ?wikidata_prop ?formatter_url ?formatter_uri order by ?order"""
 
     print("Waiting for SPARQL...")
-    bindings = xwbi.wbi_helpers.execute_sparql_query(query=query, prefix=config.sparql_prefixes)['results']['bindings']
+    bindings = xwbi.wbi_helpers.execute_sparql_query(query=query, prefix=config['mapping']['sparql_prefixes'])['results']['bindings']
     print('Found ' + str(len(bindings)) + ' results to process.\n')
     count = 0
     for item in bindings:
-        prop_nr = item['prop']['value'].replace(config.wikibase_entity_ns, "")
+        prop_nr = item['prop']['value'].replace(config['mapping']['wikibase_entity_ns'], "")
         properties['mapping'][prop_nr] = {
             'enlabel': item['propLabel']['value'],
             'type': item['datatype']['value'],
@@ -35,7 +35,7 @@ def rewrite_properties_mapping():
         if 'formatter_uri' in item:
             properties['mapping'][prop_nr]['formatter_uri'] = item['formatter_uri']['value']
 
-    config.dump_mapping(properties)
+    botconfig.dump_mapping(properties)
 
     print('\nSuccessfully stored properties mapping.')
 
@@ -52,22 +52,22 @@ def import_wikidata_entity(wdid, wbid=False, process_claims=True, classqid=None)
         return False
 
     wbitemjson = {'labels': [], 'aliases': [], 'descriptions': [],
-                  'statements': [{'prop_nr': config.prop_wikidata_entity, 'type': 'ExternalId', 'value': wdid}]}
+                  'statements': [{'prop_nr': config['mapping']['prop_wikidata_entity']['wikibase'], 'type': 'ExternalId', 'value': wdid}]}
     if classqid:
-        wbitemjson['statements'].append({'prop_nr': config.prop_instanceof, 'type': 'Item', 'value': classqid})
+        wbitemjson['statements'].append({'prop_nr': config['mapping']['prop_instanceof']['wikibase'], 'type': 'Item', 'value': classqid})
 
     # process labels
     for lang in importitemjson['labels']:
-        if lang in config.label_languages:
+        if lang in config['mapping']['label_languages']:
             wbitemjson['labels'].append({'lang': lang, 'value': importitemjson['labels'][lang]['value']})
     # process aliases
     for lang in importitemjson['aliases']:
-        if lang in config.label_languages:
+        if lang in config['mapping']['label_languages']:
             for entry in importitemjson['aliases'][lang]:
                 wbitemjson['aliases'].append({'lang': lang, 'value': entry['value']})
     # process descriptions
     for lang in importitemjson['descriptions']:
-        if lang in config.label_languages:
+        if lang in config['mapping']['label_languages']:
             wbitemjson['descriptions'].append({'lang': lang, 'value': importitemjson['descriptions'][lang]['value']})
 
     # process claims

@@ -16,7 +16,7 @@ import collections
 # import eventmapping
 import langmapping
 import lwb, lwbi
-import config_private, config
+import config_private, botconfig
 from pyzotero import zotero
 pyzot = zotero.Zotero(1892855,'group',config_private.zotero_api_key) # Zotero LexBib group
 linked_done = {}
@@ -427,9 +427,9 @@ def zotero_export(infile=None):
 			statements.append({"prop_nr": "P14", "type": "string", "value": item['publisher-place']})
 		# creators
 
-		for role in config.creator_roles:
+		for role in botconfig.creator_roles:
 			if role in item:
-				write_creatortriples(config.creator_roles[role], item[role], creatorvals)
+				write_creatortriples(botconfig.creator_roles[role], item[role], creatorvals)
 
 		# Extra field, can contain a wikipedia page title, used in Elexifinder project as first-author-location-URI
 
