@@ -15,34 +15,29 @@ from wikibaseintegrator.wbi_config import config as wbi_config
 
 # from wikibaseintegrator.models.claims import Claims
 
-# wbi_config = {
-#     'BACKOFF_MAX_TRIES': 5,
-#     'BACKOFF_MAX_VALUE': 3600,
-#     'USER_AGENT': None,
-#     'PROPERTY_CONSTRAINT_PID': 'P2302',
-#     'DISTINCT_VALUES_CONSTRAINT_QID': 'Q21502410',
-#     'COORDINATE_GLOBE_QID': 'http://www.wikidata.org/entity/Q2',
-#     'CALENDAR_MODEL_QID': 'http://www.wikidata.org/entity/Q1985727',
-#  #   'MEDIAWIKI_API_URL': 'https://www.wikidata.org/w/api.php',
-#  #   'MEDIAWIKI_INDEX_URL': 'https://www.wikidata.org/w/index.php',
-#  #   'MEDIAWIKI_REST_URL': 'https://www.wikidata.org/w/rest.php',
-#  #   'SPARQL_ENDPOINT_URL': 'https://query.wikidata.org/sparql',
-#  #   'WIKIBASE_URL': 'http://www.wikidata.org',
-#     'DEFAULT_LANGUAGE': 'en',
-#     'DEFAULT_LEXEME_LANGUAGE': 'Q1860'
-# }
-
 config = botconfig.load_mapping('config')
+print(str(config['mapping']['wikibase_api_url']))
+# wbi_config['BACKOFF_MAX_TRIES'] = 5,
+# wbi_config['BACKOFF_MAX_VALUE'] = 3600,
+# wbi_config['USER_AGENT'] = config['mapping']['wikibase_name']+' user',
+# wbi_config['PROPERTY_CONSTRAINT_PID'] = 'P2302',
+# wbi_config['DISTINCT_VALUES_CONSTRAINT_QID'] = 'Q21502410',
+# wbi_config['COORDINATE_GLOBE_QID'] = 'http://www.wikidata.org/entity/Q2',
+# wbi_config['CALENDAR_MODEL_QID'] = 'http://www.wikidata.org/entity/Q1985727',
+wbi_config['MEDIAWIKI_API_URL'] = config_private.wikibase_url+'/w/api.php' # config['mapping']['wikibase_api_url'],
+# wbi_config['MEDIAWIKI_INDEX_URL'] = config['mapping']['wikibase_index_url'],
+# wbi_config['MEDIAWIKI_REST_URL'] = config['mapping']['wikibase_rest_url'],
+wbi_config['SPARQL_ENDPOINT_URL'] = config['mapping']['wikibase_sparql_endpoint'],
+wbi_config['WIKIBASE_URL'] = config['mapping']['wikibase_url'],
+wbi_config['DEFAULT_LANGUAGE'] = 'en' # config['mapping']['wikibase_default_language'],
+# wbi_config['DEFAULT_LEXEME_LANGUAGE'] = 'Q1860'
 
-wbi_config['MEDIAWIKI_API_URL'] = config['mapping']['api_url']
-wbi_config['SPARQL_ENDPOINT_URL'] = config['mapping']['sparql_endpoint']
-wbi_config['WIKIBASE_URL'] = "https://monumenta.wikibase.cloud"
 
 login_instance = wbi_login.Login(user=config_private.wb_bot_user, password=config_private.wb_bot_pwd)
 
 wbi = WikibaseIntegrator(login=login_instance)
 
-wd_user_agent = config['mapping']['mwclient_site']+", User "+config_private.wb_bot_user
+wd_user_agent = config['mapping']['wikibase_site']+", User "+config_private.wb_bot_user
 
 # functions for interaction with wbi
 def packstatements(statements, wbitem=None, qualifiers=False, references=False):
@@ -102,10 +97,14 @@ def packstatements(statements, wbitem=None, qualifiers=False, references=False):
 		return packed_statements
 	return wbitem
 
-def itemwrite(itemdata, clear=False):
+def itemwrite(itemdata, clear=False, entitytype='Item', datatype=None):
 	if itemdata['qid'] == False:
-		xwbitem = wbi.item.new()
-		print('Will write to new Q-item', end="")
+		if entitytype == "Item":
+			xwbitem = wbi.item.new()
+			print('Will write to new Q-item', end="")
+		elif entitytype == "Property":
+			xwbitem = wbi.property.new(datatype=datatype)
+			print('Will write to new P-item', end="")
 	elif itemdata['qid'].startswith('Q'):
 		xwbitem = wbi.item.get(entity_id=itemdata['qid'])
 		print('Will write to existing item '+itemdata['qid'], end="")
@@ -113,7 +112,7 @@ def itemwrite(itemdata, clear=False):
 		xwbitem = wbi.property.get(entity_id=itemdata['qid'])
 		print('Will write to existing property '+itemdata['qid'], end="")
 	else:
-		print('No Qid given.')
+		print('No Entity ID given.')
 		return False
 	if clear:
 		xwbitem.claims = Claims()
@@ -167,7 +166,7 @@ def itemwrite(itemdata, clear=False):
 	return xwbitem.id
 
 def importitem(wdqid, wbqid=False, process_claims=True, classqid=None):
-	languages_to_consider = config['mapping']['label_languages']
+	languages_to_consider = config['mapping']['wikibase_label_languages']
 	
 	print('Will get ' + wdqid + ' from wikidata...')
 	

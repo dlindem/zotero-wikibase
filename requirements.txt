@@ -22,3 +22,4 @@ mwclient>=0.10.1
 pandas>=2.1.1
 pyzotero>=1.5.18
 wikibaseintegrator>=0.12.4
+Flask==2.2.2

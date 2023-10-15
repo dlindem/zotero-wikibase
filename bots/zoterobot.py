@@ -3,7 +3,7 @@ from bots import botconfig
 from bots import config_private
 from pyzotero import zotero
 
-pyzot = zotero.Zotero(config['mapping']['zotero_group_id'], 'group', config_private.zotero_api_key)  # Zotero LexBib group
+pyzot = zotero.Zotero(int(config['mapping']['zotero_group_id']), 'group', config_private.zotero_api_key)  # Zotero LexBib group
 
 citations_cache = {}
 with open('bots/data/citations_cache.jsonl') as jsonlfile:
@@ -98,7 +98,7 @@ def patch_item(qid=None, zotitem=None, children=[]):
                     "charset": ""
                 }
             ]
-            r = requests.post('https://api.zotero.org/groups/' + str(config['mapping']['zotero_group_id']) + '/items',
+            r = requests.post('https://api.zotero.org/groups/' + config['mapping']['zotero_group_id'] + '/items',
                               headers={"Zotero-API-key": config_private.zotero_api_key,
                                        "Content-Type": "application/json"}, json=attachment)
             if "200" in str(r):

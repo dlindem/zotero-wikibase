@@ -10,10 +10,10 @@ should be used
 """
 
 # Endpoint of the MediaWiki API of the Wikibase instance
-mediawiki_api_endpoint = config['mapping']['api_url'] # e.g. 'https://monumenta.wikibase.cloud/w/api.php'
+mediawiki_api_endpoint = config['mapping']['wikibase_api_url'] # e.g. 'https://monumenta.wikibase.cloud/w/api.php'
 
 # SPARQL endpoint
-wikibase_sparql_endpoint = config['mapping']['sparql_endpoint'] # e.g. 'https://monumenta.wikibase.cloud/query/sparql'
+wikibase_sparql_endpoint = config['mapping']['wikibase_sparql_endpoint'] # e.g. 'https://monumenta.wikibase.cloud/query/sparql'
 
 # Name of the Wikibase instance
 wikibase_name = config['mapping']['wikibase_name']
@@ -33,9 +33,9 @@ wikibase_namespace_prefix = 'Item:'
 user_agent = 'OpenRefine-'+wikibase_name
 
 # Regexes and group ids to extracts Qids and Pids from URLs
-q_re = re.compile(fr"(<?https?://{config['mapping']['mwclient_site']}/(entity|wiki)/)?(Q[0-9]+)>?")
+q_re = re.compile(fr"(<?https?://{config['mapping']['wikibase_site']}/(entity|wiki)/)?(Q[0-9]+)>?")
 q_re_group_id = 3
-p_re = re.compile(fr"(<?https?://{config['mapping']['mwclient_site']}/(entity/|wiki/Property:))?(P[0-9]+)>?")
+p_re = re.compile(fr"(<?https?://{config['mapping']['wikibase_site']}/(entity/|wiki/Property:))?(P[0-9]+)>?")
 p_re_group_id = 3
 
 # Identifier space and schema space exposed to OpenRefine.
@@ -59,7 +59,7 @@ avoid_items_of_class = None
 
 # Service name exposed at various places,
 # mainly in the list of reconciliation services of users
-service_name = re.sub(r'\.[a-z]+$','',config['mapping']['mwclient_site'])+' Reconciliator'
+service_name = re.sub(r'\.[a-z]+$','',config['mapping']['wikibase_site'])+' Reconciliator'
 
 # URL (without the trailing slash) where this server runs
 this_host = 'http://localhost:8000'

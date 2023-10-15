@@ -24,7 +24,7 @@ botpath = os.path.realpath('bots')
 # store_qid_in_extra = True  # if set True, Wikibase BibItem Qid will be stored in the Zotero item's EXTRA field (otherwise, set to False)
 # store_qid_in_attachment = True  # if set True, a URI attachment will be created for the Zotero item, leading to the Wikibase entity
 #
-# label_languages = config['mapping']['label_languages']
+# label_languages = config['mapping']['wikibase_label_languages']
 # # essential properties, to be defined by the user in the GUI (choices are saved in config.json)
 # prop_wikidata_entity = config['mapping']['prop_wikidata_entity']['wikibase']  # externalId-prop for "Wikidata entity"
 # prop_zotero_item = config['mapping'][

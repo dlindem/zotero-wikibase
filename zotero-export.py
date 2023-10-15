@@ -151,18 +151,8 @@ if fieldcheck == "1":
                                 wbprop_to_useentity = xwbi.wbi.property.new(datatype=config['mapping']['datatypes_mapping'][datatype])
                                 wbprop_to_useentity.labels.set('en', fieldname)
                                 print('enlabel set: ' + fieldname)
-                                d = False
-                                while d == False:
-                                    try:
-                                        print('Writing to xwb wikibase...')
-                                        r = wbprop_to_useentity.write(is_bot=1, clear=False)
-                                        d = True
-                                        wbprop_to_use = wbprop_to_useentity.id
-                                        print('Successfully written data to item: ' + wbprop_to_use)
-                                    except Exception:
-                                        ex = traceback.format_exc()
-                                        print(ex)
-                                        presskey = input('Press key for retry.')
+                                wbprop_to_use = littlehelpers.write_property(wbprop_to_useentity)
+
                             if choice2 == "4":
                                 wbprop = input(
                                     "Write the ID of the wikibase property to be used for this, with the preceding letter, e.g. 'P21': ")
@@ -325,7 +315,7 @@ for item in data:
     ## title to labels
     if 'title' in item['data']:
         labels = []
-        for lang in config['mapping']['label_languages']:
+        for lang in config['mapping']['wikibase_label_languages']:
             labels.append({'lang': lang, 'value': item['data']['title']})
 
     ## language
@@ -517,7 +507,7 @@ for item in data:
                 })
     # add description
     descriptions = []
-    for lang in config['mapping']['label_languages']:
+    for lang in config['mapping']['wikibase_label_languages']:
         creatorsummary = item['meta']['creatorSummary'] if 'creatorSummary' in item['meta'] else ""
         descriptions.append({'lang': lang, 'value': f"{creatorsummary} {pubyear}"})
 

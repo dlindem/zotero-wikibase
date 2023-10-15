@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+<body>
+<h1>Welcome to ZotWb Zotero to Wikibase export</h1>
+<p>This instance connects {{ zotero_name }} Zotero group to <a href="{{ wikibase_url }}">{{ wikibase_name }} Wikibase</a>.</p>
+<h2>Basic configuration</h2>
+<p>To get started, access the <a href="./basic_config">basic configuration page</a>.</p>
+<h2>Zotero datafields mapping</h2>
+<p>Access these pages for configuring how the Zotero datafields content is mapped to Wikibase properties.</p>
+<h3>Zotero item data fields</h3>
+<ul>{% for itemtype in zoteromapping %}
+    <li><a href="./zoterofields/{{ itemtype }}">{{ itemtype }}</a></li>
+    {% endfor %}
+</ul>
+</body>
+</html>

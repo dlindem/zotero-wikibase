@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<body>
+<h1>Mapping configuration for Zotero item type '{{ itemtype }}'</h1>
+<small>(Back to <a href="/">start page</a>)</small>
+<p>This page configures the field-property mapping for '{{ itemtype }}'.</br>
+    "False" as value means that this field will be permanently ignored. You can manually set that value.</br>
+    "None" as value means that this mapping is undefined, and that the export function will complain when encountering data in that field. You can not manually set that value.</br>
+    Be careful creating new properties; you may create duplicates.</br>
+    The property you manually associate to a field MUST be of the datatype listed here (this is not veryfied by the tool!).</br>
+    You can also get labels, aliases and descriptions from a Wikidata property you specify</p>
+<h2>BibItem type</h2>
+<p>The <b>Q-ID</b> for "{{ itemtype }}" on your Wikibase:
+<form method="POST">
+    &#129054; <input type="text" name="bibtypeqid" value={{ zoteromapping['bibtypeqid'] }} style="width: 60px;">
+    <input type="submit" value="Update this">
+</form>
+</p>
+<h2>Data fields configuration</h2>
+{% for fieldname in zoteromapping['fields'] %}
+<p>
+<form style="display: inline;" method="POST">
+ &#10026; <b>{{ fieldname }}</b> &#129054;
+{% if zoteromapping['fields'][fieldname]['wbprop'] %}
+    <a href="{{ wikibase_entity_ns }}{{ zoteromapping['fields'][fieldname]['wbprop'] }}">{{ zoteromapping['fields'][fieldname]['wbprop'] }}</a>
+{% endif %}
+    <input type="text" value={{ zoteromapping['fields'][fieldname]['wbprop'] }} name = {{ fieldname }} style="width: 40px;" />
+    <input type="submit" value="Update this">
+</form> or <form style="display: inline;" method="POST">
+    <button name= {{ fieldname + '_create' }} type="submit">&#10071; Create new &#10071;</button>
+</form>
+{% if zoteromapping['fields'][fieldname]['wbprop'] and zoteromapping['fields'][fieldname]['wbprop'] in properties %}
+{% if properties[zoteromapping['fields'][fieldname]['wbprop']]['wdprop'] %}
+ or
+<form style="display: inline;" method="POST">
+    <button name= {{ fieldname + '_redo' }} type="submit">Import wd:{{ properties[zoteromapping['fields'][fieldname]['wbprop']]['wdprop'] }} to wb:{{ zoteromapping['fields'][fieldname]['wbprop'] }}</button>
+</form>
+<small><i>Wikidata equivalent: </i><a href="http://www.wikidata.org/entity/{{ properties[zoteromapping['fields'][fieldname]['wbprop']]['wdprop'] }}">{{ properties[zoteromapping['fields'][fieldname]['wbprop']]['wdprop'] }}</a></small>
+{% endif %}
+{% endif %}
+{% if 'dtype' in zoteromapping['fields'][fieldname] %}
+<small><i>Property datatype: {{ zoteromapping['fields'][fieldname]['dtype'] }}</i></small>
+{% endif %}</p>
+{% endfor %}
+
+</body>
+</html>

@@ -34,7 +34,7 @@ card1props = []
 
 # LexBib wikibase OAuth for mwclient
 
-site = mwclient.Site(config['mapping']['mwclient_site'])
+site = mwclient.Site(config['mapping']['wikibase_site'])
 # site = mwclient.Site(re.sub(r'https?://','',config['mapping']['wikibase_url']))
 def get_token():
 	global site

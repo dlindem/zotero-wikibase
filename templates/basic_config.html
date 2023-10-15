@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<body>
+<h1>ZotWb Basic Configuration</h1>
+(Back to <a href="./">start page</a>)
+
+<h2>URL and Name of your Wikibase</h2>
+<p>Edit the values manually. After every single field edit press ENTER, or the corresponding "Update this" button. The page will then be reloaded.</p>
+<p>The <b>URL</b> of your Wikibase is <a href="{{ data['wikibase_url'] }}">{{ data['wikibase_url'] }}</a>.</br>
+<small>You can update that in your 'config_private.py' file in the app base folder, together with usernames and passwords for Wikibase and Zotero.</small></p>
+<p>The <b>Name</b> of your Wikibase (e.g. 'Mybase'):
+<form method="POST">
+   &#129054; <input type="text" name="wikibase_name" value={{ data['wikibase_name'] }} style="width: 300px;">
+    <input type="submit" value="Update this">
+</form>
+</p>
+<p>The <b>Name</b> of your Zotero group (as in the group URL, after the group number between slashes):
+<form method="POST">
+    &#129054; <input type="text" name="zotero_group_name" value={{ data['zotero_group_name'] }} style="width: 300px;">
+    <input type="submit" value="Update this">
+</form>
+<p>The <b>Number</b> of your Zotero group (as in the group URL, after '/groups/'):
+<form method="POST">
+    &#129054; <input type="text" name="zotero_group_id" value={{ data['zotero_group_id'] }} style="width: 300px;">
+    <input type="submit" value="Update this">
+</form>
+</p>
+<p>The <b>Tag</b> you use on your Wikibase to mark records for export:
+<form method="POST">
+    &#129054; <input type="text" name="zotero_export_tag" value={{ data['zotero_export_tag'] }} style="width: 300px;">
+    <input type="submit" value="Update this">
+</form>
+</p>
+<p>The <b>Tag</b> you use on your Wikibase to mark successfully imported items:
+<form method="POST">
+    &#129054; <input type="text" name="zotero_on_wikibase_tag" value={{ data['zotero_on_wikibase_tag'] }} style="width: 300px;">
+    <input type="submit" value="Update this">
+</form>
+</p>
+
+<h2>Basic properties and classes on your Wikibase</h2>
+<p>If you change the value manually, press the "Update this" button for saving.</br>
+    Otherwise use the "Create new" button to create a new property or class, and use that from now on.</br>
+    If the property is aligned to Wikidata, the Wikidata property will be imported.</br>
+    Be careful creating new items, you might create duplicates.</br>
+    Your can also import labels and descriptions from Wikidata to the proposed existing Wikibase entity.</p>
+{% for key in data %}
+
+{% if key.startswith('prop') or key.startswith('class') %}
+<p><b>{{ data[key]['name'] }}</b>
+<br><small>Comment: {{ data[key]['comment'] }}</small>
+<form style="display: inline;" method="POST">
+    {% if data[key]['wikibase'] %} <a href="{{ data['wikibase_entity_ns'] }}{{ data[key]['wikibase'] }}">{{ data[key]['wikibase'] }}</a>{% endif %}
+    &#129054; <input type="text" value={{ data[key]['wikibase'] }} name = {{ key }} style="width: 40px;" />
+    <input type="submit" value="Update this">
+</form> or
+<form style="display: inline;" method="POST">
+    <button name= {{ key + '_create' }} type="submit">&#10071; Create new &#10071;</button>
+</form>{% if data[key]['wikidata'] %} or
+<form style="display: inline;" method="POST">
+    <button name= {{ key + '_redo' }} type="submit">Import wd:{{ data[key]['wikidata'] }} to wb:{{ data[key]['wikibase'] }}</button>
+</form>
+<small><i>Wikidata equivalent: </i><a href="http://www.wikidata.org/entity/{{ data[key]['wikidata'] }}">{{ data[key]['wikidata'] }}</a></small>{% endif %}
+{% if data[key]['type'] %} <small><i>Property datatype: {{ data[key]['type'] }}</i></small>{% endif %}
+</p>
+
+
+{% endif %}
+{% endfor %}
+
+
+</body>
+</html>
+
+

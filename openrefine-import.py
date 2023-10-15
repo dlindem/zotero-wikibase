@@ -68,7 +68,7 @@ for rowindex, row in df.iterrows():
 		if row['fullName_clusters'].strip() not in newcreators:
 			print(f"{row['fullName_clusters'].strip()} belongs to no known cluster. Will create a new creator item.")
 			newitem = {"qid": False, "statements": [], "labels": [], "aliases": []}
-			for language in config['mapping']['label_languages']:
+			for language in config['mapping']['wikibase_label_languages']:
 				newitem['labels'].append({'lang': language, 'value': row['fullName']})
 				if isinstance(row['givenName'], str) and isinstance(row['lastName'], str):
 					newitem['aliases'].append({'lang': language, 'value': row['lastName'] + ', ' + row['givenName']})
@@ -106,7 +106,7 @@ for rowindex, row in df.iterrows():
 		# Compare labels, names, and write variants to Wikibase creator item
 		creatoritem = xwbi.wbi.item.get(entity_id=creatorqid)
 		itemchange = False
-		for language in config['mapping']['label_languages']:
+		for language in config['mapping']['wikibase_label_languages']:
 			existing_preflabel = creatoritem.labels.get(language)
 			existing_aliases = []
 			if not existing_preflabel:
