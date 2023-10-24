@@ -1,6 +1,13 @@
-# from bots import xwbi
+from bots import xwbi
 from bots import botconfig
 import requests, time, re
+
+def check_prop_id(propstring):
+    if propstring == "False" or propstring == "X":
+        return False
+    if re.search(r'^P[0-9]+$',propstring):
+        return propstring
+    return None
 
 def build_depconfig(configdata):
 
@@ -28,7 +35,7 @@ def rewrite_properties_mapping():
     properties = botconfig.load_mapping('properties')
     config = botconfig.load_mapping('config')
 
-    query = """select ?order ?prop ?propLabel ?datatype ?wikidata_prop ?formatter_url ?formatter_uri
+    query = """select ?order ?prop ?propLabel ?datatype ?wikidata_prop ?formatter_url ?formatter_uri (group_concat(str(?equiv)) as ?equivs)
     
     where {
       ?prop rdf:type <http://wikiba.se/ontology#Property> ;
@@ -38,11 +45,13 @@ def rewrite_properties_mapping():
       OPTIONAL {?prop xdp:""" + config['mapping']['prop_wikidata_entity']['wikibase'] + """ ?wikidata_prop.}
       OPTIONAL {?prop xdp:""" + config['mapping']['prop_formatterurl']['wikibase'] + """ ?formatter_url.}
       OPTIONAL {?prop xdp:""" + config['mapping']['prop_formatterurirdf']['wikibase'] + """ ?formatter_uri.}
+      OPTIONAL {?prop xdp:""" + config['mapping']['prop_equivalentprop']['wikibase'] + """ ?equiv.}
+      
         BIND (xsd:integer(strafter(str(?prop), "https://monumenta.wikibase.cloud/entity/P")) as ?order )
-    } group by ?order ?prop ?propLabel ?datatype ?wikidata_prop ?formatter_url ?formatter_uri order by ?order"""
+    } group by ?order ?prop ?propLabel ?datatype ?wikidata_prop ?formatter_url ?formatter_uri ?equivs order by ?order"""
 
     print("Waiting for SPARQL...")
-    bindings = xwbi.wbi_helpers.execute_sparql_query(query=query, prefix=config['mapping']['sparql_prefixes'])['results']['bindings']
+    bindings = xwbi.wbi_helpers.execute_sparql_query(query=query, prefix=config['mapping']['wikibase_sparql_prefixes'])['results']['bindings']
     print('Found ' + str(len(bindings)) + ' results to process.\n')
     count = 0
     for item in bindings:
@@ -56,6 +65,8 @@ def rewrite_properties_mapping():
             properties['mapping'][prop_nr]['formatter_url'] = item['formatter_url']['value']
         if 'formatter_uri' in item:
             properties['mapping'][prop_nr]['formatter_uri'] = item['formatter_uri']['value']
+        if 'equivs' in item:
+            properties['mapping'][prop_nr]['equivalents'] = item['equivs']['value'].split(' ')
 
     botconfig.dump_mapping(properties)
 

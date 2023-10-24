@@ -2,44 +2,61 @@
 <html>
 <body>
 <h1>Mapping configuration for Zotero item type '{{ itemtype }}'</h1>
+{% if message %}<p style = "{{ msgcolor }}">{{ message }}<p>{% endif %}
 <small>(Back to <a href="/">start page</a>)</small>
-<p>This page configures the field-property mapping for '{{ itemtype }}'.</br>
-    "False" as value means that this field will be permanently ignored. You can manually set that value.</br>
-    "None" as value means that this mapping is undefined, and that the export function will complain when encountering data in that field. You can not manually set that value.</br>
-    Be careful creating new properties; you may create duplicates.</br>
-    The property you manually associate to a field MUST be of the datatype listed here (this is not veryfied by the tool!).</br>
-    You can also get labels, aliases and descriptions from a Wikidata property you specify</p>
+<p>This page configures the field-property mapping used in the Zotero-to-Wikibase export concerning '{{ itemtype }}'.</br>
+    "False" as value means that this field will be permanently ignored (not mapped to anything). You can manually set that value entering "False" or just a capital "X".</br>
+    "None" as value means that this mapping is still undefined, and that the export function will complain when encountering data in that field. You can not manually set that value.</br>
+    <u>Be careful</u> creating new properties; you may create duplicates.</br>
+    The property you manually associate to a field <u>must</u> be of the datatype listed here (this is not validated by the tool!).</br>
+    You can also get labels, aliases and descriptions from the proposed Wikidata entity ('import' button).</br>
+    To change the alignment of Wikibase and Wikidata properties, go to the <a href="/wikidata_alignment">Wikidata alignment</a> page.</br>
+    To change the alignment of Zotero bibitem types and Wikidata items (probably not necessary), do that manually in the 'mappings/zotero_bibtypes.json' file.</p>
+{% if itemtype == 'all_types' %}
+<h2>Editing all bibitem types at once</h2>
+<p>This page configures properties mappings for all bibitem types at the same time.</br>
+    <u>Be careful</u>: if you update something on this page, that will overwrite all mappings for the fields with the same name in <u>all</u> bibitem types.</br>
+To define mappings for a single bibitem type (so that fields with the same name can be mapped differently according to the bibitem type), go to the corresponding page (<a href="/">index</a>).</p>
+{% else %}
 <h2>BibItem type</h2>
 <p>The <b>Q-ID</b> for "{{ itemtype }}" on your Wikibase:
-<form method="POST">
-    &#129054; <input type="text" name="bibtypeqid" value={{ zoteromapping['bibtypeqid'] }} style="width: 60px;">
+<form style="display: inline;" method="POST">
+    &#129054; {%if zoteromapping[itemtype]['bibtypeqid'] %}<a href="{{ wikibase_entity_ns }}{{ zoteromapping[itemtype]['bibtypeqid'] }}">wb:{{ zoteromapping[itemtype]['bibtypeqid'] }}</a>{% endif %}
+    <input type="text" name="bibtypeqid" value={{ zoteromapping[itemtype]['bibtypeqid'] }} style="width: 60px;">
     <input type="submit" value="Update this">
+</form>or <form style="display: inline;" method="POST">
+    <button name= {{ 'bibtypeqid_create' }} type="submit">&#10071; Create new from wd:{{ zotero_bibtypes[itemtype] }}&#10071;</button>
+</form> or
+<form style="display: inline;" method="POST">
+    <button name= {{ 'bibtypeqid_redo' }} type="submit">Import wd:{{ zotero_bibtypes[itemtype] }} to wb:{{ zoteromapping[itemtype]['bibtypeqid'] }}</button>
 </form>
+<small><i>Wikidata equivalent: </i><a href="http://www.wikidata.org/entity/{{ zotero_bibtypes[itemtype] }}">{{ zotero_bibtypes[itemtype] }}</a></small>
 </p>
+{% endif %}
 <h2>Data fields configuration</h2>
-{% for fieldname in zoteromapping['fields'] %}
+{% for fieldname in zoteromapping[itemtype]['fields'] %}
 <p>
 <form style="display: inline;" method="POST">
- &#10026; <b>{{ fieldname }}</b> &#129054;
-{% if zoteromapping['fields'][fieldname]['wbprop'] %}
-    <a href="{{ wikibase_entity_ns }}{{ zoteromapping['fields'][fieldname]['wbprop'] }}">{{ zoteromapping['fields'][fieldname]['wbprop'] }}</a>
+ &#10026; <b>{{ fieldname }}</b> ('{{ zoteromapping['all_types']['fields'][fieldname]['name'] }}') &#129054;
+{% if zoteromapping[itemtype]['fields'][fieldname]['wbprop'] %}
+    <a href="{{ wikibase_entity_ns }}{{ zoteromapping[itemtype]['fields'][fieldname]['wbprop'] }}">wb:{{ zoteromapping[itemtype]['fields'][fieldname]['wbprop'] }}</a>
 {% endif %}
-    <input type="text" value={{ zoteromapping['fields'][fieldname]['wbprop'] }} name = {{ fieldname }} style="width: 40px;" />
+    <input type="text" value={{ zoteromapping[itemtype]['fields'][fieldname]['wbprop'] }} name = {{ fieldname }} style="width: 40px;" />
     <input type="submit" value="Update this">
 </form> or <form style="display: inline;" method="POST">
     <button name= {{ fieldname + '_create' }} type="submit">&#10071; Create new &#10071;</button>
 </form>
-{% if zoteromapping['fields'][fieldname]['wbprop'] and zoteromapping['fields'][fieldname]['wbprop'] in properties %}
-{% if properties[zoteromapping['fields'][fieldname]['wbprop']]['wdprop'] %}
+{% if zoteromapping[itemtype]['fields'][fieldname]['wbprop'] and zoteromapping[itemtype]['fields'][fieldname]['wbprop'] in properties %}
+{% if properties[zoteromapping[itemtype]['fields'][fieldname]['wbprop']]['wdprop'] %}
  or
 <form style="display: inline;" method="POST">
-    <button name= {{ fieldname + '_redo' }} type="submit">Import wd:{{ properties[zoteromapping['fields'][fieldname]['wbprop']]['wdprop'] }} to wb:{{ zoteromapping['fields'][fieldname]['wbprop'] }}</button>
+    <button name= {{ fieldname + '_redo' }} type="submit">Import wd:{{ properties[zoteromapping[itemtype]['fields'][fieldname]['wbprop']]['wdprop'] }} to wb:{{ zoteromapping[itemtype]['fields'][fieldname]['wbprop'] }}</button>
 </form>
-<small><i>Wikidata equivalent: </i><a href="http://www.wikidata.org/entity/{{ properties[zoteromapping['fields'][fieldname]['wbprop']]['wdprop'] }}">{{ properties[zoteromapping['fields'][fieldname]['wbprop']]['wdprop'] }}</a></small>
+<small><i>Wikidata equivalent: </i><a href="http://www.wikidata.org/entity/{{ properties[zoteromapping[itemtype]['fields'][fieldname]['wbprop']]['wdprop'] }}">wd:{{ properties[zoteromapping[itemtype]['fields'][fieldname]['wbprop']]['wdprop'] }}</a></small>
 {% endif %}
 {% endif %}
-{% if 'dtype' in zoteromapping['fields'][fieldname] %}
-<small><i>Property datatype: {{ zoteromapping['fields'][fieldname]['dtype'] }}</i></small>
+{% if 'dtype' in zoteromapping['all_types']['fields'][fieldname] %}
+<small><i>Property datatype: {{ zoteromapping['all_types']['fields'][fieldname]['dtype'] }}</i></small>
 {% endif %}</p>
 {% endfor %}
 

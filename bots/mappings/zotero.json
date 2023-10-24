@@ -1,81 +1,608 @@
 {
   "filename": "zotero.json",
-  "comment": "Item types, fields, and creatorTypes are based on the Zotero API scheme as of August 2023. wbprop value None/null means undefined, value False means this zotero field is excluded by the user from being mapped.",
+  "comment": "Item types, fields, and creatorTypes are based on the Zotero API scheme as of August 2023. wbprop value null/null means undefined, value False means this zotero field is excluded by the user from being mapped.",
   "mapping": {
-    "artwork": {
-      "bibtypeqid": null,
+    "all_types": {
       "fields": {
-        "title": {
-          "wbprop": "P11",
-          "dtype": "String"
+        "DOI": {
+          "wbprop": null,
+          "dtype": "ExternalId",
+          "name": "DOI"
+        },
+        "ISSN": {
+          "wbprop": null,
+          "dtype": "ExternalId",
+          "name": "ISSN"
         },
         "abstractNote": {
           "wbprop": null,
-          "dtype": "String"
+          "dtype": "String",
+          "name": "Abstract"
+        },
+        "accessDate": {
+          "wbprop": null,
+          "dtype": "Time",
+          "name": "Accessed"
+        },
+        "applicationNumber": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Application Number"
+        },
+        "archive": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Archive"
+        },
+        "archiveID": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Archive ID"
+        },
+        "archiveLocation": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Loc. in Archive"
         },
         "artworkMedium": {
           "wbprop": null,
           "dtype": "String",
-          "baseField": "medium"
+          "name": "Medium"
         },
         "artworkSize": {
           "wbprop": null,
-          "dtype": "String"
+          "dtype": "String",
+          "name": "Artwork Size"
         },
-        "date": {
+        "assignee": {
           "wbprop": null,
-          "dtype": "Time"
+          "dtype": "String",
+          "name": "Assignee"
         },
-        "language": {
-          "wbprop": "P12",
-          "dtype": "WikibaseItem"
-        },
-        "shortTitle": {
+        "audioFileType": {
           "wbprop": null,
-          "dtype": "String"
+          "dtype": "String",
+          "name": "File Type"
         },
-        "archive": {
+        "audioRecordingFormat": {
           "wbprop": null,
-          "dtype": "String"
+          "dtype": "String",
+          "name": "Format"
         },
-        "archiveLocation": {
+        "billNumber": {
           "wbprop": null,
-          "dtype": "String"
+          "dtype": "String",
+          "name": "Bill Number"
         },
-        "libraryCatalog": {
+        "blogTitle": {
           "wbprop": null,
-          "dtype": "String"
+          "dtype": "String",
+          "name": "Blog Title"
+        },
+        "bookTitle": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Book Title"
         },
         "callNumber": {
           "wbprop": null,
-          "dtype": "String"
+          "dtype": "String",
+          "name": "Call Number"
         },
-        "url": {
+        "caseName": {
           "wbprop": null,
-          "dtype": "Url"
+          "dtype": "String",
+          "name": "Case Name"
         },
-        "accessDate": {
+        "citationKey": {
           "wbprop": null,
-          "dtype": "Time"
+          "dtype": "String",
+          "name": "Citation Key"
+        },
+        "code": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Code"
+        },
+        "codeNumber": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Code Number"
+        },
+        "codePages": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Code Pages"
+        },
+        "codeVolume": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Code Volume"
+        },
+        "committee": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Committee"
+        },
+        "company": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Company"
+        },
+        "conferenceName": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Conference Name"
+        },
+        "country": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Country"
+        },
+        "court": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Court"
+        },
+        "date": {
+          "wbprop": "P16",
+          "dtype": "Time",
+          "name": "Date"
+        },
+        "dateDecided": {
+          "wbprop": null,
+          "dtype": "Time",
+          "name": "Date Decided"
+        },
+        "dateEnacted": {
+          "wbprop": null,
+          "dtype": "Time",
+          "name": "Date Enacted"
+        },
+        "dictionaryTitle": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Dictionary Title"
+        },
+        "distributor": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Distributor"
+        },
+        "docketNumber": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Docket Number"
+        },
+        "documentNumber": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Document Number"
+        },
+        "edition": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Edition"
+        },
+        "encyclopediaTitle": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Encyclopedia Title"
+        },
+        "episodeNumber": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Episode Number"
+        },
+        "filingDate": {
+          "wbprop": null,
+          "dtype": "Time",
+          "name": "Filing Date"
+        },
+        "firstPage": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "First Page"
+        },
+        "format": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Format"
+        },
+        "forumTitle": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Forum/Listserv Title"
+        },
+        "genre": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Genre"
+        },
+        "history": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "History"
+        },
+        "identifier": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Identifier"
+        },
+        "institution": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Institution"
+        },
+        "interviewMedium": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Medium"
+        },
+        "issue": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Issue"
+        },
+        "issueDate": {
+          "wbprop": null,
+          "dtype": "Time",
+          "name": "Issue Date"
+        },
+        "issuingAuthority": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Issuing Authority"
+        },
+        "journalAbbreviation": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Journal Abbr"
+        },
+        "label": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Label"
+        },
+        "legalStatus": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Legal Status"
+        },
+        "legislativeBody": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Legislative Body"
+        },
+        "letterType": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Type"
+        },
+        "libraryCatalog": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Library Catalogue"
+        },
+        "manuscriptType": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Type"
+        },
+        "mapType": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Type"
+        },
+        "meetingName": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Meeting Name"
+        },
+        "nameOfAct": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Name of Act"
+        },
+        "network": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Network"
+        },
+        "numPages": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "# of Pages"
+        },
+        "number": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Number"
+        },
+        "numberOfVolumes": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "# of Volumes"
+        },
+        "organization": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Organization"
+        },
+        "pages": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Pages"
+        },
+        "patentNumber": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Patent Number"
+        },
+        "place": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Place"
+        },
+        "postType": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Post Type"
+        },
+        "presentationType": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Type"
+        },
+        "priorityNumbers": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Priority Numbers"
+        },
+        "proceedingsTitle": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Proceedings Title"
+        },
+        "programTitle": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Program Title"
+        },
+        "programmingLanguage": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Prog. Language"
+        },
+        "publicLawNumber": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Public Law Number"
+        },
+        "publicationTitle": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Publication"
+        },
+        "publisher": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Publisher"
+        },
+        "references": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "References"
+        },
+        "reportNumber": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Report Number"
+        },
+        "reportType": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Report Type"
+        },
+        "reporter": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Reporter"
+        },
+        "reporterVolume": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Reporter Volume"
+        },
+        "repository": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Repository"
+        },
+        "repositoryLocation": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Repo. Location"
         },
         "rights": {
           "wbprop": null,
-          "dtype": "String"
+          "dtype": "String",
+          "name": "Rights"
+        },
+        "runningTime": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Running Time"
+        },
+        "scale": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Scale"
+        },
+        "section": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Section"
+        },
+        "series": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Series"
+        },
+        "seriesNumber": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Series Number"
+        },
+        "seriesText": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Series Text"
+        },
+        "seriesTitle": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Series Title"
+        },
+        "session": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Session"
+        },
+        "shortTitle": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Short Title"
+        },
+        "status": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Status"
+        },
+        "studio": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Studio"
+        },
+        "subject": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Subject"
+        },
+        "system": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "System"
+        },
+        "thesisType": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Type"
+        },
+        "title": {
+          "wbprop": "P11",
+          "dtype": "String",
+          "name": "Title"
+        },
+        "type": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Type"
+        },
+        "university": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "University"
+        },
+        "url": {
+          "wbprop": null,
+          "dtype": "URL",
+          "name": "URL"
+        },
+        "versionNumber": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Version"
+        },
+        "videoRecordingFormat": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Format"
+        },
+        "volume": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Volume"
+        },
+        "websiteTitle": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Website Title"
+        },
+        "websiteType": {
+          "wbprop": null,
+          "dtype": "String",
+          "name": "Website Type"
+        }
+      }
+    },
+    "artwork": {
+      "bibtypeqid": null,
+      "fields": {
+        "title": {
+          "wbprop": "P11"
+        },
+        "abstractNote": {
+          "wbprop": null
+        },
+        "artworkMedium": {
+          "wbprop": null,
+          "baseField": "medium"
+        },
+        "artworkSize": {
+          "wbprop": null
+        },
+        "date": {
+          "wbprop": null
+        },
+        "language": {
+          "wbprop": "P12"
+        },
+        "shortTitle": {
+          "wbprop": null
+        },
+        "archive": {
+          "wbprop": null
+        },
+        "archiveLocation": {
+          "wbprop": null
+        },
+        "libraryCatalog": {
+          "wbprop": null
+        },
+        "callNumber": {
+          "wbprop": null
+        },
+        "url": {
+          "wbprop": null
+        },
+        "accessDate": {
+          "wbprop": null
+        },
+        "rights": {
+          "wbprop": null
         },
         "extra": {
-          "wbprop": "P55",
-          "dtype": "ExternalId"
+          "wbprop": "P55"
         }
       },
       "creatorTypes": {
         "artist": {
           "wbprop": null,
-          "dtype": "WikibaseItem",
           "primary": true
         },
         "contributor": {
-          "wbprop": "P131",
-          "dtype": "WikibaseItem"
+          "wbprop": "P131"
         }
       }
     },
@@ -83,109 +610,84 @@
       "bibtypeqid": null,
       "fields": {
         "title": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "abstractNote": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "audioRecordingFormat": {
           "wbprop": null,
-          "dtype": "String",
           "baseField": "medium"
         },
         "seriesTitle": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "volume": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "numberOfVolumes": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "place": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "label": {
           "wbprop": null,
-          "dtype": "String",
           "baseField": "publisher"
         },
         "date": {
-          "wbprop": null,
-          "dtype": "Time"
+          "wbprop": null
         },
         "runningTime": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "language": {
-          "wbprop": null,
-          "dtype": "WikibaseItem"
+          "wbprop": null
         },
         "ISBN": {
-          "wbprop": null,
-          "dtype": "ExternalId"
+          "wbprop": null
         },
         "shortTitle": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "archive": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "archiveLocation": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "libraryCatalog": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "callNumber": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "url": {
-          "wbprop": null,
-          "dtype": "Url"
+          "wbprop": null
         },
         "accessDate": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "rights": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "extra": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         }
       },
       "creatorTypes": {
         "performer": {
           "wbprop": null,
-          "dtype": "WikibaseItem",
           "primary": true
         },
         "contributor": {
-          "wbprop": null,
-          "dtype": "WikibaseItem"
+          "wbprop": null
         },
         "composer": {
-          "wbprop": null,
-          "dtype": "WikibaseItem"
+          "wbprop": null
         },
         "wordsBy": {
-          "wbprop": null,
-          "dtype": "WikibaseItem"
+          "wbprop": null
         }
       }
     },
@@ -193,91 +695,71 @@
       "bibtypeqid": null,
       "fields": {
         "title": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "abstractNote": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "billNumber": {
           "wbprop": null,
-          "dtype": "String",
           "baseField": "number"
         },
         "code": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "codeVolume": {
           "wbprop": null,
-          "dtype": "String",
           "baseField": "volume"
         },
         "section": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "codePages": {
           "wbprop": null,
-          "dtype": "String",
           "baseField": "pages"
         },
         "legislativeBody": {
           "wbprop": null,
-          "dtype": "String",
           "baseField": "authority"
         },
         "session": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "history": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "date": {
-          "wbprop": null,
-          "dtype": "Time"
+          "wbprop": null
         },
         "language": {
-          "wbprop": null,
-          "dtype": "WikibaseItem"
+          "wbprop": null
         },
         "url": {
-          "wbprop": null,
-          "dtype": "Url"
+          "wbprop": null
         },
         "accessDate": {
-          "wbprop": null,
-          "dtype": "Time"
+          "wbprop": null
         },
         "shortTitle": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "rights": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "extra": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         }
       },
       "creatorTypes": {
         "sponsor": {
           "wbprop": null,
-          "dtype": "WikibaseItem",
           "primary": true
         },
         "cosponsor": {
-          "wbprop": null,
-          "dtype": "WikibaseItem"
+          "wbprop": null
         },
         "contributor": {
-          "wbprop": null,
-          "dtype": "WikibaseItem"
+          "wbprop": null
         }
       }
     },
@@ -285,65 +767,51 @@
       "bibtypeqid": null,
       "fields": {
         "title": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "abstractNote": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "blogTitle": {
           "wbprop": null,
-          "dtype": "String",
           "baseField": "publicationTitle"
         },
         "websiteType": {
           "wbprop": null,
-          "dtype": "String",
           "baseField": "type"
         },
         "date": {
-          "wbprop": null,
-          "dtype": "Time"
+          "wbprop": null
         },
         "url": {
-          "wbprop": null,
-          "dtype": "Url"
+          "wbprop": null
         },
         "accessDate": {
-          "wbprop": null,
-          "dtype": "Time"
+          "wbprop": null
         },
         "language": {
-          "wbprop": null,
-          "dtype": "WikibaseItem"
+          "wbprop": null
         },
         "shortTitle": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "rights": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "extra": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         }
       },
       "creatorTypes": {
         "author": {
           "wbprop": null,
-          "dtype": "WikibaseItem",
           "primary": true
         },
         "commenter": {
-          "wbprop": null,
-          "dtype": "WikibaseItem"
+          "wbprop": null
         },
         "contributor": {
-          "wbprop": null,
-          "dtype": "WikibaseItem"
+          "wbprop": null
         }
       }
     },
@@ -351,115 +819,79 @@
       "bibtypeqid": "Q202",
       "fields": {
         "title": {
-          "wbprop": "P11",
-          "dtype": "String"
+          "wbprop": "P11"
         },
         "abstractNote": {
-          "wbprop": false,
-          "dtype": "String"
+          "wbprop": false
         },
         "series": {
-          "wbprop": "P142",
-          "dtype": "String"
+          "wbprop": "P142"
         },
         "seriesNumber": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": "P168"
         },
         "volume": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": "P144"
         },
         "numberOfVolumes": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "edition": {
-          "wbprop": "P57",
-          "dtype": "String"
+          "wbprop": "P57"
         },
         "place": {
-          "wbprop": "P15",
-          "dtype": "String"
+          "wbprop": "P15"
         },
         "publisher": {
-          "wbprop": "P34",
-          "dtype": "String"
+          "wbprop": "P34"
         },
         "date": {
-          "wbprop": "P16",
-          "dtype": "Time"
+          "wbprop": "P16"
         },
         "numPages": {
-          "wbprop": "P140",
-          "dtype": "String"
-        },
-        "language": {
-          "wbprop": "P12",
-          "dtype": "WikibaseItem"
-        },
-        "ISBN": {
-          "wbprop": false,
-          "dtype": "ExternalId"
+          "wbprop": "P140"
         },
         "shortTitle": {
-          "wbprop": false,
-          "dtype": "String"
+          "wbprop": false
         },
         "url": {
-          "wbprop": "P86",
-          "dtype": "Url"
+          "wbprop": "P86"
         },
         "accessDate": {
-          "wbprop": false,
-          "dtype": "Time"
+          "wbprop": null
         },
         "archive": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "archiveLocation": {
-          "wbprop": false,
-          "dtype": "String"
+          "wbprop": null
         },
         "libraryCatalog": {
-          "wbprop": false,
-          "dtype": "String"
+          "wbprop": null
         },
         "callNumber": {
-          "wbprop": false,
-          "dtype": "String"
+          "wbprop": null
         },
         "rights": {
-          "wbprop": null,
-          "dtype": "String"
-        },
-        "extra": {
-          "wbprop": "P55",
-          "dtype": "String"
+          "wbprop": null
         }
       },
       "creatorTypes": {
         "author": {
           "wbprop": "P13",
-          "dtype": "WikibaseItem",
           "primary": true
         },
         "contributor": {
-          "wbprop": "P131",
-          "dtype": "WikibaseItem"
+          "wbprop": "P131"
         },
         "editor": {
-          "wbprop": "P14",
-          "dtype": "WikibaseItem"
+          "wbprop": "P14"
         },
         "translator": {
-          "wbprop": null,
-          "dtype": "WikibaseItem"
+          "wbprop": null
         },
         "seriesEditor": {
-          "wbprop": "P146",
-          "dtype": "WikibaseItem"
+          "wbprop": "P146"
         }
       }
     },
@@ -467,124 +899,95 @@
       "bibtypeqid": "Q201",
       "fields": {
         "title": {
-          "wbprop": "P11",
-          "dtype": "String"
+          "wbprop": "P11"
         },
         "abstractNote": {
-          "wbprop": false,
-          "dtype": "String"
+          "wbprop": null
         },
         "bookTitle": {
           "wbprop": "P139",
-          "dtype": "String",
           "baseField": "publicationTitle"
         },
         "series": {
-          "wbprop": "P142",
-          "dtype": "String"
+          "wbprop": "P142"
         },
         "seriesNumber": {
-          "wbprop": "P144",
-          "dtype": "String"
+          "wbprop": "P144"
         },
         "volume": {
-          "wbprop": "P22",
-          "dtype": "String"
+          "wbprop": "P22"
         },
         "numberOfVolumes": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "edition": {
-          "wbprop": "P57",
-          "dtype": "String"
+          "wbprop": "P57"
         },
         "place": {
-          "wbprop": "P15",
-          "dtype": "String"
+          "wbprop": "P15"
         },
         "publisher": {
-          "wbprop": "P34",
-          "dtype": "String"
+          "wbprop": "P34"
         },
         "date": {
-          "wbprop": "P16",
-          "dtype": "Time"
+          "wbprop": "P16"
         },
         "pages": {
-          "wbprop": "P24",
-          "dtype": "String"
+          "wbprop": "P24"
         },
         "language": {
-          "wbprop": "P12",
-          "dtype": "WikibaseItem"
+          "wbprop": "P12"
         },
         "ISBN": {
-          "wbprop": false,
-          "dtype": "ExternalId"
+          "wbprop": null
         },
         "shortTitle": {
-          "wbprop": false,
-          "dtype": "String"
+          "wbprop": null
         },
         "url": {
-          "wbprop": "P86",
-          "dtype": "Url"
+          "wbprop": "P86"
         },
         "accessDate": {
-          "wbprop": false,
-          "dtype": "Time"
+          "wbprop": null
         },
         "archive": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "archiveLocation": {
-          "wbprop": false,
-          "dtype": "String"
+          "wbprop": null
         },
         "libraryCatalog": {
-          "wbprop": false,
-          "dtype": "String"
+          "wbprop": null
         },
         "callNumber": {
-          "wbprop": false,
-          "dtype": "String"
+          "wbprop": null
         },
         "rights": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "extra": {
-          "wbprop": false,
-          "dtype": "String"
+          "wbprop": null
         }
       },
       "creatorTypes": {
         "author": {
           "wbprop": "P13",
-          "dtype": "WikibaseItem",
           "primary": true
         },
         "contributor": {
-          "wbprop": "P131",
-          "dtype": "WikibaseItem"
+          "wbprop": "P131"
         },
         "editor": {
-          "wbprop": "P14",
-          "dtype": "WikibaseItem"
+          "wbprop": "P14"
         },
         "bookAuthor": {
-          "wbprop": null,
-          "dtype": "WikibaseItem"
+          "wbprop": null
         },
         "translator": {
-          "wbprop": null,
-          "dtype": "WikibaseItem"
+          "wbprop": null
         },
         "seriesEditor": {
-          "wbprop": null,
-          "dtype": "WikibaseItem"
+          "wbprop": null
         }
       }
     },
@@ -593,84 +996,66 @@
       "fields": {
         "caseName": {
           "wbprop": null,
-          "dtype": "String",
           "baseField": "title"
         },
         "abstractNote": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "court": {
           "wbprop": null,
-          "dtype": "String",
           "baseField": "authority"
         },
         "dateDecided": {
           "wbprop": null,
-          "dtype": "String",
           "baseField": "date"
         },
         "docketNumber": {
           "wbprop": null,
-          "dtype": "String",
           "baseField": "number"
         },
         "reporter": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "reporterVolume": {
           "wbprop": null,
-          "dtype": "String",
           "baseField": "volume"
         },
         "firstPage": {
           "wbprop": null,
-          "dtype": "String",
           "baseField": "pages"
         },
         "history": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "language": {
-          "wbprop": null,
-          "dtype": "WikibaseItem"
+          "wbprop": null
         },
         "shortTitle": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "url": {
-          "wbprop": null,
-          "dtype": "Url"
+          "wbprop": null
         },
         "accessDate": {
-          "wbprop": null,
-          "dtype": "Time"
+          "wbprop": null
         },
         "rights": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "extra": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         }
       },
       "creatorTypes": {
         "author": {
           "wbprop": null,
-          "dtype": "WikibaseItem",
           "primary": true
         },
         "counsel": {
-          "wbprop": null,
-          "dtype": "WikibaseItem"
+          "wbprop": null
         },
         "contributor": {
-          "wbprop": null,
-          "dtype": "WikibaseItem"
+          "wbprop": null
         }
       }
     },
@@ -678,314 +1063,239 @@
       "bibtypeqid": null,
       "fields": {
         "title": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "abstractNote": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "seriesTitle": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "versionNumber": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "date": {
-          "wbprop": null,
-          "dtype": "Time"
+          "wbprop": null
         },
         "system": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "place": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "company": {
           "wbprop": null,
-          "dtype": "String",
           "baseField": "publisher"
         },
         "programmingLanguage": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "ISBN": {
-          "wbprop": null,
-          "dtype": "ExternalId"
+          "wbprop": null
         },
         "shortTitle": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "url": {
-          "wbprop": null,
-          "dtype": "Url"
+          "wbprop": null
         },
         "rights": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "archive": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "archiveLocation": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "libraryCatalog": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "callNumber": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "accessDate": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "extra": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         }
       },
       "creatorTypes": {
         "programmer": {
           "wbprop": null,
-          "dtype": "WikibaseItem",
           "primary": true
         },
         "contributor": {
-          "wbprop": null,
-          "dtype": "WikibaseItem"
+          "wbprop": null
         }
       }
     },
     "conferencePaper": {
       "bibtypeqid": "Q204",
-      "exactmatches": ["http://purl.org/spar/fabio/ProceedingsPaper"],
+      "exactmatches": [
+        "http://purl.org/spar/fabio/ProceedingsPaper"
+      ],
       "fields": {
         "title": {
-          "wbprop": "P11",
-          "dtype": "String"
+          "wbprop": "P11"
         },
         "abstractNote": {
-          "wbprop": false,
-          "dtype": "String"
+          "wbprop": null
         },
         "date": {
-          "wbprop": "P16",
-          "dtype": "Time"
+          "wbprop": "P16"
         },
         "proceedingsTitle": {
           "wbprop": "P139",
-          "dtype": "String",
           "baseField": "publicationTitle"
         },
         "conferenceName": {
-          "wbprop": "P35",
-          "dtype": "String"
+          "wbprop": "P35"
         },
         "place": {
-          "wbprop": "P15",
-          "dtype": "String"
+          "wbprop": "P15"
         },
         "publisher": {
-          "wbprop": "P34",
-          "dtype": "String"
+          "wbprop": "P34"
         },
         "volume": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "pages": {
-          "wbprop": "P24",
-          "dtype": "String"
+          "wbprop": "P24"
         },
         "series": {
-          "wbprop": "P142",
-          "dtype": "String"
+          "wbprop": "P142"
         },
         "language": {
-          "wbprop": "P12",
-          "dtype": "WikibaseItem"
+          "wbprop": "P12"
         },
         "DOI": {
-          "wbprop": null,
-          "dtype": "ExternalId"
+          "wbprop": null
         },
         "ISBN": {
-          "wbprop": false,
-          "dtype": "ExternalId"
+          "wbprop": null
         },
         "shortTitle": {
-          "wbprop": false,
-          "dtype": "String"
+          "wbprop": null
         },
         "url": {
-          "wbprop": "P86",
-          "dtype": "Url"
+          "wbprop": "P86"
         },
         "accessDate": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "archive": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "archiveLocation": {
-          "wbprop": false,
-          "dtype": "String"
+          "wbprop": null
         },
         "libraryCatalog": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "callNumber": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "rights": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "extra": {
-          "wbprop": "P55",
-          "dtype": "String"
+          "wbprop": "P55"
         }
       },
       "creatorTypes": {
         "author": {
           "wbprop": "P13",
-          "dtype": "WikibaseItem",
           "primary": true
         },
         "contributor": {
-          "wbprop": null,
-          "dtype": "WikibaseItem"
+          "wbprop": null
         },
         "editor": {
-          "wbprop": "P14",
-          "dtype": "WikibaseItem"
+          "wbprop": "P14"
         },
         "translator": {
-          "wbprop": null,
-          "dtype": "WikibaseItem"
+          "wbprop": null
         },
         "seriesEditor": {
-          "wbprop": null,
-          "dtype": "WikibaseItem"
+          "wbprop": null
         }
       }
     },
     "dataset": {
-      "bibtypeqid": null,
+      "bibtypeqid": "Q649",
       "fields": {
         "title": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "abstractNote": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "identifier": {
           "wbprop": null,
-          "dtype": "String",
           "baseField": "number"
         },
         "type": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "versionNumber": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "date": {
-          "wbprop": null,
-          "dtype": "Time"
+          "wbprop": null
         },
         "repository": {
           "wbprop": null,
-          "dtype": "String",
           "baseField": "publisher"
         },
         "repositoryLocation": {
           "wbprop": null,
-          "dtype": "String",
           "baseField": "place"
         },
         "format": {
           "wbprop": null,
-          "dtype": "String",
           "baseField": "medium"
         },
         "DOI": {
-          "wbprop": null,
-          "dtype": "ExternalId"
+          "wbprop": null
         },
         "citationKey": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "url": {
-          "wbprop": null,
-          "dtype": "Url"
+          "wbprop": null
         },
         "accessDate": {
-          "wbprop": null,
-          "dtype": "Time"
+          "wbprop": null
         },
         "archive": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "archiveLocation": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "shortTitle": {
-          "wbprop": null,
-          "dtype": "String"
-        },
-        "language": {
-          "wbprop": null,
-          "dtype": "WikibaseItem"
+          "wbprop": null
         },
         "libraryCatalog": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "callNumber": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "rights": {
-          "wbprop": null,
-          "dtype": "String"
-        },
-        "extra": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         }
       },
       "creatorTypes": {
         "author": {
           "wbprop": null,
-          "dtype": "WikibaseItem",
           "primary": true
         },
         "contributor": {
-          "wbprop": null,
-          "dtype": "WikibaseItem"
+          "wbprop": null
         }
       }
     },
@@ -993,120 +1303,92 @@
       "bibtypeqid": null,
       "fields": {
         "title": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "abstractNote": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "dictionaryTitle": {
           "wbprop": null,
-          "dtype": "String",
           "baseField": "publicationTitle"
         },
         "series": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "seriesNumber": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "volume": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "numberOfVolumes": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "edition": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "place": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "publisher": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "date": {
-          "wbprop": null,
-          "dtype": "Time"
+          "wbprop": null
         },
         "pages": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "language": {
-          "wbprop": null,
-          "dtype": "WikibaseItem"
+          "wbprop": null
         },
         "ISBN": {
-          "wbprop": null,
-          "dtype": "ExternalID"
+          "wbprop": null
         },
         "shortTitle": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "url": {
-          "wbprop": null,
-          "dtype": "Url"
+          "wbprop": null
         },
         "accessDate": {
-          "wbprop": null,
-          "dtype": "Time"
+          "wbprop": null
         },
         "archive": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "archiveLocation": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "libraryCatalog": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "callNumber": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "rights": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "extra": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         }
       },
       "creatorTypes": {
         "author": {
           "wbprop": null,
-          "dtype": "WikibaseItem",
           "primary": true
         },
         "contributor": {
-          "wbprop": null,
-          "dtype": "Item"
+          "wbprop": null
         },
         "editor": {
-          "wbprop": null,
-          "dtype": "WikibaseItem"
+          "wbprop": null
         },
         "translator": {
-          "wbprop": null,
-          "dtype": "WikibaseItem"
+          "wbprop": null
         },
         "seriesEditor": {
-          "wbprop": null,
-          "dtype": "WikibaseItem"
+          "wbprop": null
         }
       }
     },
@@ -1114,83 +1396,64 @@
       "bibtypeqid": null,
       "fields": {
         "title": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "abstractNote": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "publisher": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "date": {
-          "wbprop": null,
-          "dtype": "Time"
+          "wbprop": null
         },
         "language": {
-          "wbprop": null,
-          "dtype": "WikibaseItem"
+          "wbprop": null
         },
         "shortTitle": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "url": {
-          "wbprop": null,
-          "dtype": "Url"
+          "wbprop": null
         },
         "accessDate": {
-          "wbprop": null,
-          "dtype": "Time"
+          "wbprop": null
         },
         "archive": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "archiveLocation": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "libraryCatalog": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "callNumber": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "rights": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "extra": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         }
       },
       "creatorTypes": {
         "author": {
           "wbprop": null,
-          "dtype": "WikibaseItem",
           "primary": true
         },
         "contributor": {
-          "wbprop": null,
-          "dtype": "WikibaseItem"
+          "wbprop": null
         },
         "editor": {
-          "wbprop": null,
-          "dtype": "WikibaseItem"
+          "wbprop": null
         },
         "translator": {
-          "wbprop": null,
-          "dtype": "WikibaseItem"
+          "wbprop": null
         },
         "reviewedAuthor": {
-          "wbprop": null,
-          "dtype": "WikibaseItem"
+          "wbprop": null
         }
       }
     },
@@ -1199,55 +1462,43 @@
       "fields": {
         "subject": {
           "wbprop": null,
-          "dtype": "String",
           "baseField": "title"
         },
         "abstractNote": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "date": {
-          "wbprop": null,
-          "dtype": "Time"
+          "wbprop": null
         },
         "shortTitle": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "url": {
-          "wbprop": null,
-          "dtype": "Url"
+          "wbprop": null
         },
         "accessDate": {
-          "wbprop": null,
-          "dtype": "Time"
+          "wbprop": null
         },
         "language": {
-          "wbprop": null,
-          "dtype": "WikibaseItem"
+          "wbprop": null
         },
         "rights": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "extra": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         }
       },
       "creatorTypes": {
         "author": {
           "wbprop": null,
-          "dtype": "WikibaseItem",
           "primary": true
         },
         "contributor": {
-          "wbprop": null,
-          "dtype": "WikibaseItem"
+          "wbprop": null
         },
         "recipient": {
-          "wbprop": null,
-          "dtype": "WikibaseItem"
+          "wbprop": null
         }
       }
     },
@@ -1255,120 +1506,92 @@
       "bibtypeqid": "Q211",
       "fields": {
         "title": {
-          "wbprop": "P11",
-          "dtype": "String"
+          "wbprop": "P11"
         },
         "abstractNote": {
-          "wbprop": false,
-          "dtype": "String"
+          "wbprop": null
         },
         "encyclopediaTitle": {
           "wbprop": "P139",
-          "dtype": "String",
           "baseField": "publicationTitle"
         },
         "series": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "seriesNumber": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "volume": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "numberOfVolumes": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "edition": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "place": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "publisher": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "date": {
-          "wbprop": "P16",
-          "dtype": "Time"
+          "wbprop": "P16"
         },
         "pages": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "ISBN": {
-          "wbprop": null,
-          "dtype": "externalId"
+          "wbprop": null
         },
         "shortTitle": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "url": {
-          "wbprop": "P86",
-          "dtype": "Url"
+          "wbprop": "P86"
         },
         "accessDate": {
-          "wbprop": false,
-          "dtype": "String"
+          "wbprop": null
         },
         "language": {
-          "wbprop": "P12",
-          "dtype": "WikibaseItem"
+          "wbprop": "P12"
         },
         "archive": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "archiveLocation": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "libraryCatalog": {
-          "wbprop": false,
-          "dtype": "String"
+          "wbprop": null
         },
         "callNumber": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "rights": {
-          "wbprop": false,
-          "dtype": "String"
+          "wbprop": null
         },
         "extra": {
-          "wbprop": false,
-          "dtype": "String"
+          "wbprop": null
         }
       },
       "creatorTypes": {
         "author": {
           "wbprop": null,
-          "dtype": "WikibaseItem",
           "primary": true
         },
         "contributor": {
-          "wbprop": null,
-          "dtype": "WikibaseItem"
+          "wbprop": null
         },
         "editor": {
-          "wbprop": null,
-          "dtype": "WikibaseItem"
+          "wbprop": null
         },
         "translator": {
-          "wbprop": null,
-          "dtype": "WikibaseItem"
+          "wbprop": null
         },
         "seriesEditor": {
-          "wbprop": null,
-          "dtype": "WikibaseItem"
+          "wbprop": null
         }
       }
     },
@@ -1376,94 +1599,73 @@
       "bibtypeqid": null,
       "fields": {
         "title": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "abstractNote": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "distributor": {
           "wbprop": null,
-          "dtype": "String",
           "baseField": "publisher"
         },
         "date": {
-          "wbprop": null,
-          "dtype": "Time"
+          "wbprop": null
         },
         "genre": {
           "wbprop": null,
-          "dtype": "String",
           "baseField": "type"
         },
         "videoRecordingFormat": {
           "wbprop": null,
-          "dtype": "String",
           "baseField": "medium"
         },
         "runningTime": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "language": {
-          "wbprop": null,
-          "dtype": "WikibaseItem"
+          "wbprop": null
         },
         "shortTitle": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "url": {
-          "wbprop": null,
-          "dtype": "Url"
+          "wbprop": null
         },
         "accessDate": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "archive": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "archiveLocation": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "libraryCatalog": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "callNumber": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "rights": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "extra": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         }
       },
       "creatorTypes": {
         "director": {
           "wbprop": null,
-          "dtype": "WikibaseItem",
           "primary": true
         },
         "contributor": {
-          "wbprop": null,
-          "dtype": "WikibaseItem"
+          "wbprop": null
         },
         "scriptwriter": {
-          "wbprop": null,
-          "dtype": "WikibaseItem"
+          "wbprop": null
         },
         "producer": {
-          "wbprop": null,
-          "dtype": "WikibaseItem"
+          "wbprop": null
         }
       }
     },
@@ -1471,61 +1673,48 @@
       "bibtypeqid": null,
       "fields": {
         "title": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "abstractNote": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "forumTitle": {
           "wbprop": null,
-          "dtype": "String",
           "baseField": "publicationTitle"
         },
         "postType": {
           "wbprop": null,
-          "dtype": "String",
           "baseField": "type"
         },
         "date": {
-          "wbprop": null,
-          "dtype": "Time"
+          "wbprop": null
         },
         "language": {
-          "wbprop": null,
-          "dtype": "WikibaseItem"
+          "wbprop": null
         },
         "shortTitle": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "url": {
-          "wbprop": null,
-          "dtype": "Url"
+          "wbprop": null
         },
         "accessDate": {
-          "wbprop": null,
-          "dtype": "Time"
+          "wbprop": null
         },
         "rights": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "extra": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         }
       },
       "creatorTypes": {
         "author": {
           "wbprop": null,
-          "dtype": "WikibaseItem",
           "primary": true
         },
         "contributor": {
-          "wbprop": null,
-          "dtype": "WikibaseItem"
+          "wbprop": null
         }
       }
     },
@@ -1533,84 +1722,65 @@
       "bibtypeqid": null,
       "fields": {
         "title": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "abstractNote": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "committee": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "place": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "publisher": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "numberOfVolumes": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "documentNumber": {
           "wbprop": null,
-          "dtype": "String",
           "baseField": "number"
         },
         "pages": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "legislativeBody": {
           "wbprop": null,
-          "dtype": "String",
           "baseField": "authority"
         },
         "session": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "history": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "date": {
-          "wbprop": null,
-          "dtype": "Time"
+          "wbprop": null
         },
         "language": {
-          "wbprop": null,
-          "dtype": "WikibaseItem"
+          "wbprop": null
         },
         "shortTitle": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "url": {
-          "wbprop": null,
-          "dtype": "Url"
+          "wbprop": null
         },
         "accessDate": {
-          "wbprop": null,
-          "dtype": "Time"
+          "wbprop": null
         },
         "rights": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "extra": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         }
       },
       "creatorTypes": {
         "contributor": {
           "wbprop": null,
-          "dtype": "WikibaseItem",
           "primary": true
         }
       }
@@ -1619,55 +1789,43 @@
       "bibtypeqid": null,
       "fields": {
         "title": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "abstractNote": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "date": {
-          "wbprop": null,
-          "dtype": "Time"
+          "wbprop": null
         },
         "language": {
-          "wbprop": null,
-          "dtype": "WikibaseItem"
+          "wbprop": null
         },
         "shortTitle": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "url": {
-          "wbprop": null,
-          "dtype": "Url"
+          "wbprop": null
         },
         "accessDate": {
-          "wbprop": null,
-          "dtype": "Time"
+          "wbprop": null
         },
         "rights": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "extra": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         }
       },
       "creatorTypes": {
         "author": {
           "wbprop": null,
-          "dtype": "WikibaseItem",
           "primary": true
         },
         "contributor": {
-          "wbprop": null,
-          "dtype": "WikibaseItem"
+          "wbprop": null
         },
         "recipient": {
-          "wbprop": null,
-          "dtype": "WikibaseItem"
+          "wbprop": null
         }
       }
     },
@@ -1675,80 +1833,62 @@
       "bibtypeqid": null,
       "fields": {
         "title": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "abstractNote": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "date": {
-          "wbprop": null,
-          "dtype": "Time"
+          "wbprop": null
         },
         "interviewMedium": {
           "wbprop": null,
-          "dtype": "String",
           "baseField": "medium"
         },
         "language": {
-          "wbprop": null,
-          "dtype": "WikibaseItem"
+          "wbprop": null
         },
         "shortTitle": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "url": {
-          "wbprop": null,
-          "dtype": "Url"
+          "wbprop": null
         },
         "accessDate": {
-          "wbprop": null,
-          "dtype": "Time"
+          "wbprop": null
         },
         "archive": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "archiveLocation": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "libraryCatalog": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "callNumber": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "rights": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "extra": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         }
       },
       "creatorTypes": {
         "interviewee": {
           "wbprop": null,
-          "dtype": "WikibaseItem",
           "primary": true
         },
         "contributor": {
-          "wbprop": null,
-          "dtype": "Item"
+          "wbprop": null
         },
         "interviewer": {
-          "wbprop": null,
-          "dtype": "WikibaseItem"
+          "wbprop": null
         },
         "translator": {
-          "wbprop": null,
-          "dtype": "WikibaseItem"
+          "wbprop": null
         }
       }
     },
@@ -1756,119 +1896,91 @@
       "bibtypeqid": "Q203",
       "fields": {
         "title": {
-          "wbprop": "P11",
-          "dtype": "String"
+          "wbprop": "P11"
         },
         "abstractNote": {
-          "wbprop": false,
-          "dtype": "String"
+          "wbprop": null
         },
         "publicationTitle": {
-          "wbprop": "P143",
-          "dtype": "String"
+          "wbprop": "P143"
         },
         "volume": {
-          "wbprop": "P22",
-          "dtype": "String"
+          "wbprop": "P22"
         },
         "issue": {
-          "wbprop": "P23",
-          "dtype": "String"
+          "wbprop": "P23"
         },
         "pages": {
-          "wbprop": "P24",
-          "dtype": "String"
+          "wbprop": "P24"
         },
         "date": {
-          "wbprop": "P16",
-          "dtype": "Time"
+          "wbprop": "P16"
         },
         "series": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "seriesTitle": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "seriesText": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "journalAbbreviation": {
-          "wbprop": false,
-          "dtype": "String"
+          "wbprop": null
         },
         "language": {
-          "wbprop": "P12",
-          "dtype": "WikibaseItem"
+          "wbprop": "P12"
         },
         "DOI": {
-          "wbprop": "P18",
-          "dtype": "ExternalId"
+          "wbprop": "P18"
         },
         "ISSN": {
-          "wbprop": "P21",
-          "dtype": "ExternalId"
+          "wbprop": "P21"
         },
         "shortTitle": {
-          "wbprop": false,
-          "dtype": "String"
+          "wbprop": null
         },
         "url": {
-          "wbprop": "P86",
-          "dtype": "Url"
+          "wbprop": "P86"
         },
         "accessDate": {
-          "wbprop": false,
-          "dtype": "Time"
+          "wbprop": null
         },
         "archive": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "archiveLocation": {
-          "wbprop": false,
-          "dtype": "String"
+          "wbprop": null
         },
         "libraryCatalog": {
-          "wbprop": false,
-          "dtype": "String"
+          "wbprop": null
         },
         "callNumber": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "rights": {
-          "wbprop": false,
-          "dtype": "String"
+          "wbprop": null
         },
         "extra": {
-          "wbprop": "P55",
-          "dtype": "String"
+          "wbprop": "P55"
         }
       },
       "creatorTypes": {
         "author": {
           "wbprop": "P13",
-          "dtype": "WikibaseItem",
           "primary": true
         },
         "contributor": {
-          "wbprop": null,
-          "dtype": "WikibaseItem"
+          "wbprop": null
         },
         "editor": {
-          "wbprop": "P14",
-          "dtype": "WikibaseItem"
+          "wbprop": "P14"
         },
         "translator": {
-          "wbprop": "P138",
-          "dtype": "WikibaseItem"
+          "wbprop": "P138"
         },
         "reviewedAuthor": {
-          "wbprop": null,
-          "dtype": "WikibaseItem"
+          "wbprop": null
         }
       }
     },
@@ -1876,76 +1988,59 @@
       "bibtypeqid": null,
       "fields": {
         "title": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "abstractNote": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "letterType": {
           "wbprop": null,
-          "dtype": "String",
           "baseField": "type"
         },
         "date": {
-          "wbprop": null,
-          "dtype": "Time"
+          "wbprop": null
         },
         "language": {
-          "wbprop": null,
-          "dtype": "WikibaseItem"
+          "wbprop": null
         },
         "shortTitle": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "url": {
-          "wbprop": null,
-          "dtype": "Url"
+          "wbprop": null
         },
         "accessDate": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "archive": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "archiveLocation": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "libraryCatalog": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "callNumber": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "rights": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "extra": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         }
       },
       "creatorTypes": {
         "author": {
           "wbprop": null,
-          "dtype": "WikibaseItem",
           "primary": true
         },
         "contributor": {
-          "wbprop": null,
-          "dtype": "WikibaseItem"
+          "wbprop": null
         },
         "recipient": {
-          "wbprop": null,
-          "dtype": "WikibaseItem"
+          "wbprop": null
         }
       }
     },
@@ -1953,95 +2048,73 @@
       "bibtypeqid": null,
       "fields": {
         "title": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "abstractNote": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "publicationTitle": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "volume": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "issue": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "date": {
-          "wbprop": null,
-          "dtype": "Time"
+          "wbprop": null
         },
         "pages": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "language": {
-          "wbprop": null,
-          "dtype": "WikibaseItem"
+          "wbprop": null
         },
         "ISSN": {
-          "wbprop": null,
-          "dtype": "ExternalId"
+          "wbprop": null
         },
         "shortTitle": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "url": {
-          "wbprop": null,
-          "dtype": "Url"
+          "wbprop": null
         },
         "accessDate": {
-          "wbprop": null,
-          "dtype": "Time"
+          "wbprop": null
         },
         "archive": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "archiveLocation": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "libraryCatalog": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "callNumber": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "rights": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "extra": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         }
       },
       "creatorTypes": {
         "author": {
           "wbprop": null,
-          "dtype": "WikibaseItem",
           "primary": true
         },
         "contributor": {
-          "wbprop": null,
-          "dtype": "WikibaseItem"
+          "wbprop": null
         },
         "translator": {
-          "wbprop": null,
-          "dtype": "WikibaseItem"
+          "wbprop": null
         },
         "reviewedAuthor": {
-          "wbprop": null,
-          "dtype": "WikibaseItem"
+          "wbprop": null
         }
       }
     },
@@ -2049,84 +2122,65 @@
       "bibtypeqid": "Q209",
       "fields": {
         "title": {
-          "wbprop": "P11",
-          "dtype": "String"
+          "wbprop": "P11"
         },
         "abstractNote": {
-          "wbprop": false,
-          "dtype": "String"
+          "wbprop": null
         },
         "manuscriptType": {
           "wbprop": "P141",
-          "dtype": "String",
           "baseField": "type"
         },
         "place": {
-          "wbprop": "P15",
-          "dtype": "String"
+          "wbprop": "P15"
         },
         "date": {
-          "wbprop": "P16",
-          "dtype": "Time"
+          "wbprop": "P16"
         },
         "numPages": {
-          "wbprop": "P140",
-          "dtype": "String"
+          "wbprop": "P140"
         },
         "language": {
-          "wbprop": "P12",
-          "dtype": "WikibaseItem"
+          "wbprop": "P12"
         },
         "shortTitle": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "url": {
-          "wbprop": "P86",
-          "dtype": "Url"
+          "wbprop": "P86"
         },
         "accessDate": {
-          "wbprop": false,
-          "dtype": "Time"
+          "wbprop": null
         },
         "archive": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "archiveLocation": {
-          "wbprop": false,
-          "dtype": "String"
+          "wbprop": null
         },
         "libraryCatalog": {
-          "wbprop": false,
-          "dtype": "String"
+          "wbprop": null
         },
         "callNumber": {
-          "wbprop": false,
-          "dtype": "String"
+          "wbprop": null
         },
         "rights": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "extra": {
-          "wbprop": "P55",
-          "dtype": "ExternalId"
+          "wbprop": "P55"
         }
       },
       "creatorTypes": {
         "author": {
           "wbprop": "P13",
-          "dtype": "WikibaseItem",
           "primary": true
         },
         "contributor": {
-          "wbprop": "P131",
-          "dtype": "WikibaseItem"
+          "wbprop": "P131"
         },
         "translator": {
-          "wbprop": "P138",
-          "dtype": "WikibaseItem"
+          "wbprop": "P138"
         }
       }
     },
@@ -2134,100 +2188,77 @@
       "bibtypeqid": null,
       "fields": {
         "title": {
-          "wbprop": "P11",
-          "dtype": "String"
+          "wbprop": "P11"
         },
         "abstractNote": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "mapType": {
           "wbprop": null,
-          "dtype": "String",
           "baseField": "type"
         },
         "scale": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "seriesTitle": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "edition": {
-          "wbprop": "P57",
-          "dtype": "String"
+          "wbprop": "P57"
         },
         "place": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "publisher": {
-          "wbprop": "P34",
-          "dtype": "String"
+          "wbprop": "P34"
         },
         "date": {
-          "wbprop": null,
-          "dtype": "Time"
+          "wbprop": null
         },
         "language": {
-          "wbprop": "P12",
-          "dtype": "WikibaseItem"
+          "wbprop": "P12"
         },
         "ISBN": {
-          "wbprop": null,
-          "dtype": "ExternalID"
+          "wbprop": null
         },
         "shortTitle": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "url": {
-          "wbprop": null,
-          "dtype": "Url"
+          "wbprop": null
         },
         "accessDate": {
-          "wbprop": null,
-          "dtype": "Time"
+          "wbprop": null
         },
         "archive": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "archiveLocation": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "libraryCatalog": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "callNumber": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "rights": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "extra": {
-          "wbprop": "P55",
-          "dtype": "ExternalId"
+          "wbprop": "P55"
         }
       },
       "creatorTypes": {
         "cartographer": {
           "wbprop": null,
-          "dtype": "WikibaseItem",
           "primary": true
         },
         "contributor": {
-          "wbprop": "P131",
-          "dtype": "WikibaseItem"
+          "wbprop": "P131"
         },
         "seriesEditor": {
-          "wbprop": null,
-          "dtype": "WikibaseItem"
+          "wbprop": null
         }
       }
     },
@@ -2235,99 +2266,76 @@
       "bibtypeqid": null,
       "fields": {
         "title": {
-          "wbprop": "P11",
-          "dtype": "String"
+          "wbprop": "P11"
         },
         "abstractNote": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "publicationTitle": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "place": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "edition": {
-          "wbprop": "P57",
-          "dtype": "String"
+          "wbprop": "P57"
         },
         "date": {
-          "wbprop": null,
-          "dtype": "Time"
+          "wbprop": null
         },
         "section": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "pages": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "language": {
-          "wbprop": "P12",
-          "dtype": "WikibaseItem"
+          "wbprop": "P12"
         },
         "shortTitle": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "ISSN": {
-          "wbprop": null,
-          "dtype": "ExternalId"
+          "wbprop": null
         },
         "url": {
-          "wbprop": null,
-          "dtype": "Url"
+          "wbprop": null
         },
         "accessDate": {
-          "wbprop": null,
-          "dtype": "Time"
+          "wbprop": null
         },
         "archive": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "archiveLocation": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "libraryCatalog": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "callNumber": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "rights": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "extra": {
-          "wbprop": "P55",
-          "dtype": "ExternalId"
+          "wbprop": "P55"
         }
       },
       "creatorTypes": {
         "author": {
           "wbprop": "P13",
-          "dtype": "WikibaseItem",
           "primary": true
         },
         "contributor": {
-          "wbprop": "P131",
-          "dtype": "WikibaseItem"
+          "wbprop": "P131"
         },
         "translator": {
-          "wbprop": "P138",
-          "dtype": "WikibaseItem"
+          "wbprop": "P138"
         },
         "reviewedAuthor": {
-          "wbprop": null,
-          "dtype": "WikibaseItem"
+          "wbprop": null
         }
       }
     },
@@ -2340,103 +2348,80 @@
       "bibtypeqid": null,
       "fields": {
         "title": {
-          "wbprop": "P11",
-          "dtype": "String"
+          "wbprop": "P11"
         },
         "abstractNote": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "place": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "country": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "assignee": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "issuingAuthority": {
           "wbprop": null,
-          "dtype": "String",
           "baseField": "authority"
         },
         "patentNumber": {
           "wbprop": null,
-          "dtype": "String",
           "baseField": "number"
         },
         "filingDate": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "pages": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "applicationNumber": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "priorityNumbers": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "issueDate": {
           "wbprop": null,
-          "dtype": "Time",
           "baseField": "date"
         },
         "references": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "legalStatus": {
           "wbprop": null,
-          "dtype": "String",
           "baseField": "status"
         },
         "language": {
-          "wbprop": "P12",
-          "dtype": "WikibaseItem"
+          "wbprop": "P12"
         },
         "shortTitle": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "url": {
-          "wbprop": null,
-          "dtype": "Url"
+          "wbprop": null
         },
         "accessDate": {
-          "wbprop": null,
-          "dtype": "Time"
+          "wbprop": null
         },
         "rights": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "extra": {
-          "wbprop": "P55",
-          "dtype": "ExternalId"
+          "wbprop": "P55"
         }
       },
       "creatorTypes": {
         "inventor": {
           "wbprop": null,
-          "dtype": "WikibaseItem",
           "primary": true
         },
         "attorneyAgent": {
-          "wbprop": null,
-          "dtype": "WikibaseItem"
+          "wbprop": null
         },
         "contributor": {
-          "wbprop": "P131",
-          "dtype": "WikibaseItem"
+          "wbprop": "P131"
         }
       }
     },
@@ -2444,69 +2429,54 @@
       "bibtypeqid": null,
       "fields": {
         "title": {
-          "wbprop": "P11",
-          "dtype": "String"
+          "wbprop": "P11"
         },
         "abstractNote": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "seriesTitle": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "episodeNumber": {
           "wbprop": null,
-          "dtype": "String",
           "baseField": "number"
         },
         "audioFileType": {
           "wbprop": null,
-          "dtype": "String",
           "baseField": "medium"
         },
         "runningTime": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "url": {
-          "wbprop": null,
-          "dtype": "Url"
+          "wbprop": null
         },
         "accessDate": {
-          "wbprop": null,
-          "dtype": "Time"
+          "wbprop": null
         },
         "language": {
-          "wbprop": "P12",
-          "dtype": "WikibaseItem"
+          "wbprop": "P12"
         },
         "shortTitle": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "rights": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "extra": {
-          "wbprop": "P55",
-          "dtype": "ExternalId"
+          "wbprop": "P55"
         }
       },
       "creatorTypes": {
         "podcaster": {
           "wbprop": null,
-          "dtype": "WikibaseItem",
           "primary": true
         },
         "contributor": {
-          "wbprop": "P131",
-          "dtype": "WikibaseItem"
+          "wbprop": "P131"
         },
         "guest": {
-          "wbprop": null,
-          "dtype": "WikibaseItem"
+          "wbprop": null
         }
       }
     },
@@ -2514,114 +2484,88 @@
       "bibtypeqid": null,
       "fields": {
         "title": {
-          "wbprop": "P11",
-          "dtype": "String"
+          "wbprop": "P11"
         },
         "abstractNote": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "genre": {
           "wbprop": null,
-          "dtype": "String",
           "baseField": "type"
         },
         "repository": {
           "wbprop": null,
-          "dtype": "String",
           "baseField": "publisher"
         },
         "archiveID": {
           "wbprop": null,
-          "dtype": "String",
           "baseField": "number"
         },
         "place": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "date": {
-          "wbprop": null,
-          "dtype": "Time"
+          "wbprop": null
         },
         "series": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "seriesNumber": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "DOI": {
-          "wbprop": "P18",
-          "dtype": "ExternalId"
+          "wbprop": "P18"
         },
         "citationKey": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "url": {
-          "wbprop": null,
-          "dtype": "Url"
+          "wbprop": null
         },
         "accessDate": {
-          "wbprop": null,
-          "dtype": "Time"
+          "wbprop": null
         },
         "archive": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "archiveLocation": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "shortTitle": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "language": {
-          "wbprop": "P12",
-          "dtype": "WikibaseItem"
+          "wbprop": "P12"
         },
         "libraryCatalog": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "callNumber": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "rights": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "extra": {
-          "wbprop": "P55",
-          "dtype": "ExternalId"
+          "wbprop": "P55"
         }
       },
       "creatorTypes": {
         "author": {
           "wbprop": "P13",
-          "dtype": "WikibaseItem",
           "primary": true
         },
         "contributor": {
-          "wbprop": "P131",
-          "dtype": "WikibaseItem"
+          "wbprop": "P131"
         },
         "editor": {
-          "wbprop": "P14",
-          "dtype": "WikibaseItem"
+          "wbprop": "P14"
         },
         "translator": {
-          "wbprop": "P138",
-          "dtype": "WikibaseItem"
+          "wbprop": "P138"
         },
         "reviewedAuthor": {
-          "wbprop": null,
-          "dtype": "WikibaseItem"
+          "wbprop": null
         }
       }
     },
@@ -2629,64 +2573,50 @@
       "bibtypeqid": null,
       "fields": {
         "title": {
-          "wbprop": "P11",
-          "dtype": "String"
+          "wbprop": "P11"
         },
         "abstractNote": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "presentationType": {
           "wbprop": null,
-          "dtype": "String",
           "baseField": "type"
         },
         "date": {
-          "wbprop": null,
-          "dtype": "Time"
+          "wbprop": null
         },
         "place": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "meetingName": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "url": {
-          "wbprop": null,
-          "dtype": "Url"
+          "wbprop": null
         },
         "accessDate": {
-          "wbprop": null,
-          "dtype": "Time"
+          "wbprop": null
         },
         "language": {
-          "wbprop": "P12",
-          "dtype": "WikibaseItem"
+          "wbprop": "P12"
         },
         "shortTitle": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "rights": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "extra": {
-          "wbprop": "P55",
-          "dtype": "ExternalId"
+          "wbprop": "P55"
         }
       },
       "creatorTypes": {
         "presenter": {
           "wbprop": null,
-          "dtype": "WikibaseItem",
           "primary": true
         },
         "contributor": {
-          "wbprop": "P131",
-          "dtype": "WikibaseItem"
+          "wbprop": "P131"
         }
       }
     },
@@ -2694,111 +2624,86 @@
       "bibtypeqid": null,
       "fields": {
         "title": {
-          "wbprop": "P11",
-          "dtype": "String"
+          "wbprop": "P11"
         },
         "abstractNote": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "programTitle": {
           "wbprop": null,
-          "dtype": "String",
           "baseField": "publicationTitle"
         },
         "episodeNumber": {
           "wbprop": null,
-          "dtype": "String",
           "baseField": "number"
         },
         "audioRecordingFormat": {
           "wbprop": null,
-          "dtype": "String",
           "baseField": "medium"
         },
         "place": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "network": {
           "wbprop": null,
-          "dtype": "String",
           "baseField": "publisher"
         },
         "date": {
-          "wbprop": null,
-          "dtype": "Time"
+          "wbprop": null
         },
         "runningTime": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "language": {
-          "wbprop": "P12",
-          "dtype": "WikibaseItem"
+          "wbprop": "P12"
         },
         "shortTitle": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "url": {
-          "wbprop": null,
-          "dtype": "Url"
+          "wbprop": null
         },
         "accessDate": {
-          "wbprop": null,
-          "dtype": "Time"
+          "wbprop": null
         },
         "archive": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "archiveLocation": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "libraryCatalog": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "callNumber": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "rights": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "extra": {
-          "wbprop": "P55",
-          "dtype": "ExternalId"
+          "wbprop": "P55"
         }
       },
       "creatorTypes": {
         "director": {
           "wbprop": null,
-          "dtype": "WikibaseItem",
           "primary": true
         },
         "scriptwriter": {
-          "wbprop": null,
-          "dtype": "WikibaseItem"
+          "wbprop": null
         },
         "producer": {
-          "wbprop": null,
-          "dtype": "WikibaseItem"
+          "wbprop": null
         },
         "castMember": {
-          "wbprop": null,
-          "dtype": "WikibaseItem"
+          "wbprop": null
         },
         "contributor": {
-          "wbprop": "P131",
-          "dtype": "WikibaseItem"
+          "wbprop": "P131"
         },
         "guest": {
-          "wbprop": null,
-          "dtype": "WikibaseItem"
+          "wbprop": null
         }
       }
     },
@@ -2806,102 +2711,79 @@
       "bibtypeqid": null,
       "fields": {
         "title": {
-          "wbprop": "P11",
-          "dtype": "String"
+          "wbprop": "P11"
         },
         "abstractNote": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "reportNumber": {
           "wbprop": null,
-          "dtype": "String",
           "baseField": "number"
         },
         "reportType": {
           "wbprop": null,
-          "dtype": "String",
           "baseField": "type"
         },
         "seriesTitle": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "place": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "institution": {
           "wbprop": null,
-          "dtype": "String",
           "baseField": "publisher"
         },
         "date": {
-          "wbprop": null,
-          "dtype": "Time"
+          "wbprop": null
         },
         "pages": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "language": {
-          "wbprop": "P12",
-          "dtype": "WikibaseItem"
+          "wbprop": "P12"
         },
         "shortTitle": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "url": {
-          "wbprop": null,
-          "dtype": "Url"
+          "wbprop": null
         },
         "accessDate": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "archive": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "archiveLocation": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "libraryCatalog": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "callNumber": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "rights": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "extra": {
-          "wbprop": "P55",
-          "dtype": "ExternalId"
+          "wbprop": "P55"
         }
       },
       "creatorTypes": {
         "author": {
           "wbprop": "P13",
-          "dtype": "WikibaseItem",
           "primary": true
         },
         "contributor": {
-          "wbprop": "P131",
-          "dtype": "WikibaseItem"
+          "wbprop": "P131"
         },
         "translator": {
-          "wbprop": "P138",
-          "dtype": "WikibaseItem"
+          "wbprop": "P138"
         },
         "seriesEditor": {
-          "wbprop": null,
-          "dtype": "WikibaseItem"
+          "wbprop": null
         }
       }
     },
@@ -2909,112 +2791,86 @@
       "bibtypeqid": null,
       "fields": {
         "title": {
-          "wbprop": "P11",
-          "dtype": "String"
+          "wbprop": "P11"
         },
         "abstractNote": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "organization": {
           "wbprop": null,
-          "dtype": "String",
           "baseField": "authority"
         },
         "committee": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "type": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "number": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "versionNumber": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "status": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "date": {
-          "wbprop": null,
-          "dtype": "Time"
+          "wbprop": null
         },
         "publisher": {
-          "wbprop": "P34",
-          "dtype": "String"
+          "wbprop": "P34"
         },
         "place": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "DOI": {
-          "wbprop": "P18",
-          "dtype": "ExternalId"
+          "wbprop": "P18"
         },
         "citationKey": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "url": {
-          "wbprop": null,
-          "dtype": "Url"
+          "wbprop": null
         },
         "accessDate": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "archive": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "archiveLocation": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "shortTitle": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "numPages": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "language": {
-          "wbprop": "P12",
-          "dtype": "WikibaseItem"
+          "wbprop": "P12"
         },
         "libraryCatalog": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "callNumber": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "rights": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "extra": {
-          "wbprop": "P55",
-          "dtype": "ExternalId"
+          "wbprop": "P55"
         }
       },
       "creatorTypes": {
         "author": {
           "wbprop": "P13",
-          "dtype": "WikibaseItem",
           "primary": true
         },
         "contributor": {
-          "wbprop": "P131",
-          "dtype": "WikibaseItem"
+          "wbprop": "P131"
         }
       }
     },
@@ -3023,81 +2879,63 @@
       "fields": {
         "nameOfAct": {
           "wbprop": null,
-          "dtype": "String",
           "baseField": "title"
         },
         "abstractNote": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "code": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "codeNumber": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "publicLawNumber": {
           "wbprop": null,
-          "dtype": "String",
           "baseField": "number"
         },
         "dateEnacted": {
           "wbprop": null,
-          "dtype": "Time",
           "baseField": "date"
         },
         "pages": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "section": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "session": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "history": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "language": {
-          "wbprop": "P12",
-          "dtype": "WikibaseItem"
+          "wbprop": "P12"
         },
         "shortTitle": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "url": {
-          "wbprop": null,
-          "dtype": "Url"
+          "wbprop": null
         },
         "accessDate": {
-          "wbprop": null,
-          "dtype": "Time"
+          "wbprop": null
         },
         "rights": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "extra": {
-          "wbprop": "P55",
-          "dtype": "ExternalId"
+          "wbprop": "P55"
         }
       },
       "creatorTypes": {
         "author": {
           "wbprop": "P13",
-          "dtype": "WikibaseItem",
           "primary": true
         },
         "contributor": {
-          "wbprop": "P131",
-          "dtype": "WikibaseItem"
+          "wbprop": "P131"
         }
       }
     },
@@ -3105,85 +2943,66 @@
       "bibtypeqid": "Q212",
       "fields": {
         "title": {
-          "wbprop": "P11",
-          "dtype": "String"
+          "wbprop": "P11"
         },
         "abstractNote": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "thesisType": {
           "wbprop": null,
-          "dtype": "String",
           "baseField": "type"
         },
         "university": {
           "wbprop": "P145",
-          "dtype": "String",
           "baseField": "publisher"
         },
         "place": {
-          "wbprop": "P15",
-          "dtype": "String"
+          "wbprop": "P15"
         },
         "date": {
-          "wbprop": "P16",
-          "dtype": "WikibaseItem"
+          "wbprop": "P16"
         },
         "numPages": {
-          "wbprop": "P140",
-          "dtype": "String"
+          "wbprop": "P140"
         },
         "language": {
-          "wbprop": "P12",
-          "dtype": "WikibaseItem"
+          "wbprop": "P12"
         },
         "shortTitle": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "url": {
-          "wbprop": "P86",
-          "dtype": "Url"
+          "wbprop": "P86"
         },
         "accessDate": {
-          "wbprop": null,
-          "dtype": "Time"
+          "wbprop": null
         },
         "archive": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "archiveLocation": {
-          "wbprop": false,
-          "dtype": "String"
+          "wbprop": null
         },
         "libraryCatalog": {
-          "wbprop": false,
-          "dtype": "String"
+          "wbprop": null
         },
         "callNumber": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "rights": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "extra": {
-          "wbprop": "P55",
-          "dtype": "ExternalId"
+          "wbprop": "P55"
         }
       },
       "creatorTypes": {
         "author": {
           "wbprop": "P13",
-          "dtype": "WikibaseItem",
           "primary": true
         },
         "contributor": {
-          "wbprop": "P131",
-          "dtype": "WikibaseItem"
+          "wbprop": "P131"
         }
       }
     },
@@ -3191,111 +3010,86 @@
       "bibtypeqid": null,
       "fields": {
         "title": {
-          "wbprop": "P11",
-          "dtype": "String"
+          "wbprop": "P11"
         },
         "abstractNote": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "programTitle": {
           "wbprop": null,
-          "dtype": "String",
           "baseField": "publicationTitle"
         },
         "episodeNumber": {
           "wbprop": null,
-          "dtype": "String",
           "baseField": "number"
         },
         "videoRecordingFormat": {
           "wbprop": null,
-          "dtype": "String",
           "baseField": "medium"
         },
         "place": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "network": {
           "wbprop": null,
-          "dtype": "String",
           "baseField": "publisher"
         },
         "date": {
-          "wbprop": null,
-          "dtype": "Time"
+          "wbprop": null
         },
         "runningTime": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "language": {
-          "wbprop": "P12",
-          "dtype": "WikibaseItem"
+          "wbprop": "P12"
         },
         "shortTitle": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "url": {
-          "wbprop": null,
-          "dtype": "Url"
+          "wbprop": null
         },
         "accessDate": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "archive": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "archiveLocation": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "libraryCatalog": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "callNumber": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "rights": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "extra": {
-          "wbprop": "P55",
-          "dtype": "ExternalId"
+          "wbprop": "P55"
         }
       },
       "creatorTypes": {
         "director": {
           "wbprop": null,
-          "dtype": "WikibaseItem",
           "primary": true
         },
         "scriptwriter": {
-          "wbprop": null,
-          "dtype": "WikibaseItem"
+          "wbprop": null
         },
         "producer": {
-          "wbprop": null,
-          "dtype": "WikibaseItem"
+          "wbprop": null
         },
         "castMember": {
-          "wbprop": null,
-          "dtype": "WikibaseItem"
+          "wbprop": null
         },
         "contributor": {
-          "wbprop": "P131",
-          "dtype": "WikibaseItem"
+          "wbprop": "P131"
         },
         "guest": {
-          "wbprop": null,
-          "dtype": "WikibaseItem"
+          "wbprop": null
         }
       }
     },
@@ -3303,113 +3097,87 @@
       "bibtypeqid": null,
       "fields": {
         "title": {
-          "wbprop": "P11",
-          "dtype": "String"
+          "wbprop": "P11"
         },
         "abstractNote": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "videoRecordingFormat": {
           "wbprop": null,
-          "dtype": "String",
           "baseField": "medium"
         },
         "seriesTitle": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "volume": {
-          "wbprop": "P22",
-          "dtype": "String"
+          "wbprop": "P22"
         },
         "numberOfVolumes": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "place": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "studio": {
           "wbprop": null,
-          "dtype": "String",
           "baseField": "publisher"
         },
         "date": {
-          "wbprop": null,
-          "dtype": "Time"
+          "wbprop": null
         },
         "runningTime": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "language": {
-          "wbprop": "P12",
-          "dtype": "WikibaseItem"
+          "wbprop": "P12"
         },
         "ISBN": {
-          "wbprop": null,
-          "dtype": "ExternalId"
+          "wbprop": null
         },
         "shortTitle": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "url": {
-          "wbprop": null,
-          "dtype": "Url"
+          "wbprop": null
         },
         "accessDate": {
-          "wbprop": null,
-          "dtype": "Time"
+          "wbprop": null
         },
         "archive": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "archiveLocation": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "libraryCatalog": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "callNumber": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "rights": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "extra": {
-          "wbprop": "P55",
-          "dtype": "ExternalId"
+          "wbprop": "P55"
         }
       },
       "creatorTypes": {
         "director": {
           "wbprop": null,
-          "dtype": "WikibaseItem",
           "primary": true
         },
         "scriptwriter": {
-          "wbprop": null,
-          "dtype": "WikibaseItem"
+          "wbprop": null
         },
         "producer": {
-          "wbprop": null,
-          "dtype": "WikibaseItem"
+          "wbprop": null
         },
         "castMember": {
-          "wbprop": null,
-          "dtype": "WikibaseItem"
+          "wbprop": null
         },
         "contributor": {
-          "wbprop": "P131",
-          "dtype": "WikibaseItem"
+          "wbprop": "P131"
         }
       }
     },
@@ -3417,65 +3185,51 @@
       "bibtypeqid": null,
       "fields": {
         "title": {
-          "wbprop": "P11",
-          "dtype": "String"
+          "wbprop": "P11"
         },
         "abstractNote": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "websiteTitle": {
           "wbprop": null,
-          "dtype": "String",
           "baseField": "publicationTitle"
         },
         "websiteType": {
           "wbprop": null,
-          "dtype": "String",
           "baseField": "type"
         },
         "date": {
-          "wbprop": null,
-          "dtype": "Time"
+          "wbprop": null
         },
         "shortTitle": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "url": {
-          "wbprop": null,
-          "dtype": "Url"
+          "wbprop": null
         },
         "accessDate": {
-          "wbprop": null,
-          "dtype": "Time"
+          "wbprop": null
         },
         "language": {
-          "wbprop": "P12",
-          "dtype": "WikibaseItem"
+          "wbprop": "P12"
         },
         "rights": {
-          "wbprop": null,
-          "dtype": "String"
+          "wbprop": null
         },
         "extra": {
-          "wbprop": "P55",
-          "dtype": "ExternalId"
+          "wbprop": "P55"
         }
       },
       "creatorTypes": {
         "author": {
           "wbprop": "P13",
-          "dtype": "WikibaseItem",
           "primary": true
         },
         "contributor": {
-          "wbprop": "P131",
-          "dtype": "WikibaseItem"
+          "wbprop": "P131"
         },
         "translator": {
-          "wbprop": "P138",
-          "dtype": "WikibaseItem"
+          "wbprop": "P138"
         }
       }
     }

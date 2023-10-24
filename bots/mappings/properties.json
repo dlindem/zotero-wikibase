@@ -6,7 +6,7 @@
       "enlabel": "wikidata entity",
       "type": "ExternalId",
       "wdprop": null,
-      "formatter_url": "https://www.wikidata.org/wiki/$1",
+      "formatter_url": "http://www.wikidata.org/entity/$1",
       "formatter_uri": "http://www.wikidata.org/entity/$1"
     },
     "P2": {
@@ -35,7 +35,7 @@
       "wdprop": null
     },
     "P7": {
-      "enlabel": "lema batua",
+      "enlabel": "standard Basque lemma",
       "type": "WikibaseLexeme",
       "wdprop": null
     },
@@ -53,7 +53,7 @@
       "enlabel": "LexBib entity",
       "type": "ExternalId",
       "wdprop": null,
-      "formatter_url": "https://lexbib.elex.is/entity/$1",
+      "formatter_url": "https://lexbib.elex.is/wiki/Item:$1",
       "formatter_uri": "https://lexbib.elex.is/entity/$1"
     },
     "P11": {
@@ -89,7 +89,8 @@
     "P17": {
       "enlabel": "Zotero item ID",
       "type": "ExternalId",
-      "wdprop": null
+      "wdprop": null,
+      "formatter_url": "https://zotero.org/groups/5165329/items/$1"
     },
     "P18": {
       "enlabel": "DOI",
@@ -99,12 +100,14 @@
     "P19": {
       "enlabel": "ISBN-13",
       "type": "ExternalId",
-      "wdprop": "P212"
+      "wdprop": "P212",
+      "formatter_url": "https://worldcat.org/isbn/$1"
     },
     "P20": {
       "enlabel": "ISBN-10",
       "type": "ExternalId",
-      "wdprop": "P957"
+      "wdprop": "P957",
+      "formatter_url": "https://worldcat.org/isbn/$1"
     },
     "P21": {
       "enlabel": "ISSN",
@@ -189,7 +192,8 @@
     "P37": {
       "enlabel": "ORCID",
       "type": "ExternalId",
-      "wdprop": "P496"
+      "wdprop": "P496",
+      "formatter_url": "https://orcid.org/$1"
     },
     "P38": {
       "enlabel": "given name source literal",
@@ -219,7 +223,7 @@
     "P43": {
       "enlabel": "part of journal",
       "type": "WikibaseItem",
-      "wdprop": "P361"
+      "wdprop": "P1433"
     },
     "P44": {
       "enlabel": "different from",
@@ -234,7 +238,8 @@
     "P46": {
       "enlabel": "VIAF ID",
       "type": "ExternalId",
-      "wdprop": "P214"
+      "wdprop": "P214",
+      "formatter_url": "https://viaf.org/viaf/$1/"
     },
     "P47": {
       "enlabel": "date of birth",
@@ -279,7 +284,8 @@
     "P55": {
       "enlabel": "OCLC",
       "type": "ExternalId",
-      "wdprop": "P243"
+      "wdprop": "P243",
+      "formatter_url": "https://worldcat.org/oclc/$1"
     },
     "P56": {
       "enlabel": "is continued by LCR",
@@ -297,7 +303,7 @@
       "wdprop": "P17"
     },
     "P59": {
-      "enlabel": "English Wikipedia article URL",
+      "enlabel": "Wikipedia article URL",
       "type": "Url",
       "wdprop": null
     },
@@ -622,9 +628,10 @@
       "wdprop": null
     },
     "P124": {
-      "enlabel": "described on lexbib wikipage",
+      "enlabel": "described on mlv wikipage",
       "type": "ExternalId",
-      "wdprop": null
+      "wdprop": null,
+      "formatter_url": "https://monumenta.wikibase.cloud/wiki/$1"
     },
     "P125": {
       "enlabel": "rdf:type (OWL)",
@@ -694,6 +701,66 @@
     "P138": {
       "enlabel": "translator",
       "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P168": {
+      "enlabel": "free (string)",
+      "type": "String",
+      "wdprop": null
+    },
+    "P139": {
+      "enlabel": "title of containing item",
+      "type": "String",
+      "wdprop": null
+    },
+    "P142": {
+      "enlabel": "book series",
+      "type": "String",
+      "wdprop": null
+    },
+    "P144": {
+      "enlabel": "seriesNumber",
+      "type": "String",
+      "wdprop": null
+    },
+    "P145": {
+      "enlabel": "university",
+      "type": "String",
+      "wdprop": null
+    },
+    "P146": {
+      "enlabel": "seriesEditor",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P148": {
+      "enlabel": "token number",
+      "type": "String",
+      "wdprop": null
+    },
+    "P155": {
+      "enlabel": "subject sense",
+      "type": "WikibaseSense",
+      "wdprop": "P6072"
+    },
+    "P156": {
+      "enlabel": "subject form",
+      "type": "WikibaseForm",
+      "wdprop": "P5830"
+    },
+    "P157": {
+      "enlabel": "equivalent property",
+      "type": "Url",
+      "wdprop": "P1628"
+    },
+    "P159": {
+      "enlabel": "equivalent class",
+      "type": "Url",
+      "wdprop": "P1709"
+    },
+    "P164": {
+      "enlabel": "unused (string)",
+      "type": "String",
       "wdprop": null
     }
   }

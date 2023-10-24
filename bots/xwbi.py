@@ -17,20 +17,20 @@ from wikibaseintegrator.wbi_config import config as wbi_config
 
 config = botconfig.load_mapping('config')
 print(str(config['mapping']['wikibase_api_url']))
-# wbi_config['BACKOFF_MAX_TRIES'] = 5,
-# wbi_config['BACKOFF_MAX_VALUE'] = 3600,
-# wbi_config['USER_AGENT'] = config['mapping']['wikibase_name']+' user',
-# wbi_config['PROPERTY_CONSTRAINT_PID'] = 'P2302',
-# wbi_config['DISTINCT_VALUES_CONSTRAINT_QID'] = 'Q21502410',
-# wbi_config['COORDINATE_GLOBE_QID'] = 'http://www.wikidata.org/entity/Q2',
-# wbi_config['CALENDAR_MODEL_QID'] = 'http://www.wikidata.org/entity/Q1985727',
-wbi_config['MEDIAWIKI_API_URL'] = config_private.wikibase_url+'/w/api.php' # config['mapping']['wikibase_api_url'],
-# wbi_config['MEDIAWIKI_INDEX_URL'] = config['mapping']['wikibase_index_url'],
-# wbi_config['MEDIAWIKI_REST_URL'] = config['mapping']['wikibase_rest_url'],
-wbi_config['SPARQL_ENDPOINT_URL'] = config['mapping']['wikibase_sparql_endpoint'],
-wbi_config['WIKIBASE_URL'] = config['mapping']['wikibase_url'],
-wbi_config['DEFAULT_LANGUAGE'] = 'en' # config['mapping']['wikibase_default_language'],
-# wbi_config['DEFAULT_LEXEME_LANGUAGE'] = 'Q1860'
+wbi_config['BACKOFF_MAX_TRIES'] = 5
+wbi_config['BACKOFF_MAX_VALUE'] = 3600
+wbi_config['USER_AGENT'] = config['mapping']['wikibase_name']+' user'
+wbi_config['PROPERTY_CONSTRAINT_PID'] = None # 'P2302'
+wbi_config['DISTINCT_VALUES_CONSTRAINT_QID'] = None # 'Q21502410'
+wbi_config['COORDINATE_GLOBE_QID'] = 'http://www.wikidata.org/entity/Q2'
+wbi_config['CALENDAR_MODEL_QID'] = 'http://www.wikidata.org/entity/Q1985727'
+wbi_config['MEDIAWIKI_API_URL'] = config['mapping']['wikibase_api_url']
+wbi_config['MEDIAWIKI_INDEX_URL'] = config['mapping']['wikibase_index_url']
+wbi_config['MEDIAWIKI_REST_URL'] = config['mapping']['wikibase_rest_url']
+wbi_config['SPARQL_ENDPOINT_URL'] = config['mapping']['wikibase_sparql_endpoint']
+wbi_config['WIKIBASE_URL'] = config['mapping']['wikibase_url']
+wbi_config['DEFAULT_LANGUAGE'] = 'en' # config['mapping']['wikibase_default_language']
+wbi_config['DEFAULT_LEXEME_LANGUAGE'] = "Q207" # This is for Lexemes. Value None raises error.
 
 
 login_instance = wbi_login.Login(user=config_private.wb_bot_user, password=config_private.wb_bot_pwd)
