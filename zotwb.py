@@ -1,7 +1,7 @@
 from bots import botconfig, littlehelpers
 from flask import Flask, render_template, request
 from bots import config_private
-import os
+import os, re
 from datetime import datetime
 # from flask_wtf import FlaskForm
 app = Flask(__name__)
@@ -108,37 +108,39 @@ def map_zoterofield(itemtype):
                         zoteromapping['mapping'][itemtype]['bibtypeqid'] = newentity_id
                     else: # user has manually chosen a bibtypeqid value
                         zoteromapping['mapping'][itemtype]['bibtypeqid'] = request.form.get(key)
-                else: # field mappings
-                    if key.endswith('_redo'):  # user has pressed 'import from wikidata to known wikibase entity' button
-                        fieldname = key.replace('_redo', '')
+                else: # field or creatortype mappings
+                    fieldtype = re.search(r'([a-zA-Z]+)@',key).group(1)
+                    command = re.sub(r'[a-zA-Z]+@','',key)
+                    if command.endswith('_redo'):  # user has pressed 'import from wikidata to known wikibase entity' button
+                        fieldname = command.replace('_redo', '')
                         littlehelpers.import_wikidata_entity(
-                            properties[zoteromapping['mapping'][itemtype]['fields'][fieldname]['wbprop']]['wdprop'],
-                            wbid=zoteromapping['mapping'][itemtype]['fields'][fieldname]['wbprop'])
-                        properties['mapping'][zoteromapping['mapping'][itemtype]['fields'][fieldname]['wbprop']] = {
-                            "enlabel": zoteromapping['mapping']['all_types']['fields'][fieldname]['name'],
-                            "type": zoteromapping['mapping']['all_types']['fields'][fieldname]['dtype'],
-                            "wdprop": properties[zoteromapping['mapping'][itemtype]['fields'][fieldname]['wbprop']]['wdprop']
+                            properties[zoteromapping['mapping'][itemtype][fieldtype][fieldname]['wbprop']]['wdprop'],
+                            wbid=zoteromapping['mapping'][itemtype][fieldtype][fieldname]['wbprop'])
+                        properties['mapping'][zoteromapping['mapping'][itemtype][fieldtype][fieldname]['wbprop']] = {
+                            "enlabel": zoteromapping['mapping']['all_types'][fieldtype][fieldname]['name'],
+                            "type": zoteromapping['mapping']['all_types'][fieldtype][fieldname]['dtype'],
+                            "wdprop": properties[zoteromapping['mapping'][itemtype][fieldtype][fieldname]['wbprop']]['wdprop']
                         }
                         botconfig.dump_mapping(properties)
-                    elif key.endswith('_create'):  # user has pressed 'create new'
-                        fieldname = key.replace('_create', '')
-                        datatype = botconfig.datatypes_mapping[zoteromapping['mapping']['all_types']['fields'][fieldname]['dtype']]
+                    elif command.endswith('_create'):  # user has pressed 'create new'
+                        fieldname = command.replace('_create', '')
+                        datatype = botconfig.datatypes_mapping[zoteromapping['mapping']['all_types'][fieldtype][fieldname]['dtype']]
                         newprop = littlehelpers.xwbi.wbi.property.new(datatype=datatype)
-                        newprop.labels.set('en', zoteromapping['mapping']['all_types']['fields'][fieldname]['name'])
+                        newprop.labels.set('en', zoteromapping['mapping']['all_types'][fieldtype][fieldname]['name'])
                         newprop.descriptions.set('en', 'Property created for Zotero field '+fieldname)
                         print(str(newprop))
                         newprop.write()
                         newentity_id = newprop.id
                         properties['mapping'][newentity_id] = {
-                            "enlabel": zoteromapping['mapping']['all_types']['fields'][fieldname]['name'],
-                            "type": zoteromapping['mapping']['all_types']['fields'][fieldname]['dtype'],
+                            "enlabel": zoteromapping['mapping']['all_types'][fieldtype][fieldname]['name'],
+                            "type": zoteromapping['mapping']['all_types'][fieldtype][fieldname]['dtype'],
                             "wdprop": None
                         }
-                        zoteromapping['mapping'][itemtype]['fields'][fieldname]['wbprop'] = newentity_id
+                        zoteromapping['mapping'][itemtype][fieldtype][fieldname]['wbprop'] = newentity_id
                         botconfig.dump_mapping(properties)
                     else: # user has manually entered a wikibase property ID or "False"
                         wbprop = littlehelpers.check_prop_id(request.form.get(key))
-                        zoteromapping['mapping'][itemtype]['fields'][key]['wbprop'] = wbprop
+                        zoteromapping['mapping'][itemtype][fieldtype][command]['wbprop'] = wbprop
                         if wbprop == None:
                             message = 'Operation failed: Value bad format. Format must be e.g. "P123" or "False" or "X".'
                             msgcolor = "background:orangered"
@@ -187,4 +189,4 @@ def wikidata_alignment():
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)

@@ -18,7 +18,7 @@
     <u>Be careful</u>: if you update something on this page, that will overwrite all mappings for the fields with the same name in <u>all</u> bibitem types.</br>
 To define mappings for a single bibitem type (so that fields with the same name can be mapped differently according to the bibitem type), go to the corresponding page (<a href="/">index</a>).</p>
 {% else %}
-<h2>BibItem type</h2>
+<h3>BibItem type</h3>
 <p>The <b>Q-ID</b> for "{{ itemtype }}" on your Wikibase:
 <form style="display: inline;" method="POST">
     &#129054; {%if zoteromapping[itemtype]['bibtypeqid'] %}<a href="{{ wikibase_entity_ns }}{{ zoteromapping[itemtype]['bibtypeqid'] }}">wb:{{ zoteromapping[itemtype]['bibtypeqid'] }}</a>{% endif %}
@@ -33,7 +33,7 @@ To define mappings for a single bibitem type (so that fields with the same name 
 <small><i>Wikidata equivalent: </i><a href="http://www.wikidata.org/entity/{{ zotero_bibtypes[itemtype] }}">{{ zotero_bibtypes[itemtype] }}</a></small>
 </p>
 {% endif %}
-<h2>Data fields configuration</h2>
+<h3>Data fields configuration</h3>
 {% for fieldname in zoteromapping[itemtype]['fields'] %}
 <p>
 <form style="display: inline;" method="POST">
@@ -41,16 +41,16 @@ To define mappings for a single bibitem type (so that fields with the same name 
 {% if zoteromapping[itemtype]['fields'][fieldname]['wbprop'] %}
     <a href="{{ wikibase_entity_ns }}{{ zoteromapping[itemtype]['fields'][fieldname]['wbprop'] }}">wb:{{ zoteromapping[itemtype]['fields'][fieldname]['wbprop'] }}</a>
 {% endif %}
-    <input type="text" value={{ zoteromapping[itemtype]['fields'][fieldname]['wbprop'] }} name = {{ fieldname }} style="width: 40px;" />
+    <input type="text" placeholder={{ zoteromapping[itemtype]['fields'][fieldname]['wbprop'] }} name = {{ 'fields@' + fieldname }} style="width: 40px;" />
     <input type="submit" value="Update this">
 </form> or <form style="display: inline;" method="POST">
-    <button name= {{ fieldname + '_create' }} type="submit">&#10071; Create new &#10071;</button>
+    <button name= {{ 'fields@' + fieldname + '_create' }} type="submit">&#10071; Create new &#10071;</button>
 </form>
 {% if zoteromapping[itemtype]['fields'][fieldname]['wbprop'] and zoteromapping[itemtype]['fields'][fieldname]['wbprop'] in properties %}
 {% if properties[zoteromapping[itemtype]['fields'][fieldname]['wbprop']]['wdprop'] %}
  or
 <form style="display: inline;" method="POST">
-    <button name= {{ fieldname + '_redo' }} type="submit">Import wd:{{ properties[zoteromapping[itemtype]['fields'][fieldname]['wbprop']]['wdprop'] }} to wb:{{ zoteromapping[itemtype]['fields'][fieldname]['wbprop'] }}</button>
+    <button name= {{ 'fields@' + fieldname + '_redo' }} type="submit">Import wd:{{ properties[zoteromapping[itemtype]['fields'][fieldname]['wbprop']]['wdprop'] }} to wb:{{ zoteromapping[itemtype]['fields'][fieldname]['wbprop'] }}</button>
 </form>
 <small><i>Wikidata equivalent: </i><a href="http://www.wikidata.org/entity/{{ properties[zoteromapping[itemtype]['fields'][fieldname]['wbprop']]['wdprop'] }}">wd:{{ properties[zoteromapping[itemtype]['fields'][fieldname]['wbprop']]['wdprop'] }}</a></small>
 {% endif %}
@@ -59,6 +59,34 @@ To define mappings for a single bibitem type (so that fields with the same name 
 <small><i>Property datatype: {{ zoteromapping['all_types']['fields'][fieldname]['dtype'] }}</i></small>
 {% endif %}</p>
 {% endfor %}
+
+<h3>Creator types configuration</h3>
+{% for creatortype in zoteromapping[itemtype]['creatorTypes'] %}
+<p>
+<form style="display: inline;" method="POST">
+ &#10026; <b>{{ creatortype }}</b> ('{{ zoteromapping['all_types']['creatorTypes'][creatortype]['name'] }}') &#129054;
+{% if zoteromapping[itemtype]['creatorTypes'][creatortype]['wbprop'] %}
+    <a href="{{ wikibase_entity_ns }}{{ zoteromapping[itemtype]['creatorTypes'][creatortype]['wbprop'] }}">wb:{{ zoteromapping[itemtype]['creatorTypes'][creatortype]['wbprop'] }}</a>
+{% endif %}
+    <input type="text" placeholder={{ zoteromapping[itemtype]['creatorTypes'][creatortype]['wbprop'] }} name = {{ 'creatorTypes@' + creatortype }} style="width: 40px;" />
+    <input type="submit" value="Update this">
+</form> or <form style="display: inline;" method="POST">
+    <button name= {{ 'creatorTypes@' + creatortype + '_create' }} type="submit">&#10071; Create new &#10071;</button>
+</form>
+{% if zoteromapping[itemtype]['creatorTypes'][creatortype]['wbprop'] and zoteromapping[itemtype]['creatorTypes'][creatortype]['wbprop'] in properties %}
+{% if properties[zoteromapping[itemtype]['creatorTypes'][creatortype]['wbprop']]['wdprop'] %}
+ or
+<form style="display: inline;" method="POST">
+    <button name= {{ 'creatorTypes@' + creatortype + '_redo' }} type="submit">Import wd:{{ properties[zoteromapping[itemtype]['creatorTypes'][creatortype]['wbprop']]['wdprop'] }} to wb:{{ zoteromapping[itemtype]['creatorTypes'][creatortype]['wbprop'] }}</button>
+</form>
+<small><i>Wikidata equivalent: </i><a href="http://www.wikidata.org/entity/{{ properties[zoteromapping[itemtype]['creatorTypes'][creatortype]['wbprop']]['wdprop'] }}">wd:{{ properties[zoteromapping[itemtype]['creatorTypes'][creatortype]['wbprop']]['wdprop'] }}</a></small>
+{% endif %}
+{% endif %}
+{% if 'dtype' in zoteromapping['all_types']['creatorTypes'][creatortype] %}
+<small><i>Property datatype: {{ zoteromapping['all_types']['creatorTypes'][creatortype]['dtype'] }}</i></small>
+{% endif %}</p>
+{% endfor %}
+
 
 </body>
 </html>

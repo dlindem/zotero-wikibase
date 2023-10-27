@@ -544,6 +544,153 @@
           "dtype": "String",
           "name": "Website Type"
         }
+      },
+      "creatorTypes": {
+        "artist": {
+          "name": "Artist",
+          "wbprop": null,
+          "dtype": "WikibaseItem"
+        },
+        "attorneyAgent": {
+          "name": "Attorney/Agent",
+          "wbprop": null,
+          "dtype": "WikibaseItem"
+        },
+        "author": {
+          "name": "Author",
+          "wbprop": "P13",
+          "dtype": "WikibaseItem"
+        },
+        "bookAuthor": {
+          "name": "Book Author",
+          "wbprop": null,
+          "dtype": "WikibaseItem"
+        },
+        "cartographer": {
+          "name": "Cartographer",
+          "wbprop": null,
+          "dtype": "WikibaseItem"
+        },
+        "castMember": {
+          "name": "Cast Member",
+          "wbprop": null,
+          "dtype": "WikibaseItem"
+        },
+        "commenter": {
+          "name": "Commenter",
+          "wbprop": null,
+          "dtype": "WikibaseItem"
+        },
+        "composer": {
+          "name": "Composer",
+          "wbprop": null,
+          "dtype": "WikibaseItem"
+        },
+        "contributor": {
+          "name": "Contributor",
+          "wbprop": null,
+          "dtype": "WikibaseItem"
+        },
+        "cosponsor": {
+          "name": "Cosponsor",
+          "wbprop": null,
+          "dtype": "WikibaseItem"
+        },
+        "counsel": {
+          "name": "Counsel",
+          "wbprop": null,
+          "dtype": "WikibaseItem"
+        },
+        "director": {
+          "name": "Director",
+          "wbprop": null,
+          "dtype": "WikibaseItem"
+        },
+        "editor": {
+          "name": "Editor",
+          "wbprop": "P14",
+          "dtype": "WikibaseItem"
+        },
+        "guest": {
+          "name": "Guest",
+          "wbprop": null,
+          "dtype": "WikibaseItem"
+        },
+        "interviewee": {
+          "name": "Interview With",
+          "wbprop": null,
+          "dtype": "WikibaseItem"
+        },
+        "interviewer": {
+          "name": "Interviewer",
+          "wbprop": null,
+          "dtype": "WikibaseItem"
+        },
+        "inventor": {
+          "name": "Inventor",
+          "wbprop": null,
+          "dtype": "WikibaseItem"
+        },
+        "performer": {
+          "name": "Performer",
+          "wbprop": null,
+          "dtype": "WikibaseItem"
+        },
+        "podcaster": {
+          "name": "Podcaster",
+          "wbprop": null,
+          "dtype": "WikibaseItem"
+        },
+        "presenter": {
+          "name": "Presenter",
+          "wbprop": null,
+          "dtype": "WikibaseItem"
+        },
+        "producer": {
+          "name": "Producer",
+          "wbprop": null,
+          "dtype": "WikibaseItem"
+        },
+        "programmer": {
+          "name": "Programmer",
+          "wbprop": null,
+          "dtype": "WikibaseItem"
+        },
+        "recipient": {
+          "name": "Recipient",
+          "wbprop": null,
+          "dtype": "WikibaseItem"
+        },
+        "reviewedAuthor": {
+          "name": "Reviewed Author",
+          "wbprop": null,
+          "dtype": "WikibaseItem"
+        },
+        "scriptwriter": {
+          "name": "Scriptwriter",
+          "wbprop": null,
+          "dtype": "WikibaseItem"
+        },
+        "seriesEditor": {
+          "name": "Series Editor",
+          "wbprop": null,
+          "dtype": "WikibaseItem"
+        },
+        "sponsor": {
+          "name": "Sponsor",
+          "wbprop": null,
+          "dtype": "WikibaseItem"
+        },
+        "translator": {
+          "name": "Translator",
+          "wbprop": null,
+          "dtype": "WikibaseItem"
+        },
+        "wordsBy": {
+          "name": "Words By",
+          "wbprop": null,
+          "dtype": "WikibaseItem"
+        }
       }
     },
     "artwork": {
