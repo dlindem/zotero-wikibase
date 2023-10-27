@@ -2,52 +2,54 @@ import requests, time, re, json
 from bots import botconfig
 from bots import config_private
 from pyzotero import zotero
+import urllib.error
+config = botconfig.load_mapping("config")
 
 pyzot = zotero.Zotero(int(config['mapping']['zotero_group_id']), 'group', config_private.zotero_api_key)  # Zotero LexBib group
 
-citations_cache = {}
-with open('bots/data/citations_cache.jsonl') as jsonlfile:
-    jsonl = jsonlfile.read().split('\n')
-    for line in jsonl:
-        if line.startswith("{"):
-            jsonline = json.loads(line)
-            citations_cache[jsonline['zotitemid']] = jsonline['citation']
-
-
-def getcitation(zotitemid):
-    global citations_cache
-    if zotitemid in citations_cache:
-        print(f"Will take citation from cache: {zotitemid}")
-        return citations_cache[zotitemid]
-    print(f'Will now get citation for Zotero ID {zotitemid}')
-    zotapid = 'https://api.zotero.org/groups/' + config['mapping']['zotero_group_id'] + '/items/' + zotitemid
-    attempts = 0
-    while attempts < 5:
-        attempts += 1
-        params = {'format': 'json', 'include': 'bib', 'linkwrap': 1, 'locale': 'eu_ES',
-                  'style': 'modern-language-association'}
-        r = requests.get(zotapid, params=params)
-        if "200" in str(r):
-            zotitem = r.json()
-            # print(zotitemid + ': got zotitem data')
-            # print(zotitem['bib'])
-            bib = re.search('<div class="csl-entry">(.*)</div>', zotitem['bib']).group(1)
-            # convert Lexbib link (from "archive location" - needs mla style)
-            bib = re.sub(r'https?://lexbib.elex.is/entity/(Q[0-9]+)', r'([[Item:\1|\1]])', bib)
-            # convert remaining links
-            bib = re.sub(r'<a href="(https?://)([^/]+)([^"]+)">[^<]+</a>', r'[\1\2\3 \2]', bib)
-            print(bib)
-            citations_cache[zotitemid] = bib
-            with open('data/citations_cache.jsonl', 'a', encoding='utf-8') as jsonlfile:
-                jsonlfile.write(json.dumps({'zotitemid': zotitemid, 'citation': bib}) + '\n')
-            return (bib)
-
-        if "400" or "404" in str(r):
-            print('*** Fatal error: Item ' + zotitemid + ' got ' + str(r) + ', does not exist on Zotero. Will skip.')
-            time.sleep(5)
-            break
-        print('Zotero API GET request failed (' + zotitemid + '), will repeat. Response was ' + str(r))
-        time.sleep(2)
+# citations_cache = {}
+# with open('bots/data/citations_cache.jsonl') as jsonlfile:
+#     jsonl = jsonlfile.read().split('\n')
+#     for line in jsonl:
+#         if line.startswith("{"):
+#             jsonline = json.loads(line)
+#             citations_cache[jsonline['zotitemid']] = jsonline['citation']
+#
+#
+# def getcitation(zotitemid):
+#     global citations_cache
+#     if zotitemid in citations_cache:
+#         print(f"Will take citation from cache: {zotitemid}")
+#         return citations_cache[zotitemid]
+#     print(f'Will now get citation for Zotero ID {zotitemid}')
+#     zotapid = 'https://api.zotero.org/groups/' + config['mapping']['zotero_group_id'] + '/items/' + zotitemid
+#     attempts = 0
+#     while attempts < 5:
+#         attempts += 1
+#         params = {'format': 'json', 'include': 'bib', 'linkwrap': 1, 'locale': 'eu_ES',
+#                   'style': 'modern-language-association'}
+#         r = requests.get(zotapid, params=params)
+#         if "200" in str(r):
+#             zotitem = r.json()
+#             # print(zotitemid + ': got zotitem data')
+#             # print(zotitem['bib'])
+#             bib = re.search('<div class="csl-entry">(.*)</div>', zotitem['bib']).group(1)
+#             # convert Lexbib link (from "archive location" - needs mla style)
+#             bib = re.sub(r'https?://lexbib.elex.is/entity/(Q[0-9]+)', r'([[Item:\1|\1]])', bib)
+#             # convert remaining links
+#             bib = re.sub(r'<a href="(https?://)([^/]+)([^"]+)">[^<]+</a>', r'[\1\2\3 \2]', bib)
+#             print(bib)
+#             citations_cache[zotitemid] = bib
+#             with open('data/citations_cache.jsonl', 'a', encoding='utf-8') as jsonlfile:
+#                 jsonlfile.write(json.dumps({'zotitemid': zotitemid, 'citation': bib}) + '\n')
+#             return (bib)
+#
+#         if "400" or "404" in str(r):
+#             print('*** Fatal error: Item ' + zotitemid + ' got ' + str(r) + ', does not exist on Zotero. Will skip.')
+#             time.sleep(5)
+#             break
+#         print('Zotero API GET request failed (' + zotitemid + '), will repeat. Response was ' + str(r))
+#         time.sleep(2)
 
 
 # testitem = "HERCJU9P"
@@ -57,8 +59,19 @@ def getzotitem(zotitemid):
     pass
 
 
-def getexport():
-    exportitems = pyzot.items(tag=config['mapping']['zotero_export_tag'])
+def getexport(save_to_file=False):
+    rawitems = pyzot.items(tag=config['mapping']['zotero_export_tag'])
+    exportitems = []
+    for rawitem in rawitems:
+        regex = re.search(rf"{config['mapping']['wikibase_entity_ns']}(Q[0-9]+)", rawitem['data']['extra'])
+        if regex:
+            rawitem['wikibase_entity'] = regex.group(1)
+        else:
+            rawitem['wikibase_entity'] = False
+        exportitems.append(rawitem)
+    if save_to_file:
+        with open('data/zoteroexport.json', 'w', encoding='utf-8') as jsonfile:
+            json.dump(exportitems, jsonfile, indent=2)
     return exportitems
 
 
@@ -69,6 +82,7 @@ def getchildren(zotitemid):
 
 def patch_item(qid=None, zotitem=None, children=[]):
     # communicate with Zotero, write Wikibase entity URI to "extra" and attach URI as link attachment
+    needs_update = False
     if config['mapping']['store_qid_in_attachment']:
         attachment_present = False
         for child in children:
@@ -103,6 +117,7 @@ def patch_item(qid=None, zotitem=None, children=[]):
                                        "Content-Type": "application/json"}, json=attachment)
             if "200" in str(r):
                 print(f"Link attachment successfully attached to Zotero item {zotitem['data']['key']}.")
+                needs_update = True
 
     if config['mapping']['store_qid_in_extra']:
         if config['mapping']['wikibase_entity_ns']+qid in zotitem['data']['extra']:
@@ -110,6 +125,7 @@ def patch_item(qid=None, zotitem=None, children=[]):
         else:
             zotitem['data']['extra'] = config['mapping']['wikibase_entity_ns'] + qid + "\n" + zotitem['data']['extra']
             print('Successfully written Wikibase item URI to EXTRA.')
+            needs_update = True
     tagpresent = False
     tagpos = 0
     while tagpos < len(zotitem['data']['tags']):
@@ -118,7 +134,18 @@ def patch_item(qid=None, zotitem=None, children=[]):
         # remove export tag
         if zotitem['data']['tags'][tagpos]['tag'] == config['mapping']['zotero_export_tag']:
             del zotitem['data']['tags'][tagpos]
+            needs_update = True
         tagpos += 1
     if not tagpresent:
         zotitem['data']['tags'].append({'tag': config['mapping']['zotero_on_wikibase_tag']})
-    pyzot.update_item(zotitem, last_modified=None)
+        needs_update = True
+    if needs_update:
+        del zotitem['wikibase_entity'] # raises zotero api error if left in item
+        try:
+            pyzot.update_item(zotitem, last_modified=None)
+            return True
+        except Exception as err:
+            if "Item has been modified since specified version" in str(err):
+                return "Versioning_Error"
+            else:
+                return False

@@ -1,19 +1,31 @@
 <!doctype html>
 <html>
 <head>
-<link href="static/favicon.ico" rel="shortcut icon">
+<link href="static/favicon.ico" rel="shortcut icon"/>
+    <title>Index - ZotWb</title>
 </head>
 <body>
 <h1>Welcome to ZotWb Zotero to Wikibase export</h1>
-<p>This instance connects {{ zotero_name }} Zotero group to <a href="{{ wikibase_url }}">{{ wikibase_name }} Wikibase</a>.</p>
+<p>This instance connects {{ zotero_name }} Zotero group to <a href="{{ wikibase_url }}" target="_blank">{{ wikibase_name }} Wikibase</a>.</p>
 <h2>Basic configuration</h2>
-<p>To get started, access the <a href="./basic_config">basic configuration page</a>.</p>
-<h2>Zotero datafields mapping</h2>
-<p>Access these pages for configuring how the Zotero datafields content is mapped to Wikibase properties.</p>
-<h3>Zotero item data fields</h3>
-<ul>{% for itemtype in zoteromapping %}
-    <li><a href="./zoterofields/{{ itemtype }}">{{ itemtype }}</a></li>
+<p>To edit your basic configuration, access the <a href="./basic_config">basic configuration page</a>.</p>
+{% for message in config_check['message'] %}
+<span style="{{ config_check['color'] }}">{{ message }}</span>
+{% endfor %}
+<h2>Zotero datafields and creator types mapping</h2>
+<p>Access these pages for configuring how the Zotero datafields and creator types are mapped to Wikibase properties.</br>
+    <small>You can define mappings for all Zotero item types at once, or for single item types (which allows you to treat the same datafield differently, according to the item type).</small><p>
+<p>{% for itemtype in zoteromapping %}
+    {% if itemtype == all_types %}
+<b><a href="./zoterofields/{{ itemtype }}">EDIT ALL TYPES AT ONCE</a></b>
+    {% else %}
+    | <a href="./zoterofields/{{ itemtype }}">{{ itemtype }}</a>
+    {% endif %}
     {% endfor %}
-</ul>
+</p>
+<h2>Wikidata alignment</h2>
+Access the <a href="./wikidata_alignment">Wikidata alignment page</a> for configuring how your Wikibase properties map to Wikidata.
+<h2>Zotero records export to Wikibase</h2>
+Access the <a href="./zotero_export">Zotero export page</a>.
 </body>
 </html>

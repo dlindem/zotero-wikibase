@@ -1,4 +1,4 @@
-from bots import zoterobot, botconfig, littlehelpers, xwbi
+from bots import zoterobot, botconfig, zotwb_functions, xwbi
 import json, sys, re
 
 config = botconfig.load_mapping("config")
@@ -38,13 +38,13 @@ for item in data:
                 f"\nDo you want to import that item to your Wikibase and use it to represent '{itemtype}'?\n Enter 1 for import as new item, 2 for import to a known Wikibase Qid, 0 for no.")
             print(f"\n{choice}")
         if choice == "1":
-            newitem = littlehelpers.import_wikidata_entity(wikidatamapping['mapping'][itemtype], wbid=False,
+            newitem = zotwb_functions.import_wikidata_entity(wikidatamapping['mapping'][itemtype], wbid=False,
                                                            classqid=config['mapping']['class_bibitem_type']['wikibase'])
             zoteromapping['mapping'][itemtype]['bibtypeqid'] = newitem
             botconfig.dump_mapping(zoteromapping)
         elif choice == "2":
             qid = input('Enter Qid to use for item import (e.g. "Q15"): ')
-            newitem = littlehelpers.import_wikidata_entity(wikidatamapping['mapping'][itemtype], wbid=qid,
+            newitem = zotwb_functions.import_wikidata_entity(wikidatamapping['mapping'][itemtype], wbid=qid,
                                                            classqid=config['mapping']['class_bibitem_type']['wikibase'])
             zoteromapping['mapping'][itemtype]['bibtypeqid'] = newitem
             botconfig.dump_mapping(zoteromapping)
@@ -70,8 +70,7 @@ if fieldcheck == "1":
         for fieldname in item['data']:
             if item['data'][fieldname] == "":  # empty field, won't ask for a mapping
                 continue
-            if fieldname in fields_to_exclude or itemtype + fieldname in seen_fields or fieldname not in \
-                    zoteromapping['mapping'][itemtype]['fields']:
+            if fieldname in fields_to_exclude or itemtype + fieldname in seen_fields or fieldname not in zoteromapping['mapping'][itemtype]['fields']:
                 print(f"Skipping {itemtype}>{fieldname}")
                 continue
             if zoteromapping['mapping'][itemtype]['fields'][fieldname]['wbprop'] == False:
@@ -140,18 +139,18 @@ if fieldcheck == "1":
                             if choice2 == "1":
                                 wdprop = input(
                                     "Input the wikidata property ID to import with the preceding letter, e.g. 'P121': ")
-                                wbprop_to_use = littlehelpers.import_wikidata_entity(wdprop)
+                                wbprop_to_use = zotwb_functions.import_wikidata_entity(wdprop)
                             if choice2 == "2":
                                 wdprop = input(
                                     "Write the wikidata property ID to import with the preceding letter, e.g. 'P121': ")
                                 wbprop = input(
                                     "Write the ID of the wikibase property to be enriched with the Wikidata import, with the preceding letter, e.g. 'P21': ")
-                                wbprop_to_use = littlehelpers.import_wikidata_entity(wdprop, wbid=wbprop)
+                                wbprop_to_use = zotwb_functions.import_wikidata_entity(wdprop, wbid=wbprop)
                             if choice2 == "3":
                                 wbprop_to_useentity = xwbi.wbi.property.new(datatype=config['mapping']['datatypes_mapping'][datatype])
                                 wbprop_to_useentity.labels.set('en', fieldname)
                                 print('enlabel set: ' + fieldname)
-                                wbprop_to_use = littlehelpers.write_property(wbprop_to_useentity)
+                                wbprop_to_use = zotwb_functions.write_property(wbprop_to_useentity)
 
                             if choice2 == "4":
                                 wbprop = input(
@@ -231,13 +230,13 @@ if creatorcheck == "1":
                             if choice2 == "1":
                                 wdprop = input(
                                     "Input the wikidata property ID to import with the preceding letter, e.g. 'P121': ")
-                                wbprop_to_use = littlehelpers.import_wikidata_entity(wdprop)
+                                wbprop_to_use = zotwb_functions.import_wikidata_entity(wdprop)
                             if choice2 == "2":
                                 wdprop = input(
                                     "Write the wikidata property ID to import with the preceding letter, e.g. 'P121': ")
                                 wbprop = input(
                                     "Write the ID of the wikibase property to be enriched with the Wikidata import, with the preceding letter, e.g. 'P21': ")
-                                wbprop_to_use = littlehelpers.import_wikidata_entity(wdprop, wbid=wbprop)
+                                wbprop_to_use = zotwb_functions.import_wikidata_entity(wdprop, wbid=wbprop)
                             if choice2 == "3":
                                 wbprop_to_useentity = xwbi.wbi.property.new(
                                     datatype=config['mapping']['datatypes_mapping']['WikibaseItem'])
@@ -354,7 +353,7 @@ for item in data:
             languagewdqid = iso3mapping['mapping'][item['data']['language']]['wdqid']
             print(
                 f"No item defined for this language on your Wikibase. This language is {languagewdqid} on Wikidata. I'll import that and use it from now on.")
-            languageqid = littlehelpers.import_wikidata_entity(languagewdqid, classqid=config['mapping']['class_language']['wikibase'])
+            languageqid = zotwb_functions.import_wikidata_entity(languagewdqid, classqid=config['mapping']['class_language']['wikibase'])
             iso3mapping['mapping'][item['data']['language']]['wbqid'] = languageqid
             botconfig.dump_mapping(iso3mapping)
         if languageqid and zoteromapping['mapping'][itemtype]['fields']['language']['wbprop']:
@@ -422,7 +421,7 @@ for item in data:
                 print('This BibItem still does not exist on the wikibase')
         # user-defined identifier patterns
         for pattern in config['mapping']['identifier_patterns']:
-']            try:
+            try:
                 identifier_regex = re.search(rf"{pattern}", item['data']['extra'])
                 if identifier_regex:
                     print(f"Extra field: Found identifier {identifier_regex.group(0)}")
@@ -433,7 +432,7 @@ for item in data:
                 print(f"Failed to do EXTRA identifier regex extraction: {str(ex)}")
                 print(f"Extra field content was: {item['data']['extra']}")
 
-    ## special operations with Zotero tags, use case specific
+    ## special operations with Zotero tags, use-case specific
     if 'tags' in item['data']:
         for tag in item['data']['tags']:
             if tag["tag"].startswith(':type '):

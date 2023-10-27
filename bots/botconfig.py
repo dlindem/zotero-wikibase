@@ -82,7 +82,7 @@ botpath = os.path.realpath('bots')
 # DO NOT EDIT THE FOLLOWING SECTIONS
 # import mappings
 def load_mapping(mappingname):
-    print(f"Will load mapping: {mappingname}.json")
+    # print(f"Will load mapping: {mappingname}.json")
     with open(f"{botpath}/mappings/{mappingname}.json", 'r', encoding='utf-8') as jsonfile:
         return json.load(jsonfile)
 

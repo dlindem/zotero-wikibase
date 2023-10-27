@@ -217,8 +217,10 @@
       "^OCLC: ([0-9]+)": "P55"
     },
     "zotero_group_id": "5165329",
-    "zotero_group_name": null,
+    "zotero_group_name": "MLV",
     "zotero_export_tag": "wikibase-export",
-    "zotero_on_wikibase_tag": "on-wikibase"
+    "zotero_on_wikibase_tag": "on-wikibase",
+    "store_qid_in_extra": true,
+    "store_qid_in_attachment": true
   }
 }
