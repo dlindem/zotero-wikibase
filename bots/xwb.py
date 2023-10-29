@@ -756,11 +756,12 @@ def setclaimvalue(guid, value, dtype):
 				print('Claim update for '+value+' (dtype: '+dtype+'): success.')
 				break
 		except Exception as ex:
-			if 'Invalid CSRF token.' in str(ex):
+			if 'Invalid CSRF token.' in str(ex) or 'The "token" parameter must be set' in str(ex):
 				print('Wait a sec. Must get a new CSRF token...')
 				token = get_token()
 			else:
 				print('Claim update failed... Will try again.')
+				print(str(ex))
 				time.sleep(4)
 
 

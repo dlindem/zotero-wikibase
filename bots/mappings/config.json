@@ -2,7 +2,7 @@
   "filename": "config.json",
   "comment": "This contains basic configurations for the zotero-wikibase tool.",
   "mapping": {
-    "wikibase_name": "Monumenta",
+    "wikibase_name": "Monumenta Linguae Vasconum",
     "wikibase_url": "https://monumenta.wikibase.cloud",
     "wikibase_site": "monumenta.wikibase.cloud",
     "wikibase_entity_ns": "https://monumenta.wikibase.cloud/entity/",

@@ -1,25 +1,23 @@
 from bots import botconfig, zotwb_functions
 from flask import Flask, render_template, request
 from bots import config_private
-import os, re, json
+import os, re, json, pandas
 from datetime import datetime
 # from flask_wtf import FlaskForm
 app = Flask(__name__)
 
-properties = botconfig.load_mapping('properties')
-zoteromapping = botconfig.load_mapping('zotero')
-configdata = botconfig.load_mapping('config')
-zotero_bibtypes = botconfig.load_mapping('zotero_bibtypes')
-wikibase_url = config_private.wikibase_url
-if configdata['mapping']['wikibase_url'] != wikibase_url:
-    print(f"Wikibase URL in config_private.py has changed to {wikibase_url}... Will update dependent configurations.")
-    configdata['mapping']['wikibase_url'] = wikibase_url
-    configdata = zotwb_functions.build_depconfig(configdata)
+# wikibase_url = config_private.wikibase_url
+# if configdata['mapping']['wikibase_url'] != wikibase_url:
+#     print(f"Wikibase URL in config_private.py has changed to {wikibase_url}... Will update dependent configurations.")
+#     configdata['mapping']['wikibase_url'] = wikibase_url
+#     configdata = zotwb_functions.build_depconfig(configdata)
 
 @app.route('/')
 def index_page():
+    configdata = botconfig.load_mapping('config')
+    zoteromapping = botconfig.load_mapping('zotero')
     config_check = zotwb_functions.check_config(configdata=configdata['mapping'])
-    return render_template("index.html", wikibase_url=wikibase_url,
+    return render_template("index.html", wikibase_url=configdata['mapping']['wikibase_url'],
                            wikibase_name=configdata['mapping']['wikibase_name'],
                            zotero_name=configdata['mapping']['zotero_group_name'],
                            zoteromapping=zoteromapping['mapping'],
@@ -28,7 +26,8 @@ def index_page():
 
 @app.route('/zotero_export', methods= ['GET', 'POST'])
 def zotero_export():
-
+    configdata = botconfig.load_mapping('config')
+    zoteromapping = botconfig.load_mapping('zotero')
     with open('data/zoteroexport.json', 'r', encoding='utf-8') as jsonfile:
         zoterodata = json.load(jsonfile)
         zotero_check_messages = zotwb_functions.check_export(zoterodata=zoterodata, zoteromapping=zoteromapping)
@@ -38,7 +37,6 @@ def zotero_export():
                                wikibase_entity_ns=configdata['mapping']['wikibase_entity_ns'],
                                wikibase_name=configdata['mapping']['wikibase_name'],
                                zotero_name=configdata['mapping']['zotero_group_name'],
-                               # zoteromapping=zoteromapping['mapping'],
                                zoterodata=zoterodata,
                                zotero_check_messages=zotero_check_messages,
                                zotero_len=str(len(zoterodata)),
@@ -55,6 +53,8 @@ def zotero_export():
                     zoterodata = zotwb_functions.zoterobot.getexport(save_to_file=True)
                     messages = [f"Successfully ingested zotero data (set of {str(len(zoterodata))} records tagged '{configdata['mapping']['zotero_export_tag']}')."]
                     msgcolor = "background:limegreen"
+                    zotero_check_messages = zotwb_functions.check_export(zoterodata=zoterodata,
+                                                                         zoteromapping=zoteromapping)
                 elif command == "do_upload":
                     upload = zotwb_functions.wikibase_upload(data=zoterodata)
                     messages = upload['messages']
@@ -63,7 +63,6 @@ def zotero_export():
                                wikibase_entity_ns=configdata['mapping']['wikibase_entity_ns'],
                                wikibase_name=configdata['mapping']['wikibase_name'],
                                zotero_name=configdata['mapping']['zotero_group_name'],
-                               # zoteromapping=zoteromapping['mapping'],
                                zoterodata=zoterodata,
                                zotero_check_messages=zotero_check_messages,
                                zotero_len=str(len(zoterodata)),
@@ -79,17 +78,21 @@ def zotero_export():
 
 @app.route('/basic_config', methods= ['GET', 'POST'])
 def basic_config():
-    global configdata
+    configdata = botconfig.load_mapping('config')
     properties = botconfig.load_mapping('properties')
     if request.method == 'GET':
-        return render_template("basic_config.html", data=configdata['mapping'])
+        return render_template("basic_config.html", data=configdata['mapping'], message = None, msgcolor = None)
 
     elif request.method == 'POST':
         if request.form:
             for key in request.form:
                 if key.startswith('wikibase') or key.startswith('zotero'):
                     configdata['mapping'][key] = request.form.get(key)
+                    if key == 'wikibase_url': # update configs that depend on the wikibase URL
+                        configdata = zotwb_functions.build_depconfig(configdata)
+                    command = 'Update '+key.replace('_',' ')
                 elif key.startswith('prop') or key.startswith('class'):
+                    command = key.replace('_', ' ')
                     if key.endswith('_redo'): # user has pressed 'import from wikidata to known wikibase entity' button
                         configitem = key.replace('_redo', '')
                         if configitem.startswith("class") and configitem != "class_ontology_class":
@@ -128,15 +131,18 @@ def basic_config():
                         configdata['mapping'][configitem]['wikibase'] = newentity_id
                     else: # user has manually chosen a value
                         configdata['mapping'][key]['wikibase'] = request.form.get(key)
+                        command = command = 'Update '+key.replace('_',' ')
+                message = f"Successfully performed operation: {command}."
+                msgcolor = "background:limegreen"
         botconfig.dump_mapping(configdata)
-        return render_template("basic_config.html", data=configdata['mapping'])
+        return render_template("basic_config.html", data=configdata['mapping'], message=message, msgcolor=msgcolor)
 
 @app.route('/zoterofields/<itemtype>', methods= ['GET', 'POST'])
 def map_zoterofield(itemtype):
-    global properties
-    global configdata
-    global zotero_bibtypes
-    global zoteromapping
+    properties = botconfig.load_mapping('properties')
+    configdata = botconfig.load_mapping('config')
+    zotero_bibtypes = botconfig.load_mapping('zotero_bibtypes')
+    zoteromapping = botconfig.load_mapping('zotero')
     for field in ['ISBN', 'extra', 'language']: # these are defined in basic config
         zoteromapping['mapping'][itemtype]['fields'].pop(field) if field in zoteromapping['mapping'][itemtype]['fields'] else True
     if request.method == 'GET':
@@ -231,15 +237,14 @@ def map_zoterofield(itemtype):
 
 @app.route('/wikidata_alignment', methods= ['GET', 'POST'])
 def wikidata_alignment():
-    global properties
-    global configdata
-    global zoteromapping
+    properties = botconfig.load_mapping('properties')
+    configdata = botconfig.load_mapping('config')
 
 
     if request.method == 'GET':
         propcachedate = datetime.utcfromtimestamp(os.path.getmtime('bots/mappings/properties.json')).strftime(
             '%Y-%m-%d at %H:%M:%S UTC')
-        return render_template("wikidata_alignment.html", wikibase_url=config_private.wikibase_url,
+        return render_template("wikidata_alignment.html", wikibase_url=configdata['mapping']['wikibase_url'],
                                wikibase_name=configdata['mapping']['wikibase_name'],
                            wikibase_entity_ns=configdata['mapping']['wikibase_entity_ns'],
                            properties=properties['mapping'],
@@ -257,12 +262,49 @@ def wikidata_alignment():
                     zotwb_functions.rewrite_properties_mapping()
                     properties = botconfig.load_mapping('properties')
                     message = f"Properties data cache update sucessful."
-            return render_template("wikidata_alignment.html", wikibase_url=config_private.wikibase_url,
+            return render_template("wikidata_alignment.html", wikibase_url=configdata['mapping']['wikibase_url'],
                                    wikibase_name=configdata['mapping']['wikibase_name'],
                                    wikibase_entity_ns=configdata['mapping']['wikibase_entity_ns'],
                                    properties=properties['mapping'],
                                    propcachedate=propcachedate,
                                    message=message)
+
+@app.route('/openrefine', methods= ['GET', 'POST'])
+def openrefine():
+    configdata = botconfig.load_mapping('config')
+    get_recon = zotwb_functions.get_recon_pd(folder="data/reconciled_creators")
+    recon_df = get_recon['data']
+    recon_df.set_index('creatorstatement')
+    recon_wd = str(len(recon_df.dropna(subset=['Wikidata_Qid'])))
+    recon_wb = str(len(recon_df.dropna(subset=['Wikibase_Qid'])))
+    if request.method == 'GET':
+
+        return render_template("openrefine.html", wikibase_name=configdata['mapping']['wikibase_name'],
+                               messages=[], msgcolor="background:limegreen",
+                               recon_all= str(len(recon_df)), recon_wd = recon_wd, recon_wb=recon_wb, filename = get_recon['filename'])
+    elif request.method == 'POST':
+        if request.form:
+            for key in request.form:
+                messages = [f"Operation sucessful. Operation name was '{key.replace('_',' ')}'."]
+                msgcolor = "background:limegreen"
+                if key == "export_unreconciled_creators":
+                    messages = zotwb_functions.export_creators()
+                    get_recon = zotwb_functions.get_recon_pd(folder="data/reconciled_creators")
+                    recon_df = get_recon['data']
+                    recon_df.set_index('creatorstatement')
+                    recon_wd = str(len(recon_df.dropna(subset=['Wikidata_Qid'])))
+                    recon_wb = str(len(recon_df.dropna(subset=['Wikibase_Qid'])))
+                if key == "import_reconciled_wikidata":
+                    messages = zotwb_functions.import_creators(data=recon_df, infile=get_recon['filename'], wikidata=True)
+                if key == "import_reconciled_wikibase":
+                    messages = zotwb_functions.import_creators(data=recon_df, infile=get_recon['filename'], wikibase=True)
+                if key == "import_unreconciled":
+                    messages = zotwb_functions.import_creators(data=recon_df, infile=get_recon['filename'], unrecon=True)
+
+        return render_template("openrefine.html", wikibase_name=configdata['mapping']['wikibase_name'],
+                               messages=messages, msgcolor=msgcolor,
+                               recon_all = str(len(recon_df)), recon_wd = recon_wd, recon_wb = recon_wb, filename = get_recon['filename'])
+
 
 
 if __name__ == '__main__':
