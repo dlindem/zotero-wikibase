@@ -94,7 +94,7 @@ for rowindex, row in df.iterrows():
 			print(
 				f"The full name {row['fullName_clusters']} belongs to a cluster the first member of which has been created just before as {creatorqid}. Will use that.")
 		with open(newitemjsonfile, 'w', encoding='utf-8') as jsonfile:
-			json.dump(newcreators, jsonfile)
+			json.dump(newcreators, jsonfile, indent=2)
 
 	if creatorqid:
 		# Write creator statement
