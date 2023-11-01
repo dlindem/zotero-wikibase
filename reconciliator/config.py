@@ -1,8 +1,7 @@
-import os, sys, re
-sys.path.insert(0, os.path.realpath(os.path.pardir))
-print(os.path.realpath(os.path.pardir))
-from bots import botconfig
-config = botconfig.load_mapping('config')
+import os, sys, re, json
+# sys.path.insert(0, os.path.realpath(os.path.pardir))
+with open(os.path.realpath(os.path.pardir)+"/bots/mappings/config.json", 'r', encoding='utf-8') as jsonfile:
+    configdata = json.load(jsonfile)
 """
 This file defines a few constants which configure
 which Wikibase instance and which property/item ids
@@ -10,16 +9,16 @@ should be used
 """
 
 # Endpoint of the MediaWiki API of the Wikibase instance
-mediawiki_api_endpoint = config['mapping']['wikibase_api_url'] # e.g. 'https://monumenta.wikibase.cloud/w/api.php'
+mediawiki_api_endpoint = configdata['mapping']['wikibase_api_url'] # e.g. 'https://monumenta.wikibase.cloud/w/api.php'
 
 # SPARQL endpoint
-wikibase_sparql_endpoint = config['mapping']['wikibase_sparql_endpoint'] # e.g. 'https://monumenta.wikibase.cloud/query/sparql'
+wikibase_sparql_endpoint = configdata['mapping']['wikibase_sparql_endpoint'] # e.g. 'https://monumenta.wikibase.cloud/query/sparql'
 
 # Name of the Wikibase instance
-wikibase_name = config['mapping']['wikibase_name']
+wikibase_name = configdata['mapping']['wikibase_name']
 
 # URL of the main page of the Wikibase instance
-wikibase_main_page = config['mapping']['wikibase_url']+'/wiki/Main_Page'
+wikibase_main_page = configdata['mapping']['wikibase_url']+'/wiki/Main_Page'
 
 # Wikibase namespace ID, used to search for items
 # For Wikidata this is 0, but most by default Wikibase uses 120, which is the default Wikibase 'Item:' namespace
@@ -33,21 +32,21 @@ wikibase_namespace_prefix = 'Item:'
 user_agent = 'OpenRefine-'+wikibase_name
 
 # Regexes and group ids to extracts Qids and Pids from URLs
-q_re = re.compile(fr"(<?https?://{config['mapping']['wikibase_site']}/(entity|wiki)/)?(Q[0-9]+)>?")
+q_re = re.compile(fr"(<?https?://{configdata['mapping']['wikibase_site']}/(entity|wiki)/)?(Q[0-9]+)>?")
 q_re_group_id = 3
-p_re = re.compile(fr"(<?https?://{config['mapping']['wikibase_site']}/(entity/|wiki/Property:))?(P[0-9]+)>?")
+p_re = re.compile(fr"(<?https?://{configdata['mapping']['wikibase_site']}/(entity/|wiki/Property:))?(P[0-9]+)>?")
 p_re_group_id = 3
 
 # Identifier space and schema space exposed to OpenRefine.
 # This should match the IRI prefixes used in RDF serialization.
 # Note that you should be careful about using http or https there,
 # because any variation will break comparisons at various places.
-identifier_space = {config['mapping']['wikibase_entity_ns']}
-schema_space = config['mapping']['wikibase_url']+'/prop/direct/'
+identifier_space = {configdata['mapping']['wikibase_entity_ns']}
+schema_space = configdata['mapping']['wikibase_url']+'/prop/direct/'
 
 # Pattern used to form the URL of a Qid.
 # This is only used for viewing so it is fine to use any protocol (therefore, preferably HTTPS if supported)
-qid_url_pattern = config['mapping']['wikibase_url']+'/wiki/Item:{{id}}'
+qid_url_pattern = configdata['mapping']['wikibase_url']+'/wiki/Item:{{id}}'
 
 # By default, filter out any items which are instance
 # of a subclass of this class.
@@ -59,7 +58,7 @@ avoid_items_of_class = None
 
 # Service name exposed at various places,
 # mainly in the list of reconciliation services of users
-service_name = re.sub(r'\.[a-z]+$','',config['mapping']['wikibase_site'])+' Reconciliator'
+service_name = re.sub(r'\.[a-z]+$','',configdata['mapping']['wikibase_site'])+' Reconciliator'
 
 # URL (without the trailing slash) where this server runs
 this_host = 'http://localhost:8000'
@@ -119,7 +118,7 @@ autodescribe_endpoint = None # 'https://tools.wmflabs.org/autodesc/'
 default_type_entity = None
 
 # Property path used to obtain the type of an item
-type_property_path = config['mapping']['prop_instanceof']['wikibase']
+type_property_path = configdata['mapping']['prop_instanceof']['wikibase']
 
 # Property to follow to fetch properties for a given type.
 # Set to None if this is not available
@@ -130,7 +129,7 @@ wdt_prefix = 'xdp:'
 
 # Sparql query used to fetch all the subclasses of a given item.
 # The '$qid' string will be replaced by the qid whose children should be fetched.
-sparql_query_to_fetch_subclasses = config['mapping']['sparql_prefixes']+"SELECT ?child WHERE { ?child "+config['mapping']['prop_subclassof']['wikibase']+"* xwb:$qid }"
+sparql_query_to_fetch_subclasses = configdata['mapping']['wikibase_sparql_prefixes']+"SELECT ?child WHERE { ?child "+configdata['mapping']['prop_subclassof']['wikibase']+"* xwb:$qid }"
 
 # Sparql query used to fetch all the properties which store unique identifiers
 sparql_query_to_fetch_unique_id_properties = """
