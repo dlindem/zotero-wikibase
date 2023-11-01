@@ -40,7 +40,7 @@
           "name": "Archive ID"
         },
         "archiveLocation": {
-          "wbprop": null,
+          "wbprop": false,
           "dtype": "String",
           "name": "Loc. in Archive"
         },
@@ -280,7 +280,7 @@
           "name": "Type"
         },
         "libraryCatalog": {
-          "wbprop": null,
+          "wbprop": false,
           "dtype": "String",
           "name": "Library Catalogue"
         },
@@ -722,10 +722,10 @@
           "wbprop": null
         },
         "archiveLocation": {
-          "wbprop": null
+          "wbprop": false
         },
         "libraryCatalog": {
-          "wbprop": null
+          "wbprop": false
         },
         "callNumber": {
           "wbprop": null
@@ -801,10 +801,10 @@
           "wbprop": null
         },
         "archiveLocation": {
-          "wbprop": null
+          "wbprop": false
         },
         "libraryCatalog": {
-          "wbprop": null
+          "wbprop": false
         },
         "callNumber": {
           "wbprop": null
@@ -1005,10 +1005,10 @@
           "wbprop": null
         },
         "archiveLocation": {
-          "wbprop": null
+          "wbprop": false
         },
         "libraryCatalog": {
-          "wbprop": null
+          "wbprop": false
         },
         "callNumber": {
           "wbprop": null
@@ -1095,10 +1095,10 @@
           "wbprop": null
         },
         "archiveLocation": {
-          "wbprop": null
+          "wbprop": false
         },
         "libraryCatalog": {
-          "wbprop": null
+          "wbprop": false
         },
         "callNumber": {
           "wbprop": null
@@ -1247,10 +1247,10 @@
           "wbprop": null
         },
         "archiveLocation": {
-          "wbprop": null
+          "wbprop": false
         },
         "libraryCatalog": {
-          "wbprop": null
+          "wbprop": false
         },
         "callNumber": {
           "wbprop": null
@@ -1331,10 +1331,10 @@
           "wbprop": null
         },
         "archiveLocation": {
-          "wbprop": null
+          "wbprop": false
         },
         "libraryCatalog": {
-          "wbprop": null
+          "wbprop": false
         },
         "callNumber": {
           "wbprop": null
@@ -1415,13 +1415,13 @@
           "wbprop": null
         },
         "archiveLocation": {
-          "wbprop": null
+          "wbprop": false
         },
         "shortTitle": {
           "wbprop": null
         },
         "libraryCatalog": {
-          "wbprop": null
+          "wbprop": false
         },
         "callNumber": {
           "wbprop": null
@@ -1499,10 +1499,10 @@
           "wbprop": null
         },
         "archiveLocation": {
-          "wbprop": null
+          "wbprop": false
         },
         "libraryCatalog": {
-          "wbprop": null
+          "wbprop": false
         },
         "callNumber": {
           "wbprop": null
@@ -1564,10 +1564,10 @@
           "wbprop": null
         },
         "archiveLocation": {
-          "wbprop": null
+          "wbprop": false
         },
         "libraryCatalog": {
-          "wbprop": null
+          "wbprop": false
         },
         "callNumber": {
           "wbprop": null
@@ -1696,7 +1696,7 @@
           "wbprop": null
         },
         "archiveLocation": {
-          "wbprop": null
+          "wbprop": false
         },
         "libraryCatalog": {
           "wbprop": false
@@ -1770,10 +1770,10 @@
           "wbprop": null
         },
         "archiveLocation": {
-          "wbprop": null
+          "wbprop": false
         },
         "libraryCatalog": {
-          "wbprop": null
+          "wbprop": false
         },
         "callNumber": {
           "wbprop": null
@@ -1993,10 +1993,10 @@
           "wbprop": null
         },
         "archiveLocation": {
-          "wbprop": null
+          "wbprop": false
         },
         "libraryCatalog": {
-          "wbprop": null
+          "wbprop": false
         },
         "callNumber": {
           "wbprop": null
@@ -2082,10 +2082,10 @@
           "wbprop": null
         },
         "archiveLocation": {
-          "wbprop": null
+          "wbprop": false
         },
         "libraryCatalog": {
-          "wbprop": null
+          "wbprop": false
         },
         "callNumber": {
           "wbprop": null
@@ -2148,10 +2148,10 @@
           "wbprop": null
         },
         "archiveLocation": {
-          "wbprop": null
+          "wbprop": false
         },
         "libraryCatalog": {
-          "wbprop": null
+          "wbprop": false
         },
         "callNumber": {
           "wbprop": null
@@ -2219,10 +2219,10 @@
           "wbprop": null
         },
         "archiveLocation": {
-          "wbprop": null
+          "wbprop": false
         },
         "libraryCatalog": {
-          "wbprop": null
+          "wbprop": false
         },
         "callNumber": {
           "wbprop": null
@@ -2288,10 +2288,10 @@
           "wbprop": null
         },
         "archiveLocation": {
-          "wbprop": null
+          "wbprop": false
         },
         "libraryCatalog": {
-          "wbprop": null
+          "wbprop": false
         },
         "callNumber": {
           "wbprop": null
@@ -2366,10 +2366,10 @@
           "wbprop": null
         },
         "archiveLocation": {
-          "wbprop": null
+          "wbprop": false
         },
         "libraryCatalog": {
-          "wbprop": null
+          "wbprop": false
         },
         "callNumber": {
           "wbprop": null
@@ -2440,10 +2440,10 @@
           "wbprop": null
         },
         "archiveLocation": {
-          "wbprop": null
+          "wbprop": false
         },
         "libraryCatalog": {
-          "wbprop": null
+          "wbprop": false
         },
         "callNumber": {
           "wbprop": null
@@ -2661,7 +2661,7 @@
           "wbprop": null
         },
         "archiveLocation": {
-          "wbprop": null
+          "wbprop": false
         },
         "shortTitle": {
           "wbprop": null
@@ -2670,7 +2670,7 @@
           "wbprop": "P12"
         },
         "libraryCatalog": {
-          "wbprop": null
+          "wbprop": false
         },
         "callNumber": {
           "wbprop": null
@@ -2802,10 +2802,10 @@
           "wbprop": null
         },
         "archiveLocation": {
-          "wbprop": null
+          "wbprop": false
         },
         "libraryCatalog": {
-          "wbprop": null
+          "wbprop": false
         },
         "callNumber": {
           "wbprop": null
@@ -2888,10 +2888,10 @@
           "wbprop": null
         },
         "archiveLocation": {
-          "wbprop": null
+          "wbprop": false
         },
         "libraryCatalog": {
-          "wbprop": null
+          "wbprop": false
         },
         "callNumber": {
           "wbprop": null
@@ -2972,7 +2972,7 @@
           "wbprop": null
         },
         "archiveLocation": {
-          "wbprop": null
+          "wbprop": false
         },
         "shortTitle": {
           "wbprop": null
@@ -2984,7 +2984,7 @@
           "wbprop": "P12"
         },
         "libraryCatalog": {
-          "wbprop": null
+          "wbprop": false
         },
         "callNumber": {
           "wbprop": null
@@ -3113,10 +3113,10 @@
           "wbprop": null
         },
         "archiveLocation": {
-          "wbprop": null
+          "wbprop": false
         },
         "libraryCatalog": {
-          "wbprop": null
+          "wbprop": false
         },
         "callNumber": {
           "wbprop": null
@@ -3188,10 +3188,10 @@
           "wbprop": null
         },
         "archiveLocation": {
-          "wbprop": null
+          "wbprop": false
         },
         "libraryCatalog": {
-          "wbprop": null
+          "wbprop": false
         },
         "callNumber": {
           "wbprop": null
@@ -3279,10 +3279,10 @@
           "wbprop": null
         },
         "archiveLocation": {
-          "wbprop": null
+          "wbprop": false
         },
         "libraryCatalog": {
-          "wbprop": null
+          "wbprop": false
         },
         "callNumber": {
           "wbprop": null

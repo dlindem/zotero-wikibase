@@ -33,10 +33,11 @@ def zotero_export():
         zotero_check_messages = zotwb_functions.check_export(zoterodata=zoterodata, zoteromapping=zoteromapping)
     if request.method == 'GET':
 
-        return render_template("zotero_export.html", wikibase_url=wikibase_url,
+        return render_template("zotero_export.html", wikibase_url=configdata['mapping']['wikibase_url'],
                                wikibase_entity_ns=configdata['mapping']['wikibase_entity_ns'],
                                wikibase_name=configdata['mapping']['wikibase_name'],
                                zotero_name=configdata['mapping']['zotero_group_name'],
+                               zotero_group_id=configdata['mapping']['zotero_group_id'],
                                zoterodata=zoterodata,
                                zotero_check_messages=zotero_check_messages,
                                zotero_len=str(len(zoterodata)),
@@ -59,10 +60,14 @@ def zotero_export():
                     upload = zotwb_functions.wikibase_upload(data=zoterodata)
                     messages = upload['messages']
                     msgcolor = upload['msgcolor']
-        return render_template("zotero_export.html", wikibase_url=wikibase_url,
+                    zoterodata = upload['data']
+                    with open('data/zoteroexport.json', 'w', encoding='utf-8') as jsonfile:
+                        json.dump(zoterodata, jsonfile, indent=2)
+        return render_template("zotero_export.html", wikibase_url=configdata['mapping']['wikibase_url'],
                                wikibase_entity_ns=configdata['mapping']['wikibase_entity_ns'],
                                wikibase_name=configdata['mapping']['wikibase_name'],
                                zotero_name=configdata['mapping']['zotero_group_name'],
+                               zotero_group_id=configdata['mapping']['zotero_group_id'],
                                zoterodata=zoterodata,
                                zotero_check_messages=zotero_check_messages,
                                zotero_len=str(len(zoterodata)),
@@ -222,7 +227,7 @@ def map_zoterofield(itemtype):
                             propagation = zotwb_functions.propagate_mapping(zoteromapping=zoteromapping['mapping'], fieldtype=fieldtype, fieldname=command, wbprop=wbprop)
                             zoteromapping['mapping'] = propagation['mapping']
                             messages += propagation['messages']
-                            messages.append(f"...Successfully propagated property {wbprop} for {command} to all item types.")
+                            messages.append(f"<b>...Successfully propagated {'property '+wbprop if wbprop else 'FALSE (=ignore)'} for {command} to all item types.</b>")
                         else:
                             messages = [f"Successfully set property {wbprop} as mapped to {itemtype}-{command}."]
 
@@ -267,21 +272,23 @@ def wikidata_alignment():
                                    wikibase_entity_ns=configdata['mapping']['wikibase_entity_ns'],
                                    properties=properties['mapping'],
                                    propcachedate=propcachedate,
-                                   message=message)
+                                   message=message, msgcolor=msgcolor)
 
-@app.route('/openrefine', methods= ['GET', 'POST'])
-def openrefine():
+@app.route('/openrefine_creators', methods= ['GET', 'POST'])
+def openrefine_creators():
     configdata = botconfig.load_mapping('config')
     get_recon = zotwb_functions.get_recon_pd(folder="data/reconciled_creators")
     recon_df = get_recon['data']
     recon_df.set_index('creatorstatement')
     recon_wd = str(len(recon_df.dropna(subset=['Wikidata_Qid'])))
     recon_wb = str(len(recon_df.dropna(subset=['Wikibase_Qid'])))
+    recon_all = str(len(recon_df))
+    recon_unrecon = str(len(recon_df.loc[~recon_df.index.isin(recon_df.dropna(subset=['Wikibase_Qid', 'Wikidata_Qid']).index)]))
     if request.method == 'GET':
 
-        return render_template("openrefine.html", wikibase_name=configdata['mapping']['wikibase_name'],
+        return render_template("openrefine_creators.html", wikibase_name=configdata['mapping']['wikibase_name'],
                                messages=[], msgcolor="background:limegreen",
-                               recon_all= str(len(recon_df)), recon_wd = recon_wd, recon_wb=recon_wb, filename = get_recon['filename'])
+                               recon_all =recon_all, recon_unrecon=recon_unrecon, recon_wd = recon_wd, recon_wb=recon_wb, filename = get_recon['filename'])
     elif request.method == 'POST':
         if request.form:
             for key in request.form:
@@ -294,6 +301,9 @@ def openrefine():
                     recon_df.set_index('creatorstatement')
                     recon_wd = str(len(recon_df.dropna(subset=['Wikidata_Qid'])))
                     recon_wb = str(len(recon_df.dropna(subset=['Wikibase_Qid'])))
+                    recon_all = str(len(recon_df))
+                    recon_unrecon = str(len(recon_df.loc[~recon_df.index.isin(recon_df.dropna(subset=['Wikibase_Qid', 'Wikidata_Qid']).index)]))
+
                 if key == "import_reconciled_wikidata":
                     messages = zotwb_functions.import_creators(data=recon_df, infile=get_recon['filename'], wikidata=True)
                 if key == "import_reconciled_wikibase":
@@ -301,10 +311,75 @@ def openrefine():
                 if key == "import_unreconciled":
                     messages = zotwb_functions.import_creators(data=recon_df, infile=get_recon['filename'], unrecon=True)
 
-        return render_template("openrefine.html", wikibase_name=configdata['mapping']['wikibase_name'],
+        return render_template("openrefine_creators.html", wikibase_name=configdata['mapping']['wikibase_name'],
                                messages=messages, msgcolor=msgcolor,
-                               recon_all = str(len(recon_df)), recon_wd = recon_wd, recon_wb = recon_wb, filename = get_recon['filename'])
+                               recon_all =recon_all, recon_unrecon=recon_unrecon, recon_wd = recon_wd, recon_wb = recon_wb, filename = get_recon['filename'])
 
+
+source_prop = None
+restrict_class = None
+split_char = None
+@app.route('/openrefine_anystring', methods= ['GET', 'POST'])
+def openrefine_anystring():
+    # configdata = botconfig.load_mapping('config')
+    # get_recon = zotwb_functions.get_recon_pd(folder="data/reconciled_creators")
+    # recon_df = get_recon['data']
+    # recon_df.set_index('creatorstatement')
+    # recon_wd = str(len(recon_df.dropna(subset=['Wikidata_Qid'])))
+    # recon_wb = str(len(recon_df.dropna(subset=['Wikibase_Qid'])))
+    # recon_all = str(len(recon_df))
+    # recon_unrecon = str(len(recon_df.loc[~recon_df.index.isin(recon_df.dropna(subset=['Wikibase_Qid', 'Wikidata_Qid']).index)]))
+    global source_prop
+    global restrict_class
+    global split_char
+    if request.method == 'GET':
+        return render_template("openrefine_anystring.html",
+                               messages=[], msgcolor="background:limegreen",
+                               source_prop=source_prop, restrict_class=restrict_class, split_char=split_char)
+    elif request.method == 'POST':
+        if request.form:
+            for key in request.form:
+                messages = [f"Operation sucessful. Operation name was '{key.replace('_',' ')}'."]
+                msgcolor = "background:limegreen"
+                if key == "Specify_Source_Property":
+                    source_prop = request.form.get(key).strip()
+                    if not re.search('^P[0-9]+$', source_prop):
+                        messages = [f"Invalid input: {source_prop}. Operation name was '{key.replace('_', ' ')}'."]
+                        msgcolor = "background:orangered"
+                        source_prop = None
+                if source_prop and key == "Set_Class_Restriction":
+                    restrict_class = request.form.get(key).strip()
+                    if not re.search('^Q[0-9]+$', restrict_class):
+                        messages = [f"Invalid input: {restrict_class}. Operation name was '{key.replace('_', ' ')}'."]
+                        msgcolor = "background:orangered"
+                        restrict_class = None
+                if source_prop and key == "Set_Split_Characters":
+                    split_char = request.form.get(key).strip()
+                if source_prop and key == "Produce_CSV":
+                    messages = zotwb_functions.export_anystring(wbprop = source_prop, restrict_class=restrict_class, split_char=split_char)
+
+
+
+
+                    # messages = zotwb_functions.export_creators()
+                    # get_recon = zotwb_functions.get_recon_pd(folder="data/reconciled_creators")
+                    # recon_df = get_recon['data']
+                    # recon_df.set_index('creatorstatement')
+                    # recon_wd = str(len(recon_df.dropna(subset=['Wikidata_Qid'])))
+                    # recon_wb = str(len(recon_df.dropna(subset=['Wikibase_Qid'])))
+                    # recon_all = str(len(recon_df))
+                    # recon_unrecon = str(len(recon_df.loc[~recon_df.index.isin(recon_df.dropna(subset=['Wikibase_Qid', 'Wikidata_Qid']).index)]))
+
+                if key == "import_reconciled_wikidata":
+                    messages = zotwb_functions.import_creators(data=recon_df, infile=get_recon['filename'], wikidata=True)
+                if key == "import_reconciled_wikibase":
+                    messages = zotwb_functions.import_creators(data=recon_df, infile=get_recon['filename'], wikibase=True)
+                if key == "import_unreconciled":
+                    messages = zotwb_functions.import_creators(data=recon_df, infile=get_recon['filename'], unrecon=True)
+
+        return render_template("openrefine_anystring.html",
+                               messages=messages, msgcolor=msgcolor,
+                               source_prop=source_prop, restrict_class=restrict_class, split_char=split_char)
 
 
 if __name__ == '__main__':

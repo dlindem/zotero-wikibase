@@ -8,17 +8,17 @@
 <h1>ZotWb Zotero Export</h1>
 {% for message in messages %}<p style = "{{ msgcolor }}">{{ message|safe }}<p>{% endfor %}
 <small>(Back to <a href="/">start page</a>)</small>
-<p>This page lets you get records from {{ zotero_name }}, and upload them to <a href="{{ wikibase_url }}" target="_blank">{{ wikibase_name }} Wikibase</a>.</p>
+<p>This page lets you get records from <a href="https://zotero.org/groups/{{ zotero_group_id }}/items", target="_blank">{{ zotero_name }} Zotero Group</a>, and upload them to <a href="{{ wikibase_url }}" target="_blank">{{ wikibase_name }} Wikibase</a>.</p>
 <h2>Ingest Zotero records</h2>
 <p>
-<p>The currently loaded Zotero dataset contains {{ zotero_len }} items. The titles of these items are listed below.</br>That dataset was got from Zotero on {{ zotero_when }}. <small> It is stored in the 'data' folder in your zotwb app folder.</small></small></p>
+<p><b>The currently loaded Zotero dataset contains {{ zotero_len }} items.</b> The titles of these items are listed below.</br>That dataset was got from Zotero on {{ zotero_when }}.</br>It was stored as <code><b>data/zoteroexport.json</b></code> in your zotwb app folder.</p>
 <form style="display: inline;" method="POST">
     <button name="get_export" type="submit">Get records from Zotero</button>
-</form> to get max. 100 items with the tag '{{ export_tag }}'.</br><small>This will overwrite the currently loaded dataset. If you have used your local Zotero for setting the export tag, remember to sync with Zotero cloud.</small>
+</form> to get max. 100 items with the tag '{{ export_tag }}'.</br><small>If you have used your local Zotero for setting the export tag, remember to sync with Zotero cloud.</br><b>This will overwrite the currently loaded dataset.</b></small>
 </p>
 <h2>Currently loaded dataset: property mapping check</h2>
 <p>The configurations listed in this section are missing for processing this dataset.</br>
-<small>Configure the missing mappings, and refresh this page.</br>Otherwise, unmapped item types and unmapped fields or creator types will be ignored for upload.</small></p>
+<small>Configure the missing mappings, and refresh this page.</br>Otherwise, unmapped item types and unmapped fields or creator types will be ignored in the upload.</small></p>
 <ul>
 {% for message in zotero_check_messages %}
     <li>{{ message|safe }}</li>
@@ -33,7 +33,7 @@
 <ul>
     {% for zotitem in zoterodata %}
     <li>
-        <i>{{ zotitem['data']['itemType'] }}</i>: <b>{{ zotitem['data']['title'] }}</b>
+        <code><a href="{{ zotitem['links']['alternate']['href'] }}/item-details", target="_blank">{{ zotitem['key'] }}</a></code> <i>{{ zotitem['data']['itemType'] }}</i>: <b>{{ zotitem['data']['title'] }}</b>
         {%if zotitem['wikibase_entity'] %} - Already on wikibase as <a href="{{ wikibase_entity_ns }}{{ zotitem['wikibase_entity'] }}" target="_blank">{{ zotitem['wikibase_entity'] }}</a>.{% endif %}
     </li>
     {% endfor %}

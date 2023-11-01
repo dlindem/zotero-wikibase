@@ -239,7 +239,7 @@ def check_export(zoterodata=[], zoteromapping={}):
                 messages.append(newmsg+missing_mapping_message)
                 print(newmsg)
     if len(messages) == 0:
-        messages = ['All datafields containing data in this dataset are mapped to Wikibase properties.']
+        messages = ['<span style="color:green">All datafields containing data in this dataset are mapped to Wikibase properties or set to be ignored.</span>']
     return messages
 
 def lookup_doi(doi):
@@ -290,6 +290,7 @@ def wikibase_upload(data=[]):
     datalen = len(data)
     count = 0
     print('\nWill now upload the currently loaded dataset to Wikibase...')
+    returndata = []
     for item in data:
         count += 1
         print(f"\n[{str(count)}] Now processing item '{item['links']['alternate']['href']}'...")
@@ -321,7 +322,7 @@ def wikibase_upload(data=[]):
             children = []
         statements.append({'prop_nr': config['mapping']['prop_zotero_item']['wikibase'], 'type': 'ExternalId',
                            'value': item['data']['key'],
-                           'qualifiers': attqualis})
+                           'qualifiers': attqualis, 'action':'replace'})
 
         ## archiveLocation (special for items stemming from LexBib) TODO - delete for generic tool
         if 'archiveLocation' in item['data']:
@@ -382,7 +383,7 @@ def wikibase_upload(data=[]):
             if languageqid and config['mapping']['prop_language']['wikibase']:
                 statements.append(
                     {'prop_nr': config['mapping']['prop_language']['wikibase'], 'type': 'WikibaseItem',
-                     'value': languageqid})
+                     'value': languageqid, 'action':'replace'})
 
         ## date (write parsedDate not date to prop foreseen for date in this itemtype)
         pubyear = ""
@@ -406,7 +407,7 @@ def wikibase_upload(data=[]):
                 else:
                     timestr += "-01T00:00:00Z"
                 statements.append(
-                    {'prop_nr': zoteromapping['mapping'][itemtype]['fields']['date']['wbprop'], 'type': 'Time',
+                    {'prop_nr': zoteromapping['mapping'][itemtype]['fields']['date']['wbprop'], 'type': 'Time', 'action':'replace',
                      'value': timestr, 'precision': precision})
 
         ## DOI
@@ -424,11 +425,11 @@ def wikibase_upload(data=[]):
                     print(f"DOI matching Wikidata item {wdqid}.")
                     statements.append(
                         {"prop_nr": config['mapping']['prop_wikidata_entity']['wikibase'], "type": "ExternalId",
-                         "value": wdqid})
+                         "value": wdqid, 'action':'replace'})
                 if zoteromapping['mapping'][itemtype]['fields']['DOI']['wbprop']:
                     statements.append(
                         {"prop_nr": zoteromapping['mapping'][itemtype]['fields']['DOI']['wbprop'], "type": "ExternalId",
-                         "value": doi})
+                         "value": doi, 'action':'replace'})
                         
         ## ISBN
         if 'ISBN' in item['data']:
@@ -438,10 +439,10 @@ def wikibase_upload(data=[]):
                 val = valsearch.group(0)
                 if len(val) == 10:
                     statements.append(
-                        {"prop_nr": config['mapping']['prop_isbn_10']['wikibase'], "type": "ExternalId", "value": val})
+                        {"prop_nr": config['mapping']['prop_isbn_10']['wikibase'], "type": "ExternalId", "value": val, 'action':'replace'})
                 elif len(val) == 13:
                     statements.append(
-                        {"prop_nr": config['mapping']['prop_isbn_13']['wikibase'], "type": "ExternalId", "value": val})
+                        {"prop_nr": config['mapping']['prop_isbn_13']['wikibase'], "type": "ExternalId", "value": val, 'action':'replace'})
                 else:
                     print('Could not process ISBN field content: ' + item['data']['ISBN'])
 
@@ -471,7 +472,7 @@ def wikibase_upload(data=[]):
                         print(f"Extra field: Found identifier {identifier_regex.group(0)}")
                         identifier = identifier_regex.group(1)
                         identifier_prop = config['mapping']['identifier_patterns'][pattern]
-                        statements.append({'type': 'ExternalId', 'prop_nr': identifier_prop, 'value': identifier})
+                        statements.append({'type': 'ExternalId', 'prop_nr': identifier_prop, 'value': identifier, 'action':'replace'})
                 except Exception as ex:
                     print(f"Failed to do EXTRA identifier regex extraction: {str(ex)}")
                     print(f"Extra field content was: {item['data']['extra']}")
@@ -547,13 +548,15 @@ def wikibase_upload(data=[]):
                     statements.append({
                         'prop_nr': zoteromapping['mapping'][itemtype]['fields'][fieldname]['wbprop'],
                         'type': "String",
-                        'value': item['data'][fieldname].strip()
+                        'value': item['data'][fieldname].strip(),
+                        'action': 'replace'
                     })
                 elif zoteromapping['mapping']['all_types']['fields'][fieldname]['dtype'] == "WikibaseItem": # this will produce an 'unknown value' statement
                     statements.append({
                         'prop_nr': zoteromapping['mapping'][itemtype]['fields'][fieldname]['wbprop'],
                         'type': "WikibaseItem",
                         'value': False,
+                        'action': 'replace',
                         'qualifiers': [{'type': 'String', 'prop_nr': config['mapping']['prop_source_literal']['wikibase'],
                                         'value': item['data'][fieldname].strip()}]
                     })
@@ -580,11 +583,12 @@ def wikibase_upload(data=[]):
             messages.append(f"Upload unsuccessful: <a href=\"{item['links']['alternate']['href']}\">{item['key']}</a>.")
             msgcolor = 'background:orangered'
             datalen = datalen-1
-
+        item['wikibase_entity'] = qid
+        returndata.append(item)
 
     messages.append(f"Successfully uploaded {str(datalen)} of {str(len(data))} items marked with the tag '{config['mapping']['zotero_export_tag']}'. These should now have the tag '{config['mapping']['zotero_on_wikibase_tag']}' instead.")
     print('\n'+str(messages))
-    return {'messages': messages, 'msgcolor': msgcolor}
+    return {'data': returndata, 'messages': messages, 'msgcolor': msgcolor}
 
 def export_creators():
     print('Starting unreconciled creators export to CSV...')
@@ -614,12 +618,12 @@ def export_creators():
         for key in binding:
             pdrow[key] = binding[key]['value']
         data.loc[len(data)] = pdrow
-        if len(data) == 0:
-            message = f"SPARQL Query for unreconciled creator statements returned 0 results."
-        else:
-            outfilename = f"data/unreconciled_creators/wikibase_creators_{time.strftime('%Y%m%d_%H%M%S', time.localtime())}.csv"
-            data.to_csv(outfilename, index=False)
-            message = f"Successfully exported {str(len(data))} unreconciled creator statements to '{outfilename}'."
+    if len(data) == 0:
+        message = f"SPARQL Query for unreconciled creator statements returned 0 results."
+    else:
+        outfilename = f"data/unreconciled_creators/wikibase_creators_{time.strftime('%Y%m%d_%H%M%S', time.localtime())}.csv"
+        data.to_csv(outfilename, index=False)
+        message = f"Successfully exported {str(len(data))} unreconciled creator statements to <code>{outfilename}</code>'."
     print(message)
     return [message]
 
@@ -744,7 +748,7 @@ def import_creators(data=None, infile=None, wikidata=False, wikibase=False, unre
                 print(
                     f"The full name {row['fullName_clusters']} belongs to a cluster the first member of which has been created just before as {creatorqid}. Will use that.")
             with open(newitemjsonfile, 'w', encoding='utf-8') as jsonfile:
-                json.dump(newcreators, jsonfile)
+                json.dump(newcreators, jsonfile, indent=2)
 
         if creatorqid and not newitem:
             # Write creator statement
@@ -781,7 +785,52 @@ def import_creators(data=None, infile=None, wikidata=False, wikibase=False, unre
                 print(f"No new name variant found for {creatorqid}.")
 
             time.sleep(1)
-    message = f"Successfully processed import CSV, modality was <b>{jobdesc}</b>"
+    message = f"Successfully processed import CSV, modality was <b>{jobdesc}</b>.</br><a href=\"./openrefine\">Refresh this page</a> to see what is left for upload."
     print(message)
     messages.append(message)
     return messages
+
+def export_anystring(wbprop = None, restrict_class= None, split_char= None):
+    print(f"Will initiate CSV export for {str(wbprop)} values, class-restr. {str(restrict_class)}, splitchar '{str(split_char)}'")
+    config = botconfig.load_mapping("config")
+    query = """select ?item ?itemLabel ?propval where { values ?prop { xdp:"""+wbprop+""" } ?item ?prop ?propval. """
+    if restrict_class:
+        query += f"?item xdp:{config['mapping']['prop_instanceof']} xwb:{restrict_class}. "
+    query += 'SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }}'
+    query_result = xwbi.wbi_helpers.execute_sparql_query(query=query,
+                                                         prefix=config['mapping']['wikibase_sparql_prefixes'])
+    data = pandas.DataFrame(columns=query_result['head']['vars'])
+    for binding in query_result['results']['bindings']:
+        pdrow = {}
+        for key in binding:
+            if key == "propval":
+                continue
+            pdrow[key] = binding[key]['value']
+        if not split_char:
+            values = [binding['propval']['value']]
+        else: # split at any char in 'split_char' string
+            stringval = binding['propval']['value']
+            chars = split_char
+            mainchar = chars[0]
+            chars = chars.lstrip(mainchar)
+            for char in chars:
+                stringval = stringval.replace(char, mainchar)
+            values = []
+            for value in stringval.split(mainchar):
+                values.append(value.strip())
+            if len(values) > 1:
+                print(f"Split '{stringval}' to {str(values)}")
+        for value in values:
+            pdrow['propval'] = value
+            data.loc[len(data)] = pdrow
+    if len(data) == 0:
+        message = f"SPARQL Query for {wbprop} statements, class-restr. {str(restrict_class)}, splitchar '{split_char}' returned 0 results."
+    else:
+        outfilename = f"data/strings_unreconciled/{wbprop}_{time.strftime('%Y%m%d_%H%M%S', time.localtime())}.csv"
+        data.to_csv(outfilename, index=False)
+        message = f"Successfully exported {str(len(data))} unreconciled creator statements to <code>{outfilename}</code>'.</br>Query was: {wbprop} statements, class-restr. '{str(restrict_class)}', splitchar '{str(split_char)}'.</br>Open that file in Open Refine as new project."
+    print(message)
+    return [message]
+
+
+print('zotwb functions imported.')

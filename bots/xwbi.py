@@ -240,4 +240,4 @@ def importitem(wdqid, wbqid=False, process_claims=True, classqid=None):
 	return result_qid
 
 
-print('\nxwbi engine loaded.\n')
+print('xwbi wikibase bot functions imported.')

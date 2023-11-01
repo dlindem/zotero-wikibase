@@ -1067,3 +1067,5 @@ def setclaimvalue(guid, value, dtype):
 # 		})
 #
 # 	return changed_items
+
+print('xwb wikibase bot functions imported.')

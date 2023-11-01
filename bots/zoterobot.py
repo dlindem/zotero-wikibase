@@ -149,3 +149,5 @@ def patch_item(qid=None, zotitem=None, children=[]):
                 return "Versioning_Error"
             else:
                 return False
+
+print('zoterobot functions imported.')
