@@ -1,5 +1,5 @@
 {
-  "filename": "zotero_bibtypes.json",
+  "filename": "zotero_types_wd.json",
   "comment": "This mapping (Zotero Item Types to Wikidata) is based on https://github.com/zotero/translators/blob/master/Wikidata%20QuickStatements.js (P. Zumstein)",
   "mapping": {
     "artwork": "Q838948",

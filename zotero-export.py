@@ -14,7 +14,7 @@ with open('test.json', 'w', encoding="utf-8") as file:
 #     data = json.load(file)
 
 zoteromapping = botconfig.load_mapping('zotero')
-wikidatamapping = botconfig.load_mapping('zotero_bibtypes')
+wikidatamapping = botconfig.load_mapping('zotero_types_wd')
 
 # check if ItemTypes are mapped to Wikibase items
 print('\n\nWill now check bibitem types to be imported:')

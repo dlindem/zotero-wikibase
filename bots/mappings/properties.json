@@ -10,7 +10,7 @@
       "formatter_uri": "http://www.wikidata.org/entity/$1"
     },
     "P2": {
-      "enlabel": "formatter url",
+      "enlabel": "formatter URL",
       "type": "String",
       "wdprop": "P1630"
     },
@@ -53,7 +53,7 @@
       "enlabel": "LexBib entity",
       "type": "ExternalId",
       "wdprop": null,
-      "formatter_url": "https://lexbib.elex.is/wiki/Item:$1",
+      "formatter_url": "https://lexbib.elex.is/entity/$1",
       "formatter_uri": "https://lexbib.elex.is/entity/$1"
     },
     "P11": {
@@ -64,7 +64,10 @@
     "P12": {
       "enlabel": "language",
       "type": "WikibaseItem",
-      "wdprop": "P407"
+      "wdprop": "P407",
+      "equivalents": [
+        "http://purl.org/dc/terms/language"
+      ]
     },
     "P13": {
       "enlabel": "author",
@@ -95,7 +98,8 @@
     "P18": {
       "enlabel": "DOI",
       "type": "ExternalId",
-      "wdprop": "P356"
+      "wdprop": "P356",
+      "formatter_url": "https://doi.org/$1"
     },
     "P19": {
       "enlabel": "ISBN-13",
@@ -293,7 +297,7 @@
       "wdprop": null
     },
     "P57": {
-      "enlabel": "edition number",
+      "enlabel": "Edition",
       "type": "String",
       "wdprop": "P393"
     },
@@ -761,6 +765,11 @@
     "P164": {
       "enlabel": "unused (string)",
       "type": "String",
+      "wdprop": null
+    },
+    "P169": {
+      "enlabel": "Basque lexicography periodization type",
+      "type": "WikibaseItem",
       "wdprop": null
     }
   }

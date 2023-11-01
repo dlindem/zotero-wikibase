@@ -242,20 +242,125 @@ def check_export(zoterodata=[], zoteromapping={}):
         messages = ['<span style="color:green">All datafields containing data in this dataset are mapped to Wikibase properties or set to be ignored.</span>']
     return messages
 
-def lookup_doi(doi):
+def lookup_doi():
+    zoteromapping = botconfig.load_mapping(('zotero'))
+    if not zoteromapping['mapping']['all_types']['fields']['DOI']['wbprop']:
+        message = f"You have to configure a Wikibase property as mapped to the Zotero 'DOI' field for all types to use this function.</br>Do that <a href=\"./zoterofields/all_types\">here</a>."
+        msgcolor = "background:orangered"
+        print(message)
+        return {'messages':[message], msgcolor:msgcolor}
+    messages = []
     config = botconfig.load_mapping('config')
-    query = 'select * where {bind (UCASE("' + doi + '") as ?doi) ?item wdt:P356 ?doi.}'
-    bindings = xwbi.wbi_helpers.execute_sparql_query(query=query, endpoint='https://query.wikidata.org/sparql',
-                                                     user_agent=config['mapping']['wikibase_name'] + ' Wikibase user script')['results']['bindings']
-    print('Found ' + str(len(bindings)) + ' matching Wikidata items (via DOI) to process.\n')
-    if len(bindings) > 1:
-        print('This is strange: Found more than one matching Wikidata item for DOI: '+doi)
-        time.sleep(3)
-        return False
-    elif len(bindings) == 1:
-        return bindings[0]['item']['value'].replace('http://www.wikidata.org/entity/','')
-    else:
-        return False
+    doiwbprop = zoteromapping['mapping']['all_types']['fields']['DOI']['wbprop']
+    query = """SELECT ?wbqid ?doi ?wdqid WHERE {
+    ?wbqid xdp:"""+doiwbprop+""" ?doi. filter not exists {?wbqid xdp:"""+config['mapping']['prop_wikidata_entity']['wikibase']+""" ?wd.}
+    bind(UCASE(?doi) as ?doi4wd)
+    SERVICE <https://query.wikidata.org/sparql> {
+    select ?wdqid ?doi4wd where {
+    ?wdqid wdt:P356 ?doi4wd .} } } """
+    bindings = xwbi.wbi_helpers.execute_sparql_query(query=query, prefix=config['mapping']['wikibase_sparql_prefixes'])['results'][
+        'bindings']
+    message = 'Found on Wikidata:' + str(len(bindings)) + ' bibitems with doi still not linked to Wikidata.'
+    print(message)
+    messages.append(message)
+    result = []
+    for item in bindings:
+        result.append({'wbqid':item['wbqid']['value'].replace(config['mapping']['wikibase_entity_ns'],''),
+                        'doi': item['doi']['value'], 'wdqid': item['wdqid']['value'].replace('http://www.wikidata.org/entity/','')})
+    count = 0
+    for entry in result:
+        count += 1
+        statements = [{"prop_nr": config['mapping']['prop_wikidata_entity']['wikibase'], "type": "ExternalId",
+                 "value": entry['wdqid'], 'action': 'replace'}]
+
+        uploadqid = str(xwbi.itemwrite({'qid': entry['wbqid'], 'statements': statements}))
+        checkurl = f"{config['mapping']['wikibase_url']}/wiki/Item:{uploadqid}#{config['mapping']['prop_wikidata_entity']['wikibase']}"
+        message = f"Success [{str(count)}]: <a href=\"{checkurl}\" target=\"_blank\">{checkurl}</a>."
+        print(message)
+        messages.append(message)
+    print('Finished DOI reconciliation.')
+    return {'messages': messages, 'msgcolor':'background:limegreen'}
+
+def lookup_issn():
+    zoteromapping = botconfig.load_mapping(('zotero'))
+    if not zoteromapping['mapping']['all_types']['fields']['ISSN']['wbprop']:
+        message = f"You have to configure a Wikibase property as mapped to the Zotero 'ISSN' field for all types to use this function.</br>Do that <a href=\"./zoterofields/all_types\">here</a>."
+        msgcolor = "background:orangered"
+        print(message)
+        return {'messages': [message], msgcolor: msgcolor}
+    config = botconfig.load_mapping('config')
+    issnwbprop = zoteromapping['mapping']['all_types']['fields']['ISSN']['wbprop']
+    query = """SELECT ?wbqid ?issn ?issn_st ?wdqid WHERE {
+        ?wbqid xp:""" + issnwbprop + """ ?issn_st.
+         ?issn_st xps:""" + issnwbprop + """ ?issn.
+         filter not exists {?issn_st xpq:""" + config['mapping']['prop_wikidata_entity']['wikibase'] + """ ?wd.}
+        SERVICE <https://query.wikidata.org/sparql> {
+    select ?wdqid ?issn where {
+    ?wdqid wdt:P236 ?issn .} } } """
+    bindings = \
+    xwbi.wbi_helpers.execute_sparql_query(query=query, prefix=config['mapping']['wikibase_sparql_prefixes'])['results'][
+        'bindings']
+    message = 'Found ' + str(len(bindings)) + ' issn without qualifier pointing to Wikidata to process.'
+    print(message)
+    messages.append(message)
+    result = []
+    for item in bindings:
+        result.append({'wbqid': item['wbqid']['value'].replace(config['mapping']['wikibase_entity_ns'], ''),
+                       'issn': item['issn']['value'],
+                       'issn_st': item['issn_st']['value'],
+                       'wdqid': item['wdqid']['value'].replace('http://www.wikidata.org/entity/', '')})
+    count = 0
+    for entry in result:
+        count += 1
+        statements = [{"prop_nr": issnwbprop, "type": "ExternalId",
+                       "value": entry['issn'], 'action': 'replace',
+                       'qualifiers':[{'prop_nr': config['mapping']['prop_wikidata_entity']['wikibase'], 'type':'ExternalId', 'value':entry['wdqid']}]}]
+
+        uploadqid = str(xwbi.itemwrite({'qid': entry['wbqid'], 'statements': statements}))
+        checkurl = f"{config['mapping']['wikibase_url']}/wiki/Item:{uploadqid}#{issnwbprop}"
+        message = f"Success [{str(count)}]: <a href=\"{checkurl}\" target=\"_blank\">{checkurl}</a>."
+        print(message)
+        messages.append(message)
+    print('Finished ISSN reconciliation.')
+    return {'messages':messages, 'msgcolor':'background:limegreen'}
+
+def link_chapters():
+    zoteromapping = botconfig.load_mapping(('zotero'))
+    for itemtype in ['bookSection', 'conferencePaper', 'book']:
+        if not zoteromapping['mapping'][itemtype]['bibtypeqid']:
+            message = f"You have to configure a Wikibase item as mapped to the Zotero '{itemtype}' item type.</br>Do that <a href=\"./zoterofields/{itemtype}\">here</a>."
+            msgcolor = "background:orangered"
+            print(message)
+            return {'messages': [message], msgcolor: msgcolor}
+    config = botconfig.load_mapping('config')
+    messages = []
+    query = "SELECT * WHERE { {"
+    query += f"?chapter xdp:{config['mapping']['prop_itemtype']['wikibase']} xwb:{zoteromapping['mapping']['bookSection']['bibtypeqid']}. "
+    query += '} union {'
+    query += f"?chapter xdp:{config['mapping']['prop_itemtype']['wikibase']} xwb:{zoteromapping['mapping']['conferencePaper']['bibtypeqid']}. "+'} '
+    query += f"?chapter xdp:{config['mapping']['prop_isbn_10']['wikibase']}|xdp:{config['mapping']['prop_isbn_13']['wikibase']} ?isbn. "
+    query += f"?container xdp:{config['mapping']['prop_itemtype']['wikibase']} xwb:{zoteromapping['mapping']['book']['bibtypeqid']}; "
+    query += f"xdp:{config['mapping']['prop_isbn_10']['wikibase']}|xdp:{config['mapping']['prop_isbn_13']['wikibase']} ?isbn. "
+    query += """filter not exists {?chapter xdp:""" + config['mapping']['prop_published_in']['wikibase'] + """ ?container.} }"""
+    print(query)
+    bindings = \
+        xwbi.wbi_helpers.execute_sparql_query(query=query, prefix=config['mapping']['wikibase_sparql_prefixes'])[
+            'results'][
+            'bindings']
+    message = 'Found ' + str(len(bindings)) + ' chapters to be linked to their containers (same ISBN).'
+    print(message)
+    messages.append(message)
+    count = 0
+    for item in bindings:
+        count += 1
+        statements = [{'prop_nr':config['mapping']['prop_published_in']['wikibase'], 'type':'Item', 'value':item['container']['value'].replace(config['mapping']['wikibase_entity_ns'],''), 'action':'replace'}]
+        uploadqid = str(xwbi.itemwrite({'qid': item['chapter']['value'].replace(config['mapping']['wikibase_entity_ns'],''), 'statements': statements}))
+        checkurl = f"{config['mapping']['wikibase_url']}/wiki/Item:{uploadqid}#{config['mapping']['prop_published_in']['wikibase']}"
+        message = f"Success [{str(count)}]: <a href=\"{checkurl}\" target=\"_blank\">{checkurl}</a>."
+        print(message)
+        messages.append(message)
+    print('Finished chapter linking.')
+    return {'messages': messages, 'msgcolor': 'background:limegreen'}
 
 def get_creators(qid=None):
     if not qid:
@@ -417,19 +522,8 @@ def wikibase_upload(data=[]):
             if not regex:
                 print('Could not get DOI by regex from DOI field content: '+item['data']['DOI'])
             else:
-                doi = regex.group(1)
-                print('Found DOI')
-                # lookup DOI on WD
-                wdqid = lookup_doi(doi)
-                if wdqid:
-                    print(f"DOI matching Wikidata item {wdqid}.")
-                    statements.append(
-                        {"prop_nr": config['mapping']['prop_wikidata_entity']['wikibase'], "type": "ExternalId",
-                         "value": wdqid, 'action':'replace'})
-                if zoteromapping['mapping'][itemtype]['fields']['DOI']['wbprop']:
-                    statements.append(
-                        {"prop_nr": zoteromapping['mapping'][itemtype]['fields']['DOI']['wbprop'], "type": "ExternalId",
-                         "value": doi, 'action':'replace'})
+                item['data']['DOI'] = regex.group(1)
+                print(f"Found DOI {item['data']['DOI']} in field 'DOI'.")
                         
         ## ISBN
         if 'ISBN' in item['data']:
@@ -537,21 +631,23 @@ def wikibase_upload(data=[]):
                 })
 
         # Other fields
-        fields_processed_before = ['language', 'creators', 'ISBN', 'extra', 'abstractNote', 'date', 'DOI']
+        fields_processed_before = ['language', 'creators', 'ISBN', 'extra', 'abstractNote', 'date']
         for fieldname in item['data']:
             if fieldname in fields_processed_before or fieldname not in zoteromapping['mapping'][itemtype]['fields']:
                 continue
             if item['data'][fieldname] == "":  # no empty strings
                 continue
             if zoteromapping['mapping'][itemtype]['fields'][fieldname]['wbprop']:
-                if zoteromapping['mapping']['all_types']['fields'][fieldname]['dtype'] == "String": # this will just use the Zotero literal as string value
+                dtype = zoteromapping['mapping']['all_types']['fields'][fieldname]['dtype']
+                string_like_datatypes = ['ExternalId', "String", "URL"]
+                if dtype in string_like_datatypes: # this will just use the Zotero literal as value
                     statements.append({
                         'prop_nr': zoteromapping['mapping'][itemtype]['fields'][fieldname]['wbprop'],
-                        'type': "String",
+                        'type': dtype,
                         'value': item['data'][fieldname].strip(),
                         'action': 'replace'
                     })
-                elif zoteromapping['mapping']['all_types']['fields'][fieldname]['dtype'] == "WikibaseItem": # this will produce an 'unknown value' statement
+                elif dtype == "WikibaseItem": # this will produce an 'unknown value' statement with 'source literal' qualifier
                     statements.append({
                         'prop_nr': zoteromapping['mapping'][itemtype]['fields'][fieldname]['wbprop'],
                         'type': "WikibaseItem",
@@ -560,6 +656,8 @@ def wikibase_upload(data=[]):
                         'qualifiers': [{'type': 'String', 'prop_nr': config['mapping']['prop_source_literal']['wikibase'],
                                         'value': item['data'][fieldname].strip()}]
                     })
+                else:
+                    print(f"Datatype '{dtype}' is currently not implemented. No statement will be written.")
                 # TODO: datatype date fields other than pubdate
         # add description
         descriptions = []
@@ -828,7 +926,7 @@ def export_anystring(wbprop = None, restrict_class= None, split_char= None):
     else:
         outfilename = f"data/strings_unreconciled/{wbprop}_{time.strftime('%Y%m%d_%H%M%S', time.localtime())}.csv"
         data.to_csv(outfilename, index=False)
-        message = f"Successfully exported {str(len(data))} unreconciled creator statements to <code>{outfilename}</code>'.</br>Query was: {wbprop} statements, class-restr. '{str(restrict_class)}', splitchar '{str(split_char)}'.</br>Open that file in Open Refine as new project."
+        message = f"Successfully exported {str(len(data))} unreconciled literals to <code>{outfilename}</code>'.</br>Query was: {wbprop} statements, class-restr. '{str(restrict_class)}', splitchar '{str(split_char)}'.</br>Open that file in Open Refine as new project."
     print(message)
     return [message]
 

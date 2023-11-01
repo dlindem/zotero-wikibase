@@ -146,16 +146,17 @@ def basic_config():
 def map_zoterofield(itemtype):
     properties = botconfig.load_mapping('properties')
     configdata = botconfig.load_mapping('config')
-    zotero_bibtypes = botconfig.load_mapping('zotero_bibtypes')
+    zotero_types_wd = botconfig.load_mapping('zotero_types_wd')
     zoteromapping = botconfig.load_mapping('zotero')
-    for field in ['ISBN', 'extra', 'language']: # these are defined in basic config
+    wikidata_suggestions = botconfig.load_mapping('zotero_fields_wd')
+    for field in ['ISBN', 'extra', 'language', 'accessDate']: # these are defined in basic config, or not implemented for processing in this tool
         zoteromapping['mapping'][itemtype]['fields'].pop(field) if field in zoteromapping['mapping'][itemtype]['fields'] else True
     if request.method == 'GET':
         return render_template("zoterofields.html", itemtype=itemtype,
                            zoteromapping=zoteromapping['mapping'],
                            wikibase_entity_ns=configdata['mapping']['wikibase_entity_ns'],
-                           properties=properties['mapping'],
-                           zotero_bibtypes=zotero_bibtypes['mapping'],
+                           properties=properties['mapping'], wikidata_suggestions=wikidata_suggestions['mapping'],
+                           zotero_types_wd=zotero_types_wd['mapping'],
                                messages=[])
     elif request.method == 'POST':
         if request.form:
@@ -166,10 +167,10 @@ def map_zoterofield(itemtype):
                     if key.endswith('_redo'):  # user has pressed 'import from wikidata to known wikibase entity' button
                         fieldname = key.replace('_redo', '')
                         zotwb_functions.import_wikidata_entity(
-                            zotero_bibtypes['mapping'][itemtype], wbid=zoteromapping['mapping'][itemtype]['bibtypeqid'], classqid=configdata['mapping']['class_bibitem_type']['wikibase'])
+                            zotero_types_wd['mapping'][itemtype], wbid=zoteromapping['mapping'][itemtype]['bibtypeqid'], classqid=configdata['mapping']['class_bibitem_type']['wikibase'])
                     elif key.endswith('_create'):  # user has pressed 'create new'
                         fieldname = key.replace('_create', '')
-                        newentity_id = zotwb_functions.import_wikidata_entity(zotero_bibtypes['mapping'][itemtype], wbid=False, classqid=configdata['mapping']['class_bibitem_type']['wikibase'])
+                        newentity_id = zotwb_functions.import_wikidata_entity(zotero_types_wd['mapping'][itemtype], wbid=False, classqid=configdata['mapping']['class_bibitem_type']['wikibase'])
                         zoteromapping['mapping'][itemtype]['bibtypeqid'] = newentity_id
                     else: # user has manually chosen a bibtypeqid value
                         zoteromapping['mapping'][itemtype]['bibtypeqid'] = request.form.get(key)
@@ -180,15 +181,37 @@ def map_zoterofield(itemtype):
                     if command.endswith('_redo'):  # user has pressed 'import from wikidata to known wikibase entity' button
                         fieldname = command.replace('_redo', '')
                         zotwb_functions.import_wikidata_entity(
-                            properties[zoteromapping['mapping'][itemtype][fieldtype][fieldname]['wbprop']]['wdprop'],
+                            properties['mapping'][zoteromapping['mapping'][itemtype][fieldtype][fieldname]['wbprop']]['wdprop'],
                             wbid=zoteromapping['mapping'][itemtype][fieldtype][fieldname]['wbprop'])
                         properties['mapping'][zoteromapping['mapping'][itemtype][fieldtype][fieldname]['wbprop']] = {
                             "enlabel": zoteromapping['mapping']['all_types'][fieldtype][fieldname]['name'],
                             "type": zoteromapping['mapping']['all_types'][fieldtype][fieldname]['dtype'],
-                            "wdprop": properties[zoteromapping['mapping'][itemtype][fieldtype][fieldname]['wbprop']]['wdprop']
+                            "wdprop": properties['mapping'][zoteromapping['mapping'][itemtype][fieldtype][fieldname]['wbprop']]['wdprop']
                         }
                         botconfig.dump_mapping(properties)
-                        messages = [f"Successfully imported {properties[zoteromapping['mapping'][itemtype][fieldtype][fieldname]['wbprop']]['wdprop']} to {zoteromapping['mapping'][itemtype][fieldtype][fieldname]['wbprop']}."]
+                        messages = [f"Successfully imported {properties['mapping'][zoteromapping['mapping'][itemtype][fieldtype][fieldname]['wbprop']]['wdprop']} to {zoteromapping['mapping'][itemtype][fieldtype][fieldname]['wbprop']}."]
+                    elif key.endswith('_create_from_wd'):  # user has pressed 'create new'
+                        fieldname = command.replace('_create_from_wd', '')
+                        newentity_id = zotwb_functions.import_wikidata_entity(
+                            wikidata_suggestions[fieldname],
+                            wbid=False)
+                        properties['mapping'][newentity_id] = {
+                            "enlabel": zoteromapping['mapping']['all_types'][fieldtype][fieldname]['name'],
+                            "type": zoteromapping['mapping']['all_types'][fieldtype][fieldname]['dtype'],
+                            "wdprop": wikidata_suggestions[fieldname]
+                        }
+                        botconfig.dump_mapping(properties)
+                        zoteromapping['mapping'][itemtype][fieldtype][fieldname]['wbprop'] = newentity_id
+                        messages = [
+                            f"Successfully imported wd:{wikidata_suggestions[fieldname]} to the newly created wb:{newentity_id}."]
+                        if itemtype == "all_types":
+                            propagation = zotwb_functions.propagate_mapping(fieldtype=fieldtype, fieldname=fieldname,
+                                                                            wbprop=newentity_id)
+                            zoteromapping['mapping'] = propagation['mapping']
+                            messages += propagation['messages']
+                            messages.append(
+                                f"...Successfully created and propagated property {newentity_id} for {fieldname} to all item types.")
+
                     elif command.endswith('_create'):  # user has pressed 'create new'
                         fieldname = command.replace('_create', '')
                         datatype = botconfig.datatypes_mapping[zoteromapping['mapping']['all_types'][fieldtype][fieldname]['dtype']]
@@ -210,12 +233,14 @@ def map_zoterofield(itemtype):
                         }
                         botconfig.dump_mapping(properties)
                         zoteromapping['mapping'][itemtype][fieldtype][fieldname]['wbprop'] = newentity_id
+                        messages = [
+                            f"Successfully created {newentity_id} with datatype {zoteromapping['mapping']['all_types'][fieldtype][fieldname]['dtype']}."]
                         if itemtype == "all_types":
                             propagation = zotwb_functions.propagate_mapping(fieldtype=fieldtype, fieldname=fieldname, wbprop=newentity_id)
                             zoteromapping['mapping'] = propagation['mapping']
                             messages += propagation['messages']
                             messages.append(f"...Successfully created and propagated property {newentity_id} for {fieldname} to all item types.")
-                        messages = [f"Successfully created {newentity_id} with datatype {zoteromapping['mapping']['all_types'][fieldtype][fieldname]['dtype']}."]
+
                     else: # user has manually entered a wikibase property ID or "False"
 
                         wbprop = zotwb_functions.check_prop_id(request.form.get(key))
@@ -236,15 +261,14 @@ def map_zoterofield(itemtype):
             return render_template("zoterofields.html", itemtype=itemtype,
                                    zoteromapping=zoteromapping['mapping'],
                                    wikibase_entity_ns=configdata['mapping']['wikibase_entity_ns'],
-                                   properties=properties['mapping'],
-                                   zotero_bibtypes=zotero_bibtypes['mapping'],
+                                   properties=properties['mapping'], wikidata_suggestions=wikidata_suggestions['mapping'],
+                                   zotero_types_wd=zotero_types_wd['mapping'],
                                    messages=messages, msgcolor=msgcolor)
 
 @app.route('/wikidata_alignment', methods= ['GET', 'POST'])
 def wikidata_alignment():
     properties = botconfig.load_mapping('properties')
     configdata = botconfig.load_mapping('config')
-
 
     if request.method == 'GET':
         propcachedate = datetime.utcfromtimestamp(os.path.getmtime('bots/mappings/properties.json')).strftime(
@@ -381,6 +405,26 @@ def openrefine_anystring():
                                messages=messages, msgcolor=msgcolor,
                                source_prop=source_prop, restrict_class=restrict_class, split_char=split_char)
 
+@app.route('/little_helpers', methods= ['GET', 'POST'])
+def little_helpers():
+    # configdata = botconfig.load_mapping('config')
+    # zoteromapping = botconfig.load_mapping('zotero')
+    messages = []
+    msgcolor = "background:limegreen"
+    if request.method == 'GET':
+        return render_template("little_helpers.html", messages=messages, msgcolor=msgcolor)
+    if request.method == "POST":
+        if request.form:
+            for key in request.form:
+                if key == "doi_lookup":
+                    action = zotwb_functions.lookup_doi()
+                if key == "issn_lookup":
+                    action = zotwb_functions.lookup_issn()
+                if key == "link_chapters":
+                    action = zotwb_functions.link_chapters()
+                messages = action['messages']
+                msgcolor = action['msgcolor']
+        return render_template("little_helpers.html", messages=messages, msgcolor=msgcolor)
 
 if __name__ == '__main__':
     app.run(debug=True)
