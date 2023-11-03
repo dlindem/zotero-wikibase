@@ -2,10 +2,10 @@
 <html>
 <head>
 <link href="static/favicon.ico" rel="shortcut icon"/>
-    <title>Zotero Fields mapping - ZotWb</title>
+    <title><img src="static/favicon.ico" alt="ZotWb logo" /> Zotero Fields mapping - ZotWb</title>
 </head>
 <body>
-<h1>Mapping configuration for Zotero item type '{{ itemtype }}'</h1>
+<h1><img src="static/favicon.ico" alt="ZotWb logo" /> Mapping configuration for Zotero item type '{{ itemtype }}'</h1>
 {% for message in messages %}<p style = "{{ msgcolor }}">{{ message|safe }}<p>{% endfor %}
 <small>(Back to <a href="/">start page</a>)</small>
 <p>This page configures the field-property mapping used in the Zotero-to-Wikibase export concerning '{{ itemtype }}'.</br>
@@ -16,7 +16,7 @@
     These fields recieve a special treatment and are not configered here: language, ISBN, extra.</br>
     You can also get labels, aliases and descriptions from the proposed Wikidata entity ('import' button).</br>
     To change the alignment of Wikibase and Wikidata properties, go to the <a href="/wikidata_alignment">Wikidata alignment</a> page.</br>
-    To change the alignment of Zotero bibitem types and Wikidata items (probably not necessary), do that manually in the 'mappings/zotero_bibtypes.json' file.</small></p>
+    To change the alignment of Zotero bibitem types and Wikidata items (probably not necessary), do that manually in the 'mappings/zotero_types_wd.json' file.</small></p>
 {% if itemtype == 'all_types' %}
 <h2>Editing all bibitem types at once</h2>
 <p>This page configures properties mappings for all bibitem types at the same time.</br>
@@ -30,12 +30,12 @@ To define mappings for a single bibitem type (so that fields with the same name 
     <input type="text" name="bibtypeqid" value={{ zoteromapping[itemtype]['bibtypeqid'] }} style="width: 60px;">
     <input type="submit" value="Update this">
 </form>or <form style="display: inline;" method="POST">
-    <button name= {{ 'bibtypeqid_create' }} type="submit">&#10071; Create new from wd:{{ zotero_bibtypes[itemtype] }}&#10071;</button>
+    <button name= {{ 'bibtypeqid_create' }} type="submit">&#10071; Create new from wd:{{ zotero_types_wd[itemtype] }}&#10071;</button>
 </form> or
 <form style="display: inline;" method="POST">
-    <button name= {{ 'bibtypeqid_redo' }} type="submit">Import wd:{{ zotero_bibtypes[itemtype] }} to wb:{{ zoteromapping[itemtype]['bibtypeqid'] }}</button>
+    <button name= {{ 'bibtypeqid_redo' }} type="submit">Import wd:{{ zotero_types_wd[itemtype] }} to wb:{{ zoteromapping[itemtype]['bibtypeqid'] }}</button>
 </form>
-<small><i>Wikidata equivalent: </i><a href="http://www.wikidata.org/entity/{{ zotero_bibtypes[itemtype] }}" target="_blank">{{ zotero_bibtypes[itemtype] }}</a></small>
+<small><i>Wikidata equivalent: </i><a href="http://www.wikidata.org/entity/{{ zotero_types_wd[itemtype] }}" target="_blank">{{ zotero_types_wd[itemtype] }}</a></small>
 </p>
 {% endif %}
 <table>

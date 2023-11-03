@@ -26,7 +26,7 @@ card1props = [config['mapping']['prop_wikidata_entity']['wikibase']]
 # 	global lwbEngine
 # 	mediawiki_api_url = "https://lexbib.elex.is/w/api.php" # <- change to applicable wikibase
 # 	sparql_endpoint_url = "https://lexbib.elex.is/query/sparql"  # <- change to applicable wikibase
-# 	wdilogin = wdi_login.WDLogin(config_private.wb_bot_user, config_private.wb_bot_pwd, mediawiki_api_url=mediawiki_api_url)
+# 	wdilogin = wdi_login.WDLogin(config_private['wb_bot_user'], config_private['wb_bot_pwd'], mediawiki_api_url=mediawiki_api_url)
 # 	lwbEngine = wdi_core.WDItemEngine.wikibase_item_engine_factory(mediawiki_api_url, sparql_endpoint_url)
 # 	print('Logged into WDI. (old LWB.py)...')
 # 	return True
@@ -42,7 +42,7 @@ def get_token():
 	# lwb login via mwclient
 	while True:
 		try:
-			login = site.login(username=config_private.wb_bot_user, password=config_private.wb_bot_pwd)
+			login = site.login(username=config_private['wb_bot_user'], password=config_private['wb_bot_pwd'])
 			break
 		except Exception as ex:
 			print('Wikibase login via mwclient raised error (will try again in 20 seconds...): \n'+str(ex))

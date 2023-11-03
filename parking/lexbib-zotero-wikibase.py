@@ -18,7 +18,7 @@ import langmapping
 import lwb, lwbi
 import config_private, botconfig
 from pyzotero import zotero
-pyzot = zotero.Zotero(1892855,'group',config_private.zotero_api_key) # Zotero LexBib group
+pyzot = zotero.Zotero(1892855,'group',config_private['zotero_api_key']) # Zotero LexBib group
 linked_done = {}
 legacy_qid = None
 
@@ -548,7 +548,7 @@ def define_uri(item):
 		while attempts < 5:
 			attempts += 1
 			r = requests.patch(zotapid,
-			headers={"Zotero-API-key":config_private.zotero_api_key},
+			headers={"Zotero-API-key":config_private['zotero_api_key']},
 			json={"archiveLocation":"https://lexbib.elex.is/entity/"+bibItemQid,"version":version})
 
 			if "204" in str(r):
@@ -607,7 +607,7 @@ def define_uri(item):
 			}
 			]
 
-			r = requests.post('https://api.zotero.org/groups/1892855/items', headers={"Zotero-API-key":config_private.zotero_api_key, "Content-Type":"application/json"} , json=attachment)
+			r = requests.post('https://api.zotero.org/groups/1892855/items', headers={"Zotero-API-key":config_private['zotero_api_key'], "Content-Type":"application/json"} , json=attachment)
 
 			if "200" in str(r):
 				# print(r.json())

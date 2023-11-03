@@ -1,12 +1,18 @@
 import requests, time, re, json
 from bots import botconfig
-from bots import config_private
 from pyzotero import zotero
 import urllib.error
 config = botconfig.load_mapping("config")
-
-pyzot = zotero.Zotero(int(config['mapping']['zotero_group_id']), 'group', config_private.zotero_api_key)  # Zotero LexBib group
-
+with open('bots/config_private.json', 'r', encoding="utf-8") as jsonfile:
+    config_private = json.load(jsonfile)
+pyzot = zotero.Zotero(int(config['mapping']['zotero_group_id']), 'group', config_private['zotero_api_key'])  # Zotero LexBib group
+try:
+    print(f"**** Zotero API key groups access: {str(pyzot.key_info()['access']['groups'])}. ****")
+except Exception as ex:
+    if 'Invalid Authorization' in str(ex):
+        print('**** Zotero API key not accepted, zotero bot cannot be loaded. ****')
+    else:
+        raise
 # citations_cache = {}
 # with open('bots/data/citations_cache.jsonl') as jsonlfile:
 #     jsonl = jsonlfile.read().split('\n')
@@ -113,7 +119,7 @@ def patch_item(qid=None, zotitem=None, children=[]):
                 }
             ]
             r = requests.post('https://api.zotero.org/groups/' + config['mapping']['zotero_group_id'] + '/items',
-                              headers={"Zotero-API-key": config_private.zotero_api_key,
+                              headers={"Zotero-API-key": config_private['zotero_api_key'],
                                        "Content-Type": "application/json"}, json=attachment)
             if "200" in str(r):
                 print(f"Link attachment successfully attached to Zotero item {zotitem['data']['key']}.")
@@ -150,4 +156,4 @@ def patch_item(qid=None, zotitem=None, children=[]):
             else:
                 return False
 
-print('zoterobot functions imported.')
+print('zoterobot load finished.')

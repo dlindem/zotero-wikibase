@@ -1,10 +1,10 @@
-from bots import xwbi
 from bots import botconfig
 from bots import zoterobot
 import requests, time, re, json, csv
 import os, glob, sys, shutil
 from pathlib import Path
 import pandas
+from bots import xwbi
 
 def check_prop_id(propstring):
     if propstring == "False" or propstring == "X":

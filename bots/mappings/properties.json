@@ -179,7 +179,7 @@
       "wdprop": null
     },
     "P34": {
-      "enlabel": "publisher",
+      "enlabel": "Publisher",
       "type": "String",
       "wdprop": "P123"
     },

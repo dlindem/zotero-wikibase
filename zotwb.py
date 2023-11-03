@@ -12,7 +12,7 @@ app = Flask(__name__)
 #     configdata['mapping']['wikibase_url'] = wikibase_url
 #     configdata = zotwb_functions.build_depconfig(configdata)
 
-@app.route('/')
+@app.route('/', methods= ['GET'])
 def index_page():
     configdata = botconfig.load_mapping('config')
     zoteromapping = botconfig.load_mapping('zotero')
@@ -20,6 +20,7 @@ def index_page():
     return render_template("index.html", wikibase_url=configdata['mapping']['wikibase_url'],
                            wikibase_name=configdata['mapping']['wikibase_name'],
                            zotero_name=configdata['mapping']['zotero_group_name'],
+                           zotero_group_id=configdata['mapping']['zotero_group_id'],
                            zoteromapping=zoteromapping['mapping'],
                            config_check=config_check,
                            all_types = "all_types")
@@ -83,14 +84,23 @@ def zotero_export():
 
 @app.route('/basic_config', methods= ['GET', 'POST'])
 def basic_config():
+    with open('bots/config_private.json', 'r', encoding="utf-8") as jsonfile:
+        config_private = json.load(jsonfile)
     configdata = botconfig.load_mapping('config')
     properties = botconfig.load_mapping('properties')
     if request.method == 'GET':
-        return render_template("basic_config.html", data=configdata['mapping'], message = None, msgcolor = None)
+        return render_template("basic_config.html", wb_username=config_private['wb_bot_user'], wb_password=config_private['wb_bot_pwd'],
+                               zotero_api_key=config_private['zotero_api_key'],
+                               configdata=configdata['mapping'], message = None, msgcolor = None)
 
     elif request.method == 'POST':
         if request.form:
             for key in request.form:
+                if key.startswith('private_'):
+                    command = key.replace('private_', '')
+                    config_private[command] = request.form.get(key)
+                    with open('bots/config_private.json', 'w', encoding="utf-8") as jsonfile:
+                        json.dump(config_private, jsonfile, indent=2)
                 if key.startswith('wikibase') or key.startswith('zotero'):
                     configdata['mapping'][key] = request.form.get(key)
                     if key == 'wikibase_url': # update configs that depend on the wikibase URL
@@ -137,10 +147,10 @@ def basic_config():
                     else: # user has manually chosen a value
                         configdata['mapping'][key]['wikibase'] = request.form.get(key)
                         command = command = 'Update '+key.replace('_',' ')
-                message = f"Successfully performed operation: {command}."
+                message = f"Successfully performed operation: {command} update."
                 msgcolor = "background:limegreen"
         botconfig.dump_mapping(configdata)
-        return render_template("basic_config.html", data=configdata['mapping'], message=message, msgcolor=msgcolor)
+        return render_template("basic_config.html", wb_username=config_private['wb_bot_user'], wb_password=config_private['wb_bot_pwd'], zotero_api_key=config_private['zotero_api_key'], configdata=configdata['mapping'], message=message, msgcolor=msgcolor)
 
 @app.route('/zoterofields/<itemtype>', methods= ['GET', 'POST'])
 def map_zoterofield(itemtype):

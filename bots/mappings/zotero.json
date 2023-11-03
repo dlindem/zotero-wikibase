@@ -380,7 +380,7 @@
           "name": "Publication"
         },
         "publisher": {
-          "wbprop": null,
+          "wbprop": "P34",
           "dtype": "String",
           "name": "Publisher"
         },
@@ -1464,7 +1464,7 @@
           "wbprop": null
         },
         "publisher": {
-          "wbprop": null
+          "wbprop": "P34"
         },
         "date": {
           "wbprop": null
@@ -1535,7 +1535,7 @@
           "wbprop": false
         },
         "publisher": {
-          "wbprop": null
+          "wbprop": "P34"
         },
         "date": {
           "wbprop": null
@@ -1667,7 +1667,7 @@
           "wbprop": null
         },
         "publisher": {
-          "wbprop": null
+          "wbprop": "P34"
         },
         "date": {
           "wbprop": "P16"
@@ -1858,7 +1858,7 @@
           "wbprop": null
         },
         "publisher": {
-          "wbprop": null
+          "wbprop": "P34"
         },
         "numberOfVolumes": {
           "wbprop": null

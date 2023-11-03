@@ -5,39 +5,64 @@
     <title>Basic Config - ZotWb</title>
 </head>
 <body>
-<h1>ZotWb Basic Configuration</h1>
+<h1><img src="static/favicon.ico" alt="ZotWb logo" /> ZotWb Basic Configuration</h1>
 {% if message %}<p style = "{{ msgcolor }}">{{ message }}<p>{% endif %}
 (Back to <a href="./">start page</a>)
-<h2>URL and Name of your Wikibase</h2>
 <p>Edit the values manually. After every single field edit press ENTER, or the corresponding "Update this" button. The page will then be reloaded.</p>
-<p>The <b>URL</b> of your Wikibase is <a href="{{ data['wikibase_url'] }}" target="_blank">{{ data['wikibase_url'] }}</a>.</br>
+<h2>Credentials</h2>
+<p>Your Wikibase bot user name and password, and the Zotero API key are stored in <code>bots/config_private.py</code>.</br>
+<small>That file is included in <code>.gitignore</code>, i.e., it is not uploaded if you share your ZotWb project using git.</br>
+After setting these three values, restart the app in the terminal, and check the log messages for whether your credentials are accepted.</small></p>
+<p>Your Wikibase bot user name:
+<form method="POST">
+   &#129054; <input type="text" name="private_wb_bot_user" value={{ wb_username }} style="width: 300px;">
+    <input type="submit" value="Update this">
+</form>
+<small>This user needs bot writing privileges on your Wikibase instance ("bot" box ticked on <code>wiki/Special:UserRights</code>).</small>
+</p>
+<p>Your Wikibase bot user password:
+<form method="POST">
+   &#129054; <input type="text" name="private_wb_bot_pwd" value={{ wb_password }} style="width: 300px;">
+    <input type="submit" value="Update this">
+</form>
+<small>This is the normal user password (and not the so-called 'bot bassword'.</small>
+</p>
+<p>Your Zotero API key:
+<form method="POST">
+   &#129054; <input type="text" name="private_zotero_api_key" value={{ zotero_api_key }} style="width: 300px;">
+    <input type="submit" value="Update this">
+</form>
+<small>A Zotere API key can be obtained <a href="https://www.zotero.org/settings/keys/new">here</a>.</br>Be sure to grant the key read and write access to the group library you want to export items from. The key consists of a single chain of characters.</small>
+</p>
+<h2>URL and Name of your Wikibase</h2>
+<p>The <b>URL</b> of your Wikibase is <a href="{{ configdata['wikibase_url'] }}" target="_blank">{{ configdata['wikibase_url'] }}</a>.</br>
 <small>You can update that in your 'config_private.py' file in the app base folder, together with usernames and passwords for Wikibase and Zotero.</small></p>
 <p>The <b>Name</b> of your Wikibase (e.g. 'Mybase'):
 <form method="POST">
-   &#129054; <input type="text" name="wikibase_name" value={{ data['wikibase_name'] }} style="width: 300px;">
+   &#129054; <input type="text" name="wikibase_name" value="{{ configdata['wikibase_name'] }}" style="width: 300px;">
     <input type="submit" value="Update this">
 </form>
 </p>
-<p>The <b>Name</b> of your Zotero group (as in the group URL, after the group number between slashes):
+<p>The <b>Name</b> of your Zotero group (for use throughout this app):
 <form method="POST">
-    &#129054; <input type="text" name="zotero_group_name" value={{ data['zotero_group_name'] }} style="width: 300px;">
+    &#129054; <input type="text" name="zotero_group_name" value="{{ configdata['zotero_group_name'] }}" style="width: 300px;">
     <input type="submit" value="Update this">
 </form>
 <p>The <b>Number</b> of your Zotero group (as in the group URL, after '/groups/'):
 <form method="POST">
-    &#129054; <input type="text" name="zotero_group_id" value={{ data['zotero_group_id'] }} style="width: 300px;">
+    &#129054; <input type="text" name="zotero_group_id" value="{{ configdata['zotero_group_id'] }}" style="width: 300px;">
     <input type="submit" value="Update this">
 </form>
 </p>
 <p>The <b>Tag</b> you use on your Wikibase to mark records for export:
 <form method="POST">
-    &#129054; <input type="text" name="zotero_export_tag" value={{ data['zotero_export_tag'] }} style="width: 300px;">
+    &#129054; <input type="text" name="zotero_export_tag" value="{{ configdata['zotero_export_tag'] }}" style="width: 300px;">
     <input type="submit" value="Update this">
 </form>
 </p>
 <p>The <b>Tag</b> you use on your Wikibase to mark successfully imported items:
 <form method="POST">
-    &#129054; <input type="text" name="zotero_on_wikibase_tag" value={{ data['zotero_on_wikibase_tag'] }} style="width: 300px;">
+    &#129054; <input type="text" name="zotero_on_wikibase_tag" value="{{ configdata['zotero_on_wikibase_tag'] }}" style="width: 300px;">
     <input type="submit" value="Update this">
 </form>
 </p>
@@ -48,24 +73,24 @@
     If the property is aligned to Wikidata, the Wikidata property will be imported.</br>
     Be careful creating new items, you might create duplicates.</br>
     Your can also import labels and descriptions from Wikidata to the proposed existing Wikibase entity.</p>
-{% for key in data %}
+{% for key in configdata %}
 
 {% if key.startswith('prop') or key.startswith('class') %}
-<p>&#10026;  <b>{{ data[key]['name'] }}</b>
-<br><small>Comment: {{ data[key]['comment'] }}</small>
+<p>&#10026;  <b>{{ configdata[key]['name'] }}</b>
+<br><small>Comment: {{ configdata[key]['comment'] }}</small>
 <form style="display: inline;" method="POST">
-    <input type="text" value={{ data[key]['wikibase'] }} name = {{ key }} style="width: 40px;" />
-    {% if data[key]['wikibase'] %} (<a href="{{ data['wikibase_entity_ns'] }}{{ data[key]['wikibase'] }}" target="_blank">{{ data[key]['wikibase'] }}</a>){% endif %}
+    <input type="text" value={{ configdata[key]['wikibase'] }} name = {{ key }} style="width: 40px;" />
+    {% if configdata[key]['wikibase'] %} (<a href="{{ configdata['wikibase_entity_ns'] }}{{ configdata[key]['wikibase'] }}" target="_blank">{{ configdata[key]['wikibase'] }}</a>){% endif %}
     <input type="submit" value="Update this">
 </form> or
 <form style="display: inline;" method="POST">
     <button name= {{ key + '_create' }} type="submit">&#10071; Create new &#10071;</button>
-</form>{% if data[key]['wikidata'] %} or
+</form>{% if configdata[key]['wikidata'] %} or
 <form style="display: inline;" method="POST">
-    <button name= {{ key + '_redo' }} type="submit">Import wd:{{ data[key]['wikidata'] }} to wb:{{ data[key]['wikibase'] }}</button>
+    <button name= {{ key + '_redo' }} type="submit">Import wd:{{ configdata[key]['wikidata'] }} to wb:{{ configdata[key]['wikibase'] }}</button>
 </form>
-<small><i>Wikidata equivalent: </i><a href="http://www.wikidata.org/entity/{{ data[key]['wikidata'] }}" target="_blank">{{ data[key]['wikidata'] }}</a></small>{% endif %}
-{% if data[key]['type'] %} <small><i>Property datatype: {{ data[key]['type'] }}</i></small>{% endif %}
+<small><i>Wikidata equivalent: </i><a href="http://www.wikidata.org/entity/{{ configdata[key]['wikidata'] }}" target="_blank">{{ configdata[key]['wikidata'] }}</a></small>{% endif %}
+{% if configdata[key]['type'] %} <small><i>Property datatype: {{ configdata[key]['type'] }}</i></small>{% endif %}
 </p>
 
 

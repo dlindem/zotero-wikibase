@@ -1,4 +1,4 @@
-import traceback, time, re, os, requests
+import traceback, time, re, os, requests, json
 from wikibaseintegrator import wbi_login, WikibaseIntegrator
 from wikibaseintegrator.datatypes.string import String
 from wikibaseintegrator.datatypes.externalid import ExternalID
@@ -10,11 +10,12 @@ from wikibaseintegrator.datatypes.url import URL
 from wikibaseintegrator import wbi_helpers
 from wikibaseintegrator.wbi_enums import ActionIfExists, WikibaseSnakType
 from bots import botconfig
-from bots import config_private
 from wikibaseintegrator.wbi_config import config as wbi_config
 
 # from wikibaseintegrator.models.claims import Claims
 
+with open('bots/config_private.json', 'r', encoding="utf-8") as jsonfile:
+	config_private = json.load(jsonfile)
 config = botconfig.load_mapping('config')
 print(str(config['mapping']['wikibase_api_url']))
 wbi_config['BACKOFF_MAX_TRIES'] = 5
@@ -32,12 +33,20 @@ wbi_config['WIKIBASE_URL'] = config['mapping']['wikibase_url']
 wbi_config['DEFAULT_LANGUAGE'] = 'en' # config['mapping']['wikibase_default_language']
 wbi_config['DEFAULT_LEXEME_LANGUAGE'] = "Q207" # This is for Lexemes. Value None raises error.
 
+if config_private['wb_bot_user'] and config_private['wb_bot_pwd']:
+	try:
+		login_instance = wbi_login.Login(user=config_private['wb_bot_user'], password=config_private['wb_bot_pwd'])
+		wbi = WikibaseIntegrator(login=login_instance)
+		print('**** Wikibase bot username and password accepted, xwbi can be loaded. ****')
+	except Exception as ex:
+		if 'Incorrect username or password entered' in str(ex):
+			print('**** Wikibase bot username or password not accepted, xwbi cannot be loaded. ****')
+		else:
+			raise
+else:
+	print('Wikibase bot is not configured, cannot be loaded.')
 
-login_instance = wbi_login.Login(user=config_private.wb_bot_user, password=config_private.wb_bot_pwd)
-
-wbi = WikibaseIntegrator(login=login_instance)
-
-wd_user_agent = config['mapping']['wikibase_site']+", User "+config_private.wb_bot_user
+wd_user_agent = config['mapping']['wikibase_site']+", User "+config_private['wb_bot_user']
 
 # functions for interaction with wbi
 def packstatements(statements, wbitem=None, qualifiers=False, references=False):
@@ -240,4 +249,4 @@ def importitem(wdqid, wbqid=False, process_claims=True, classqid=None):
 	return result_qid
 
 
-print('xwbi wikibase bot functions imported.')
+print('xwbi wikibase bot function load finished.')
