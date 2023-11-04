@@ -355,7 +355,7 @@ restrict_class = None
 split_char = None
 @app.route('/openrefine_anystring', methods= ['GET', 'POST'])
 def openrefine_anystring():
-    # configdata = botconfig.load_mapping('config')
+    configdata = botconfig.load_mapping('config')
     # get_recon = zotwb_functions.get_recon_pd(folder="data/reconciled_creators")
     # recon_df = get_recon['data']
     # recon_df.set_index('creatorstatement')
@@ -367,7 +367,7 @@ def openrefine_anystring():
     global restrict_class
     global split_char
     if request.method == 'GET':
-        return render_template("openrefine_anystring.html",
+        return render_template("openrefine_anystring.html", wikibase_name=configdata['mapping']['wikibase_name'],
                                messages=[], msgcolor="background:limegreen",
                                source_prop=source_prop, restrict_class=restrict_class, split_char=split_char)
     elif request.method == 'POST':
