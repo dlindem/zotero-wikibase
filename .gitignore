@@ -2,3 +2,4 @@
 *.pyc
 .idea/*
 zotwbenv/*
+bots/config_private.json
