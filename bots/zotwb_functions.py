@@ -260,7 +260,7 @@ def lookup_doi():
     ?wdqid wdt:P356 ?doi4wd .} } } """
     bindings = xwbi.wbi_helpers.execute_sparql_query(query=query, prefix=config['mapping']['wikibase_sparql_prefixes'])['results'][
         'bindings']
-    message = 'Found on Wikidata:' + str(len(bindings)) + ' bibitems with doi still not linked to Wikidata.'
+    message = 'Found on Wikidata: ' + str(len(bindings)) + ' DOI in bibitems with DIU still not linked to Wikidata.'
     print(message)
     messages.append(message)
     result = []
@@ -282,6 +282,7 @@ def lookup_doi():
     return {'messages': messages, 'msgcolor':'background:limegreen'}
 
 def lookup_issn():
+    messages = []
     zoteromapping = botconfig.load_mapping(('zotero'))
     if not zoteromapping['mapping']['all_types']['fields']['ISSN']['wbprop']:
         message = f"You have to configure a Wikibase property as mapped to the Zotero 'ISSN' field for all types to use this function.</br>Do that <a href=\"./zoterofields/all_types\">here</a>."
@@ -721,7 +722,7 @@ def export_creators():
     else:
         outfilename = f"data/unreconciled_creators/wikibase_creators_{time.strftime('%Y%m%d_%H%M%S', time.localtime())}.csv"
         data.to_csv(outfilename, index=False)
-        message = f"Successfully exported {str(len(data))} unreconciled creator statements to <code>{outfilename}</code>'."
+        message = f"Successfully exported {str(len(data))} unreconciled creator statements to <code>{outfilename}</code>."
     print(message)
     return [message]
 
@@ -896,7 +897,12 @@ def export_anystring(wbprop = None, restrict_class= None, split_char= None):
         query += f"?item xdp:{config['mapping']['prop_instanceof']} xwb:{restrict_class}. "
     query += 'SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }}'
     query_result = xwbi.wbi_helpers.execute_sparql_query(query=query,
-                                                         prefix=config['mapping']['wikibase_sparql_prefixes'])
+                                                     prefix=config['mapping']['wikibase_sparql_prefixes'])
+    index = 0
+    while index < len(query_result['head']['vars']):
+        if query_result['head']['vars'][index] == 'propval':
+            query_result['head']['vars'][index] = wbprop
+        index += 1
     data = pandas.DataFrame(columns=query_result['head']['vars'])
     for binding in query_result['results']['bindings']:
         pdrow = {}
@@ -919,7 +925,7 @@ def export_anystring(wbprop = None, restrict_class= None, split_char= None):
             if len(values) > 1:
                 print(f"Split '{stringval}' to {str(values)}")
         for value in values:
-            pdrow['propval'] = value
+            pdrow[wbprop] = value
             data.loc[len(data)] = pdrow
     if len(data) == 0:
         message = f"SPARQL Query for {wbprop} statements, class-restr. {str(restrict_class)}, splitchar '{split_char}' returned 0 results."
