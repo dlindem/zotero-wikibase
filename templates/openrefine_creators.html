@@ -5,7 +5,7 @@
     <title>Creators Reconciliation - ZotWb</title>
 </head>
 <body>
-<h1><img src="static/favicon.ico" alt="ZotWb logo" /> ZotWb Open Refine creators reconciliation</h1>
+<h1><img src="static/zotwb_logo.jpg" alt="ZotWb logo" style="height:10%" /> ZotWb Open Refine creators reconciliation</h1>
 {% for message in messages %}<p style = "{{ msgcolor }}">{{ message|safe }}<br>{% endfor %}
 <p> <small>(Back to <a href="/">start page</a>)</small></p>
 <p>On this page, you can produce CSV for loading into Open Refine, and import reconciliation result CSV produced in Open Refine back to {{ wikibase_name }}.</p>
@@ -14,7 +14,7 @@
     <button name="export_unreconciled_creators" type="submit">Produce CSV</button>
 </form> to save a CSV containing unreconciled creator literals to <code><b>data/unreconciled_creators</b></code> folder.</br><small>Start Open Refine and create a new project using that file.</small></p>
 <h2>Import creator entities (reconciled creator data)</h2>
-<p><a href="./openrefine">Refresh this page</a> to load the most recent CSV exported from Open Refine in <code><b>data/reconciled_creators</b></code> folder.</p>
+<p><a href="./openrefine_creators">Refresh this page</a> to load the most recent CSV exported from Open Refine in <code><b>data/reconciled_creators</b></code> folder.</p>
 The currently loaded file, <code><b>{{ filename }}</b></code>, contains:
 <ul>
     <li><b>{{ recon_all }}</b> rows in total</li>
@@ -30,7 +30,7 @@ The currently loaded file, <code><b>{{ filename }}</b></code>, contains:
 </form> to set {{ recon_wb }} links to existing Wikibase items.</br><small>This simply updates the unknown value to the Wikibase Qid found in the CSV row, without interfering Wikidata.</small> </p>
     <p><form style="display: inline;" method="POST">
     <button name="import_unreconciled" type="submit">Create new items</button>
-</form> to create a new item for each unreconciled creator cluster.</br><small>This processes CSV rows with no values for Wikidata or Wikibase Qid.</br>Rows with identical values in the <code>fullName_clusters</code> column will result one single item.</small></p>
+</form> to create a new item for each unreconciled creator cluster.</br><small>This processes CSV rows with no values for Wikidata or Wikibase Qid.</br>Rows with identical values in the <code>fullName_clusters</code> column will be treated as clusters; that will lead to the creation of one single item.</br>Name literals of all rows in a cluster will be written to that item; the values in the first row of the cluster will be regarded the preferred.</small></p>
 <h2>Start {{ wikibase_name }} reconciliation service</h2>
 <p>To start the reconciliation service, open a new terminal in your zotwb folder, and type:
 <p><code>source zotwbenv/bin/activate</br>cd reconciliator</br>python3 -m reconciliator</code></p>

@@ -5,7 +5,7 @@
     <title>String reconciliation - ZotWb</title>
 </head>
 <body>
-<h1><img src="static/favicon.ico" alt="ZotWb logo" /> ZotWb Open Refine reconciliation of any string value</h1>
+<h1><img src="static/zotwb_logo.jpg" alt="ZotWb logo" style="height:10%" /> ZotWb Open Refine reconciliation of any string value</h1>
 {% for message in messages %}<p style = "{{ msgcolor }}">{{ message|safe }}<br>{% endfor %}
 <p> <small>(Back to <a href="/">start page</a>)</small></p>
 <p>On this page, you can produce CSV for loading into Open Refine, and import reconciliation result CSV produced in Open Refine back to Wikibase.<br>String values are exported, and the linked items are imported back.</p>
@@ -13,7 +13,8 @@
 <p><form style="display: inline;" method="POST">
     <input type="text" name="Specify_Source_Property" value="{{ source_prop }}" style="width: 60px;">
     <input type="submit" value="Reconcile this">
-</form> to send values of this property to Open Refine.</p>
+</form> to send values of this property to Open Refine.
+</br><small>Enter a {{ wikibase_name }} property identifier, e.g. 'P15'.</small></p>
 {% if source_prop %}
 <h2>Export <b>{{ source_prop }}</b> string literals: Restrict to a class</h2>
 <p><form style="display: inline;" method="POST">
@@ -24,7 +25,7 @@
 <p><form style="display: inline;" method="POST">
     <input type="text" name="Set_Split_Characters" value="{{ split_char }}" style="width: 60px;">
     <input type="submit" value="Use these split characters">
-</form> to split {{ source_prop }} values at these characters.</br><small>For example, you might want to split "Berlin; Amsterdam" at the semicolon, so that "Berlin" and "Amsterdam" are sent to reconciliation separately.</br>You can enter more than one character; either of them is used then. 'None' means no restriction.</small></p>
+</form> to split {{ source_prop }} values at these characters.</br><small>For example, you might want to split strings like "Berlin; Amsterdam" at the semicolon, so that "Berlin" and "Amsterdam" are sent to reconciliation separately.</br>You can enter more than one character; either of them is used then. 'None' means no restriction.</small></p>
 
 <h2>Export <b>{{ source_prop }}</b> string literals to CSV</h2>
 <ul>

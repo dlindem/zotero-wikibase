@@ -5,7 +5,7 @@
     <title>Basic Config - ZotWb</title>
 </head>
 <body>
-<h1><img src="static/favicon.ico" alt="ZotWb logo" /> ZotWb Basic Configuration</h1>
+<h1><img src="static/zotwb_logo.jpg" alt="ZotWb logo" style="height:10%" /> ZotWb Basic Configuration</h1>
 {% if message %}<p style = "{{ msgcolor }}">{{ message }}<p>{% endif %}
 (Back to <a href="./">start page</a>)
 <p>Edit the values manually. After every single field edit press ENTER, or the corresponding "Update this" button. The page will then be reloaded.</p>
@@ -85,7 +85,7 @@ After setting these three values, restart the app in the terminal, and check the
 </form> or
 <form style="display: inline;" method="POST">
     <button name= {{ key + '_create' }} type="submit">&#10071; Create new &#10071;</button>
-</form>{% if configdata[key]['wikidata'] %} or
+</form>{% if configdata[key]['wikidata'] and configdata[key]['wikibase'] %} or
 <form style="display: inline;" method="POST">
     <button name= {{ key + '_redo' }} type="submit">Import wd:{{ configdata[key]['wikidata'] }} to wb:{{ configdata[key]['wikibase'] }}</button>
 </form>
