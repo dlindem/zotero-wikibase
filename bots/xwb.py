@@ -2,16 +2,14 @@
 
 import mwclient
 import json
-import urllib.parse
 import time
 import re
-import csv
-import requests
 import sys
-import unidecode
 # import sparql
 import logging
-from bots import botconfig, config_private
+from bots import botconfig
+from bots.mappings import config_private
+
 config = botconfig.load_mapping('config')
 # Properties with constraint: max. 1 value
 # card1props = botconfig.card1props

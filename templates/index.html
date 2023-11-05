@@ -6,9 +6,14 @@
 </head>
 <body>
 <h1><img src="static/zotwb_logo.jpg" alt="ZotWb logo" style="height:10%" /> Welcome to ZotWb</h1>
-<p>This ZotWb instance connects <a href="https://zotero.org/groups/{{ zotero_group_id }}/items", target="_blank">{{ zotero_name }} Zotero Group</a> to <a href="{{ wikibase_url }}" target="_blank">{{ wikibase_name }} Wikibase</a>.</p>
+{% if not profile %}
+<p><a href="/change_profile">Create a profile</a></small></p></p>
+{% else %}
+<p>The currently active ZotWb profile named <b>{{ profile }}</b> connects <a href="https://zotero.org/groups/{{ zotero_group_id }}/items", target="_blank">{{ zotero_name }} Zotero Group</a> to <a href="{{ wikibase_url }}" target="_blank">{{ wikibase_name }} Wikibase</a>.</br>
+<small>You can have several profiles, e.g. to connect different Zotero groups to different Wikibases, or have different configurations for the same combination.</br>
+<a href="/change_profile">Change active profile or create new</a></small></p>
 <h2>Basic configuration</h2>
-<p>To edit your basic configuration, access the <a href="./basic_config">basic configuration page</a>.</p>
+<p>To edit the basic configuration for this profile, access the <a href="./basic_config">basic configuration page</a>.</p>
 {% for message in config_check['message'] %}
 <span style="{{ config_check['color'] }}">{{ message }}</span>
 {% endfor %}
@@ -34,5 +39,6 @@ Access the <a href="./openrefine_creators">Creators reconciliation page</a>.
 Access the <a href="./openrefine_anystring">String reconciliation page</a>.
 <h2>ZotWb little helpers</h2>
 Access the <a href="./little_helpers">Helper functions page</a>.
+{% endif %}
 </body>
 </html>

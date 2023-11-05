@@ -1,5 +1,5 @@
 *.pyc
 .idea/*
 zotwbenv/*
-bots/config_private.json
+bots/MLV/config_private.json
 

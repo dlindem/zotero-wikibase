@@ -1,8 +1,12 @@
 from bots import botconfig, zotwb_functions
 from flask import Flask, render_template, request
-from bots import config_private
-import os, re, json, pandas
+import os, re, json
 from datetime import datetime
+
+# load active profile
+with open('bots/profiles.json', 'r', encoding='utf-8') as file:
+    profile = json.load(file)['last_profile']
+
 # from flask_wtf import FlaskForm
 app = Flask(__name__)
 
@@ -17,13 +21,48 @@ def index_page():
     configdata = botconfig.load_mapping('config')
     zoteromapping = botconfig.load_mapping('zotero')
     config_check = zotwb_functions.check_config(configdata=configdata['mapping'])
-    return render_template("index.html", wikibase_url=configdata['mapping']['wikibase_url'],
+    return render_template("index.html", profile=profile, wikibase_url=configdata['mapping']['wikibase_url'],
                            wikibase_name=configdata['mapping']['wikibase_name'],
                            zotero_name=configdata['mapping']['zotero_group_name'],
                            zotero_group_id=configdata['mapping']['zotero_group_id'],
                            zoteromapping=zoteromapping['mapping'],
                            config_check=config_check,
                            all_types = "all_types")
+
+@app.route('/change_profile', methods= ['GET', 'POST'])
+def change_profile():
+    messages = []
+    msgcolor = None
+    with (open('bots/profiles.json', 'r', encoding='utf-8') as file):
+        all_profiles = json.load(file)['active_profiles']
+        print(f"Profile page: Active profiles are {str(active_profiles)}")
+        other_profiles = all_profiles
+        other_profiles.remove(profile)
+
+    if request.method == 'GET':
+        return render_template("change_profile.html", other_profiles=other_profiles, profile=profile,
+                               messages=messages, msgcolor=msgcolor)
+
+    elif request.method == 'POST':
+        if request.form:
+            for command in request.form:
+                if command == 'create_new_profile':
+                    newprofile = request.form.get(command)
+                    action = zotwb_functions.create_profile(name=newprofile)
+                    messages = action['messages']
+                    msgcolor = action['msgcolor']
+                else:
+                    profile = request.form.get(command)
+                    message = f"This profile will be activated: {profile}."
+                    print(message)
+                    with open('bots/profiles.json', 'w', encoding='utf-8') as file:
+                        json.dump({'last_profile':profile,'active_profiles':active_profiles}, file, indent=2)
+                    messages.append(message + ' Go to <a href="/">ZotWb start page</a>.')
+                    msgcolor="background:limegreen"
+            return render_template("change_profile.html", other_profiles=other_profiles, profile=profile,
+                               messages=messages, msgcolor=msgcolor)
+
+
 
 @app.route('/zotero_export', methods= ['GET', 'POST'])
 def zotero_export():
@@ -84,7 +123,7 @@ def zotero_export():
 
 @app.route('/basic_config', methods= ['GET', 'POST'])
 def basic_config():
-    with open('bots/config_private.json', 'r', encoding="utf-8") as jsonfile:
+    with open(f"bots/{profile}/config_private.json", 'r', encoding="utf-8") as jsonfile:
         config_private = json.load(jsonfile)
     configdata = botconfig.load_mapping('config')
     properties = botconfig.load_mapping('properties')
@@ -99,7 +138,7 @@ def basic_config():
                 if key.startswith('private_'):
                     command = key.replace('private_', '')
                     config_private[command] = request.form.get(key)
-                    with open('bots/config_private.json', 'w', encoding="utf-8") as jsonfile:
+                    with open(f"bots/{profile}/config_private.json", 'w', encoding="utf-8") as jsonfile:
                         json.dump(config_private, jsonfile, indent=2)
                 if key.startswith('wikibase') or key.startswith('zotero'):
                     configdata['mapping'][key] = request.form.get(key)
@@ -281,7 +320,7 @@ def wikidata_alignment():
     configdata = botconfig.load_mapping('config')
 
     if request.method == 'GET':
-        propcachedate = datetime.utcfromtimestamp(os.path.getmtime('bots/mappings/properties.json')).strftime(
+        propcachedate = datetime.utcfromtimestamp(os.path.getmtime(f"bots/{profile}/properties.json")).strftime(
             '%Y-%m-%d at %H:%M:%S UTC')
         return render_template("wikidata_alignment.html", wikibase_url=configdata['mapping']['wikibase_url'],
                                wikibase_name=configdata['mapping']['wikibase_name'],
@@ -290,7 +329,7 @@ def wikidata_alignment():
                                propcachedate=propcachedate,
                            message=None)
     elif request.method == 'POST':
-        propcachedate = datetime.utcfromtimestamp(os.path.getmtime('bots/mappings/properties.json')).strftime(
+        propcachedate = datetime.utcfromtimestamp(os.path.getmtime(f"bots/{profile}/properties.json")).strftime(
             '%Y-%m-%d at %H:%M:%S UTC')
         if request.form:
             for key in request.form:

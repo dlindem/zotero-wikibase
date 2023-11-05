@@ -1,11 +1,14 @@
-import os, sys, re, json
-# sys.path.insert(0, os.path.realpath(os.path.pardir))
-with open(os.path.realpath(os.path.pardir)+"/bots/mappings/config.json", 'r', encoding='utf-8') as jsonfile:
+import os, re, json
+
+with open(os.path.realpath(os.path.pardir)+f"/bots/profiles.json", 'r', encoding='utf-8') as jsonfile:
+    profile = json.load(jsonfile)['active_profile']
+with open(os.path.realpath(os.path.pardir)+f"/bots/{profile}/config.json", 'r', encoding='utf-8') as jsonfile:
     configdata = json.load(jsonfile)
+
 """
 This file defines a few constants which configure
 which Wikibase instance and which property/item ids
-should be used
+should be used by the reconcilation service
 """
 
 # Endpoint of the MediaWiki API of the Wikibase instance
@@ -98,7 +101,7 @@ image_properties = []
 
 
 # URL pattern to retrieve an image from its filename
-image_download_pattern = 'https://upload.wikimedia.org/wikipedia/commons/thumb/%s/%s/%s/%dpx-%s'
+image_download_pattern = '/static/wikibase.png' #'https://upload.wikimedia.org/wikipedia/commons/thumb/%s/%s/%s/%dpx-%s'
 
 # Fallback URL of the image to use when previewing an item with no image
 fallback_image_url = this_host + '/static/wikibase.png'

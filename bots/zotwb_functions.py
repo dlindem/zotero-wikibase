@@ -6,6 +6,14 @@ from pathlib import Path
 import pandas
 from bots import xwbi
 
+def create_profile(name=""):
+    if re.search(r'[^a-zA-Z0-9_]', name) or len(name) > 8:
+        return {'messages': ["Invalid input. The profile name may only contain a-z, A-Z letters, numbers and underscores, and be max 8 characters long."],
+                'msgcolor': 'background:orangered'}
+    # TODO: create profile folder with NULL values
+    return True
+
+
 def check_prop_id(propstring):
     if propstring == "False" or propstring == "X":
         return False
@@ -868,7 +876,7 @@ def import_creators(data=None, infile=None, wikidata=False, wikibase=False, unre
                     existing_preflabel = row['fullName']
                 creatoraliases = creatoritem.aliases.get(language)
                 if creatoraliases:
-                    existing_aliases.append(alias for alias in creatoraliases)
+                    existing_aliases.append(alias.value for alias in creatoraliases)
                 name_variants = [row['fullName']]
                 if isinstance(row['givenName'], str) and isinstance(row['lastName'], str):
                     name_variants.append(row['lastName'] + ', ' + row['givenName'])

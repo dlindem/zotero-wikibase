@@ -1,6 +1,9 @@
 import json
 import os
 botpath = os.path.realpath('bots')
+# load active profile
+with open(f"{botpath}/profiles.json", 'r', encoding='utf-8') as file:
+    profile = json.load(file)['last_profile']
 #
 # with open('bots/mappings/config.json', 'r', encoding="utf-8") as configfile:
 #     config = json.load(configfile)
@@ -83,13 +86,13 @@ botpath = os.path.realpath('bots')
 # import mappings
 def load_mapping(mappingname):
     # print(f"Will load mapping: {mappingname}.json")
-    with open(f"{botpath}/mappings/{mappingname}.json", 'r', encoding='utf-8') as jsonfile:
+    with open(f"{botpath}/{profile}/{mappingname}.json", 'r', encoding='utf-8') as jsonfile:
         return json.load(jsonfile)
 
 
 def dump_mapping(mappingjson):
     print(f"Will dump mapping: {mappingjson['filename']}")
-    with open(f"{botpath}/mappings/{mappingjson['filename']}", 'w', encoding='utf-8') as jsonfile:
+    with open(f"{botpath}/{profile}/{mappingjson['filename']}", 'w', encoding='utf-8') as jsonfile:
         json.dump(mappingjson, jsonfile, indent=2)
 
 
