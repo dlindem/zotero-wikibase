@@ -69,16 +69,16 @@ To define mappings for a single bibitem type (so that fields with the same name 
         {% endif %}
 {% endif %}
 {% if fieldname in wikidata_suggestions %}
-</br>or
+        </br>or
 <form style="display: inline;" method="POST">
     <button name="{{ 'fields@' + fieldname + '_create_from_wd' }}" type="submit">&#10071; Import wd:{{
-    wikidata_suggestions[fieldname] }} to new wb property &#10071;</button>
-    <button name= {{ 'fields@' + fieldname + '_redo' }} type="submit">Import wd:{{ properties[zoteromapping[itemtype]['fields'][fieldname]['wbprop']]['wdprop'] }} to wb:{{ zoteromapping[itemtype]['fields'][fieldname]['wbprop'] }}</button>
-</form>
-</br><small><i>Suggested Wikidata equivalent: </i><a
+    wikidata_suggestions[fieldname] }} to new wb property &#10071;</button> </form>
+        <small><i>Suggested Wikidata equivalent: </i><a
 href="http://www.wikidata.org/entity/{{ wikidata_suggestions[fieldname] }}"
 target="_blank">wd:{{ wikidata_suggestions[fieldname] }}</a></small>
-<small><i>Wikidata equivalent: </i><a href="http://www.wikidata.org/entity/{{ properties[zoteromapping[itemtype]['fields'][fieldname]['wbprop']]['wdprop'] }}" target="_blank">wd:{{ properties[zoteromapping[itemtype]['fields'][fieldname]['wbprop']]['wdprop'] }}</a></small>
+{% endif %}
+{% if zoteromapping[itemtype]['fields'][fieldname]['wbprop'] %}
+</br>
 {% endif %}
 {% if 'dtype' in zoteromapping['all_types']['fields'][fieldname] %}
 </br><small><i>Property datatype: {{ zoteromapping['all_types']['fields'][fieldname]['dtype'] }}</i></small>
