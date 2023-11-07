@@ -123,7 +123,7 @@ def zotero_export():
 
 @app.route('/basic_config', methods= ['GET', 'POST'])
 def basic_config():
-    with open(f"bots/{profile}/config_private.json", 'r', encoding="utf-8") as jsonfile:
+    with open(f"bots/profiles/{profile}/config_private.json", 'r', encoding="utf-8") as jsonfile:
         config_private = json.load(jsonfile)
     configdata = botconfig.load_mapping('config')
     properties = botconfig.load_mapping('properties')
@@ -138,7 +138,7 @@ def basic_config():
                 if key.startswith('private_'):
                     command = key.replace('private_', '')
                     config_private[command] = request.form.get(key)
-                    with open(f"bots/{profile}/config_private.json", 'w', encoding="utf-8") as jsonfile:
+                    with open(f"bots/profiles/{profile}/config_private.json", 'w', encoding="utf-8") as jsonfile:
                         json.dump(config_private, jsonfile, indent=2)
                 if key.startswith('wikibase') or key.startswith('zotero'):
                     configdata['mapping'][key] = request.form.get(key)
@@ -320,7 +320,7 @@ def wikidata_alignment():
     configdata = botconfig.load_mapping('config')
 
     if request.method == 'GET':
-        propcachedate = datetime.utcfromtimestamp(os.path.getmtime(f"bots/{profile}/properties.json")).strftime(
+        propcachedate = datetime.utcfromtimestamp(os.path.getmtime(f"bots/profiles/{profile}/properties.json")).strftime(
             '%Y-%m-%d at %H:%M:%S UTC')
         return render_template("wikidata_alignment.html", wikibase_url=configdata['mapping']['wikibase_url'],
                                wikibase_name=configdata['mapping']['wikibase_name'],
@@ -329,7 +329,7 @@ def wikidata_alignment():
                                propcachedate=propcachedate,
                            message=None)
     elif request.method == 'POST':
-        propcachedate = datetime.utcfromtimestamp(os.path.getmtime(f"bots/{profile}/properties.json")).strftime(
+        propcachedate = datetime.utcfromtimestamp(os.path.getmtime(f"bots/profiles/{profile}/properties.json")).strftime(
             '%Y-%m-%d at %H:%M:%S UTC')
         if request.form:
             for key in request.form:
