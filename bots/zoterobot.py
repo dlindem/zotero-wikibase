@@ -8,7 +8,7 @@ with open(f"bots/profiles.json", 'r', encoding='utf-8') as file:
 
 config = botconfig.load_mapping("config")
 
-with open(f"bots/{profile}/config_private.json", 'r', encoding="utf-8") as jsonfile:
+with open(f"bots/profiles/{profile}/config_private.json", 'r', encoding="utf-8") as jsonfile:
     config_private = json.load(jsonfile)
 
 pyzot = zotero.Zotero(int(config['mapping']['zotero_group_id']), 'group', config_private['zotero_api_key'])  # Zotero LexBib group
