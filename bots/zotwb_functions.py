@@ -3,16 +3,25 @@ from bots import zoterobot
 import requests, time, re, json, csv
 import os, glob, sys, shutil
 from pathlib import Path
-import pandas
+import pandas, shutil
 from bots import xwbi
 
 def create_profile(name=""):
-    if re.search(r'[^a-zA-Z0-9_]', name) or len(name) > 8:
-        return {'messages': ["Invalid input. The profile name may only contain a-z, A-Z letters, numbers and underscores, and be max 8 characters long."],
+    if re.search(r'[^a-zA-Z0-9_]', name) or len(name) < 3 or len(name) > 10:
+        return {'messages': ["Invalid input. The profile name may only contain a-z, A-Z letters, numbers and underscores, and be min 3 and max 10 characters long."],
                 'msgcolor': 'background:orangered'}
-    # TODO: create profile folder with NULL values
-    return True
-
+    with open('bots/profiles.json', 'r', encoding='utf-8') as file:
+        profiles = json.load(file)
+    if name in profiles['active_profiles']:
+        return {'messages': ["Invalid input. The profile name already exists. Choose a different identifier for the new profile."],
+                'msgcolor': 'background:orangered'}
+    shutil.copytree('bots/profiles/profile.template', f"bots/profiles/{name}")
+    existing_profiles.append(name)
+    profiles['active_profile'] = name
+    with open('bots/profiles.json', 'w', encoding='utf-8') as file:
+        json.dump(profiles, file, indent=2)
+    return {'messages': [f"Successfully created and activated new profile <b>'{name}'</b>.", 'Now go to <a href="/basic_config">Basic Configuration</a>.'],
+                'msgcolor': 'background:limegreen'}
 
 def check_prop_id(propstring):
     if propstring == "False" or propstring == "X":
@@ -28,7 +37,7 @@ def build_depconfig(configdata):
     configdata['mapping']['wikibase_api_url'] = wikibase_url + "/w/api.php"
     configdata['mapping']['wikibase_sparql_endpoint'] = wikibase_url + "/query/sparql"
     configdata['mapping']['wikibase_rest_url'] = wikibase_url + "/w/rest.php"
-    configdata['mapping']['wikibase_index_url'] = wikibase_url + "/w/index.php'"
+    configdata['mapping']['wikibase_index_url'] = wikibase_url + "/w/index.php"
     configdata['mapping']['wikibase_sparql_prefixes'] = ('\n').join([
         "PREFIX xwb: <" + wikibase_url + "/entity/>",
         "PREFIX xdp: <" + wikibase_url + "/prop/direct/>",
