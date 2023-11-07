@@ -17,7 +17,7 @@ from wikibaseintegrator.wbi_config import config as wbi_config
 # load active profile
 with open(f"bots/profiles.json", 'r', encoding='utf-8') as file:
     profile = json.load(file)['last_profile']
-with open(f"bots/{profile}/config_private.json", 'r', encoding="utf-8") as jsonfile:
+with open(f"bots/profiles/{profile}/config_private.json", 'r', encoding="utf-8") as jsonfile:
 	config_private = json.load(jsonfile)
 config = botconfig.load_mapping('config')
 print(str(config['mapping']['wikibase_api_url']))
