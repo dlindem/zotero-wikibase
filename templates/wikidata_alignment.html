@@ -24,8 +24,9 @@ If you update a property alignment here, you don't need to to do this.
         {% else %}
         No alignment
         {% endif %}
+        <form method="POST">
         <input style="display: inline;" type="text" placeholder={{ properties[wbprop]['wdprop'] }} name = {{ wbprop }} style="width: 40px;" />
-    <input type="submit" value="Update this"/>
+    <input type="submit" value="Update this"/></form>
         {% if properties[wbprop]['wdprop'] %}
 
 <form style="display: inline;" method="POST">

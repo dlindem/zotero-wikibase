@@ -25,8 +25,8 @@ def getzotitem(zotitemid):
     pass
 
 
-def getexport(save_to_file=False):
-    rawitems = pyzot.items(tag=config['mapping']['zotero_export_tag'])
+def getexport(tag=config['mapping']['zotero_export_tag'], save_to_file=False, file="zoteroexport.json"):
+    rawitems = pyzot.items(tag=tag)
     exportitems = []
     for rawitem in rawitems:
         regex = re.search(rf"{config['mapping']['wikibase_entity_ns']}(Q[0-9]+)", rawitem['data']['extra'])
@@ -35,8 +35,8 @@ def getexport(save_to_file=False):
         else:
             rawitem['wikibase_entity'] = False
         exportitems.append(rawitem)
-    if save_to_file:
-        with open('data/zoteroexport.json', 'w', encoding='utf-8') as jsonfile:
+    if len(exportitems) > 0 and save_to_file:
+        with open(f"data/{file}", 'w', encoding='utf-8') as jsonfile:
             json.dump(exportitems, jsonfile, indent=2)
     return exportitems
 
@@ -106,14 +106,20 @@ def patch_item(qid=None, zotitem=None, children=[]):
         zotitem['data']['tags'].append({'tag': config['mapping']['zotero_on_wikibase_tag']})
         needs_update = True
     if needs_update:
-        del zotitem['wikibase_entity'] # raises zotero api error if left in item
-        try:
-            pyzot.update_item(zotitem, last_modified=None)
-            return True
-        except Exception as err:
-            if "Item has been modified since specified version" in str(err):
-                return "Versioning_Error"
-            else:
-                return False
+        return (zotero_update_item(zotitem))
+    else:
+        return f"Item {zotitem} successfully updated."
+
+def zotero_update_item(zotitem):
+    del zotitem['wikibase_entity']  # raises zotero api error if left in item
+    try:
+        pyzot.update_item(zotitem, last_modified=None)
+        return f"Successfully updated Zotero item <code><a href=\"{zotitem['links']['alternate']['href']}\" target=\"_blank\">{zotitem['key']}</a></code>."
+    except Exception as err:
+        if "Item has been modified since specified version" in str(err):
+            return f"Versioning Error (has been modified since) *** <code><a href=\"{zotitem['links']['alternate']['href']}\" target=\"_blank\">{zotitem['key']}</a></code>: Reload records to be exported from Zotero."
+        else:
+            return f"Unknown error updating *** <code><a href=\"{zotitem['links']['alternate']['href']}\" target=\"_blank\">{zotitem['key']}</a></code>: Reload records to be exported from Zotero."
+
 
 print('zoterobot load finished.')

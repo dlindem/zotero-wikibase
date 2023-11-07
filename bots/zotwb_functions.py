@@ -4,7 +4,7 @@ import requests, time, re, json, csv
 import os, glob, sys, shutil
 from pathlib import Path
 import pandas, shutil
-from bots import xwbi
+# from bots import xwbi
 
 def create_profile(name=""):
     if re.search(r'[^a-zA-Z0-9_]', name) or len(name) < 3 or len(name) > 10:
@@ -259,6 +259,78 @@ def check_export(zoterodata=[], zoteromapping={}):
         messages = ['<span style="color:green">All datafields containing data in this dataset are mapped to Wikibase properties or set to be ignored.</span>']
     return messages
 
+def check_language(zoterodata=[]):
+    configdata = botconfig.load_mapping('config')
+    iso3mapping = botconfig.load_mapping('iso-639-3')
+    iso1mapping = botconfig.load_mapping('iso-639-1')
+    language_literals = botconfig.load_mapping('language-literals')
+    messages = {'nullitems':[], 'nomaps':{}, 'languages': set()}
+    nomaps = {}
+    for item in zoterodata:
+        if 'language' not in item['data']:
+            continue
+        langval = item['data']['language']
+        languageqid = False
+        if len(langval) == 0:
+            messages['nullitems'].append(f"<code><a href=\"{item['links']['alternate']['href']}/item-details\", target=\"_blank\">{item['key']}</a></code>")
+        if len(langval) == 2:  # should be a ISO-639-1 code
+            if langval.lower() in iso1mapping['mapping']:
+                oldval = langval
+                langval = iso1mapping['mapping'][langval.lower()]
+                print(f"Language field: Found two-digit language code '{oldval}' and converted to three-letter code '{langval}'.")
+        if len(langval) == 3:  # should be a ISO-639-3 code
+            if langval.lower() in iso3mapping['mapping']:
+                languageqid = iso3mapping['mapping'][langval.lower()]['wbqid']
+                print('Language field: Found three-digit language code, mapped to ' +
+                      iso3mapping['mapping'][langval.lower()]['enlabel'], languageqid)
+                messages['languages'].add(iso3mapping['mapping'][langval.lower()]['enlabel'])
+                if languageqid == None:  # Language item is still not on the wikibase (got 'None' from iso3mapping)
+                    languagewdqid = iso3mapping['mapping'][langval]['wdqid']
+                    print(
+                        f"No item defined for this language on your Wikibase. This language is {languagewdqid} on Wikidata. I'll import that and use it from now on.")
+                    languageqid = import_wikidata_entity(languagewdqid,
+                                                                         classqid=configdata['mapping']['class_language'][
+                                                                             'wikibase'])
+                    iso3mapping['mapping'][langval]['wbqid'] = languageqid
+                    botconfig.dump_mapping(iso3mapping)
+                    print(f"Imported wd:{languagewdqid} to wb:{languageqid}.")
+        if languageqid == False:  # Can't identify language using ISO 639-1 or 639-3
+            if langval in language_literals['mapping']:
+                languageqid = language_literals['mapping'][langval]['wbqid']
+                print('Language field: Found stored language literal, mapped to ' +
+                      iso3mapping['mapping'][language_literals['mapping'][langval]]['enlabel'])
+            elif len(langval) > 1:  # if there is a string that could be useful
+                print(f"{langval}': This value could not be matched to any language.")
+                if langval not in messages['nomaps']:
+                    messages['nomaps'][langval] = []
+                messages['nomaps'][langval].append(f"<code><a href=\"{item['links']['alternate']['href']}/item-details\" target=\"_blank\">{item['key']}</a></code>")
+    return messages
+
+def edit_language_literal(literal="", iso3="", zoterodata=[]):
+    messages = []
+    if len(iso3) != 3 or re.search(r'[^a-zA-Z]', iso3):
+        return {'message':f"Bad input: {iso3}.", 'msgcolor':'background:orangered'}
+    newdata = []
+    for item in zoterodata:
+        if 'language' in item['data']:
+            if item['data']['language'].strip() == literal:
+                item['data']['language'] = iso3
+                messages.append(zoterobot.zotero_update_item(item))
+            newdata.append(item)
+    return {'messages': messages, 'msgcolor': 'background:limegreen', 'data':newdata}
+
+def geteditbatch(tag=""):
+    batchitems = zoterobot.getexport(tag=tag, save_to_file=True, file="zoteroeditbatch.json")
+    if len(batchitems) == 0:
+        return {'messages': [f"Error: Have got 0 items to batch edit. Repeat the operation."], 'msgcolor': 'background:orangered', 'batchitems': [], 'datafields':[]}
+    datafields = set()
+    fields_to_exclude = ['creators', 'relations', 'tags', 'itemType', 'key', 'accessDate', 'dateAdded']
+    for item in batchitems:
+        for fieldname in item['data']:
+            if fieldname not in fields_to_exclude:
+                datafields.add(fieldname)
+    return {'messages': [f"Successfully ingested {str(len(batchitems))} records to batch edit."], 'msgcolor': 'background:limegreen', 'batchitems': batchitems, 'datafields':list(datafields)}
+
 def lookup_doi():
     zoteromapping = botconfig.load_mapping(('zotero'))
     if not zoteromapping['mapping']['all_types']['fields']['DOI']['wbprop']:
@@ -401,7 +473,7 @@ def get_creators(qid=None):
         creators[creatorprop] = item['list']['value'].split(',')
     return creators
 
-def wikibase_upload(data=[]):
+def wikibase_upload(data=[], onlynew=False):
     # iterate through zotero records and do wikibase upload
     config = botconfig.load_mapping('config')
     iso3mapping = botconfig.load_mapping('iso-639-3')
@@ -417,7 +489,7 @@ def wikibase_upload(data=[]):
     for item in data:
         count += 1
         print(f"\n[{str(count)}] Now processing item '{item['links']['alternate']['href']}'...")
-        qid = item['wikibase_entity'] # is False if zotero getexport function has not found a Wikibase Qid in 'extra'
+        qid = item['wikibase_entity'] # is False if zotero getexport function has not found an item URI in this wb entity namespace in 'extra'
         # instance of and bibItem type
         itemtype = item['data']['itemType']
         statements = [
@@ -443,6 +515,10 @@ def wikibase_upload(data=[]):
                     print('Found link attachment: This item is linked to ' + config['mapping']['wikibase_entity_ns'] + qid)
         else:
             children = []
+        if qid and onlynew == True:
+            print(f"Item is already on wikibase as {qid}, skipped.")
+            returndata.append(item)
+            continue
         statements.append({'prop_nr': config['mapping']['prop_zotero_item']['wikibase'], 'type': 'ExternalId',
                            'value': item['data']['key'],
                            'qualifiers': attqualis, 'action':'replace'})
@@ -465,43 +541,44 @@ def wikibase_upload(data=[]):
 
         ## language
         if 'language' in item['data']:
+            langval = item['data']['language']
             languageqid = False
-            if len(item['data']['language']) == 2:  # should be a ISO-639-1 code
-                if item['data']['language'].lower() in iso1mapping['mapping']:
-                    item['data']['language'] = iso1mapping['mapping'][item['data']['language'].lower()]
-                    languageqid = iso3mapping['mapping'][item['data']['language']]['wbqid']
+            if len(langval) == 2:  # should be a ISO-639-1 code
+                if langval.lower() in iso1mapping['mapping']:
+                    langval = iso1mapping['mapping'][langval.lower()]
+                    languageqid = iso3mapping['mapping'][langval]['wbqid']
                     print('Language field: Found two-digit language code, mapped to ' +
-                          iso3mapping['mapping'][item['data']['language'].lower()]['enlabel'], languageqid)
-            elif len(item['data']['language']) == 3:  # should be a ISO-639-3 code
-                if item['data']['language'].lower() in iso3mapping['mapping']:
-                    languageqid = iso3mapping['mapping'][item['data']['language'].lower()]['wbqid']
+                          iso3mapping['mapping'][langval.lower()]['enlabel'], languageqid)
+            elif len(langval) == 3:  # should be a ISO-639-3 code
+                if langval.lower() in iso3mapping['mapping']:
+                    languageqid = iso3mapping['mapping'][langval.lower()]['wbqid']
                     print('Language field: Found three-digit language code, mapped to ' +
-                          iso3mapping['mapping'][item['data']['language'].lower()]['enlabel'], languageqid)
+                          iso3mapping['mapping'][langval.lower()]['enlabel'], languageqid)
             if languageqid == False:  # Can't identify language using ISO 639-1 or 639-3
-                if item['data']['language'] in language_literals['mapping']:
-                    languageqid = iso3mapping['mapping'][language_literals['mapping'][item['data']['language']]]['wbqid']
+                if langval in language_literals['mapping']:
+                    languageqid = iso3mapping['mapping'][language_literals['mapping'][langval]]['wbqid']
                     print('Language field: Found stored language literal, mapped to ' +
-                          iso3mapping['mapping'][language_literals['mapping'][item['data']['language']]]['enlabel'])
-                elif len(item['data']['language']) > 1:  # if there is a string that could be useful
-                    print(f"Could not match the field content '{item['data']['language']}' to any language.")
+                          iso3mapping['mapping'][language_literals['mapping'][langval]]['enlabel'])
+                elif len(langval) > 1:  # if there is a string that could be useful
+                    print(f"Could not match the field content '{langval}' to any language.")
                     choice = None
                     choices = ["0", "1"]
                     while choice not in choices:
                         choice = input(
-                            f"Do you want to store '{item['data']['language']}' and associate that string to a language? '1' for yes, '0' for no.")
+                            f"Do you want to store '{langval}' and associate that string to a language? '1' for yes, '0' for no.")
                     if choice == "1":
                         iso3 = None
                         while iso3 not in iso3mapping['mapping']:
                             iso3 = input(
-                                f"Provide the ISO-639-3 three-letter code you want to associate to '{item['data']['language']}':")
+                                f"Provide the ISO-639-3 three-letter code you want to associate to '{langval}':")
                         languageqid = iso3mapping['mapping'][iso3]['wbqid']
             if languageqid == None:  # Language item is still not on the wikibase (got 'None' from iso3mapping)
-                languagewdqid = iso3mapping['mapping'][item['data']['language']]['wdqid']
+                languagewdqid = iso3mapping['mapping'][langval]['wdqid']
                 print(
                     f"No item defined for this language on your Wikibase. This language is {languagewdqid} on Wikidata. I'll import that and use it from now on.")
                 languageqid = zotwb_functions.import_wikidata_entity(languagewdqid,
                                                                    classqid=config['mapping']['class_language']['wikibase'])
-                iso3mapping['mapping'][item['data']['language']]['wbqid'] = languageqid
+                iso3mapping['mapping'][langval]['wbqid'] = languageqid
                 botconfig.dump_mapping(iso3mapping)
             if languageqid and config['mapping']['prop_language']['wikibase']:
                 statements.append(
@@ -691,7 +768,7 @@ def wikibase_upload(data=[]):
         qid = xwbi.itemwrite(itemdata, clear=False)
         if qid:  # if writing was successful (if not, qid is still False)
             patch_attempt = zoterobot.patch_item(qid=qid, zotitem=item, children=children)
-            if patch_attempt == "Versioning_Error":
+            if patch_attempt.startswith("Versioning Error"):
                 messages.append(
                     f"Upload to Wikibase successful, but item <a href=\"{item['links']['alternate']['href']}\">{item['key']}</a> has been changed on Zotero since data ingest, and could not be patched. Update Zotero export data ingest.")
                 msgcolor = 'background:orangered'
@@ -737,7 +814,7 @@ def export_creators():
     if len(data) == 0:
         message = f"SPARQL Query for unreconciled creator statements returned 0 results."
     else:
-        outfilename = f"data/unreconciled_creators/wikibase_creators_{time.strftime('%Y%m%d_%H%M%S', time.localtime())}.csv"
+        outfilename = f"data/creators_unreconciled/wikibase_creators_{time.strftime('%Y%m%d_%H%M%S', time.localtime())}.csv"
         data.to_csv(outfilename, index=False)
         message = f"Successfully exported {str(len(data))} unreconciled creator statements to <code>{outfilename}</code>."
     print(message)

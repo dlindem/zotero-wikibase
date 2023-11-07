@@ -1,6 +1,6 @@
 # Deduplicating and Reconciling person names in OpenRefine
 
-This function will produce a CSV sheet to be imported into OpenRefine, containing all unreconciled (i.e., literal only) creator statements (including all creator role properties). The CSV file will be saved in your [`data/unreconciled_creators`](data/unreconciled_creators) folder.
+This function will produce a CSV sheet to be imported into OpenRefine, containing all unreconciled (i.e., literal only) creator statements (including all creator role properties). The CSV file will be saved in your [`data/creators_unreconciled`](data/creators_unreconciled) folder.
 
 ## Deduplication (optional)
 
@@ -58,4 +58,4 @@ Deduplication using the [Clustering function](https://openrefine.org/docs/manual
     Specify the new column's name as REQUIRED: 
      * `Wikidata_Qid`
      * `Wikibase_Qid`
-5. Export as comma seperated value (csv) to your `data/reconciled_creators` folder using `Export > comma separated values`
+5. Export as comma seperated value (csv) to your `data/creators_reconciled` folder using `Export > comma separated values`

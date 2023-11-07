@@ -40,4 +40,4 @@ for binding in query_result['results']['bindings']:
     # data.concat(data, pdrow, ignore_index=True)
     data.loc[len(data)] = pdrow
 
-data.to_csv('data/unreconciled_creators/mlv_unrecon.csv', index=False)
+data.to_csv('data/creators_unreconciled/mlv_unrecon.csv', index=False)

@@ -71,6 +71,7 @@ def zotero_export():
     with open('data/zoteroexport.json', 'r', encoding='utf-8') as jsonfile:
         zoterodata = json.load(jsonfile)
         zotero_check_messages = zotwb_functions.check_export(zoterodata=zoterodata, zoteromapping=zoteromapping)
+        language_check_messages = zotwb_functions.check_language(zoterodata=zoterodata)
     if request.method == 'GET':
 
         return render_template("zotero_export.html", wikibase_url=configdata['mapping']['wikibase_url'],
@@ -80,6 +81,7 @@ def zotero_export():
                                zotero_group_id=configdata['mapping']['zotero_group_id'],
                                zoterodata=zoterodata,
                                zotero_check_messages=zotero_check_messages,
+                               language_check_messages=language_check_messages,
                                zotero_len=str(len(zoterodata)),
                                zotero_when=datetime.utcfromtimestamp(os.path.getmtime('data/zoteroexport.json')).strftime(
             '%Y-%m-%d at %H:%M:%S UTC'),
@@ -96,11 +98,35 @@ def zotero_export():
                     msgcolor = "background:limegreen"
                     zotero_check_messages = zotwb_functions.check_export(zoterodata=zoterodata,
                                                                          zoteromapping=zoteromapping)
+                    language_check_messages = zotwb_functions.check_language(zoterodata=zoterodata)
                 elif command == "do_upload":
-                    upload = zotwb_functions.wikibase_upload(data=zoterodata)
-                    messages = upload['messages']
-                    msgcolor = upload['msgcolor']
-                    zoterodata = upload['data']
+                    action = zotwb_functions.wikibase_upload(data=zoterodata)
+                    messages = action['messages']
+                    msgcolor = action['msgcolor']
+                    zoterodata = action['data']
+                    with open('data/zoteroexport.json', 'w', encoding='utf-8') as jsonfile:
+                        json.dump(zoterodata, jsonfile, indent=2)
+                elif command == "do_upload_new":
+                    action = zotwb_functions.wikibase_upload(data=zoterodata, onlynew=True)
+                    messages = action['messages']
+                    msgcolor = action['msgcolor']
+                    zoterodata = action['data']
+                    with open('data/zoteroexport.json', 'w', encoding='utf-8') as jsonfile:
+                        json.dump(zoterodata, jsonfile, indent=2)
+                elif command == 'batchedit_empty':
+                    literal = command.replace('litmap_','')
+                    action = zotwb_functions.edit_language_literal(literal="", iso3=request.form.get(command), zoterodata=zoterodata)
+                    messages = action['messages']
+                    msgcolor = action['msgcolor']
+                    zoterodata = action['data']
+                    with open('data/zoteroexport.json', 'w', encoding='utf-8') as jsonfile:
+                        json.dump(zoterodata, jsonfile, indent=2)
+                elif command.startswith('litmap_'):
+                    literal = command.replace('litmap_','')
+                    action = zotwb_functions.edit_language_literal(literal=literal, iso3=request.form.get(command), zoterodata=zoterodata)
+                    messages = action['messages']
+                    msgcolor = action['msgcolor']
+                    zoterodata = action['data']
                     with open('data/zoteroexport.json', 'w', encoding='utf-8') as jsonfile:
                         json.dump(zoterodata, jsonfile, indent=2)
         return render_template("zotero_export.html", wikibase_url=configdata['mapping']['wikibase_url'],
@@ -110,6 +136,7 @@ def zotero_export():
                                zotero_group_id=configdata['mapping']['zotero_group_id'],
                                zoterodata=zoterodata,
                                zotero_check_messages=zotero_check_messages,
+                               language_check_messages=language_check_messages,
                                zotero_len=str(len(zoterodata)),
                                zotero_when=datetime.utcfromtimestamp(os.path.getmtime('data/zoteroexport.json')).strftime(
             '%Y-%m-%d at %H:%M:%S UTC'),
@@ -350,7 +377,7 @@ def wikidata_alignment():
 @app.route('/openrefine_creators', methods= ['GET', 'POST'])
 def openrefine_creators():
     configdata = botconfig.load_mapping('config')
-    get_recon = zotwb_functions.get_recon_pd(folder="data/reconciled_creators")
+    get_recon = zotwb_functions.get_recon_pd(folder="data/creators_reconciled")
     recon_df = get_recon['data']
     recon_df.set_index('creatorstatement')
     recon_wd = str(len(recon_df.dropna(subset=['Wikidata_Qid'])))
@@ -369,7 +396,7 @@ def openrefine_creators():
                 msgcolor = "background:limegreen"
                 if key == "export_unreconciled_creators":
                     messages = zotwb_functions.export_creators()
-                    get_recon = zotwb_functions.get_recon_pd(folder="data/reconciled_creators")
+                    get_recon = zotwb_functions.get_recon_pd(folder="data/creators_reconciled")
                     recon_df = get_recon['data']
                     recon_df.set_index('creatorstatement')
                     recon_wd = str(len(recon_df.dropna(subset=['Wikidata_Qid'])))
@@ -395,7 +422,7 @@ split_char = None
 @app.route('/openrefine_anystring', methods= ['GET', 'POST'])
 def openrefine_anystring():
     configdata = botconfig.load_mapping('config')
-    # get_recon = zotwb_functions.get_recon_pd(folder="data/reconciled_creators")
+    # get_recon = zotwb_functions.get_recon_pd(folder="data/creators_reconciled")
     # recon_df = get_recon['data']
     # recon_df.set_index('creatorstatement')
     # recon_wd = str(len(recon_df.dropna(subset=['Wikidata_Qid'])))
@@ -435,7 +462,7 @@ def openrefine_anystring():
 
 
                     # messages = zotwb_functions.export_creators()
-                    # get_recon = zotwb_functions.get_recon_pd(folder="data/reconciled_creators")
+                    # get_recon = zotwb_functions.get_recon_pd(folder="data/creators_reconciled")
                     # recon_df = get_recon['data']
                     # recon_df.set_index('creatorstatement')
                     # recon_wd = str(len(recon_df.dropna(subset=['Wikidata_Qid'])))
@@ -456,15 +483,27 @@ def openrefine_anystring():
 
 @app.route('/little_helpers', methods= ['GET', 'POST'])
 def little_helpers():
-    # configdata = botconfig.load_mapping('config')
+    configdata = botconfig.load_mapping('config')
     # zoteromapping = botconfig.load_mapping('zotero')
     messages = []
+    batch_tag = None
+    datafields = []
+    batchlen = 0
     msgcolor = "background:limegreen"
     if request.method == 'GET':
-        return render_template("little_helpers.html", messages=messages, msgcolor=msgcolor)
+        return render_template("little_helpers.html", wikibase_name=configdata['mapping']['wikibase_name'],
+                               zoterogrp_name=configdata['mapping']['zotero_group_name'], batch_tag=batch_tag,
+                               datafields=datafields, batchlen=batchlen,
+                               messages=messages, msgcolor=msgcolor)
     if request.method == "POST":
         if request.form:
             for key in request.form:
+                if key == "specify_batch_tag":
+                    batch_tag = request.form.get(key)
+                    action = zotwb_functions.geteditbatch(tag=batch_tag)
+                    datafields = action['datafields']
+                    batchlen = str(len(action['batchitems']))
+                #TODO batchedit
                 if key == "doi_lookup":
                     action = zotwb_functions.lookup_doi()
                 if key == "issn_lookup":
@@ -473,7 +512,10 @@ def little_helpers():
                     action = zotwb_functions.link_chapters()
                 messages = action['messages']
                 msgcolor = action['msgcolor']
-        return render_template("little_helpers.html", messages=messages, msgcolor=msgcolor)
+        return render_template("little_helpers.html", wikibase_name=configdata['mapping']['wikibase_name'],
+                               zoterogrp_name=configdata['mapping']['zotero_group_name'], batch_tag=batch_tag,
+                               datafields=datafields, batchlen=batchlen,
+                               messages=messages, msgcolor=msgcolor)
 
 if __name__ == '__main__':
     app.run(debug=True)

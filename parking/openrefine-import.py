@@ -13,7 +13,7 @@ config = botconfig.load_mapping("config")
 # This expects a csv with the following colums:
 # bibItem [bibitem xwb Qid] / creatorstatement / listpos / fullName / Qid [reconciled person item xwb-qid] / givenName / lastName
 
-list_of_files = glob.glob('data/reconciled_creators/*.csv') # * means all if need specific format then *.csv
+list_of_files = glob.glob('data/creators_reconciled/*.csv') # * means all if need specific format then *.csv
 infile = max(list_of_files, key=os.path.getctime)
 origfile = infile.replace('.csv','.csv.copy')
 if not Path(origfile).is_file():

@@ -1,1 +1,564 @@
-[]
+[
+  {
+    "key": "9L749SZ5",
+    "version": 1342,
+    "library": {
+      "type": "group",
+      "id": 5165329,
+      "name": "MLV",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/mlv",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5165329/items/9L749SZ5",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/mlv/items/9L749SZ5",
+        "type": "text/html"
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Baztarrika",
+      "parsedDate": "2015",
+      "numChildren": 0
+    },
+    "data": {
+      "key": "9L749SZ5",
+      "version": 1342,
+      "itemType": "book",
+      "title": "Errugbia hiztegia",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Patxi",
+          "lastName": "Baztarrika"
+        }
+      ],
+      "abstractNote": "",
+      "series": "",
+      "seriesNumber": "",
+      "volume": "",
+      "numberOfVolumes": "",
+      "edition": "1. argit",
+      "place": "Vitoria-Gasteiz",
+      "publisher": "Eusko Jaurlaritzaren Argitalpen Zerbitzu Nagusia",
+      "date": "2015",
+      "numPages": "90",
+      "language": "eus",
+      "ISBN": "978-84-457-3386-8",
+      "shortTitle": "",
+      "url": "http://www.euskadi.net/euskalterm",
+      "accessDate": "2022-12-29T14:00:57Z",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "Open WorldCat",
+      "callNumber": "",
+      "rights": "",
+      "extra": "OCLC: 943664046",
+      "tags": [
+        {
+          "tag": ":period Q653"
+        },
+        {
+          "tag": "wikibase-export"
+        }
+      ],
+      "collections": [
+        "AEUY97BC"
+      ],
+      "relations": {
+        "owl:sameAs": "http://zotero.org/groups/1892855/items/PH4855LK"
+      },
+      "dateAdded": "2023-09-02T13:46:16Z",
+      "dateModified": "2023-11-07T22:09:02Z"
+    }
+  },
+  {
+    "key": "935WMP54",
+    "version": 1342,
+    "library": {
+      "type": "group",
+      "id": 5165329,
+      "name": "MLV",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/mlv",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5165329/items/935WMP54",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/mlv/items/935WMP54",
+        "type": "text/html"
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Baztarrika",
+      "parsedDate": "2015",
+      "numChildren": 0
+    },
+    "data": {
+      "key": "935WMP54",
+      "version": 1342,
+      "itemType": "book",
+      "title": "Herri-ogasuna hiztegia",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Patxi",
+          "lastName": "Baztarrika"
+        }
+      ],
+      "abstractNote": "",
+      "series": "",
+      "seriesNumber": "",
+      "volume": "",
+      "numberOfVolumes": "",
+      "edition": "1. argit",
+      "place": "Vitoria-Gasteiz",
+      "publisher": "Eusko Jaurlaritzaren Argitalpen Zerbitzu Nagusia",
+      "date": "2015",
+      "numPages": "97",
+      "language": "eus",
+      "ISBN": "978-84-457-3381-3",
+      "shortTitle": "",
+      "url": "http://www.euskadi.net/euskalterm",
+      "accessDate": "2022-12-29T14:00:31Z",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "Open WorldCat",
+      "callNumber": "",
+      "rights": "",
+      "extra": "OCLC: 943664933",
+      "tags": [
+        {
+          "tag": ":period Q653"
+        },
+        {
+          "tag": "wikibase-export"
+        }
+      ],
+      "collections": [
+        "AEUY97BC"
+      ],
+      "relations": {
+        "owl:sameAs": "http://zotero.org/groups/1892855/items/I66Y7KT4"
+      },
+      "dateAdded": "2023-09-02T13:46:16Z",
+      "dateModified": "2023-11-07T22:09:02Z"
+    }
+  },
+  {
+    "key": "CTWS3F24",
+    "version": 1329,
+    "library": {
+      "type": "group",
+      "id": 5165329,
+      "name": "MLV",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/mlv",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5165329/items/CTWS3F24",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/mlv/items/CTWS3F24",
+        "type": "text/html"
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Alonso and Lindemann",
+      "parsedDate": "2022-03-30",
+      "numChildren": 2
+    },
+    "data": {
+      "key": "CTWS3F24",
+      "version": 1329,
+      "itemType": "journalArticle",
+      "title": "Larramendiren Hiztegi Hirukoitzaren digitalizazioa. Karaktereen ezagutze optikoa eta Wikitekara igotzea",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Mikel",
+          "lastName": "Alonso"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "David",
+          "lastName": "Lindemann"
+        }
+      ],
+      "abstractNote": "",
+      "publicationTitle": "Uztaro. Giza eta gizarte-zientzien aldizkaria",
+      "volume": "",
+      "issue": "120",
+      "pages": "83-93",
+      "date": "2022-03-30",
+      "series": "",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "Uztaro",
+      "language": "eus",
+      "DOI": "10.26876/uztaro.120.2022.5",
+      "ISSN": "1130-5738",
+      "shortTitle": "",
+      "url": "http://www.uztaro.eus/artikulua/170/larramendiren-hiztegi-hirukoitzaren-digitalizazioa-karaktereen-ezagutze-optikoa-eta-wikitekara-igotzea/2109",
+      "accessDate": "2022-11-29T20:41:12Z",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "DOI.org (Crossref)",
+      "callNumber": "",
+      "rights": "",
+      "extra": "https://monumenta.wikibase.cloud/entity/Q410",
+      "tags": [
+        {
+          "tag": "on-wikibase"
+        },
+        {
+          "tag": "wikibase-export"
+        }
+      ],
+      "collections": [
+        "S9QUAFB8"
+      ],
+      "relations": {
+        "owl:sameAs": "http://zotero.org/groups/1892855/items/6J3T9FNU"
+      },
+      "dateAdded": "2023-09-02T22:12:20Z",
+      "dateModified": "2023-11-07T21:22:45Z"
+    },
+    "wikibase_entity": "Q410"
+  },
+  {
+    "key": "WFAC63FG",
+    "version": 1328,
+    "library": {
+      "type": "group",
+      "id": 5165329,
+      "name": "MLV",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/mlv",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5165329/items/WFAC63FG",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/mlv/items/WFAC63FG",
+        "type": "text/html"
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "K\u00fchnel",
+      "parsedDate": "1999",
+      "numChildren": 3
+    },
+    "data": {
+      "key": "WFAC63FG",
+      "version": 1328,
+      "itemType": "book",
+      "title": "W\u00f6rterbuch des Baskischen",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Helmut",
+          "lastName": "K\u00fchnel"
+        }
+      ],
+      "abstractNote": "Diccionario euskara-alem\u00e1n (5000 entradas), alem\u00e1n-euskara (8500 entradas), basado en el 2000 Hiztegia.",
+      "series": "",
+      "seriesNumber": "",
+      "volume": "",
+      "numberOfVolumes": "",
+      "edition": "",
+      "place": "Wiesbaden",
+      "publisher": "Reichert",
+      "date": "1999",
+      "numPages": "225",
+      "language": "deu",
+      "ISBN": "978-3-89500-121-5",
+      "shortTitle": "",
+      "url": "",
+      "accessDate": "",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "",
+      "callNumber": "",
+      "rights": "",
+      "extra": "https://monumenta.wikibase.cloud/entity/Q770\nOCLC: 231837149",
+      "tags": [
+        {
+          "tag": ":period Q653"
+        },
+        {
+          "tag": ":type DictionaryDistribution"
+        },
+        {
+          "tag": "on-wikibase"
+        },
+        {
+          "tag": "wikibase-export"
+        }
+      ],
+      "collections": [
+        "AEUY97BC"
+      ],
+      "relations": {
+        "owl:sameAs": "http://zotero.org/groups/1892855/items/7PYZTEB9"
+      },
+      "dateAdded": "2023-09-02T13:46:19Z",
+      "dateModified": "2023-11-07T20:11:49Z"
+    },
+    "wikibase_entity": "Q770"
+  },
+  {
+    "key": "M8YS6PU5",
+    "version": 1323,
+    "library": {
+      "type": "group",
+      "id": 5165329,
+      "name": "MLV",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/mlv",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5165329/items/M8YS6PU5",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/mlv/items/M8YS6PU5",
+        "type": "text/html"
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Estornes Lasa",
+      "parsedDate": "1965",
+      "numChildren": 2
+    },
+    "data": {
+      "key": "M8YS6PU5",
+      "version": 1323,
+      "itemType": "book",
+      "title": "Diccionario Au\u00f1amendi espa\u00f1ol-vasco = Au\u00f1amendi erdal-euskal iztegia",
+      "creators": [
+        {
+          "creatorType": "contributor",
+          "firstName": "Bernardo",
+          "lastName": "Estornes Lasa"
+        }
+      ],
+      "abstractNote": "",
+      "series": "Au\u00f1amendi",
+      "seriesNumber": "",
+      "volume": "",
+      "numberOfVolumes": "",
+      "edition": "",
+      "place": "San Sebasti\u00e1n",
+      "publisher": "Au\u00f1amendi",
+      "date": "1965",
+      "numPages": "1",
+      "language": "spa",
+      "ISBN": "978-84-7025-180-1",
+      "shortTitle": "",
+      "url": "",
+      "accessDate": "",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "Open WorldCat",
+      "callNumber": "",
+      "rights": "",
+      "extra": "https://monumenta.wikibase.cloud/entity/Q311\nOCLC: 971863227",
+      "tags": [
+        {
+          "tag": ":period Q652"
+        },
+        {
+          "tag": "on-wikibase"
+        },
+        {
+          "tag": "wikibase-export"
+        }
+      ],
+      "collections": [
+        "VC2E25V9"
+      ],
+      "relations": {
+        "owl:sameAs": "http://zotero.org/groups/1892855/items/KYXMHY52"
+      },
+      "dateAdded": "2023-09-02T13:44:14Z",
+      "dateModified": "2023-11-07T18:43:01Z"
+    },
+    "wikibase_entity": "Q311"
+  },
+  {
+    "key": "XLQV2IQ5",
+    "version": 1323,
+    "library": {
+      "type": "group",
+      "id": 5165329,
+      "name": "MLV",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/mlv",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5165329/items/XLQV2IQ5",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/mlv/items/XLQV2IQ5",
+        "type": "text/html"
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "von Humboldt",
+      "parsedDate": "1801",
+      "numChildren": 2
+    },
+    "data": {
+      "key": "XLQV2IQ5",
+      "version": 1323,
+      "itemType": "manuscript",
+      "title": "Diccionario Bascuence-Castellano para servir de Indice al Diccionario triling\u00fce Castellano-Bascuence y Latin del P. Manuel de Larramendi. Dialecto Guipuzcoano",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Wilhelm",
+          "lastName": "von Humboldt"
+        }
+      ],
+      "abstractNote": "",
+      "manuscriptType": "",
+      "place": "",
+      "date": "1801",
+      "numPages": "",
+      "language": "",
+      "shortTitle": "",
+      "url": "",
+      "accessDate": "",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "",
+      "callNumber": "",
+      "rights": "",
+      "extra": "https://monumenta.wikibase.cloud/entity/Q308",
+      "tags": [
+        {
+          "tag": ":period Q651"
+        },
+        {
+          "tag": "on-wikibase"
+        },
+        {
+          "tag": "wikibase-export"
+        }
+      ],
+      "collections": [
+        "GAEDNEYN"
+      ],
+      "relations": {
+        "owl:sameAs": "http://zotero.org/groups/1892855/items/M8ID8ECY"
+      },
+      "dateAdded": "2023-09-02T13:44:14Z",
+      "dateModified": "2023-11-07T18:33:46Z"
+    },
+    "wikibase_entity": "Q308"
+  }
+]

@@ -2050,10 +2050,7 @@
           "wbprop": null
         },
         "journalAbbreviation": {
-          "wbprop": null
-        },
-        "language": {
-          "wbprop": "P12"
+          "wbprop": false
         },
         "DOI": {
           "wbprop": "P18"
@@ -2066,9 +2063,6 @@
         },
         "url": {
           "wbprop": "P86"
-        },
-        "accessDate": {
-          "wbprop": false
         },
         "archive": {
           "wbprop": null
@@ -2084,9 +2078,6 @@
         },
         "rights": {
           "wbprop": false
-        },
-        "extra": {
-          "wbprop": "P55"
         }
       },
       "creatorTypes": {

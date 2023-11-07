@@ -1,0 +1,3176 @@
+[
+  {
+    "key": "G7X86IFE",
+    "version": 1301,
+    "library": {
+      "type": "group",
+      "id": 5165329,
+      "name": "MLV",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/mlv",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5165329/items/G7X86IFE",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/mlv/items/G7X86IFE",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/5165329/items/T3SGFH4T",
+        "type": "application/json",
+        "attachmentType": "image/png",
+        "attachmentSize": 505684
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Uribarren et al.",
+      "parsedDate": "1996",
+      "numChildren": 6
+    },
+    "data": {
+      "key": "G7X86IFE",
+      "version": 1301,
+      "itemType": "book",
+      "title": "3000 hiztegia",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Patxi",
+          "lastName": "Uribarren"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Ricardo",
+          "lastName": "Badiola"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Juan Luis",
+          "lastName": "Goikoetxea"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Luis",
+          "lastName": "Baraiazarra"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Txomin",
+          "lastName": "Solabarrieta"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Gotzon",
+          "lastName": "Aurrekoetxea"
+        }
+      ],
+      "abstractNote": "",
+      "series": "",
+      "seriesNumber": "",
+      "volume": "",
+      "numberOfVolumes": "",
+      "edition": "",
+      "place": "Bilbo",
+      "publisher": "Bostak Bat Lantaldea",
+      "date": "1996",
+      "numPages": "1250",
+      "language": "eus",
+      "ISBN": "978-84-605-4459-3",
+      "shortTitle": "",
+      "url": "",
+      "accessDate": "",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "Agencia del ISBN",
+      "callNumber": "",
+      "rights": "",
+      "extra": "https://monumenta.wikibase.cloud/entity/Q775",
+      "tags": [
+        {
+          "tag": ":period Q653"
+        },
+        {
+          "tag": ":type DictionaryDistribution"
+        },
+        {
+          "tag": "heldu-baso"
+        },
+        {
+          "tag": "on-wikibase"
+        }
+      ],
+      "collections": [
+        "AEUY97BC"
+      ],
+      "relations": {
+        "owl:sameAs": "http://zotero.org/groups/1892855/items/HRDERXVJ"
+      },
+      "dateAdded": "2023-09-02T13:46:19Z",
+      "dateModified": "2023-10-31T16:58:11Z"
+    },
+    "wikibase_entity": "Q775"
+  },
+  {
+    "key": "64VQ8GHA",
+    "version": 1301,
+    "library": {
+      "type": "group",
+      "id": 5165329,
+      "name": "MLV",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/mlv",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5165329/items/64VQ8GHA",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/mlv/items/64VQ8GHA",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/5165329/items/AYLGVFMJ",
+        "type": "application/json",
+        "attachmentType": "image/png",
+        "attachmentSize": 973183
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Sarasola",
+      "parsedDate": "1994",
+      "numChildren": 8
+    },
+    "data": {
+      "key": "64VQ8GHA",
+      "version": 1301,
+      "itemType": "book",
+      "title": "Hauta-Lanerako euskal hiztegia",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Ibon",
+          "lastName": "Sarasola"
+        }
+      ],
+      "abstractNote": "",
+      "series": "",
+      "seriesNumber": "",
+      "volume": "",
+      "numberOfVolumes": "",
+      "edition": "",
+      "place": "Donostia",
+      "publisher": "Caja de Ahorros Provincial de Guip\u00fazcoa",
+      "date": "1994",
+      "numPages": "",
+      "language": "eus",
+      "ISBN": "84-7580-067-X",
+      "shortTitle": "Hauta-Lanerako euskal hiztegia",
+      "url": "",
+      "accessDate": "",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "Google Books",
+      "callNumber": "",
+      "rights": "",
+      "extra": "https://monumenta.wikibase.cloud/entity/Q773\n00000",
+      "tags": [
+        {
+          "tag": ":period Q653"
+        },
+        {
+          "tag": ":type DictionaryDistribution"
+        },
+        {
+          "tag": "heldu-baso"
+        },
+        {
+          "tag": "on-wikibase"
+        }
+      ],
+      "collections": [
+        "AEUY97BC"
+      ],
+      "relations": {
+        "owl:sameAs": "http://zotero.org/groups/1892855/items/S88PA5RP"
+      },
+      "dateAdded": "2023-09-02T13:46:19Z",
+      "dateModified": "2023-10-31T16:58:08Z"
+    },
+    "wikibase_entity": "Q773"
+  },
+  {
+    "key": "6XE4JW6X",
+    "version": 1300,
+    "library": {
+      "type": "group",
+      "id": 5165329,
+      "name": "MLV",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/mlv",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5165329/items/6XE4JW6X",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/mlv/items/6XE4JW6X",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/5165329/items/MN66NTZX",
+        "type": "application/json",
+        "attachmentType": "image/png",
+        "attachmentSize": 288331
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Aulestia and White",
+      "parsedDate": "1992",
+      "numChildren": 10
+    },
+    "data": {
+      "key": "6XE4JW6X",
+      "version": 1300,
+      "itemType": "book",
+      "title": "Euskara-Ingelesa Ingelesa-Euskara Hiztegia",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Gorka",
+          "lastName": "Aulestia"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Linda",
+          "lastName": "White"
+        }
+      ],
+      "abstractNote": "",
+      "series": "",
+      "seriesNumber": "",
+      "volume": "",
+      "numberOfVolumes": "",
+      "edition": "",
+      "place": "Donostia",
+      "publisher": "Elkar",
+      "date": "1992",
+      "numPages": "",
+      "language": "eus",
+      "ISBN": "978-84-8331-355-8",
+      "shortTitle": "",
+      "url": "http://books.google.com/books?id=uYJvWVocXx0C",
+      "accessDate": "",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "",
+      "callNumber": "",
+      "rights": "",
+      "extra": "https://monumenta.wikibase.cloud/entity/Q767",
+      "tags": [
+        {
+          "tag": ":period Q653"
+        },
+        {
+          "tag": ":type DictionaryDistribution"
+        },
+        {
+          "tag": "heldu-baso"
+        },
+        {
+          "tag": "on-wikibase"
+        }
+      ],
+      "collections": [
+        "AEUY97BC"
+      ],
+      "relations": {
+        "owl:sameAs": "http://zotero.org/groups/1892855/items/YCD37XEX"
+      },
+      "dateAdded": "2023-09-02T13:46:24Z",
+      "dateModified": "2023-10-30T22:55:16Z"
+    },
+    "wikibase_entity": "Q767"
+  },
+  {
+    "key": "EGN4CUEA",
+    "version": 1297,
+    "library": {
+      "type": "group",
+      "id": 5165329,
+      "name": "MLV",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/mlv",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5165329/items/EGN4CUEA",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/mlv/items/EGN4CUEA",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/5165329/items/NDE3EAAU",
+        "type": "application/json",
+        "attachmentType": "image/png",
+        "attachmentSize": 67219
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Kintana et al.",
+      "parsedDate": "1980",
+      "numChildren": 5
+    },
+    "data": {
+      "key": "EGN4CUEA",
+      "version": 1297,
+      "itemType": "book",
+      "title": "Hiztegia 80: euskara-espainiera, espainiera-euskara, vasco- espa\u00f1ol, espa\u00f1ol-vasco",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Xabier",
+          "lastName": "Kintana"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Jon",
+          "lastName": "Aurre"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Rikardo",
+          "lastName": "Badiola"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Sabin",
+          "lastName": "Egileor"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Juan Luis",
+          "lastName": "Goikoetxea"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Juanjo",
+          "lastName": "Zearreta"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Koldo",
+          "lastName": "Zuazo"
+        }
+      ],
+      "abstractNote": "",
+      "series": "",
+      "seriesNumber": "",
+      "volume": "",
+      "numberOfVolumes": "",
+      "edition": "2. arg.",
+      "place": "Bilbo",
+      "publisher": "Elkar",
+      "date": "1980",
+      "numPages": "",
+      "language": "eus",
+      "ISBN": "978-84-300-3368-3",
+      "shortTitle": "Hiztegia 80",
+      "url": "",
+      "accessDate": "",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "Open WorldCat",
+      "callNumber": "",
+      "rights": "",
+      "extra": "https://monumenta.wikibase.cloud/entity/Q766",
+      "tags": [
+        {
+          "tag": ":period Q653"
+        },
+        {
+          "tag": ":type DictionaryDistribution"
+        },
+        {
+          "tag": "heldu-baso"
+        },
+        {
+          "tag": "on-wikibase"
+        }
+      ],
+      "collections": [
+        "AEUY97BC"
+      ],
+      "relations": {
+        "owl:sameAs": "http://zotero.org/groups/1892855/items/YRY8ZFUD"
+      },
+      "dateAdded": "2023-09-02T13:46:24Z",
+      "dateModified": "2023-10-30T22:55:14Z"
+    },
+    "wikibase_entity": "Q766"
+  },
+  {
+    "key": "WPUVPE8H",
+    "version": 1319,
+    "library": {
+      "type": "group",
+      "id": 5165329,
+      "name": "MLV",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/mlv",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5165329/items/WPUVPE8H",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/mlv/items/WPUVPE8H",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/5165329/items/US7EUX99",
+        "type": "application/json",
+        "attachmentType": "image/png",
+        "attachmentSize": 500847
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Montiano and Urquijo",
+      "parsedDate": "1976",
+      "numChildren": 10
+    },
+    "data": {
+      "key": "WPUVPE8H",
+      "version": 1319,
+      "itemType": "book",
+      "title": "Diccionario \"IKAS\" Euskera-Castellano Castellano-Euskara. Dialectos vizca\u00edno y guipuzcoano",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Jos\u00e9 Antonio de",
+          "lastName": "Montiano"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Jos\u00e9 Ram\u00f3n de",
+          "lastName": "Urquijo"
+        }
+      ],
+      "abstractNote": "Con unas 10.000 palabras de las m\u00e1s usuales en los dialectos vizca\u00edno y guipuzcoano. Confeccionado por: J.A. de Montiano y Jos\u00e9 Ram\u00f3n de Urquijo con el asesoramiento de Carmelo de Echenagus\u00eda y Xabier Pe\u00f1a.",
+      "series": "",
+      "seriesNumber": "",
+      "volume": "",
+      "numberOfVolumes": "",
+      "edition": "",
+      "place": "Bilbao",
+      "publisher": "Academia Montiano",
+      "date": "1976",
+      "numPages": "",
+      "language": "spa",
+      "ISBN": "",
+      "shortTitle": "",
+      "url": "",
+      "accessDate": "",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "",
+      "callNumber": "",
+      "rights": "",
+      "extra": "https://monumenta.wikibase.cloud/entity/Q754",
+      "tags": [
+        {
+          "tag": ":period Q653"
+        },
+        {
+          "tag": ":type DictionaryDistribution"
+        },
+        {
+          "tag": "heldu-baso"
+        },
+        {
+          "tag": "on-wikibase"
+        }
+      ],
+      "collections": [
+        "AEUY97BC"
+      ],
+      "relations": {
+        "owl:sameAs": "http://zotero.org/groups/1892855/items/HQN2DFBY"
+      },
+      "dateAdded": "2023-09-02T13:46:24Z",
+      "dateModified": "2023-10-29T10:13:36Z"
+    },
+    "wikibase_entity": "Q754"
+  },
+  {
+    "key": "5H6XIL9M",
+    "version": 1320,
+    "library": {
+      "type": "group",
+      "id": 5165329,
+      "name": "MLV",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/mlv",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5165329/items/5H6XIL9M",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/mlv/items/5H6XIL9M",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/5165329/items/S3G2TGWT",
+        "type": "application/json",
+        "attachmentType": "image/jpeg",
+        "attachmentSize": 1032409
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Sota et al.",
+      "parsedDate": "1976",
+      "numChildren": 8
+    },
+    "data": {
+      "key": "5H6XIL9M",
+      "version": 1320,
+      "itemType": "book",
+      "title": "Diccionario Retana de autoridades de la lengua vasca: con cientos de miles de nuevas voces y acepciones, antiguas y modernas ...",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Manuel de la",
+          "lastName": "Sota"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Pierre",
+          "lastName": "Lafitte"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Lino de",
+          "lastName": "Akesolo"
+        }
+      ],
+      "abstractNote": "",
+      "series": "",
+      "seriesNumber": "",
+      "volume": "",
+      "numberOfVolumes": "",
+      "edition": "",
+      "place": "Bilbao",
+      "publisher": "La Gran Enciclopedia Vasca",
+      "date": "1976",
+      "numPages": "",
+      "language": "spa",
+      "ISBN": "84-248-0248-9",
+      "shortTitle": "Diccionario Retana de autoridades de la lengua vasca",
+      "url": "",
+      "accessDate": "",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "Open WorldCat",
+      "callNumber": "",
+      "rights": "",
+      "extra": "https://monumenta.wikibase.cloud/entity/Q752",
+      "tags": [
+        {
+          "tag": ":period Q653"
+        },
+        {
+          "tag": ":type DictionaryDistribution"
+        },
+        {
+          "tag": "heldu-baso"
+        },
+        {
+          "tag": "on-wikibase"
+        }
+      ],
+      "collections": [
+        "AEUY97BC"
+      ],
+      "relations": {
+        "owl:sameAs": "http://zotero.org/groups/1892855/items/TLIX8QGW"
+      },
+      "dateAdded": "2023-09-02T13:46:24Z",
+      "dateModified": "2023-10-29T10:13:32Z"
+    },
+    "wikibase_entity": "Q752"
+  },
+  {
+    "key": "YZY4PQRY",
+    "version": 1320,
+    "library": {
+      "type": "group",
+      "id": 5165329,
+      "name": "MLV",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/mlv",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5165329/items/YZY4PQRY",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/mlv/items/YZY4PQRY",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/5165329/items/R8ZN6RH7",
+        "type": "application/json",
+        "attachmentType": "text/html"
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Kintana",
+      "parsedDate": "1977",
+      "numChildren": 9
+    },
+    "data": {
+      "key": "YZY4PQRY",
+      "version": 1320,
+      "itemType": "book",
+      "title": "Euskal Hiztegi Modernoa",
+      "creators": [
+        {
+          "creatorType": "editor",
+          "firstName": "Xabier",
+          "lastName": "Kintana"
+        }
+      ],
+      "abstractNote": "",
+      "series": "",
+      "seriesNumber": "",
+      "volume": "",
+      "numberOfVolumes": "",
+      "edition": "",
+      "place": "Bilbao",
+      "publisher": "Cinsa",
+      "date": "1977",
+      "numPages": "731",
+      "language": "eu",
+      "ISBN": "978-84-7277-058-4",
+      "shortTitle": "",
+      "url": "",
+      "accessDate": "",
+      "archive": "",
+      "archiveLocation": "https://lexbib.elex.is/entity/Q33384",
+      "libraryCatalog": "",
+      "callNumber": "",
+      "rights": "",
+      "extra": "",
+      "tags": [
+        {
+          "tag": ":period Q653"
+        },
+        {
+          "tag": "heldu-baso"
+        }
+      ],
+      "collections": [
+        "AEUY97BC"
+      ],
+      "relations": {
+        "owl:sameAs": "http://zotero.org/groups/1892855/items/N286BQRF"
+      },
+      "dateAdded": "2023-09-02T13:46:24Z",
+      "dateModified": "2023-10-24T20:43:37Z"
+    },
+    "wikibase_entity": false
+  },
+  {
+    "key": "DIVPSRX5",
+    "version": 1306,
+    "library": {
+      "type": "group",
+      "id": 5165329,
+      "name": "MLV",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/mlv",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5165329/items/DIVPSRX5",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/mlv/items/DIVPSRX5",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/5165329/items/96PVZ5KT",
+        "type": "application/json",
+        "attachmentType": "image/png",
+        "attachmentSize": 117008
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Adorez Taldea",
+      "parsedDate": "2009",
+      "numChildren": 5
+    },
+    "data": {
+      "key": "DIVPSRX5",
+      "version": 1306,
+      "itemType": "book",
+      "title": "Adorez 5000 hiztegia",
+      "creators": [
+        {
+          "creatorType": "editor",
+          "firstName": "",
+          "lastName": "Adorez Taldea"
+        }
+      ],
+      "abstractNote": "",
+      "series": "",
+      "seriesNumber": "",
+      "volume": "",
+      "numberOfVolumes": "",
+      "edition": "",
+      "place": "",
+      "publisher": "Bostak Bat Lantaldea",
+      "date": "09/2009",
+      "numPages": "",
+      "language": "eu",
+      "ISBN": "978-84-613-4200-6",
+      "shortTitle": "",
+      "url": "",
+      "accessDate": "",
+      "archive": "",
+      "archiveLocation": "https://lexbib.elex.is/entity/Q33399",
+      "libraryCatalog": "Agencia del ISBN",
+      "callNumber": "",
+      "rights": "",
+      "extra": "",
+      "tags": [
+        {
+          "tag": ":period Q653"
+        },
+        {
+          "tag": "heldu-baso"
+        }
+      ],
+      "collections": [
+        "AEUY97BC"
+      ],
+      "relations": {
+        "owl:sameAs": "http://zotero.org/groups/1892855/items/P7TQFP5Y"
+      },
+      "dateAdded": "2023-09-02T13:46:19Z",
+      "dateModified": "2023-10-24T20:43:37Z"
+    },
+    "wikibase_entity": false
+  },
+  {
+    "key": "PU8HLSVF",
+    "version": 1305,
+    "library": {
+      "type": "group",
+      "id": 5165329,
+      "name": "MLV",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/mlv",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5165329/items/PU8HLSVF",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/mlv/items/PU8HLSVF",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/5165329/items/S3AICAA9",
+        "type": "application/json",
+        "attachmentType": "image/jpeg",
+        "attachmentSize": 248378
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Sarasola",
+      "parsedDate": "2007",
+      "numChildren": 5
+    },
+    "data": {
+      "key": "PU8HLSVF",
+      "version": 1305,
+      "itemType": "book",
+      "title": "Euskal Hiztegia",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Ibon",
+          "lastName": "Sarasola"
+        }
+      ],
+      "abstractNote": "",
+      "series": "",
+      "seriesNumber": "",
+      "volume": "",
+      "numberOfVolumes": "",
+      "edition": "[2. ed.]",
+      "place": "Donostia",
+      "publisher": "Elkar",
+      "date": "2007",
+      "numPages": "1055",
+      "language": "eu",
+      "ISBN": "978-84-9783-258-8",
+      "shortTitle": "",
+      "url": "",
+      "accessDate": "",
+      "archive": "",
+      "archiveLocation": "https://lexbib.elex.is/entity/Q33383",
+      "libraryCatalog": "",
+      "callNumber": "",
+      "rights": "",
+      "extra": "",
+      "tags": [
+        {
+          "tag": ":period Q653"
+        },
+        {
+          "tag": "heldu-baso"
+        }
+      ],
+      "collections": [
+        "AEUY97BC"
+      ],
+      "relations": {
+        "owl:sameAs": "http://zotero.org/groups/1892855/items/DMIJINNC"
+      },
+      "dateAdded": "2023-09-02T13:46:19Z",
+      "dateModified": "2023-10-24T20:43:37Z"
+    },
+    "wikibase_entity": false
+  },
+  {
+    "key": "JM6XMYH5",
+    "version": 1304,
+    "library": {
+      "type": "group",
+      "id": 5165329,
+      "name": "MLV",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/mlv",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5165329/items/JM6XMYH5",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/mlv/items/JM6XMYH5",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/5165329/items/JC6IENCW",
+        "type": "application/json",
+        "attachmentType": "image/jpeg",
+        "attachmentSize": 367877
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Azkarate et al.",
+      "parsedDate": "2006",
+      "numChildren": 5
+    },
+    "data": {
+      "key": "JM6XMYH5",
+      "version": 1304,
+      "itemType": "book",
+      "title": "Elhuyar hiztegia: euskara-gaztelania, castellano-vasco",
+      "creators": [
+        {
+          "creatorType": "editor",
+          "firstName": "Miren",
+          "lastName": "Azkarate"
+        },
+        {
+          "creatorType": "editor",
+          "firstName": "Xabier",
+          "lastName": "Kintana"
+        },
+        {
+          "creatorType": "editor",
+          "firstName": "Xabier",
+          "lastName": "Mendiguren"
+        }
+      ],
+      "abstractNote": "",
+      "series": "",
+      "seriesNumber": "",
+      "volume": "",
+      "numberOfVolumes": "",
+      "edition": "3. arg.",
+      "place": "Usurbil",
+      "publisher": "Elhuyar",
+      "date": "2006",
+      "numPages": "",
+      "language": "eu",
+      "ISBN": "978-84-95338-70-9",
+      "shortTitle": "Elhuyar hiztegia",
+      "url": "",
+      "accessDate": "",
+      "archive": "",
+      "archiveLocation": "https://lexbib.elex.is/entity/Q33388",
+      "libraryCatalog": "Open WorldCat",
+      "callNumber": "",
+      "rights": "",
+      "extra": "",
+      "tags": [
+        {
+          "tag": ":period Q653"
+        },
+        {
+          "tag": "heldu-baso"
+        }
+      ],
+      "collections": [
+        "AEUY97BC"
+      ],
+      "relations": {
+        "owl:sameAs": "http://zotero.org/groups/1892855/items/9R5YER84"
+      },
+      "dateAdded": "2023-09-02T13:46:19Z",
+      "dateModified": "2023-10-24T20:43:37Z"
+    },
+    "wikibase_entity": false
+  },
+  {
+    "key": "C53RH4RP",
+    "version": 1304,
+    "library": {
+      "type": "group",
+      "id": 5165329,
+      "name": "MLV",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/mlv",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5165329/items/C53RH4RP",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/mlv/items/C53RH4RP",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/5165329/items/2G62HAWI",
+        "type": "application/json",
+        "attachmentType": "image/jpeg",
+        "attachmentSize": 90781
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Mart\u00ednez Rubio",
+      "parsedDate": "2007",
+      "numChildren": 3
+    },
+    "data": {
+      "key": "C53RH4RP",
+      "version": 1304,
+      "itemType": "book",
+      "title": "Euskara Alemana Hiztegia",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Elena",
+          "lastName": "Mart\u00ednez Rubio"
+        }
+      ],
+      "abstractNote": "Diccionario biling\u00fce euskera-alem\u00e1n y alem\u00e1n-euskera, 32.400 entradas, 4.600 ejemplos y giros",
+      "series": "",
+      "seriesNumber": "",
+      "volume": "",
+      "numberOfVolumes": "",
+      "edition": "",
+      "place": "Donostia",
+      "publisher": "Elkar",
+      "date": "2007",
+      "numPages": "332",
+      "language": "eu",
+      "ISBN": "978-84-9783-317-2",
+      "shortTitle": "",
+      "url": "",
+      "accessDate": "",
+      "archive": "",
+      "archiveLocation": "https://lexbib.elex.is/entity/Q33370",
+      "libraryCatalog": "",
+      "callNumber": "",
+      "rights": "",
+      "extra": "Diccionario Euskera-Alem\u00e1n",
+      "tags": [
+        {
+          "tag": ":period Q653"
+        },
+        {
+          "tag": "heldu-baso"
+        }
+      ],
+      "collections": [
+        "AEUY97BC"
+      ],
+      "relations": {
+        "owl:sameAs": "http://zotero.org/groups/1892855/items/C5TJIYF9"
+      },
+      "dateAdded": "2023-09-02T13:46:19Z",
+      "dateModified": "2023-10-24T20:43:37Z"
+    },
+    "wikibase_entity": false
+  },
+  {
+    "key": "AFPXGEWG",
+    "version": 1303,
+    "library": {
+      "type": "group",
+      "id": 5165329,
+      "name": "MLV",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/mlv",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5165329/items/AFPXGEWG",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/mlv/items/AFPXGEWG",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/5165329/items/QSDPRTYU",
+        "type": "application/json",
+        "attachmentType": "image/png",
+        "attachmentSize": 861696
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Azkarate et al.",
+      "parsedDate": "2000",
+      "numChildren": 9
+    },
+    "data": {
+      "key": "AFPXGEWG",
+      "version": 1303,
+      "itemType": "book",
+      "title": "Elhuyar hiztegia: euskara-gaztelania, castellano-vasco",
+      "creators": [
+        {
+          "creatorType": "editor",
+          "firstName": "Miren",
+          "lastName": "Azkarate"
+        },
+        {
+          "creatorType": "editor",
+          "firstName": "Xabier",
+          "lastName": "Kintana"
+        },
+        {
+          "creatorType": "editor",
+          "firstName": "Xabier",
+          "lastName": "Mendiguren"
+        }
+      ],
+      "abstractNote": "",
+      "series": "",
+      "seriesNumber": "",
+      "volume": "",
+      "numberOfVolumes": "",
+      "edition": "2. arg.",
+      "place": "Usurbil",
+      "publisher": "Elhuyar",
+      "date": "2000",
+      "numPages": "",
+      "language": "eu",
+      "ISBN": "978-84-95338-08-4",
+      "shortTitle": "Elhuyar hiztegia",
+      "url": "",
+      "accessDate": "",
+      "archive": "",
+      "archiveLocation": "https://lexbib.elex.is/entity/Q33389",
+      "libraryCatalog": "",
+      "callNumber": "",
+      "rights": "",
+      "extra": "00000",
+      "tags": [
+        {
+          "tag": ":period Q653"
+        },
+        {
+          "tag": "heldu-baso"
+        }
+      ],
+      "collections": [
+        "AEUY97BC"
+      ],
+      "relations": {
+        "owl:sameAs": "http://zotero.org/groups/1892855/items/4GTT8F7T"
+      },
+      "dateAdded": "2023-09-02T13:46:19Z",
+      "dateModified": "2023-10-24T20:43:37Z"
+    },
+    "wikibase_entity": false
+  },
+  {
+    "key": "HRM36L86",
+    "version": 1303,
+    "library": {
+      "type": "group",
+      "id": 5165329,
+      "name": "MLV",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/mlv",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5165329/items/HRM36L86",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/mlv/items/HRM36L86",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/5165329/items/PAFG3MNM",
+        "type": "application/json",
+        "attachmentType": "image/png",
+        "attachmentSize": 13262
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Barandiaran and Etxeberria",
+      "parsedDate": "2000",
+      "numChildren": 5
+    },
+    "data": {
+      "key": "HRM36L86",
+      "version": 1303,
+      "itemType": "book",
+      "title": "Euskal Hiztegi Modernoa",
+      "creators": [
+        {
+          "creatorType": "editor",
+          "firstName": "Sagrario",
+          "lastName": "Barandiaran"
+        },
+        {
+          "creatorType": "editor",
+          "firstName": "Elixabete",
+          "lastName": "Etxeberria"
+        }
+      ],
+      "abstractNote": "",
+      "series": "",
+      "seriesNumber": "",
+      "volume": "",
+      "numberOfVolumes": "",
+      "edition": "",
+      "place": "Usurbil; Donostia",
+      "publisher": "Elhuyar; Elkarlanean",
+      "date": "2000",
+      "numPages": "",
+      "language": "eu",
+      "ISBN": "978-84-8331-689-4",
+      "shortTitle": "",
+      "url": "",
+      "accessDate": "",
+      "archive": "",
+      "archiveLocation": "https://lexbib.elex.is/entity/Q33385",
+      "libraryCatalog": "Open WorldCat",
+      "callNumber": "",
+      "rights": "",
+      "extra": "",
+      "tags": [
+        {
+          "tag": ":period Q653"
+        },
+        {
+          "tag": "heldu-baso"
+        }
+      ],
+      "collections": [
+        "AEUY97BC"
+      ],
+      "relations": {
+        "owl:sameAs": "http://zotero.org/groups/1892855/items/6VQQBCIL"
+      },
+      "dateAdded": "2023-09-02T13:46:19Z",
+      "dateModified": "2023-10-24T20:43:37Z"
+    },
+    "wikibase_entity": false
+  },
+  {
+    "key": "85G7DNPM",
+    "version": 1303,
+    "library": {
+      "type": "group",
+      "id": 5165329,
+      "name": "MLV",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/mlv",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5165329/items/85G7DNPM",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/mlv/items/85G7DNPM",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/5165329/items/ZPT7QT4S",
+        "type": "application/json",
+        "attachmentType": "image/png",
+        "attachmentSize": 366230
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Euskaltzaindia",
+      "parsedDate": "2000",
+      "numChildren": 3
+    },
+    "data": {
+      "key": "85G7DNPM",
+      "version": 1303,
+      "itemType": "book",
+      "title": "Hiztegi Batua",
+      "creators": [
+        {
+          "creatorType": "editor",
+          "name": "Euskaltzaindia"
+        }
+      ],
+      "abstractNote": "",
+      "series": "",
+      "seriesNumber": "",
+      "volume": "",
+      "numberOfVolumes": "",
+      "edition": "2",
+      "place": "Bilbo",
+      "publisher": "Euskaltzaindia",
+      "date": "2000",
+      "numPages": "",
+      "language": "eu",
+      "ISBN": "",
+      "shortTitle": "",
+      "url": "",
+      "accessDate": "",
+      "archive": "",
+      "archiveLocation": "https://lexbib.elex.is/entity/Q33376",
+      "libraryCatalog": "",
+      "callNumber": "",
+      "rights": "",
+      "extra": "OCLC: 1046394700",
+      "tags": [
+        {
+          "tag": ":period Q653"
+        },
+        {
+          "tag": "heldu-baso"
+        }
+      ],
+      "collections": [
+        "AEUY97BC"
+      ],
+      "relations": {
+        "owl:sameAs": "http://zotero.org/groups/1892855/items/D68YYQKM"
+      },
+      "dateAdded": "2023-09-02T13:46:19Z",
+      "dateModified": "2023-10-24T20:43:37Z"
+    },
+    "wikibase_entity": false
+  },
+  {
+    "key": "HGDCLHZZ",
+    "version": 1303,
+    "library": {
+      "type": "group",
+      "id": 5165329,
+      "name": "MLV",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/mlv",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5165329/items/HGDCLHZZ",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/mlv/items/HGDCLHZZ",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/5165329/items/ZG23AGDY",
+        "type": "application/json",
+        "attachmentType": "image/png",
+        "attachmentSize": 788587
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Etxeberria Otaegi",
+      "parsedDate": "2001",
+      "numChildren": 5
+    },
+    "data": {
+      "key": "HGDCLHZZ",
+      "version": 1303,
+      "itemType": "book",
+      "title": "Ikaslearen Hiztegia",
+      "creators": [
+        {
+          "creatorType": "editor",
+          "firstName": "Elixabete",
+          "lastName": "Etxeberria Otaegi"
+        }
+      ],
+      "abstractNote": "",
+      "series": "",
+      "seriesNumber": "",
+      "volume": "",
+      "numberOfVolumes": "",
+      "edition": "",
+      "place": "Usurbil; Donostia",
+      "publisher": "Elhuyar; Elkarlanean",
+      "date": "2001",
+      "numPages": "",
+      "language": "eu",
+      "ISBN": "978-84-8331-753-2",
+      "shortTitle": "",
+      "url": "",
+      "accessDate": "",
+      "archive": "",
+      "archiveLocation": "https://lexbib.elex.is/entity/Q33372",
+      "libraryCatalog": "Open WorldCat",
+      "callNumber": "",
+      "rights": "",
+      "extra": "00000",
+      "tags": [
+        {
+          "tag": ":period Q653"
+        },
+        {
+          "tag": "heldu-baso"
+        }
+      ],
+      "collections": [
+        "AEUY97BC"
+      ],
+      "relations": {
+        "owl:sameAs": "http://zotero.org/groups/1892855/items/Q6X5Y5BN"
+      },
+      "dateAdded": "2023-09-02T13:46:19Z",
+      "dateModified": "2023-10-24T20:43:37Z"
+    },
+    "wikibase_entity": false
+  },
+  {
+    "key": "T2RFPPAG",
+    "version": 1302,
+    "library": {
+      "type": "group",
+      "id": 5165329,
+      "name": "MLV",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/mlv",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5165329/items/T2RFPPAG",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/mlv/items/T2RFPPAG",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/5165329/items/4Y5ZQLNJ",
+        "type": "application/json",
+        "attachmentType": "image/png",
+        "attachmentSize": 842180
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Sarasola",
+      "parsedDate": "1999",
+      "numChildren": 5
+    },
+    "data": {
+      "key": "T2RFPPAG",
+      "version": 1302,
+      "itemType": "book",
+      "title": "Euskara Ikaslearen Hiztegia",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Ibon",
+          "lastName": "Sarasola"
+        }
+      ],
+      "abstractNote": "",
+      "series": "",
+      "seriesNumber": "",
+      "volume": "",
+      "numberOfVolumes": "",
+      "edition": "",
+      "place": "Barcelona",
+      "publisher": "Vox",
+      "date": "1999",
+      "numPages": "",
+      "language": "eu",
+      "ISBN": "978-84-8332-049-5",
+      "shortTitle": "",
+      "url": "",
+      "accessDate": "",
+      "archive": "",
+      "archiveLocation": "https://lexbib.elex.is/entity/Q33381",
+      "libraryCatalog": "Open WorldCat",
+      "callNumber": "",
+      "rights": "",
+      "extra": "",
+      "tags": [
+        {
+          "tag": ":period Q653"
+        },
+        {
+          "tag": "heldu-baso"
+        }
+      ],
+      "collections": [
+        "AEUY97BC"
+      ],
+      "relations": {
+        "owl:sameAs": "http://zotero.org/groups/1892855/items/RI2G8XFI"
+      },
+      "dateAdded": "2023-09-02T13:46:19Z",
+      "dateModified": "2023-10-24T20:43:37Z"
+    },
+    "wikibase_entity": false
+  },
+  {
+    "key": "MHEU9647",
+    "version": 1301,
+    "library": {
+      "type": "group",
+      "id": 5165329,
+      "name": "MLV",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/mlv",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5165329/items/MHEU9647",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/mlv/items/MHEU9647",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/5165329/items/J96REJUA",
+        "type": "application/json",
+        "attachmentType": "image/png",
+        "attachmentSize": 19862
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Arratibel et al.",
+      "parsedDate": "1996",
+      "numChildren": 5
+    },
+    "data": {
+      "key": "MHEU9647",
+      "version": 1301,
+      "itemType": "book",
+      "title": "LUR Eskolarako hiztegi entziklopedikoa",
+      "creators": [
+        {
+          "creatorType": "editor",
+          "firstName": "Miren",
+          "lastName": "Arratibel"
+        },
+        {
+          "creatorType": "editor",
+          "firstName": "Aintzane",
+          "lastName": "Atela"
+        },
+        {
+          "creatorType": "editor",
+          "firstName": "Koro",
+          "lastName": "Navarro"
+        }
+      ],
+      "abstractNote": "",
+      "series": "",
+      "seriesNumber": "",
+      "volume": "",
+      "numberOfVolumes": "",
+      "edition": "",
+      "place": "Donostia",
+      "publisher": "Lur",
+      "date": "1996",
+      "numPages": "",
+      "language": "eu",
+      "ISBN": "978-84-7099-395-4",
+      "shortTitle": "",
+      "url": "",
+      "accessDate": "",
+      "archive": "",
+      "archiveLocation": "https://lexbib.elex.is/entity/Q33371",
+      "libraryCatalog": "Open WorldCat",
+      "callNumber": "",
+      "rights": "",
+      "extra": "",
+      "tags": [
+        {
+          "tag": ":period Q653"
+        },
+        {
+          "tag": "heldu-baso"
+        }
+      ],
+      "collections": [
+        "AEUY97BC"
+      ],
+      "relations": {
+        "owl:sameAs": "http://zotero.org/groups/1892855/items/FI8D4S2D"
+      },
+      "dateAdded": "2023-09-02T13:46:19Z",
+      "dateModified": "2023-10-24T20:43:37Z"
+    },
+    "wikibase_entity": false
+  },
+  {
+    "key": "RJWN5GLD",
+    "version": 1301,
+    "library": {
+      "type": "group",
+      "id": 5165329,
+      "name": "MLV",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/mlv",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5165329/items/RJWN5GLD",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/mlv/items/RJWN5GLD",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/5165329/items/ZMRGEYX4",
+        "type": "application/json",
+        "attachmentType": "image/jpeg",
+        "attachmentSize": 461316
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Azkarate et al.",
+      "parsedDate": "1996",
+      "numChildren": 7
+    },
+    "data": {
+      "key": "RJWN5GLD",
+      "version": 1301,
+      "itemType": "book",
+      "title": "Elhuyar hiztegia: euskara-gaztelania, castellano-vasco",
+      "creators": [
+        {
+          "creatorType": "editor",
+          "firstName": "Miren",
+          "lastName": "Azkarate"
+        },
+        {
+          "creatorType": "editor",
+          "firstName": "Xabier",
+          "lastName": "Kintana"
+        },
+        {
+          "creatorType": "editor",
+          "firstName": "Xabier",
+          "lastName": "Mendiguren"
+        }
+      ],
+      "abstractNote": "",
+      "series": "",
+      "seriesNumber": "",
+      "volume": "",
+      "numberOfVolumes": "",
+      "edition": "1. arg.",
+      "place": "Usurbil",
+      "publisher": "Elhuyar",
+      "date": "1996",
+      "numPages": "",
+      "language": "eu",
+      "ISBN": "84-87114-06-7",
+      "shortTitle": "Elhuyar hiztegia",
+      "url": "",
+      "accessDate": "",
+      "archive": "",
+      "archiveLocation": "https://lexbib.elex.is/entity/Q33390",
+      "libraryCatalog": "Open WorldCat",
+      "callNumber": "",
+      "rights": "",
+      "extra": "",
+      "tags": [
+        {
+          "tag": ":period Q653"
+        },
+        {
+          "tag": "heldu-baso"
+        }
+      ],
+      "collections": [
+        "AEUY97BC"
+      ],
+      "relations": {
+        "owl:sameAs": "http://zotero.org/groups/1892855/items/SWPLF8CG"
+      },
+      "dateAdded": "2023-09-02T13:46:19Z",
+      "dateModified": "2023-10-24T20:43:37Z"
+    },
+    "wikibase_entity": false
+  },
+  {
+    "key": "PV9UAZ5J",
+    "version": 1300,
+    "library": {
+      "type": "group",
+      "id": 5165329,
+      "name": "MLV",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/mlv",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5165329/items/PV9UAZ5J",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/mlv/items/PV9UAZ5J",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/5165329/items/63WLVIH2",
+        "type": "application/json",
+        "attachmentType": "image/png",
+        "attachmentSize": 624810
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Uribarren et al.",
+      "parsedDate": "1993",
+      "numChildren": 9
+    },
+    "data": {
+      "key": "PV9UAZ5J",
+      "version": 1300,
+      "itemType": "book",
+      "title": "Europa Hiztegia: Eskola Berrirakoa",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Patxi",
+          "lastName": "Uribarren"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Ricardo",
+          "lastName": "Badiola"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Luis",
+          "lastName": "Baraiazarra"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Txomin",
+          "lastName": "Solabarrieta"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Juan Luis",
+          "lastName": "Goikoetxea"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Gotzon",
+          "lastName": "Aurrekoetxea"
+        }
+      ],
+      "abstractNote": "",
+      "series": "",
+      "seriesNumber": "",
+      "volume": "",
+      "numberOfVolumes": "",
+      "edition": "",
+      "place": "Bilbo",
+      "publisher": "Bostak Bat Lantaldea",
+      "date": "1993",
+      "numPages": "",
+      "language": "eu",
+      "ISBN": "84-604-6496-2 978-84-604-6496-9",
+      "shortTitle": "Europa Hiztegia",
+      "url": "",
+      "accessDate": "",
+      "archive": "",
+      "archiveLocation": "https://lexbib.elex.is/entity/Q33386",
+      "libraryCatalog": "Open WorldCat",
+      "callNumber": "",
+      "rights": "",
+      "extra": "",
+      "tags": [
+        {
+          "tag": ":period Q653"
+        },
+        {
+          "tag": "heldu-baso"
+        }
+      ],
+      "collections": [
+        "AEUY97BC"
+      ],
+      "relations": {
+        "owl:sameAs": "http://zotero.org/groups/1892855/items/J7CAAE3N"
+      },
+      "dateAdded": "2023-09-02T13:46:19Z",
+      "dateModified": "2023-10-24T20:43:37Z"
+    },
+    "wikibase_entity": false
+  },
+  {
+    "key": "DJFIG7M3",
+    "version": 1298,
+    "library": {
+      "type": "group",
+      "id": 5165329,
+      "name": "MLV",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/mlv",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5165329/items/DJFIG7M3",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/mlv/items/DJFIG7M3",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/5165329/items/WIQRQNC8",
+        "type": "application/json",
+        "attachmentType": "image/png",
+        "attachmentSize": 1455916
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Uribarren et al.",
+      "parsedDate": "1986",
+      "numChildren": 5
+    },
+    "data": {
+      "key": "DJFIG7M3",
+      "version": 1298,
+      "itemType": "book",
+      "title": "Euskararako Hiztegia",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Patxi",
+          "lastName": "Uribarren"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Ricardo",
+          "lastName": "Badiola"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Luis",
+          "lastName": "Baraiazarra"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Txomin",
+          "lastName": "Solabarrieta"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Juan Luis",
+          "lastName": "Goikoetxea"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Gotzon",
+          "lastName": "Aurrekoetxea"
+        }
+      ],
+      "abstractNote": "",
+      "series": "",
+      "seriesNumber": "",
+      "volume": "",
+      "numberOfVolumes": "",
+      "edition": "",
+      "place": "Bilbo",
+      "publisher": "Adorez",
+      "date": "1986",
+      "numPages": "",
+      "language": "eu",
+      "ISBN": "84-398-7968-7 978-84-398-7968-8",
+      "shortTitle": "",
+      "url": "",
+      "accessDate": "",
+      "archive": "",
+      "archiveLocation": "https://lexbib.elex.is/entity/Q33379",
+      "libraryCatalog": "Open WorldCat",
+      "callNumber": "",
+      "rights": "",
+      "extra": "",
+      "tags": [
+        {
+          "tag": ":period Q653"
+        },
+        {
+          "tag": "heldu-baso"
+        }
+      ],
+      "collections": [
+        "AEUY97BC"
+      ],
+      "relations": {
+        "owl:sameAs": "http://zotero.org/groups/1892855/items/ZYHNEZIC"
+      },
+      "dateAdded": "2023-09-02T13:46:24Z",
+      "dateModified": "2023-10-24T20:43:37Z"
+    },
+    "wikibase_entity": false
+  },
+  {
+    "key": "3S9QGPIT",
+    "version": 1298,
+    "library": {
+      "type": "group",
+      "id": 5165329,
+      "name": "MLV",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/mlv",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5165329/items/3S9QGPIT",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/mlv/items/3S9QGPIT",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/5165329/items/LMLZFGYI",
+        "type": "application/json",
+        "attachmentType": "image/png",
+        "attachmentSize": 716215
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Kintana et al.",
+      "parsedDate": "1984",
+      "numChildren": 9
+    },
+    "data": {
+      "key": "3S9QGPIT",
+      "version": 1298,
+      "itemType": "book",
+      "title": "Hiztegia bi mila:  euskara-espainiera espainiera-euskara, vasco-espa\u00f1ol espa\u00f1ol-vasco",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Xabier",
+          "lastName": "Kintana"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Jon",
+          "lastName": "Aurre"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Rikardo",
+          "lastName": "Badiola"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Sabin",
+          "lastName": "Egileor"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Juan Luis",
+          "lastName": "Goikoetxea"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Juanjo",
+          "lastName": "Zearreta"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Koldo",
+          "lastName": "Zuazo"
+        }
+      ],
+      "abstractNote": "",
+      "series": "",
+      "seriesNumber": "",
+      "volume": "",
+      "numberOfVolumes": "",
+      "edition": "",
+      "place": "Donostia",
+      "publisher": "Elkar",
+      "date": "1984",
+      "numPages": "855",
+      "language": "eu",
+      "ISBN": "978-84-300-3368-3",
+      "shortTitle": "BMH",
+      "url": "",
+      "accessDate": "",
+      "archive": "",
+      "archiveLocation": "https://lexbib.elex.is/entity/Q33373",
+      "libraryCatalog": "",
+      "callNumber": "",
+      "rights": "",
+      "extra": "",
+      "tags": [
+        {
+          "tag": ":period Q653"
+        },
+        {
+          "tag": "heldu-baso"
+        }
+      ],
+      "collections": [
+        "AEUY97BC"
+      ],
+      "relations": {
+        "owl:sameAs": "http://zotero.org/groups/1892855/items/U4T8LIGX"
+      },
+      "dateAdded": "2023-09-02T13:46:24Z",
+      "dateModified": "2023-10-24T20:43:37Z"
+    },
+    "wikibase_entity": false
+  },
+  {
+    "key": "QFGXRXR5",
+    "version": 1286,
+    "library": {
+      "type": "group",
+      "id": 5165329,
+      "name": "MLV",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/mlv",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5165329/items/QFGXRXR5",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/mlv/items/QFGXRXR5",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/5165329/items/UB5Y9JBX",
+        "type": "application/json",
+        "attachmentType": "image/png",
+        "attachmentSize": 36401
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Elhuyar Hizkuntza Zerbitzuak",
+      "parsedDate": "2013",
+      "numChildren": 5
+    },
+    "data": {
+      "key": "QFGXRXR5",
+      "version": 1286,
+      "itemType": "webpage",
+      "title": "Elhuyar Hiztegiak",
+      "creators": [
+        {
+          "creatorType": "author",
+          "name": "Elhuyar Hizkuntza Zerbitzuak"
+        }
+      ],
+      "abstractNote": "",
+      "websiteTitle": "",
+      "websiteType": "",
+      "date": "2013",
+      "shortTitle": "",
+      "url": "http://www.hiztegiak.elhuyar.org",
+      "accessDate": "",
+      "language": "",
+      "rights": "",
+      "extra": "",
+      "tags": [
+        {
+          "tag": ":period Q653"
+        },
+        {
+          "tag": ":type online-dict"
+        },
+        {
+          "tag": "heldu-baso"
+        }
+      ],
+      "collections": [
+        "AEUY97BC"
+      ],
+      "relations": {
+        "owl:sameAs": "http://zotero.org/groups/1892855/items/KM3RFL78"
+      },
+      "dateAdded": "2023-09-02T13:46:16Z",
+      "dateModified": "2023-10-24T20:43:37Z"
+    },
+    "wikibase_entity": false
+  },
+  {
+    "key": "PMV2QKCZ",
+    "version": 1286,
+    "library": {
+      "type": "group",
+      "id": 5165329,
+      "name": "MLV",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/mlv",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5165329/items/PMV2QKCZ",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/mlv/items/PMV2QKCZ",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/5165329/items/IX8LDBVF",
+        "type": "application/json",
+        "attachmentType": "image/png",
+        "attachmentSize": 117008
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Bostak Bat Kultur Elkartea",
+      "parsedDate": "2013",
+      "numChildren": 2
+    },
+    "data": {
+      "key": "PMV2QKCZ",
+      "version": 1286,
+      "itemType": "webpage",
+      "title": "5000 Hiztegia",
+      "creators": [
+        {
+          "creatorType": "author",
+          "name": "Bostak Bat Kultur Elkartea"
+        }
+      ],
+      "abstractNote": "",
+      "websiteTitle": "Azkue Fundazioa",
+      "websiteType": "",
+      "date": "2013",
+      "shortTitle": "",
+      "url": "",
+      "accessDate": "",
+      "language": "",
+      "rights": "",
+      "extra": "",
+      "tags": [
+        {
+          "tag": ":period Q653"
+        },
+        {
+          "tag": ":type online-dict"
+        },
+        {
+          "tag": "heldu-baso"
+        }
+      ],
+      "collections": [
+        "AEUY97BC"
+      ],
+      "relations": {
+        "owl:sameAs": "http://zotero.org/groups/1892855/items/TCN3Z5LG"
+      },
+      "dateAdded": "2023-09-02T13:46:16Z",
+      "dateModified": "2023-10-24T20:43:37Z"
+    },
+    "wikibase_entity": false
+  },
+  {
+    "key": "NTSM2QGC",
+    "version": 1285,
+    "library": {
+      "type": "group",
+      "id": 5165329,
+      "name": "MLV",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/mlv",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5165329/items/NTSM2QGC",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/mlv/items/NTSM2QGC",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/5165329/items/NJQDRTE7",
+        "type": "application/json",
+        "attachmentType": "image/png",
+        "attachmentSize": 3668489
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Euskaltzaindia",
+      "parsedDate": "2012",
+      "numChildren": 11
+    },
+    "data": {
+      "key": "NTSM2QGC",
+      "version": 1285,
+      "itemType": "book",
+      "title": "Euskaltzaindiaren Hiztegia: Adierak Eta Adibideak",
+      "creators": [
+        {
+          "creatorType": "editor",
+          "firstName": "",
+          "lastName": "Euskaltzaindia"
+        }
+      ],
+      "abstractNote": "",
+      "series": "",
+      "seriesNumber": "",
+      "volume": "",
+      "numberOfVolumes": "",
+      "edition": "",
+      "place": "Bilbo; Donostia; Usurbil",
+      "publisher": "Euskaltzaindia; Elkar; Elhuyar",
+      "date": "2012",
+      "numPages": "864",
+      "language": "eu",
+      "ISBN": "978-84-9027-023-3",
+      "shortTitle": "Euskaltzaindiaren Hiztegia",
+      "url": "",
+      "accessDate": "",
+      "archive": "",
+      "archiveLocation": "https://lexbib.elex.is/entity/Q33382",
+      "libraryCatalog": "Google Books",
+      "callNumber": "",
+      "rights": "",
+      "extra": "00000",
+      "tags": [
+        {
+          "tag": ":period Q653"
+        },
+        {
+          "tag": "heldu-baso"
+        }
+      ],
+      "collections": [
+        "AEUY97BC"
+      ],
+      "relations": {
+        "owl:sameAs": "http://zotero.org/groups/1892855/items/2XKHP47M"
+      },
+      "dateAdded": "2023-09-02T13:46:16Z",
+      "dateModified": "2023-10-24T20:43:37Z"
+    },
+    "wikibase_entity": false
+  },
+  {
+    "key": "QCMCXK8J",
+    "version": 1281,
+    "library": {
+      "type": "group",
+      "id": 5165329,
+      "name": "MLV",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/mlv",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5165329/items/QCMCXK8J",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/mlv/items/QCMCXK8J",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/5165329/items/BUACPNUB",
+        "type": "application/json",
+        "attachmentType": "image/jpeg",
+        "attachmentSize": 36733
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Euskaltzaindia",
+      "parsedDate": "2010",
+      "numChildren": 3
+    },
+    "data": {
+      "key": "QCMCXK8J",
+      "version": 1281,
+      "itemType": "book",
+      "title": "Hiztegi Batua",
+      "creators": [
+        {
+          "creatorType": "editor",
+          "name": "Euskaltzaindia"
+        }
+      ],
+      "abstractNote": "",
+      "series": "",
+      "seriesNumber": "",
+      "volume": "",
+      "numberOfVolumes": "",
+      "edition": "3.",
+      "place": "Donostia",
+      "publisher": "Elkar",
+      "date": "2010",
+      "numPages": "",
+      "language": "eu",
+      "ISBN": "978-84-9783-940-2",
+      "shortTitle": "",
+      "url": "",
+      "accessDate": "",
+      "archive": "",
+      "archiveLocation": "https://lexbib.elex.is/entity/Q33375",
+      "libraryCatalog": "",
+      "callNumber": "",
+      "rights": "",
+      "extra": "",
+      "tags": [
+        {
+          "tag": ":period Q653"
+        },
+        {
+          "tag": "heldu-baso"
+        }
+      ],
+      "collections": [
+        "AEUY97BC"
+      ],
+      "relations": {
+        "owl:sameAs": "http://zotero.org/groups/1892855/items/CIMLQ2TY"
+      },
+      "dateAdded": "2023-09-02T13:46:19Z",
+      "dateModified": "2023-10-24T20:43:37Z"
+    },
+    "wikibase_entity": false
+  },
+  {
+    "key": "88XU8MUA",
+    "version": 1317,
+    "library": {
+      "type": "group",
+      "id": 5165329,
+      "name": "MLV",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/mlv",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5165329/items/88XU8MUA",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/mlv/items/88XU8MUA",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/5165329/items/FD8CA3AF",
+        "type": "application/json",
+        "attachmentType": "text/html"
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Bera and L\u00f3pez-Mendizabal",
+      "parsedDate": "1916",
+      "numChildren": 12
+    },
+    "data": {
+      "key": "88XU8MUA",
+      "version": 1317,
+      "itemType": "book",
+      "title": "Diccionario Castellano-Euskera. Euzkel-Erdel Iztegia",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Erroman",
+          "lastName": "Bera"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Ixaka",
+          "lastName": "L\u00f3pez-Mendizabal"
+        }
+      ],
+      "abstractNote": "",
+      "series": "",
+      "seriesNumber": "",
+      "volume": "",
+      "numberOfVolumes": "",
+      "edition": "",
+      "place": "Tolosa",
+      "publisher": "Lopez",
+      "date": "1916",
+      "numPages": "",
+      "language": "eus",
+      "ISBN": "",
+      "shortTitle": "",
+      "url": "http://hdl.handle.net/10690/557",
+      "accessDate": "2014-12-11T15:00:46Z",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "",
+      "callNumber": "",
+      "rights": "",
+      "extra": "https://monumenta.wikibase.cloud/entity/Q307\nOCLC: 313333164",
+      "tags": [
+        {
+          "tag": ":period Q652"
+        },
+        {
+          "tag": "heldu-baso"
+        },
+        {
+          "tag": "on-wikibase"
+        }
+      ],
+      "collections": [
+        "VC2E25V9"
+      ],
+      "relations": {
+        "owl:sameAs": "http://zotero.org/groups/1892855/items/Y7FCUY73"
+      },
+      "dateAdded": "2023-09-02T13:44:14Z",
+      "dateModified": "2023-10-24T20:42:37Z"
+    },
+    "wikibase_entity": "Q307"
+  },
+  {
+    "key": "AFH78LTK",
+    "version": 1316,
+    "library": {
+      "type": "group",
+      "id": 5165329,
+      "name": "MLV",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/mlv",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5165329/items/AFH78LTK",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/mlv/items/AFH78LTK",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/5165329/items/9I7PM62I",
+        "type": "application/json",
+        "attachmentType": "image/png",
+        "attachmentSize": 333993
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Bera",
+      "parsedDate": "1909",
+      "numChildren": 14
+    },
+    "data": {
+      "key": "AFH78LTK",
+      "version": 1316,
+      "itemType": "book",
+      "title": "Euzkel-iztegitxua",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Erroman",
+          "lastName": "Bera"
+        }
+      ],
+      "abstractNote": "",
+      "series": "",
+      "seriesNumber": "",
+      "volume": "",
+      "numberOfVolumes": "",
+      "edition": "",
+      "place": "Iru\u00f1a",
+      "publisher": "",
+      "date": "1909",
+      "numPages": "",
+      "language": "eus",
+      "ISBN": "",
+      "shortTitle": "",
+      "url": "http://hdl.handle.net/10690/1391",
+      "accessDate": "2014-12-11T14:42:43Z",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "",
+      "callNumber": "",
+      "rights": "",
+      "extra": "https://monumenta.wikibase.cloud/entity/Q285",
+      "tags": [
+        {
+          "tag": ":period Q652"
+        },
+        {
+          "tag": "heldu-baso"
+        },
+        {
+          "tag": "on-wikibase"
+        }
+      ],
+      "collections": [
+        "VC2E25V9"
+      ],
+      "relations": {
+        "owl:sameAs": "http://zotero.org/groups/1892855/items/RNY5JKDL"
+      },
+      "dateAdded": "2023-09-02T13:44:14Z",
+      "dateModified": "2023-10-24T20:42:37Z"
+    },
+    "wikibase_entity": "Q285"
+  },
+  {
+    "key": "HIAFS9BQ",
+    "version": 1315,
+    "library": {
+      "type": "group",
+      "id": 5165329,
+      "name": "MLV",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/mlv",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5165329/items/HIAFS9BQ",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/mlv/items/HIAFS9BQ",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/5165329/items/YYS3KSWI",
+        "type": "application/json",
+        "attachmentType": "image/png",
+        "attachmentSize": 4029630
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Lhande",
+      "parsedDate": "1926",
+      "numChildren": 14
+    },
+    "data": {
+      "key": "HIAFS9BQ",
+      "version": 1315,
+      "itemType": "book",
+      "title": "Dictionnaire basque-fran\u00e7ais et fran\u00e7ais-basque: dialectes Labourdin, Bas-Navarrais et Souletin",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Pierre",
+          "lastName": "Lhande"
+        }
+      ],
+      "abstractNote": "",
+      "series": "",
+      "seriesNumber": "",
+      "volume": "",
+      "numberOfVolumes": "",
+      "edition": "",
+      "place": "Paris",
+      "publisher": "Gabriel Beauchesne",
+      "date": "1926",
+      "numPages": "1117",
+      "language": "fra",
+      "ISBN": "",
+      "shortTitle": "Dictionnaire basque-fran\u00e7ais et fran\u00e7ais-basque",
+      "url": "",
+      "accessDate": "",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "Open WorldCat",
+      "callNumber": "",
+      "rights": "",
+      "extra": "https://monumenta.wikibase.cloud/entity/Q295",
+      "tags": [
+        {
+          "tag": ":period Q652"
+        },
+        {
+          "tag": "heldu-baso"
+        },
+        {
+          "tag": "on-wikibase"
+        }
+      ],
+      "collections": [
+        "VC2E25V9"
+      ],
+      "relations": {
+        "owl:sameAs": "http://zotero.org/groups/1892855/items/B3B8Z2H5"
+      },
+      "dateAdded": "2023-09-02T13:44:14Z",
+      "dateModified": "2023-10-24T20:42:37Z"
+    },
+    "wikibase_entity": "Q295"
+  },
+  {
+    "key": "62UMFS49",
+    "version": 1309,
+    "library": {
+      "type": "group",
+      "id": 5165329,
+      "name": "MLV",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/mlv",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5165329/items/62UMFS49",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/mlv/items/62UMFS49",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/5165329/items/H4WKIRTG",
+        "type": "application/json",
+        "attachmentType": "image/png",
+        "attachmentSize": 3437772
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "M\u00fagica Berrondo",
+      "parsedDate": "1981",
+      "numChildren": 10
+    },
+    "data": {
+      "key": "62UMFS49",
+      "version": 1309,
+      "itemType": "book",
+      "title": "Diccionario vasco-castellano",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Pl\u00e1cido",
+          "lastName": "M\u00fagica Berrondo"
+        }
+      ],
+      "abstractNote": "",
+      "series": "",
+      "seriesNumber": "",
+      "volume": "",
+      "numberOfVolumes": "",
+      "edition": "",
+      "place": "Bilbao",
+      "publisher": "Ed. Mensajero",
+      "date": "1981",
+      "numPages": "",
+      "language": "spa",
+      "ISBN": "84-271-1269-6",
+      "shortTitle": "",
+      "url": "",
+      "accessDate": "",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "",
+      "callNumber": "",
+      "rights": "",
+      "extra": "https://monumenta.wikibase.cloud/entity/Q370\nOCLC: 434026189",
+      "tags": [
+        {
+          "tag": ":period Q652"
+        },
+        {
+          "tag": "heldu-baso"
+        },
+        {
+          "tag": "on-wikibase"
+        }
+      ],
+      "collections": [
+        "VC2E25V9"
+      ],
+      "relations": {
+        "owl:sameAs": "http://zotero.org/groups/1892855/items/AIINYRN5"
+      },
+      "dateAdded": "2023-09-02T13:44:40Z",
+      "dateModified": "2023-10-24T20:42:37Z"
+    },
+    "wikibase_entity": "Q370"
+  },
+  {
+    "key": "7DRCC2G7",
+    "version": 1317,
+    "library": {
+      "type": "group",
+      "id": 5165329,
+      "name": "MLV",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/mlv",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5165329/items/7DRCC2G7",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/mlv/items/7DRCC2G7",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/5165329/items/QEIWDXQT",
+        "type": "application/json",
+        "attachmentType": "image/png",
+        "attachmentSize": 632717
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Aizquibel",
+      "parsedDate": "1883",
+      "numChildren": 10
+    },
+    "data": {
+      "key": "7DRCC2G7",
+      "version": 1317,
+      "itemType": "book",
+      "title": "Diccionario basco-espa\u00f1ol titulado euskeratik erderara biurtzeco itztegia",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Jos\u00e9 Francisco",
+          "lastName": "Aizquibel"
+        }
+      ],
+      "abstractNote": "",
+      "series": "",
+      "seriesNumber": "",
+      "volume": "",
+      "numberOfVolumes": "",
+      "edition": "1",
+      "place": "Tolosa",
+      "publisher": "Casa Editorial de Eusebio L\u00f3pez, Sucesor de la Viuda de Mendizabal",
+      "date": "1883",
+      "numPages": "1257",
+      "language": "spa",
+      "ISBN": "",
+      "shortTitle": "",
+      "url": "",
+      "accessDate": "",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "",
+      "callNumber": "",
+      "rights": "",
+      "extra": "https://monumenta.wikibase.cloud/entity/Q310\nOCLC: 557204191",
+      "tags": [
+        {
+          "tag": ":period Q651"
+        },
+        {
+          "tag": "heldu-baso"
+        },
+        {
+          "tag": "on-wikibase"
+        }
+      ],
+      "collections": [
+        "GAEDNEYN"
+      ],
+      "relations": {
+        "owl:sameAs": "http://zotero.org/groups/1892855/items/2ZZMNPJM"
+      },
+      "dateAdded": "2023-09-02T13:44:14Z",
+      "dateModified": "2023-10-24T20:39:41Z"
+    },
+    "wikibase_entity": "Q310"
+  }
+]
