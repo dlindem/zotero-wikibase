@@ -16,11 +16,11 @@ def create_profile(name=""):
         return {'messages': ["Invalid input. The profile name already exists. Choose a different identifier for the new profile."],
                 'msgcolor': 'background:orangered'}
     shutil.copytree('bots/profiles/profile.template', f"bots/profiles/{name}")
-    existing_profiles.append(name)
-    profiles['active_profile'] = name
+    profiles['active_profiles'].append(name)
+    profiles['last_profile'] = name
     with open('bots/profiles.json', 'w', encoding='utf-8') as file:
         json.dump(profiles, file, indent=2)
-    return {'messages': [f"Successfully created and activated new profile <b>'{name}'</b>.", 'Now go to <a href="/basic_config">Basic Configuration</a>.'],
+    return {'messages': [f"Successfully created and activated new profile <b>'{name}'</b>.", 'Now restart the ZotWb app (CTRL+C, ARROW-UP, ENTER in the terminal).'],
                 'msgcolor': 'background:limegreen'}
 
 def check_prop_id(propstring):
@@ -326,6 +326,27 @@ def batchedit_literal(fieldname="", literal=None, exact_length=None, replace_val
         newdata.append(item)
     print(f"Zotero batch edit operation successful.")
     return {'messages': messages, 'msgcolor': 'background:limegreen', 'data': newdata}
+
+def remove_tag(tag=None):
+    rawitems = zoterobot.pyzot.items(tag=tag)
+    print(f"Now batch editing {str(len(rawitems))}: Removing tag '{tag}'...wait...")
+    if len(rawitems) > 50:
+        itemlists = [rawitems[:50], rawitems[50:]]
+    else:
+        itemlists = [rawitems]
+    for itemlist in itemlists:
+        newlist = []
+        for item in itemlist:
+            index = 0
+            while index < len(item['data']['tags']):
+                if item['data']['tags'][index]['tag'] == tag:
+                    del item['data']['tags'][index]
+                index += 1
+            newlist.append(item)
+        zoterobot.pyzot.update_items(newlist)
+    return {'messages': [f"Successfully batch edited {str(len(rawitems))} items: Removed tag '{tag}'."], 'msgcolor':'background:limegreen'}
+
+
 
 def geteditbatch(tag=""):
     batchitems = zoterobot.getexport(tag=tag, save_to_file=True, file="zoteroeditbatch.json")

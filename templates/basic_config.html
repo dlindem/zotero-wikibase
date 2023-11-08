@@ -8,9 +8,10 @@
 <h1><img src="static/zotwb_logo.jpg" alt="ZotWb logo" style="height:10%" /> ZotWb Basic Configuration</h1>
 {% if message %}<p style = "{{ msgcolor }}">{{ message }}<p>{% endif %}
 (Back to <a href="./">start page</a>)
-<p>Edit the values manually. After every single field edit press ENTER, or the corresponding "Update this" button. The page will then be reloaded.</p>
+<p>This page lets you configure your ZotWb <b>'{{ profile }}'</b> profile.
+    </br><small>Edit the values manually. After editing a value, press ENTER, or the corresponding "Update this" button. The page will then be reloaded.</small></p>
 <h2>Credentials</h2>
-<p>Your Wikibase bot user name and password, and the Zotero API key are stored in <code>bots/config_private.py</code>.</br>
+<p>Your Wikibase bot user name and password, and the Zotero API key are stored in <code>bots/profiles/{{ profile }}config_private.py</code>.</br>
 <small>That file is included in <code>.gitignore</code>, i.e., it is not uploaded if you share your ZotWb project using git.</br>
 After setting these three values, restart the app in the terminal, and check the log messages for whether your credentials are accepted.</small></p>
 <p>Your Wikibase bot user name:
@@ -32,7 +33,7 @@ After setting these three values, restart the app in the terminal, and check the
    &#129054; <input type="text" name="private_zotero_api_key" value={{ zotero_api_key }} style="width: 300px;">
     <input type="submit" value="Update this">
 </form>
-<small>A Zotere API key can be obtained <a href="https://www.zotero.org/settings/keys/new">here</a>.</br>Be sure to grant the key read and write access to the group library you want to export items from. The key consists of a single chain of characters.</small>
+<small>A Zotero API key can be obtained <a href="https://www.zotero.org/settings/keys/new">here</a>.</br>Be sure to grant the key read and write access to the group library you want to export items from. The key consists of a single chain of characters.</small>
 </p>
 <h2>URL and Name of your Wikibase</h2>
 <p>The <b>URL</b> of your Wikibase is <a href="{{ configdata['wikibase_url'] }}" target="_blank">{{ configdata['wikibase_url'] }}</a>.</br>

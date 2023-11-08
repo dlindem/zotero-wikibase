@@ -34,13 +34,13 @@ def change_profile():
     messages = []
     msgcolor = None
     with (open('bots/profiles.json', 'r', encoding='utf-8') as file):
-        all_profiles = json.load(file)['active_profiles']
-        print(f"Profile page: Active profiles are {str(active_profiles)}")
-        other_profiles = all_profiles
-        other_profiles.remove(profile)
+        profiles = json.load(file)
+        print(f"Profile page: Active profiles are {str(profiles['active_profiles'])}")
+        other_profiles = profiles['active_profiles']
+        other_profiles.remove(profiles['last_profile'])
 
     if request.method == 'GET':
-        return render_template("change_profile.html", other_profiles=other_profiles, profile=profile,
+        return render_template("change_profile.html", other_profiles=other_profiles, profile=profiles['last_profile'],
                                messages=messages, msgcolor=msgcolor)
 
     elif request.method == 'POST':
@@ -59,7 +59,7 @@ def change_profile():
                         json.dump({'last_profile':profile,'active_profiles':active_profiles}, file, indent=2)
                     messages.append(message + ' Go to <a href="/">ZotWb start page</a>.')
                     msgcolor="background:limegreen"
-            return render_template("change_profile.html", other_profiles=other_profiles, profile=profile,
+            return render_template("change_profile.html", other_profiles=other_profiles, profile=profiles['last_profile'],
                                messages=messages, msgcolor=msgcolor)
 
 
@@ -155,7 +155,7 @@ def basic_config():
     configdata = botconfig.load_mapping('config')
     properties = botconfig.load_mapping('properties')
     if request.method == 'GET':
-        return render_template("basic_config.html", wb_username=config_private['wb_bot_user'], wb_password=config_private['wb_bot_pwd'],
+        return render_template("basic_config.html", profile=profile, wb_username=config_private['wb_bot_user'], wb_password=config_private['wb_bot_pwd'],
                                zotero_api_key=config_private['zotero_api_key'],
                                configdata=configdata['mapping'], message = None, msgcolor = None)
 
@@ -212,11 +212,11 @@ def basic_config():
                         configdata['mapping'][configitem]['wikibase'] = newentity_id
                     else: # user has manually chosen a value
                         configdata['mapping'][key]['wikibase'] = request.form.get(key)
-                        command = command = 'Update '+key.replace('_',' ')
-                message = f"Successfully performed operation: {command} update."
+                        command = 'Update '+key.replace('_',' ')
+                message = f"Successfully performed operation: '{command}' update."
                 msgcolor = "background:limegreen"
         botconfig.dump_mapping(configdata)
-        return render_template("basic_config.html", wb_username=config_private['wb_bot_user'], wb_password=config_private['wb_bot_pwd'], zotero_api_key=config_private['zotero_api_key'], configdata=configdata['mapping'], message=message, msgcolor=msgcolor)
+        return render_template("basic_config.html", profile=profile, wb_username=config_private['wb_bot_user'], wb_password=config_private['wb_bot_pwd'], zotero_api_key=config_private['zotero_api_key'], configdata=configdata['mapping'], message=message, msgcolor=msgcolor)
 
 @app.route('/zoterofields/<itemtype>', methods= ['GET', 'POST'])
 def map_zoterofield(itemtype):
@@ -504,6 +504,9 @@ def little_helpers():
                     action = zotwb_functions.geteditbatch(tag=batch_tag)
                     datafields = action['datafields']
                     batchlen = str(len(action['batchitems']))
+                elif key == "specify_remove_tag":
+                    remove_tag = request.form.get(key)
+                    action = zotwb_functions.remove_tag(tag=remove_tag)
                 elif key.startswith("batchedit_"):
                     commandre = re.search(r'batchedit_([^_]+)_([^_]+)_(.*)', key)
                     tag_command = commandre.group(1)
