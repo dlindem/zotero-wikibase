@@ -306,18 +306,26 @@ def check_language(zoterodata=[]):
                 messages['nomaps'][langval].append(f"<code><a href=\"{item['links']['alternate']['href']}/item-details\" target=\"_blank\">{item['key']}</a></code>")
     return messages
 
-def edit_language_literal(literal="", iso3="", zoterodata=[]):
+def batchedit_literal(fieldname="", literal=None, exact_length=None, replace_value="", zoterodata=None, remove_tag=None):
+    print(f"Now batch editing '{fieldname}'... wait... tag to remove after edit: {str(remove_tag)}")
     messages = []
-    if len(iso3) != 3 or re.search(r'[^a-zA-Z]', iso3):
-        return {'message':f"Bad input: {iso3}.", 'msgcolor':'background:orangered'}
+    if exact_length and len(replace_value) != exact_length or (fieldname == 'language' and re.search(r'[^a-zA-Z]', replace_value)):
+        return {'message':f"Bad input: {replace_value}.", 'msgcolor':'background:orangered'}
     newdata = []
     for item in zoterodata:
-        if 'language' in item['data']:
-            if item['data']['language'].strip() == literal:
-                item['data']['language'] = iso3
-                messages.append(zoterobot.zotero_update_item(item))
-            newdata.append(item)
-    return {'messages': messages, 'msgcolor': 'background:limegreen', 'data':newdata}
+        if fieldname in item['data']:
+            if item['data'][fieldname].strip() == literal or literal == None:
+                item['data'][fieldname] = replace_value
+        if remove_tag:
+            index = 0
+            while index < len(item['data']['tags']):
+                if item['data']['tags'][index]['tag'] == remove_tag:
+                    del item['data']['tags'][index]
+                index += 1
+        messages.append(zoterobot.zotero_update_item(item))
+        newdata.append(item)
+    print(f"Zotero batch edit operation successful.")
+    return {'messages': messages, 'msgcolor': 'background:limegreen', 'data': newdata}
 
 def geteditbatch(tag=""):
     batchitems = zoterobot.getexport(tag=tag, save_to_file=True, file="zoteroeditbatch.json")

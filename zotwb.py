@@ -115,7 +115,7 @@ def zotero_export():
                         json.dump(zoterodata, jsonfile, indent=2)
                 elif command == 'batchedit_empty':
                     literal = command.replace('litmap_','')
-                    action = zotwb_functions.edit_language_literal(literal="", iso3=request.form.get(command), zoterodata=zoterodata)
+                    action = zotwb_functions.batchedit_literal(literal="", replace_value=request.form.get(command), exact_length=3, zoterodata=zoterodata)
                     messages = action['messages']
                     msgcolor = action['msgcolor']
                     zoterodata = action['data']
@@ -123,7 +123,7 @@ def zotero_export():
                         json.dump(zoterodata, jsonfile, indent=2)
                 elif command.startswith('litmap_'):
                     literal = command.replace('litmap_','')
-                    action = zotwb_functions.edit_language_literal(literal=literal, iso3=request.form.get(command), zoterodata=zoterodata)
+                    action = zotwb_functions.batchedit_literal(literal=literal, replace_value=request.form.get(command), exact_length=3, zoterodata=zoterodata)
                     messages = action['messages']
                     msgcolor = action['msgcolor']
                     zoterodata = action['data']
@@ -487,7 +487,8 @@ def little_helpers():
     # zoteromapping = botconfig.load_mapping('zotero')
     messages = []
     batch_tag = None
-    datafields = []
+    datafields = None
+    zoterodata = None
     batchlen = 0
     msgcolor = "background:limegreen"
     if request.method == 'GET':
@@ -503,12 +504,23 @@ def little_helpers():
                     action = zotwb_functions.geteditbatch(tag=batch_tag)
                     datafields = action['datafields']
                     batchlen = str(len(action['batchitems']))
-                #TODO batchedit
-                if key == "doi_lookup":
+                elif key.startswith("batchedit_"):
+                    commandre = re.search(r'batchedit_([^_]+)_([^_]+)_(.*)', key)
+                    tag_command = commandre.group(1)
+                    tag = commandre.group(3)
+                    fieldname = commandre.group(2)
+                    with open('data/zoteroeditbatch.json', 'r', encoding='utf-8') as jsonfile:
+                        zoterodata = json.load(jsonfile)
+                    if tag_command == "leavetag":
+                        remove_tag = None
+                    elif tag_command == "removetag":
+                        remove_tag = tag
+                    action = zotwb_functions.batchedit_literal(fieldname=fieldname, literal=None, replace_value=request.form.get(key), zoterodata=zoterodata, remove_tag=remove_tag)
+                elif key == "doi_lookup":
                     action = zotwb_functions.lookup_doi()
-                if key == "issn_lookup":
+                elif key == "issn_lookup":
                     action = zotwb_functions.lookup_issn()
-                if key == "link_chapters":
+                elif key == "link_chapters":
                     action = zotwb_functions.link_chapters()
                 messages = action['messages']
                 msgcolor = action['msgcolor']

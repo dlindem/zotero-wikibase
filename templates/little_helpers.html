@@ -11,16 +11,20 @@
 <h2>Functions for {{ zoterogrp_name }} Zotero Group</h2>
 <h3>Batch edit Zotero fields</h3>
 Specify a Zotero tag for max. 100 items to batch edit and fetch these items.
-{%if not batch_tag %}
-<form method="POST"><input name="specify_batch_tag" type="text" style="width: 100px;" />
+
+<form method="POST"><input placeholder="{{ batch_tag }}"  name="specify_batch_tag" type="text" style="width: 100px;" />
     <input type="submit" value="Load items with this tag"/></form>
-{% else %}
-<p>What you enter as a value here will be written to all datafields with that name in {{ batchlen }} items tagged {{ batch_tag }}.</p>
+{% if datafields %}
+<p>What you enter as a value below and submit will be written to all datafields with that name in <b>{{ batchlen }}</b> items tagged <b>'{{ batch_tag }}'</b>.</p>
+<table>
 {% for fieldname in datafields %}
- &#10026; <b>{{ fieldname }}</b> &#129054;
-<form style="display: inline;" method="POST"><input name="batchedit_{{ fieldname }}" type="text" style="width: 100px;" />
-    <input type="submit" value="Write this to all"/></form></br>
+<tr><td> &#10026; <b>{{ fieldname }}</b> &#129054;</td>
+<td><form style="display: inline;" method="POST"><input name="batchedit_leavetag_{{ fieldname }}_" type="text" style="width: 100px;" />
+    <input type="submit" value="Write and leave tag"/></form></td>
+<td><form style="display: inline;" method="POST"><input name="batchedit_removetag_{{ fieldname }}_{{ batch_tag }}" type="text" style="width: 100px;" />
+    <input type="submit" value="Write and remove tag"/></form></br></td></tr>
 {% endfor %}
+</table>
 {% endif %}
 <h2>Functions for {{ wikibase_name }} Wikibase</h2>
 <h3>DOI Wikidata lookup</h3>
