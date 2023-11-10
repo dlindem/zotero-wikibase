@@ -4,7 +4,7 @@ import requests, time, re, json, csv
 import os, glob, sys, shutil
 from pathlib import Path
 import pandas, shutil
-# from bots import xwbi
+from bots import xwbi
 
 def create_profile(name=""):
     if re.search(r'[^a-zA-Z0-9_]', name) or len(name) < 3 or len(name) > 10:
@@ -513,6 +513,7 @@ def wikibase_upload(data=[], onlynew=False):
     msgcolor = 'background:limegreen'
     datalen = len(data)
     count = 0
+    skipped_items = 0
     print('\nWill now upload the currently loaded dataset to Wikibase...')
     returndata = []
     for item in data:
@@ -546,8 +547,11 @@ def wikibase_upload(data=[], onlynew=False):
             children = []
         if qid and onlynew == True:
             print(f"Item is already on wikibase as {qid}, skipped.")
+            skipped_items += 1
             returndata.append(item)
             continue
+        elif qid and not onlynew:
+            existing_item = xwbi.wbi.item.get(entity_id=qid)
         statements.append({'prop_nr': config['mapping']['prop_zotero_item']['wikibase'], 'type': 'ExternalId',
                            'value': item['data']['key'],
                            'qualifiers': attqualis, 'action':'replace'})
@@ -763,23 +767,32 @@ def wikibase_upload(data=[], onlynew=False):
                 continue
             if zoteromapping['mapping'][itemtype]['fields'][fieldname]['wbprop']:
                 dtype = zoteromapping['mapping']['all_types']['fields'][fieldname]['dtype']
+                wbprop = zoteromapping['mapping'][itemtype]['fields'][fieldname]['wbprop']
                 string_like_datatypes = ['ExternalId', "String", "URL"]
+                skip = False
                 if dtype in string_like_datatypes: # this will just use the Zotero literal as value
-                    statements.append({
-                        'prop_nr': zoteromapping['mapping'][itemtype]['fields'][fieldname]['wbprop'],
-                        'type': dtype,
-                        'value': item['data'][fieldname].strip(),
-                        'action': 'replace'
-                    })
-                elif dtype == "WikibaseItem": # this will produce an 'unknown value' statement with 'source literal' qualifier
-                    statements.append({
-                        'prop_nr': zoteromapping['mapping'][itemtype]['fields'][fieldname]['wbprop'],
-                        'type': "WikibaseItem",
-                        'value': False,
-                        'action': 'replace',
-                        'qualifiers': [{'type': 'String', 'prop_nr': config['mapping']['prop_source_literal']['wikibase'],
-                                        'value': item['data'][fieldname].strip()}]
-                    })
+                    if qid and existing_item:
+                        if wbprop in existing_item.claims:
+                            for claim in existing_item.claims.get(wbprop):
+                                print(claim.mainsnak.datavalue['value'])
+                                if claim.mainsnak.datavalue['value'] == item['data'][fieldname].strip(): # same literal already on wikibase, skip writing this (in order to preserve any qualifiers of the existing statement)
+                                    skip = True
+                    if not skip:
+                        statements.append({
+                            'prop_nr': wbprop,
+                            'type': dtype,
+                            'value': item['data'][fieldname].strip(),
+                            'action': 'replace'
+                        })
+                # elif dtype == "WikibaseItem": # this will produce an 'unknown value' statement with 'source literal' qualifier
+                #     statements.append({
+                #         'prop_nr': zoteromapping['mapping'][itemtype]['fields'][fieldname]['wbprop'],
+                #         'type': "WikibaseItem",
+                #         'value': False,
+                #         'action': 'replace',
+                #         'qualifiers': [{'type': 'String', 'prop_nr': config['mapping']['prop_source_literal']['wikibase'],
+                #                         'value': item['data'][fieldname].strip()}]
+                #     })
                 else:
                     print(f"Datatype '{dtype}' is currently not implemented. No statement will be written.")
                 # TODO: datatype date fields other than pubdate
@@ -808,7 +821,7 @@ def wikibase_upload(data=[], onlynew=False):
         item['wikibase_entity'] = qid
         returndata.append(item)
 
-    messages.append(f"Successfully uploaded {str(datalen)} of {str(len(data))} items marked with the tag '{config['mapping']['zotero_export_tag']}'. These should now have the tag '{config['mapping']['zotero_on_wikibase_tag']}' instead.")
+    messages.append(f"Successfully uploaded {str(datalen-skipped_items)} (skipped {str(skipped_items)}) of {str(len(data))} items marked with the tag '{config['mapping']['zotero_export_tag']}'. These should now have the tag '{config['mapping']['zotero_on_wikibase_tag']}' instead.")
     print('\n'+str(messages))
     return {'data': returndata, 'messages': messages, 'msgcolor': msgcolor}
 

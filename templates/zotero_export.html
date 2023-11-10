@@ -11,7 +11,7 @@
 <p>This page lets you get records from <a href="https://zotero.org/groups/{{ zotero_group_id }}/items", target="_blank">{{ zotero_name }} Zotero Group</a>, and upload them to <a href="{{ wikibase_url }}" target="_blank">{{ wikibase_name }} Wikibase</a>.</p>
 <h2>Ingest Zotero records</h2>
 <p>
-<p><b>The currently loaded Zotero dataset contains {{ zotero_len }} items.</b> The titles of these items are listed below.</br>That dataset was got from Zotero on {{ zotero_when }}.</br>It was stored as <code><b>data/zoteroexport.json</b></code> in your zotwb app folder.</p>
+<p><b>The currently loaded Zotero dataset contains {{ zotero_len }} items.</b> The titles of these items are listed below.</br>That dataset was got from Zotero on {{ zotero_when }}.</br>It is stored as <code><b>data/zoteroexport.json</b></code> in your zotwb app folder.</p>
 <form style="display: inline;" method="POST">
     <button name="get_export" type="submit">Get records from Zotero</button>
 </form> to get max. 100 items with the tag '{{ export_tag }}'.</br><small>If you have used your local Zotero for setting the export tag, remember to sync with Zotero cloud.</br><b>This will overwrite the currently loaded dataset.</b></small>
@@ -33,9 +33,9 @@
 {% endfor %}</p>
 <ul>
     <li>The following items have empty 'language' fields: <small>{% for itemlink in language_check_messages['nullitems'] %}</small>{{ itemlink|safe }} {% endfor %}</li>
-    <ul><li><small>Write a three-letter <a href="https://en.wikipedia.org/wiki/ISO_639-3" target="_blank">ISO-639-3</a> code to <b>all</b> empty 'language' fields (batch-edit current dataset <b>on Zotero</b>):
+    <ul><li><small>Write the same three-letter <a href="https://en.wikipedia.org/wiki/ISO_639-3" target="_blank">ISO-639-3</a> code to <b>all empty 'language' fields</b> (batch-edit current dataset <b>on Zotero</b>):
         <form method="POST"><input name="batchedit_empty" type="text" style="width: 40px;" />
-    <input type="submit" value="&#10071; Write this to all &#10071;"/></form></small></li></ul>
+    <input type="submit" value="&#10071; Write this to all empty fields &#10071;"/></form></small></li></ul>
 
     {% for literal in language_check_messages['nomaps'] %}
     <li><b>'{{ literal }}'</b>: Could not be matched to a language. <small>Items: {% for itemlink in language_check_messages['nomaps'][literal] %}{{ itemlink|safe }} {% endfor %}</small>
