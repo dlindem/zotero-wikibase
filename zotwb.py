@@ -68,6 +68,7 @@ def change_profile():
 def zotero_export():
     configdata = botconfig.load_mapping('config')
     zoteromapping = botconfig.load_mapping('zotero')
+    language_literals = botconfig.load_mapping('language-literals')
     with open('data/zoteroexport.json', 'r', encoding='utf-8') as jsonfile:
         zoterodata = json.load(jsonfile)
         zotero_check_messages = zotwb_functions.check_export(zoterodata=zoterodata, zoteromapping=zoteromapping)
@@ -99,36 +100,27 @@ def zotero_export():
                     zotero_check_messages = zotwb_functions.check_export(zoterodata=zoterodata,
                                                                          zoteromapping=zoteromapping)
                     language_check_messages = zotwb_functions.check_language(zoterodata=zoterodata)
-                elif command == "do_upload":
-                    action = zotwb_functions.wikibase_upload(data=zoterodata)
+                else:
+                    if command == "delete_export_tag":
+                        action = zotwb_functions.remove_tag(tag=configdata['mapping']['zotero_export_tag'])
+                        action['data'] = []
+                    elif command == "do_upload":
+                        action = zotwb_functions.wikibase_upload(data=zoterodata)
+                    elif command == "do_upload_new":
+                        action = zotwb_functions.wikibase_upload(data=zoterodata, onlynew=True)
+                    elif command == 'batchedit_empty':
+                        action = zotwb_functions.batchedit_literal(literal="", replace_value=request.form.get(command), exact_length=3, zoterodata=zoterodata)
+                    elif command.startswith('litmap_'):
+                        literal = command.replace('litmap_','')
+                        action = zotwb_functions.batchedit_literal(fieldname='language', literal=literal, replace_value=request.form.get(command), exact_length=3, zoterodata=zoterodata)
+                        language_literals['mapping'][literal] = request.form.get(command)
+                        botconfig.dump_mapping(language_literals)
                     messages = action['messages']
                     msgcolor = action['msgcolor']
-                    zoterodata = action['data']
-                    with open('data/zoteroexport.json', 'w', encoding='utf-8') as jsonfile:
-                        json.dump(zoterodata, jsonfile, indent=2)
-                elif command == "do_upload_new":
-                    action = zotwb_functions.wikibase_upload(data=zoterodata, onlynew=True)
-                    messages = action['messages']
-                    msgcolor = action['msgcolor']
-                    zoterodata = action['data']
-                    with open('data/zoteroexport.json', 'w', encoding='utf-8') as jsonfile:
-                        json.dump(zoterodata, jsonfile, indent=2)
-                elif command == 'batchedit_empty':
-                    literal = command.replace('litmap_','')
-                    action = zotwb_functions.batchedit_literal(literal="", replace_value=request.form.get(command), exact_length=3, zoterodata=zoterodata)
-                    messages = action['messages']
-                    msgcolor = action['msgcolor']
-                    zoterodata = action['data']
-                    with open('data/zoteroexport.json', 'w', encoding='utf-8') as jsonfile:
-                        json.dump(zoterodata, jsonfile, indent=2)
-                elif command.startswith('litmap_'):
-                    literal = command.replace('litmap_','')
-                    action = zotwb_functions.batchedit_literal(literal=literal, replace_value=request.form.get(command), exact_length=3, zoterodata=zoterodata)
-                    messages = action['messages']
-                    msgcolor = action['msgcolor']
-                    zoterodata = action['data']
-                    with open('data/zoteroexport.json', 'w', encoding='utf-8') as jsonfile:
-                        json.dump(zoterodata, jsonfile, indent=2)
+                    if 'data' in action:
+                        zoterodata = action['data']
+                        with open('data/zoteroexport.json', 'w', encoding='utf-8') as jsonfile:
+                            json.dump(zoterodata, jsonfile, indent=2)
         return render_template("zotero_export.html", wikibase_url=configdata['mapping']['wikibase_url'],
                                wikibase_entity_ns=configdata['mapping']['wikibase_entity_ns'],
                                wikibase_name=configdata['mapping']['wikibase_name'],
@@ -486,7 +478,7 @@ def little_helpers():
     configdata = botconfig.load_mapping('config')
     # zoteromapping = botconfig.load_mapping('zotero')
     messages = []
-    batch_tag = None
+    batch_tag = ""
     datafields = None
     zoterodata = None
     batchlen = 0

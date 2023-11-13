@@ -284,26 +284,31 @@ def check_language(zoterodata=[]):
                 print('Language field: Found three-digit language code, mapped to ' +
                       iso3mapping['mapping'][langval.lower()]['enlabel'], languageqid)
                 messages['languages'].add(iso3mapping['mapping'][langval.lower()]['enlabel'])
-                if languageqid == None:  # Language item is still not on the wikibase (got 'None' from iso3mapping)
-                    languagewdqid = iso3mapping['mapping'][langval]['wdqid']
-                    print(
-                        f"No item defined for this language on your Wikibase. This language is {languagewdqid} on Wikidata. I'll import that and use it from now on.")
-                    languageqid = import_wikidata_entity(languagewdqid,
-                                                                         classqid=configdata['mapping']['class_language'][
-                                                                             'wikibase'])
-                    iso3mapping['mapping'][langval]['wbqid'] = languageqid
-                    botconfig.dump_mapping(iso3mapping)
-                    print(f"Imported wd:{languagewdqid} to wb:{languageqid}.")
         if languageqid == False:  # Can't identify language using ISO 639-1 or 639-3
             if langval in language_literals['mapping']:
-                languageqid = language_literals['mapping'][langval]['wbqid']
+                iso3 = language_literals['mapping'][langval].lower()
+                languageqid = iso3mapping['mapping'][iso3]['wbqid']
                 print('Language field: Found stored language literal, mapped to ' +
-                      iso3mapping['mapping'][language_literals['mapping'][langval]]['enlabel'])
+                      iso3mapping['mapping'][iso3]['enlabel'] + ', ' + str(languageqid) + ' on wikibase.')
+                action = batchedit_literal(fieldname='language', literal=langval, replace_value=iso3, zoterodata=zoterodata, remove_tag=None)
+                messages['nomaps'][langval] = action['messages']
             elif len(langval) > 1:  # if there is a string that could be useful
                 print(f"{langval}': This value could not be matched to any language.")
                 if langval not in messages['nomaps']:
                     messages['nomaps'][langval] = []
                 messages['nomaps'][langval].append(f"<code><a href=\"{item['links']['alternate']['href']}/item-details\" target=\"_blank\">{item['key']}</a></code>")
+        if languageqid == None:  # Language item is still not on the wikibase (got 'None' from iso3mapping)
+            languagewdqid = iso3mapping['mapping'][langval]['wdqid']
+            print(
+                f"No item defined for this language on your Wikibase. This language is {languagewdqid} on Wikidata. I'll import that and use it from now on.")
+            languageqid = import_wikidata_entity(languagewdqid,
+                                                 classqid=configdata['mapping']['class_language'][
+                                                     'wikibase'])
+            iso3mapping['mapping'][langval]['wbqid'] = languageqid
+            botconfig.dump_mapping(iso3mapping)
+            print(f"Imported wd:{languagewdqid} to wb:{languageqid}.")
+    messages['nullitemlen'] = len(messages['nullitems'])
+    messages['nomapslen'] = len(messages['nomaps'])
     return messages
 
 def batchedit_literal(fieldname="", literal=None, exact_length=None, replace_value="", zoterodata=None, remove_tag=None):
@@ -313,16 +318,20 @@ def batchedit_literal(fieldname="", literal=None, exact_length=None, replace_val
         return {'message':f"Bad input: {replace_value}.", 'msgcolor':'background:orangered'}
     newdata = []
     for item in zoterodata:
-        if fieldname in item['data']:
-            if item['data'][fieldname].strip() == literal or literal == None:
-                item['data'][fieldname] = replace_value
         if remove_tag:
             index = 0
             while index < len(item['data']['tags']):
                 if item['data']['tags'][index]['tag'] == remove_tag:
                     del item['data']['tags'][index]
                 index += 1
-        messages.append(zoterobot.zotero_update_item(item))
+                print(f"Removed tag '{remove_tag}' from item {item['key']}.")
+        if fieldname in item['data']:
+            if item['data'][fieldname].strip() == literal or literal == None:
+                item['data'][fieldname] = replace_value
+                print(f"Updated content in '{fieldname}' from '{literal}' to '{replace_value} in item {item['key']}.")
+                messages.append(zoterobot.zotero_update_item(item))
+
+
         newdata.append(item)
     print(f"Zotero batch edit operation successful.")
     return {'messages': messages, 'msgcolor': 'background:limegreen', 'data': newdata}

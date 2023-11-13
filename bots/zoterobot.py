@@ -114,7 +114,7 @@ def zotero_update_item(zotitem):
     del zotitem['wikibase_entity']  # raises zotero api error if left in item
     try:
         pyzot.update_item(zotitem, last_modified=None)
-        return f"Successfully updated Zotero item <code><a href=\"{zotitem['links']['alternate']['href']}\" target=\"_blank\">{zotitem['key']}</a></code>."
+        return f"Successfully updated Zotero item <code><a href=\"{zotitem['links']['alternate']['href']}\" target=\"_blank\">{zotitem['key']}</a></code>: Reload records to be exported from Zotero."
     except Exception as err:
         if "Item has been modified since specified version" in str(err):
             return f"Versioning Error (has been modified since) *** <code><a href=\"{zotitem['links']['alternate']['href']}\" target=\"_blank\">{zotitem['key']}</a></code>: Reload records to be exported from Zotero."

@@ -10,7 +10,7 @@
 <small>(Back to <a href="/">start page</a>)</small>
 <h2>Functions for {{ zoterogrp_name }} Zotero Group</h2>
 <h3>Batch edit Zotero fields</h3>
-<p>Specify a Zotero tag for max. 100 items to batch edit and fetch these items.</p>
+<p>Specify a Zotero tag for max. 100 items to batch edit and fetch these items.</br><small>You can batch edit any field, except creators.</small></p>
 <form method="POST"><input placeholder="{{ batch_tag }}"  name="specify_batch_tag" type="text" style="width: 100px;" />
     <input type="submit" value="Load items with this tag"/></form>
 {% if datafields %}
@@ -27,7 +27,7 @@
 {% endif %}
 
 <h3>Remove tags from Zotero items</h3>
-<p>Specify a Zotero tag to remove from max. 100 items.</p>
+<p>Specify a Zotero tag to remove from max. 100 items.</br><small>For deleting the tag from more items, repeat the operation.</small></p>
 <form method="POST"><input name="specify_remove_tag" type="text" style="width: 100px;" />
     <input type="submit" value="Remove tag from items"/></form>
 
