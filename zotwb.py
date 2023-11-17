@@ -109,7 +109,7 @@ def zotero_export():
                     elif command == "do_upload_new":
                         action = zotwb_functions.wikibase_upload(data=zoterodata, onlynew=True)
                     elif command == 'batchedit_empty':
-                        action = zotwb_functions.batchedit_literal(literal="", replace_value=request.form.get(command), exact_length=3, zoterodata=zoterodata)
+                        action = zotwb_functions.batchedit_literal(fieldname='language', literal="", replace_value=request.form.get(command), exact_length=3, zoterodata=zoterodata)
                     elif command.startswith('litmap_'):
                         literal = command.replace('litmap_','')
                         action = zotwb_functions.batchedit_literal(fieldname='language', literal=literal, replace_value=request.form.get(command), exact_length=3, zoterodata=zoterodata)

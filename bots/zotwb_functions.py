@@ -312,10 +312,10 @@ def check_language(zoterodata=[]):
     return messages
 
 def batchedit_literal(fieldname="", literal=None, exact_length=None, replace_value="", zoterodata=None, remove_tag=None):
-    print(f"Now batch editing '{fieldname}'... wait... tag to remove after edit: {str(remove_tag)}")
+    print(f"Now batch editing '{fieldname}', value to write is '{replace_value}'. ...wait... tag to remove after edit: {str(remove_tag)}")
     messages = []
     if exact_length and len(replace_value) != exact_length or (fieldname == 'language' and re.search(r'[^a-zA-Z]', replace_value)):
-        return {'message':f"Bad input: {replace_value}.", 'msgcolor':'background:orangered'}
+        return {'messages':[f"Bad input: {replace_value}."], 'msgcolor':'background:orangered'}
     newdata = []
     for item in zoterodata:
         if remove_tag:
