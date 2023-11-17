@@ -4,7 +4,7 @@ import os, re, json
 from datetime import datetime
 
 # load active profile
-with open('bots/profiles.json', 'r', encoding='utf-8') as file:
+with open('profiles.json', 'r', encoding='utf-8') as file:
     profile = json.load(file)['last_profile']
 
 # from flask_wtf import FlaskForm
@@ -33,7 +33,7 @@ def index_page():
 def change_profile():
     messages = []
     msgcolor = None
-    with (open('bots/profiles.json', 'r', encoding='utf-8') as file):
+    with (open('profiles.json', 'r', encoding='utf-8') as file):
         profiles = json.load(file)
         print(f"Profile page: Active profiles are {str(profiles['active_profiles'])}")
         other_profiles = profiles['active_profiles']
@@ -55,7 +55,7 @@ def change_profile():
                     profile = request.form.get(command)
                     message = f"This profile will be activated: {profile}."
                     print(message)
-                    with open('bots/profiles.json', 'w', encoding='utf-8') as file:
+                    with open('profiles.json', 'w', encoding='utf-8') as file:
                         json.dump({'last_profile':profile,'active_profiles':active_profiles}, file, indent=2)
                     messages.append(message + ' Go to <a href="/">ZotWb start page</a>.')
                     msgcolor="background:limegreen"
@@ -69,7 +69,7 @@ def zotero_export():
     configdata = botconfig.load_mapping('config')
     zoteromapping = botconfig.load_mapping('zotero')
     language_literals = botconfig.load_mapping('language-literals')
-    with open('data/zoteroexport.json', 'r', encoding='utf-8') as jsonfile:
+    with open(f"profiles/{profile}/data/zoteroexport.json", 'r', encoding='utf-8') as jsonfile:
         zoterodata = json.load(jsonfile)
         zotero_check_messages = zotwb_functions.check_export(zoterodata=zoterodata, zoteromapping=zoteromapping)
         language_check_messages = zotwb_functions.check_language(zoterodata=zoterodata)
@@ -84,7 +84,8 @@ def zotero_export():
                                zotero_check_messages=zotero_check_messages,
                                language_check_messages=language_check_messages,
                                zotero_len=str(len(zoterodata)),
-                               zotero_when=datetime.utcfromtimestamp(os.path.getmtime('data/zoteroexport.json')).strftime(
+                               zotero_when=datetime.utcfromtimestamp(os.path.getmtime(
+                                   f"profiles/{profile}/data/zoteroexport.json")).strftime(
             '%Y-%m-%d at %H:%M:%S UTC'),
                                export_tag=configdata['mapping']['zotero_export_tag'],
                                onwiki_tag=configdata['mapping']['zotero_on_wikibase_tag'],
@@ -119,7 +120,7 @@ def zotero_export():
                     msgcolor = action['msgcolor']
                     if 'data' in action:
                         zoterodata = action['data']
-                        with open('data/zoteroexport.json', 'w', encoding='utf-8') as jsonfile:
+                        with open(f"profiles/{profile}/data/zoteroexport.json", 'w', encoding='utf-8') as jsonfile:
                             json.dump(zoterodata, jsonfile, indent=2)
         return render_template("zotero_export.html", wikibase_url=configdata['mapping']['wikibase_url'],
                                wikibase_entity_ns=configdata['mapping']['wikibase_entity_ns'],
@@ -130,8 +131,9 @@ def zotero_export():
                                zotero_check_messages=zotero_check_messages,
                                language_check_messages=language_check_messages,
                                zotero_len=str(len(zoterodata)),
-                               zotero_when=datetime.utcfromtimestamp(os.path.getmtime('data/zoteroexport.json')).strftime(
-            '%Y-%m-%d at %H:%M:%S UTC'),
+                               zotero_when=datetime.utcfromtimestamp(os.path.getmtime(
+                                   f"profiles/{profile}/data/zoteroexport.json")).strftime(
+                                '%Y-%m-%d at %H:%M:%S UTC'),
                                export_tag=configdata['mapping']['zotero_export_tag'],
                                onwiki_tag=configdata['mapping']['zotero_on_wikibase_tag'],
                                messages=messages, msgcolor=msgcolor
@@ -142,7 +144,7 @@ def zotero_export():
 
 @app.route('/basic_config', methods= ['GET', 'POST'])
 def basic_config():
-    with open(f"bots/profiles/{profile}/config_private.json", 'r', encoding="utf-8") as jsonfile:
+    with open(f"profiles/{profile}/config_private.json", 'r', encoding="utf-8") as jsonfile:
         config_private = json.load(jsonfile)
     configdata = botconfig.load_mapping('config')
     properties = botconfig.load_mapping('properties')
@@ -157,7 +159,7 @@ def basic_config():
                 if key.startswith('private_'):
                     command = key.replace('private_', '')
                     config_private[command] = request.form.get(key)
-                    with open(f"bots/profiles/{profile}/config_private.json", 'w', encoding="utf-8") as jsonfile:
+                    with open(f"profiles/{profile}/config_private.json", 'w', encoding="utf-8") as jsonfile:
                         json.dump(config_private, jsonfile, indent=2)
                 if key.startswith('wikibase') or key.startswith('zotero'):
                     configdata['mapping'][key] = request.form.get(key)
@@ -339,7 +341,7 @@ def wikidata_alignment():
     configdata = botconfig.load_mapping('config')
 
     if request.method == 'GET':
-        propcachedate = datetime.utcfromtimestamp(os.path.getmtime(f"bots/profiles/{profile}/properties.json")).strftime(
+        propcachedate = datetime.utcfromtimestamp(os.path.getmtime(f"profiles/{profile}/properties.json")).strftime(
             '%Y-%m-%d at %H:%M:%S UTC')
         return render_template("wikidata_alignment.html", wikibase_url=configdata['mapping']['wikibase_url'],
                                wikibase_name=configdata['mapping']['wikibase_name'],
@@ -348,7 +350,7 @@ def wikidata_alignment():
                                propcachedate=propcachedate,
                            message=None)
     elif request.method == 'POST':
-        propcachedate = datetime.utcfromtimestamp(os.path.getmtime(f"bots/profiles/{profile}/properties.json")).strftime(
+        propcachedate = datetime.utcfromtimestamp(os.path.getmtime(f"profiles/{profile}/properties.json")).strftime(
             '%Y-%m-%d at %H:%M:%S UTC')
         if request.form:
             for key in request.form:
@@ -369,7 +371,7 @@ def wikidata_alignment():
 @app.route('/openrefine_creators', methods= ['GET', 'POST'])
 def openrefine_creators():
     configdata = botconfig.load_mapping('config')
-    get_recon = zotwb_functions.get_recon_pd(folder="data/creators_reconciled")
+    get_recon = zotwb_functions.get_recon_pd(folder=f"profiles/{profile}/data/creators_reconciled/")
     recon_df = get_recon['data']
     recon_df.set_index('creatorstatement')
     recon_wd = str(len(recon_df.dropna(subset=['Wikidata_Qid'])))
@@ -379,7 +381,7 @@ def openrefine_creators():
     if request.method == 'GET':
 
         return render_template("openrefine_creators.html", wikibase_name=configdata['mapping']['wikibase_name'],
-                               messages=[], msgcolor="background:limegreen",
+                               messages=[], msgcolor="background:limegreen", profile=profile,
                                recon_all =recon_all, recon_unrecon=recon_unrecon, recon_wd = recon_wd, recon_wb=recon_wb, filename = get_recon['filename'])
     elif request.method == 'POST':
         if request.form:
@@ -387,8 +389,8 @@ def openrefine_creators():
                 messages = [f"Operation sucessful. Operation name was '{key.replace('_',' ')}'."]
                 msgcolor = "background:limegreen"
                 if key == "export_unreconciled_creators":
-                    messages = zotwb_functions.export_creators()
-                    get_recon = zotwb_functions.get_recon_pd(folder="data/creators_reconciled")
+                    messages = zotwb_functions.export_creators(folder=f"profiles/{profile}/data/creators_unreconciled/")
+                    get_recon = zotwb_functions.get_recon_pd(folder=f"profiles/{profile}/data/creators_reconciled/")
                     recon_df = get_recon['data']
                     recon_df.set_index('creatorstatement')
                     recon_wd = str(len(recon_df.dropna(subset=['Wikidata_Qid'])))
@@ -404,7 +406,7 @@ def openrefine_creators():
                     messages = zotwb_functions.import_creators(data=recon_df, infile=get_recon['filename'], unrecon=True)
 
         return render_template("openrefine_creators.html", wikibase_name=configdata['mapping']['wikibase_name'],
-                               messages=messages, msgcolor=msgcolor,
+                               messages=messages, msgcolor=msgcolor, profile=profile,
                                recon_all =recon_all, recon_unrecon=recon_unrecon, recon_wd = recon_wd, recon_wb = recon_wb, filename = get_recon['filename'])
 
 
@@ -414,7 +416,7 @@ split_char = None
 @app.route('/openrefine_anystring', methods= ['GET', 'POST'])
 def openrefine_anystring():
     configdata = botconfig.load_mapping('config')
-    # get_recon = zotwb_functions.get_recon_pd(folder="data/creators_reconciled")
+    # get_recon = zotwb_functions.get_recon_pd(folder=f"profiles/{profile}/data/creators_reconciled")
     # recon_df = get_recon['data']
     # recon_df.set_index('creatorstatement')
     # recon_wd = str(len(recon_df.dropna(subset=['Wikidata_Qid'])))
@@ -424,9 +426,11 @@ def openrefine_anystring():
     global source_prop
     global restrict_class
     global split_char
+    recon_dir = f"profiles/{profile}/data/strings_reconciled/"
+    recon_files = sorted(os.listdir(recon_dir), reverse=True)
     if request.method == 'GET':
         return render_template("openrefine_anystring.html", wikibase_name=configdata['mapping']['wikibase_name'],
-                               messages=[], msgcolor="background:limegreen",
+                               messages=[], msgcolor="background:limegreen", profile=profile, filenames = recon_files,
                                source_prop=source_prop, restrict_class=restrict_class, split_char=split_char)
     elif request.method == 'POST':
         if request.form:
@@ -448,13 +452,16 @@ def openrefine_anystring():
                 if source_prop and key == "Set_Split_Characters":
                     split_char = request.form.get(key).strip()
                 if source_prop and key == "Produce_CSV":
-                    messages = zotwb_functions.export_anystring(wbprop = source_prop, restrict_class=restrict_class, split_char=split_char)
-
+                    messages = zotwb_functions.export_anystring(profile=profile, wbprop = source_prop, restrict_class=restrict_class, split_char=split_char)
+                if key.startswith('import_'):
+                    filename=key.replace('import_','')
+                    wbprop = re.search(r'^P[0-9]+', filename)
+                    messages = zotwb_functions.import_anystring(infile=recon_dir+filename, wbprop=wbprop, wikidata=True)
 
 
 
                     # messages = zotwb_functions.export_creators()
-                    # get_recon = zotwb_functions.get_recon_pd(folder="data/creators_reconciled")
+                    # get_recon = zotwb_functions.get_recon_pd(folder=f"profiles/{profile}/data/creators_reconciled")
                     # recon_df = get_recon['data']
                     # recon_df.set_index('creatorstatement')
                     # recon_wd = str(len(recon_df.dropna(subset=['Wikidata_Qid'])))
@@ -470,7 +477,7 @@ def openrefine_anystring():
                     messages = zotwb_functions.import_creators(data=recon_df, infile=get_recon['filename'], unrecon=True)
 
         return render_template("openrefine_anystring.html",
-                               messages=messages, msgcolor=msgcolor,
+                               messages=messages, msgcolor=msgcolor, profile=profile, filenames = recon_files,
                                source_prop=source_prop, restrict_class=restrict_class, split_char=split_char)
 
 @app.route('/little_helpers', methods= ['GET', 'POST'])
@@ -504,7 +511,7 @@ def little_helpers():
                     tag_command = commandre.group(1)
                     tag = commandre.group(3)
                     fieldname = commandre.group(2)
-                    with open('data/zoteroeditbatch.json', 'r', encoding='utf-8') as jsonfile:
+                    with open(f"profiles/{profile}/data/zoteroeditbatch.json", 'r', encoding='utf-8') as jsonfile:
                         zoterodata = json.load(jsonfile)
                     if tag_command == "leavetag":
                         remove_tag = None

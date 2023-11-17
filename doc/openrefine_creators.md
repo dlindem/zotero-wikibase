@@ -1,6 +1,6 @@
 # Deduplicating and Reconciling person names in OpenRefine
 
-This function will produce a CSV sheet to be imported into OpenRefine, containing all unreconciled (i.e., literal only) creator statements (including all creator role properties). The CSV file will be saved in your [`data/creators_unreconciled`](data/creators_unreconciled) folder.
+This function will produce a CSV sheet to be imported into OpenRefine, containing all unreconciled (i.e., literal only) creator statements (including all creator role properties). The CSV file will be saved in your [`profiles/{profile}/data/creators_unreconciled`](profiles/{profile}/data/creators_unreconciled) folder.
 
 ## Deduplication (optional)
 

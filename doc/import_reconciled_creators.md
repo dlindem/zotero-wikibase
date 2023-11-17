@@ -1,6 +1,6 @@
 # Importing reconciliation results to your Wikibase
 
-You have saved your reconciliation result CSV file in the `data/creators_reconciled` or `data/reconciled_others` folder.
+You have saved your reconciliation result CSV file in the `profiles/{profile}/data/creators_reconciled` or `profiles/{profile}/data/reconciled_others` folder.
 
 * Run the function you need (for creators or others)
 

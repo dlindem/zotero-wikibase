@@ -11,7 +11,7 @@
 <p>On this page, you can produce CSV for loading into Open Refine, and import reconciliation result CSV produced in Open Refine back to Wikibase.<br>String values are exported, and the linked items are imported back.</p>
 <h2>Export string literals: Specify source property</h2>
 <p><form style="display: inline;" method="POST">
-    <input type="text" name="Specify_Source_Property" placeholder="{{ source_prop }}" style="width: 60px;">
+    <input type="text" name="Specify_Source_Property" style="width: 60px;">
     <input type="submit" value="Reconcile this">
 </form> to send values of this property to Open Refine.
 </br><small>Enter a {{ wikibase_name }} property identifier, e.g. 'P15'.</small></p>
@@ -32,12 +32,21 @@
     <li>Source property: {{ source_prop }}</li>
     <li>Class restriction: {{ restrict_class }}</li>
     <li>Split character(s): {{ split_char }}</li>
+</ul>
 <p><form style="display: inline;" method="POST">
     <button name="Produce_CSV" type="submit">Produce CSV</button>
 </form></p>
-<p>The file will be saved as <b><code>data/strings_unreconciled/{{ source_prop }}_[date_hour].csv</code></b>.</p>
+<p>The file will be saved as <b><code>data/strings_unreconciled/{{ source_prop }}_[date_hour].csv</code></b> in your profile folder.</p>
 {% endif %}
-
+<h2>Import reconciled Wikidata entities</h2>
+<p>Folder <b><code>data/strings_reconciled/</code></b> in your profile contains the following files:</p>
+<ul>
+{%for file in filenames %}
+    <li><form style="display: inline;" method="POST">
+    <button name="import_{{ file }}" type="submit">Import this</button>
+</form> <code><b>{{ file }}</b></code></li>
+{% endfor %}
+</ul>
 <!--
 <h2>Import creator entities (reconciled creator data)</h2>
 <p><a href="./openrefine">Refresh this page</a> to load the most recent CSV exported from Open Refine in <code><b>data/creators_reconciled</b></code> folder.</p>
@@ -66,5 +75,15 @@ The service should then display a page with instructions at <a href="http://0.0.
     <p><code>./refine</code></p>
 Open Refine should then be accessible at <a href="http://127.0.0.1:3333" target="_blank">127.0.0.1:3333</a>.</p>
 --!>
+
+<h2>Start {{ wikibase_name }} reconciliation service</h2>
+<p>To start the reconciliation service, open a new terminal in your zotwb folder, and type:
+<p><code>source zotwbenv/bin/activate</br>cd reconciliator</br>python3 -m reconciliator</code></p>
+The service should then display a page with instructions at <a href="http://0.0.0.0:8000" target="_blank">0.0.0.0:8000</a>.</p>
+<h3>Start Open Refine</h3>
+<p>To start Open Refine, open a new terminal in the Open Refine folder (named e.g. <code><b>openrefine-3.7.6</b></code>), and type:
+    <p><code>./refine</code></p>
+Open Refine should then be accessible at <a href="http://127.0.0.1:3333" target="_blank">127.0.0.1:3333</a>.</p>
+
 </body>
 </html>

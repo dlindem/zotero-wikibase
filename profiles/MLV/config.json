@@ -34,6 +34,14 @@
       "comment": "externalId-prop for \"Wikidata entity\"; this points to the exact-match Wikidata entity, and has formatter URL and formatter URI \"http://www.wikidata.org/entity/\".",
       "formatter_url": "http://www.wikidata.org/entity/"
     },
+    "prop_wikidata_reference": {
+      "wikibase": "P178",
+      "type": "ExternalId",
+      "wikidata": null,
+      "name": "Wikidata Entity",
+      "comment": "externalId-prop for \"referenced Wikidata entity\"; this points to a referenced Wikidata entity (=an entity reconciliation annotation, used as qualifier in literal statements), and has formatter URL and formatter URI \"http://www.wikidata.org/entity/\".",
+      "formatter_url": "http://www.wikidata.org/entity/"
+    },
     "prop_formatterurirdf": {
       "wikibase": "P3",
       "type": "String",

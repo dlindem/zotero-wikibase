@@ -10,15 +10,15 @@ def create_profile(name=""):
     if re.search(r'[^a-zA-Z0-9_]', name) or len(name) < 3 or len(name) > 10:
         return {'messages': ["Invalid input. The profile name may only contain a-z, A-Z letters, numbers and underscores, and be min 3 and max 10 characters long."],
                 'msgcolor': 'background:orangered'}
-    with open('bots/profiles.json', 'r', encoding='utf-8') as file:
+    with open('profiles.json', 'r', encoding='utf-8') as file:
         profiles = json.load(file)
     if name in profiles['active_profiles']:
         return {'messages': ["Invalid input. The profile name already exists. Choose a different identifier for the new profile."],
                 'msgcolor': 'background:orangered'}
-    shutil.copytree('bots/profiles/profile.template', f"bots/profiles/{name}")
+    shutil.copytree('profiles/profile.template', f"profiles/{name}")
     profiles['active_profiles'].append(name)
     profiles['last_profile'] = name
-    with open('bots/profiles.json', 'w', encoding='utf-8') as file:
+    with open('profiles.json', 'w', encoding='utf-8') as file:
         json.dump(profiles, file, indent=2)
     return {'messages': [f"Successfully created and activated new profile <b>'{name}'</b>.", 'Now restart the ZotWb app (CTRL+C, ARROW-UP, ENTER in the terminal).'],
                 'msgcolor': 'background:limegreen'}
@@ -834,7 +834,7 @@ def wikibase_upload(data=[], onlynew=False):
     print('\n'+str(messages))
     return {'data': returndata, 'messages': messages, 'msgcolor': msgcolor}
 
-def export_creators():
+def export_creators(folder=""):
     print('Starting unreconciled creators export to CSV...')
     config = botconfig.load_mapping('config')
     query = """
@@ -865,14 +865,14 @@ def export_creators():
     if len(data) == 0:
         message = f"SPARQL Query for unreconciled creator statements returned 0 results."
     else:
-        outfilename = f"data/creators_unreconciled/wikibase_creators_{time.strftime('%Y%m%d_%H%M%S', time.localtime())}.csv"
+        outfilename = f"{folder}wikibase_creators_{time.strftime('%Y%m%d_%H%M%S', time.localtime())}.csv"
         data.to_csv(outfilename, index=False)
         message = f"Successfully exported {str(len(data))} unreconciled creator statements to <code>{outfilename}</code>."
     print(message)
     return [message]
 
 def get_recon_pd(folder=""):
-    list_of_files = glob.glob(folder + '/*.csv')  # * means all if need specific format then *.csv
+    list_of_files = glob.glob(folder + '*.csv')  # * means all if need specific format then *.csv
     infile = max(list_of_files, key=os.path.getctime)
     print(f"Will get reconciled data from {infile}...")
     return {'data':pandas.read_csv(infile),'filename':infile}
@@ -1034,21 +1034,23 @@ def import_creators(data=None, infile=None, wikidata=False, wikibase=False, unre
     messages.append(message)
     return messages
 
-def export_anystring(wbprop = None, restrict_class= None, split_char= None):
+def export_anystring(profile=None, wbprop = None, restrict_class= None, split_char= None):
     print(f"Will initiate CSV export for {str(wbprop)} values, class-restr. {str(restrict_class)}, splitchar '{str(split_char)}'")
     config = botconfig.load_mapping("config")
-    query = """select ?item ?itemLabel ?propval where { values ?prop { xdp:"""+wbprop+""" } ?item ?prop ?propval. """
+    wikirefprop = config['mapping']['prop_wikidata_reference']['wikibase']
+    query = "select ?item ?claimid ?itemLabel ?propval where { ?item "
+    query+= f"xp:{wbprop} ?claimid. ?claimid xps:{wbprop} ?propval. "
+    query+= "filter not exists {?claimid "+f"xpq:{wikirefprop} ?wikiref."+"}"
     if restrict_class:
         query += f"?item xdp:{config['mapping']['prop_instanceof']} xwb:{restrict_class}. "
     query += 'SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }}'
     query_result = xwbi.wbi_helpers.execute_sparql_query(query=query,
                                                      prefix=config['mapping']['wikibase_sparql_prefixes'])
-    index = 0
-    while index < len(query_result['head']['vars']):
-        if query_result['head']['vars'][index] == 'propval':
-            query_result['head']['vars'][index] = wbprop
-        index += 1
-    data = pandas.DataFrame(columns=query_result['head']['vars'])
+    columns = query_result['head']['vars']
+    columns.remove('propval')
+    columns.append(wbprop+'_literal')
+    columns.append(wbprop+'_recon')
+    data = pandas.DataFrame(columns=columns)
     for binding in query_result['results']['bindings']:
         pdrow = {}
         for key in binding:
@@ -1070,16 +1072,59 @@ def export_anystring(wbprop = None, restrict_class= None, split_char= None):
             if len(values) > 1:
                 print(f"Split '{stringval}' to {str(values)}")
         for value in values:
-            pdrow[wbprop] = value
+            pdrow[wbprop+'_literal'] = value
+            pdrow[wbprop+'_recon'] = value
             data.loc[len(data)] = pdrow
     if len(data) == 0:
         message = f"SPARQL Query for {wbprop} statements, class-restr. {str(restrict_class)}, splitchar '{split_char}' returned 0 results."
     else:
-        outfilename = f"data/strings_unreconciled/{wbprop}_{time.strftime('%Y%m%d_%H%M%S', time.localtime())}.csv"
+        outfilename = f"profiles/{profile}/data/strings_unreconciled/{wbprop}_{time.strftime('%Y%m%d_%H%M%S', time.localtime())}.csv"
         data.to_csv(outfilename, index=False)
         message = f"Successfully exported {str(len(data))} unreconciled literals to <code>{outfilename}</code>'.</br>Query was: {wbprop} statements, class-restr. '{str(restrict_class)}', splitchar '{str(split_char)}'.</br>Open that file in Open Refine as new project."
     print(message)
     return [message]
+
+def import_anystring(infile=None, wbprop=None, wikidata=True, wikibase=False):
+    from bots import xwb
+    config = botconfig.load_mapping("config")
+    messages = []
+    # This expects a csv with the following colums:
+    # item [wikibase Qid] / claimid / {prop_nr}_Wikidata [reconciled wd Qid]
+
+    df = pandas.read_csv(infile)
+
+    for col in df.columns:
+        print(str(col))
+        colre = re.search(r"_wikidata", str(col).lower())
+        if colre:
+            # wbprop = colre.group(1)
+            wd_reconcol = col
+            print(f"Found column to get Wikidata ID: {col}. (Wikibase property {wbprop})")
+    # if not wbprop:
+    #     message = f"Could not find a column named 'P[0-9]+_Wikidata' in this CSV."
+    #     print(message)
+    #     messages.append(message)
+    #     return messages
+    if wikidata:
+        df = df.dropna(subset=[wd_reconcol])
+        jobdesc = f"Wikidata-reconciled literals, ({str(len(df))} {wbprop} statements)"
+        for rowindex, row in df.iterrows():
+            wbitem = row['item'].replace(config['mapping']['wikibase_entity_ns'], "")
+            claimid = re.search(r'statement/(Q.*)', row['claimid']).group(1)
+            print('WB qid is ' + wbitem + '. Claim ID is ' + claimid + '.')
+            value = row[wd_reconcol]
+            xwb.setqualifier(qid=wbitem, prop=wbprop, claimid=claimid, qualiprop=config['mapping']['prop_wikidata_reference']['wikibase'],
+                             qualio=value, dtype="externalid",
+                             replace=False)
+    # elif wikibase:
+    #     df = df.dropna(subset=['Wikibase_Qid'])
+    #     jobdesc = f"Wikibase-reconciled literals ({str(len(df))} {wbprop} statements)"
+
+    message = f"Successfully processed import CSV, modality was <b>{jobdesc}</b>."
+    print('\n'+message)
+    messages.append(message)
+    return messages
+
 
 
 print('zotwb functions imported.')

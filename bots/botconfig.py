@@ -2,17 +2,17 @@ import json
 import os
 # botpath = os.path.realpath('bots')
 # load active profile
-with open("bots/profiles.json", 'r', encoding='utf-8') as file:
+with open("profiles.json", 'r', encoding='utf-8') as file:
     profile = json.load(file)['last_profile']
 
 def load_mapping(mappingname):
     # print(f"Will load mapping: {mappingname}.json")
-    with open(f"bots/profiles/{profile}/{mappingname}.json", 'r', encoding='utf-8') as jsonfile:
+    with open(f"profiles/{profile}/{mappingname}.json", 'r', encoding='utf-8') as jsonfile:
         return json.load(jsonfile)
 
 def dump_mapping(mappingjson):
     print(f"Will dump mapping: {mappingjson['filename']}")
-    with open(f"bots/profiles/{profile}/{mappingjson['filename']}", 'w', encoding='utf-8') as jsonfile:
+    with open(f"profiles/{profile}/{mappingjson['filename']}", 'w', encoding='utf-8') as jsonfile:
         json.dump(mappingjson, jsonfile, indent=2)
 
 # This maps Wikibase datatype identifiers to WikibaseIntegrator datatype identifiers

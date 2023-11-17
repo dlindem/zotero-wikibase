@@ -3,12 +3,12 @@ from bots import botconfig
 from pyzotero import zotero
 
 # load active profile
-with open(f"bots/profiles.json", 'r', encoding='utf-8') as file:
+with open(f"profiles.json", 'r', encoding='utf-8') as file:
     profile = json.load(file)['last_profile']
 
 config = botconfig.load_mapping("config")
 
-with open(f"bots/profiles/{profile}/config_private.json", 'r', encoding="utf-8") as jsonfile:
+with open(f"profiles/{profile}/config_private.json", 'r', encoding="utf-8") as jsonfile:
     config_private = json.load(jsonfile)
 
 pyzot = zotero.Zotero(int(config['mapping']['zotero_group_id']), 'group', config_private['zotero_api_key'])  # Zotero LexBib group
@@ -36,7 +36,7 @@ def getexport(tag=config['mapping']['zotero_export_tag'], save_to_file=False, fi
             rawitem['wikibase_entity'] = False
         exportitems.append(rawitem)
     if len(exportitems) > 0 and save_to_file:
-        with open(f"data/{file}", 'w', encoding='utf-8') as jsonfile:
+        with open(f"profiles/{profile}/data/{file}", 'w', encoding='utf-8') as jsonfile:
             json.dump(exportitems, jsonfile, indent=2)
     return exportitems
 

@@ -1,0 +1,320 @@
+{
+  "labels": {
+    "eu": {
+      "language": "eu",
+      "value": "Baskisches W\u00f6rterbuch I II"
+    },
+    "es": {
+      "language": "es",
+      "value": "Baskisches W\u00f6rterbuch I II"
+    },
+    "en": {
+      "language": "en",
+      "value": "Baskisches W\u00f6rterbuch I II"
+    },
+    "de": {
+      "language": "de",
+      "value": "Baskisches W\u00f6rterbuch I II"
+    },
+    "fr": {
+      "language": "fr",
+      "value": "Baskisches W\u00f6rterbuch I II"
+    }
+  },
+  "descriptions": {
+    "eu": {
+      "language": "eu",
+      "value": "Mahn 1840"
+    },
+    "es": {
+      "language": "es",
+      "value": "Mahn 1840"
+    },
+    "en": {
+      "language": "en",
+      "value": "Mahn 1840"
+    },
+    "de": {
+      "language": "de",
+      "value": "Mahn 1840"
+    },
+    "fr": {
+      "language": "fr",
+      "value": "Mahn 1840"
+    }
+  },
+  "aliases": {},
+  "type": "item",
+  "claims": {
+    "P5": [
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P5",
+          "datatype": "wikibase-item",
+          "datavalue": {
+            "value": {
+              "entity-type": "item",
+              "numeric-id": 4,
+              "id": "Q4"
+            },
+            "type": "wikibase-entityid"
+          }
+        },
+        "type": "statement",
+        "id": "Q315$E3E51D36-5F5C-40A8-9152-BF9389D48CD6",
+        "rank": "normal"
+      },
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P5",
+          "datatype": "wikibase-item",
+          "datavalue": {
+            "value": {
+              "entity-type": "item",
+              "numeric-id": 12,
+              "id": "Q12"
+            },
+            "type": "wikibase-entityid"
+          }
+        },
+        "type": "statement",
+        "id": "Q315$EF379484-7A60-4E4A-AC8C-33D5A37F2A54",
+        "rank": "normal"
+      }
+    ],
+    "P78": [
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P78",
+          "datatype": "wikibase-item",
+          "datavalue": {
+            "value": {
+              "entity-type": "item",
+              "numeric-id": 209,
+              "id": "Q209"
+            },
+            "type": "wikibase-entityid"
+          }
+        },
+        "type": "statement",
+        "id": "Q315$C180C8E5-BBED-4A72-A1BF-7F9428F2F1BE",
+        "rank": "normal"
+      }
+    ],
+    "P17": [
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P17",
+          "datatype": "external-id",
+          "datavalue": {
+            "value": "A847IL42",
+            "type": "string"
+          }
+        },
+        "type": "statement",
+        "id": "Q315$FAF98FEB-257B-45BD-90AE-10C8359119F3",
+        "rank": "normal"
+      }
+    ],
+    "P10": [
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P10",
+          "datatype": "external-id",
+          "datavalue": {
+            "value": "Q33733",
+            "type": "string"
+          }
+        },
+        "type": "statement",
+        "id": "Q315$100374DA-45E4-4CEF-A2A4-FECA27937926",
+        "rank": "normal"
+      }
+    ],
+    "P12": [
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P12",
+          "datatype": "wikibase-item",
+          "datavalue": {
+            "value": {
+              "entity-type": "item",
+              "numeric-id": 214,
+              "id": "Q214"
+            },
+            "type": "wikibase-entityid"
+          }
+        },
+        "type": "statement",
+        "id": "Q315$537163ED-369A-4017-B181-F9C496E0D407",
+        "rank": "normal"
+      }
+    ],
+    "P16": [
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P16",
+          "datatype": "time",
+          "datavalue": {
+            "value": {
+              "time": "+1840-01-01T00:00:00Z",
+              "timezone": 0,
+              "before": 0,
+              "after": 0,
+              "precision": 9,
+              "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+            },
+            "type": "time"
+          }
+        },
+        "type": "statement",
+        "id": "Q315$DC76FF1C-9C04-463B-9977-2B1CFAED98B4",
+        "rank": "normal"
+      }
+    ],
+    "P13": [
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P13",
+          "datatype": "wikibase-item",
+          "datavalue": {
+            "value": {
+              "entity-type": "item",
+              "numeric-id": 524,
+              "id": "Q524"
+            },
+            "type": "wikibase-entityid"
+          }
+        },
+        "type": "statement",
+        "id": "Q315$0340BC23-89FF-4A58-9848-A6E7842ED5A6",
+        "rank": "normal",
+        "qualifiers": {
+          "P32": [
+            {
+              "snaktype": "value",
+              "property": "P32",
+              "datatype": "string",
+              "datavalue": {
+                "value": "1",
+                "type": "string"
+              }
+            }
+          ],
+          "P36": [
+            {
+              "snaktype": "value",
+              "property": "P36",
+              "datatype": "string",
+              "datavalue": {
+                "value": "C. A. F. Mahn",
+                "type": "string"
+              }
+            }
+          ],
+          "P38": [
+            {
+              "snaktype": "value",
+              "property": "P38",
+              "datatype": "string",
+              "datavalue": {
+                "value": "C. A. F.",
+                "type": "string"
+              }
+            }
+          ],
+          "P39": [
+            {
+              "snaktype": "value",
+              "property": "P39",
+              "datatype": "string",
+              "datavalue": {
+                "value": "Mahn",
+                "type": "string"
+              }
+            }
+          ]
+        },
+        "qualifiers-order": [
+          "P32",
+          "P36",
+          "P38",
+          "P39"
+        ]
+      }
+    ],
+    "P11": [
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P11",
+          "datatype": "string",
+          "datavalue": {
+            "value": "Baskisches W\u00f6rterbuch I II",
+            "type": "string"
+          }
+        },
+        "type": "statement",
+        "id": "Q315$3991842E-7AD7-4993-A16F-65A61B5AB243",
+        "rank": "normal"
+      }
+    ],
+    "P141": [
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P141",
+          "datatype": "string",
+          "datavalue": {
+            "value": "Staatsbibliothek Berlin. Signatur Coll.ling.quart 79, Handschriftenabteilung (Haus 2).",
+            "type": "string"
+          }
+        },
+        "type": "statement",
+        "id": "Q315$21429EA3-823E-4CC3-88A3-86A8326BA749",
+        "rank": "normal"
+      }
+    ],
+    "P15": [
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P15",
+          "datatype": "string",
+          "datavalue": {
+            "value": "Berlin",
+            "type": "string"
+          }
+        },
+        "type": "statement",
+        "id": "Q315$FEC1D39A-9B58-4B00-B715-B39FC7AA1E85",
+        "rank": "normal",
+        "qualifiers": {
+          "P178": [
+            {
+              "snaktype": "value",
+              "property": "P178",
+              "datatype": "external-id",
+              "datavalue": {
+                "value": "Q64",
+                "type": "string"
+              }
+            }
+          ]
+        },
+        "qualifiers-order": [
+          "P178"
+        ]
+      }
+    ]
+  },
+  "id": "Q315"
+}

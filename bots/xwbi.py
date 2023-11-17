@@ -15,9 +15,9 @@ from wikibaseintegrator.wbi_config import config as wbi_config
 # from wikibaseintegrator.models.claims import Claims
 
 # load active profile
-with open(f"bots/profiles.json", 'r', encoding='utf-8') as file:
+with open(f"profiles.json", 'r', encoding='utf-8') as file:
     profile = json.load(file)['last_profile']
-with open(f"bots/profiles/{profile}/config_private.json", 'r', encoding="utf-8") as jsonfile:
+with open(f"profiles/{profile}/config_private.json", 'r', encoding="utf-8") as jsonfile:
 	config_private = json.load(jsonfile)
 config = botconfig.load_mapping('config')
 print(str(config['mapping']['wikibase_api_url']))
@@ -250,6 +250,9 @@ def importitem(wdqid, wbqid=False, process_claims=True, classqid=None):
 	result_qid = itemwrite(wbitemjson)
 	print('Wikidata item import successful.')
 	return result_qid
+
+
+
 
 
 print('xwbi wikibase bot function load finished.')
