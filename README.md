@@ -1,4 +1,4 @@
-# zotero-wikibase
+# ZotWb
  **A python app for LODifying bibliographical data, involving Zotero, Wikibase, and Wikidata**
 
 This tool exports records in a Zotero group library to a custom Wikibase, prepares datasets to be sent to OpenRefine, and feeds OpenRefine reconciliaton results back to the Wikibase. Wikidata is envolved in the entity reconciliation.
