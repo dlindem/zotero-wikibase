@@ -1,320 +1,563 @@
-{
-  "labels": {
-    "eu": {
-      "language": "eu",
-      "value": "Baskisches W\u00f6rterbuch I II"
+[
+  {
+    "key": "BDWZLIPZ",
+    "version": 149316,
+    "library": {
+      "type": "group",
+      "id": 1892855,
+      "name": "LexBib",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/lexbib",
+          "type": "text/html"
+        }
+      }
     },
-    "es": {
-      "language": "es",
-      "value": "Baskisches W\u00f6rterbuch I II"
-    },
-    "en": {
-      "language": "en",
-      "value": "Baskisches W\u00f6rterbuch I II"
-    },
-    "de": {
-      "language": "de",
-      "value": "Baskisches W\u00f6rterbuch I II"
-    },
-    "fr": {
-      "language": "fr",
-      "value": "Baskisches W\u00f6rterbuch I II"
-    }
-  },
-  "descriptions": {
-    "eu": {
-      "language": "eu",
-      "value": "Mahn 1840"
-    },
-    "es": {
-      "language": "es",
-      "value": "Mahn 1840"
-    },
-    "en": {
-      "language": "en",
-      "value": "Mahn 1840"
-    },
-    "de": {
-      "language": "de",
-      "value": "Mahn 1840"
-    },
-    "fr": {
-      "language": "fr",
-      "value": "Mahn 1840"
-    }
-  },
-  "aliases": {},
-  "type": "item",
-  "claims": {
-    "P5": [
-      {
-        "mainsnak": {
-          "snaktype": "value",
-          "property": "P5",
-          "datatype": "wikibase-item",
-          "datavalue": {
-            "value": {
-              "entity-type": "item",
-              "numeric-id": 4,
-              "id": "Q4"
-            },
-            "type": "wikibase-entityid"
-          }
-        },
-        "type": "statement",
-        "id": "Q315$E3E51D36-5F5C-40A8-9152-BF9389D48CD6",
-        "rank": "normal"
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/1892855/items/BDWZLIPZ",
+        "type": "application/json"
       },
-      {
-        "mainsnak": {
-          "snaktype": "value",
-          "property": "P5",
-          "datatype": "wikibase-item",
-          "datavalue": {
-            "value": {
-              "entity-type": "item",
-              "numeric-id": 12,
-              "id": "Q12"
-            },
-            "type": "wikibase-entityid"
-          }
-        },
-        "type": "statement",
-        "id": "Q315$EF379484-7A60-4E4A-AC8C-33D5A37F2A54",
-        "rank": "normal"
+      "alternate": {
+        "href": "https://www.zotero.org/groups/lexbib/items/BDWZLIPZ",
+        "type": "text/html"
       }
-    ],
-    "P78": [
-      {
-        "mainsnak": {
-          "snaktype": "value",
-          "property": "P78",
-          "datatype": "wikibase-item",
-          "datavalue": {
-            "value": {
-              "entity-type": "item",
-              "numeric-id": 209,
-              "id": "Q209"
-            },
-            "type": "wikibase-entityid"
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
           }
-        },
-        "type": "statement",
-        "id": "Q315$C180C8E5-BBED-4A72-A1BF-7F9428F2F1BE",
-        "rank": "normal"
-      }
-    ],
-    "P17": [
-      {
-        "mainsnak": {
-          "snaktype": "value",
-          "property": "P17",
-          "datatype": "external-id",
-          "datavalue": {
-            "value": "A847IL42",
-            "type": "string"
-          }
-        },
-        "type": "statement",
-        "id": "Q315$FAF98FEB-257B-45BD-90AE-10C8359119F3",
-        "rank": "normal"
-      }
-    ],
-    "P10": [
-      {
-        "mainsnak": {
-          "snaktype": "value",
-          "property": "P10",
-          "datatype": "external-id",
-          "datavalue": {
-            "value": "Q33733",
-            "type": "string"
-          }
-        },
-        "type": "statement",
-        "id": "Q315$100374DA-45E4-4CEF-A2A4-FECA27937926",
-        "rank": "normal"
-      }
-    ],
-    "P12": [
-      {
-        "mainsnak": {
-          "snaktype": "value",
-          "property": "P12",
-          "datatype": "wikibase-item",
-          "datavalue": {
-            "value": {
-              "entity-type": "item",
-              "numeric-id": 214,
-              "id": "Q214"
-            },
-            "type": "wikibase-entityid"
-          }
-        },
-        "type": "statement",
-        "id": "Q315$537163ED-369A-4017-B181-F9C496E0D407",
-        "rank": "normal"
-      }
-    ],
-    "P16": [
-      {
-        "mainsnak": {
-          "snaktype": "value",
-          "property": "P16",
-          "datatype": "time",
-          "datavalue": {
-            "value": {
-              "time": "+1840-01-01T00:00:00Z",
-              "timezone": 0,
-              "before": 0,
-              "after": 0,
-              "precision": 9,
-              "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
-            },
-            "type": "time"
-          }
-        },
-        "type": "statement",
-        "id": "Q315$DC76FF1C-9C04-463B-9977-2B1CFAED98B4",
-        "rank": "normal"
-      }
-    ],
-    "P13": [
-      {
-        "mainsnak": {
-          "snaktype": "value",
-          "property": "P13",
-          "datatype": "wikibase-item",
-          "datavalue": {
-            "value": {
-              "entity-type": "item",
-              "numeric-id": 524,
-              "id": "Q524"
-            },
-            "type": "wikibase-entityid"
-          }
-        },
-        "type": "statement",
-        "id": "Q315$0340BC23-89FF-4A58-9848-A6E7842ED5A6",
-        "rank": "normal",
-        "qualifiers": {
-          "P32": [
-            {
-              "snaktype": "value",
-              "property": "P32",
-              "datatype": "string",
-              "datavalue": {
-                "value": "1",
-                "type": "string"
-              }
-            }
-          ],
-          "P36": [
-            {
-              "snaktype": "value",
-              "property": "P36",
-              "datatype": "string",
-              "datavalue": {
-                "value": "C. A. F. Mahn",
-                "type": "string"
-              }
-            }
-          ],
-          "P38": [
-            {
-              "snaktype": "value",
-              "property": "P38",
-              "datatype": "string",
-              "datavalue": {
-                "value": "C. A. F.",
-                "type": "string"
-              }
-            }
-          ],
-          "P39": [
-            {
-              "snaktype": "value",
-              "property": "P39",
-              "datatype": "string",
-              "datavalue": {
-                "value": "Mahn",
-                "type": "string"
-              }
-            }
-          ]
-        },
-        "qualifiers-order": [
-          "P32",
-          "P36",
-          "P38",
-          "P39"
-        ]
-      }
-    ],
-    "P11": [
-      {
-        "mainsnak": {
-          "snaktype": "value",
-          "property": "P11",
-          "datatype": "string",
-          "datavalue": {
-            "value": "Baskisches W\u00f6rterbuch I II",
-            "type": "string"
-          }
-        },
-        "type": "statement",
-        "id": "Q315$3991842E-7AD7-4993-A16F-65A61B5AB243",
-        "rank": "normal"
-      }
-    ],
-    "P141": [
-      {
-        "mainsnak": {
-          "snaktype": "value",
-          "property": "P141",
-          "datatype": "string",
-          "datavalue": {
-            "value": "Staatsbibliothek Berlin. Signatur Coll.ling.quart 79, Handschriftenabteilung (Haus 2).",
-            "type": "string"
-          }
-        },
-        "type": "statement",
-        "id": "Q315$21429EA3-823E-4CC3-88A3-86A8326BA749",
-        "rank": "normal"
-      }
-    ],
-    "P15": [
-      {
-        "mainsnak": {
-          "snaktype": "value",
-          "property": "P15",
-          "datatype": "string",
-          "datavalue": {
-            "value": "Berlin",
-            "type": "string"
-          }
-        },
-        "type": "statement",
-        "id": "Q315$FEC1D39A-9B58-4B00-B715-B39FC7AA1E85",
-        "rank": "normal",
-        "qualifiers": {
-          "P178": [
-            {
-              "snaktype": "value",
-              "property": "P178",
-              "datatype": "external-id",
-              "datavalue": {
-                "value": "Q64",
-                "type": "string"
-              }
-            }
-          ]
-        },
-        "qualifiers-order": [
-          "P178"
-        ]
-      }
-    ]
+        }
+      },
+      "creatorSummary": "Sarasola",
+      "parsedDate": "1996",
+      "numChildren": 2
+    },
+    "data": {
+      "key": "BDWZLIPZ",
+      "version": 149316,
+      "itemType": "bookSection",
+      "title": "Lexicograf\u00eda vasca, el diccionario general vasco",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Ibon",
+          "lastName": "Sarasola"
+        }
+      ],
+      "abstractNote": "",
+      "bookTitle": "Actas do Simposio de Lexicograf\u00eda actual: elaboraci\u00f3n de diccionarios",
+      "series": "Cadernos de Lingua, Anexos",
+      "seriesNumber": "3",
+      "volume": "",
+      "numberOfVolumes": "",
+      "edition": "",
+      "place": "A Coru\u00f1a",
+      "publisher": "Real Academia Galega",
+      "date": "1996",
+      "pages": "141-155",
+      "language": "es",
+      "ISBN": "",
+      "shortTitle": "",
+      "url": "http://hdl.handle.net/10357/12983",
+      "accessDate": "",
+      "archive": "",
+      "archiveLocation": "https://lexbib.elex.is/entity/Q33560",
+      "libraryCatalog": "",
+      "callNumber": "",
+      "rights": "",
+      "extra": "",
+      "tags": [
+        {
+          "tag": "wikibase-export"
+        }
+      ],
+      "collections": [
+        "7ZZDG5SN"
+      ],
+      "relations": {},
+      "dateAdded": "2023-08-18T10:56:32Z",
+      "dateModified": "2023-08-30T13:51:12Z"
+    }
   },
-  "id": "Q315"
-}
+  {
+    "key": "2SEU4TCJ",
+    "version": 149316,
+    "library": {
+      "type": "group",
+      "id": 1892855,
+      "name": "LexBib",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/lexbib",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/1892855/items/2SEU4TCJ",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/lexbib/items/2SEU4TCJ",
+        "type": "text/html"
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Lacombe",
+      "parsedDate": "1938-10",
+      "numChildren": 1
+    },
+    "data": {
+      "key": "2SEU4TCJ",
+      "version": 149316,
+      "itemType": "book",
+      "title": "Le Dictionnaire basque fran\u00e7ais du P\u00e8re Lhande",
+      "creators": [
+        {
+          "creatorType": "contributor",
+          "firstName": "Georges",
+          "lastName": "Lacombe"
+        }
+      ],
+      "abstractNote": "",
+      "series": "",
+      "seriesNumber": "",
+      "volume": "",
+      "numberOfVolumes": "",
+      "edition": "",
+      "place": "",
+      "publisher": "",
+      "date": "1938-10",
+      "numPages": "",
+      "language": "fr",
+      "ISBN": "",
+      "shortTitle": "",
+      "url": "",
+      "accessDate": "",
+      "archive": "",
+      "archiveLocation": "https://lexbib.elex.is/entity/Q33544",
+      "libraryCatalog": "Open WorldCat",
+      "callNumber": "",
+      "rights": "",
+      "extra": "OCLC: 891708567",
+      "tags": [
+        {
+          "tag": "wikibase-export"
+        }
+      ],
+      "collections": [
+        "7ZZDG5SN"
+      ],
+      "relations": {},
+      "dateAdded": "2022-12-23T14:32:27Z",
+      "dateModified": "2023-08-30T13:51:12Z"
+    }
+  },
+  {
+    "key": "3BMEDF79",
+    "version": 149316,
+    "library": {
+      "type": "group",
+      "id": 1892855,
+      "name": "LexBib",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/lexbib",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/1892855/items/3BMEDF79",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/lexbib/items/3BMEDF79",
+        "type": "text/html"
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Urgell",
+      "parsedDate": "1999-04-02",
+      "numChildren": 2
+    },
+    "data": {
+      "key": "3BMEDF79",
+      "version": 149316,
+      "itemType": "journalArticle",
+      "title": "\"Hiztegi Hirukoitza\" eta \"Diccionario de Autoridades\" erkatuaz (III): gaztelania",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Blanca",
+          "lastName": "Urgell"
+        }
+      ],
+      "abstractNote": "In this paper, the source language (Spanish) is analysed: the contribution of the model in terms of nomenclature, the changes effected in each level in order to conform them with the bilingual condition of the dictionary, and the form, function and origin of the specifications of meaning. Among other important contributions, the analysis of the entries and their components offers inestimable data on the type of Basque equivalents that can be found and even, in some cases, on their origin.",
+      "publicationTitle": "Anuario del Seminario de Filolog\u00eda Vasca \"Julio de Urquijo\"",
+      "volume": "33",
+      "issue": "1",
+      "pages": "157-238",
+      "date": "1999/04/02",
+      "series": "",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "ASJU",
+      "language": "eu",
+      "DOI": "10.1387/asju.8747",
+      "ISSN": "2444-2992",
+      "shortTitle": "\"Hiztegi Hirukoitza\" eta \"Diccionario de Autoridades\" erkatuaz (III)",
+      "url": "https://ojs.ehu.eus/index.php/ASJU/article/view/8747",
+      "accessDate": "2021-02-26T10:25:38Z",
+      "archive": "",
+      "archiveLocation": "https://lexbib.elex.is/entity/Q33602",
+      "libraryCatalog": "ojs.ehu.eus",
+      "callNumber": "",
+      "rights": "##submission.copyrightStatement##",
+      "extra": "Number: 1",
+      "tags": [
+        {
+          "tag": ":abstractLanguage en"
+        },
+        {
+          "tag": "wikibase-export"
+        }
+      ],
+      "collections": [
+        "GH8DNL4X",
+        "7ZZDG5SN"
+      ],
+      "relations": {},
+      "dateAdded": "2021-02-26T10:25:38Z",
+      "dateModified": "2023-08-30T13:51:12Z"
+    }
+  },
+  {
+    "key": "FHYGYT2J",
+    "version": 149316,
+    "library": {
+      "type": "group",
+      "id": 1892855,
+      "name": "LexBib",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/lexbib",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/1892855/items/FHYGYT2J",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/lexbib/items/FHYGYT2J",
+        "type": "text/html"
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Urgell",
+      "parsedDate": "1998-04-02",
+      "numChildren": 2
+    },
+    "data": {
+      "key": "FHYGYT2J",
+      "version": 149316,
+      "itemType": "journalArticle",
+      "title": "\"Hiztegi Hirukoitza\" eta \"Diccionario de Autoridades\" erkatuaz (II): sarreraren edukia",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Blanca",
+          "lastName": "Urgell"
+        }
+      ],
+      "abstractNote": "An important issue in the comparison of a dictionary and its model is the structure and content of lexical entries: what type of information do they provide, and which way is it usually expressed. We already know (see Urgell1998a) that the two dictionaries which are being discussed as examples, differ considerably from each other as far as their graphic presentation is concerned. Accordingly, we must first analyze how these divergencies affect the general structure of entries. Secondly, we will try to define the essential components of entries in the two dictionaries, that is to say, the elements which are regularly part of any of the dictionary's entries, be it a simple or a complex entry.\u00a0\u00a0 The main part of this paper is devoted to the supplementary information which can be found in the two dictionaries, leaving aside for the time being both entries in Spanish and definitions as well as the Basque and Latin equivalents. It thus deals with grammatical information, explanations added to definitions for words, examples and popular sayings. We will try to see what is it that Larramendi takes / does not take from the rich and bountiful dictionary of the Academy. We will also try to determine which additions were needed to accommodate the contents to its trilingual character and to the fact that it was the first Basque dictionary.",
+      "publicationTitle": "Anuario del Seminario de Filolog\u00eda Vasca \"Julio de Urquijo\"",
+      "volume": "32",
+      "issue": "2",
+      "pages": "365-414",
+      "date": "1998/04/02",
+      "series": "",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "ASJU",
+      "language": "eu",
+      "DOI": "10.1387/asju.8717",
+      "ISSN": "2444-2992",
+      "shortTitle": "\"Hiztegi Hirukoitza\" eta \"Diccionario de Autoridades\" erkatuaz (II)",
+      "url": "https://ojs.ehu.eus/index.php/ASJU/article/view/8717",
+      "accessDate": "2021-02-26T10:25:36Z",
+      "archive": "",
+      "archiveLocation": "https://lexbib.elex.is/entity/Q33601",
+      "libraryCatalog": "ojs.ehu.eus",
+      "callNumber": "",
+      "rights": "##submission.copyrightStatement##",
+      "extra": "Number: 2",
+      "tags": [
+        {
+          "tag": ":abstractLanguage en"
+        },
+        {
+          "tag": "wikibase-export"
+        }
+      ],
+      "collections": [
+        "GH8DNL4X",
+        "7ZZDG5SN"
+      ],
+      "relations": {},
+      "dateAdded": "2021-02-26T10:25:36Z",
+      "dateModified": "2023-08-30T13:51:12Z"
+    }
+  },
+  {
+    "key": "M8XGNJLF",
+    "version": 149316,
+    "library": {
+      "type": "group",
+      "id": 1892855,
+      "name": "LexBib",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/lexbib",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/1892855/items/M8XGNJLF",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/lexbib/items/M8XGNJLF",
+        "type": "text/html"
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Sagarna",
+      "parsedDate": "2010",
+      "numChildren": 3
+    },
+    "data": {
+      "key": "M8XGNJLF",
+      "version": 149316,
+      "itemType": "conferencePaper",
+      "title": "The Lexicographic Work of Euskaltzaindia \u2013 The Basque Language Academy 1984-2009",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Andoni",
+          "lastName": "Sagarna"
+        },
+        {
+          "creatorType": "editor",
+          "firstName": "Anne",
+          "lastName": "Dykstra"
+        },
+        {
+          "creatorType": "editor",
+          "firstName": "Tanneke",
+          "lastName": "Schoonheim"
+        }
+      ],
+      "abstractNote": "The Academy started developing a standard variety of Basque Language in 1968. In 1983 the Academy created a commission of lexicography, and in 1984 approved a long-term plan for the development of dictionaries. That plan included the following projects:",
+      "date": "2010",
+      "proceedingsTitle": "Proceedings of the 14th EURALEX International Congress",
+      "conferenceName": "XIV International EURALEX Congress",
+      "place": "Leeuwarden/Ljouwert",
+      "publisher": "Fryske Akademy",
+      "volume": "",
+      "pages": "1518-1521",
+      "series": "",
+      "language": "en",
+      "DOI": "",
+      "ISBN": "978-90-6273-850-3",
+      "shortTitle": "Euralex (2010)",
+      "url": "https://euralex.org/publications/the-lexicographic-work-of-euskaltzaindia-the-basque-language-academy-1984-2009/",
+      "accessDate": "",
+      "archive": "",
+      "archiveLocation": "http://lexbib.elex.is/entity/Q4713",
+      "libraryCatalog": "",
+      "callNumber": "",
+      "rights": "",
+      "extra": "http://en.wikipedia.org/wiki/Usurbil; http://en.wikipedia.org/wiki/Leeuwarden",
+      "tags": [
+        {
+          "tag": ":abstractLanguage en"
+        },
+        {
+          "tag": ":collection 2"
+        },
+        {
+          "tag": ":container https://euralex.org/category/publications/euralex-leeuwarden-2010"
+        },
+        {
+          "tag": ":event ConfEuralex2010"
+        },
+        {
+          "tag": "_export"
+        },
+        {
+          "tag": "_ft_manual_txt"
+        },
+        {
+          "tag": "wikibase-export"
+        }
+      ],
+      "collections": [
+        "7A8VH7JP",
+        "7ZZDG5SN"
+      ],
+      "relations": {},
+      "dateAdded": "2020-08-15T09:00:02Z",
+      "dateModified": "2023-08-30T13:51:12Z"
+    }
+  },
+  {
+    "key": "AX7CBVV2",
+    "version": 149316,
+    "library": {
+      "type": "group",
+      "id": 1892855,
+      "name": "LexBib",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/lexbib",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/1892855/items/AX7CBVV2",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/lexbib/items/AX7CBVV2",
+        "type": "text/html"
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Urgell",
+      "parsedDate": "1998-04-02",
+      "numChildren": 2
+    },
+    "data": {
+      "key": "AX7CBVV2",
+      "version": 149316,
+      "itemType": "journalArticle",
+      "title": "\"Hiztegi Hirukoitza\" eta \"Diccionario de Autoridades\" erkatuaz (I): oinarrizko ezaugarri zenbait",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Blanca",
+          "lastName": "Urgell"
+        }
+      ],
+      "abstractNote": "In this paper, I will analyze some issues concerning bilingual lexicography that -as far as I know- have only been previously investigated in a subsidiary manner, namely: the use of models from other languages in the rise of new lexicography traditions and the influence of those models upon such traditions. We must bear in mind that in most -if not all- European languages the first works in this field were bilingual dictionaries in which the source language had a well established lexicographic tradition, such as the numerous Renaissance bilingual Latin-vernacular dictionaries, which were frequently based on medieval Latin models. It is worth noting that at each particular point in time and place, the source language is the one which holds the status of language of culture, so that it may be inferred that these languages serve not only as lexicographic models but also as lexical referents.\u00a0\u00a0 The case in point analyzed here -the Larramendi's Diccionario Triling\u00fce (1745)- and its model -the Diccionario de Autoridades of Spanish Royal Academy (1726-39)-, are specially significant since they were two cornerstones of their respective lexicographic traditions. The Trilingual was the first Basque general dictionary to be printed. Its publication came to be regarded as a foundational event for peninsular literary Basque and its influence during a century and a half is unparalleled in the history of Basque and its lexicography. Nevertheless, it is probably the least known amongst the Basque dictionaries as a result of the anathema which was levelled against it at the beginning of the XXth century.\u00a0\u00a0 In this paper we present the first of a series of studies of the dictionary's contents (size, number of entries) and we analyze some external issues (authorship, working methods) as well as some organizational questions (graphics, alphabetic organization) constantly bearing in mind the model of reference.",
+      "publicationTitle": "Anuario del Seminario de Filolog\u00eda Vasca \"Julio de Urquijo\"",
+      "volume": "32",
+      "issue": "1",
+      "pages": "109-163",
+      "date": "1998/04/02",
+      "series": "",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "ASJU",
+      "language": "eu",
+      "DOI": "10.1387/asju.8709",
+      "ISSN": "2444-2992",
+      "shortTitle": "\"Hiztegi Hirukoitza\" eta \"Diccionario de Autoridades\" erkatuaz (I)",
+      "url": "https://ojs.ehu.eus/index.php/ASJU/article/view/8709",
+      "accessDate": "2021-02-26T10:25:34Z",
+      "archive": "",
+      "archiveLocation": "https://lexbib.elex.is/entity/Q33600",
+      "libraryCatalog": "ojs.ehu.eus",
+      "callNumber": "",
+      "rights": "##submission.copyrightStatement##",
+      "extra": "Number: 1",
+      "tags": [
+        {
+          "tag": ":abstractLanguage en"
+        },
+        {
+          "tag": "wikibase-export"
+        }
+      ],
+      "collections": [
+        "GH8DNL4X",
+        "7ZZDG5SN"
+      ],
+      "relations": {},
+      "dateAdded": "2021-02-26T10:25:34Z",
+      "dateModified": "2023-08-30T13:50:20Z"
+    }
+  }
+]
