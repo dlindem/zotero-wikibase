@@ -3,3 +3,5 @@
 zotwbenv/*
 profiles/*/config_private.json
 
+bots/profiles/MLV/config_private.json
+bots/profiles/profile.template/config_private.json
