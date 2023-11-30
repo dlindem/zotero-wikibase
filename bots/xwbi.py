@@ -20,21 +20,28 @@ with open(f"profiles.json", 'r', encoding='utf-8') as file:
 with open(f"profiles/{profile}/config_private.json", 'r', encoding="utf-8") as jsonfile:
 	config_private = json.load(jsonfile)
 config = botconfig.load_mapping('config')
-print(str(config['mapping']['wikibase_api_url']))
-wbi_config['BACKOFF_MAX_TRIES'] = 5
-wbi_config['BACKOFF_MAX_VALUE'] = 3600
-wbi_config['USER_AGENT'] = config['mapping']['wikibase_name']+' user'
-wbi_config['PROPERTY_CONSTRAINT_PID'] = None # 'P2302'
-wbi_config['DISTINCT_VALUES_CONSTRAINT_QID'] = None # 'Q21502410'
-wbi_config['COORDINATE_GLOBE_QID'] = 'http://www.wikidata.org/entity/Q2'
-wbi_config['CALENDAR_MODEL_QID'] = 'http://www.wikidata.org/entity/Q1985727'
-wbi_config['MEDIAWIKI_API_URL'] = config['mapping']['wikibase_api_url']
-wbi_config['MEDIAWIKI_INDEX_URL'] = config['mapping']['wikibase_index_url']
-wbi_config['MEDIAWIKI_REST_URL'] = config['mapping']['wikibase_rest_url']
-wbi_config['SPARQL_ENDPOINT_URL'] = config['mapping']['wikibase_sparql_endpoint']
-wbi_config['WIKIBASE_URL'] = config['mapping']['wikibase_url']
-wbi_config['DEFAULT_LANGUAGE'] = 'en' # config['mapping']['wikibase_default_language']
-wbi_config['DEFAULT_LEXEME_LANGUAGE'] = "Q207" # This is for Lexemes. Value None raises error.
+print(f"Will load profile {profile} for Wikibase {config['mapping']['wikibase_api_url']}...")
+try:
+	wbi_config['BACKOFF_MAX_TRIES'] = 5
+	wbi_config['BACKOFF_MAX_VALUE'] = 3600
+	wbi_config['USER_AGENT'] = config['mapping']['wikibase_name']+' user'
+	wbi_config['PROPERTY_CONSTRAINT_PID'] = None # 'P2302'
+	wbi_config['DISTINCT_VALUES_CONSTRAINT_QID'] = None # 'Q21502410'
+	wbi_config['COORDINATE_GLOBE_QID'] = 'http://www.wikidata.org/entity/Q2'
+	wbi_config['CALENDAR_MODEL_QID'] = 'http://www.wikidata.org/entity/Q1985727'
+	wbi_config['MEDIAWIKI_API_URL'] = config['mapping']['wikibase_api_url']
+	wbi_config['MEDIAWIKI_INDEX_URL'] = config['mapping']['wikibase_index_url']
+	wbi_config['MEDIAWIKI_REST_URL'] = config['mapping']['wikibase_rest_url']
+	wbi_config['SPARQL_ENDPOINT_URL'] = config['mapping']['wikibase_sparql_endpoint']
+	wbi_config['WIKIBASE_URL'] = config['mapping']['wikibase_url']
+	wbi_config['DEFAULT_LANGUAGE'] = 'en' # config['mapping']['wikibase_default_language']
+	wbi_config['DEFAULT_LEXEME_LANGUAGE'] = "Q207" # This is for Lexemes. Value None raises error.
+	wd_user_agent = config['mapping']['wikibase_site'] + ", User " + config_private['wb_bot_user']
+except Exception:
+	if profile == "profile.template":
+		print("Profile configuration not completed. Cannot configure wikibase bot.")
+	else:
+		print(f"{profile}: Profile configuration could not be done due to missing values in config.json file in profile folder.")
 
 if config_private['wb_bot_user'] and config_private['wb_bot_pwd']:
 	try:
@@ -49,7 +56,7 @@ if config_private['wb_bot_user'] and config_private['wb_bot_pwd']:
 else:
 	print('Wikibase bot is not configured, cannot be loaded.')
 
-wd_user_agent = config['mapping']['wikibase_site']+", User "+config_private['wb_bot_user']
+
 
 # functions for interaction with wbi
 def packstatements(statements, wbitem=None, qualifiers=False, references=False):

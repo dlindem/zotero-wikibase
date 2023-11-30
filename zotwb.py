@@ -4,8 +4,13 @@ import os, re, json
 from datetime import datetime
 
 # load active profile
-with open('profiles.json', 'r', encoding='utf-8') as file:
-    profile = json.load(file)['last_profile']
+try:
+    with open('profiles.json', 'r', encoding='utf-8') as file:
+        profile = json.load(file)['last_profile']
+except OSError:
+    profile = "profile.template"
+    with open('profiles.json', 'w', encoding='utf-8') as file:
+        json.dump({'profiles_list':[],'last_profile':'profile.template'}, file)
 
 # from flask_wtf import FlaskForm
 app = Flask(__name__)
@@ -35,9 +40,10 @@ def change_profile():
     msgcolor = None
     with (open('profiles.json', 'r', encoding='utf-8') as file):
         profiles = json.load(file)
-        print(f"Profile page: Active profiles are {str(profiles['active_profiles'])}")
-        other_profiles = profiles['active_profiles']
-        other_profiles.remove(profiles['last_profile'])
+        print(f"Profile page: Active profiles are {str(profiles['profiles_list'])}")
+        other_profiles = profiles['profiles_list']
+        if profiles['last_profile'] in other_profiles:
+            other_profiles.remove(profiles['last_profile'])
 
     if request.method == 'GET':
         return render_template("change_profile.html", other_profiles=other_profiles, profile=profiles['last_profile'],
@@ -46,6 +52,7 @@ def change_profile():
     elif request.method == 'POST':
         if request.form:
             for command in request.form:
+                print(command)
                 if command == 'create_new_profile':
                     newprofile = request.form.get(command)
                     action = zotwb_functions.create_profile(name=newprofile)
@@ -56,7 +63,7 @@ def change_profile():
                     message = f"This profile will be activated: {profile}."
                     print(message)
                     with open('profiles.json', 'w', encoding='utf-8') as file:
-                        json.dump({'last_profile':profile,'active_profiles':active_profiles}, file, indent=2)
+                        json.dump({'last_profile':profile,'profiles_list':profiles['profiles_list']}, file, indent=2)
                     messages.append(message + ' Go to <a href="/">ZotWb start page</a>.')
                     msgcolor="background:limegreen"
             return render_template("change_profile.html", other_profiles=other_profiles, profile=profiles['last_profile'],
@@ -146,22 +153,45 @@ def zotero_export():
 def basic_config():
     with open(f"profiles/{profile}/config_private.json", 'r', encoding="utf-8") as jsonfile:
         config_private = json.load(jsonfile)
+        starpwd = ""
+        if config_private['wb_bot_pwd']:
+            while len(starpwd) < len(config_private['wb_bot_pwd']):
+                starpwd += "*"
+        starkey = ""
+        if config_private['zotero_api_key']:
+            while len(starkey) < len(config_private['zotero_api_key']):
+                starkey += "*"
     configdata = botconfig.load_mapping('config')
     properties = botconfig.load_mapping('properties')
     if request.method == 'GET':
-        return render_template("basic_config.html", profile=profile, wb_username=config_private['wb_bot_user'], wb_password=config_private['wb_bot_pwd'],
-                               zotero_api_key=config_private['zotero_api_key'],
+        return render_template("basic_config.html", profile=profile, wb_username=config_private['wb_bot_user'], wb_password=starpwd,
+                               zotero_api_key=starkey,
                                configdata=configdata['mapping'], message = None, msgcolor = None)
 
     elif request.method == 'POST':
         if request.form:
+            regexpattern = None
+            regexprop = None
             for key in request.form:
                 if key.startswith('private_'):
                     command = key.replace('private_', '')
                     config_private[command] = request.form.get(key)
                     with open(f"profiles/{profile}/config_private.json", 'w', encoding="utf-8") as jsonfile:
                         json.dump(config_private, jsonfile, indent=2)
-                if key.startswith('wikibase') or key.startswith('zotero'):
+                elif key == "wikimedia_languages":
+                    configdata['mapping']['wikibase_label_languages'] = []
+                    for lang in request.form.get(key).split(","):
+                        configdata['mapping']['wikibase_label_languages'].append(lang.strip())
+                    command = f"wikimedia languages {request.form.get(key).split(',')}"
+                elif key.startswith('regexdelete_'):
+                    pattern = key.replace('regexdelete_','')
+                    del configdata['mapping']['identifier_patterns'][pattern]
+                    command = f"delete pattern"
+                elif key == 'regex_pattern':
+                    regexpattern = request.form.get(key)
+                elif key == 'regex_property':
+                    regexprop = request.form.get(key)
+                elif key.startswith('wikibase') or key.startswith('zotero'):
                     configdata['mapping'][key] = request.form.get(key)
                     if key == 'wikibase_url': # update configs that depend on the wikibase URL
                         configdata = zotwb_functions.build_depconfig(configdata)
@@ -175,7 +205,7 @@ def basic_config():
                         else:
                             classqid = None
                         zotwb_functions.import_wikidata_entity(
-                            configdata['mapping'][configitem]['wikidata'], wbid=configdata['mapping'][configitem]['wikibase'], classqid=classqid)
+                            configdata['mapping'][configitem]['wikidata'], wbid=configdata['mapping'][configitem]['wikibase'], process_labels=True, process_aliases=True, process_descriptions=True, classqid=classqid, config=configdata, properties=properties)
                     elif key.endswith('_create'):  # user has pressed 'create new'
                         configitem = key.replace('_create','')
                         if configitem.startswith("class") and configitem != "class_ontology_class":
@@ -183,7 +213,7 @@ def basic_config():
                         else:
                             classqid = None
                         if 'wikidata' in configdata['mapping'][configitem]:
-                            newentity_id = zotwb_functions.import_wikidata_entity(configdata['mapping'][configitem]['wikidata'], wbid=False, classqid=classqid)
+                            newentity_id = zotwb_functions.import_wikidata_entity(configdata['mapping'][configitem]['wikidata'], wbid=False, classqid=classqid, config=configdata, properties=properties)
 
                         else:
                             if configitem.startswith("class"):
@@ -207,10 +237,13 @@ def basic_config():
                     else: # user has manually chosen a value
                         configdata['mapping'][key]['wikibase'] = request.form.get(key)
                         command = 'Update '+key.replace('_',' ')
-                message = f"Successfully performed operation: '{command}' update."
-                msgcolor = "background:limegreen"
+                if regexpattern and regexprop:
+                    configdata['mapping']['identifier_patterns'][regexpattern] = regexprop.strip()
+                    command = f"Add regex pattern {regexpattern} - {regexprop}"
+            message = f"Successfully performed operation: '{command}'."
+            msgcolor = "background:limegreen"
         botconfig.dump_mapping(configdata)
-        return render_template("basic_config.html", profile=profile, wb_username=config_private['wb_bot_user'], wb_password=config_private['wb_bot_pwd'], zotero_api_key=config_private['zotero_api_key'], configdata=configdata['mapping'], message=message, msgcolor=msgcolor)
+        return render_template("basic_config.html", profile=profile, wb_username=config_private['wb_bot_user'], wb_password=star_pwd, zotero_api_key=starkey, configdata=configdata['mapping'], message=message, msgcolor=msgcolor)
 
 @app.route('/zoterofields/<itemtype>', methods= ['GET', 'POST'])
 def map_zoterofield(itemtype):
@@ -237,10 +270,10 @@ def map_zoterofield(itemtype):
                     if key.endswith('_redo'):  # user has pressed 'import from wikidata to known wikibase entity' button
                         fieldname = key.replace('_redo', '')
                         zotwb_functions.import_wikidata_entity(
-                            zotero_types_wd['mapping'][itemtype], wbid=zoteromapping['mapping'][itemtype]['bibtypeqid'], classqid=configdata['mapping']['class_bibitem_type']['wikibase'])
+                            zotero_types_wd['mapping'][itemtype], wbid=zoteromapping['mapping'][itemtype]['bibtypeqid'], classqid=configdata['mapping']['class_bibitem_type']['wikibase'], config=configdata, properties=properties)
                     elif key.endswith('_create'):  # user has pressed 'create new'
                         fieldname = key.replace('_create', '')
-                        newentity_id = zotwb_functions.import_wikidata_entity(zotero_types_wd['mapping'][itemtype], wbid=False, classqid=configdata['mapping']['class_bibitem_type']['wikibase'])
+                        newentity_id = zotwb_functions.import_wikidata_entity(zotero_types_wd['mapping'][itemtype], wbid=False, classqid=configdata['mapping']['class_bibitem_type']['wikibase'], config=configdata, properties=properties)
                         zoteromapping['mapping'][itemtype]['bibtypeqid'] = newentity_id
                     else: # user has manually chosen a bibtypeqid value
                         zoteromapping['mapping'][itemtype]['bibtypeqid'] = request.form.get(key)
@@ -252,7 +285,7 @@ def map_zoterofield(itemtype):
                         fieldname = command.replace('_redo', '')
                         zotwb_functions.import_wikidata_entity(
                             properties['mapping'][zoteromapping['mapping'][itemtype][fieldtype][fieldname]['wbprop']]['wdprop'],
-                            wbid=zoteromapping['mapping'][itemtype][fieldtype][fieldname]['wbprop'])
+                            wbid=zoteromapping['mapping'][itemtype][fieldtype][fieldname]['wbprop'], config=configdata, properties=properties)
                         properties['mapping'][zoteromapping['mapping'][itemtype][fieldtype][fieldname]['wbprop']] = {
                             "enlabel": zoteromapping['mapping']['all_types'][fieldtype][fieldname]['name'],
                             "type": zoteromapping['mapping']['all_types'][fieldtype][fieldname]['dtype'],
@@ -264,7 +297,7 @@ def map_zoterofield(itemtype):
                         fieldname = command.replace('_create_from_wd', '')
                         newentity_id = zotwb_functions.import_wikidata_entity(
                             wikidata_suggestions[fieldname],
-                            wbid=False)
+                            wbid=False, config=configdata, properties=properties)
                         properties['mapping'][newentity_id] = {
                             "enlabel": zoteromapping['mapping']['all_types'][fieldtype][fieldname]['name'],
                             "type": zoteromapping['mapping']['all_types'][fieldtype][fieldname]['dtype'],
@@ -530,6 +563,30 @@ def little_helpers():
                                zoterogrp_name=configdata['mapping']['zotero_group_name'], batch_tag=batch_tag,
                                datafields=datafields, batchlen=batchlen,
                                messages=messages, msgcolor=msgcolor)
+
+@app.route('/wikidata_import', methods= ['GET', 'POST'])
+def wikidata_import():
+    configdata = botconfig.load_mapping('config')
+    properties = botconfig.load_mapping('properties')
+    allowed_datatypes = ['ExternalId', 'String', 'Url']
+    # zoteromapping = botconfig.load_mapping('zotero')
+    messages = []
+    msgcolor = "background:limegreen"
+    if request.method == 'GET':
+        return render_template("wikidata_import.html", wikibase_name=configdata['mapping']['wikibase_name'],
+                               wikibase_entity_ns=configdata['mapping']['wikibase_entity_ns'],
+                               instanceof=configdata['mapping']['prop_instanceof']['wikibase'],
+                               messages=messages, msgcolor=msgcolor, properties=properties['mapping'], allowed_datatypes=allowed_datatypes)
+    if request.method == "POST":
+        if request.form:
+            action = zotwb_functions.batchimport_wikidata(request.form, config=configdata, properties=properties)
+            messages = action['messages']
+            msgcolor = action['msgcolor']
+        return render_template("wikidata_import.html", wikibase_name=configdata['mapping']['wikibase_name'],
+                               wikibase_entity_ns=configdata['mapping']['wikibase_entity_ns'],
+                               instanceof=configdata['mapping']['prop_instanceof']['wikibase'],
+                               messages=messages, msgcolor=msgcolor, properties=properties['mapping'], allowed_datatypes=allowed_datatypes)
+
 
 if __name__ == '__main__':
     app.run(debug=True)

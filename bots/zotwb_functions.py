@@ -7,20 +7,21 @@ import pandas, shutil
 from bots import xwbi
 
 def create_profile(name=""):
+    print(f"Will proceed to create profile named '{name}'")
     if re.search(r'[^a-zA-Z0-9_]', name) or len(name) < 3 or len(name) > 10:
         return {'messages': ["Invalid input. The profile name may only contain a-z, A-Z letters, numbers and underscores, and be min 3 and max 10 characters long."],
                 'msgcolor': 'background:orangered'}
     with open('profiles.json', 'r', encoding='utf-8') as file:
         profiles = json.load(file)
-    if name in profiles['active_profiles']:
+    if name in profiles['profiles_list']:
         return {'messages': ["Invalid input. The profile name already exists. Choose a different identifier for the new profile."],
                 'msgcolor': 'background:orangered'}
     shutil.copytree('profiles/profile.template', f"profiles/{name}")
-    profiles['active_profiles'].append(name)
+    profiles['profiles_list'].append(name)
     profiles['last_profile'] = name
     with open('profiles.json', 'w', encoding='utf-8') as file:
         json.dump(profiles, file, indent=2)
-    return {'messages': [f"Successfully created and activated new profile <b>'{name}'</b>.", 'Now restart the ZotWb app (CTRL+C, ARROW-UP, ENTER in the terminal).'],
+    return {'messages': [f"Successfully created and activated new profile <b>'{name}'</b>.", '<b>Now quit and restart the ZotWb app in the terminal.<b>'],
                 'msgcolor': 'background:limegreen'}
 
 def check_prop_id(propstring):
@@ -53,20 +54,20 @@ def rewrite_properties_mapping():
     properties = botconfig.load_mapping('properties')
     config = botconfig.load_mapping('config')
 
-    query = """select ?order ?prop ?propLabel ?datatype ?wikidata_prop ?formatter_url ?formatter_uri (group_concat(str(?equiv)) as ?equivs)
-    
-    where {
-      ?prop rdf:type <http://wikiba.se/ontology#Property> ;
+    query = """select ?order ?prop ?propLabel ?datatype ?wikidata_prop ?formatter_url ?formatter_uri (group_concat(str(?equiv)) as ?equivs) 
+    where {  ?prop rdf:type <http://wikiba.se/ontology#Property> ;
              wikibase:propertyType ?dtype ;
              rdfs:label ?propLabel . filter (lang(?propLabel)="en")
              bind (strafter(str(?dtype),"http://wikiba.se/ontology#") as ?datatype)
-      OPTIONAL {?prop xdp:""" + config['mapping']['prop_wikidata_entity']['wikibase'] + """ ?wikidata_prop.}
-      OPTIONAL {?prop xdp:""" + config['mapping']['prop_formatterurl']['wikibase'] + """ ?formatter_url.}
-      OPTIONAL {?prop xdp:""" + config['mapping']['prop_formatterurirdf']['wikibase'] + """ ?formatter_uri.}
-      OPTIONAL {?prop xdp:""" + config['mapping']['prop_equivalentprop']['wikibase'] + """ ?equiv.}
-      
-        BIND (xsd:integer(strafter(str(?prop), "https://monumenta.wikibase.cloud/entity/P")) as ?order )
-    } group by ?order ?prop ?propLabel ?datatype ?wikidata_prop ?formatter_url ?formatter_uri ?equivs order by ?order"""
+      OPTIONAL {?prop xdp:""" + config['mapping']['prop_wikidata_entity']['wikibase'] + """ ?wikidata_prop.} """
+    if config['mapping']['prop_formatterurl']['wikibase']:
+        query += " OPTIONAL {?prop xdp:" + config['mapping']['prop_formatterurl']['wikibase'] + " ?formatter_url.} "
+    if config['mapping']['prop_formatterurirdf']['wikibase']:
+        query += " OPTIONAL {?prop xdp:" + config['mapping']['prop_formatterurirdf']['wikibase'] + " ?formatter_uri.} "
+    if config['mapping']['prop_equivalentprop']['wikibase']:
+        query += " OPTIONAL {?prop xdp:" + config['mapping']['prop_equivalentprop']['wikibase'] + " ?equiv.} "
+    query += ' BIND (xsd:integer(strafter(str(?prop), "'+config['mapping']['wikibase_entity_ns']+'P")) as ?order )'
+    query += '} group by ?order ?prop ?propLabel ?datatype ?wikidata_prop ?formatter_url ?formatter_uri ?equivs order by ?order'
 
     print("Waiting for SPARQL...")
     bindings = xwbi.wbi_helpers.execute_sparql_query(query=query, prefix=config['mapping']['wikibase_sparql_prefixes'])['results']['bindings']
@@ -90,16 +91,95 @@ def rewrite_properties_mapping():
 
     print('\nSuccessfully stored properties mapping.')
 
+def batchimport_wikidata(form, config={}, properties={}):
+    print(f"Batch wikidata import started. Will get existing mappings (query for {config['mapping']['prop_wikidata_entity']['wikibase']})")
+    query = """select ?wb_entity ?wd_entity where {?wb_entity xdp:"""+config['mapping']['prop_wikidata_entity']['wikibase']+""" ?wd_entity.  }"""
+    print("Waiting for SPARQL...")
+    bindings = \
+    xwbi.wbi_helpers.execute_sparql_query(query=query, prefix=config['mapping']['wikibase_sparql_prefixes'])['results'][
+        'bindings']
+    print('Found ' + str(len(bindings)) + ' Wikibase-Wikidata mappings.\n')
+    wd_to_wb = {}
+    for row in bindings:
+        wd_to_wb[row['wd_entity']['value'].replace('http://www.wikidata.org/entity/','')] = row['wb_entity']['value'].replace(config['mapping']['wikibase_entity_ns'],'')
+    import_entities = re.findall(r'Q[0-9]+', form.get('qids'))
+    if not import_entities:
+        return {'messages':["No entities to import."], 'msgcolor': 'background:orangered'}
+    imports = {}
+    for import_entity in import_entities:
+        if import_entity in wd_to_wb:
+            imports[import_entity] = wd_to_wb[import_entity] # existing entity
+        else:
+            imports[import_entity] = False # new wikibase entity to create
+    extra_statement = None
+    if 'statement_prop' in form and 'statement_value' in form:
+        if form.get('statement_prop').strip().startswith('P') and form.get('statement_value').startswith('Q'):
+            if form.get('statement_prop').strip() not in properties['mapping']:
+                return {'messages': [f"Bad value for 'statement property': {form.get('statement_prop')}."], 'msgcolor': 'background:orangered'}
+            elif properties['mapping'][form.get('statement_prop').strip()]['type'] != "WikibaseItem":
+                return {'messages':[f"Property {form.get('statement_prop')} is not of datatype 'WikibaseItem'."], 'msgcolor': 'background:orangered'}
+            elif not re.search('^Q[0-9]+$', form.get('statement_value').strip()):
+                return {'messages':[f"Bad value for 'statement value': {form.get('statement_value')}."], 'msgcolor': 'background:orangered'}
+            extra_statement = {'prop_nr': form.get('statement_prop').strip(), 'value':form.get('statement_value').strip()}
+    classqid = None
+    if 'instance_of_statement' in form:
+        if form.get('instance_of_statement').strip().startswith('Q'):
+            if not re.search('^Q[0-9]+$', form.get('instance_of_statement').strip()):
+                return {'messages': [f"Bad value for 'instance-of-statement value': {form.get('instance_of_statement')}."],
+                        'msgcolor': 'background:orangered'}
+            classqid = form.get('instance_of_statement').strip()
 
-def import_wikidata_entity(wdid, wbid=False, process_claims=True, classqid=None, entitytype="Item"):
-    config = botconfig.load_mapping('config')
+    if 'labels_check' in form:
+        process_labels = True
+    else:
+        process_labels = False
+    if 'aliases_check' in form:
+        process_aliases= True
+    else:
+        process_aliases = False
+    if 'descriptions_check' in form:
+        process_descriptions = True
+    else:
+        process_descriptions = False
+    if 'sitelinks_check' in form:
+        process_sitelinks = True
+    else:
+        process_sitelinks = False
+    wbprops_to_import = []
+    for key in form:
+        if re.search(r'P[0-9]', key):
+            wbprops_to_import.append(key)
 
-    print('Will get ' + wdid + ' from wikidata...')
+    messages = []
+    for wd_entity in imports:
+        wb_entity = import_wikidata_entity(wd_entity, wbid=imports[wd_entity],
+                                           process_labels=process_labels,
+                                           process_aliases=process_aliases,
+                                           process_descriptions=process_descriptions,
+                                           process_sitelinks=process_sitelinks,
+                                           wbprops_to_import=wbprops_to_import,
+                                           classqid=classqid,
+                                           config=config, properties=properties)
+        if extra_statement:
+            xwbi.itemwrite({'qid': wb_entity, 'statements':[{'prop_nr': extra_statement['prop_nr'], 'type':'WikibaseItem', 'value':extra_statement['value']}]})
+        messages.append(f"Successfully created or updated <a href=\"{config['mapping']['wikibase_entity_ns']}{wb_entity}\" target=\"_blank\">wb:{wb_entity}</a> importing <a href=\"http://www.wikidata.org/entity/{wd_entity}\" target=\"_blank\">wd:{wd_entity}</a>.")
+    return {'messages': messages, 'msgcolor': 'background:limegreen'}
+
+
+
+def import_wikidata_entity(wdid, wbid=False, process_labels=True, process_aliases=True, process_descriptions=True, process_sitelinks=False, wbprops_to_import=[], classqid=None, config=None, properties=None):
+    if not config:
+        config = botconfig.load_mapping('config')
+    if not properties:
+        properties = botconfig.load_mapping('properties')
+    languages_to_consider = config['mapping']['wikibase_label_languages']
+    print('Will import ' + wdid + ' from wikidata... to existing wikibase entity: '+str(wbid))
     apiurl = 'https://www.wikidata.org/w/api.php?action=wbgetentities&ids=' + wdid + '&format=json'
-    # print(apiurl)
+    print(apiurl)
     wdjsonsource = requests.get(url=apiurl)
     if wdid in wdjsonsource.json()['entities']:
         importentityjson = wdjsonsource.json()['entities'][wdid]
+        # print(str(importentityjson))
     else:
         print('Error: Received no valid item JSON from Wikidata.')
         return False
@@ -108,64 +188,74 @@ def import_wikidata_entity(wdid, wbid=False, process_claims=True, classqid=None,
                   'statements': [{'prop_nr': config['mapping']['prop_wikidata_entity']['wikibase'], 'type': 'ExternalId', 'value': wdid}]}
     if classqid:
         wbentityjson['statements'].append({'prop_nr': config['mapping']['prop_instanceof']['wikibase'], 'type': 'Item', 'value': classqid})
-    if 'datatype' in importentityjson: # this is true for properties
-        newprop_datatype = importentityjson['datatype']
-    else:
-        newprop_datatype = None
-    # process labels
-    for lang in importentityjson['labels']:
-        if lang in config['mapping']['wikibase_label_languages']:
-            wbentityjson['labels'].append({'lang': lang, 'value': importentityjson['labels'][lang]['value']})
-    # process aliases
-    for lang in importentityjson['aliases']:
-        if lang in config['mapping']['wikibase_label_languages']:
-            for entry in importentityjson['aliases'][lang]:
-                wbentityjson['aliases'].append({'lang': lang, 'value': entry['value']})
-    # process descriptions
-    for lang in importentityjson['descriptions']:
-        if lang in config['mapping']['wikibase_label_languages']:
-            wbentityjson['descriptions'].append({'lang': lang, 'value': importentityjson['descriptions'][lang]['value']})
 
+    if wbid and wbid.startswith('Q'):
+        wb_existing_entity = xwbi.wbi.item.get(entity_id=wbid)
+    elif wbid and wbid.startswith('P'):
+        wb_existing_entity = xwbi.wbi.property.get(entity_id=wbid)
+
+    # process labels
+    if process_labels:
+        for lang in languages_to_consider:
+            if wbid:
+                existing_preflabel = wb_existing_entity.labels.get(lang)
+            else:
+                existing_preflabel = None
+            if lang in importentityjson['labels']:
+                print(importentityjson['labels'][lang]['value'])
+                if existing_preflabel and len(existing_preflabel) > 0:
+                    if importentityjson['labels'][lang]['value'] != existing_preflabel:
+                        wbentityjson['aliases'].append({'lang': lang, 'value': importentityjson['labels'][lang]['value']})
+                else:
+                    wbentityjson['labels'].append({'lang': lang, 'value': importentityjson['labels'][lang]['value']})
+    # process aliases
+    if process_aliases:
+        for lang in languages_to_consider:
+            if wbid:
+                existing_aliases = wb_existing_entity.aliases.get(lang)
+                if not existing_aliases:
+                    existing_aliases = []
+                for alias in existing_aliases:
+                    wbentityjson['aliases'].append({'lang': lang, 'value': alias.value})
+            else:
+                existing_aliases = []
+            if lang in importentityjson['aliases']:
+                for entry in importentityjson['aliases'][lang]:
+                    if entry['value'] not in existing_aliases:
+                        wbentityjson['aliases'].append({'lang': lang, 'value': entry['value']})
+    # process descriptions
+    if process_descriptions:
+        for lang in importentityjson['descriptions']:
+            if lang in languages_to_consider:
+                if {'lang': lang, 'value': importentityjson['descriptions'][lang]['value']} not in wbentityjson['labels']:
+                    wbentityjson['descriptions'].append(
+                        {'lang': lang, 'value': importentityjson['descriptions'][lang]['value']})
     # process claims
-    # if process_claims:
-    #     for claimprop in importentityjson['claims']:
-    #         if claimprop in propwd2wb:  # aligned prop
-    #             wbprop = propwd2wb[claimprop]
-    #             for claim in importentityjson['claims'][claimprop]:
-    #                 claimval = claim['mainsnak']['datavalue']['value']
-    #                 if propwbdatatype[wbprop] == "WikibaseItem":
-    #                     if claimval['id'] not in itemwd2wb:
-    #                         print(
-    #                             'Will create a new item for ' + claimprop + ' (' + wbprop + ') object property value: ' +
-    #                             claimval['id'])
-    #                         targetqid = importitem(claimval['id'], process_claims=False)
-    #                     else:
-    #                         targetqid = itemwd2wb[claimval['id']]
-    #                         print('Will re-use existing item as property value: wd:' + claimval[
-    #                             'id'] + ' > eusterm:' + targetqid)
-    #                     statement = {'prop_nr': wbprop, 'type': 'Item', 'value': targetqid}
-    #                 else:
-    #                     statement = {'prop_nr': wbprop, 'type': propwbdatatype[wbprop], 'value': claimval,
-    #                                  'action': 'keep'}
-    #                 statement['references'] = [{'prop_nr': 'P1', 'type': 'externalid', 'value': wdid}]
-    #             wbentityjson['statements'].append(statement)
+    for wbprop in wbprops_to_import:
+        claimprop = properties['mapping'][wbprop]['wdprop']
+        if claimprop in importentityjson['claims']:
+            for claim in importentityjson['claims'][claimprop]:
+                claimval = claim['mainsnak']['datavalue']['value']
+                statement = {'prop_nr': wbprop, 'type': properties['mapping'][wbprop]['type'], 'value': claimval,
+                                 'action': 'keep'}
+                statement['references'] = [{'prop_nr': config['mapping']['prop_wikidata_entity']['wikibase'], 'type': 'externalid', 'value': wdid}]
+            wbentityjson['statements'].append(statement)
     # process sitelinks
-    # if 'sitelinks' in importentityjson:
-    # 	for site in importentityjson['sitelinks']:
-    # 		if site.replace('wiki', '') in config.label_languages:
-    # 			wpurl = "https://"+site.replace('wiki', '')+".wikipedia.org/wiki/"+importentityjson['sitelinks'][site]['title']
-    # 			print(wpurl)
-    # 			wbentityjson['statements'].append({'prop_nr':'P7','type':'url','value':wpurl})
+    if process_sitelinks:
+        if 'sitelinks' in importentityjson:
+            for site in importentityjson['sitelinks']:
+                if site.replace('wiki', '') in languages_to_consider:
+                    wpurl = "https://" + site.replace('wiki', '') + ".wikipedia.org/wiki/" + \
+                            importentityjson['sitelinks'][site]['title'].replace(" ", "_")
+                    # print(wpurl)
+                    wbentityjson['statements'].append({'prop_nr': config['mapping']['prop_wikidata_sitelinks']['wikibase'], 'type': 'url', 'value': wpurl})
 
     wbentityjson['qid'] = wbid  # if False, then create new item
-    if wdid.startswith("Q"):
-        result = xwbi.itemwrite(wbentityjson)
-    elif wdid.startswith("P"):
-        result = xwbi.itemwrite(wbentityjson, entitytype="Property", datatype=newprop_datatype)
-    # if result and result not in itemwb2wd:
-    #     itemwb2wd[result] = wdid
-    #     itemwd2wb[wdid] = result
-    #     write_wdmapping(wdqid=wdid, wbqid=result)
+    print(str(wbentityjson))
+    if 'datatype' in importentityjson: # this is true for properties
+        result = xwbi.itemwrite(wbentityjson, entitytype="Property", datatype=importentityjson['datatype'])
+    else:
+        result = xwbi.itemwrite(wbentityjson, entitytype="Item")
     return result
 
 def write_property(prop_object):
@@ -303,7 +393,7 @@ def check_language(zoterodata=[]):
                 f"No item defined for this language on your Wikibase. This language is {languagewdqid} on Wikidata. I'll import that and use it from now on.")
             languageqid = import_wikidata_entity(languagewdqid,
                                                  classqid=configdata['mapping']['class_language'][
-                                                     'wikibase'])
+                                                     'wikibase'], config=configdata)
             iso3mapping['mapping'][langval]['wbqid'] = languageqid
             botconfig.dump_mapping(iso3mapping)
             print(f"Imported wd:{languagewdqid} to wb:{languageqid}.")
@@ -968,14 +1058,14 @@ def import_creators(data=None, infile=None, wikidata=False, wikibase=False, unre
                     if isinstance(row['givenName'], str) and isinstance(row['lastName'], str):
                         newitem['aliases'].append(
                             {'lang': language, 'value': row['lastName'] + ', ' + row['givenName']})
-                # if isinstance(row['givenName'], str):
-                # 	newitem['statements'].append(
-                # 		{'type': 'String', 'prop_nr': config['mapping']['prop_pref_given_name']['wikibase'],
-                # 		 'value': row['givenName'].strip()})
-                # if isinstance(row['lastName'], str):
-                # 	newitem['statements'].append({'type': 'String',
-                # 								  'prop_nr': config['mapping']['prop_pref_family_name'][
-                # 									  'wikibase'], 'value': row['lastName'].strip()})
+                if isinstance(row['givenName'], str):
+                	newitem['statements'].append(
+                		{'type': 'String', 'prop_nr': config['mapping']['prop_pref_given_name']['wikibase'],
+                		 'value': row['givenName'].strip()})
+                if isinstance(row['lastName'], str):
+                	newitem['statements'].append({'type': 'String',
+                								  'prop_nr': config['mapping']['prop_pref_family_name'][
+                									  'wikibase'], 'value': row['lastName'].strip()})
                 newitemqid = xwbi.itemwrite(newitem)
                 newcreators[row['fullName_clusters']] = {'creatorqid': newitemqid,
                                                          'fullName_variants': [row['fullName']]}

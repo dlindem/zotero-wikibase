@@ -10,16 +10,15 @@ config = botconfig.load_mapping("config")
 
 with open(f"profiles/{profile}/config_private.json", 'r', encoding="utf-8") as jsonfile:
     config_private = json.load(jsonfile)
-
-pyzot = zotero.Zotero(int(config['mapping']['zotero_group_id']), 'group', config_private['zotero_api_key'])  # Zotero LexBib group
-
+try:
+    pyzot = zotero.Zotero(int(config['mapping']['zotero_group_id']), 'group', config_private['zotero_api_key'])  # Zotero LexBib group
+except Exception as ex:
+    print("**** Zotero API key not configured in profile, zotero bot cannot be loaded. ****")
 try:
     print(f"**** Zotero API key groups access: {str(pyzot.key_info()['access']['groups'])}. ****")
 except Exception as ex:
     if 'Invalid Authorization' in str(ex):
         print('**** Zotero API key not accepted, zotero bot cannot be loaded. ****')
-    else:
-        raise
 
 def getzotitem(zotitemid):
     pass
@@ -122,4 +121,4 @@ def zotero_update_item(zotitem):
             return f"Unknown error updating *** <code><a href=\"{zotitem['links']['alternate']['href']}\" target=\"_blank\">{zotitem['key']}</a></code>: Reload records to be exported from Zotero."
 
 
-print('zoterobot load finished.')
+# print('zoterobot load finished.')

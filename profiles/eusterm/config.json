@@ -2,26 +2,33 @@
   "filename": "config.json",
   "comment": "This contains basic configurations for the zotero-wikibase tool.",
   "mapping": {
-    "wikibase_name": null,
-    "wikibase_url": null,
-    "wikibase_site": null,
-    "wikibase_entity_ns": null,
+    "wikibase_name": "EusTerm",
+    "wikibase_url": "https://eusterm.wikibase.cloud",
+    "wikibase_site": "eusterm.wikibase.cloud",
+    "wikibase_entity_ns": "https://eusterm.wikibase.cloud/entity/",
     "wikibase_default_language": null,
-    "wikibase_api_url": null,
-    "wikibase_rest_url": null,
-    "wikibase_index_url": null,
-    "wikibase_label_languages": [],
-    "wikibase_sparql_endpoint": null,
-    "wikibase_sparql_prefixes": null,
+    "wikibase_api_url": "https://eusterm.wikibase.cloud/w/api.php",
+    "wikibase_rest_url": "https://eusterm.wikibase.cloud/w/rest.php",
+    "wikibase_index_url": "https://eusterm.wikibase.cloud/w/index.php",
+    "wikibase_label_languages": [
+      "eu",
+      "es",
+      "en",
+      "de",
+      "fr",
+      "cat"
+    ],
+    "wikibase_sparql_endpoint": "https://eusterm.wikibase.cloud/query/sparql",
+    "wikibase_sparql_prefixes": "PREFIX xwb: <https://eusterm.wikibase.cloud/entity/>\nPREFIX xdp: <https://eusterm.wikibase.cloud/prop/direct/>\nPREFIX xp: <https://eusterm.wikibase.cloud/prop/>\nPREFIX xps: <https://eusterm.wikibase.cloud/prop/statement/>\nPREFIX xpq: <https://eusterm.wikibase.cloud/prop/qualifier/>\nPREFIX xpr: <https://eusterm.wikibase.cloud/prop/reference/>\nPREFIX xno: <https://eusterm.wikibase.cloud/prop/novalue/>\n",
     "prop_formatterurl": {
-      "wikibase": null,
+      "wikibase": "P2",
       "type": "String",
       "wikidata": "P1630",
       "name": "formatter URL",
       "comment": "A property needed for building URL out of ExternalId values, datatype String, Wikidata P1630."
     },
     "prop_wikidata_entity": {
-      "wikibase": null,
+      "wikibase": "P1",
       "type": "ExternalId",
       "wikidata": null,
       "name": "Wikidata Entity",
@@ -37,7 +44,7 @@
       "formatter_url": "http://www.wikidata.org/entity/"
     },
     "prop_formatterurirdf": {
-      "wikibase": null,
+      "wikibase": "P84",
       "type": "String",
       "wikidata": "P1921",
       "name": "formatter URI for RDF resource",
@@ -58,14 +65,14 @@
       "comment": "externalId-prop for linking items to its full text PDF stored as Zotero attachment. formatter URL will be 'https://www.zotero.org/groups/[group_num]/[group_name]/items/$1/item-details'."
     },
     "prop_instanceof": {
-      "wikibase": null,
+      "wikibase": "P5",
       "type": "WikibaseItem",
       "wikidata": "P31",
       "name": "instance of",
       "comment": "A property of datatype WikibaseItem, Wikidata P31."
     },
     "prop_subclassof": {
-      "wikibase": null,
+      "wikibase": "P4",
       "type": "WikibaseItem",
       "wikidata": "P279",
       "name": "subclass of",
@@ -93,7 +100,7 @@
       "comment": "Datatype String, Wikidata P1545, used e.g. in crator statements for representing the order in ordered lists."
     },
     "prop_source_literal": {
-      "wikibase": null,
+      "wikibase": "P42",
       "type": "String",
       "wikidata": null,
       "name": "source literal",
@@ -129,7 +136,14 @@
       "comment": "Datatype ExternalId, Wikidata P212. Used for 10-digit-ISBN identifiers. Most conveniently with formatter URL \"https://worldcat.org/isbn/$1\".",
       "formatter_url": "https://worldcat.org/isbn/$1"
     },
-      "prop_language": {
+    "prop_journal": {
+      "wikibase": null,
+      "type": "WikibaseItem",
+      "wikidata": "P1433",
+      "name": "journal",
+      "comment": "Datatype item, for linking articles to their journals"
+    },
+    "prop_language": {
       "wikibase": null,
       "type": "WikibaseItem",
       "wikidata": "P407",
@@ -141,21 +155,21 @@
       ]
     },
     "prop_published_in": {
-      "wikibase": null,
+      "wikibase": "P86",
       "type": "WikibaseItem",
       "wikidata": "P1433",
       "name": "published in",
       "comment": "Datatype item, for linking publications to their container (a journal, for journal articles, a book, for books"
     },
     "prop_wikidata_sitelinks": {
-      "wikibase": null,
+      "wikibase": "P7",
       "type": "URL",
       "wikidata": null,
       "name": "Wikipedia page URL",
       "comment": "Datatype URL, for Wikipedia sitelinks from Wikidata"
     },
     "prop_equivalentprop": {
-      "wikibase": null,
+      "wikibase": "P85",
       "type": "URL",
       "comment": "Datatype URL, points to a URI describing an equivalent property. Use 'Wikidata Entity' for Wikidata matches.",
       "wikidata": "P1628",
@@ -210,7 +224,7 @@
       "name": "Organization"
     },
     "class_person": {
-      "wikibase": null,
+      "wikibase": "Q5",
       "comment": "The class that groups natural persons.",
       "name": "Human",
       "wikidata": "Q5"

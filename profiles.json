@@ -1,6 +1,4 @@
 {
-  "active_profiles": [
-    "MLV"
-  ],
-  "last_profile": "MLV"
+"last_profile": "MLV",
+  "profiles_list": ["MLV","eusterm"]
 }

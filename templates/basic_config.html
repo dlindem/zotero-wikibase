@@ -9,41 +9,45 @@
 {% if message %}<p style = "{{ msgcolor }}">{{ message }}<p>{% endif %}
 (Back to <a href="./">start page</a>)
 <p>This page lets you configure your ZotWb <b>'{{ profile }}'</b> profile.
-    </br><small>Edit the values manually. After editing a value, press ENTER, or the corresponding "Update this" button. The page will then be reloaded.</small></p>
+    Provide values for all fields on this page, beginning from the top.
+    </br><small>Edit the values manually. After editing a value, press ENTER, or the corresponding "Update this" button. Your input will be saved, and the page reloaded.</small></p>
 <h2>Credentials</h2>
-<p>Your Wikibase bot user name and password, and the Zotero API key are stored in <code>profiles/{{ profile }}config_private.py</code>.</br>
+<p>Your Wikibase bot user name and password, and the Zotero API key are stored in <code>profiles/{{ profile }}/config_private.py</code>.</br>
 <small>That file is included in <code>.gitignore</code>, i.e., it is not uploaded if you share your ZotWb project using git.</br>
-After setting these three values, restart the app in the terminal, and check the log messages for whether your credentials are accepted.</small></p>
+After setting these values and the Wikibase URL, restart the app in the terminal, and check the log messages for whether your credentials are accepted.</small></p>
 <p>Your Wikibase bot user name:
 <form method="POST">
-   &#129054; <input type="text" name="private_wb_bot_user" value={{ wb_username }} style="width: 300px;">
+   &#129054; <input type="text" name="private_wb_bot_user" value="{{ wb_username }}" style="width: 300px;">
     <input type="submit" value="Update this">
 </form>
 <small>This user needs bot writing privileges on your Wikibase instance ("bot" box ticked on <code>wiki/Special:UserRights</code>).</small>
 </p>
 <p>Your Wikibase bot user password:
 <form method="POST">
-   &#129054; <input type="text" name="private_wb_bot_pwd" value={{ wb_password }} style="width: 300px;">
+   &#129054; <input type="text" name="private_wb_bot_pwd" placeholder="{{ wb_password }}" style="width: 300px;">
     <input type="submit" value="Update this">
 </form>
 <small>This is the normal user password (and not the so-called 'bot bassword'.</small>
 </p>
 <p>Your Zotero API key:
 <form method="POST">
-   &#129054; <input type="text" name="private_zotero_api_key" value={{ zotero_api_key }} style="width: 300px;">
+   &#129054; <input type="text" name="private_zotero_api_key" placeholder={{ zotero_api_key }} style="width: 300px;">
     <input type="submit" value="Update this">
 </form>
 <small>A Zotero API key can be obtained <a href="https://www.zotero.org/settings/keys/new">here</a>.</br>Be sure to grant the key read and write access to the group library you want to export items from. The key consists of a single chain of characters.</small>
 </p>
 <h2>URL and Name of your Wikibase</h2>
 <p>The <b>URL</b> of your Wikibase is <a href="{{ configdata['wikibase_url'] }}" target="_blank">{{ configdata['wikibase_url'] }}</a>.</br>
-<small>You can update that in your 'config_private.py' file in the app base folder, together with usernames and passwords for Wikibase and Zotero.</small></p>
-<p>The <b>Name</b> of your Wikibase (e.g. 'Mybase'):
+<small>Enter the URL of your Wikibase, without slash at the end, e.g. 'https://mybase.wikibase.cloud'.</small>
+<form method="POST">
+   &#129054; <input type="text" name="wikibase_url" value="{{ configdata['wikibase_url'] }}" style="width: 300px;">
+    <input type="submit" value="Update this">
+</form></p>
+<p>The <b>Name</b> of your Wikibase (e.g. 'Mybase', used, for example, as title of Zotero URI attachments):
 <form method="POST">
    &#129054; <input type="text" name="wikibase_name" value="{{ configdata['wikibase_name'] }}" style="width: 300px;">
     <input type="submit" value="Update this">
-</form>
-</p>
+</form></p>
 <p>The <b>Name</b> of your Zotero group (for use throughout this app):
 <form method="POST">
     &#129054; <input type="text" name="zotero_group_name" value="{{ configdata['zotero_group_name'] }}" style="width: 300px;">
@@ -55,25 +59,47 @@ After setting these three values, restart the app in the terminal, and check the
     <input type="submit" value="Update this">
 </form>
 </p>
-<p>The <b>Tag</b> you use on your Wikibase to mark records for export:
+<p>The <b>Tag</b> you will use in your Zotero group to mark records for ZotWb export to Wikibase:
 <form method="POST">
     &#129054; <input type="text" name="zotero_export_tag" value="{{ configdata['zotero_export_tag'] }}" style="width: 300px;">
     <input type="submit" value="Update this">
 </form>
 </p>
-<p>The <b>Tag</b> you use on your Wikibase to mark successfully imported items:
+<p>The <b>Tag</b> you want to appear in your Zotero group on successfully imported items:
 <form method="POST">
     &#129054; <input type="text" name="zotero_on_wikibase_tag" value="{{ configdata['zotero_on_wikibase_tag'] }}" style="width: 300px;">
     <input type="submit" value="Update this">
 </form>
 </p>
-
+<h2>Language settings</h2>
+<p>Specify the all the languages you want Wikibase entity labels, aliases and descriptions to be created when importing entities from Wikidata.</br>
+<small>Use <a href="https://www.wikidata.org/wiki/Help:Wikimedia_language_codes/lists/all", target="_blank">wikimedia language codes</a> here, separated by comma (e.g. 'en,es,ga' for English, Spanish and Irish).</small></p>
+<form method="POST">
+    &#129054; <input type="text" name="wikimedia_languages" value="{{ ",".join(configdata['wikibase_label_languages']) }}" style="width: 300px;">
+    <input type="submit" value="Update this">
+</form>
+<h2>Zotero EXTRA field regex patterns</h2>
+<p>You can specify regex patterns; the first match for each pattern is saved as value to the 'ExternalID' property you specify.</br>
+<small>The Zotero EXTRA field is widely used for storing identifiers for the bibliographic record from different sources.</br>
+For example, OCLC identifiers from <a href="https://worldcat.org"> target="_blank">worldcat</a> are stored by the worldcat import translator in EXTRA.</small>
+</p>
+<form method="POST">
+    &#129054; regex pattern <input type="text" name="regex_pattern" value="" style="width: 300px;"> &#11020;
+     property <input type="text" name="regex_property" value="" style="width: 100px;">
+    <input type="submit" value="Add this">
+</form>
+<h3>Currently active regex patterns</h3>
+<ul>{% for pattern in configdata['identifier_patterns'] %}
+<li><form method="POST"> {{ pattern }} &#11020; {{ configdata['identifier_patterns'][pattern] }}
+    <button name="regexdelete_{{ pattern }}" type="submit"> Delete this pattern </button>
+</form></li>
+{% endfor %}</ul>
 <h2>Basic properties and classes on your Wikibase</h2>
 <p>If you change the value manually, press the "Update this" button for saving.</br>
     Otherwise use the "Create new" button to create a new property or class, and use that from now on.</br>
     If the property is aligned to Wikidata, the Wikidata property will be imported.</br>
     Be careful creating new items, you might create duplicates.</br>
-    Your can also import labels and descriptions from Wikidata to the proposed existing Wikibase entity.</p>
+    You can also import labels and descriptions from Wikidata to the existing Wikibase entity proposed on the button.</p>
 {% for key in configdata %}
 
 {% if key.startswith('prop') or key.startswith('class') %}

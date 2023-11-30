@@ -8,6 +8,7 @@
 <h1><img src="static/zotwb_logo.jpg" alt="ZotWb logo" style="height:10%" /> ZotWb Profiles</h1>
 {% for message in messages %}<p style = "{{ msgcolor }}">{{ message|safe }}<p>{% endfor %}
 <small>(Back to <a href="/">start page</a>)</small>
+{% if profile != "profile.template" %}
 <p>This page lets you activate another profile, or create a new one.</br>
 The profile active at the moment is named <b>{{ profile }}</b></p>
 <h2>Activate another previously configured profile</h2>
@@ -17,9 +18,11 @@ The profile active at the moment is named <b>{{ profile }}</b></p>
 <b>{{ prof }}</b> &#10145; <button style="display: inline;" name="{{ prof }}" type="submit">Load this profile</button>
 </form></li>
 {% endfor %}</ul>
+{% endif %}
 <h2>Create new profile</h2>
-<form>
- <input style="display: inline;" type="text" name="create_new_profile" style="width: 40px;" />
+
+<form method="POST">
+ <input type="text" name="create_new_profile" style="width: 100px;" value=""/>
     <input type="submit" value="Create a new profile with this name"/>
 </form><p>Choose an identifier for the new ZotWb user profile</br><small>(letters, numbers, underscores; max. 10 char.)</small></p>
 </body>
