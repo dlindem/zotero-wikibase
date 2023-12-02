@@ -40,7 +40,7 @@
       "wdprop": null
     },
     "P8": {
-      "enlabel": "forma batua",
+      "enlabel": "standard Basque form",
       "type": "WikibaseForm",
       "wdprop": null
     },
@@ -116,7 +116,8 @@
     "P21": {
       "enlabel": "ISSN",
       "type": "ExternalId",
-      "wdprop": "P236"
+      "wdprop": "P236",
+      "formatter_url": "https://portal.issn.org/resource/ISSN/$1"
     },
     "P22": {
       "enlabel": "volume",
@@ -179,7 +180,7 @@
       "wdprop": null
     },
     "P34": {
-      "enlabel": "Publisher",
+      "enlabel": "publisher",
       "type": "String",
       "wdprop": "P123"
     },
@@ -297,7 +298,7 @@
       "wdprop": null
     },
     "P57": {
-      "enlabel": "Edition",
+      "enlabel": "edition number",
       "type": "String",
       "wdprop": "P393"
     },
@@ -771,6 +772,107 @@
       "enlabel": "Basque lexicography periodization type",
       "type": "WikibaseItem",
       "wdprop": null
+    },
+    "P140": {
+      "enlabel": "number of pages",
+      "type": "String",
+      "wdprop": null
+    },
+    "P141": {
+      "enlabel": "manuscript type",
+      "type": "String",
+      "wdprop": null
+    },
+    "P143": {
+      "enlabel": "journal (literal)",
+      "type": "String",
+      "wdprop": null
+    },
+    "P147": {
+      "enlabel": "token literal",
+      "type": "String",
+      "wdprop": null
+    },
+    "P149": {
+      "enlabel": "preceding token",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P150": {
+      "enlabel": "following token",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P151": {
+      "enlabel": "Wikidata item for this sense",
+      "type": "ExternalId",
+      "wdprop": null,
+      "formatter_url": "http://www.wikidata.org/entity/$1"
+    },
+    "P152": {
+      "enlabel": "EODA search URL",
+      "type": "ExternalId",
+      "wdprop": null,
+      "formatter_url": "https://www.euskaltzaindia.eus/index.php?option=com_ecoeoda&task=bilaketa&Itemid=471&lang=eu&query=$1"
+    },
+    "P153": {
+      "enlabel": "lexical category",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P154": {
+      "enlabel": "OEH search URL",
+      "type": "ExternalId",
+      "wdprop": null,
+      "formatter_url": "https://www.euskaltzaindia.eus/index.php?option=com_oehberria&task=bilaketa&Itemid=1694&lang=eu&query=$1"
+    },
+    "P170": {
+      "enlabel": "morphem realization",
+      "type": "String",
+      "wdprop": null
+    },
+    "P171": {
+      "enlabel": "MORFEUS label",
+      "type": "String",
+      "wdprop": null
+    },
+    "P172": {
+      "enlabel": "MORFEUS analysis",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P173": {
+      "enlabel": "MORFEUS POS",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P174": {
+      "enlabel": "(not used)",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P175": {
+      "enlabel": "referenced named entity",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P176": {
+      "enlabel": "published in",
+      "type": "WikibaseItem",
+      "wdprop": "P1433"
+    },
+    "P177": {
+      "enlabel": "Basque Wikisource paragraph anchor",
+      "type": "ExternalId",
+      "wdprop": null,
+      "formatter_url": "https://eu.wikisource.org/wiki/$1"
+    },
+    "P178": {
+      "enlabel": "referenced Wikidata named entity",
+      "type": "ExternalId",
+      "wdprop": null,
+      "formatter_url": "http://www.wikidata.org/entity/$1",
+      "formatter_uri": "http://www.wikidata.org/entity/$1"
     }
   }
 }
