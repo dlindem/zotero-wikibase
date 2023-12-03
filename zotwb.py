@@ -51,21 +51,22 @@ def change_profile():
 
     elif request.method == 'POST':
         if request.form:
-            for command in request.form:
-                print(command)
-                if command == 'create_new_profile':
-                    newprofile = request.form.get(command)
+            for key in request.form:
+                print(key, request.form.get(key))
+                if key == 'create_new_profile':
+                    newprofile = request.form.get(key)
                     action = zotwb_functions.create_profile(name=newprofile)
                     messages = action['messages']
                     msgcolor = action['msgcolor']
-                else:
-                    profile = request.form.get(command)
+                elif key.startswith('activate_'):
+                    profile = key.replace('activate_','')
                     message = f"This profile will be activated: {profile}."
                     print(message)
                     with open('profiles.json', 'w', encoding='utf-8') as file:
-                        json.dump({'last_profile':profile,'profiles_list':profiles['profiles_list']}, file, indent=2)
-                    messages.append(message + ' Go to <a href="/">ZotWb start page</a>.')
+                        json.dump({'last_profile':profile,'profiles_list':[profiles['last_profile']]+other_profiles}, file, indent=2)
+                    messages.append(message + ' Quit and restart ZotWb and go to <a href="/">ZotWb start page</a>.')
                     msgcolor="background:limegreen"
+
             return render_template("change_profile.html", other_profiles=other_profiles, profile=profiles['last_profile'],
                                messages=messages, msgcolor=msgcolor)
 
@@ -590,6 +591,33 @@ def wikidata_import():
                                wikibase_entity_ns=configdata['mapping']['wikibase_entity_ns'],
                                instanceof=configdata['mapping']['prop_instanceof']['wikibase'],
                                messages=messages, msgcolor=msgcolor, properties=properties['mapping'], allowed_datatypes=allowed_datatypes)
+
+@app.route('/eusterm', methods= ['GET', 'POST'])
+def eusterm():
+    from bots import eusterm_functions
+    schemeqid = None
+    configdata = botconfig.load_mapping('config')
+    messages = []
+    msgcolor = "background:limegreen"
+    if request.method == 'GET':
+        return render_template("eusterm.html", wikibase_name=configdata['mapping']['wikibase_name'],
+                               wikibase_entity_ns=configdata['mapping']['wikibase_entity_ns'],
+                               schemeqid=schemeqid,
+                               messages=messages, msgcolor=msgcolor,)
+    if request.method == "POST":
+        if request.form:
+            if "p13_to_eudef" in request.form:
+                action = eusterm_functions.p13_to_eudef(config=configdata, schemeqid=request.form.get("p13_to_eudef"))
+            elif "p8_to_eulabel" in request.form:
+                action = eusterm_functions.p8_to_eulabel(config=configdata, schemeqid=request.form.get("p8_to_eulabel"))
+            elif 'merge_same_wikidata' in request.form:
+                action = eusterm_functions.merge_wd_duplicates(config=configdata, schemeqid=request.form.get("merge_same_wikidata"))
+            messages = action['messages']
+            msgcolor = action['msgcolor']
+        return render_template("eusterm.html", wikibase_name=configdata['mapping']['wikibase_name'],
+                               wikibase_entity_ns=configdata['mapping']['wikibase_entity_ns'],
+                               schemeqid=schemeqid,
+                               messages=messages, msgcolor=msgcolor)
 
 
 if __name__ == '__main__':
