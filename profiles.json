@@ -1,4 +1,7 @@
 {
-"last_profile": "MLV",
-  "profiles_list": ["MLV","eusterm"]
+  "last_profile": "eusterm",
+  "profiles_list": [
+    "MLV",
+    "eusterm"
+  ]
 }
