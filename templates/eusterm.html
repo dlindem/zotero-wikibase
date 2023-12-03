@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<link href="/static/favicon.ico" rel="shortcut icon"/>
+    <title>Eusterm functions</title>
+</head>
+<body style="background-color:#eceff1">
+<h1>Eusterm functions</h1>
+{% for message in messages %}<p style = "{{ msgcolor }}">{{ message|safe }}<p>{% endfor %}
+<small>(Back to <a href="/">start page</a>)</small>
+<h2>Functions for {{ wikibase_name }} Wikibase</h2>
+<h3>Move P13 definition to item description (eu)</h3>
+<p>Sartu kontzeptu-eskemaren Q-ID </p>
+<form method="POST"><input placeholder="{{ schemeqid }}"  name="p13_to_eudef" type="text" style="width: 100px;" />
+    <input type="submit" value="Prozesatu eskema honetakoak"/>
+</form>
+<h3>Move P8 lexicalisation to label item (eu) and add different old label to aliases</h3>
+<p>Sartu kontzeptu-eskemaren Q-ID </p>
+<form method="POST"><input placeholder="{{ schemeqid }}"  name="p8_to_eulabel" type="text" style="width: 100px;" />
+    <input type="submit" value="Prozesatu eskema honetakoak"/>
+</form>
+<h3>Merge items in a scheme that are linked to the same Wikidata item (P1)</h3>
+<p>Sartu kontzeptu-eskemaren Q-ID </p>
+<form method="POST"><input placeholder="{{ schemeqid }}"  name="merge_same_wikidata" type="text" style="width: 100px;" />
+    <input type="submit" value="Prozesatu eskema honetakoak"/>
+</form>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
