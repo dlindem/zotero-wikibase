@@ -175,6 +175,12 @@ def itemwrite(itemdata, clear=False, entitytype='Item', datatype=None):
 			print(ex)
 			if "wikibase-validator-label-with-description-conflict" in str(ex):
 				print('\nFound an ambiguous item label: same description conflict.')
+			if "already has label" in str(ex):
+				regex = re.search(r'(Q[0-9]+)\]\] already has label', str(ex))
+				if regex:
+					qid = regex.group(1)
+					print(f"Error: Item {qid} has the same label and the same description... Will use that in order to avoid duplicate creation.")
+					return qid
 			presskey = input('Enter 0 for skipping and continue without writing statements, else retry writing.')
 			if presskey == "0":
 				d = True

@@ -203,7 +203,7 @@ def import_wikidata_entity(wdid, wbid=False, wd_to_wb={}, process_labels=True, p
     if process_labels:
         for lang in languages_to_consider:
             if wbid:
-                existing_preflabel = wb_existing_entity.labels.get(lang)
+                existing_preflabel = str(wb_existing_entity.labels.get(lang))
             if lang in importentityjson['labels']:
                 print(importentityjson['labels'][lang]['value'])
                 if existing_preflabel and len(existing_preflabel) > 0:
