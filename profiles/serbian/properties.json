@@ -1,0 +1,11 @@
+{
+  "filename": "properties.json",
+  "comment": "mapping keys are wikibase properties",
+  "mapping": {
+    "P11": {
+      "enlabel": "Referenced Wikidata Entity",
+      "type": "ExternalId",
+      "wdprop": null
+    }
+  }
+}
