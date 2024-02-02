@@ -11,8 +11,9 @@ with open('profiles/serbian/data/token_mapping.csv', 'r', encoding="utf-8") as l
     logrows = logfile.read().split('\n')
     done_items = {}
     for row in logrows:
+        splitrow = row.split('\t')
         try:
-            done_items[row[0]] = row[1]
+            done_items[splitrow[0]] = splitrow[1]
         except:
             pass
 
@@ -23,7 +24,9 @@ with open('profiles/serbian/data/SRP18520.csv') as csvfile:
 
     for row in rows:
         count += 1
+
         tokenid = row['word'].replace('http://llod.jerteh.rs/ELTEC/srp/NIF2/', '')
+        wbqid = False
         if tokenid in done_items:
             print(f"{tokenid} is already there as {done_items[tokenid]}")
             continue
@@ -31,14 +34,15 @@ with open('profiles/serbian/data/SRP18520.csv') as csvfile:
         # word,anchor,oliacat
 
         wb_oliacat = oliacats[row['oliacat']]
-        statements = [{'prop_nr': 'P5', 'type': 'item', 'value': 'Q2'}, # instance of Word
-                      {'prop_nr': 'P8', 'type': 'string', 'value': row['anchor']}, # token literal
-                      {'prop_nr': 'P6', 'type': 'externalid', 'value': tokenid}, # ELTEC word ID
-                      {'prop_nr': 'P9', 'type': 'item', 'value': wb_oliacat}]
+        statements = [{'prop_nr': 'P5', 'type': 'item', 'value': 'Q2', 'action': 'replace'}, # instance of Word
+                      {'prop_nr': 'P8', 'type': 'string', 'value': row['anchor'], 'action': 'replace'}, # token literal
+                      {'prop_nr': 'P10', 'type': 'item', 'value': "Q201", 'action': 'replace'}, # part of doc
+                      {'prop_nr': 'P6', 'type': 'externalid', 'value': tokenid, 'action': 'replace'}, # ELTEC word ID
+                      {'prop_nr': 'P9', 'type': 'item', 'value': wb_oliacat, 'action': 'replace'}]
         labels = [{'lang': 'sr', 'value': row['anchor']}]
         print(f"{statements}\n")
-        wbid = xwbi.itemwrite({'qid': False, 'statements':statements, 'labels':labels})
+        wbid = xwbi.itemwrite({'qid': wbqid, 'statements':statements, 'labels':labels})
         with open('profiles/serbian/data/token_mapping.csv', 'a', encoding="utf-8") as logfile:
             logfile.write(f"{tokenid}\t{wbid}\n")
         print(f"Successfully processed {tokenid} as {wbid}.")
-        time.sleep(1.1)
+        time.sleep(0.5)
