@@ -57,7 +57,8 @@ def p8_to_eulabel(config={}, schemeqid=None):
 def merge_wd_duplicates(config={}, schemeqid=None):
     query = """select distinct  ?wikibase ?wikibase2 ?wikidata
 where { ?item xdp:P6 xwb:"""+schemeqid+"""; xdp:P1 ?wikidata . filter (regex (str(?item), "Q"))
-        ?item2 xdp:P6 xwb:"""+schemeqid+"""; xdp:P1 ?wikidata . filter (?item2 != ?item)
+      #  ?item2 xdp:P6 xwb:"""+schemeqid+"""; xdp:P1 ?wikidata . filter (?item2 != ?item)
+        ?item2 xdp:P1 ?wikidata . filter (?item2 != ?item)
        #?scheme rdfs:label ?schemeLabel. filter(lang(?schemeLabel)="eu")
        bind (strafter(str(?item), '"""+config['mapping']['wikibase_entity_ns']+"""') as ?wikibase)
        bind (strafter(str(?item2), '"""+config['mapping']['wikibase_entity_ns']+"""') as ?wikibase2)

@@ -98,6 +98,481 @@
       "enlabel": "equivalent property",
       "type": "Url",
       "wdprop": "P1628"
+    },
+    "P86": {
+      "enlabel": "published in",
+      "type": "WikibaseItem",
+      "wdprop": "P1433"
+    },
+    "P92": {
+      "enlabel": "parent taxon",
+      "type": "WikibaseItem",
+      "wdprop": "P171"
+    },
+    "P9": {
+      "enlabel": "P9",
+      "type": "Url",
+      "wdprop": null
+    },
+    "P14": {
+      "enlabel": "P14",
+      "type": "Url",
+      "wdprop": null
+    },
+    "P16": {
+      "enlabel": "P16",
+      "type": "Url",
+      "wdprop": null
+    },
+    "P17": {
+      "enlabel": "P17",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P19": {
+      "enlabel": "P19",
+      "type": "String",
+      "wdprop": null
+    },
+    "P20": {
+      "enlabel": "P20",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P25": {
+      "enlabel": "P25",
+      "type": "ExternalId",
+      "wdprop": "P10192",
+      "formatter_url": "https://homosaurus.org/v3/$1"
+    },
+    "P27": {
+      "enlabel": "P27",
+      "type": "WikibaseItem",
+      "wdprop": "P457"
+    },
+    "P28": {
+      "enlabel": "P28",
+      "type": "WikibaseItem",
+      "wdprop": "P156"
+    },
+    "P29": {
+      "enlabel": "P29",
+      "type": "WikibaseItem",
+      "wdprop": "P138"
+    },
+    "P30": {
+      "enlabel": "P30",
+      "type": "WikibaseItem",
+      "wdprop": "P21"
+    },
+    "P32": {
+      "enlabel": "P32",
+      "type": "ExternalId",
+      "wdprop": null
+    },
+    "P33": {
+      "enlabel": "P33",
+      "type": "WikibaseProperty",
+      "wdprop": null
+    },
+    "P34": {
+      "enlabel": "P34",
+      "type": "WikibaseProperty",
+      "wdprop": null
+    },
+    "P35": {
+      "enlabel": "P35",
+      "type": "WikibaseProperty",
+      "wdprop": null
+    },
+    "P36": {
+      "enlabel": "P36",
+      "type": "WikibaseProperty",
+      "wdprop": null
+    },
+    "P37": {
+      "enlabel": "P37",
+      "type": "WikibaseProperty",
+      "wdprop": null
+    },
+    "P38": {
+      "enlabel": "P38",
+      "type": "Url",
+      "wdprop": null
+    },
+    "P39": {
+      "enlabel": "P39",
+      "type": "ExternalId",
+      "wdprop": null,
+      "formatter_url": "https://eusterm.wikibase.cloud/wiki/$1"
+    },
+    "P40": {
+      "enlabel": "P40",
+      "type": "ExternalId",
+      "wdprop": null,
+      "formatter_url": "https://lexbib.elex.is/entity/$1"
+    },
+    "P41": {
+      "enlabel": "P41",
+      "type": "ExternalId",
+      "wdprop": null,
+      "formatter_url": "https://eusterm.wikibase.cloud/wiki/Special:Contributions/$1"
+    },
+    "P42": {
+      "enlabel": "P42",
+      "type": "String",
+      "wdprop": null
+    },
+    "P43": {
+      "enlabel": "P43",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P44": {
+      "enlabel": "P44",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P45": {
+      "enlabel": "P45",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P46": {
+      "enlabel": "P46",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P47": {
+      "enlabel": "P47",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P48": {
+      "enlabel": "P48",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P49": {
+      "enlabel": "P49",
+      "type": "String",
+      "wdprop": null
+    },
+    "P50": {
+      "enlabel": "P50",
+      "type": "WikibaseItem",
+      "wdprop": "P1535"
+    },
+    "P51": {
+      "enlabel": "P51",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P53": {
+      "enlabel": "P53",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P54": {
+      "enlabel": "P54",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P55": {
+      "enlabel": "P55",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P56": {
+      "enlabel": "P56",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P57": {
+      "enlabel": "P57",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P58": {
+      "enlabel": "P58",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P59": {
+      "enlabel": "P59",
+      "type": "WikibaseItem",
+      "wdprop": "P1582"
+    },
+    "P60": {
+      "enlabel": "P60",
+      "type": "WikibaseItem",
+      "wdprop": "P527"
+    },
+    "P61": {
+      "enlabel": "P61",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P62": {
+      "enlabel": "P62",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P63": {
+      "enlabel": "P63",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P64": {
+      "enlabel": "P64",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P65": {
+      "enlabel": "P65",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P66": {
+      "enlabel": "P66",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P67": {
+      "enlabel": "P67",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P68": {
+      "enlabel": "P68",
+      "type": "String",
+      "wdprop": null
+    },
+    "P69": {
+      "enlabel": "P69",
+      "type": "String",
+      "wdprop": null
+    },
+    "P70": {
+      "enlabel": "P70",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P71": {
+      "enlabel": "P71",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P72": {
+      "enlabel": "P72",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P73": {
+      "enlabel": "P73",
+      "type": "String",
+      "wdprop": null
+    },
+    "P74": {
+      "enlabel": "P74",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P75": {
+      "enlabel": "P75",
+      "type": "Quantity",
+      "wdprop": null
+    },
+    "P76": {
+      "enlabel": "P76",
+      "type": "Quantity",
+      "wdprop": null
+    },
+    "P77": {
+      "enlabel": "P77",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P78": {
+      "enlabel": "P78",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P79": {
+      "enlabel": "P79",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P80": {
+      "enlabel": "P80",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P81": {
+      "enlabel": "P81",
+      "type": "Quantity",
+      "wdprop": null
+    },
+    "P82": {
+      "enlabel": "P82",
+      "type": "Quantity",
+      "wdprop": null
+    },
+    "P83": {
+      "enlabel": "P83",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P87": {
+      "enlabel": "P87",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P88": {
+      "enlabel": "P88",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P89": {
+      "enlabel": "P89",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P90": {
+      "enlabel": "P90",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P91": {
+      "enlabel": "P91",
+      "type": "Quantity",
+      "wdprop": null
+    },
+    "P93": {
+      "enlabel": "P93",
+      "type": "String",
+      "wdprop": null
+    },
+    "P94": {
+      "enlabel": "P94",
+      "type": "String",
+      "wdprop": null
+    },
+    "P95": {
+      "enlabel": "P95",
+      "type": "String",
+      "wdprop": null
+    },
+    "P96": {
+      "enlabel": "P96",
+      "type": "String",
+      "wdprop": null
+    },
+    "P97": {
+      "enlabel": "P97",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P98": {
+      "enlabel": "P98",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P99": {
+      "enlabel": "P99",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P100": {
+      "enlabel": "P100",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P101": {
+      "enlabel": "P101",
+      "type": "Quantity",
+      "wdprop": null
+    },
+    "P102": {
+      "enlabel": "P102",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P103": {
+      "enlabel": "P103",
+      "type": "Quantity",
+      "wdprop": null
+    },
+    "P104": {
+      "enlabel": "P104",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P105": {
+      "enlabel": "P105",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P106": {
+      "enlabel": "P106",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P107": {
+      "enlabel": "P107",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P108": {
+      "enlabel": "P108",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P109": {
+      "enlabel": "P109",
+      "type": "String",
+      "wdprop": null
+    },
+    "P110": {
+      "enlabel": "P110",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P111": {
+      "enlabel": "P111",
+      "type": "Quantity",
+      "wdprop": null
+    },
+    "P112": {
+      "enlabel": "P112",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P113": {
+      "enlabel": "P113",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P114": {
+      "enlabel": "P114",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P115": {
+      "enlabel": "P115",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P116": {
+      "enlabel": "P116",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P117": {
+      "enlabel": "P117",
+      "type": "ExternalId",
+      "wdprop": null,
+      "formatter_url": "http://pagotxa.eus/errezeta/$1"
     }
   }
 }

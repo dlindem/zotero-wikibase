@@ -1,7 +1,7 @@
 [
   {
-    "key": "QF9HDEEF",
-    "version": 1503,
+    "key": "MYU3XQQ8",
+    "version": 1516,
     "library": {
       "type": "group",
       "id": 5165329,
@@ -15,18 +15,12 @@
     },
     "links": {
       "self": {
-        "href": "https://api.zotero.org/groups/5165329/items/QF9HDEEF",
+        "href": "https://api.zotero.org/groups/5165329/items/MYU3XQQ8",
         "type": "application/json"
       },
       "alternate": {
-        "href": "https://www.zotero.org/groups/mlv/items/QF9HDEEF",
+        "href": "https://www.zotero.org/groups/mlv/items/MYU3XQQ8",
         "type": "text/html"
-      },
-      "attachment": {
-        "href": "https://api.zotero.org/groups/5165329/items/9UWKEXB6",
-        "type": "application/json",
-        "attachmentType": "image/jpeg",
-        "attachmentSize": 190691
       }
     },
     "meta": {
@@ -41,61 +35,260 @@
           }
         }
       },
-      "creatorSummary": "Aulestia",
-      "parsedDate": "1989",
-      "numChildren": 3
+      "creatorSummary": "Astarbe and Salaberria",
+      "parsedDate": "2008",
+      "numChildren": 0
     },
     "data": {
-      "key": "QF9HDEEF",
-      "version": 1503,
+      "key": "MYU3XQQ8",
+      "version": 1516,
       "itemType": "book",
-      "title": "Basque-English Dictionary",
+      "title": "Sagardoaren hiztegia",
       "creators": [
         {
           "creatorType": "author",
-          "firstName": "Gorka",
-          "lastName": "Aulestia"
+          "firstName": "Miel Joxe",
+          "lastName": "Astarbe"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Urkiri",
+          "lastName": "Salaberria"
         }
       ],
       "abstractNote": "",
-      "series": "The Basque series",
+      "series": "",
       "seriesNumber": "",
       "volume": "",
       "numberOfVolumes": "",
       "edition": "",
-      "place": "Reno",
-      "publisher": "University of Nevada Press",
-      "date": "1989",
+      "place": "S.l.",
+      "publisher": "Sagardun Partzuergoa",
+      "date": "2008",
       "numPages": "",
-      "language": "en",
-      "ISBN": "978-0-87417-126-6",
+      "language": "eus",
+      "ISBN": "",
       "shortTitle": "",
-      "url": "",
-      "accessDate": "",
+      "url": "http://www.habe.org/liburutegia_datuak/aurkibideak/pdf/32093.pdf",
+      "accessDate": "2022-12-29T13:59:59Z",
       "archive": "",
-      "archiveLocation": "https://lexbib.elex.is/entity/Q33436",
-      "libraryCatalog": "",
+      "archiveLocation": "",
+      "libraryCatalog": "Open WorldCat",
       "callNumber": "",
       "rights": "",
-      "extra": "",
+      "extra": "https://monumenta.wikibase.cloud/entity/Q1266\nOCLC: 863179420",
       "tags": [
         {
           "tag": ":period Q653"
         },
         {
-          "tag": "wikibase-export"
+          "tag": "on-wikibase"
         }
       ],
       "collections": [
         "AEUY97BC"
       ],
       "relations": {
-        "owl:sameAs": "http://zotero.org/groups/1892855/items/WWYN6LUT"
+        "owl:sameAs": "http://zotero.org/groups/1892855/items/CILYXSWI"
       },
-      "dateAdded": "2023-09-02T13:46:24Z",
-      "dateModified": "2023-11-30T17:31:54Z"
+      "dateAdded": "2023-09-02T13:46:19Z",
+      "dateModified": "2023-12-02T18:06:40Z"
     },
-    "wikibase_entity": false
+    "wikibase_entity": "Q1266"
+  },
+  {
+    "key": "SQQB2W6S",
+    "version": 1512,
+    "library": {
+      "type": "group",
+      "id": 5165329,
+      "name": "MLV",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/mlv",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5165329/items/SQQB2W6S",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/mlv/items/SQQB2W6S",
+        "type": "text/html"
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Arana et al.",
+      "parsedDate": "2022",
+      "numChildren": 0
+    },
+    "data": {
+      "key": "SQQB2W6S",
+      "version": 1512,
+      "itemType": "book",
+      "title": "Hegoaldeko goi-nafarrera: Auritz eta Orreagako aldaera : hiztegia",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Aitor",
+          "lastName": "Arana"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Koldo",
+          "lastName": "Colomo Castro"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Joxepe",
+          "lastName": "Irigarai"
+        }
+      ],
+      "abstractNote": "",
+      "series": "Nafarroako euskalkiak",
+      "seriesNumber": "",
+      "volume": "",
+      "numberOfVolumes": "",
+      "edition": "",
+      "place": "Amorebieta",
+      "publisher": "Erroteta",
+      "date": "2022",
+      "numPages": "131",
+      "language": "eus",
+      "ISBN": "978-84-17607-49-4",
+      "shortTitle": "Hegoaldeko goi-nafarrera",
+      "url": "",
+      "accessDate": "",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "Open WorldCat",
+      "callNumber": "",
+      "rights": "",
+      "extra": "https://monumenta.wikibase.cloud/entity/Q1267\nOCLC: 1346711101",
+      "tags": [
+        {
+          "tag": ":period Q653"
+        },
+        {
+          "tag": "on-wikibase"
+        }
+      ],
+      "collections": [
+        "AEUY97BC"
+      ],
+      "relations": {
+        "owl:sameAs": "http://zotero.org/groups/1892855/items/E45U5NNB"
+      },
+      "dateAdded": "2023-09-02T13:46:16Z",
+      "dateModified": "2023-12-02T18:02:45Z"
+    },
+    "wikibase_entity": "Q1267"
+  },
+  {
+    "key": "6CC6AVL9",
+    "version": 1509,
+    "library": {
+      "type": "group",
+      "id": 5165329,
+      "name": "MLV",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/mlv",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5165329/items/6CC6AVL9",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/mlv/items/6CC6AVL9",
+        "type": "text/html"
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Aramburu Carrera",
+      "parsedDate": "2014",
+      "numChildren": 0
+    },
+    "data": {
+      "key": "6CC6AVL9",
+      "version": 1509,
+      "itemType": "book",
+      "title": "Euskolatinus hiztegia: latinaeuskara",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Edurne",
+          "lastName": "Aramburu Carrera"
+        }
+      ],
+      "abstractNote": "",
+      "series": "",
+      "seriesNumber": "",
+      "volume": "",
+      "numberOfVolumes": "",
+      "edition": "",
+      "place": "Berriozar, Navarra",
+      "publisher": "Denonartean",
+      "date": "2014",
+      "numPages": "229",
+      "language": "spa",
+      "ISBN": "978-84-15756-44-6",
+      "shortTitle": "Euskolatinus hiztegia",
+      "url": "",
+      "accessDate": "",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "Open WorldCat",
+      "callNumber": "",
+      "rights": "",
+      "extra": "https://monumenta.wikibase.cloud/entity/Q1268\nOCLC: 898011321",
+      "tags": [
+        {
+          "tag": ":period Q653"
+        },
+        {
+          "tag": "on-wikibase"
+        }
+      ],
+      "collections": [
+        "AEUY97BC"
+      ],
+      "relations": {
+        "owl:sameAs": "http://zotero.org/groups/1892855/items/CLRUUKN8"
+      },
+      "dateAdded": "2023-09-02T13:46:16Z",
+      "dateModified": "2023-12-02T18:01:24Z"
+    },
+    "wikibase_entity": "Q1268"
   },
   {
     "key": "WFAC63FG",
@@ -194,120 +387,6 @@
       "dateModified": "2023-11-30T17:31:47Z"
     },
     "wikibase_entity": "Q770"
-  },
-  {
-    "key": "PYPHPHDJ",
-    "version": 1502,
-    "library": {
-      "type": "group",
-      "id": 5165329,
-      "name": "MLV",
-      "links": {
-        "alternate": {
-          "href": "https://www.zotero.org/groups/mlv",
-          "type": "text/html"
-        }
-      }
-    },
-    "links": {
-      "self": {
-        "href": "https://api.zotero.org/groups/5165329/items/PYPHPHDJ",
-        "type": "application/json"
-      },
-      "alternate": {
-        "href": "https://www.zotero.org/groups/mlv/items/PYPHPHDJ",
-        "type": "text/html"
-      },
-      "attachment": {
-        "href": "https://api.zotero.org/groups/5165329/items/DAPIWPPI",
-        "type": "application/json",
-        "attachmentType": "application/pdf",
-        "attachmentSize": 94204
-      }
-    },
-    "meta": {
-      "createdByUser": {
-        "id": 772439,
-        "username": "david_lindemann",
-        "name": "David Lindemann",
-        "links": {
-          "alternate": {
-            "href": "https://www.zotero.org/david_lindemann",
-            "type": "text/html"
-          }
-        }
-      },
-      "creatorSummary": "Michelena et al.",
-      "parsedDate": "2011",
-      "numChildren": 3
-    },
-    "data": {
-      "key": "PYPHPHDJ",
-      "version": 1502,
-      "itemType": "bookSection",
-      "title": "Dictionarium linguae Cantabricae (1562)",
-      "creators": [
-        {
-          "creatorType": "editor",
-          "firstName": "Luis",
-          "lastName": "Michelena"
-        },
-        {
-          "creatorType": "editor",
-          "firstName": "Joseba A.",
-          "lastName": "Lakarra"
-        },
-        {
-          "creatorType": "editor",
-          "firstName": "I\u00f1igo",
-          "lastName": "Ruiz Arzalluz"
-        },
-        {
-          "creatorType": "seriesEditor",
-          "firstName": "Joseba A.",
-          "lastName": "Lakarra"
-        }
-      ],
-      "abstractNote": "",
-      "bookTitle": "Textos arcaicos vascos. N. Landuchio. Dictionarium linguae Cantabricae (1562)",
-      "series": "Luis Michelena. Obras completas",
-      "seriesNumber": "12",
-      "volume": "",
-      "numberOfVolumes": "",
-      "edition": "",
-      "place": "Bilbao",
-      "publisher": "Euskal Herriko Unibertsitatea, Argitalpen Zerbitzua",
-      "date": "2011",
-      "pages": "III.",
-      "language": "eu",
-      "ISBN": "978-84-9860-482-5",
-      "shortTitle": "",
-      "url": "https://web-argitalpena.adm.ehu.es/listaproductos.asp?IdProducts=URALM114825",
-      "accessDate": "",
-      "archive": "",
-      "archiveLocation": "https://lexbib.elex.is/entity/Q34027",
-      "libraryCatalog": "",
-      "callNumber": "",
-      "rights": "",
-      "extra": "OCLC: 866987487",
-      "tags": [
-        {
-          "tag": ":period Q653"
-        },
-        {
-          "tag": "wikibase-export"
-        }
-      ],
-      "collections": [
-        "AEUY97BC"
-      ],
-      "relations": {
-        "owl:sameAs": "http://zotero.org/groups/1892855/items/BWXIR9UQ"
-      },
-      "dateAdded": "2023-09-02T13:46:19Z",
-      "dateModified": "2023-11-30T17:31:37Z"
-    },
-    "wikibase_entity": false
   },
   {
     "key": "TSZQQKEV",

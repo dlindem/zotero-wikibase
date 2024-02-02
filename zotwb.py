@@ -175,9 +175,10 @@ def basic_config():
             regexpattern = None
             regexprop = None
             for key in request.form:
-                # print(f"Form key is {key}, value is {request.form.get(key)}")
+                print(f"Form key is {key}, value is {request.form.get(key)}")
                 if request.form.get(key) == '':
                     continue
+                command = key
                 if key.startswith('private_'):
                     command = key.replace('private_', '')
                     config_private[command] = request.form.get(key)
@@ -213,11 +214,12 @@ def basic_config():
                             configdata['mapping'][configitem]['wikidata'], wbid=configdata['mapping'][configitem]['wikibase'], process_labels=True, process_aliases=True, process_descriptions=True, classqid=classqid, config=configdata, properties=properties)
                     elif key.endswith('_create'):  # user has pressed 'create new'
                         configitem = key.replace('_create','')
+                        command = key
                         if configitem.startswith("class") and configitem != "class_ontology_class":
                             classqid = configdata['mapping']['class_ontology_class']['wikibase']
                         else:
                             classqid = None
-                        if 'wikidata' in configdata['mapping'][configitem]:
+                        if configdata['mapping'][configitem]['wikidata']:
                             newentity_id = zotwb_functions.import_wikidata_entity(configdata['mapping'][configitem]['wikidata'], wbid=False, classqid=classqid, config=configdata, properties=properties)['id']
 
                         else:
@@ -228,7 +230,7 @@ def basic_config():
                                     newitemdata['statements'].append({'type':'WikibaseItem','prop_nr':configdata['mapping']['prop_instanceof']['wikibase'],'value':classqid})
                                     newentity_id = zotwb_functions.xwbi.itemwrite(newitemdata)
                             elif configitem.startswith("prop"):
-                                newprop = zotwb_functions.xwbi.wbi.property.new(datatype=configdata['mapping'][configitem]['type'])
+                                newprop = zotwb_functions.xwbi.wbi.property.new(datatype=zotwb_functions.botconfig.datatypes_mapping[configdata['mapping'][configitem]['type']])
                                 newprop.labels.set('en', configdata['mapping'][configitem]['name'])
                                 newprop.write()
                                 newentity_id = newprop.id
@@ -395,10 +397,20 @@ def wikidata_alignment():
                 message = f"Operation sucessful. Operation name was '{key}'."
                 msgcolor = "background:limegreen"
                 if key == "update_cache":
-
                     zotwb_functions.rewrite_properties_mapping()
                     properties = botconfig.load_mapping('properties')
                     message = f"Properties data cache update sucessful."
+                elif key.startswith("redo_"):
+                    wbprop = key.replace("redo_","")
+                    wdprop = properties['mapping'][wbprop]['wdprop']
+                    zotwb_functions.import_wikidata_entity(wdprop,
+                        wbid=wbprop, process_labels=True, process_aliases=True,
+                        process_descriptions=True, config=configdata, properties=properties)
+                elif key.startswith("map_"):
+                    wbprop = key.replace("redo_", "")
+                    wdprop = request.form.get(key)
+                    properties['mapping'][wbprop]['wdprop'] = wdprop
+                    botconfig.dump_mapping('properties')
             return render_template("wikidata_alignment.html", wikibase_url=configdata['mapping']['wikibase_url'],
                                    wikibase_name=configdata['mapping']['wikibase_name'],
                                    wikibase_entity_ns=configdata['mapping']['wikibase_entity_ns'],
