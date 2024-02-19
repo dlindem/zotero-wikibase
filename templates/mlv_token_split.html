@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<head>
+<link href="/static/favicon.ico" rel="shortcut icon"/>
+    <title>{{ wikibase_name }} Token Split function</title>
+
+</head>
+<body style="background-color:#eceff1">
+
+<h1>{{ wikibase_name }} token split function</h1>
+<h2>Bitan banatzeko aukeratu duzun tokena: <a href="{{ wikibase_entity_ns }}{{ token_qid }}" target="_blank">{{ token_qid }}</a>.</h2>
+<p>Tokenaren forma: <b>{{ token_data['token_forma'] }}</b></p>
+<p>Aukeratu non banatu tokena, bigarren zatia izango denaren lehen ikurrean klikatuz. Token berria sortuko da berehala.</p>
+<form method="POST">
+{% for i in token_data['token_positions'] %}
+    <button name="token_split_at_position" value="{{ token_qid }}_{{ i }}" type="submit">{{ token_data['token_forma'][i] }}</button>
+{% endfor %}
+</form>
+</body></html>

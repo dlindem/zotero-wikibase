@@ -1,0 +1,122 @@
+[
+  {
+    "span": {
+      "type": "uri",
+      "value": "https://monumenta.wikibase.cloud/entity/Q1272"
+    },
+    "span_tokenak": {
+      "type": "literal",
+      "value": "Q814 Q815 Q820 Q818 Q816 Q817 Q819"
+    },
+    "span_label": {
+      "xml:lang": "eu",
+      "type": "literal",
+      "value": "Stabat iuxta crucem Jesu Mater eius ."
+    },
+    "span_formak": {
+      "type": "literal",
+      "value": "1:Stabat 2:iuxta 7:. 5:Mater 3:crucem 4:Jesu 6:eius"
+    },
+    "quote_anot": {
+      "type": "literal",
+      "value": "Joan. 19"
+    },
+    "wikisource_paragraph": {
+      "type": "uri",
+      "value": "https://eu.wikisource.org/wiki/Azkoitiko_Sermoia#2"
+    },
+    "quote_wikidata_erref": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q9167006"
+    }
+  },
+  {
+    "span": {
+      "type": "uri",
+      "value": "https://monumenta.wikibase.cloud/entity/Q749"
+    },
+    "span_tokenak": {
+      "type": "literal",
+      "value": "Q454 Q455"
+    },
+    "span_label": {
+      "xml:lang": "eu",
+      "type": "literal",
+      "value": "Azcoitico parroquian"
+    },
+    "span_formak": {
+      "type": "literal",
+      "value": "1:Azcoitico 2:Parroquian"
+    },
+    "wikisource_paragraph": {
+      "type": "uri",
+      "value": "https://eu.wikisource.org/wiki/Azkoitiko_Sermoia#1"
+    },
+    "wd_ent_erref": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q20646305"
+    },
+    "wd_erref_info": {
+      "type": "literal",
+      "value": "Santa Mar\u00eda La Real eliza (eliza)"
+    }
+  },
+  {
+    "span": {
+      "type": "uri",
+      "value": "https://monumenta.wikibase.cloud/entity/Q1261"
+    },
+    "span_tokenak": {
+      "type": "literal",
+      "value": "Q824 Q822 Q823 Q821"
+    },
+    "span_label": {
+      "xml:lang": "eu",
+      "type": "literal",
+      "value": "Joan. 19."
+    },
+    "span_formak": {
+      "type": "literal",
+      "value": "4:. 2:. 3:19 1:Joan"
+    },
+    "wikisource_paragraph": {
+      "type": "uri",
+      "value": "https://eu.wikisource.org/wiki/Azkoitiko_Sermoia#2"
+    },
+    "wd_ent_erref": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q9167006"
+    },
+    "wd_erref_info": {
+      "type": "literal",
+      "value": "Joan 19 (Bibliako atal)"
+    }
+  },
+  {
+    "span": {
+      "type": "uri",
+      "value": "https://monumenta.wikibase.cloud/entity/Q1270"
+    },
+    "span_tokenak": {
+      "type": "literal",
+      "value": "Q832 Q830 Q831"
+    },
+    "span_label": {
+      "xml:lang": "eu",
+      "type": "literal",
+      "value": "gauden ill honetan"
+    },
+    "span_formak": {
+      "type": "literal",
+      "value": "3:onetan 1:gauden 2:ill"
+    },
+    "wikisource_paragraph": {
+      "type": "uri",
+      "value": "https://eu.wikisource.org/wiki/Azkoitiko_Sermoia#3"
+    },
+    "phil_anot": {
+      "type": "literal",
+      "value": "gero erantsia"
+    }
+  }
+]

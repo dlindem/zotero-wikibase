@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<link href="/static/favicon.ico" rel="shortcut icon"/>
+    <title>MLV functions - ZotWb</title>
+    <style>
+button {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+</style>
+</head>
+<body style="background-color:#eceff1">
+
+<h1>Testua: <a href="{{ wikibase_entity_ns }}{{ doc_qid }}" target="_blank">{{ doc_qid }}</a></h1>
+{% for message in messages %}<p style = "{{ msgcolor }}">{{ message|safe }}<p>{% endfor %}
+<small>(Itzuli <a href="/mlv">hasierara</a>)</small>
+{% if ikuspegi=="tokenak" %}
+<h3>Tokenak eta anotazioak</h3>
+{% for paragraph in docdata %}<p>
+    <form method="POST">[<a style="color: #0000EE;" href="{{ paragraph['tokens'][0]['wikisource_paragraph']['value'] }}" target="_blank">{{ paragraph['prgnum'] }}</a>] <small>[<a href="/mlv/andanak/{{ doc_qid }}_p{{ paragraph['prgnum'] }}_s0_e0">andana definitu</a>]</small>
+    <small>[<button style="text-decoration: underline; color: #0000EE;" value="{{ doc_qid }}_s{{ paragraph['prgnum'] }}_e{{ end_prg }}_andanak" name="ikuspegia_aldatu" type="submit">andanak ikusi</button>]</small></form>
+    {% for token in paragraph['tokens'] %}{{ token['sp_before'] }}<button style="color: #000000 }};" popovertarget="tokenpop{{ token['token_zbk']['value'] }}">{{ token['token_forma']['value'] }}</button>{% endfor %}
+{% for token in paragraph['tokens'] %}<div style="width:70%" popover id="tokenpop{{ token['token_zbk']['value'] }}"><h2>{{ token['token_forma']['value'] }}</h2><hr>Wikibase: <a href="{{ token['token']['value'] }}" target="_blank">{{ token['qid'] }} editatu</a> <small><form method="POST"><button style="text-decoration: underline; color: #0000EE;" type="submit" name="split_token_qid" value="{{ token['qid'] }}">[{{ token['qid'] }} bitan banatu]</button></form></small><hr><i>Token zenbakia:</i> {{ token['token_zbk']['value'] }}</br><i>MLV lexema:</i> <a href="{{ wikibase_entity_ns }}{{ token['mlv_lexema'] }}" target="_blank">{{ token['mlv_lexema'] }}</a></br>{% if token['lemma'] %}<i>Lema batua:</i> {{ token['lemma']['value'] }}</br>{% endif %}{% if token['pos_label'] %}<i>Kategoria gramatikala:</i> {{ token['pos_label']['value'] }}</br>{% endif %}{% if token['forma'] %}<i>Forma batua:</i> {{ token['forma']['value'] }}</br>{% endif %}{% if token['morph_labels'] %}<i>Analisi morfologikoa:</i> {{ token['morph_labels']['value'] }}</br>{% endif %}<hr>{% if token['wd_ent_erref'] %}<i>Erreferentziatutako entitatea:</i> <a href="{{ token['wd_ent_erref']['value'] }}" target="_blank">{{ token['wd_erref_info']['value'] }}</a><hr>{% endif %}<button style="vertical-center" popovertarget="tokenpop{{ token['token_zbk']['value'] }}" popovertargetaction="hide">[itxi]</button></div>{% endfor %}
+</p>{% endfor %}
+{% elif ikuspegi=="andanak" %}
+<h3>Token-andanak eta anotazioak</h3>
+{% for paragraph in docdata %}<p>
+    <form method="POST">[<a style="color: #0000EE;" href="{{ paragraph['tokens'][0]['wikisource_paragraph']['value'] }}" target="_blank">{{ paragraph['prgnum'] }}</a>] <small>[<a href="/mlv/andanak/{{ doc_qid }}_p{{ paragraph['prgnum'] }}_s0_e0">andana definitu</a>]</small>
+    <small>[<button style="text-decoration: underline; color: #0000EE;" value="{{ doc_qid }}_s{{ paragraph['prgnum'] }}_e{{ end_prg }}_tokenak" name="ikuspegia_aldatu" type="submit">token anotazioak ikusi</button>]</small></form>
+    {% for token in paragraph['tokens'] %}{{ token['sp_before'] }}{% if token['span'] %}<button style="color: {{ token['color'] }};" popovertarget="spanpop{{ token['spanqid'] }}">{{ token['token_forma']['value'] }}</button>{% else %}{{ token['token_forma']['value'] }}{% endif %}{% endfor %}
+    {% for span in spandata['spans'] %}<div style="width:70%" popover id="spanpop{{ span }}"><h2>{{ spandata['spans'][span]['data']['span_label']['value'] }}</h2><hr>Wikibase: <a href="{{ wikibase_entity_ns }}{{ span }}" target="_blank">{{ span }}</a><hr>{% if spandata['spans'][span]['data']['quote_anot'] %}<i>Aipu-anotazioa:</i> {{ spandata['spans'][span]['data']['quote_anot']['value'] }}{% if spandata['spans'][span]['data']['quote_wb_erref'] %} (<a href="{{ spandata['spans'][span]['data']['quote_wb']['value'] }}" target="_blank">Argitalpena Wikibasean</a>){% endif %}{% if spandata['spans'][span]['data']['quote_wikidata_erref'] %} (<a href="{{ spandata['spans'][span]['data']['quote_wikidata_erref']['value'] }}" target="_blank">Argitalpena Wikidatan</a>){% endif %}<hr>{% endif %}{% if spandata['spans'][span]['data']['phil_anot'] %}<i>Anotazio filologikoa:</i> {{ spandata['spans'][span]['data']['phil_anot']['value'] }}<hr>{% endif %}{% if spandata['spans'][span]['data']['wd_ent_erref'] %}<i>Erreferentziatutako entitatea:</i> <a href="{{ spandata['spans'][span]['data']['wd_ent_erref']['value'] }}" target="_blank">{{ spandata['spans'][span]['data']['wd_erref_info']['value'] }}</a><hr>{% endif %}<button style="vertical-center" popovertarget="spanpop{{ span }}" popovertargetaction="hide">[itxi]</button></div>{% endfor %}
+</p>{% endfor %}
+{% endif %}
+
+
+</body></html>

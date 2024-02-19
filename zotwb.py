@@ -1,4 +1,4 @@
-from bots import botconfig, zotwb_functions
+from bots import botconfig# , zotwb_functions
 from flask import Flask, render_template, request
 import os, re, json
 from datetime import datetime
@@ -638,6 +638,132 @@ def eusterm():
                                wikibase_entity_ns=configdata['mapping']['wikibase_entity_ns'],
                                schemeqid=schemeqid,
                                messages=messages, msgcolor=msgcolor)
+
+@app.route('/mlv', methods= ['GET', 'POST'])
+def mlv():
+    from bots import mlv_functions
+    configdata = botconfig.load_mapping('config')
+    messages = []
+    msgcolor = "background:limegreen"
+    if request.method == 'GET':
+        return render_template("mlv.html", wikibase_name=configdata['mapping']['wikibase_name'],
+                               wikibase_entity_ns=configdata['mapping']['wikibase_entity_ns'],
+                               messages=messages, msgcolor=msgcolor)
+    if request.method == "POST":
+        if request.form:
+            if "split_token_qid" in request.form:
+                token_qid = request.form.get("split_token_qid")
+                token_data = mlv_functions.get_token_details(token_qid=token_qid)
+                return render_template("mlv_token_split.html", token_qid=token_qid, token_data=token_data,
+                                       wikibase_name=configdata['mapping']['wikibase_name'],
+                               wikibase_entity_ns=configdata['mapping']['wikibase_entity_ns'],
+                               messages=messages, msgcolor=msgcolor)
+            if "token_split_at_position" in request.form:
+                code = request.form.get("token_split_at_position").split("_")
+                token_qid = code[0]
+                split_position = int(code[1])
+                action = mlv_functions.split_token(token_qid=token_qid, split_position=split_position)
+                messages = action['messages']
+                return render_template("mlv.html", wikibase_name=configdata['mapping']['wikibase_name'],
+                                       wikibase_entity_ns=configdata['mapping']['wikibase_entity_ns'],
+                                       messages=messages, msgcolor=msgcolor)
+
+            if "irakurri_doc_qid" in request.form:
+                doc_qid = request.form.get("irakurri_doc_qid")
+                ikuspegi = request.form.get("ikuspegi")
+                start_prg = int(request.form.get("start_prg"))
+                try:
+                    end_prg = int(request.form.get("end_prg"))+1
+                except:
+                    end_prg = 0
+                if request.form.get("metodo") == "sparql":
+                    messages += mlv_functions.sparql_doc(doc_qid=doc_qid)['messages']
+
+            elif "ikuspegia_aldatu" in request.form:
+                code_re = re.search(r'^(^Q\d+)_s(\d+)_e(\d+)_([a-z]+)$', request.form.get('ikuspegia_aldatu'))
+                doc_qid = code_re.group(1)
+                start_prg = int(code_re.group(2))
+                end_prg = int(code_re.group(3))
+                ikuspegi = code_re.group(4)
+
+            action = mlv_functions.load_text(docqid=doc_qid, start_prg=start_prg, end_prg=end_prg)
+            messages += action['messages']
+            msgcolor = action['msgcolor']
+            docdata = action['docdata']
+            spandata = action['spandata']
+            return render_template("mlv_testua_irakurri.html", wikibase_name=configdata['mapping']['wikibase_name'],
+                               wikibase_entity_ns=configdata['mapping']['wikibase_entity_ns'], doc_qid=doc_qid,
+                               docdata=docdata, spandata=spandata, ikuspegi=ikuspegi, start_prg=start_prg, end_prg=end_prg,
+                               messages=messages, msgcolor=msgcolor)
+
+
+@app.route('/mlv/andanak/<code>', methods= ['GET', 'POST'])
+def mlv_andanak(code):
+    from bots import mlv_functions
+    configdata = botconfig.load_mapping('config')
+    docdata = None
+    spandata = None
+    messages = []
+    msgcolor = ""
+    doc_qid = re.search(r'Q\d+',code).group(0)
+    start_prg = int(re.search(r'_p(\d+)',code).group(1))
+    span_start = int(re.search(r'_s(\d+)',code).group(1))
+    span_end = int(re.search(r'_e(\d+)',code).group(1))
+    start_selected = False
+    end_selected = False
+    span_len = None
+    # span_exclude = [] # TODO
+
+    if not request.form:
+        action = mlv_functions.load_text(docqid=doc_qid, start_prg=start_prg, end_prg=start_prg + 1,
+                                         span_start=span_start, span_end=span_end)
+        docdata = action['docdata']
+        spandata = action['spandata']
+        messages = action['messages']
+        msgcolor = action['msgcolor']
+    else:
+        for key in request.form:
+            print(f"{key}: {request.form.get(key)}")
+            if key.startswith("span_start_"):
+                span_start = int(key.replace("span_start_",""))
+                start_selected = True
+                action = mlv_functions.load_text(docqid=doc_qid, start_prg=start_prg, end_prg=start_prg + 1,
+                                                 span_start=span_start, span_end=span_end)
+                docdata = action['docdata']
+                spandata = action['spandata']
+                messages = action['messages']
+                msgcolor = action['msgcolor']
+            if key.startswith("span_end_"):
+                span_code = key.replace("span_end_","")
+                span_start = int(span_code.split("-")[0])
+                span_end = int(span_code.split("-")[1])
+                start_selected = True
+                end_selected = True
+                span_len = list(range(span_end-span_start+2))
+                action = mlv_functions.load_text(docqid=doc_qid, start_prg=start_prg, end_prg=start_prg + 1,
+                                                 span_start=span_start, span_end=span_end)
+                docdata = action['docdata']
+                spandata = action['spandata']
+                messages = action['messages']
+                msgcolor = action['msgcolor']
+            if key == "span_sortu":
+                action = mlv_functions.create_span(form=request.form.to_dict())
+                messages = action['messages']
+                msgcolor = action['msgcolor']
+
+
+
+
+
+
+
+
+
+    return render_template("mlv_token_andanak.html", wikibase_name=configdata['mapping']['wikibase_name'],
+                           wikibase_entity_ns=configdata['mapping']['wikibase_entity_ns'], doc_qid=doc_qid, start_prg=start_prg,
+                                  docdata=docdata, spandata=spandata, ikuspegi=request.form.get("ikuspegi"),
+                           span_start=span_start, span_end=span_end, start_selected=start_selected, end_selected=end_selected, span_len=span_len,
+                                  messages=messages, msgcolor=msgcolor)
 
 
 if __name__ == '__main__':

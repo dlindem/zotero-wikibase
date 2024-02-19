@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<link href="/static/favicon.ico" rel="shortcut icon"/>
+    <title>{{ wikibase_name }} funtzioak</title>
+
+</head>
+<body style="background-color:#eceff1">
+
+<h1>{{ wikibase_name }} funtzioak</h1>
+{% for message in messages %}<p style = "{{ msgcolor }}"><small>{{ message|safe }}</small><p>{% endfor %}
+<small>(Itzuli <a href="/mlv">hasierara</a>)</small>
+<h2>Testuak irakurri (momentu honetan Q453 adibide bakarra)</h2>
+<p>Aukeratu ikuspegia eta kargatu testua, haren Q-identifikatzailea adieraziz</p>
+<p>
+<form method="POST">
+    <select name="metodo" id="metodo" required="required">
+        <option value="sparql">SPARQL emaitza berria jaso eta erabili</option>
+        <option value="cache">Gordetako SPARQL emaitza erabili</option>
+    </select><br><br>
+    <select name="ikuspegi" id="ikuspegi" required="required">
+        <option value="tokenak">Tokenak eta anotazioak ikusi</option>
+        <option value="andanak">Token andanak eta anotazioak ikusi</option>
+    </select><br><br>
+    <input name="irakurri_doc_qid" type="text" value="Q453" style="width: 100px;" /> testuaren Q-Id<br><br>
+    <input name="start_prg" type="text" value="1" style="width: 50px;" /> paragrafoan hasi<br><br>
+    <input name="end_prg" type="text" value="" style="width: 50px;" /> paragrafoan bukatu<br><br>
+    <input type="submit" value="Kargatu"/></form></p>
+
+</body></html>
