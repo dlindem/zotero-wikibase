@@ -40,7 +40,7 @@ def load_text(docqid=None, start_prg=1, end_prg=0, span_start=0, span_end=0):
             if row['token_int'] < span_start:
                 continue
             if span_end:
-                if row['token_int']['value'] > span_end:
+                if row['token_int'] > span_end:
                     break
 
             row['qid'] = row['token']['value'].replace('https://monumenta.wikibase.cloud/entity/','')
