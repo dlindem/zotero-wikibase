@@ -97,11 +97,11 @@ def create_span(form={}):
     for prg in docdata:
         label = ""
         for token in prg['tokens']:
-            ordinal = spandict[token['token_zbk']]
+            ordinal = spandict[token['token_zbk']['value']]
             if ordinal == "0":
                 print(f"Skip Token {token['qid']} marked with ordinal 0.")
                 continue
-            label += token['token_forma'] + ' '
+            label += token['token_forma']['value'] + ' '
             statements.append({'type': 'item', 'prop_nr':'P30', 'value':token['qid'], 'qualifiers':[{'type':'string','prop_nr':'P32', 'value':ordinal}]})
         itemdata = {'qid':False, 'statements':statements, 'labels':[{'lang': 'eu', 'value': label.rstrip()}], 'descriptions':[{'lang':'eu', 'value': form['span_sortu']+' testuko '+ prg['prgnum'] +'. paragrafoko token andana'}]}
         print(str(itemdata))

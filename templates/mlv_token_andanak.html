@@ -37,7 +37,7 @@
         {% for val in span_len %}
         <option value="{{ val }}">{{ val }}</option>
         {% endfor %}
-        </select>  {{ token['token_forma'] }}<br><br>
+        </select>  {{ token['token_forma']['value'] }}<br><br>
     {% endfor %}
     <button name="span_sortu" value="{{ doc_qid }}" type="submit" style="color: red;" >Sortu andana!</button>
 </form>
