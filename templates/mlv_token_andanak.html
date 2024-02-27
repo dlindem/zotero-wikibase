@@ -17,7 +17,7 @@
 <h3>Klikatu andanaren lehenengo tokenean:</h3>
 {% for paragraph in docdata %}<p>
     [<a href="{{ paragraph['tokens'][0]['wikisource_paragraph']['value'] }}" target="_blank">{{ paragraph['prgnum'] }}</a>]</br>
-    <form method="POST">{% for token in paragraph['tokens'] %}{{ token['sp_before'] }}<button name="span_start_{{ token['token_zbk']['value'] }}" type="submit" style="color: {{ token['color'] }};" >{{ token['token_forma'] }}</button>{% endfor %}</form>
+    <form method="POST">{% for token in paragraph['tokens'] %}{{ token['sp_before'] }}<button name="span_start_{{ token['token_zbk']['value'] }}" type="submit" style="color: {{ token['color'] }};" >{{ token['token_forma']['value'] }}</button>{% endfor %}</form>
 </p>{% endfor %}
 {% elif start_selected and not end_selected %}
 <h3>Klikatu andanaren azkenengo tokenean:</h3>
@@ -37,7 +37,7 @@
         {% for val in span_len %}
         <option value="{{ val }}">{{ val }}</option>
         {% endfor %}
-        </select>  {{ token['token_forma'] }}<br><br>
+        </select>  {{ token['token_forma']['value'] }}<br><br>
     {% endfor %}
     <button name="span_sortu" value="{{ doc_qid }}" type="submit" style="color: red;" >Sortu andana!</button>
 </form>
