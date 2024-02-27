@@ -2,6 +2,8 @@ import csv, re, json
 from bots import xwbi, botconfig
 
 def load_text(docqid=None, start_prg=1, end_prg=0, span_start=0, span_end=0):
+    if end_prg == 9999:
+        end_prg = start_prg+1
     if span_end == 0:
         span_end = None
     colors = "#800000 #FF0000 #800080 #FF00FF #008000 #00FF00 #808000 #FFFF00 #000080 #0000FF #008080 #00FFFF".split(" ")
@@ -233,3 +235,21 @@ def sparql_doc(doc_qid=None):
     with open(f'profiles/MLV/data/text_cache/{doc_qid}_span.json', 'w', encoding="utf-8") as jsonfile:
         json.dump(bindings, jsonfile, indent=2)
     return {'messages':[f'Arrakasta {doc_qid} testua Wikibasetik SPARQL bidez hartu eta gordetzean.']}
+
+def load_lemma_lid(method="cache"):
+    if method == "cache":
+        with open(f'profiles/MLV/data/lexicon/lexemes.csv', 'r', encoding="utf-8") as csvfile:
+            lexicon = csv.DictReader(csvfile)
+            lemma_lid = {}
+            for entry in lexicon:
+                lemma_lid[entry['lemma']] = entry['lexeme']
+        return lemma_lid
+
+def link_token_to_lexeme(token_qid=None, lemma=None, lid=None):
+    token_id = xwbi.itemwrite({'qid':token_qid, 'statements':[{'type':'lexeme', 'value': lid, 'prop_nr':'P7', 'action':'replace'}]})
+    if token_id == token_qid:
+        message = f"Token {token_qid} {lid} lexemari lotu zaio (lema: {lemma})."
+    else:
+        message = f"Token {token_qid} {lid} lexemari lotzean ERROREA (lema: {lemma})."
+    print(message)
+    return {'messages':[message]}

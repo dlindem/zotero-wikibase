@@ -1,4 +1,4 @@
-from bots import botconfig# , zotwb_functions
+from bots import botconfig , zotwb_functions
 from flask import Flask, render_template, request
 import os, re, json
 from datetime import datetime
@@ -645,6 +645,7 @@ def mlv():
     configdata = botconfig.load_mapping('config')
     messages = []
     msgcolor = "background:limegreen"
+    lemma_lid = mlv_functions.load_lemma_lid()
     if request.method == 'GET':
         return render_template("mlv.html", wikibase_name=configdata['mapping']['wikibase_name'],
                                wikibase_entity_ns=configdata['mapping']['wikibase_entity_ns'],
@@ -686,13 +687,32 @@ def mlv():
                 end_prg = int(code_re.group(3))
                 ikuspegi = code_re.group(4)
 
+            elif "lematizatu" in request.form:
+                ikuspegi = "lematizatu"
+                code_re = re.search(r'^(^Q\d+)_s(\d+)_e(\d+)$', request.form.get("lematizatu"))
+                doc_qid = code_re.group(1)
+                start_prg = int(code_re.group(2))
+                end_prg = int(code_re.group(3))
+                for key in request.form:
+                    if key.startswith("lema_lotu") and request.form.get(key):
+                        token_qid = key.replace('lema_lotu_','')
+                        lemma = request.form.get(key)
+
+                        if lemma in lemma_lid:
+                            lid = lemma_lid[lemma]
+                            lemma_link_action = mlv_functions.link_token_to_lexeme(token_qid=token_qid, lemma=lemma, lid=lid)
+                            messages += lemma_link_action['messages']
+                        else:
+                            messages.append(f"Lema hau ez dago lemategian: {lemma}")
+                            msgcolor = "background:orangered"
+
+
             action = mlv_functions.load_text(docqid=doc_qid, start_prg=start_prg, end_prg=end_prg)
-            messages += action['messages']
-            msgcolor = action['msgcolor']
+            # messages += action['messages']
             docdata = action['docdata']
             spandata = action['spandata']
             return render_template("mlv_testua_irakurri.html", wikibase_name=configdata['mapping']['wikibase_name'],
-                               wikibase_entity_ns=configdata['mapping']['wikibase_entity_ns'], doc_qid=doc_qid,
+                               wikibase_entity_ns=configdata['mapping']['wikibase_entity_ns'], doc_qid=doc_qid, lexicon=lemma_lid,
                                docdata=docdata, spandata=spandata, ikuspegi=ikuspegi, start_prg=start_prg, end_prg=end_prg,
                                messages=messages, msgcolor=msgcolor)
 
@@ -751,19 +771,17 @@ def mlv_andanak(code):
                 messages = action['messages']
                 msgcolor = action['msgcolor']
 
-
-
-
-
-
-
-
-
     return render_template("mlv_token_andanak.html", wikibase_name=configdata['mapping']['wikibase_name'],
                            wikibase_entity_ns=configdata['mapping']['wikibase_entity_ns'], doc_qid=doc_qid, start_prg=start_prg,
                                   docdata=docdata, spandata=spandata, ikuspegi=request.form.get("ikuspegi"),
                            span_start=span_start, span_end=span_end, start_selected=start_selected, end_selected=end_selected, span_len=span_len,
                                   messages=messages, msgcolor=msgcolor)
+
+# @app.route('/mlv/lematizatu/<code>', methods= ['GET', 'POST'])
+# def mlv_lematizatu(code):
+#     from bots import mlv_functions
+#     docdata =
+
 
 
 if __name__ == '__main__':

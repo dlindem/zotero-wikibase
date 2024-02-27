@@ -3,6 +3,7 @@ from wikibaseintegrator import wbi_login, WikibaseIntegrator
 from wikibaseintegrator.datatypes.string import String
 from wikibaseintegrator.datatypes.externalid import ExternalID
 from wikibaseintegrator.datatypes.item import Item
+from wikibaseintegrator.datatypes.lexeme import Lexeme
 from wikibaseintegrator.datatypes.monolingualtext import MonolingualText
 from wikibaseintegrator.datatypes.time import Time
 from wikibaseintegrator.datatypes.globecoordinate import GlobeCoordinate
@@ -94,6 +95,8 @@ def packstatements(statements, wbitem=None, qualifiers=False, references=False):
 			packed_statement = Item(value=statement['value'], prop_nr=statement['prop_nr'],qualifiers=packed_qualifiers,references=packed_references)
 		elif statement['type'].lower() == "externalid":
 			packed_statement = ExternalID(value=statement['value'],prop_nr=statement['prop_nr'],qualifiers=packed_qualifiers,references=packed_references)
+		elif statement['type'].lower() == "lexeme":
+			packed_statement = Lexeme(value=statement['value'],prop_nr=statement['prop_nr'],qualifiers=packed_qualifiers,references=packed_references)
 		elif statement['type'].lower() == "time":
 			if 'value' not in statement:
 				statement['value'] = statement['time']

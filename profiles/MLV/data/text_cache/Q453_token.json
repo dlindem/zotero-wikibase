@@ -62,7 +62,7 @@
     },
     "morph_labels": {
       "type": "literal",
-      "value": "inesibo singular-0 deklinabide morfema"
+      "value": "inesibo singular"
     },
     "wikisource_paragraph": {
       "type": "uri",
@@ -893,6 +893,15 @@
       "type": "literal",
       "value": "onetan"
     },
+    "mlv_lexema": {
+      "type": "uri",
+      "value": "https://monumenta.wikibase.cloud/entity/L7476"
+    },
+    "lemma": {
+      "xml:lang": "eu",
+      "type": "literal",
+      "value": "hau"
+    },
     "morph_labels": {
       "type": "literal",
       "value": ""
@@ -1090,6 +1099,14 @@
     "wikisource_paragraph": {
       "type": "uri",
       "value": "https://eu.wikisource.org/wiki/Azkoitiko_Sermoia#3"
+    },
+    "wd_ent_erref": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q10580"
+    },
+    "wd_erref_info": {
+      "type": "literal",
+      "value": "Libra (konstelazio)"
     }
   },
   {
@@ -1225,6 +1242,15 @@
       "type": "literal",
       "value": "bat"
     },
+    "mlv_lexema": {
+      "type": "uri",
+      "value": "https://monumenta.wikibase.cloud/entity/L10043"
+    },
+    "lemma": {
+      "xml:lang": "eu",
+      "type": "literal",
+      "value": "bat"
+    },
     "morph_labels": {
       "type": "literal",
       "value": ""
@@ -1313,6 +1339,15 @@
       "type": "literal",
       "value": "signoac"
     },
+    "mlv_lexema": {
+      "type": "uri",
+      "value": "https://monumenta.wikibase.cloud/entity/L70437"
+    },
+    "lemma": {
+      "xml:lang": "eu",
+      "type": "literal",
+      "value": "signo"
+    },
     "morph_labels": {
       "type": "literal",
       "value": ""
@@ -1335,6 +1370,15 @@
       "type": "literal",
       "value": "ceruan"
     },
+    "mlv_lexema": {
+      "type": "uri",
+      "value": "https://monumenta.wikibase.cloud/entity/L84100"
+    },
+    "lemma": {
+      "xml:lang": "eu",
+      "type": "literal",
+      "value": "zeru"
+    },
     "morph_labels": {
       "type": "literal",
       "value": ""
@@ -1342,6 +1386,20 @@
     "wikisource_paragraph": {
       "type": "uri",
       "value": "https://eu.wikisource.org/wiki/Azkoitiko_Sermoia#3"
+    },
+    "wd_pos_label": {
+      "xml:lang": "eu",
+      "type": "literal",
+      "value": "substantibo"
+    },
+    "sense": {
+      "xml:lang": "eu",
+      "type": "literal",
+      "value": "Lurraren gaineko ikuspegi osoa hartzen duen espazioa, egunez urdina eta gauez beltza, astroak agertu eta fenomeno meteorologikoak gertatzen diren tokia; delako espazioak fenomeno meteorologikoak direla medio hartzen duen itxura"
+    },
+    "wikidata_sense": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/L70958-S1"
     }
   },
   {
@@ -1513,6 +1571,15 @@
       "type": "literal",
       "value": "ecen"
     },
+    "mlv_lexema": {
+      "type": "uri",
+      "value": "https://monumenta.wikibase.cloud/entity/L26000"
+    },
+    "lemma": {
+      "xml:lang": "eu",
+      "type": "literal",
+      "value": "ezen"
+    },
     "morph_labels": {
       "type": "literal",
       "value": ""
@@ -1534,6 +1601,15 @@
     "token_forma": {
       "type": "literal",
       "value": "bei\u00f1"
+    },
+    "mlv_lexema": {
+      "type": "uri",
+      "value": "https://monumenta.wikibase.cloud/entity/L10755"
+    },
+    "lemma": {
+      "xml:lang": "eu",
+      "type": "literal",
+      "value": "behin"
     },
     "morph_labels": {
       "type": "literal",
@@ -1557,6 +1633,15 @@
       "type": "literal",
       "value": "batean"
     },
+    "mlv_lexema": {
+      "type": "uri",
+      "value": "https://monumenta.wikibase.cloud/entity/L10043"
+    },
+    "lemma": {
+      "xml:lang": "eu",
+      "type": "literal",
+      "value": "bat"
+    },
     "morph_labels": {
       "type": "literal",
       "value": ""
@@ -1578,6 +1663,15 @@
     "token_forma": {
       "type": "literal",
       "value": "Justiciac"
+    },
+    "mlv_lexema": {
+      "type": "uri",
+      "value": "https://monumenta.wikibase.cloud/entity/L40879"
+    },
+    "lemma": {
+      "xml:lang": "eu",
+      "type": "literal",
+      "value": "justizia"
     },
     "morph_labels": {
       "type": "literal",
@@ -1601,6 +1695,15 @@
       "type": "literal",
       "value": "lurrean"
     },
+    "mlv_lexema": {
+      "type": "uri",
+      "value": "https://monumenta.wikibase.cloud/entity/L50891"
+    },
+    "lemma": {
+      "xml:lang": "eu",
+      "type": "literal",
+      "value": "lur"
+    },
     "morph_labels": {
       "type": "literal",
       "value": ""
@@ -1623,6 +1726,15 @@
       "type": "literal",
       "value": "lecuric"
     },
+    "mlv_lexema": {
+      "type": "uri",
+      "value": "https://monumenta.wikibase.cloud/entity/L49032"
+    },
+    "lemma": {
+      "xml:lang": "eu",
+      "type": "literal",
+      "value": "leku"
+    },
     "morph_labels": {
       "type": "literal",
       "value": ""
@@ -1644,6 +1756,15 @@
     "token_forma": {
       "type": "literal",
       "value": "arquitzen"
+    },
+    "mlv_lexema": {
+      "type": "uri",
+      "value": "https://monumenta.wikibase.cloud/entity/L7719"
+    },
+    "lemma": {
+      "xml:lang": "eu",
+      "type": "literal",
+      "value": "aurkitu"
     },
     "morph_labels": {
       "type": "literal",
@@ -1761,6 +1882,15 @@
       "type": "literal",
       "value": "ta"
     },
+    "mlv_lexema": {
+      "type": "uri",
+      "value": "https://monumenta.wikibase.cloud/entity/L25140"
+    },
+    "lemma": {
+      "xml:lang": "eu",
+      "type": "literal",
+      "value": "eta"
+    },
     "morph_labels": {
       "type": "literal",
       "value": ""
@@ -1783,6 +1913,15 @@
       "type": "literal",
       "value": "igues"
     },
+    "mlv_lexema": {
+      "type": "uri",
+      "value": "https://monumenta.wikibase.cloud/entity/L33667"
+    },
+    "lemma": {
+      "xml:lang": "eu",
+      "type": "literal",
+      "value": "ihes"
+    },
     "morph_labels": {
       "type": "literal",
       "value": ""
@@ -1802,6 +1941,15 @@
       "value": "60"
     },
     "token_forma": {
+      "type": "literal",
+      "value": "igo"
+    },
+    "mlv_lexema": {
+      "type": "uri",
+      "value": "https://monumenta.wikibase.cloud/entity/L33913"
+    },
+    "lemma": {
+      "xml:lang": "eu",
       "type": "literal",
       "value": "igo"
     },
@@ -1827,6 +1975,15 @@
       "type": "literal",
       "value": "zala"
     },
+    "mlv_lexema": {
+      "type": "uri",
+      "value": "https://monumenta.wikibase.cloud/entity/L38383"
+    },
+    "lemma": {
+      "xml:lang": "eu",
+      "type": "literal",
+      "value": "izan"
+    },
     "morph_labels": {
       "type": "literal",
       "value": ""
@@ -1848,6 +2005,15 @@
     "token_forma": {
       "type": "literal",
       "value": "cerura"
+    },
+    "mlv_lexema": {
+      "type": "uri",
+      "value": "https://monumenta.wikibase.cloud/entity/L84100"
+    },
+    "lemma": {
+      "xml:lang": "eu",
+      "type": "literal",
+      "value": "zeru"
     },
     "morph_labels": {
       "type": "literal",
@@ -1893,6 +2059,15 @@
       "type": "literal",
       "value": "ta"
     },
+    "mlv_lexema": {
+      "type": "uri",
+      "value": "https://monumenta.wikibase.cloud/entity/L25140"
+    },
+    "lemma": {
+      "xml:lang": "eu",
+      "type": "literal",
+      "value": "eta"
+    },
     "morph_labels": {
       "type": "literal",
       "value": ""
@@ -1914,6 +2089,15 @@
     "token_forma": {
       "type": "literal",
       "value": "ifi\u00f1i"
+    },
+    "mlv_lexema": {
+      "type": "uri",
+      "value": "https://monumenta.wikibase.cloud/entity/L35872"
+    },
+    "lemma": {
+      "xml:lang": "eu",
+      "type": "literal",
+      "value": "ipini"
     },
     "morph_labels": {
       "type": "literal",
@@ -1981,6 +2165,15 @@
       "type": "literal",
       "value": "vicitza"
     },
+    "mlv_lexema": {
+      "type": "uri",
+      "value": "https://monumenta.wikibase.cloud/entity/L13878"
+    },
+    "lemma": {
+      "xml:lang": "eu",
+      "type": "literal",
+      "value": "bizitza"
+    },
     "morph_labels": {
       "type": "literal",
       "value": ""
@@ -2024,6 +2217,15 @@
     "token_forma": {
       "type": "literal",
       "value": "echean"
+    },
+    "mlv_lexema": {
+      "type": "uri",
+      "value": "https://monumenta.wikibase.cloud/entity/L25375"
+    },
+    "lemma": {
+      "xml:lang": "eu",
+      "type": "literal",
+      "value": "etxe"
     },
     "morph_labels": {
       "type": "literal",
@@ -2069,6 +2271,15 @@
       "type": "literal",
       "value": "Vstecabea"
     },
+    "mlv_lexema": {
+      "type": "uri",
+      "value": "https://monumenta.wikibase.cloud/entity/L80112"
+    },
+    "lemma": {
+      "xml:lang": "eu",
+      "type": "literal",
+      "value": "ustekabe"
+    },
     "morph_labels": {
       "type": "literal",
       "value": ""
@@ -2090,6 +2301,15 @@
     "token_forma": {
       "type": "literal",
       "value": "dirudi"
+    },
+    "mlv_lexema": {
+      "type": "uri",
+      "value": "https://monumenta.wikibase.cloud/entity/L36994"
+    },
+    "lemma": {
+      "xml:lang": "eu",
+      "type": "literal",
+      "value": "iruditu"
     },
     "morph_labels": {
       "type": "literal",
@@ -2157,6 +2377,15 @@
       "type": "literal",
       "value": "ba\u00f1a"
     },
+    "mlv_lexema": {
+      "type": "uri",
+      "value": "https://monumenta.wikibase.cloud/entity/L8835"
+    },
+    "lemma": {
+      "xml:lang": "eu",
+      "type": "literal",
+      "value": "baina"
+    },
     "morph_labels": {
       "type": "literal",
       "value": ""
@@ -2179,6 +2408,15 @@
       "type": "literal",
       "value": "da"
     },
+    "mlv_lexema": {
+      "type": "uri",
+      "value": "https://monumenta.wikibase.cloud/entity/L38383"
+    },
+    "lemma": {
+      "xml:lang": "eu",
+      "type": "literal",
+      "value": "izan"
+    },
     "morph_labels": {
       "type": "literal",
       "value": ""
@@ -2198,6 +2436,15 @@
       "value": "78"
     },
     "token_forma": {
+      "type": "literal",
+      "value": "gauza"
+    },
+    "mlv_lexema": {
+      "type": "uri",
+      "value": "https://monumenta.wikibase.cloud/entity/L29772"
+    },
+    "lemma": {
+      "xml:lang": "eu",
       "type": "literal",
       "value": "gauza"
     },
@@ -2223,6 +2470,15 @@
       "type": "literal",
       "value": "bat"
     },
+    "mlv_lexema": {
+      "type": "uri",
+      "value": "https://monumenta.wikibase.cloud/entity/L10043"
+    },
+    "lemma": {
+      "xml:lang": "eu",
+      "type": "literal",
+      "value": "bat"
+    },
     "morph_labels": {
       "type": "literal",
       "value": ""
@@ -2245,6 +2501,15 @@
       "type": "literal",
       "value": "egungo"
     },
+    "mlv_lexema": {
+      "type": "uri",
+      "value": "https://monumenta.wikibase.cloud/entity/L19077"
+    },
+    "lemma": {
+      "xml:lang": "eu",
+      "type": "literal",
+      "value": "egun"
+    },
     "morph_labels": {
       "type": "literal",
       "value": ""
@@ -2266,6 +2531,15 @@
     "token_forma": {
       "type": "literal",
       "value": "euanjelioac"
+    },
+    "mlv_lexema": {
+      "type": "uri",
+      "value": "https://monumenta.wikibase.cloud/entity/L18191"
+    },
+    "lemma": {
+      "xml:lang": "eu",
+      "type": "literal",
+      "value": "ebanjelio"
     },
     "morph_labels": {
       "type": "literal",
@@ -2310,6 +2584,15 @@
     "token_forma": {
       "type": "literal",
       "value": "ederqui"
+    },
+    "mlv_lexema": {
+      "type": "uri",
+      "value": "https://monumenta.wikibase.cloud/entity/L18437"
+    },
+    "lemma": {
+      "xml:lang": "eu",
+      "type": "literal",
+      "value": "ederki"
     },
     "morph_labels": {
       "type": "literal",
@@ -2509,6 +2792,15 @@
       "type": "literal",
       "value": "zutic"
     },
+    "mlv_lexema": {
+      "type": "uri",
+      "value": "https://monumenta.wikibase.cloud/entity/L86807"
+    },
+    "lemma": {
+      "xml:lang": "eu",
+      "type": "literal",
+      "value": "zutik"
+    },
     "morph_labels": {
       "type": "literal",
       "value": ""
@@ -2531,6 +2823,15 @@
       "type": "literal",
       "value": "gurutzearen"
     },
+    "mlv_lexema": {
+      "type": "uri",
+      "value": "https://monumenta.wikibase.cloud/entity/L32982"
+    },
+    "lemma": {
+      "xml:lang": "eu",
+      "type": "literal",
+      "value": "gurutze"
+    },
     "morph_labels": {
       "type": "literal",
       "value": ""
@@ -2552,6 +2853,15 @@
     "token_forma": {
       "type": "literal",
       "value": "ondoan"
+    },
+    "mlv_lexema": {
+      "type": "uri",
+      "value": "https://monumenta.wikibase.cloud/entity/L60395"
+    },
+    "lemma": {
+      "xml:lang": "eu",
+      "type": "literal",
+      "value": "ondo"
     },
     "morph_labels": {
       "type": "literal",
@@ -2773,6 +3083,15 @@
       "type": "literal",
       "value": "Eleizac"
     },
+    "mlv_lexema": {
+      "type": "uri",
+      "value": "https://monumenta.wikibase.cloud/entity/L19711"
+    },
+    "lemma": {
+      "xml:lang": "eu",
+      "type": "literal",
+      "value": "eliza"
+    },
     "morph_labels": {
       "type": "literal",
       "value": ""
@@ -2838,6 +3157,15 @@
     "token_forma": {
       "type": "literal",
       "value": "gurutzea"
+    },
+    "mlv_lexema": {
+      "type": "uri",
+      "value": "https://monumenta.wikibase.cloud/entity/L32982"
+    },
+    "lemma": {
+      "xml:lang": "eu",
+      "type": "literal",
+      "value": "gurutze"
     },
     "morph_labels": {
       "type": "literal",
@@ -3102,6 +3430,15 @@
     "token_forma": {
       "type": "literal",
       "value": "gorputza"
+    },
+    "mlv_lexema": {
+      "type": "uri",
+      "value": "https://monumenta.wikibase.cloud/entity/L32036"
+    },
+    "lemma": {
+      "xml:lang": "eu",
+      "type": "literal",
+      "value": "gorputz"
     },
     "morph_labels": {
       "type": "literal",
@@ -5082,6 +5419,15 @@
     "token_forma": {
       "type": "literal",
       "value": "cerura\u00f1o"
+    },
+    "mlv_lexema": {
+      "type": "uri",
+      "value": "https://monumenta.wikibase.cloud/entity/L84100"
+    },
+    "lemma": {
+      "xml:lang": "eu",
+      "type": "literal",
+      "value": "zeru"
     },
     "morph_labels": {
       "type": "literal",
@@ -9593,6 +9939,15 @@
       "type": "literal",
       "value": "aunditasun"
     },
+    "mlv_lexema": {
+      "type": "uri",
+      "value": "https://monumenta.wikibase.cloud/entity/L3142"
+    },
+    "lemma": {
+      "xml:lang": "eu",
+      "type": "literal",
+      "value": "handitasun"
+    },
     "morph_labels": {
       "type": "literal",
       "value": ""
@@ -9600,6 +9955,20 @@
     "wikisource_paragraph": {
       "type": "uri",
       "value": "https://eu.wikisource.org/wiki/Azkoitiko_Sermoia#4"
+    },
+    "wd_pos_label": {
+      "xml:lang": "eu",
+      "type": "literal",
+      "value": "substantibo"
+    },
+    "sense": {
+      "xml:lang": "eu",
+      "type": "literal",
+      "value": "handia denaren nolakotasuna"
+    },
+    "wikidata_sense": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/L61412-S1"
     }
   },
   {

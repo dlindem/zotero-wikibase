@@ -118,5 +118,32 @@
       "type": "literal",
       "value": "gero erantsia"
     }
+  },
+  {
+    "span": {
+      "type": "uri",
+      "value": "https://monumenta.wikibase.cloud/entity/Q1275"
+    },
+    "span_tokenak": {
+      "type": "literal",
+      "value": "Q847 Q845 Q844 Q848 Q843 Q846"
+    },
+    "span_label": {
+      "xml:lang": "eu",
+      "type": "literal",
+      "value": "( alacoai derizte signoac ceruan )"
+    },
+    "span_formak": {
+      "type": "literal",
+      "value": "5.0:ceruan 3.0:derizte 2.0:alacoai 6.0:) 1.0:( 4.0:signoac"
+    },
+    "wikisource_paragraph": {
+      "type": "uri",
+      "value": "https://eu.wikisource.org/wiki/Azkoitiko_Sermoia#3"
+    },
+    "phil_anot": {
+      "type": "literal",
+      "value": "gero erantsia"
+    }
   }
 ]
