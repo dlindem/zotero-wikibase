@@ -1,4 +1,4 @@
-from bots import botconfig , zotwb_functions
+from bots import botconfig, zotwb_functions
 from flask import Flask, render_template, request
 import os, re, json
 from datetime import datetime
@@ -77,10 +77,17 @@ def zotero_export():
     configdata = botconfig.load_mapping('config')
     zoteromapping = botconfig.load_mapping('zotero')
     language_literals = botconfig.load_mapping('language-literals')
-    with open(f"profiles/{profile}/data/zoteroexport.json", 'r', encoding='utf-8') as jsonfile:
-        zoterodata = json.load(jsonfile)
-        zotero_check_messages = zotwb_functions.check_export(zoterodata=zoterodata, zoteromapping=zoteromapping)
-        language_check_messages = zotwb_functions.check_language(zoterodata=zoterodata)
+    if os.path.isfile(f"profiles/{profile}/data/zoteroexport.json"):
+        with open(f"profiles/{profile}/data/zoteroexport.json", 'r', encoding='utf-8') as jsonfile:
+            zoterodata = json.load(jsonfile)
+        zotero_when = datetime.utcfromtimestamp(os.path.getmtime(
+                                   f"profiles/{profile}/data/zoteroexport.json")).strftime(
+            '%Y-%m-%d at %H:%M:%S UTC')
+    else:
+        zoterodata = []
+        zotero_when = None
+    zotero_check_messages = zotwb_functions.check_export(zoterodata=zoterodata, zoteromapping=zoteromapping)
+    language_check_messages = zotwb_functions.check_language(zoterodata=zoterodata)
     if request.method == 'GET':
 
         return render_template("zotero_export.html", wikibase_url=configdata['mapping']['wikibase_url'],
@@ -92,9 +99,7 @@ def zotero_export():
                                zotero_check_messages=zotero_check_messages,
                                language_check_messages=language_check_messages,
                                zotero_len=str(len(zoterodata)),
-                               zotero_when=datetime.utcfromtimestamp(os.path.getmtime(
-                                   f"profiles/{profile}/data/zoteroexport.json")).strftime(
-            '%Y-%m-%d at %H:%M:%S UTC'),
+                               zotero_when=zotero_when,
                                export_tag=configdata['mapping']['zotero_export_tag'],
                                onwiki_tag=configdata['mapping']['zotero_on_wikibase_tag'],
                                messages=[]
@@ -139,9 +144,7 @@ def zotero_export():
                                zotero_check_messages=zotero_check_messages,
                                language_check_messages=language_check_messages,
                                zotero_len=str(len(zoterodata)),
-                               zotero_when=datetime.utcfromtimestamp(os.path.getmtime(
-                                   f"profiles/{profile}/data/zoteroexport.json")).strftime(
-                                '%Y-%m-%d at %H:%M:%S UTC'),
+                               zotero_when=zotero_when,
                                export_tag=configdata['mapping']['zotero_export_tag'],
                                onwiki_tag=configdata['mapping']['zotero_on_wikibase_tag'],
                                messages=messages, msgcolor=msgcolor
@@ -777,10 +780,82 @@ def mlv_andanak(code):
                            span_start=span_start, span_end=span_end, start_selected=start_selected, end_selected=end_selected, span_len=span_len,
                                   messages=messages, msgcolor=msgcolor)
 
-# @app.route('/mlv/lematizatu/<code>', methods= ['GET', 'POST'])
-# def mlv_lematizatu(code):
-#     from bots import mlv_functions
-#     docdata =
+citations = botconfig.load_mapping('citations')
+@app.route('/inguma/get_grobid', methods= ['GET', 'POST'])
+def get_grobid():
+    configdata = botconfig.load_mapping('config')
+    from bots import inguma_functions
+    global citations
+    doc_qids = []
+    for file in os.listdir('/media/david/FATdisk/GROBID'):
+        print(file)
+        if str(file).endswith('.tei.xml'):
+            doc_qids.append(re.search('Q\d+', file).group(0))
+    if request.form:
+        if request.form.get("get_grobid") == "action":
+            for doc_qid in doc_qids:
+                citations = inguma_functions.get_biblstruct(citations=citations, doc_qid=doc_qid)
+                print(str(citations))
+            botconfig.dump_mapping(citations)
+    cit_cache = {}
+    for doc_qid in doc_qids:
+        if doc_qid in citations['mapping']:
+            statuscounts = {}
+            for citation in citations['mapping'][doc_qid]:
+                if citations['mapping'][doc_qid][citation]['status'] not in statuscounts:
+                    statuscounts[citations['mapping'][doc_qid][citation]['status']] = 1
+                else:
+                    statuscounts[citations['mapping'][doc_qid][citation]['status']] += 1
+
+            cit_cache[doc_qid] = str(statuscounts)[1:-1]
+        else:
+            cit_cache[doc_qid] = "new"
+    return render_template("inguma_get_grobid.html", wikibase_name=configdata['mapping']['wikibase_name'], wikibase_entity_ns=configdata['mapping']['wikibase_entity_ns'], doc_qids=doc_qids, cit_cache=cit_cache)
+
+
+@app.route('/inguma/list_citations/<doc_qid>', methods= ['GET', 'POST'])
+def list_citations(doc_qid):
+    configdata = botconfig.load_mapping('config')
+    global citations
+    cit_cache = citations['mapping'][doc_qid]
+
+    return render_template("inguma_list_citations.html", wikibase_name=configdata['mapping']['wikibase_name'],
+                           wikibase_entity_ns=configdata['mapping']['wikibase_entity_ns'], doc_qid=doc_qid,
+                           cit_cache=cit_cache)
+
+alex_results = None
+@app.route('/inguma/openalex/<code>', methods= ['GET', 'POST'])
+def openalex(code):
+    from bots import inguma_functions
+    global alex_results
+    global citations
+    code_re = re.search(r'(Q\d+)_(.*)', code)
+    doc_qid = code_re.group(1)
+    cit_id = code_re.group(2)
+    configdata = botconfig.load_mapping('config')
+
+    cit_cache = citations['mapping'][doc_qid][cit_id]
+    bibentry = inguma_functions.get_xml(cit_cache['biblStruct'])
+    if request.method == 'GET':
+        alex_results = inguma_functions.get_openalex(bibentry=bibentry)
+        message = f"Got OpenAlex results for {doc_qid}, {cit_id}."
+
+    elif request.method == 'POST':
+        for key in request.form:
+            if key.startswith("lotu_"):
+                code_re = re.search(r'lotu_(W.*)', key)
+                target_id = code_re.group(1)
+                target_qid = inguma_functions.lotu_alex(source_doc=doc_qid, target_alexid=target_id, alex_results=alex_results)
+                citations['mapping'][doc_qid][cit_id]['status'] = "openalex"
+                citations['mapping'][doc_qid][cit_id]['target_wikibase'] = target_qid
+                botconfig.dump_mapping(citations)
+                message = f'Lotura egina: {doc_qid} dokumentuak <a href="{configdata["mapping"]["wikibase_entity_ns"]}{target_qid}" target="_blank">{target_qid}</a> aipatzen du.'
+
+    return render_template("inguma_openalex.html", wikibase_name=configdata['mapping']['wikibase_name'], wikibase_url=configdata['mapping']['wikibase_url'],
+                           wikibase_entity_ns=configdata['mapping']['wikibase_entity_ns'], doc_qid=doc_qid, cit_id=cit_id,
+                           cit_cache=cit_cache, alex_results=alex_results, message=message)
+
+
 
 
 
