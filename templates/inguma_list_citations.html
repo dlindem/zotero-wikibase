@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+<link href="/static/favicon.ico" rel="shortcut icon"/>
+    <title>{{ doc_qid }} Zitazioak</title>
+<style>
+    th { border: thin solid black; padding: 10px; }
+    td { border: thin solid black; padding: 10px; }
+</style>
+</head>
+<body style="background-color:#eceff1">
+
+<h1>{{ doc_qid }} Zitazioak</h1>
+<p><small>(Itzuli <a href="/inguma/get_grobid">hasierara</a>)</small></p>
+<h2><a href="{{ wikibase_entity_ns }}{{ doc_qid }}" target="_blank">{{ doc_qid }}</a> dokumentuko zitazioak landu</h2>
+<table>
+    <tr><th>#</th><th>Wikibase</th><th>Status</th><th>OpenAlex</th><th>Text</th></tr>
+{% for citation in cit_cache %}
+    <tr><td>{{ citation }}</td>
+        <td><a href="{{ wikibase_entity_ns }}{{ doc_qid }}" target="_blank">{{ cit_cache[citation]['target_wikibase'] }}</a></td>
+        <td>{{ cit_cache[citation]['status'] }}</td>
+        <td><a href="/inguma/openalex/{{ doc_qid }}_{{ citation }}" target="_blank">Bilatu: OpenAlex</a></td>
+        <td>{{ cit_cache[citation]['biblSoup'] }}</td></tr>
+{% endfor %}
+</table>
+
+</body>
+</html>

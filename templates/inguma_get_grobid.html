@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+<link href="/static/favicon.ico" rel="shortcut icon"/>
+    <title>Ziterauzi - Hasiera</title>
+<style>
+    th { border: thin solid black; padding: 10px; }
+    td { border: thin solid black; padding: 10px; }
+</style>
+</head>
+<body style="background-color:#eceff1">
+
+<h1>Ziterauzi - Hasiera</h1>
+<p><small>(Itzuli <a href="/mlv">hasierara</a>)</small></p>
+<p><form method="POST"><button name="get_grobid" value="action" type="submit">Hartu status 'new' dutenak citation indexean</button></form></p>
+<h2>GROBID TEI-XML dokumentuak</h2>
+<table>
+    <tr><th>Iturri-dok.</th><th>GROBID listBibl</th><th>Status</th></tr>
+{% for doc_qid in cit_cache %}<tr><td><a href="{{ wikibase_entity_ns }}{{ doc_qid }}" target="_blank">{{ doc_qid }}</a></td><td><a href="/inguma/list_citations/{{ doc_qid }}" target="_blank">Landu zitazioak</a></td><td>{{ cit_cache[doc_qid] }}</td></tr>{% endfor %}
+</table>
+
+</body>
+</html>
