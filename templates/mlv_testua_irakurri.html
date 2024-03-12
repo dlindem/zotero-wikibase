@@ -61,18 +61,20 @@ button {
     {% for span in spandata['spans'] %}<div style="width:70%" popover id="spanpop{{ span }}"><h2>{{ spandata['spans'][span]['data']['span_label']['value'] }}</h2><hr>Wikibase: <a href="{{ wikibase_entity_ns }}{{ span }}" target="_blank">{{ span }}</a><hr>{% if spandata['spans'][span]['data']['quote_anot'] %}<i>Aipu-anotazioa:</i> {{ spandata['spans'][span]['data']['quote_anot']['value'] }}{% if spandata['spans'][span]['data']['quote_wb_erref'] %} (<a href="{{ spandata['spans'][span]['data']['quote_wb']['value'] }}" target="_blank">Argitalpena Wikibasean</a>){% endif %}{% if spandata['spans'][span]['data']['quote_wikidata_erref'] %} (<a href="{{ spandata['spans'][span]['data']['quote_wikidata_erref']['value'] }}" target="_blank">Argitalpena Wikidatan</a>){% endif %}<hr>{% endif %}{% if spandata['spans'][span]['data']['phil_anot'] %}<i>Anotazio filologikoa:</i> {{ spandata['spans'][span]['data']['phil_anot']['value'] }}<hr>{% endif %}{% if spandata['spans'][span]['data']['wd_ent_erref'] %}<i>Erreferentziatutako entitatea:</i> <a href="{{ spandata['spans'][span]['data']['wd_ent_erref']['value'] }}" target="_blank">{{ spandata['spans'][span]['data']['wd_erref_info']['value'] }}</a><hr>{% endif %}<button style="vertical-center" popovertarget="spanpop{{ span }}" popovertargetaction="hide">[itxi]</button></div>{% endfor %}
 </p>{% endfor %}
 {% elif ikuspegi=="lematizatu" %}
-<h3>Tokenari lema egokitu</h3>
+<h3>Tokenari lema lotu</h3>
 {% for paragraph in docdata %}<p>
     <form method="POST">[<a style="color: #0000EE;" href="{{ paragraph['tokens'][0]['wikisource_paragraph']['value'] }}" target="_blank">{{ paragraph['prgnum'] }}</a>] <small>[<a href="/mlv/andanak/{{ doc_qid }}_p{{ paragraph['prgnum'] }}_s0_e0">andana definitu</a>]</small>
     <small>[<button style="text-decoration: underline; color: #0000EE;" value="{{ doc_qid }}_s{{ paragraph['prgnum'] }}_e{{ end_prg }}_tokenak" name="ikuspegia_aldatu" type="submit">token anotazioak ikusi</button>]</small></form>
 <form method="POST"><table>
-    <tr><th></th><th><button style="text-decoration: underline; color: #0000EE;" name="lematizatu" value="{{ doc_qid }}_s{{ paragraph['prgnum'] }}_e{{ end_prg }}" type="submit"><b><u>Lotu adierazitakoak</u></b></button></th></tr>
+    <tr><th><i>token ID</i></th><th><i>token forma</i></th><th><i>forma egokitua</i></th><th><button style="text-decoration: underline; color: #0000EE;" name="lematizatu" value="{{ doc_qid }}_s{{ paragraph['prgnum'] }}_e{{ end_prg }}" type="submit"><b><u>Lotu adierazitakoak</u></b></button></th></tr>
 {% for token in paragraph['tokens'] %}
     <tr>
+        <td><a href="https://monumenta.wikibase.cloud/wiki/Item:{{ token['qid'] }}" target="_blank">{{ token['qid'] }}</a></td>
         <td>{{ token['token_forma']['value'] }}</td>
+        <td>{% if token['token_egok'] %}{{ token['token_egok']['value'] }}{% endif %}</td>
         <td><input type="text" value="" id="lexicon_choice_{{ token['qid'] }}" name="lema_lotu_{{ token['qid'] }}"> <script>$( function() { $( "#lexicon_choice_{{ token['qid'] }}" ).autocomplete({ source: lemmata , delay: 500}); } );</script> </td>
         {% if token['lemma'] %}
-        <td> &#11020; <i>Lema egokitua:</i> {{ token['lemma']['value'] }}</br></td>
+        <td> &#11020; <i>Lotutako lema:</i> {{ token['lemma']['value'] }}</br></td>
         <td><a href="{{ wikibase_entity_ns }}{{ token['mlv_lexema'] }}" target="_blank">{{ token['mlv_lexema'] }}</a></td>
         {% endif %}
     </tr>{% endfor %}
