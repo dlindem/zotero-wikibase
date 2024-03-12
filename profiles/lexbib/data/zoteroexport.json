@@ -1,0 +1,4249 @@
+[
+  {
+    "key": "9H9GXTIK",
+    "version": 149570,
+    "library": {
+      "type": "group",
+      "id": 1892855,
+      "name": "LexBib",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/lexbib",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/1892855/items/9H9GXTIK",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/lexbib/items/9H9GXTIK",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/1892855/items/A9MMVF2T",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 2686717
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Tiberius et al.",
+      "parsedDate": "2024-03-01",
+      "numChildren": 1
+    },
+    "data": {
+      "key": "9H9GXTIK",
+      "version": 149570,
+      "itemType": "journalArticle",
+      "title": "A Lexicographic Practice Map of Europe",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Carole",
+          "lastName": "Tiberius"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Jelena",
+          "lastName": "Kallas"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Svetla",
+          "lastName": "Koeva"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Margit",
+          "lastName": "Langemets"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Iztok",
+          "lastName": "Kosem"
+        }
+      ],
+      "abstractNote": "This article presents the combined results of three international surveys that were carried out in the context of the Horizon 2020 European Lexicographic Infrastructure project (ELEXIS). The aim of these surveys was to gain more insight into lexicographic practices and the needs of lexicographers in Europe. The surveys were delivered via online platforms. Based on the combined results, we sketch a map of lexicographic practices in Europe, both for born-digital and retrodigitized resources, analyze current needs in terms of tools, functionalities and training, and identify emerging trends that will affect lexicography in the short and long term.",
+      "publicationTitle": "International Journal of Lexicography",
+      "volume": "37",
+      "issue": "1",
+      "pages": "1-28",
+      "date": "2024-03-01",
+      "series": "",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "International Journal of Lexicography",
+      "language": "eng",
+      "DOI": "10.1093/ijl/ecad023",
+      "ISSN": "0950-3846",
+      "shortTitle": "",
+      "url": "https://doi.org/10.1093/ijl/ecad023",
+      "accessDate": "2024-03-07T15:18:51Z",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "Silverchair",
+      "callNumber": "",
+      "rights": "",
+      "extra": "https://lexbib.elex.is/entity/Q34121\n",
+      "tags": [
+        {
+          "tag": "on-wikibase"
+        }
+      ],
+      "collections": [
+        "G82WEXCH"
+      ],
+      "relations": {},
+      "dateAdded": "2024-03-07T17:19:14Z",
+      "dateModified": "2024-03-07T18:20:34Z"
+    },
+    "wikibase_entity": "Q34121"
+  },
+  {
+    "key": "2DE3BBLK",
+    "version": 149569,
+    "library": {
+      "type": "group",
+      "id": 1892855,
+      "name": "LexBib",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/lexbib",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/1892855/items/2DE3BBLK",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/lexbib/items/2DE3BBLK",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/1892855/items/3MJAAB2G",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 836934
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Leuckert",
+      "parsedDate": "2024-03-01",
+      "numChildren": 1
+    },
+    "data": {
+      "key": "2DE3BBLK",
+      "version": 149569,
+      "itemType": "journalArticle",
+      "title": "Moving Lexicographical Mountains for the Community: A Comparison of Print and Online Resources of Mountaineering English",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Sven",
+          "lastName": "Leuckert"
+        }
+      ],
+      "abstractNote": "The specialised community of (Anglophone) mountaineers began producing their own systematic lexicographical output in the second half of the 19th century. Since then, digitalisation has led to more and more online resources of \u2018Mountaineering English\u2019 (MountE) being created. In this contribution, a major print dictionary by Samet (2011) is compared to four online resources of MountE in terms of their micro-structure and their macro-structure. The study shows that, with few exceptions, the online resources make little use of digital affordances; the print dictionary is the most comprehensive and the most complex in almost all aspects. However, there are important differences between all five resources as far as their micro- and macro-structures are concerned. Overall, the paper highlights that, while the lexicographical efforts of the community are laudable, more work needs to be done.",
+      "publicationTitle": "International Journal of Lexicography",
+      "volume": "37",
+      "issue": "1",
+      "pages": "29-49",
+      "date": "2024-03-01",
+      "series": "",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "International Journal of Lexicography",
+      "language": "eng",
+      "DOI": "10.1093/ijl/ecad032",
+      "ISSN": "0950-3846",
+      "shortTitle": "Moving Lexicographical Mountains for the Community",
+      "url": "https://doi.org/10.1093/ijl/ecad032",
+      "accessDate": "2024-03-07T15:18:53Z",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "Silverchair",
+      "callNumber": "",
+      "rights": "",
+      "extra": "https://lexbib.elex.is/entity/Q34122\n",
+      "tags": [
+        {
+          "tag": "on-wikibase"
+        }
+      ],
+      "collections": [
+        "G82WEXCH"
+      ],
+      "relations": {},
+      "dateAdded": "2024-03-07T17:19:19Z",
+      "dateModified": "2024-03-07T18:20:34Z"
+    },
+    "wikibase_entity": "Q34122"
+  },
+  {
+    "key": "JKK7F7RW",
+    "version": 149568,
+    "library": {
+      "type": "group",
+      "id": 1892855,
+      "name": "LexBib",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/lexbib",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/1892855/items/JKK7F7RW",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/lexbib/items/JKK7F7RW",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/1892855/items/RE27296J",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 623716
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Rees and Lew",
+      "parsedDate": "2024-03-01",
+      "numChildren": 1
+    },
+    "data": {
+      "key": "JKK7F7RW",
+      "version": 149568,
+      "itemType": "journalArticle",
+      "title": "The Effectiveness of OpenAI GPT-Generated Definitions Versus Definitions from an English Learners\u2019 Dictionary in a Lexically Orientated Reading Task",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Geraint Paul",
+          "lastName": "Rees"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Robert",
+          "lastName": "Lew"
+        }
+      ],
+      "abstractNote": "In metalexicographical research, experts have judged the performance of technologies such as OpenAI Generative Pretrained Transformer (GPT) in lexicographic production tasks as promising yet inferior to human lexicographers. It remains unclear whether this perceived inferiority limits the effectiveness of AI-generated lexicography in resolving practical language doubts. Accordingly, this study compares the effectiveness of AI-generated definitions to those from the Macmillan English Dictionary (MED) in resolving vocabulary doubts in a multiple-choice reading task designed to test lexical knowledge. It involves 43 L2 English users in the third year of an English studies degree at a Spanish university. Students provided with MED definitions performed better on the reading task than those without access to definitions. However, there was no significant difference between the performance of students with either MED definitions or without definitions altogether, and those provided with AI-definitions. The implications of these findings are discussed along with avenues for further research.",
+      "publicationTitle": "International Journal of Lexicography",
+      "volume": "37",
+      "issue": "1",
+      "pages": "50-74",
+      "date": "2024-03-01",
+      "series": "",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "International Journal of Lexicography",
+      "language": "eng",
+      "DOI": "10.1093/ijl/ecad030",
+      "ISSN": "0950-3846",
+      "shortTitle": "",
+      "url": "https://doi.org/10.1093/ijl/ecad030",
+      "accessDate": "2024-03-07T15:18:55Z",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "Silverchair",
+      "callNumber": "",
+      "rights": "",
+      "extra": "https://lexbib.elex.is/entity/Q34123\n",
+      "tags": [
+        {
+          "tag": "on-wikibase"
+        }
+      ],
+      "collections": [
+        "G82WEXCH"
+      ],
+      "relations": {},
+      "dateAdded": "2024-03-07T17:19:21Z",
+      "dateModified": "2024-03-07T18:20:33Z"
+    },
+    "wikibase_entity": "Q34123"
+  },
+  {
+    "key": "7YJY2UBH",
+    "version": 149567,
+    "library": {
+      "type": "group",
+      "id": 1892855,
+      "name": "LexBib",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/lexbib",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/1892855/items/7YJY2UBH",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/lexbib/items/7YJY2UBH",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/1892855/items/ALTFWZYM",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 1518656
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Hall and Louw",
+      "parsedDate": "2022-09-01",
+      "numChildren": 1
+    },
+    "data": {
+      "key": "7YJY2UBH",
+      "version": 149567,
+      "itemType": "journalArticle",
+      "title": "The Perceived Impacts of a Bilingual Learner's Dictionary",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Megan",
+          "lastName": "Hall"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Phillip",
+          "lastName": "Louw"
+        }
+      ],
+      "abstractNote": "This paper reports on research into teachers' perceptions of the impact of using a bilingual learner's dictionary. The research, a perceptions of impact study conducted in South Africa from March 2016 to February 2019, investigates the perceptions of teachers on the impact of the dictionary on themselves as teachers, and their perceptions of the dictionary's impact on their pupils. The findings show that teachers perceived dictionary use to have positive impacts on both the language production and language reception skills of pupils in their L2, in line with other studies. However, they also show unexpected teacher perceptions of impacts on content subjects, L1, teaching itself, and attitudes and behaviours (here called the socio-emotional), especially with regard to learning or teaching. The paper situates this research in the literature on dictionary use for production and reception in language learning, and of impact evaluation, as well as highlighting relevant aspects of the South African education system, particularly the use of English as a language of learning and teaching from an early stage. The dictionary in this study was the Oxford Bilingual School Dictionary: isiXhosa and English (De Schryver and Reynolds 2014).",
+      "publicationTitle": "International Journal of Lexicography",
+      "volume": "35",
+      "issue": "3",
+      "pages": "273-295",
+      "date": "2022-09-01",
+      "series": "",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "International Journal of Lexicography",
+      "language": "eng",
+      "DOI": "10.1093/ijl/ecac002",
+      "ISSN": "0950-3846",
+      "shortTitle": "",
+      "url": "https://doi.org/10.1093/ijl/ecac002",
+      "accessDate": "2024-03-07T15:23:38Z",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "Silverchair",
+      "callNumber": "",
+      "rights": "",
+      "extra": "https://lexbib.elex.is/entity/Q34124\n",
+      "tags": [
+        {
+          "tag": "on-wikibase"
+        }
+      ],
+      "collections": [
+        "G82WEXCH"
+      ],
+      "relations": {},
+      "dateAdded": "2024-03-07T17:19:25Z",
+      "dateModified": "2024-03-07T18:20:33Z"
+    },
+    "wikibase_entity": "Q34124"
+  },
+  {
+    "key": "N6HQ747X",
+    "version": 149566,
+    "library": {
+      "type": "group",
+      "id": 1892855,
+      "name": "LexBib",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/lexbib",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/1892855/items/N6HQ747X",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/lexbib/items/N6HQ747X",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/1892855/items/399TY8EB",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 962440
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Chen and Zhao",
+      "parsedDate": "2022-09-01",
+      "numChildren": 1
+    },
+    "data": {
+      "key": "N6HQ747X",
+      "version": 149566,
+      "itemType": "journalArticle",
+      "title": "The Treatment of Academic Lexical Bundles in Online English Monolingual Learners\u2019 Dictionaries",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Peng",
+          "lastName": "Chen"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Cuilian",
+          "lastName": "Zhao"
+        }
+      ],
+      "abstractNote": "In recent years, there has been a growing interest in identifying dictionary-relevant lexical bundles and analysing their lexicographic treatment. However, past research has only examined bundle treatment in general bilingual dictionaries, leaving it open whether and to what extent lexical bundles are treated in other types of dictionaries. This study aims to fill this gap by focusing on the treatment of academic lexical bundles in online English monolingual learners\u2019 dictionaries. To this end, we first derived a list of 85 target bundles from a large corpus of expert academic writing using a set of quantitative and qualitative criteria, and then examined these bundles regarding their coverage, accessibility, and macro- and microstructural presentation in selected dictionaries. The results showed a high degree of inaccessibility of lexical bundles as search strings, corroborated previous research findings regarding the subsidiary status of lexical bundles in the macrostructure, and identified variations and inadequacies in bundle presentation in the microstructure. The implications of this study for improving the identification, access and presentation of academic lexical bundles for e-lexicography are discussed.",
+      "publicationTitle": "International Journal of Lexicography",
+      "volume": "35",
+      "issue": "3",
+      "pages": "296-319",
+      "date": "2022-09-01",
+      "series": "",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "International Journal of Lexicography",
+      "language": "eng",
+      "DOI": "10.1093/ijl/ecab032",
+      "ISSN": "0950-3846",
+      "shortTitle": "",
+      "url": "https://doi.org/10.1093/ijl/ecab032",
+      "accessDate": "2024-03-07T15:23:39Z",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "Silverchair",
+      "callNumber": "",
+      "rights": "",
+      "extra": "https://lexbib.elex.is/entity/Q34125\n",
+      "tags": [
+        {
+          "tag": "on-wikibase"
+        }
+      ],
+      "collections": [
+        "G82WEXCH"
+      ],
+      "relations": {},
+      "dateAdded": "2024-03-07T17:19:26Z",
+      "dateModified": "2024-03-07T18:20:32Z"
+    },
+    "wikibase_entity": "Q34125"
+  },
+  {
+    "key": "EKLURI6P",
+    "version": 149565,
+    "library": {
+      "type": "group",
+      "id": 1892855,
+      "name": "LexBib",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/lexbib",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/1892855/items/EKLURI6P",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/lexbib/items/EKLURI6P",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/1892855/items/6GKPJ3IY",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 1867094
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Scolari et al.",
+      "parsedDate": "2022-09-01",
+      "numChildren": 1
+    },
+    "data": {
+      "key": "EKLURI6P",
+      "version": 149565,
+      "itemType": "journalArticle",
+      "title": "Searching for Signs: Developing a Handshape Taxonomy Based on Visual Similarity",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Sergio",
+          "lastName": "Scolari"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Onno",
+          "lastName": "Crasborn"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Gilson",
+          "lastName": "Braviano"
+        }
+      ],
+      "abstractNote": "When designing a sign language dictionary or lexical database, a criterion that needs to be decided on is how to organize handshapes in the search-by-sign interface. Although notation systems do exist for indexing and searching sign entries, dictionaries do not often use them. This study investigates how to classify and order images of handshapes without relying on the alphabetical order of handshape names or phonological parameters. For this purpose, a cluster analysis using three variables was applied, resulting in groups based on visual similarities between handshapes. The objects in the resulting clusters were reordered based on similarity and shape gradation principles, aiming for an optimal organization with regard to Pr\u00e4gnanz. Ultimately, as we expect native signers to rely on the visual features of signs, the taxonomy proposed in this study makes it possible to display handshapes in a way that requires fewer metalinguistic skills to support signers\u2019 search actions.",
+      "publicationTitle": "International Journal of Lexicography",
+      "volume": "35",
+      "issue": "3",
+      "pages": "320-341",
+      "date": "2022-09-01",
+      "series": "",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "International Journal of Lexicography",
+      "language": "eng",
+      "DOI": "10.1093/ijl/ecac004",
+      "ISSN": "0950-3846",
+      "shortTitle": "Searching for Signs",
+      "url": "https://doi.org/10.1093/ijl/ecac004",
+      "accessDate": "2024-03-07T15:23:42Z",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "Silverchair",
+      "callNumber": "",
+      "rights": "",
+      "extra": "https://lexbib.elex.is/entity/Q34126\n",
+      "tags": [
+        {
+          "tag": "on-wikibase"
+        }
+      ],
+      "collections": [
+        "G82WEXCH"
+      ],
+      "relations": {},
+      "dateAdded": "2024-03-07T17:19:27Z",
+      "dateModified": "2024-03-07T18:20:32Z"
+    },
+    "wikibase_entity": "Q34126"
+  },
+  {
+    "key": "P38GELTQ",
+    "version": 149564,
+    "library": {
+      "type": "group",
+      "id": 1892855,
+      "name": "LexBib",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/lexbib",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/1892855/items/P38GELTQ",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/lexbib/items/P38GELTQ",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/1892855/items/3KFRB6MP",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 1175044
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Turin and Oliveira Ferreira",
+      "parsedDate": "2022-09-01",
+      "numChildren": 1
+    },
+    "data": {
+      "key": "P38GELTQ",
+      "version": 149564,
+      "itemType": "journalArticle",
+      "title": "Indigenous Lexicography: A Review of Recent Dictionaries and Works Relating to Lexicography",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Mark",
+          "lastName": "Turin"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Nat\u00e1lia",
+          "lastName": "Oliveira Ferreira"
+        }
+      ],
+      "abstractNote": "In this review essay, we compare five recent publications relating to dictionary work with Indigenous languages. The review covers three dictionaries, one monograph about lexicography in service of Indigenous language revitalization and the second volume of a two-volume dictionary-cum-encyclopedia. The structure of this review essay is as follows: following a brief introduction to each of the languages covered in these five publications, we include sections comparing orthographic choices and representations, internal structure and entry design, an examination of each dictionary\u2019s approach to the incorporation of neologisms and the software choices made by\u00a0compilers. In addition, we offer an analysis of each dictionary\u2019s intended audience and access requirements, some structured reflections on authorship and ownership, an exploration of each project\u2019s commitment to community engagement, strategies for the representation of dialectal variation and finally, relevant information about how each dictionary project was funded and resourced.",
+      "publicationTitle": "International Journal of Lexicography",
+      "volume": "35",
+      "issue": "3",
+      "pages": "378-395",
+      "date": "2022-09-01",
+      "series": "",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "International Journal of Lexicography",
+      "language": "eng",
+      "DOI": "10.1093/ijl/ecac003",
+      "ISSN": "0950-3846",
+      "shortTitle": "Indigenous Lexicography",
+      "url": "https://doi.org/10.1093/ijl/ecac003",
+      "accessDate": "2024-03-07T15:23:49Z",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "Silverchair",
+      "callNumber": "",
+      "rights": "",
+      "extra": "https://lexbib.elex.is/entity/Q34127\n",
+      "tags": [
+        {
+          "tag": "on-wikibase"
+        }
+      ],
+      "collections": [
+        "G82WEXCH"
+      ],
+      "relations": {},
+      "dateAdded": "2024-03-07T17:19:31Z",
+      "dateModified": "2024-03-07T18:20:31Z"
+    },
+    "wikibase_entity": "Q34127"
+  },
+  {
+    "key": "2XUTDXWG",
+    "version": 149563,
+    "library": {
+      "type": "group",
+      "id": 1892855,
+      "name": "LexBib",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/lexbib",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/1892855/items/2XUTDXWG",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/lexbib/items/2XUTDXWG",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/1892855/items/KZ9C5VJ9",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 1650277
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Caruso",
+      "parsedDate": "2024-03-01",
+      "numChildren": 1
+    },
+    "data": {
+      "key": "2XUTDXWG",
+      "version": 149563,
+      "itemType": "journalArticle",
+      "title": "Between Collocation and Colligation: An Experiment in Collaborative Lexicography",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Valeria",
+          "lastName": "Caruso"
+        }
+      ],
+      "abstractNote": "This paper describes a protocol for using dictionaries in classroom activities to support language learning and develop language awareness (Nied Curcio 2022). A group of undergraduate foreign language students was guided through the process of compiling a multilingual Covid-19 dictionary, which provides collocational data to support language production and improve fluency in an L2. The activities were an integral part of a BA course in Lexicology and Lexicography. Lexonomy was used as the project editing tool.The compilation process not only shed light on the students\u2019 challenges in basic language skills, such as syntactic analysis, but also highlighted the importance of refining the proposed teaching programme to include more detailed metalinguistic explanation and an augmented dictionary microstructure.Besides, the skills that emerged from the experiments conducted also provide valuable insights for research into dictionary use and the design of effective dictionaries.",
+      "publicationTitle": "International Journal of Lexicography",
+      "volume": "37",
+      "issue": "1",
+      "pages": "75-94",
+      "date": "2024-03-01",
+      "series": "",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "International Journal of Lexicography",
+      "language": "eng",
+      "DOI": "10.1093/ijl/ecad026",
+      "ISSN": "0950-3846",
+      "shortTitle": "Between Collocation and Colligation",
+      "url": "https://doi.org/10.1093/ijl/ecad026",
+      "accessDate": "2024-03-07T15:18:56Z",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "Silverchair",
+      "callNumber": "",
+      "rights": "",
+      "extra": "https://lexbib.elex.is/entity/Q34128\n",
+      "tags": [
+        {
+          "tag": "on-wikibase"
+        }
+      ],
+      "collections": [
+        "G82WEXCH"
+      ],
+      "relations": {},
+      "dateAdded": "2024-03-07T17:19:22Z",
+      "dateModified": "2024-03-07T18:20:31Z"
+    },
+    "wikibase_entity": "Q34128"
+  },
+  {
+    "key": "UUYE46N8",
+    "version": 149562,
+    "library": {
+      "type": "group",
+      "id": 1892855,
+      "name": "LexBib",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/lexbib",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/1892855/items/UUYE46N8",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/lexbib/items/UUYE46N8",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/1892855/items/TFLMVZK9",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 961217
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Rodr\u00edguez-\u00c1lvarez",
+      "parsedDate": "2024-03-01",
+      "numChildren": 1
+    },
+    "data": {
+      "key": "UUYE46N8",
+      "version": 149562,
+      "itemType": "journalArticle",
+      "title": "\u2018Most of our termes now vsed in warres are deriued from straungers\u2019: Robert Barret\u2019s Glossary of Military Terms inThe Theorike and Practike of Moderne Warres (1598)",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Alicia",
+          "lastName": "Rodr\u00edguez-\u00c1lvarez"
+        }
+      ],
+      "abstractNote": "The first English dictionary of military terms was published anonymously in 1702 under the title AMilitary Dictionary. However, one glossary of this nature had already been attached to Robert Barret\u2019s (Anon. 1702)The Theorike and Practike of Moderne Warres in 1598: \u2018A Table, shewing the signification of sundry forraine words, vsed in these discourses\u2019. Barret had fought in many battles in Europe, where English soldiers came into contact with comrades-in-arms from other countries. Hence, Barret\u2019s glossary constitutes a first-hand source of information on the loanwords used in English to refer to technological and strategic novelties on the field of military science at the time. This article (i) provides a first analysis of Barret\u2019s glossary; (ii) confirms that Barret\u2019s professional expertise as a soldier contributed to more complete and informative definitions than the ones in contemporary general dictionaries; (iii) compares the source languages Barret assigned to the entries in his glossary with the source languages specified in contemporary lexicographical works and in the Oxford English Dictionary; and (iv) confirms the relevance of Barret\u2019s glossary as a testimony to the military jargon incorporated into English from different languages during the sixteenth century. Finally, a close comparison of the definitions of the same entries in Barret\u2019s glossary and Florio\u2019s A Worlde of Wordes (1598) has revealed Florio\u2019s indebtedness to Barret\u2019s military glossary.",
+      "publicationTitle": "International Journal of Lexicography",
+      "volume": "37",
+      "issue": "1",
+      "pages": "95-116",
+      "date": "2024-03-01",
+      "series": "",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "International Journal of Lexicography",
+      "language": "eng",
+      "DOI": "10.1093/ijl/ecad020",
+      "ISSN": "0950-3846",
+      "shortTitle": "\u2018Most of our termes now vsed in warres are deriued from straungers\u2019",
+      "url": "https://doi.org/10.1093/ijl/ecad020",
+      "accessDate": "2024-03-07T15:18:58Z",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "Silverchair",
+      "callNumber": "",
+      "rights": "",
+      "extra": "https://lexbib.elex.is/entity/Q34129\n",
+      "tags": [
+        {
+          "tag": "on-wikibase"
+        }
+      ],
+      "collections": [
+        "G82WEXCH"
+      ],
+      "relations": {},
+      "dateAdded": "2024-03-07T17:19:24Z",
+      "dateModified": "2024-03-07T18:20:30Z"
+    },
+    "wikibase_entity": "Q34129"
+  },
+  {
+    "key": "PNCM6IWU",
+    "version": 149561,
+    "library": {
+      "type": "group",
+      "id": 1892855,
+      "name": "LexBib",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/lexbib",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/1892855/items/PNCM6IWU",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/lexbib/items/PNCM6IWU",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/1892855/items/SLLRIZFU",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 10723887
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Li and Hansen",
+      "parsedDate": "2022-09-01",
+      "numChildren": 1
+    },
+    "data": {
+      "key": "PNCM6IWU",
+      "version": 149561,
+      "itemType": "journalArticle",
+      "title": "Tracing References: Re-dating and Interpreting Abel-R\u00e9musat\u2019s Chinese-French Dictionary Manuscript Dictionnaire chinois",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Rui",
+          "lastName": "Li"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Annette Skovsted",
+          "lastName": "Hansen"
+        }
+      ],
+      "abstractNote": "This study presents answers to the question of how one dictionary can help us understand the implications for lexicography of limited access to other dictionaries. We carefully analyzed the microstructure and macrostructure of Abel-R\u00e9musat\u2019s Chinese-French dictionary manuscript Dictionnaire chinois dated 1808 by systematically tracing the references noted at each entry in the dictionary. Based on his meticulous references to a large variety of Chinese language sources, this article confirms that Abel-R\u00e9musat finished his first draft in 1808. However, tracing the references to a wide variety of sources including many references to Dictionnaire chinois, fran\u00e7ais et latin [Chinese, French, and Latin Dictionary, 1813], published in 1813 by Chr\u00e9tien-Louis-Joseph de Guignes (1759\u20131845), we re-date the manuscript. This discovery allowed us to understand how Abel-R\u00e9musat 1) used different types of resources when dictionaries of Chinese and various European languages were unavailable and 2) compensated initially by inventing his own macrostructure, microstructure and systems for retrieving Chinese characters until he could consult other dictionaries that offered him guidance and inspired him to make corrections in his manuscript. Our findings show how the resources available determined his approach to lexicography and lead us to conclude that he gradually developed his approach based on a combination of inspiration from and confusion caused by the limited, but very diverse resources, he located and referenced.",
+      "publicationTitle": "International Journal of Lexicography",
+      "volume": "35",
+      "issue": "3",
+      "pages": "342-363",
+      "date": "2022-09-01",
+      "series": "",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "International Journal of Lexicography",
+      "language": "eng",
+      "DOI": "10.1093/ijl/ecac001",
+      "ISSN": "0950-3846",
+      "shortTitle": "Tracing References",
+      "url": "https://doi.org/10.1093/ijl/ecac001",
+      "accessDate": "2024-03-07T15:23:44Z",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "Silverchair",
+      "callNumber": "",
+      "rights": "",
+      "extra": "https://lexbib.elex.is/entity/Q34130\n",
+      "tags": [
+        {
+          "tag": "on-wikibase"
+        }
+      ],
+      "collections": [
+        "G82WEXCH"
+      ],
+      "relations": {},
+      "dateAdded": "2024-03-07T17:19:28Z",
+      "dateModified": "2024-03-07T18:20:30Z"
+    },
+    "wikibase_entity": "Q34130"
+  },
+  {
+    "key": "Y6W2QELG",
+    "version": 149560,
+    "library": {
+      "type": "group",
+      "id": 1892855,
+      "name": "LexBib",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/lexbib",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/1892855/items/Y6W2QELG",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/lexbib/items/Y6W2QELG",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/1892855/items/ALQBAKCW",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 204189
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Prentice et al.",
+      "parsedDate": "2022-09-01",
+      "numChildren": 1
+    },
+    "data": {
+      "key": "Y6W2QELG",
+      "version": 149560,
+      "itemType": "journalArticle",
+      "title": "A Domain Based Approach to Semantic Lexicon Expansion",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Sheryl",
+          "lastName": "Prentice"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Paul",
+          "lastName": "Rayson"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Jo",
+          "lastName": "Knight"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Mahmoud",
+          "lastName": "El-Haj"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Solly",
+          "lastName": "Elstein"
+        }
+      ],
+      "abstractNote": "Current approaches to the expansion of semantic lexicons for corpus annotation are somewhat ad hoc in nature and do not generally offer a systematic means of identifying areas for development within one\u2019s lexicon. The present paper sets forward a domain based approach to semantic lexicon expansion, targeting UCREL\u2019s Semantic Analysis System (USAS). First, an updated version of the lexicon is compared to representative corpora to ascertain areas of underrepresentation in a novel method which we call K-FLUX analysis. Second, an example set of underrepresented types are targeted for development using domain specific corpora. Collectively, the results show that some corpora are more successful than others in supplementing the existing USAS lexicon. The paper discusses the various factors that should be borne in mind when utilising the proposed method before concluding with how findings might inform future developments of the lexicon, and crucially, the semantic system on which it is based.",
+      "publicationTitle": "International Journal of Lexicography",
+      "volume": "35",
+      "issue": "3",
+      "pages": "364-377",
+      "date": "2022-09-01",
+      "series": "",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "International Journal of Lexicography",
+      "language": "eng",
+      "DOI": "10.1093/ijl/ecab028",
+      "ISSN": "0950-3846",
+      "shortTitle": "",
+      "url": "https://doi.org/10.1093/ijl/ecab028",
+      "accessDate": "2024-03-07T15:23:47Z",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "Silverchair",
+      "callNumber": "",
+      "rights": "",
+      "extra": "https://lexbib.elex.is/entity/Q34131\n",
+      "tags": [
+        {
+          "tag": "on-wikibase"
+        }
+      ],
+      "collections": [
+        "G82WEXCH"
+      ],
+      "relations": {},
+      "dateAdded": "2024-03-07T17:19:30Z",
+      "dateModified": "2024-03-07T18:20:29Z"
+    },
+    "wikibase_entity": "Q34131"
+  },
+  {
+    "key": "HGXE6F3G",
+    "version": 149559,
+    "library": {
+      "type": "group",
+      "id": 1892855,
+      "name": "LexBib",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/lexbib",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/1892855/items/HGXE6F3G",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/lexbib/items/HGXE6F3G",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/1892855/items/TAKYAJHS",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 688163
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Li et al.",
+      "parsedDate": "2022-12-01",
+      "numChildren": 1
+    },
+    "data": {
+      "key": "HGXE6F3G",
+      "version": 149559,
+      "itemType": "journalArticle",
+      "title": "A Genealogical Study of Kuang Qizhao\u2019s An English and Chinese Lexicon (1868)",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Rui",
+          "lastName": "Li"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Chun",
+          "lastName": "Zhang"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Hai",
+          "lastName": "Xu"
+        }
+      ],
+      "abstractNote": "Embedded in historical and genealogical research, this study investigates the influence of English-Chinese dictionaries compiled by missionaries on Kuang Qizhao\u2019s (1836?\u20131891?) An English and Chinese Lexicon, compiled in part from those of Morrison, Medhurst and Williams (1868). Drawing on Hartmann\u2019s genealogical approach and the lexicographical findings and linguistic evidence presented in three case studies, we argue that Kuang depended not only on Walter Henry Medhurst\u2019s (1796\u20131857) English and Chinese Dictionary (1847\u201348), Samuel Well Williams\u2019 (1812\u20131884) An English and Chinese Vocabulary (1844) and Robert Morrison\u2019s (1782\u20131834) English and Chinese dictionary (1822), as indicated in the dictionary title, but also on Wilhelm Lobscheid\u2019s (1822-1893) An English and Chinese Dictionary (1866\u201369) for his own dictionary. And yet Kuang never acknowledged Lobscheid\u2019s dictionary as one of his source dictionaries. This article discusses the reasons why Kuang failed to acknowledge the importance of Lobscheid\u2019s contribution to his dictionary. It is expected to that the findings we have made will provide insights into the genealogical study of English-Chinese dictionaries in general, as well as confirming Kuang\u2019s remarkable merit in compiling his English-Chinese dictionary in the 19th century.",
+      "publicationTitle": "International Journal of Lexicography",
+      "volume": "35",
+      "issue": "4",
+      "pages": "491-508",
+      "date": "2022-12-01",
+      "series": "",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "International Journal of Lexicography",
+      "language": "eng",
+      "DOI": "10.1093/ijl/ecac008",
+      "ISSN": "0950-3846",
+      "shortTitle": "",
+      "url": "https://doi.org/10.1093/ijl/ecac008",
+      "accessDate": "2024-03-07T15:32:18Z",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "Silverchair",
+      "callNumber": "",
+      "rights": "",
+      "extra": "https://lexbib.elex.is/entity/Q34132\n",
+      "tags": [
+        {
+          "tag": "on-wikibase"
+        }
+      ],
+      "collections": [
+        "G82WEXCH"
+      ],
+      "relations": {},
+      "dateAdded": "2024-03-07T17:19:32Z",
+      "dateModified": "2024-03-07T18:20:29Z"
+    },
+    "wikibase_entity": "Q34132"
+  },
+  {
+    "key": "KPHRENWE",
+    "version": 149558,
+    "library": {
+      "type": "group",
+      "id": 1892855,
+      "name": "LexBib",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/lexbib",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/1892855/items/KPHRENWE",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/lexbib/items/KPHRENWE",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/1892855/items/DAJW4GMN",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 261218
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Kati\u0107 and Novakov",
+      "parsedDate": "2022-12-01",
+      "numChildren": 1
+    },
+    "data": {
+      "key": "KPHRENWE",
+      "version": 149558,
+      "itemType": "journalArticle",
+      "title": "The Translation Stage in LSP Lexicography: A Mixed Translation Model for LSP Bilingual Dictionary Terms",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Marina",
+          "lastName": "Kati\u0107"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Predrag",
+          "lastName": "Novakov"
+        }
+      ],
+      "abstractNote": "This paper focuses on the translation stage in LSP bilingual lexicography, where the condition of equivalence lies in the terminological/conceptual identity of the terms used in different linguistic systems. To this end, case study research was done on the corpus of the English-Serbian Dictionary of Waste Management. Seeking to provide a more extensive picture of the rendition of specialized terms, the authors propose a systematic translation framework by combining traditional Translation Theory with the modern Function Theory of Lexicography. Therefore, the LSP dictionary counterparts were analyzed from the perspectives of both theories, using a mixed translation model for both single and compound words. This paper aims to resolve the question of why the translation of the specialized dictionary terms produced the result it had, the explanation of which might help compile modern LSP bilingual dictionaries from English into Serbian, or into other languages of South-East Slavic origin.",
+      "publicationTitle": "International Journal of Lexicography",
+      "volume": "35",
+      "issue": "4",
+      "pages": "427-448",
+      "date": "2022-12-01",
+      "series": "",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "International Journal of Lexicography",
+      "language": "eng",
+      "DOI": "10.1093/ijl/ecac009",
+      "ISSN": "0950-3846",
+      "shortTitle": "The Translation Stage in LSP Lexicography",
+      "url": "https://doi.org/10.1093/ijl/ecac009",
+      "accessDate": "2024-03-07T15:36:04Z",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "Silverchair",
+      "callNumber": "",
+      "rights": "",
+      "extra": "https://lexbib.elex.is/entity/Q34133\n",
+      "tags": [
+        {
+          "tag": "on-wikibase"
+        }
+      ],
+      "collections": [
+        "G82WEXCH"
+      ],
+      "relations": {},
+      "dateAdded": "2024-03-07T17:19:34Z",
+      "dateModified": "2024-03-07T18:20:28Z"
+    },
+    "wikibase_entity": "Q34133"
+  },
+  {
+    "key": "NJMFEHWK",
+    "version": 149557,
+    "library": {
+      "type": "group",
+      "id": 1892855,
+      "name": "LexBib",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/lexbib",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/1892855/items/NJMFEHWK",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/lexbib/items/NJMFEHWK",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/1892855/items/QGNH8ZTZ",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 1867481
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Nural et al.",
+      "parsedDate": "2022-12-01",
+      "numChildren": 1
+    },
+    "data": {
+      "key": "NJMFEHWK",
+      "version": 149557,
+      "itemType": "journalArticle",
+      "title": "Warning Notes in a Learner\u2019s Dictionary: A Study of the Effectiveness of Different Formats",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Sukru",
+          "lastName": "Nural"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Hilary",
+          "lastName": "Nesi"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Tuna",
+          "lastName": "Cakar"
+        }
+      ],
+      "abstractNote": "This study used an online correction task to explore the extent to which different types of warning notes in Longman Dictionary of Contemporary English Online were heeded when users tried to correct errors in the use of L2 target words. The task was completed by 332 participants, yielding 1,819 answers produced after clicking on links to relevant entries. Warning notes were categorised in terms of their formatting features, but there were found to be inconsistencies in the way the dictionary associated different categories with different kinds of learner error. Participants judged warning notes with more visual enhancements to be more useful, but in the correction task the position of the warning notes also seemed to affect the degree to which the warnings were successfully applied. Different types of warning notes in learners\u2019 dictionaries have not been examined previously in any depth, and the results suggest that some adjustments to formatting and placement might make them more effective.",
+      "publicationTitle": "International Journal of Lexicography",
+      "volume": "35",
+      "issue": "4",
+      "pages": "449-467",
+      "date": "2022-12-01",
+      "series": "",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "International Journal of Lexicography",
+      "language": "eng",
+      "DOI": "10.1093/ijl/ecab033",
+      "ISSN": "0950-3846",
+      "shortTitle": "Warning Notes in a Learner\u2019s Dictionary",
+      "url": "https://doi.org/10.1093/ijl/ecab033",
+      "accessDate": "2024-03-07T15:36:06Z",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "Silverchair",
+      "callNumber": "",
+      "rights": "",
+      "extra": "https://lexbib.elex.is/entity/Q34134\n",
+      "tags": [
+        {
+          "tag": "on-wikibase"
+        }
+      ],
+      "collections": [
+        "G82WEXCH"
+      ],
+      "relations": {},
+      "dateAdded": "2024-03-07T17:19:35Z",
+      "dateModified": "2024-03-07T18:20:28Z"
+    },
+    "wikibase_entity": "Q34134"
+  },
+  {
+    "key": "638VUWDM",
+    "version": 149556,
+    "library": {
+      "type": "group",
+      "id": 1892855,
+      "name": "LexBib",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/lexbib",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/1892855/items/638VUWDM",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/lexbib/items/638VUWDM",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/1892855/items/4PHNHHJV",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 1242702
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Chen and Liu",
+      "parsedDate": "2022-12-01",
+      "numChildren": 1
+    },
+    "data": {
+      "key": "638VUWDM",
+      "version": 149556,
+      "itemType": "journalArticle",
+      "title": "Exploring the Use of an Online Bilingual Dictionary in EFL Writing",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Yuzhen",
+          "lastName": "Chen"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Suping",
+          "lastName": "Liu"
+        }
+      ],
+      "abstractNote": "The study was an experimental endeavor to explore the use of an online bilingual dictionary in EFL writing by gauging its effect on writing scores, assessing its impact on lexical sophistication, and examining learners\u2019 dictionary lookup behavior during writing. A class of EFL students (n=34) at a Chinese university were asked to write two English compositions, one without access to a dictionary and the other with the help of Bing.dict, one of the most popular online bilingual dictionaries in China. A screen recorder was installed to capture in real time the whole process of dictionary consultation and writing. Results indicate that the use of Bing.dict exerted a significantly negative effect on the overall composition scores and the component scores for content and language use, although it did help to increase the students\u2019 lexical range as measured by the Lexical Frequency Profile. A variety of dictionary-based errors were committed in terms of lexicon, syntax and collocation due to the students\u2019 inadequate dictionary use skills and the unsatisfactory quality of the dictionary for productive language use. A close examination of the screen recordings reveals that the students adopted a range of poor consultation strategies during writing. They were content to find an English equivalent to a Chinese lexical item without bothering to further check its meaning and usage. In addition, they tried in vain to find ready text translations for Chinese sentences or sentence fragments. Focusing on the unreliable web-crawled examples, very few of the students paid attention to the source dictionaries. Besides, most of them were prone to accept what was offered in the dictionary without independent thinking. The findings of the study show a rather disappointing picture of the use of an online bilingual dictionary for language production, suggesting that it is absolutely imperative to train EFL learners on dictionary use.",
+      "publicationTitle": "International Journal of Lexicography",
+      "volume": "35",
+      "issue": "4",
+      "pages": "468-490",
+      "date": "2022-12-01",
+      "series": "",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "International Journal of Lexicography",
+      "language": "eng",
+      "DOI": "10.1093/ijl/ecac007",
+      "ISSN": "0950-3846",
+      "shortTitle": "",
+      "url": "https://doi.org/10.1093/ijl/ecac007",
+      "accessDate": "2024-03-07T15:36:11Z",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "Silverchair",
+      "callNumber": "",
+      "rights": "",
+      "extra": "https://lexbib.elex.is/entity/Q34135\n",
+      "tags": [
+        {
+          "tag": "on-wikibase"
+        }
+      ],
+      "collections": [
+        "G82WEXCH"
+      ],
+      "relations": {},
+      "dateAdded": "2024-03-07T17:19:36Z",
+      "dateModified": "2024-03-07T18:20:28Z"
+    },
+    "wikibase_entity": "Q34135"
+  },
+  {
+    "key": "PL7DNY88",
+    "version": 149555,
+    "library": {
+      "type": "group",
+      "id": 1892855,
+      "name": "LexBib",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/lexbib",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/1892855/items/PL7DNY88",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/lexbib/items/PL7DNY88",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/1892855/items/NCNPEZD6",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 688163
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Li et al.",
+      "parsedDate": "2022-12-01",
+      "numChildren": 1
+    },
+    "data": {
+      "key": "PL7DNY88",
+      "version": 149555,
+      "itemType": "journalArticle",
+      "title": "A Genealogical Study of Kuang Qizhao\u2019s An English and Chinese Lexicon (1868)",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Rui",
+          "lastName": "Li"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Chun",
+          "lastName": "Zhang"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Hai",
+          "lastName": "Xu"
+        }
+      ],
+      "abstractNote": "Embedded in historical and genealogical research, this study investigates the influence of English-Chinese dictionaries compiled by missionaries on Kuang Qizhao\u2019s (1836?\u20131891?) An English and Chinese Lexicon, compiled in part from those of Morrison, Medhurst and Williams (1868). Drawing on Hartmann\u2019s genealogical approach and the lexicographical findings and linguistic evidence presented in three case studies, we argue that Kuang depended not only on Walter Henry Medhurst\u2019s (1796\u20131857) English and Chinese Dictionary (1847\u201348), Samuel Well Williams\u2019 (1812\u20131884) An English and Chinese Vocabulary (1844) and Robert Morrison\u2019s (1782\u20131834) English and Chinese dictionary (1822), as indicated in the dictionary title, but also on Wilhelm Lobscheid\u2019s (1822-1893) An English and Chinese Dictionary (1866\u201369) for his own dictionary. And yet Kuang never acknowledged Lobscheid\u2019s dictionary as one of his source dictionaries. This article discusses the reasons why Kuang failed to acknowledge the importance of Lobscheid\u2019s contribution to his dictionary. It is expected to that the findings we have made will provide insights into the genealogical study of English-Chinese dictionaries in general, as well as confirming Kuang\u2019s remarkable merit in compiling his English-Chinese dictionary in the 19th century.",
+      "publicationTitle": "International Journal of Lexicography",
+      "volume": "35",
+      "issue": "4",
+      "pages": "491-508",
+      "date": "2022-12-01",
+      "series": "",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "International Journal of Lexicography",
+      "language": "eng",
+      "DOI": "10.1093/ijl/ecac008",
+      "ISSN": "0950-3846",
+      "shortTitle": "",
+      "url": "https://doi.org/10.1093/ijl/ecac008",
+      "accessDate": "2024-03-07T15:36:12Z",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "Silverchair",
+      "callNumber": "",
+      "rights": "",
+      "extra": "https://lexbib.elex.is/entity/Q34132\n",
+      "tags": [
+        {
+          "tag": "on-wikibase"
+        }
+      ],
+      "collections": [
+        "G82WEXCH"
+      ],
+      "relations": {},
+      "dateAdded": "2024-03-07T17:19:37Z",
+      "dateModified": "2024-03-07T18:20:27Z"
+    },
+    "wikibase_entity": "Q34132"
+  },
+  {
+    "key": "INKZR2N3",
+    "version": 149554,
+    "library": {
+      "type": "group",
+      "id": 1892855,
+      "name": "LexBib",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/lexbib",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/1892855/items/INKZR2N3",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/lexbib/items/INKZR2N3",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/1892855/items/ND3JF767",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 306208
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Norri",
+      "parsedDate": "2022-12-01",
+      "numChildren": 1
+    },
+    "data": {
+      "key": "INKZR2N3",
+      "version": 149554,
+      "itemType": "journalArticle",
+      "title": "Temporal Labels and Specifications in Monolingual English Dictionaries",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Juhani",
+          "lastName": "Norri"
+        }
+      ],
+      "abstractNote": "The article examines the temporal labels and other specifications of time affixed to twenty-five words in monolingual dictionaries of English. The selection of works studied includes learners\u2019, collegiate, and general-purpose dictionaries, both British and American. In addition, the treatment of the lexemes in the Oxford English Dictionary is noted. The analysis reveals some clear differences between the different types of dictionaries in the overall propensity to furnish temporal labels and other specifications of time. The terminology employed to convey such information varies from one group of dictionaries to another. There is also plenty of variation between the individual volumes inside each group. The target audience of the works examined varies, which explains some of the differences in the treatment of particular lexemes. In general, Osselton\u2019s calls for more consistent terminology in the labelling of old words, presented several decades ago, are still valid. The differences between the labels are not always clear, and the explanations in the front matter of the dictionary may be lacking or unhelpful.",
+      "publicationTitle": "International Journal of Lexicography",
+      "volume": "35",
+      "issue": "4",
+      "pages": "397-426",
+      "date": "2022-12-01",
+      "series": "",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "International Journal of Lexicography",
+      "language": "eng",
+      "DOI": "10.1093/ijl/ecac013",
+      "ISSN": "0950-3846",
+      "shortTitle": "",
+      "url": "https://doi.org/10.1093/ijl/ecac013",
+      "accessDate": "2024-03-07T15:36:03Z",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "Silverchair",
+      "callNumber": "",
+      "rights": "",
+      "extra": "https://lexbib.elex.is/entity/Q34137\n",
+      "tags": [
+        {
+          "tag": "on-wikibase"
+        }
+      ],
+      "collections": [
+        "G82WEXCH"
+      ],
+      "relations": {},
+      "dateAdded": "2024-03-07T17:19:33Z",
+      "dateModified": "2024-03-07T18:20:26Z"
+    },
+    "wikibase_entity": "Q34137"
+  },
+  {
+    "key": "QXJFB5MP",
+    "version": 149553,
+    "library": {
+      "type": "group",
+      "id": 1892855,
+      "name": "LexBib",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/lexbib",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/1892855/items/QXJFB5MP",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/lexbib/items/QXJFB5MP",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/1892855/items/JYLCI6T3",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 161335
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Considine",
+      "parsedDate": "2023-03-01",
+      "numChildren": 1
+    },
+    "data": {
+      "key": "QXJFB5MP",
+      "version": 149553,
+      "itemType": "journalArticle",
+      "title": "Periodical Evidence for the Original Publication of Richardson\u2019s New Dictionary of the English Language",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "John",
+          "lastName": "Considine"
+        }
+      ],
+      "abstractNote": "Charles Richardson\u2019s New Dictionary of the English Language is a work of great importance for the history of lexicography, but the dates of its first serial publication from 1818 onwards among the 59 instalments of the Encyclopaedia Metropolitana appear never to have been ascertained. They are worked out here, together with the alphabetical ranges of many instalments, from announcements in contemporary periodicals such as the Athenaeum, the Morning Chronicle, and The Times, and are followed by extracts from the first reviews of the dictionary in the same periodicals.",
+      "publicationTitle": "International Journal of Lexicography",
+      "volume": "36",
+      "issue": "1",
+      "pages": "1-13",
+      "date": "2023-03-01",
+      "series": "",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "International Journal of Lexicography",
+      "language": "eng",
+      "DOI": "10.1093/ijl/ecac018",
+      "ISSN": "0950-3846",
+      "shortTitle": "",
+      "url": "https://doi.org/10.1093/ijl/ecac018",
+      "accessDate": "2024-03-07T15:37:35Z",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "Silverchair",
+      "callNumber": "",
+      "rights": "",
+      "extra": "https://lexbib.elex.is/entity/Q34138\n",
+      "tags": [
+        {
+          "tag": "on-wikibase"
+        }
+      ],
+      "collections": [
+        "G82WEXCH"
+      ],
+      "relations": {},
+      "dateAdded": "2024-03-07T17:19:38Z",
+      "dateModified": "2024-03-07T18:20:26Z"
+    },
+    "wikibase_entity": "Q34138"
+  },
+  {
+    "key": "6G35NUS2",
+    "version": 149552,
+    "library": {
+      "type": "group",
+      "id": 1892855,
+      "name": "LexBib",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/lexbib",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/1892855/items/6G35NUS2",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/lexbib/items/6G35NUS2",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/1892855/items/VQ7NP9FJ",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 232547
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Loveland",
+      "parsedDate": "2023-03-01",
+      "numChildren": 1
+    },
+    "data": {
+      "key": "6G35NUS2",
+      "version": 149552,
+      "itemType": "journalArticle",
+      "title": "Verbs and Adjectives to Nouns: The Evolution of Headwords in Encyclopedias from the Late Seventeenth to the Late Nineteenth Century",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Jeff",
+          "lastName": "Loveland"
+        }
+      ],
+      "abstractNote": "This article examines the changing forms of headwords in the partial differentiation of encyclopedias away from dictionaries from the late seventeenth century to the late nineteenth century. In the past, this differentiation has mostly been studied as a process of reducing lexical content in encyclopedias and reducing encyclopedic content in dictionaries, but it also manifested itself in the grammatical forms of allowable headwords. Specifically, proto-encyclopedias of the seventeenth and eighteenth centuries tended to accept verbs and adjectives as headwords, whereas many general encyclopedias from the mid-nineteenth century onward virtually eliminated any headwords except nouns. Here I point to three causes for this development in encyclopedias\u2019 headwords: an influx of historical material as general encyclopedias acquired their modern scope, a de-emphasis on terminology and technolects in favor of coverage of concepts, and a rising concern for standardization and making it easier for readers to find what they wanted.",
+      "publicationTitle": "International Journal of Lexicography",
+      "volume": "36",
+      "issue": "1",
+      "pages": "14-28",
+      "date": "2023-03-01",
+      "series": "",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "International Journal of Lexicography",
+      "language": "eng",
+      "DOI": "10.1093/ijl/ecac022",
+      "ISSN": "0950-3846",
+      "shortTitle": "Verbs and Adjectives to Nouns",
+      "url": "https://doi.org/10.1093/ijl/ecac022",
+      "accessDate": "2024-03-07T15:37:37Z",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "Silverchair",
+      "callNumber": "",
+      "rights": "",
+      "extra": "https://lexbib.elex.is/entity/Q34139\n",
+      "tags": [
+        {
+          "tag": "on-wikibase"
+        }
+      ],
+      "collections": [
+        "G82WEXCH"
+      ],
+      "relations": {},
+      "dateAdded": "2024-03-07T17:19:39Z",
+      "dateModified": "2024-03-07T18:20:25Z"
+    },
+    "wikibase_entity": "Q34139"
+  },
+  {
+    "key": "L9WKFT6C",
+    "version": 149551,
+    "library": {
+      "type": "group",
+      "id": 1892855,
+      "name": "LexBib",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/lexbib",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/1892855/items/L9WKFT6C",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/lexbib/items/L9WKFT6C",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/1892855/items/UUXHNWCC",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 969269
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Ptasznik",
+      "parsedDate": "2023-03-01",
+      "numChildren": 1
+    },
+    "data": {
+      "key": "L9WKFT6C",
+      "version": 149551,
+      "itemType": "journalArticle",
+      "title": "More Examples May Benefit Dictionary Users",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Bartosz",
+          "lastName": "Ptasznik"
+        }
+      ],
+      "abstractNote": "There is no doubt that example sentences enhance a dictionary\u2019s value by providing dictionary users with the typical context of words. But how many examples do dictionary users need in a dictionary, or how many examples in a dictionary lead to confusion? The aim of the paper is twofold. First, an attempt will be made to investigate the usefulness of encoding examples in language production. Second, the aim will be to see whether a multitude of encoding examples exhibiting various types of syntax and collocation patterns confuse or benefit students of English during a translation task. 213 Polish learners of English participated in the study. To achieve the aims of the present study, mixed-effects logistic models were fitted and analyzed for the purpose of statistical analysis. The findings of the current study suggest that the presence of encoding examples in dictionaries is beneficial to learners of English in language production. Also, it can be inferred from the data that exposure to eight examples exhibiting two target syntax/collocation patterns of use is equally helpful to dictionary users as the availability of three examples exhibiting a single target syntax/collocation pattern.",
+      "publicationTitle": "International Journal of Lexicography",
+      "volume": "36",
+      "issue": "1",
+      "pages": "29-55",
+      "date": "2023-03-01",
+      "series": "",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "International Journal of Lexicography",
+      "language": "eng",
+      "DOI": "10.1093/ijl/ecac015",
+      "ISSN": "0950-3846",
+      "shortTitle": "",
+      "url": "https://doi.org/10.1093/ijl/ecac015",
+      "accessDate": "2024-03-07T15:37:39Z",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "Silverchair",
+      "callNumber": "",
+      "rights": "",
+      "extra": "https://lexbib.elex.is/entity/Q34140\n",
+      "tags": [
+        {
+          "tag": "on-wikibase"
+        }
+      ],
+      "collections": [
+        "G82WEXCH"
+      ],
+      "relations": {},
+      "dateAdded": "2024-03-07T17:19:40Z",
+      "dateModified": "2024-03-07T18:20:25Z"
+    },
+    "wikibase_entity": "Q34140"
+  },
+  {
+    "key": "JH5KXLPY",
+    "version": 149550,
+    "library": {
+      "type": "group",
+      "id": 1892855,
+      "name": "LexBib",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/lexbib",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/1892855/items/JH5KXLPY",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/lexbib/items/JH5KXLPY",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/1892855/items/QQPXDJV2",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 1541710
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Moreland and Sangster",
+      "parsedDate": "2023-03-01",
+      "numChildren": 1
+    },
+    "data": {
+      "key": "JH5KXLPY",
+      "version": 149550,
+      "itemType": "journalArticle",
+      "title": "Pronunciations of Combining Forms and Affixes in the Oxford English Dictionary",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Matthew",
+          "lastName": "Moreland"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Catherine",
+          "lastName": "Sangster"
+        }
+      ],
+      "abstractNote": "The third edition of the Oxford English Dictionary (OED3) incorporates a new approach to the pronunciation sections of combining form and affix entries. Headword-level pronunciations are replaced by statements pertaining to typical stress patterns and vowel reduction, while thousands of lemmas contained within these entries receive British and American pronunciations for the first time. Accounting for the four different structures of current OED combining form and affix entries, the integration of pronunciation information is tailored to supply the user with an appropriate and useful level of information in each case.",
+      "publicationTitle": "International Journal of Lexicography",
+      "volume": "36",
+      "issue": "1",
+      "pages": "56-67",
+      "date": "2023-03-01",
+      "series": "",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "International Journal of Lexicography",
+      "language": "eng",
+      "DOI": "10.1093/ijl/ecac017",
+      "ISSN": "0950-3846",
+      "shortTitle": "",
+      "url": "https://doi.org/10.1093/ijl/ecac017",
+      "accessDate": "2024-03-07T15:37:41Z",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "Silverchair",
+      "callNumber": "",
+      "rights": "",
+      "extra": "https://lexbib.elex.is/entity/Q34141\n",
+      "tags": [
+        {
+          "tag": "on-wikibase"
+        }
+      ],
+      "collections": [
+        "G82WEXCH"
+      ],
+      "relations": {},
+      "dateAdded": "2024-03-07T17:19:41Z",
+      "dateModified": "2024-03-07T18:20:24Z"
+    },
+    "wikibase_entity": "Q34141"
+  },
+  {
+    "key": "MPWZ72ZJ",
+    "version": 149549,
+    "library": {
+      "type": "group",
+      "id": 1892855,
+      "name": "LexBib",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/lexbib",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/1892855/items/MPWZ72ZJ",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/lexbib/items/MPWZ72ZJ",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/1892855/items/8YS4WYYK",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 2144013
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Lukan\u010di\u010d",
+      "parsedDate": "2023-06-01",
+      "numChildren": 1
+    },
+    "data": {
+      "key": "MPWZ72ZJ",
+      "version": 149549,
+      "itemType": "journalArticle",
+      "title": "Compilation of English Entries in the Contemporary Slovene Dictionary of Abbreviations",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Mojca Kompara",
+          "lastName": "Lukan\u010di\u010d"
+        }
+      ],
+      "abstractNote": "This article presents the compilation of entries for English abbreviations starting with A, which is part of a larger work, the Contemporary Slovene Dictionary of Abbreviations (CSDA), which is available on the Termania webpage. The structure of the entries was determined following an analysis of the layout and characteristics of entries in English dictionaries of abbreviations. Eleven Slovene terminological dictionaries and seven English dictionaries of abbreviations were examined to determine the structure of the entries. Based on the examples presented, a compilation structure was determined, and examples of entries for English abbreviations starting with A are presented. The structure used for the English abbreviations is an example of good practice that will be used in further compilation of CSDA.",
+      "publicationTitle": "International Journal of Lexicography",
+      "volume": "36",
+      "issue": "2",
+      "pages": "195-210",
+      "date": "2023-06-01",
+      "series": "",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "International Journal of Lexicography",
+      "language": "eng",
+      "DOI": "10.1093/ijl/ecac016",
+      "ISSN": "0950-3846",
+      "shortTitle": "",
+      "url": "https://doi.org/10.1093/ijl/ecac016",
+      "accessDate": "2024-03-07T15:38:43Z",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "Silverchair",
+      "callNumber": "",
+      "rights": "",
+      "extra": "https://lexbib.elex.is/entity/Q34142\n",
+      "tags": [
+        {
+          "tag": "on-wikibase"
+        }
+      ],
+      "collections": [
+        "G82WEXCH"
+      ],
+      "relations": {},
+      "dateAdded": "2024-03-07T17:19:47Z",
+      "dateModified": "2024-03-07T18:20:24Z"
+    },
+    "wikibase_entity": "Q34142"
+  },
+  {
+    "key": "RVEQJFAF",
+    "version": 149548,
+    "library": {
+      "type": "group",
+      "id": 1892855,
+      "name": "LexBib",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/lexbib",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/1892855/items/RVEQJFAF",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/lexbib/items/RVEQJFAF",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/1892855/items/G6LHZQN7",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 840759
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Grefenstette and Hanks",
+      "parsedDate": "2023-06-01",
+      "numChildren": 1
+    },
+    "data": {
+      "key": "RVEQJFAF",
+      "version": 149548,
+      "itemType": "journalArticle",
+      "title": "Competing Views of Word Meaning: Word Embeddings and Word Senses",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Gregory",
+          "lastName": "Grefenstette"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Patrick",
+          "lastName": "Hanks"
+        }
+      ],
+      "abstractNote": "At least since the invention of writing, people have been troubled by the problem of what a word means. Dictionaries have traditionally been written with numbered word senses, giving the impression that the different senses of a word are fixed abstract entities, which can be used to separate usages into neat piles according to their different meanings. Adam Kilgarriff\u2019s daring 1997 article \u2018I Don\u2019t Believe in Word Senses\u2019 challenged this traditional view of word meaning, presenting an account in which \u2018the basic units are occurrences of the word in context\u2019. Kilgarriff went on to develop the Sketch Engine, a statistical tool that enables lexicographers and NLP researchers, teachers, and students to explore the relationship between meanings and collocations (words and their contexts). In this review article, we compare the information provided by Kilgarriff\u2019s Word Sketches with the recently developed Word Embedding techniques and with the results of Corpus Pattern Analysis.",
+      "publicationTitle": "International Journal of Lexicography",
+      "volume": "36",
+      "issue": "2",
+      "pages": "211-219",
+      "date": "2023-06-01",
+      "series": "",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "International Journal of Lexicography",
+      "language": "eng",
+      "DOI": "10.1093/ijl/ecad005",
+      "ISSN": "0950-3846",
+      "shortTitle": "Competing Views of Word Meaning",
+      "url": "https://doi.org/10.1093/ijl/ecad005",
+      "accessDate": "2024-03-07T15:38:45Z",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "Silverchair",
+      "callNumber": "",
+      "rights": "",
+      "extra": "https://lexbib.elex.is/entity/Q34143\n",
+      "tags": [
+        {
+          "tag": "on-wikibase"
+        }
+      ],
+      "collections": [
+        "G82WEXCH"
+      ],
+      "relations": {},
+      "dateAdded": "2024-03-07T17:19:48Z",
+      "dateModified": "2024-03-07T18:20:23Z"
+    },
+    "wikibase_entity": "Q34143"
+  },
+  {
+    "key": "XR8N69JH",
+    "version": 149547,
+    "library": {
+      "type": "group",
+      "id": 1892855,
+      "name": "LexBib",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/lexbib",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/1892855/items/XR8N69JH",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/lexbib/items/XR8N69JH",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/1892855/items/ZT6E5A62",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 130974
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Zhang and Hu",
+      "parsedDate": "2023-06-01",
+      "numChildren": 1
+    },
+    "data": {
+      "key": "XR8N69JH",
+      "version": 149547,
+      "itemType": "journalArticle",
+      "title": "A Comparative Study on the Microstructures of Chinese and English Monolingual General-purpose Dictionaries. Pingfang Yu. & Jinchun Tan",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Jun",
+          "lastName": "Zhang"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Wenfei",
+          "lastName": "Hu"
+        }
+      ],
+      "abstractNote": "",
+      "publicationTitle": "International Journal of Lexicography",
+      "volume": "36",
+      "issue": "2",
+      "pages": "220-226",
+      "date": "2023-06-01",
+      "series": "",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "International Journal of Lexicography",
+      "language": "eng",
+      "DOI": "10.1093/ijl/ecad002",
+      "ISSN": "0950-3846",
+      "shortTitle": "",
+      "url": "https://doi.org/10.1093/ijl/ecad002",
+      "accessDate": "2024-03-07T15:38:47Z",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "Silverchair",
+      "callNumber": "",
+      "rights": "",
+      "extra": "https://lexbib.elex.is/entity/Q34144\n",
+      "tags": [
+        {
+          "tag": "on-wikibase"
+        }
+      ],
+      "collections": [
+        "G82WEXCH"
+      ],
+      "relations": {},
+      "dateAdded": "2024-03-07T17:19:49Z",
+      "dateModified": "2024-03-07T18:20:23Z"
+    },
+    "wikibase_entity": "Q34144"
+  },
+  {
+    "key": "9TPCWICX",
+    "version": 149546,
+    "library": {
+      "type": "group",
+      "id": 1892855,
+      "name": "LexBib",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/lexbib",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/1892855/items/9TPCWICX",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/lexbib/items/9TPCWICX",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/1892855/items/B3YCKLIR",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 1670033
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "M\u011bchura",
+      "parsedDate": "2023-09-01",
+      "numChildren": 1
+    },
+    "data": {
+      "key": "9TPCWICX",
+      "version": 149546,
+      "itemType": "journalArticle",
+      "title": "Avoiding Recursion in the Representation of Subsenses and Subentries in Dictionaries",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Michal",
+          "lastName": "M\u011bchura"
+        }
+      ],
+      "abstractNote": "Recursion, and recursion-like design patterns, are used in the entry schemas of dictionaries to model subsenses and subentries. Recursion occurs when elements of a given type, such as sense, are allowed to contain elements of the same or similar type, such as sense or subsense. This article argues that recursion unnecessarily increases the computational complexity of entries, making dictionaries less easily processable by machines. The article will show how entry schemas can be simplified by re-engineering subsenses and subentries as relations (like in a relational database) such that we only have flat lists of senses and entries, while the is-subsense-of and is-subentry-of relations are encoded using pairs of unique identifiers. This design pattern losslessly records the same information as recursion (including \u2013 importantly \u2013 the listing order of items inside an entry) but decreases the complexity of the entry structure and makes dictionary entries more easily machine-processable.",
+      "publicationTitle": "International Journal of Lexicography",
+      "volume": "36",
+      "issue": "3",
+      "pages": "260-278",
+      "date": "2023-09-01",
+      "series": "",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "International Journal of Lexicography",
+      "language": "eng",
+      "DOI": "10.1093/ijl/ecad012",
+      "ISSN": "0950-3846",
+      "shortTitle": "",
+      "url": "https://doi.org/10.1093/ijl/ecad012",
+      "accessDate": "2024-03-07T15:39:51Z",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "Silverchair",
+      "callNumber": "",
+      "rights": "",
+      "extra": "https://lexbib.elex.is/entity/Q34145\n",
+      "tags": [
+        {
+          "tag": "on-wikibase"
+        }
+      ],
+      "collections": [
+        "G82WEXCH"
+      ],
+      "relations": {},
+      "dateAdded": "2024-03-07T17:19:50Z",
+      "dateModified": "2024-03-07T18:20:22Z"
+    },
+    "wikibase_entity": "Q34145"
+  },
+  {
+    "key": "WKNUXJ6E",
+    "version": 149545,
+    "library": {
+      "type": "group",
+      "id": 1892855,
+      "name": "LexBib",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/lexbib",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/1892855/items/WKNUXJ6E",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/lexbib/items/WKNUXJ6E",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/1892855/items/VI4DCSFQ",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 584659
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Rudnicka et al.",
+      "parsedDate": "2023-03-01",
+      "numChildren": 1
+    },
+    "data": {
+      "key": "WKNUXJ6E",
+      "version": 149545,
+      "itemType": "journalArticle",
+      "title": "In Search of Gaps between Languages and Wordnets: the Case of Polish-English WordNet",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Ewa",
+          "lastName": "Rudnicka"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "\u0141ukasz",
+          "lastName": "Grabowski"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Maciej",
+          "lastName": "Piasecki"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Tomasz",
+          "lastName": "Naskr\u0119t"
+        }
+      ],
+      "abstractNote": "The results of manual mapping of Polish plWordNet onto English Princeton WordNet revealed a number of gaps and mismatches between those interlinked lexical resources. Preliminary studies have shown that they embrace wordnet-specific and language-specific differences, and in this exploratory study we focus on the latter, also called lacunae. Capitalising on the system of equivalence types and features for linking wordnet senses (Rudnicka et al. 2019), we present a semi-automatic, rule-based diagnostic system developed specifically for systematic detection and classification of gaps and mismatches between wordnets. First, focusing on noun synsets, we aim to identify those network fragments that are the most prone to reveal lexical and referential gaps (Svens\u00e9n 2009). Second, we attempt to identify areas in an interlinked Polish-English wordnet that require resource expansion or modification of the existing network of inter-lingual relations.",
+      "publicationTitle": "International Journal of Lexicography",
+      "volume": "36",
+      "issue": "1",
+      "pages": "68-92",
+      "date": "2023-03-01",
+      "series": "",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "International Journal of Lexicography",
+      "language": "eng",
+      "DOI": "10.1093/ijl/ecac005",
+      "ISSN": "0950-3846",
+      "shortTitle": "In Search of Gaps between Languages and Wordnets",
+      "url": "https://doi.org/10.1093/ijl/ecac005",
+      "accessDate": "2024-03-07T15:37:43Z",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "Silverchair",
+      "callNumber": "",
+      "rights": "",
+      "extra": "https://lexbib.elex.is/entity/Q34146\n",
+      "tags": [
+        {
+          "tag": "on-wikibase"
+        }
+      ],
+      "collections": [
+        "G82WEXCH"
+      ],
+      "relations": {},
+      "dateAdded": "2024-03-07T17:19:42Z",
+      "dateModified": "2024-03-07T18:20:22Z"
+    },
+    "wikibase_entity": "Q34146"
+  },
+  {
+    "key": "9HJGHUFH",
+    "version": 149544,
+    "library": {
+      "type": "group",
+      "id": 1892855,
+      "name": "LexBib",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/lexbib",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/1892855/items/9HJGHUFH",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/lexbib/items/9HJGHUFH",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/1892855/items/NCE5LMH6",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 1247073
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Rees",
+      "parsedDate": "2023-06-01",
+      "numChildren": 1
+    },
+    "data": {
+      "key": "9HJGHUFH",
+      "version": 149544,
+      "itemType": "journalArticle",
+      "title": "Online Dictionaries and Accessibility for People with Visual Impairments",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Geraint Paul",
+          "lastName": "Rees"
+        }
+      ],
+      "abstractNote": "Making information about language accessible to users has long been a key concern of lexicographic research. Adopting a narrower perspective, this examination of three dictionary websites (collinsdictionary.com, merriam-webster.com, and dle.rae.es) employs the Web Content Accessibility Guidelines (WCAG) to examine their accessibility for people with visual impairments. Dictionaries can be motors for social inclusion of this oft-marginalised group since, beyond resolving language doubts, they can also help affirm socio-cultural identities. Unlike paper dictionaries where space-saving conventions make accessibility a challenge, in principle, online resources are adaptable to the needs of users with visual impairments. In practice, although none of the websites evaluated meet any officially recognised WCAG conformance level, they do contain features aimed at improving accessibility for this group. Most impediments to accessibility are the result of ancillary elements such as advertising, social media, games, and word of the day features. Although these ancillary elements may not necessarily be the principal focus of dictionary use, they nonetheless have a negative effect on the accessibility of the dictionary entry itself. This article concludes with suggestions for solving several of these accessibility issues.",
+      "publicationTitle": "International Journal of Lexicography",
+      "volume": "36",
+      "issue": "2",
+      "pages": "107-132",
+      "date": "2023-06-01",
+      "series": "",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "International Journal of Lexicography",
+      "language": "eng",
+      "DOI": "10.1093/ijl/ecac021",
+      "ISSN": "0950-3846",
+      "shortTitle": "",
+      "url": "https://doi.org/10.1093/ijl/ecac021",
+      "accessDate": "2024-03-07T15:38:33Z",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "Silverchair",
+      "callNumber": "",
+      "rights": "",
+      "extra": "https://lexbib.elex.is/entity/Q34147\n",
+      "tags": [
+        {
+          "tag": "on-wikibase"
+        }
+      ],
+      "collections": [
+        "G82WEXCH"
+      ],
+      "relations": {},
+      "dateAdded": "2024-03-07T17:19:43Z",
+      "dateModified": "2024-03-07T18:20:21Z"
+    },
+    "wikibase_entity": "Q34147"
+  },
+  {
+    "key": "VFT9I2SG",
+    "version": 149543,
+    "library": {
+      "type": "group",
+      "id": 1892855,
+      "name": "LexBib",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/lexbib",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/1892855/items/VFT9I2SG",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/lexbib/items/VFT9I2SG",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/1892855/items/YIHDSSUN",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 471622
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Prichard and Atkins",
+      "parsedDate": "2023-06-01",
+      "numChildren": 1
+    },
+    "data": {
+      "key": "VFT9I2SG",
+      "version": 149543,
+      "itemType": "journalArticle",
+      "title": "The Outcomes and Interplay of Vocabulary Coping Strategies and Dictionary Skills in Task-Based Reading: An Eye Tracking Study",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Caleb",
+          "lastName": "Prichard"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Andrew",
+          "lastName": "Atkins"
+        }
+      ],
+      "abstractNote": "This research utilised eye tracking to examine the vocabulary coping strategies and dictionary skills of Japanese English learners in task-based reading. Participants had access to an online dictionary with four definitions per word, including three inapplicable definitions. The interplay and outcomes of reading strategies and dictionary skills were investigated. The research found that performance was not statistically different compared to previous research where participants had access to a dictionary with only the applicable definition. Given the more difficult dictionary, participants more often made regressions to investigate the context in the text, but they did not reduce their dictionary use. Most participants lacked strategic competence while reading, but they demonstrated competence in dictionary skills. In rare instances of failed dictionary use, readers usually had not inspected the context cues in the text. For task-relevant words, participants who re-read context cues and then used the dictionary performed better. Implications for educators and materials developers are discussed.",
+      "publicationTitle": "International Journal of Lexicography",
+      "volume": "36",
+      "issue": "2",
+      "pages": "133-148",
+      "date": "2023-06-01",
+      "series": "",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "International Journal of Lexicography",
+      "language": "eng",
+      "DOI": "10.1093/ijl/ecad003",
+      "ISSN": "0950-3846",
+      "shortTitle": "The Outcomes and Interplay of Vocabulary Coping Strategies and Dictionary Skills in Task-Based Reading",
+      "url": "https://doi.org/10.1093/ijl/ecad003",
+      "accessDate": "2024-03-07T15:38:35Z",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "Silverchair",
+      "callNumber": "",
+      "rights": "",
+      "extra": "https://lexbib.elex.is/entity/Q34148\n",
+      "tags": [
+        {
+          "tag": "on-wikibase"
+        }
+      ],
+      "collections": [
+        "G82WEXCH"
+      ],
+      "relations": {},
+      "dateAdded": "2024-03-07T17:19:44Z",
+      "dateModified": "2024-03-07T18:20:21Z"
+    },
+    "wikibase_entity": "Q34148"
+  },
+  {
+    "key": "6BUVHQ7R",
+    "version": 149542,
+    "library": {
+      "type": "group",
+      "id": 1892855,
+      "name": "LexBib",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/lexbib",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/1892855/items/6BUVHQ7R",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/lexbib/items/6BUVHQ7R",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/1892855/items/98EJZ7ZI",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 287415
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Vrbinc et al.",
+      "parsedDate": "2023-06-01",
+      "numChildren": 1
+    },
+    "data": {
+      "key": "6BUVHQ7R",
+      "version": 149542,
+      "itemType": "journalArticle",
+      "title": "The Lexicographer\u2019s Dream Audience: Dictionary Use among English Majors at a Slovenian University",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Marjeta",
+          "lastName": "Vrbinc"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Alenka",
+          "lastName": "Vrbinc"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Donna M. T. Cr",
+          "lastName": "Farina"
+        }
+      ],
+      "abstractNote": "Interviews with undergraduate students from the University of Ljubljana, who are majoring in English and can be considered language specialists, investigated habits of dictionary use, look-up abilities, and perceptions of the utility and quality of definitions and illustrative examples. This contrasts with a parallel study (Farina et al. 2019) with undergraduates majoring in business and economics. Like the parallel study, this study was based on fourteen questions and nine contexts containing a clearly-marked common word used in an infrequent sense; participants had to locate the sense in a dictionary that, at the time of the studies, was the online Merriam\u2013Webster Learner\u2019s Dictionary, rebranded today as The Britannica Dictionary. Participants were asked to think aloud as they looked up words. Among other results, the study revealed that its participants, while they were linguistically-educated and experienced, did not fully grasp the complexity of presenting dictionary information online.",
+      "publicationTitle": "International Journal of Lexicography",
+      "volume": "36",
+      "issue": "2",
+      "pages": "149-172",
+      "date": "2023-06-01",
+      "series": "",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "International Journal of Lexicography",
+      "language": "eng",
+      "DOI": "10.1093/ijl/ecac019",
+      "ISSN": "0950-3846",
+      "shortTitle": "The Lexicographer\u2019s Dream Audience",
+      "url": "https://doi.org/10.1093/ijl/ecac019",
+      "accessDate": "2024-03-07T15:38:38Z",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "Silverchair",
+      "callNumber": "",
+      "rights": "",
+      "extra": "https://lexbib.elex.is/entity/Q34149\n",
+      "tags": [
+        {
+          "tag": "on-wikibase"
+        }
+      ],
+      "collections": [
+        "G82WEXCH"
+      ],
+      "relations": {},
+      "dateAdded": "2024-03-07T17:19:45Z",
+      "dateModified": "2024-03-07T18:20:20Z"
+    },
+    "wikibase_entity": "Q34149"
+  },
+  {
+    "key": "I9P4KNJR",
+    "version": 149541,
+    "library": {
+      "type": "group",
+      "id": 1892855,
+      "name": "LexBib",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/lexbib",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/1892855/items/I9P4KNJR",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/lexbib/items/I9P4KNJR",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/1892855/items/3PC9AIV3",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 301460
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "M\u00e1rkus et al.",
+      "parsedDate": "2023-06-01",
+      "numChildren": 1
+    },
+    "data": {
+      "key": "I9P4KNJR",
+      "version": 149541,
+      "itemType": "journalArticle",
+      "title": "Dictionary Skills in Teaching English and German as a Foreign Language in Hungary: A Questionnaire Study",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Katalin P.",
+          "lastName": "M\u00e1rkus"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Bal\u00e1zs",
+          "lastName": "Fajt"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Ida",
+          "lastName": "Dring\u00f3-Horv\u00e1th"
+        }
+      ],
+      "abstractNote": "This study investigates the dictionary use of graduates in English and German as well as their attitudes towards teaching and learning dictionary skills in the classroom. The first section of the paper offers a historical overview of research on dictionary use and dictionary didactics in Hungary. This is followed by the detailed description of the quantitative research, which aims to investigate the participants\u2019 (n=197) self-reported preferences and attitudes regarding dictionary use, their dictionary consultation behaviour, and the role of dictionaries as an aid to language learning and teaching. The research results partly confirm the trends revealed in previous international studies (e.g. increased use of online tools, reluctance to pay for dictionaries, low prestige of teaching dictionary use); they also show that there is a need for dictionary use skills to be taught from an early age and for placing a special emphasis on features and search strategies in the case of digital dictionaries. Based on these findings, the authors plan to design a core \u2018dictionary skills\u2019 module (with teaching aids and handbooks), which could be incorporated into a variety of courses in tertiary education.",
+      "publicationTitle": "International Journal of Lexicography",
+      "volume": "36",
+      "issue": "2",
+      "pages": "173-194",
+      "date": "2023-06-01",
+      "series": "",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "International Journal of Lexicography",
+      "language": "eng",
+      "DOI": "10.1093/ijl/ecad004",
+      "ISSN": "0950-3846",
+      "shortTitle": "Dictionary Skills in Teaching English and German as a Foreign Language in Hungary",
+      "url": "https://doi.org/10.1093/ijl/ecad004",
+      "accessDate": "2024-03-07T15:38:41Z",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "Silverchair",
+      "callNumber": "",
+      "rights": "",
+      "extra": "https://lexbib.elex.is/entity/Q34150\n",
+      "tags": [
+        {
+          "tag": "on-wikibase"
+        }
+      ],
+      "collections": [
+        "G82WEXCH"
+      ],
+      "relations": {},
+      "dateAdded": "2024-03-07T17:19:46Z",
+      "dateModified": "2024-03-07T18:20:20Z"
+    },
+    "wikibase_entity": "Q34150"
+  },
+  {
+    "key": "9QY2BLPJ",
+    "version": 149540,
+    "library": {
+      "type": "group",
+      "id": 1892855,
+      "name": "LexBib",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/lexbib",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/1892855/items/9QY2BLPJ",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/lexbib/items/9QY2BLPJ",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/1892855/items/7ZWNA6PV",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 3089463
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Dom\u00ednguez V\u00e1zquez and Gouws",
+      "parsedDate": "2023-09-01",
+      "numChildren": 1
+    },
+    "data": {
+      "key": "9QY2BLPJ",
+      "version": 149540,
+      "itemType": "journalArticle",
+      "title": "The Definition, Presentation and Automatic Generation of Contextual Data in Lexicography",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Mar\u00eda Jos\u00e9",
+          "lastName": "Dom\u00ednguez V\u00e1zquez"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Rufus H.",
+          "lastName": "Gouws"
+        }
+      ],
+      "abstractNote": "This paper deals with several aspects of context in lexicography. Section 1 briefly mentions some different approaches to the concept context in various fields. Section 2 puts the focus on different uses and perceptions of the concept context in lexicography, contrasting it with related concepts, such as cotext, contextualization and contextual information. A more comprehensive discussion also covers different aspects of the occurrence of the concept context in dictionary research, with specific reference to central aspects of the so-called inner and outer context. Various portals, dictionaries and dictionary entries will illustrate the above-mentioned approaches. Section 3 approaches the subject from a user perspective. Section 4 addresses the question How can contextual data be extracted or generated? To answer this question, some methods and tools for (automatic) acquisition and analysis of contextual data, \u2013 in particular of the local contextual data in terms of Faber and Le\u00f3n-Ara\u00faz (2016) \u2013 are introduced. Examples of these are lexical databases or semantic networks, like WordNet, and corpora, like Sketch Engine, or predictive methods, like Word2vec and similar ones. Some advantages and disadvantages of specific data acquisition tools used for the analysis of local contextual data are indicated. This section also contributes to a more detailed discussion of the automatic generation of the so-called local syntactic-semantic context or word environment, specifically of the building of syntactic-semantic argument patterns and their examples.",
+      "publicationTitle": "International Journal of Lexicography",
+      "volume": "36",
+      "issue": "3",
+      "pages": "233-259",
+      "date": "2023-09-01",
+      "series": "",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "International Journal of Lexicography",
+      "language": "eng",
+      "DOI": "10.1093/ijl/ecac020",
+      "ISSN": "0950-3846",
+      "shortTitle": "",
+      "url": "https://doi.org/10.1093/ijl/ecac020",
+      "accessDate": "2024-03-07T15:39:49Z",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "Silverchair",
+      "callNumber": "",
+      "rights": "",
+      "extra": "https://lexbib.elex.is/entity/Q34151\n",
+      "tags": [
+        {
+          "tag": "on-wikibase"
+        }
+      ],
+      "collections": [
+        "G82WEXCH"
+      ],
+      "relations": {},
+      "dateAdded": "2024-03-07T17:19:49Z",
+      "dateModified": "2024-03-07T18:20:19Z"
+    },
+    "wikibase_entity": "Q34151"
+  },
+  {
+    "key": "4V8YHSZ6",
+    "version": 149539,
+    "library": {
+      "type": "group",
+      "id": 1892855,
+      "name": "LexBib",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/lexbib",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/1892855/items/4V8YHSZ6",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/lexbib/items/4V8YHSZ6",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/1892855/items/9CDZNXIR",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 513469
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Kompara Lukan\u010di\u010d",
+      "parsedDate": "2023-09-01",
+      "numChildren": 1
+    },
+    "data": {
+      "key": "4V8YHSZ6",
+      "version": 149539,
+      "itemType": "journalArticle",
+      "title": "The Compilation of the English\u2013Slovene Dictionary of Criminal Justice and Security Abbreviations",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Mojca",
+          "lastName": "Kompara Lukan\u010di\u010d"
+        }
+      ],
+      "abstractNote": "The article highlights the compilation of specialised dictionaries, focusing mainly on the characteristics of dictionary entries of abbreviations in terminological dictionaries for Slovene. Special attention is given to the compilation and characteristics of the dictionary entries of abbreviations in the Slovene terminological dictionaries published by the Fran Ramov\u0161 Institute of the Slovenian language. The paper presents an overview of the characteristics of the terminological dictionaries for Slovene and provides examples of good practice that were used in the compilation of the English\u2013Slovene Dictionary of Criminal Justice and Security Abbreviations. The paper presents the microstructure of the dictionary, and selected examples of Slovene and English\u2013Slovene dictionary entries, as well as the overall compilation process, the selection of terms and the inclusion of related subfields. The English\u2013Slovene Dictionary of Criminal Justice and Security Abbreviations is a growing dictionary compiled in the freely available dictionary mask Termania, and freely accessible on the portal Slovarji.si. The dictionary is the first Slovene terminological dictionary of abbreviations for the field of criminal justice and security.",
+      "publicationTitle": "International Journal of Lexicography",
+      "volume": "36",
+      "issue": "3",
+      "pages": "279-289",
+      "date": "2023-09-01",
+      "series": "",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "International Journal of Lexicography",
+      "language": "eng",
+      "DOI": "10.1093/ijl/ecad009",
+      "ISSN": "0950-3846",
+      "shortTitle": "",
+      "url": "https://doi.org/10.1093/ijl/ecad009",
+      "accessDate": "2024-03-07T15:39:53Z",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "Silverchair",
+      "callNumber": "",
+      "rights": "",
+      "extra": "https://lexbib.elex.is/entity/Q34152\n",
+      "tags": [
+        {
+          "tag": "on-wikibase"
+        }
+      ],
+      "collections": [
+        "G82WEXCH"
+      ],
+      "relations": {},
+      "dateAdded": "2024-03-07T17:19:51Z",
+      "dateModified": "2024-03-07T18:20:19Z"
+    },
+    "wikibase_entity": "Q34152"
+  },
+  {
+    "key": "RDN7I64J",
+    "version": 149538,
+    "library": {
+      "type": "group",
+      "id": 1892855,
+      "name": "LexBib",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/lexbib",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/1892855/items/RDN7I64J",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/lexbib/items/RDN7I64J",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/1892855/items/V8HNKWGC",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 835452
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Paulsen",
+      "parsedDate": "2023-09-01",
+      "numChildren": 1
+    },
+    "data": {
+      "key": "RDN7I64J",
+      "version": 149538,
+      "itemType": "journalArticle",
+      "title": "Wheat or Chaff? A Compound Selection Model Based on Look-Up Data",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Mikkel Ekeland",
+          "lastName": "Paulsen"
+        }
+      ],
+      "abstractNote": "Which compounds should be included in general-purpose dictionaries is often an open question that is answered with a case-by-case consideration of all compounds above a certain corpus frequency threshold. Another way to determine which compounds should be listed, is to examine which compounds, or rather which compound properties, are in demand by the users. This study uses look-up data from the two officially sanctioned, general-purpose dictionaries of Norwegian (Bokm\u00e5lsordboka and Nynorskordboka) to derive an explicit compound selection model that performs with comparable sensitivity and specificity as the traditional procedure. These findings demonstrate that it is indeed possible to arrive at a fully operational and explicit compound selection model that meets the needs of users. With such a tool at their disposal, lexicographers would be able to separate the wheat from the chaff in the boundless field that is the compound lexicon of North Germanic Languages.",
+      "publicationTitle": "International Journal of Lexicography",
+      "volume": "36",
+      "issue": "3",
+      "pages": "306-324",
+      "date": "2023-09-01",
+      "series": "",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "International Journal of Lexicography",
+      "language": "eng",
+      "DOI": "10.1093/ijl/ecad013",
+      "ISSN": "0950-3846",
+      "shortTitle": "Wheat or Chaff?",
+      "url": "https://doi.org/10.1093/ijl/ecad013",
+      "accessDate": "2024-03-07T15:39:57Z",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "Silverchair",
+      "callNumber": "",
+      "rights": "",
+      "extra": "https://lexbib.elex.is/entity/Q34153\n",
+      "tags": [
+        {
+          "tag": "on-wikibase"
+        }
+      ],
+      "collections": [
+        "G82WEXCH"
+      ],
+      "relations": {},
+      "dateAdded": "2024-03-07T17:19:53Z",
+      "dateModified": "2024-03-07T18:20:19Z"
+    },
+    "wikibase_entity": "Q34153"
+  },
+  {
+    "key": "J697Q59A",
+    "version": 149537,
+    "library": {
+      "type": "group",
+      "id": 1892855,
+      "name": "LexBib",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/lexbib",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/1892855/items/J697Q59A",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/lexbib/items/J697Q59A",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/1892855/items/42RDNMA4",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 843965
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Turin and Zamudio",
+      "parsedDate": "2023-09-01",
+      "numChildren": 1
+    },
+    "data": {
+      "key": "J697Q59A",
+      "version": 149537,
+      "itemType": "journalArticle",
+      "title": "A Review of Three Recent Dictionaries of Indigenous Languages Spoken in South America",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Mark",
+          "lastName": "Turin"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Ana Laura Arrieta",
+          "lastName": "Zamudio"
+        }
+      ],
+      "abstractNote": "In this review essay, we compare three recent dictionaries of Indigenous languages spoken in South America. The review covers two print dictionaries\u2014one of which is trilingual (Quechua, Spanish and English) and the other the second edition of a bilingual Q\u2019eqchi\u2019-English dictionary\u2014and a bilingual, digital dictionary hosted online (Wich\u00ed-Spanish). The structure of this review essay is as follows: first, we offer a brief introduction to each of the languages covered in the dictionaries. Following the introduction, we offer sections in which we compare the orthographic choices made by the compilers, entry design and ordering within the publications. We also address the overarching structure of each dictionary, questions of language production and reception, as well as editorial decisions relating to the incorporation of neologisms. In addition, we include an analysis of the intended audience and accessibility of each dictionary, supplemented by a reflection about ownership and control of language data, community investment and how these resources address dialectal variation within the language, if indeed any exists.",
+      "publicationTitle": "International Journal of Lexicography",
+      "volume": "36",
+      "issue": "3",
+      "pages": "325-337",
+      "date": "2023-09-01",
+      "series": "",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "International Journal of Lexicography",
+      "language": "eng",
+      "DOI": "10.1093/ijl/ecad006",
+      "ISSN": "0950-3846",
+      "shortTitle": "",
+      "url": "https://doi.org/10.1093/ijl/ecad006",
+      "accessDate": "2024-03-07T15:39:59Z",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "Silverchair",
+      "callNumber": "",
+      "rights": "",
+      "extra": "https://lexbib.elex.is/entity/Q34154\n",
+      "tags": [
+        {
+          "tag": "on-wikibase"
+        }
+      ],
+      "collections": [
+        "G82WEXCH"
+      ],
+      "relations": {},
+      "dateAdded": "2024-03-07T17:19:54Z",
+      "dateModified": "2024-03-07T18:20:18Z"
+    },
+    "wikibase_entity": "Q34154"
+  },
+  {
+    "key": "M3L9T5ZU",
+    "version": 149536,
+    "library": {
+      "type": "group",
+      "id": 1892855,
+      "name": "LexBib",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/lexbib",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/1892855/items/M3L9T5ZU",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/lexbib/items/M3L9T5ZU",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/1892855/items/IC9G5LFL",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 1012366
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "de Schryver",
+      "parsedDate": "2023-12-01",
+      "numChildren": 1
+    },
+    "data": {
+      "key": "M3L9T5ZU",
+      "version": 149536,
+      "itemType": "journalArticle",
+      "title": "Generative AI and Lexicography: The Current State of the Art Using ChatGPT",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Gilles-Maurice",
+          "lastName": "de Schryver"
+        }
+      ],
+      "abstractNote": "In this article, all ten papers and talks that have been devoted to the use of ChatGPT in lexicography so far are critically analysed, their results tabulated and cross-compared, from which the leading trends are determined. Extrapolating from the trendlines, a single short but robust new prompt is fine-tuned with which articles from different word classes are generated fully-automatically for a dictionary which compares favourably to the best practice in dictionary compilation. The conclusion is that a new age, that of the successful application of generative AI in lexicography, has dawned.",
+      "publicationTitle": "International Journal of Lexicography",
+      "volume": "36",
+      "issue": "4",
+      "pages": "355-387",
+      "date": "2023-12-01",
+      "series": "",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "International Journal of Lexicography",
+      "language": "eng",
+      "DOI": "10.1093/ijl/ecad021",
+      "ISSN": "0950-3846",
+      "shortTitle": "Generative AI and Lexicography",
+      "url": "https://doi.org/10.1093/ijl/ecad021",
+      "accessDate": "2024-03-07T15:40:32Z",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "Silverchair",
+      "callNumber": "",
+      "rights": "",
+      "extra": "https://lexbib.elex.is/entity/Q34155\n",
+      "tags": [
+        {
+          "tag": "on-wikibase"
+        }
+      ],
+      "collections": [
+        "G82WEXCH"
+      ],
+      "relations": {},
+      "dateAdded": "2024-03-07T17:19:55Z",
+      "dateModified": "2024-03-07T18:20:18Z"
+    },
+    "wikibase_entity": "Q34155"
+  },
+  {
+    "key": "CNDBSI8J",
+    "version": 149535,
+    "library": {
+      "type": "group",
+      "id": 1892855,
+      "name": "LexBib",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/lexbib",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/1892855/items/CNDBSI8J",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/lexbib/items/CNDBSI8J",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/1892855/items/ID4TJ3TI",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 261905
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Camacho-Ni\u00f1o",
+      "parsedDate": "2023-12-01",
+      "numChildren": 1
+    },
+    "data": {
+      "key": "CNDBSI8J",
+      "version": 149535,
+      "itemType": "journalArticle",
+      "title": "Two Ways of Representing Specialist Knowledge: Analysing the Botanical Lexicon in Diccionario de la Lengua Espa\u00f1ola and Diccionario del Espa\u00f1ol de M\u00e9xico1",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Jes\u00fas",
+          "lastName": "Camacho-Ni\u00f1o"
+        }
+      ],
+      "abstractNote": "This article explores the lexicographic codification of botanical knowledge in two general dictionaries: Diccionario de la lengua espa\u00f1ola (2014 [2021]), produced by the Real Academia Espa\u00f1ola in Spain, and Diccionario del espa\u00f1ol de M\u00e9xico (2019), published by El Colegio de M\u00e9xico. It begins with a historical overview of the inclusion of botanical terminology in general dictionaries by the Real Academia Espa\u00f1ola and by other authors. Then, it analyses the degree to which the botanical terms included in each dictionary meet the inclusion criteria established. Finally, it focuses on diatechnical labelling and the differences between the two dictionaries in terms of the disciplines to which terms are assigned. This allows us to draw conclusions regarding the representation of this field of knowledge in the two dictionaries and the lexicographic techniques used to produce them.",
+      "publicationTitle": "International Journal of Lexicography",
+      "volume": "36",
+      "issue": "4",
+      "pages": "409-423",
+      "date": "2023-12-01",
+      "series": "",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "International Journal of Lexicography",
+      "language": "eng",
+      "DOI": "10.1093/ijl/ecad014",
+      "ISSN": "0950-3846",
+      "shortTitle": "Two Ways of Representing Specialist Knowledge",
+      "url": "https://doi.org/10.1093/ijl/ecad014",
+      "accessDate": "2024-03-07T15:40:36Z",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "Silverchair",
+      "callNumber": "",
+      "rights": "",
+      "extra": "https://lexbib.elex.is/entity/Q34156\n",
+      "tags": [
+        {
+          "tag": "on-wikibase"
+        }
+      ],
+      "collections": [
+        "G82WEXCH"
+      ],
+      "relations": {},
+      "dateAdded": "2024-03-07T17:19:57Z",
+      "dateModified": "2024-03-07T18:20:17Z"
+    },
+    "wikibase_entity": "Q34156"
+  },
+  {
+    "key": "LVZKL5RH",
+    "version": 149534,
+    "library": {
+      "type": "group",
+      "id": 1892855,
+      "name": "LexBib",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/lexbib",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/1892855/items/LVZKL5RH",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/lexbib/items/LVZKL5RH",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/1892855/items/ML9KJRP6",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 281589
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Tremblay et al.",
+      "parsedDate": "2023-12-01",
+      "numChildren": 1
+    },
+    "data": {
+      "key": "LVZKL5RH",
+      "version": 149534,
+      "itemType": "journalArticle",
+      "title": "Teachers\u2019 Self-Reported Classroom Practices Regarding Dictionary Use: The Role of Teachers\u2019 Attitude and School Level",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Oph\u00e9lie",
+          "lastName": "Tremblay"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Isabelle",
+          "lastName": "Plante"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Catherine",
+          "lastName": "Fr\u00e9chette-Simard"
+        }
+      ],
+      "abstractNote": "This study examined the self-reported practices of 300 elementary and high school Quebec teachers regarding dictionary use (paper and electronic) in the classroom as a function of teaching level and attitudes towards dictionaries. ANOVA results highlighted the diversity of teachers\u2019 pedagogical intentions and students\u2019 learning goals while consulting dictionaries. Results, however, revealed a traditional portrait of dictionary use (e.g., correcting spelling, finding a word definition). In addition, teaching levels did not significantly influence teaching content and activities, nor teachers\u2019 perceptions of students\u2019 goals while using a dictionary. Nonetheless, teachers\u2019 attitudes towards dictionary use were found to significantly predict their classroom practices: those with a positive attitude reported a greater variety of pedagogical intentions (e.g., searching for synonyms) and reported more frequent and diversified dictionary-related activities. In sum, findings underscore the importance of training students and teachers in dictionary use to acquire (and teach) proper and diversified dictionary skills.",
+      "publicationTitle": "International Journal of Lexicography",
+      "volume": "36",
+      "issue": "4",
+      "pages": "466-485",
+      "date": "2023-12-01",
+      "series": "",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "International Journal of Lexicography",
+      "language": "eng",
+      "DOI": "10.1093/ijl/ecad017",
+      "ISSN": "0950-3846",
+      "shortTitle": "Teachers\u2019 Self-Reported Classroom Practices Regarding Dictionary Use",
+      "url": "https://doi.org/10.1093/ijl/ecad017",
+      "accessDate": "2024-03-07T15:40:42Z",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "Silverchair",
+      "callNumber": "",
+      "rights": "",
+      "extra": "https://lexbib.elex.is/entity/Q34157\n",
+      "tags": [
+        {
+          "tag": "on-wikibase"
+        }
+      ],
+      "collections": [
+        "G82WEXCH"
+      ],
+      "relations": {},
+      "dateAdded": "2024-03-07T17:20:00Z",
+      "dateModified": "2024-03-07T18:20:17Z"
+    },
+    "wikibase_entity": "Q34157"
+  },
+  {
+    "key": "AGGCD3KC",
+    "version": 149533,
+    "library": {
+      "type": "group",
+      "id": 1892855,
+      "name": "LexBib",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/lexbib",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/1892855/items/AGGCD3KC",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/lexbib/items/AGGCD3KC",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/1892855/items/98HGA3C6",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 484043
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Przybyszewski et al.",
+      "parsedDate": "2023-09-01",
+      "numChildren": 1
+    },
+    "data": {
+      "key": "AGGCD3KC",
+      "version": 149533,
+      "itemType": "journalArticle",
+      "title": "Not Only Meaning\u2026 Verbel: The Electronic Dictionary of Paradigms of Polish Verbal Multiword Expressions",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Sebastian",
+          "lastName": "Przybyszewski"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Iwona",
+          "lastName": "Kosek"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Monika",
+          "lastName": "Czerepowicka"
+        }
+      ],
+      "abstractNote": "This article presents Verbel: The Electronic Dictionary of Paradigms of Polish Verbal Multiword Expressions (MWEs) and discusses theoretical problems connected with compiling such a dictionary for inflectionally complex languages such as Polish. The dictionary includes over 5,000 Polish verbal MWEs and explicitly presents their forms and constraints in inflection. It also provides grammatical, semantic, pragmatic and prescriptive commentaries. The first part of the article covers the theoretical and methodological basis used in the compilation of the dictionary. Generally, a verbal MWE is inflected according to the paradigm of the verb which is its main component. However, MWEs may have some specific inflectional constraints connected with other factors (e.g. semantic, pragmatic), which result in different paradigms for verbal MWEs and for the verbs that are their main components. In the second part, the conception and content of the dictionary are discussed. Finally, the natural language processing tools that underlie the work on the dictionary are described.",
+      "publicationTitle": "International Journal of Lexicography",
+      "volume": "36",
+      "issue": "3",
+      "pages": "290-305",
+      "date": "2023-09-01",
+      "series": "",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "International Journal of Lexicography",
+      "language": "eng",
+      "DOI": "10.1093/ijl/ecad008",
+      "ISSN": "0950-3846",
+      "shortTitle": "Not Only Meaning\u2026 Verbel",
+      "url": "https://doi.org/10.1093/ijl/ecad008",
+      "accessDate": "2024-03-07T15:39:55Z",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "Silverchair",
+      "callNumber": "",
+      "rights": "",
+      "extra": "https://lexbib.elex.is/entity/Q34158\n",
+      "tags": [
+        {
+          "tag": "on-wikibase"
+        }
+      ],
+      "collections": [
+        "G82WEXCH"
+      ],
+      "relations": {},
+      "dateAdded": "2024-03-07T17:19:52Z",
+      "dateModified": "2024-03-07T18:20:16Z"
+    },
+    "wikibase_entity": "Q34158"
+  },
+  {
+    "key": "BEAS3MM5",
+    "version": 149532,
+    "library": {
+      "type": "group",
+      "id": 1892855,
+      "name": "LexBib",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/lexbib",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/1892855/items/BEAS3MM5",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/lexbib/items/BEAS3MM5",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/1892855/items/XLWFS7RG",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 1928811
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Wojciechowska",
+      "parsedDate": "2023-12-01",
+      "numChildren": 1
+    },
+    "data": {
+      "key": "BEAS3MM5",
+      "version": 149532,
+      "itemType": "journalArticle",
+      "title": "Hand in Hand or Separate Ways: Navigation Devices and Nesting of Metonymic BODY PART Multiword Expressions in Monolingual English Learners\u2019 Dictionaries",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Sylwia",
+          "lastName": "Wojciechowska"
+        }
+      ],
+      "abstractNote": "Despite a long history of research into phraseology and its practical applications, the representation of multiword expressions (henceforth MWEs) in dictionaries still remains unsettled. The paper singles out and investigates the lexicographic treatment of one thematically related group of MWEs, those that contain nominal forms of body part names. Body part MWEs have been chosen for the present study because they constitute a fairly homogenous group, as many of them are related by means of metonymic motivation, and are therefore expected to be treated in a fairly consistent way. The study examines and evaluates the representation of body part MWE in monolingual English learners\u2019 dictionaries online from the perspective of cognitive linguistics. It focuses primarily on the arrangement of semantically related MWEs in the dictionary microstructure, and attention is also paid to navigation devices used to nest metonymically motivated body part MWEs. The paper proposes solutions that could be adopted in lexicographic practice so that semantic links between related body part MWEs become more apparent in the entry structure.",
+      "publicationTitle": "International Journal of Lexicography",
+      "volume": "36",
+      "issue": "4",
+      "pages": "388-408",
+      "date": "2023-12-01",
+      "series": "",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "International Journal of Lexicography",
+      "language": "eng",
+      "DOI": "10.1093/ijl/ecad007",
+      "ISSN": "0950-3846",
+      "shortTitle": "Hand in Hand or Separate Ways",
+      "url": "https://doi.org/10.1093/ijl/ecad007",
+      "accessDate": "2024-03-07T15:40:34Z",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "Silverchair",
+      "callNumber": "",
+      "rights": "",
+      "extra": "https://lexbib.elex.is/entity/Q34159\n",
+      "tags": [
+        {
+          "tag": "on-wikibase"
+        }
+      ],
+      "collections": [
+        "G82WEXCH"
+      ],
+      "relations": {},
+      "dateAdded": "2024-03-07T17:19:56Z",
+      "dateModified": "2024-03-07T18:20:16Z"
+    },
+    "wikibase_entity": "Q34159"
+  },
+  {
+    "key": "MGNDD3P6",
+    "version": 149531,
+    "library": {
+      "type": "group",
+      "id": 1892855,
+      "name": "LexBib",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/lexbib",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/1892855/items/MGNDD3P6",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/lexbib/items/MGNDD3P6",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/1892855/items/7CVDSCG6",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 596157
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Halczak",
+      "parsedDate": "2023-12-01",
+      "numChildren": 1
+    },
+    "data": {
+      "key": "MGNDD3P6",
+      "version": 149531,
+      "itemType": "journalArticle",
+      "title": "Dictionary Representation of the Semantics of Adjectives Signifying Emotions",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Paulina",
+          "lastName": "Halczak"
+        }
+      ],
+      "abstractNote": "Naming emotions may pose a serious problem for foreign language learners as emotion words constitute a complex semantic field. Here is where monolingual learners\u2019 dictionaries turn out to be useful. The paper reports on a comparative analysis of dictionary representation of the semantics of adjectives signifying emotions. To investigate the treatment of this semantic field, twenty-four adjectives are looked up in the five British pedagogical dictionaries published by Oxford, Cambridge, Longman, Macmillan and Collins. The qualitative analysis concentrates on definitions as primary carriers of meaning. Yet, examples, grammatical information and additional sources of information within a dictionary entry are also given attention. The study demonstrates that some inconsistencies in defining emotion words in individual dictionaries can be spotted. The value of examples is limited: some focus merely on presenting a word\u2019s syntactic properties. Thus, the combination of the definition and the examples both clarifying meaning and illustrating the typical use of the words is judged to best represent meaning. The paper suggests model definitions of adjectives signifying emotions and offers recommendations aiming at improving the representation of their meaning in dictionaries.",
+      "publicationTitle": "International Journal of Lexicography",
+      "volume": "36",
+      "issue": "4",
+      "pages": "424-446",
+      "date": "2023-12-01",
+      "series": "",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "International Journal of Lexicography",
+      "language": "eng",
+      "DOI": "10.1093/ijl/ecad016",
+      "ISSN": "0950-3846",
+      "shortTitle": "",
+      "url": "https://doi.org/10.1093/ijl/ecad016",
+      "accessDate": "2024-03-07T15:40:38Z",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "Silverchair",
+      "callNumber": "",
+      "rights": "",
+      "extra": "https://lexbib.elex.is/entity/Q34160\n",
+      "tags": [
+        {
+          "tag": "on-wikibase"
+        }
+      ],
+      "collections": [
+        "G82WEXCH"
+      ],
+      "relations": {},
+      "dateAdded": "2024-03-07T17:19:58Z",
+      "dateModified": "2024-03-07T18:20:15Z"
+    },
+    "wikibase_entity": "Q34160"
+  },
+  {
+    "key": "3ECRARBE",
+    "version": 149530,
+    "library": {
+      "type": "group",
+      "id": 1892855,
+      "name": "LexBib",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/lexbib",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/1892855/items/3ECRARBE",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/lexbib/items/3ECRARBE",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/1892855/items/HWUBAWNH",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 316111
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Linde-Usiekniewicz and \u0141ozi\u0144ska",
+      "parsedDate": "2023-12-01",
+      "numChildren": 1
+    },
+    "data": {
+      "key": "3ECRARBE",
+      "version": 149530,
+      "itemType": "journalArticle",
+      "title": "In Quest of Influences of Polish Language Dictionaries on the Oldest Polish Sign Language Dictionary",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Jadwiga",
+          "lastName": "Linde-Usiekniewicz"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Sylwia",
+          "lastName": "\u0141ozi\u0144ska"
+        }
+      ],
+      "abstractNote": "The paper examines whether the authors of the very first Polish Sign Language dictionary, S\u0142ownik mimiczny dla g\u0142uchoniemych i os\u00f3b z nimi styczno\u015b\u0107 maj\u0105cych \u2018A gestural dictionary for deaf and dumb and persons who have contact with them\u2019, published in 1879, may have been influenced by any of the spoken Polish monolingual dictionaries available at that time. As there is no historical documentation about the circumstances in which S\u0142ownik mimiczny was compiled, the inquiry necessarily relies exclusively on internal evidence: comparison of headword spelling, alphabetical ordering, direction of cross-references and the content of sample entries. The results indicate that such influence, if any, was only minor, and that the lexicographic strategies applied in S\u0142ownik mimiczny most likely resulted from the authors\u2019 knowledge of Polish Sign Language and teaching practice.",
+      "publicationTitle": "International Journal of Lexicography",
+      "volume": "36",
+      "issue": "4",
+      "pages": "447-465",
+      "date": "2023-12-01",
+      "series": "",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "International Journal of Lexicography",
+      "language": "eng",
+      "DOI": "10.1093/ijl/ecad015",
+      "ISSN": "0950-3846",
+      "shortTitle": "",
+      "url": "https://doi.org/10.1093/ijl/ecad015",
+      "accessDate": "2024-03-07T15:40:40Z",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "Silverchair",
+      "callNumber": "",
+      "rights": "",
+      "extra": "https://lexbib.elex.is/entity/Q34161\n",
+      "tags": [
+        {
+          "tag": "on-wikibase"
+        }
+      ],
+      "collections": [
+        "G82WEXCH"
+      ],
+      "relations": {},
+      "dateAdded": "2024-03-07T17:19:59Z",
+      "dateModified": "2024-03-07T18:20:15Z"
+    },
+    "wikibase_entity": "Q34161"
+  },
+  {
+    "key": "DHJ5CXCT",
+    "version": 149529,
+    "library": {
+      "type": "group",
+      "id": 1892855,
+      "name": "LexBib",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/lexbib",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/1892855/items/DHJ5CXCT",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/lexbib/items/DHJ5CXCT",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/1892855/items/JSRL8A6D",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 641878
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Kami\u0144ski",
+      "parsedDate": "2023-12-01",
+      "numChildren": 1
+    },
+    "data": {
+      "key": "DHJ5CXCT",
+      "version": 149529,
+      "itemType": "journalArticle",
+      "title": "How Useful Are Bilingualized Dictionaries in Discriminating Between Near-Synonyms?",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Mariusz Piotr",
+          "lastName": "Kami\u0144ski"
+        }
+      ],
+      "abstractNote": "This study investigates the usefulness of a bilingualized dictionary (BLD) against a monolingual one (MD) in a fill-in-the-blank test requiring the ability to discriminate between a set of near-synonyms. 156 participants, all English major undergraduates studying in Poland, were divided into two groups based on the type of dictionary they used. The study compared the two groups with respect to their test scores, learners\u2019 prior receptive vocabulary knowledge, and task completion time. The experiment revealed the limitations of the BLD in this type of task, demonstrating that the dictionary was no more useful than the MD. While the scores were unaffected by dictionary type, they were significantly influenced by the learners\u2019 receptive vocabulary size: the larger the size, the better the performance. The task completion time was not significantly affected by dictionary type, vocabulary size, or scores. The paper discusses learners\u2019 errors and possible reasons for the limitations of the BLD.",
+      "publicationTitle": "International Journal of Lexicography",
+      "volume": "36",
+      "issue": "4",
+      "pages": "486-509",
+      "date": "2023-12-01",
+      "series": "",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "International Journal of Lexicography",
+      "language": "eng",
+      "DOI": "10.1093/ijl/ecad019",
+      "ISSN": "0950-3846",
+      "shortTitle": "",
+      "url": "https://doi.org/10.1093/ijl/ecad019",
+      "accessDate": "2024-03-07T15:40:44Z",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "Silverchair",
+      "callNumber": "",
+      "rights": "",
+      "extra": "https://lexbib.elex.is/entity/Q34162\n",
+      "tags": [
+        {
+          "tag": "on-wikibase"
+        }
+      ],
+      "collections": [
+        "G82WEXCH"
+      ],
+      "relations": {},
+      "dateAdded": "2024-03-07T17:20:01Z",
+      "dateModified": "2024-03-07T18:20:14Z"
+    },
+    "wikibase_entity": "Q34162"
+  },
+  {
+    "key": "WT9EIB5W",
+    "version": 149528,
+    "library": {
+      "type": "group",
+      "id": 1892855,
+      "name": "LexBib",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/lexbib",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/1892855/items/WT9EIB5W",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/lexbib/items/WT9EIB5W",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/1892855/items/YN99RGI5",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 263066
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Buend\u00eda-Castro",
+      "parsedDate": "2023-12-01",
+      "numChildren": 1
+    },
+    "data": {
+      "key": "WT9EIB5W",
+      "version": 149528,
+      "itemType": "journalArticle",
+      "title": "Dictionary Use by Trainee Translators",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "M\u00edriam",
+          "lastName": "Buend\u00eda-Castro"
+        }
+      ],
+      "abstractNote": "Dictionaries have always been an important tool for linguists, and more specifically for translators. Learning how students of translation use dictionaries is essential if students are to be effective users of dictionaries. This research examines the dictionary usage habits of 201 trainee translators and identified significant differences among first-, second-, third- and fourth-year students. The resources that students most often consulted, based on their first L2, were also specified. A self-reported questionnaire was devised to collect data. The results revealed that the use of monolingual and specialized resources tended to be higher in the last years of the degree program. The students\u2019 lack of awareness and infrequent use of specialized resources were also reflected in the study. Generally speaking, our results showed that students did not take advantage of the wide variety of resources available.",
+      "publicationTitle": "International Journal of Lexicography",
+      "volume": "36",
+      "issue": "4",
+      "pages": "510-527",
+      "date": "2023-12-01",
+      "series": "",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "International Journal of Lexicography",
+      "language": "eng",
+      "DOI": "10.1093/ijl/ecad024",
+      "ISSN": "0950-3846",
+      "shortTitle": "",
+      "url": "https://doi.org/10.1093/ijl/ecad024",
+      "accessDate": "2024-03-07T15:40:45Z",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "Silverchair",
+      "callNumber": "",
+      "rights": "",
+      "extra": "https://lexbib.elex.is/entity/Q34163\n",
+      "tags": [
+        {
+          "tag": "on-wikibase"
+        }
+      ],
+      "collections": [
+        "G82WEXCH"
+      ],
+      "relations": {},
+      "dateAdded": "2024-03-07T17:20:02Z",
+      "dateModified": "2024-03-07T18:20:14Z"
+    },
+    "wikibase_entity": "Q34163"
+  }
+]

@@ -1,0 +1,945 @@
+{
+  "filename": "properties.json",
+  "comment": "mapping keys are wikibase properties",
+  "mapping": {
+    "P1": {
+      "enlabel": "LexBib v2 legacy ID",
+      "type": "ExternalId",
+      "wdprop": null,
+      "formatter_url": "http://data.lexbib.org/entity/$1"
+    },
+    "P2": {
+      "enlabel": "wikidata entity",
+      "type": "ExternalId",
+      "wdprop": null,
+      "formatter_url": "http://www.wikidata.org/entity/$1"
+    },
+    "P3": {
+      "enlabel": "formatter url",
+      "type": "String",
+      "wdprop": "P1630"
+    },
+    "P4": {
+      "enlabel": "subclass of",
+      "type": "WikibaseItem",
+      "wdprop": "P279"
+    },
+    "P5": {
+      "enlabel": "instance of",
+      "type": "WikibaseItem",
+      "wdprop": "P31"
+    },
+    "P6": {
+      "enlabel": "title",
+      "type": "Monolingualtext",
+      "wdprop": "P1476"
+    },
+    "P7": {
+      "enlabel": "property constraint",
+      "type": "WikibaseItem",
+      "wdprop": "P2302"
+    },
+    "P8": {
+      "enlabel": "container title",
+      "type": "String",
+      "wdprop": null
+    },
+    "P9": {
+      "enlabel": "containing BibCollection",
+      "type": "WikibaseItem",
+      "wdprop": "P361"
+    },
+    "P10": {
+      "enlabel": "place of publication",
+      "type": "WikibaseItem",
+      "wdprop": "P291"
+    },
+    "P11": {
+      "enlabel": "publication language",
+      "type": "WikibaseItem",
+      "wdprop": "P407"
+    },
+    "P12": {
+      "enlabel": "author",
+      "type": "WikibaseItem",
+      "wdprop": "P50"
+    },
+    "P13": {
+      "enlabel": "editor",
+      "type": "WikibaseItem",
+      "wdprop": "P98"
+    },
+    "P14": {
+      "enlabel": "publication place literal",
+      "type": "String",
+      "wdprop": null
+    },
+    "P15": {
+      "enlabel": "publication date",
+      "type": "Time",
+      "wdprop": "P577"
+    },
+    "P16": {
+      "enlabel": "LexBib Zotero item",
+      "type": "ExternalId",
+      "wdprop": null,
+      "formatter_url": "https://www.zotero.org/groups/1892855/lexbib/items/$1/item-details"
+    },
+    "P17": {
+      "enlabel": "DOI",
+      "type": "ExternalId",
+      "wdprop": "P356",
+      "formatter_url": "https://doi.org/$1"
+    },
+    "P18": {
+      "enlabel": "ISBN-13",
+      "type": "ExternalId",
+      "wdprop": "P212",
+      "formatter_url": "https://worldcat.org/isbn/$1"
+    },
+    "P19": {
+      "enlabel": "ISBN-10",
+      "type": "ExternalId",
+      "wdprop": "P957",
+      "formatter_url": "https://worldcat.org/isbn/$1"
+    },
+    "P20": {
+      "enlabel": "ISSN",
+      "type": "ExternalId",
+      "wdprop": "P236",
+      "formatter_url": "https://portal.issn.org/resource/ISSN/$1"
+    },
+    "P21": {
+      "enlabel": "distribution location",
+      "type": "Url",
+      "wdprop": "P953"
+    },
+    "P22": {
+      "enlabel": "volume",
+      "type": "String",
+      "wdprop": "P478"
+    },
+    "P23": {
+      "enlabel": "issue",
+      "type": "String",
+      "wdprop": "P433"
+    },
+    "P24": {
+      "enlabel": "page(s)",
+      "type": "String",
+      "wdprop": "P304"
+    },
+    "P25": {
+      "enlabel": "is review of",
+      "type": "WikibaseItem",
+      "wdprop": "P6977"
+    },
+    "P26": {
+      "enlabel": "reviewed in",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P27": {
+      "enlabel": "subject",
+      "type": "WikibaseItem",
+      "wdprop": "P921"
+    },
+    "P28": {
+      "enlabel": "part of",
+      "type": "WikibaseItem",
+      "wdprop": "P361"
+    },
+    "P29": {
+      "enlabel": "first author location",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P30": {
+      "enlabel": "part of conference series",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P31": {
+      "enlabel": "has part",
+      "type": "WikibaseItem",
+      "wdprop": "P527"
+    },
+    "P32": {
+      "enlabel": "ISO 639-3 code",
+      "type": "ExternalId",
+      "wdprop": "P220",
+      "formatter_url": "http://lexvo.org/id/iso639-3/$1"
+    },
+    "P33": {
+      "enlabel": "series ordinal",
+      "type": "String",
+      "wdprop": "P1545"
+    },
+    "P34": {
+      "enlabel": "described at URL",
+      "type": "Url",
+      "wdprop": null
+    },
+    "P35": {
+      "enlabel": "publisher",
+      "type": "WikibaseItem",
+      "wdprop": "P123"
+    },
+    "P36": {
+      "enlabel": "event",
+      "type": "WikibaseItem",
+      "wdprop": "P5072"
+    },
+    "P37": {
+      "enlabel": "external superproperty",
+      "type": "Url",
+      "wdprop": "P2235"
+    },
+    "P38": {
+      "enlabel": "source literal",
+      "type": "String",
+      "wdprop": null
+    },
+    "P39": {
+      "enlabel": "ORCID",
+      "type": "ExternalId",
+      "wdprop": "P496",
+      "formatter_url": "https://orcid.org/$1"
+    },
+    "P40": {
+      "enlabel": "given name source literal",
+      "type": "String",
+      "wdprop": null
+    },
+    "P41": {
+      "enlabel": "family name source literal",
+      "type": "String",
+      "wdprop": null
+    },
+    "P42": {
+      "enlabel": "LexMeta OWL equivalent",
+      "type": "Url",
+      "wdprop": null
+    },
+    "P43": {
+      "enlabel": "wikimedia language code",
+      "type": "String",
+      "wdprop": "P424"
+    },
+    "P44": {
+      "enlabel": "official website",
+      "type": "Url",
+      "wdprop": "P856"
+    },
+    "P45": {
+      "enlabel": "country of origin",
+      "type": "WikibaseItem",
+      "wdprop": "P495"
+    },
+    "P46": {
+      "enlabel": "part of journal",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P47": {
+      "enlabel": "different from",
+      "type": "WikibaseItem",
+      "wdprop": "P1889"
+    },
+    "P48": {
+      "enlabel": "range",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P49": {
+      "enlabel": "subclass of external",
+      "type": "Url",
+      "wdprop": null
+    },
+    "P50": {
+      "enlabel": "location",
+      "type": "WikibaseItem",
+      "wdprop": "P276"
+    },
+    "P51": {
+      "enlabel": "VIAF ID",
+      "type": "ExternalId",
+      "wdprop": "P214",
+      "formatter_url": "https://viaf.org/viaf/$1/"
+    },
+    "P52": {
+      "enlabel": "date of birth",
+      "type": "Time",
+      "wdprop": "P569"
+    },
+    "P53": {
+      "enlabel": "date of death",
+      "type": "Time",
+      "wdprop": "P570"
+    },
+    "P54": {
+      "enlabel": "ISO 4 abbreviation",
+      "type": "ExternalId",
+      "wdprop": "P1160"
+    },
+    "P55": {
+      "enlabel": "has distribution",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P56": {
+      "enlabel": "object language",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P57": {
+      "enlabel": "external equivalent entity",
+      "type": "Url",
+      "wdprop": null
+    },
+    "P58": {
+      "enlabel": "RESERVED3 (url)",
+      "type": "Url",
+      "wdprop": null
+    },
+    "P59": {
+      "enlabel": "media part",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P60": {
+      "enlabel": "distribution of",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P61": {
+      "enlabel": "is described by term",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P62": {
+      "enlabel": "OCLC",
+      "type": "ExternalId",
+      "wdprop": "P243",
+      "formatter_url": "https://worldcat.org/oclc/$1"
+    },
+    "P63": {
+      "enlabel": "is continued by LCR",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P64": {
+      "enlabel": "edition number",
+      "type": "String",
+      "wdprop": "P393"
+    },
+    "P65": {
+      "enlabel": "country",
+      "type": "WikibaseItem",
+      "wdprop": "P17"
+    },
+    "P66": {
+      "enlabel": "English Wikipedia article URL",
+      "type": "Url",
+      "wdprop": null
+    },
+    "P67": {
+      "enlabel": "RESERVED2 (string)",
+      "type": "String",
+      "wdprop": null
+    },
+    "P68": {
+      "enlabel": "start date",
+      "type": "Time",
+      "wdprop": "P580"
+    },
+    "P69": {
+      "enlabel": "end date",
+      "type": "Time",
+      "wdprop": "P582"
+    },
+    "P70": {
+      "enlabel": "LexBib fulltext PDF",
+      "type": "ExternalId",
+      "wdprop": null,
+      "formatter_url": "https://www.zotero.org/groups/1892855/lexbib/items/$1/item-details"
+    },
+    "P71": {
+      "enlabel": "LexBib fulltext TXT",
+      "type": "ExternalId",
+      "wdprop": null,
+      "formatter_url": "https://www.zotero.org/groups/1892855/lexbib/items/$1/item-details"
+    },
+    "P72": {
+      "enlabel": "skos:broader",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P73": {
+      "enlabel": "skos:narrower",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P74": {
+      "enlabel": "member of collection",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P75": {
+      "enlabel": "subject of",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P76": {
+      "enlabel": "skos:closeMatch",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P77": {
+      "enlabel": "skos:related",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P78": {
+      "enlabel": "skos:exactMatch",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P79": {
+      "enlabel": "skos:hasTopConcept",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P80": {
+      "enlabel": "skos:definition",
+      "type": "String",
+      "wdprop": null
+    },
+    "P81": {
+      "enlabel": "skos:note",
+      "type": "String",
+      "wdprop": null
+    },
+    "P82": {
+      "enlabel": "frequency score",
+      "type": "String",
+      "wdprop": null
+    },
+    "P83": {
+      "enlabel": "source",
+      "type": "WikibaseItem",
+      "wdprop": "P1343"
+    },
+    "P84": {
+      "enlabel": "source name",
+      "type": "String",
+      "wdprop": null
+    },
+    "P85": {
+      "enlabel": "Elexifinder collection",
+      "type": "String",
+      "wdprop": null
+    },
+    "P86": {
+      "enlabel": "BabelNet Synset ID",
+      "type": "ExternalId",
+      "wdprop": "P2581",
+      "formatter_url": "http://babelnet.org/rdf/s$1"
+    },
+    "P87": {
+      "enlabel": "mapping confidence score",
+      "type": "String",
+      "wdprop": null
+    },
+    "P88": {
+      "enlabel": "corpus keyword",
+      "type": "String",
+      "wdprop": null
+    },
+    "P89": {
+      "enlabel": "skos:inScheme",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P90": {
+      "enlabel": "dictionary scope type",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P91": {
+      "enlabel": "distribution type",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P92": {
+      "enlabel": "mention count",
+      "type": "String",
+      "wdprop": null
+    },
+    "P93": {
+      "enlabel": "relative frequency",
+      "type": "String",
+      "wdprop": null
+    },
+    "P94": {
+      "enlabel": "inverse property",
+      "type": "WikibaseProperty",
+      "wdprop": "P1696"
+    },
+    "P95": {
+      "enlabel": "subproperty of",
+      "type": "WikibaseProperty",
+      "wdprop": "P1647"
+    },
+    "P96": {
+      "enlabel": "contains term",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P97": {
+      "enlabel": "short title",
+      "type": "String",
+      "wdprop": null
+    },
+    "P98": {
+      "enlabel": "skos:isTopConceptOf",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P99": {
+      "enlabel": "ISO-639-1 language code",
+      "type": "ExternalId",
+      "wdprop": "P218"
+    },
+    "P100": {
+      "enlabel": "bibitem type",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P101": {
+      "enlabel": "preferred given name",
+      "type": "String",
+      "wdprop": null
+    },
+    "P102": {
+      "enlabel": "preferred family name",
+      "type": "String",
+      "wdprop": null
+    },
+    "P103": {
+      "enlabel": "coordinate location",
+      "type": "GlobeCoordinate",
+      "wdprop": "P625"
+    },
+    "P104": {
+      "enlabel": "inception",
+      "type": "Time",
+      "wdprop": "P571"
+    },
+    "P105": {
+      "enlabel": "contains abstract in",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P106": {
+      "enlabel": "LexBib v1 legacy ID",
+      "type": "String",
+      "wdprop": null
+    },
+    "P107": {
+      "enlabel": "organizer",
+      "type": "WikibaseItem",
+      "wdprop": "P664"
+    },
+    "P108": {
+      "enlabel": "source URI",
+      "type": "Url",
+      "wdprop": null
+    },
+    "P109": {
+      "enlabel": "occurs in # of LexBib BibItems",
+      "type": "String",
+      "wdprop": null
+    },
+    "P110": {
+      "enlabel": "obelex literal",
+      "type": "String",
+      "wdprop": null
+    },
+    "P111": {
+      "enlabel": "BibCollection landing page",
+      "type": "Url",
+      "wdprop": null
+    },
+    "P112": {
+      "enlabel": "access location",
+      "type": "Url",
+      "wdprop": null
+    },
+    "P113": {
+      "enlabel": "download location",
+      "type": "Url",
+      "wdprop": null
+    },
+    "P114": {
+      "enlabel": "extratextual information",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P115": {
+      "enlabel": "linguality type",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P116": {
+      "enlabel": "RESERVED3 (string)",
+      "type": "String",
+      "wdprop": null
+    },
+    "P117": {
+      "enlabel": "sent to LexVoc Lexonomy",
+      "type": "Time",
+      "wdprop": null
+    },
+    "P118": {
+      "enlabel": "has realisation",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P119": {
+      "enlabel": "lexicographical process type",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P120": {
+      "enlabel": "dictionary function type",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P121": {
+      "enlabel": "dictionary access type",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P122": {
+      "enlabel": "metalanguage",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P123": {
+      "enlabel": "LCR subclass",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P124": {
+      "enlabel": "is replaced with",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P125": {
+      "enlabel": "part of LCR",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P126": {
+      "enlabel": "year of publication",
+      "type": "String",
+      "wdprop": null
+    },
+    "P127": {
+      "enlabel": "microstructure feature",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P128": {
+      "enlabel": "translation status",
+      "type": "String",
+      "wdprop": null
+    },
+    "P129": {
+      "enlabel": "prefLabel translation",
+      "type": "Monolingualtext",
+      "wdprop": null
+    },
+    "P130": {
+      "enlabel": "altLabel translation",
+      "type": "Monolingualtext",
+      "wdprop": null
+    },
+    "P131": {
+      "enlabel": "is facet of",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P132": {
+      "enlabel": "glottolog language code",
+      "type": "ExternalId",
+      "wdprop": "P1394",
+      "formatter_url": "http://glottolog.org/resource/languoid/id/$1"
+    },
+    "P133": {
+      "enlabel": "is version of",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P134": {
+      "enlabel": "target language",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P135": {
+      "enlabel": "replaces LCR",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P136": {
+      "enlabel": "is similar to LCR",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P137": {
+      "enlabel": "is related to LCR",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P138": {
+      "enlabel": "is exact match with LCR",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P139": {
+      "enlabel": "is part with LCR",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P140": {
+      "enlabel": "is continuation of LCR",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P141": {
+      "enlabel": "is converted version of LCR",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P142": {
+      "enlabel": "has original source",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P143": {
+      "enlabel": "has part LCR",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P144": {
+      "enlabel": "has version LCR",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P145": {
+      "enlabel": "is combined with LCR",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P146": {
+      "enlabel": "index page",
+      "type": "Url",
+      "wdprop": null
+    },
+    "P147": {
+      "enlabel": "cites",
+      "type": "WikibaseItem",
+      "wdprop": "P2860"
+    },
+    "P148": {
+      "enlabel": "term with homograph label",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P149": {
+      "enlabel": "infers labels from",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P150": {
+      "enlabel": "source language",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P151": {
+      "enlabel": "lemma type",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P152": {
+      "enlabel": "dictionary text part",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P153": {
+      "enlabel": "reserved (item)",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P154": {
+      "enlabel": "resource creator",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P155": {
+      "enlabel": "IPR holder",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P156": {
+      "enlabel": "LCR name",
+      "type": "Monolingualtext",
+      "wdprop": null
+    },
+    "P157": {
+      "enlabel": "LCR provider",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P158": {
+      "enlabel": "inEntitySchema",
+      "type": "EntitySchema",
+      "wdprop": null
+    },
+    "P159": {
+      "enlabel": "cardinality",
+      "type": "String",
+      "wdprop": null
+    },
+    "P160": {
+      "enlabel": "glottolog reference code",
+      "type": "ExternalId",
+      "wdprop": null,
+      "formatter_url": "https://glottolog.org/resource/reference/id/$1"
+    },
+    "P161": {
+      "enlabel": "number of entries",
+      "type": "String",
+      "wdprop": null
+    },
+    "P162": {
+      "enlabel": "author(s) literal",
+      "type": "String",
+      "wdprop": null
+    },
+    "P163": {
+      "enlabel": "publisher(s) literal",
+      "type": "String",
+      "wdprop": null
+    },
+    "P164": {
+      "enlabel": "publishing place(s) literal",
+      "type": "String",
+      "wdprop": null
+    },
+    "P165": {
+      "enlabel": "described on lexbib wikipage",
+      "type": "ExternalId",
+      "wdprop": null,
+      "formatter_url": "https://lexbib.elex.is/wiki/$1"
+    },
+    "P166": {
+      "enlabel": "rdf:type (OWL)",
+      "type": "Url",
+      "wdprop": null
+    },
+    "P167": {
+      "enlabel": "skos:exactMatch (OWL)",
+      "type": "Url",
+      "wdprop": null
+    },
+    "P168": {
+      "enlabel": "domain",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P169": {
+      "enlabel": "subPropertyOf (OWL)",
+      "type": "Url",
+      "wdprop": null
+    },
+    "P170": {
+      "enlabel": "range expression (OWL)",
+      "type": "String",
+      "wdprop": null
+    },
+    "P171": {
+      "enlabel": "affiliation",
+      "type": "WikibaseItem",
+      "wdprop": "P108"
+    },
+    "P172": {
+      "enlabel": "contributor",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P173": {
+      "enlabel": "test property",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P174": {
+      "enlabel": "Inguma Wikibase ID",
+      "type": "ExternalId",
+      "wdprop": null,
+      "formatter_url": "https://wikibase.inguma.eus/entity/"
+    },
+    "P175": {
+      "enlabel": "pivot language",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P176": {
+      "enlabel": "TECLING term profile",
+      "type": "ExternalId",
+      "wdprop": null,
+      "formatter_url": "http://www.tecling.cl/termout2022/lexbib/term/es/$1"
+    },
+    "P177": {
+      "enlabel": "is realisation of",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P178": {
+      "enlabel": "has outcome",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P179": {
+      "enlabel": "has converted version",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P180": {
+      "enlabel": "co-distribution of",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P181": {
+      "enlabel": "date of creation",
+      "type": "Time",
+      "wdprop": null
+    },
+    "P182": {
+      "enlabel": "translator",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P183": {
+      "enlabel": "Basque Lexicography period",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P184": {
+      "enlabel": "P184",
+      "type": "Url",
+      "wdprop": null
+    }
+  }
+}
