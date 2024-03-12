@@ -150,7 +150,7 @@ def split_token(token_qid=None, split_position=None):
 
 def sparql_doc(doc_qid=None):
     config = botconfig.load_mapping('config')
-    tokenquery = """select ?token ?token_zbk ?token_forma  ?mlv_lexema (iri(concat('http://www.wikidata.org/entity/',?wikidata_sense_id)) as ?wikidata_sense)
+    tokenquery = """select ?token ?token_zbk ?token_forma ?token_egok ?mlv_lexema (iri(concat('http://www.wikidata.org/entity/',?wikidata_sense_id)) as ?wikidata_sense)
         ?wd_pos_label
         (iri(concat('https://eu.wikisource.org/wiki/',?wikisource)) as ?wikisource_paragraph) 
          ?lemma ?sense ?forma (group_concat(?morph_label;SEPARATOR="-") as ?morph_labels) ?pos_label
@@ -162,7 +162,8 @@ def sparql_doc(doc_qid=None):
                 xdp:P28 xwb:"""+doc_qid+""";
                 xdp:P148 ?token_zbk ;
                 xdp:P147 ?token_forma ;
-                xdp:P177 ?wikisource ;
+                xdp:P177 ?wikisource .
+          optional { ?token xdp:P181 ?token_egok.}
           optional { ?token xp:P7 ?lemmanode . ?lemmanode xps:P7 ?mlv_lexema. ?mlv_lexema wikibase:lemma ?lemma .
                     optional {?mlv_lexema xdp:P1 ?wd_qid .}
                     optional {?lemmanode xpq:P155 ?sense_id. ?sense_id skos:definition ?sense; xp:P1 [xps:P1 ?wikidata_sense_id; xpq:P153 ?wd_pos]. ?wd_pos rdfs:label ?wd_pos_label. filter(lang(?wd_pos_label) = "eu")}
@@ -180,7 +181,7 @@ def sparql_doc(doc_qid=None):
                        group by ?item ?wd_erref_label ?class_label    
                         }          
                    }
-        } group by ?token ?token_zbk ?token_forma ?mlv_lexema ?wikidata_sense_id ?wd_pos_label ?wikisource ?lemma ?sense ?forma ?morph_labels ?pos_label ?wd_erref ?wd_erref_label ?class_label
+        } group by ?token ?token_zbk ?token_forma ?token_egok ?mlv_lexema ?wikidata_sense_id ?wd_pos_label ?wikisource ?lemma ?sense ?forma ?morph_labels ?pos_label ?wd_erref ?wd_erref_label ?class_label
         order by xsd:float(?token_zbk)"""
 
     spanquery = """select 
@@ -248,8 +249,9 @@ def load_lemma_lid(method="cache"):
 def link_token_to_lexeme(token_qid=None, lemma=None, lid=None):
     token_id = xwbi.itemwrite({'qid':token_qid, 'statements':[{'type':'lexeme', 'value': lid, 'prop_nr':'P7', 'action':'replace'}]})
     if token_id == token_qid:
-        message = f"Token {token_qid} {lid} lexemari lotu zaio (lema: {lemma})."
+        message = f'Token <a href="https://monumenta.wikibase.cloud/wiki/Item:{token_qid}" target="_blank">{token_qid}</a> <a href="https://monumenta.wikibase.cloud/wiki/Lexeme:{lid}" target="_blank">{lid}</a> lexemari lotu zaio (lema: {lemma}).'
     else:
-        message = f"Token {token_qid} {lid} lexemari lotzean ERROREA (lema: {lemma})."
+        message = f'Token <a href="https://monumenta.wikibase.cloud/wiki/Item:{token_qid}" target="_blank">{token_qid}</a> <a href="https://monumenta.wikibase.cloud/wiki/Lexeme:{lid}" target="_blank">{lid}</a> lexemari lotzean ERROREA (lema: {lemma}).'
     print(message)
     return {'messages':[message]}
+
