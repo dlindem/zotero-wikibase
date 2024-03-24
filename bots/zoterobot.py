@@ -5,6 +5,8 @@ from pyzotero import zotero
 # load active profile
 with open(f"profiles.json", 'r', encoding='utf-8') as file:
     profile = json.load(file)['last_profile']
+    if profile == "":
+        profile = "profile.template"
 
 config = botconfig.load_mapping("config")
 

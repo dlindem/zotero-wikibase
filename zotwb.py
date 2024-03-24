@@ -7,6 +7,8 @@ from datetime import datetime
 try:
     with open('profiles.json', 'r', encoding='utf-8') as file:
         profile = json.load(file)['last_profile']
+        if profile == "":
+            profile = "profile.template"
 except OSError:
     profile = "profile.template"
     with open('profiles.json', 'w', encoding='utf-8') as file:
@@ -227,11 +229,18 @@ def basic_config():
 
                         else:
                             if configitem.startswith("class"):
-                                newitemdata = {'qid':False, 'labels':[{'lang':'en', 'value':configdata['mapping'][configitem]['name']}],
-                                                'statements':[]}
+
                                 if classqid:
-                                    newitemdata['statements'].append({'type':'WikibaseItem','prop_nr':configdata['mapping']['prop_instanceof']['wikibase'],'value':classqid})
-                                    newentity_id = zotwb_functions.xwbi.itemwrite(newitemdata)
+                                    newitemdata = {'qid': False, 'labels': [
+                                        {'lang': 'en', 'value': configdata['mapping'][configitem]['name']}],
+                                                   'statements': [{'type':'WikibaseItem','prop_nr':configdata['mapping']['prop_instanceof']['wikibase'],'value':classqid}]}
+
+                                else:
+                                    newitemdata = {'qid': False, 'labels': [
+                                        {'lang': 'en', 'value': f"{configdata['mapping']['wikibase_name']} Ontology Class"}],
+                                                   'statements': []}
+
+                                newentity_id = zotwb_functions.xwbi.itemwrite(newitemdata)
                             elif configitem.startswith("prop"):
                                 newprop = zotwb_functions.xwbi.wbi.property.new(datatype=zotwb_functions.botconfig.datatypes_mapping[configdata['mapping'][configitem]['type']])
                                 newprop.labels.set('en', configdata['mapping'][configitem]['name'])
@@ -306,19 +315,19 @@ def map_zoterofield(itemtype):
                     elif key.endswith('_create_from_wd'):  # user has pressed 'create new'
                         fieldname = command.replace('_create_from_wd', '')
                         newentity_id = zotwb_functions.import_wikidata_entity(
-                            wikidata_suggestions[fieldname],
+                            wikidata_suggestions['mapping'][fieldname],
                             wbid=False, config=configdata, properties=properties)['id']
                         properties['mapping'][newentity_id] = {
                             "enlabel": zoteromapping['mapping']['all_types'][fieldtype][fieldname]['name'],
                             "type": zoteromapping['mapping']['all_types'][fieldtype][fieldname]['dtype'],
-                            "wdprop": wikidata_suggestions[fieldname]
+                            "wdprop": wikidata_suggestions['mapping'][fieldname]
                         }
                         botconfig.dump_mapping(properties)
                         zoteromapping['mapping'][itemtype][fieldtype][fieldname]['wbprop'] = newentity_id
                         messages = [
-                            f"Successfully imported wd:{wikidata_suggestions[fieldname]} to the newly created wb:{newentity_id}."]
+                            f"Successfully imported wd:{wikidata_suggestions['mapping'][fieldname]} to the newly created wb:{newentity_id}."]
                         if itemtype == "all_types":
-                            propagation = zotwb_functions.propagate_mapping(fieldtype=fieldtype, fieldname=fieldname,
+                            propagation = zotwb_functions.propagate_mapping(zoteromapping=zoteromapping, fieldtype=fieldtype, fieldname=fieldname,
                                                                             wbprop=newentity_id)
                             zoteromapping['mapping'] = propagation['mapping']
                             messages += propagation['messages']
@@ -780,12 +789,13 @@ def mlv_andanak(code):
                            span_start=span_start, span_end=span_end, start_selected=start_selected, end_selected=end_selected, span_len=span_len,
                                   messages=messages, msgcolor=msgcolor)
 
-citations = botconfig.load_mapping('citations')
+citations = {}
 @app.route('/inguma/get_grobid', methods= ['GET', 'POST'])
 def get_grobid():
     configdata = botconfig.load_mapping('config')
     from bots import inguma_functions
     global citations
+    citations = botconfig.load_mapping('citations')
     doc_qids = []
     for file in os.listdir('/media/david/FATdisk/GROBID'):
         print(file)

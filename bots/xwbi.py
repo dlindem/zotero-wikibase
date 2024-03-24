@@ -18,7 +18,9 @@ from wikibaseintegrator.wbi_config import config as wbi_config
 
 # load active profile
 with open(f"profiles.json", 'r', encoding='utf-8') as file:
-    profile = json.load(file)['last_profile']
+	profile = json.load(file)['last_profile']
+	if profile == "":
+		profile = "profile.template"
 with open(f"profiles/{profile}/config_private.json", 'r', encoding="utf-8") as jsonfile:
 	config_private = json.load(jsonfile)
 config = botconfig.load_mapping('config')

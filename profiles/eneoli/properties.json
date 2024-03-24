@@ -1,0 +1,56 @@
+{
+  "filename": "properties.json",
+  "comment": "mapping keys are wikibase properties",
+  "mapping": {
+    "P6": {
+      "enlabel": "bibliographical item type",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P9": {
+      "enlabel": "source literal",
+      "type": "String",
+      "wdprop": null
+    },
+    "P10": {
+      "enlabel": "given name source literal",
+      "type": "String",
+      "wdprop": null
+    },
+    "P11": {
+      "enlabel": "family name source literal",
+      "type": "String",
+      "wdprop": null
+    },
+    "P15": {
+      "enlabel": "Wikipedia page URL",
+      "type": "URL",
+      "wdprop": null
+    },
+    "P16": {
+      "enlabel": "Referenced Wikidata Entity",
+      "type": "ExternalId",
+      "wdprop": null
+    },
+    "P17": {
+      "enlabel": "Zotero item",
+      "type": "ExternalId",
+      "wdprop": null
+    },
+    "P20": {
+      "enlabel": "Zotero fulltext PDF",
+      "type": "ExternalId",
+      "wdprop": null
+    },
+    "P22": {
+      "enlabel": "DOI",
+      "type": "ExternalId",
+      "wdprop": "P356"
+    },
+    "P23": {
+      "enlabel": "URL",
+      "type": "URL",
+      "wdprop": "P953"
+    }
+  }
+}
