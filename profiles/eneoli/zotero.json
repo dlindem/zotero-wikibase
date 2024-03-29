@@ -10,7 +10,7 @@
           "name": "DOI"
         },
         "ISSN": {
-          "wbprop": null,
+          "wbprop": "P43",
           "dtype": "ExternalId",
           "name": "ISSN"
         },
@@ -70,12 +70,12 @@
           "name": "Bill Number"
         },
         "blogTitle": {
-          "wbprop": null,
+          "wbprop": "P34",
           "dtype": "String",
           "name": "Blog Title"
         },
         "bookTitle": {
-          "wbprop": null,
+          "wbprop": "P35",
           "dtype": "String",
           "name": "Book Title"
         },
@@ -125,7 +125,7 @@
           "name": "Company"
         },
         "conferenceName": {
-          "wbprop": null,
+          "wbprop": "P38",
           "dtype": "String",
           "name": "Conference Name"
         },
@@ -140,7 +140,7 @@
           "name": "Court"
         },
         "date": {
-          "wbprop": null,
+          "wbprop": "P30",
           "dtype": "Time",
           "name": "Date"
         },
@@ -175,7 +175,7 @@
           "name": "Document Number"
         },
         "edition": {
-          "wbprop": null,
+          "wbprop": "P27",
           "dtype": "String",
           "name": "Edition"
         },
@@ -235,7 +235,7 @@
           "name": "Medium"
         },
         "issue": {
-          "wbprop": null,
+          "wbprop": "P32",
           "dtype": "String",
           "name": "Issue"
         },
@@ -305,7 +305,7 @@
           "name": "Network"
         },
         "numPages": {
-          "wbprop": null,
+          "wbprop": "P31",
           "dtype": "String",
           "name": "# of Pages"
         },
@@ -325,7 +325,7 @@
           "name": "Organization"
         },
         "pages": {
-          "wbprop": null,
+          "wbprop": "P42",
           "dtype": "String",
           "name": "Pages"
         },
@@ -335,7 +335,7 @@
           "name": "Patent Number"
         },
         "place": {
-          "wbprop": null,
+          "wbprop": "P28",
           "dtype": "String",
           "name": "Place"
         },
@@ -355,7 +355,7 @@
           "name": "Priority Numbers"
         },
         "proceedingsTitle": {
-          "wbprop": null,
+          "wbprop": "P35",
           "dtype": "String",
           "name": "Proceedings Title"
         },
@@ -380,7 +380,7 @@
           "name": "Publication"
         },
         "publisher": {
-          "wbprop": null,
+          "wbprop": "P29",
           "dtype": "String",
           "name": "Publisher"
         },
@@ -490,12 +490,12 @@
           "name": "System"
         },
         "thesisType": {
-          "wbprop": null,
+          "wbprop": "P36",
           "dtype": "String",
           "name": "Type"
         },
         "title": {
-          "wbprop": null,
+          "wbprop": "P25",
           "dtype": "String",
           "name": "Title"
         },
@@ -505,12 +505,12 @@
           "name": "Type"
         },
         "university": {
-          "wbprop": null,
+          "wbprop": "P37",
           "dtype": "String",
           "name": "University"
         },
         "url": {
-          "wbprop": null,
+          "wbprop": "P23",
           "dtype": "URL",
           "name": "URL"
         },
@@ -525,7 +525,7 @@
           "name": "Format"
         },
         "volume": {
-          "wbprop": null,
+          "wbprop": "P26",
           "dtype": "String",
           "name": "Volume"
         },
@@ -553,7 +553,7 @@
         },
         "author": {
           "name": "Author",
-          "wbprop": null,
+          "wbprop": "P40",
           "dtype": "WikibaseItem"
         },
         "bookAuthor": {
@@ -603,7 +603,7 @@
         },
         "editor": {
           "name": "Editor",
-          "wbprop": null,
+          "wbprop": "P41",
           "dtype": "WikibaseItem"
         },
         "guest": {
@@ -692,7 +692,7 @@
       "bibtypeqid": null,
       "fields": {
         "title": {
-          "wbprop": null
+          "wbprop": "P25"
         },
         "abstractNote": {
           "wbprop": false
@@ -705,7 +705,7 @@
           "wbprop": null
         },
         "date": {
-          "wbprop": null
+          "wbprop": "P30"
         },
         "language": {
           "wbprop": null
@@ -726,7 +726,7 @@
           "wbprop": null
         },
         "url": {
-          "wbprop": null
+          "wbprop": "P23"
         },
         "accessDate": {
           "wbprop": false
@@ -752,7 +752,7 @@
       "bibtypeqid": null,
       "fields": {
         "title": {
-          "wbprop": null
+          "wbprop": "P25"
         },
         "abstractNote": {
           "wbprop": false
@@ -765,20 +765,20 @@
           "wbprop": null
         },
         "volume": {
-          "wbprop": null
+          "wbprop": "P26"
         },
         "numberOfVolumes": {
           "wbprop": null
         },
         "place": {
-          "wbprop": null
+          "wbprop": "P28"
         },
         "label": {
           "wbprop": null,
           "baseField": "publisher"
         },
         "date": {
-          "wbprop": null
+          "wbprop": "P30"
         },
         "runningTime": {
           "wbprop": null
@@ -805,7 +805,7 @@
           "wbprop": null
         },
         "url": {
-          "wbprop": null
+          "wbprop": "P23"
         },
         "accessDate": {
           "wbprop": false
@@ -837,7 +837,7 @@
       "bibtypeqid": null,
       "fields": {
         "title": {
-          "wbprop": null
+          "wbprop": "P25"
         },
         "abstractNote": {
           "wbprop": false
@@ -871,10 +871,10 @@
           "wbprop": null
         },
         "date": {
-          "wbprop": null
+          "wbprop": "P30"
         },
         "url": {
-          "wbprop": null
+          "wbprop": "P23"
         },
         "accessDate": {
           "wbprop": false
@@ -903,13 +903,13 @@
       "bibtypeqid": null,
       "fields": {
         "title": {
-          "wbprop": null
+          "wbprop": "P25"
         },
         "abstractNote": {
           "wbprop": false
         },
         "blogTitle": {
-          "wbprop": null,
+          "wbprop": "P34",
           "baseField": "publicationTitle"
         },
         "websiteType": {
@@ -917,10 +917,10 @@
           "baseField": "type"
         },
         "date": {
-          "wbprop": null
+          "wbprop": "P30"
         },
         "url": {
-          "wbprop": null
+          "wbprop": "P23"
         },
         "accessDate": {
           "wbprop": false
@@ -940,7 +940,7 @@
       },
       "creatorTypes": {
         "author": {
-          "wbprop": null,
+          "wbprop": "P40",
           "primary": true
         },
         "commenter": {
@@ -955,7 +955,7 @@
       "bibtypeqid": null,
       "fields": {
         "title": {
-          "wbprop": null
+          "wbprop": "P25"
         },
         "abstractNote": {
           "wbprop": false
@@ -967,34 +967,34 @@
           "wbprop": null
         },
         "volume": {
-          "wbprop": null
+          "wbprop": "P26"
         },
         "numberOfVolumes": {
           "wbprop": null
         },
         "edition": {
-          "wbprop": null
+          "wbprop": "P27"
         },
         "place": {
-          "wbprop": null
+          "wbprop": "P28"
         },
         "publisher": {
-          "wbprop": null
+          "wbprop": "P29"
         },
         "date": {
-          "wbprop": null
+          "wbprop": "P30"
         },
         "numPages": {
-          "wbprop": null
+          "wbprop": "P31"
         },
         "shortTitle": {
           "wbprop": false
         },
         "url": {
-          "wbprop": null
+          "wbprop": "P23"
         },
         "archive": {
-          "wbprop": null
+          "wbprop": false
         },
         "archiveLocation": {
           "wbprop": false
@@ -1011,14 +1011,14 @@
       },
       "creatorTypes": {
         "author": {
-          "wbprop": null,
+          "wbprop": "P40",
           "primary": true
         },
         "contributor": {
           "wbprop": null
         },
         "editor": {
-          "wbprop": null
+          "wbprop": "P41"
         },
         "translator": {
           "wbprop": null
@@ -1032,13 +1032,13 @@
       "bibtypeqid": null,
       "fields": {
         "title": {
-          "wbprop": null
+          "wbprop": "P25"
         },
         "abstractNote": {
           "wbprop": false
         },
         "bookTitle": {
-          "wbprop": null,
+          "wbprop": "P35",
           "baseField": "publicationTitle"
         },
         "series": {
@@ -1048,25 +1048,25 @@
           "wbprop": null
         },
         "volume": {
-          "wbprop": null
+          "wbprop": "P26"
         },
         "numberOfVolumes": {
           "wbprop": null
         },
         "edition": {
-          "wbprop": null
+          "wbprop": "P27"
         },
         "place": {
-          "wbprop": null
+          "wbprop": "P28"
         },
         "publisher": {
-          "wbprop": null
+          "wbprop": "P29"
         },
         "date": {
-          "wbprop": null
+          "wbprop": "P30"
         },
         "pages": {
-          "wbprop": null
+          "wbprop": "P42"
         },
         "language": {
           "wbprop": null
@@ -1078,7 +1078,7 @@
           "wbprop": null
         },
         "url": {
-          "wbprop": null
+          "wbprop": "P23"
         },
         "accessDate": {
           "wbprop": false
@@ -1104,14 +1104,14 @@
       },
       "creatorTypes": {
         "author": {
-          "wbprop": null,
+          "wbprop": "P40",
           "primary": true
         },
         "contributor": {
           "wbprop": null
         },
         "editor": {
-          "wbprop": null
+          "wbprop": "P41"
         },
         "bookAuthor": {
           "wbprop": null
@@ -1167,7 +1167,7 @@
           "wbprop": null
         },
         "url": {
-          "wbprop": null
+          "wbprop": "P23"
         },
         "accessDate": {
           "wbprop": false
@@ -1181,7 +1181,7 @@
       },
       "creatorTypes": {
         "author": {
-          "wbprop": null,
+          "wbprop": "P40",
           "primary": true
         },
         "counsel": {
@@ -1196,7 +1196,7 @@
       "bibtypeqid": null,
       "fields": {
         "title": {
-          "wbprop": null
+          "wbprop": "P25"
         },
         "abstractNote": {
           "wbprop": false
@@ -1208,13 +1208,13 @@
           "wbprop": null
         },
         "date": {
-          "wbprop": null
+          "wbprop": "P30"
         },
         "system": {
           "wbprop": null
         },
         "place": {
-          "wbprop": null
+          "wbprop": "P28"
         },
         "company": {
           "wbprop": null,
@@ -1230,7 +1230,7 @@
           "wbprop": null
         },
         "url": {
-          "wbprop": null
+          "wbprop": "P23"
         },
         "rights": {
           "wbprop": false
@@ -1265,59 +1265,50 @@
       }
     },
     "conferencePaper": {
-      "bibtypeqid": null,
+      "bibtypeqid": "Q10",
       "exactmatches": [
         "http://purl.org/spar/fabio/ProceedingsPaper"
       ],
       "fields": {
         "title": {
-          "wbprop": null
+          "wbprop": "P25"
         },
         "abstractNote": {
           "wbprop": false
         },
         "date": {
-          "wbprop": null
+          "wbprop": "P30"
         },
         "proceedingsTitle": {
-          "wbprop": null,
+          "wbprop": "P35",
           "baseField": "publicationTitle"
         },
         "conferenceName": {
-          "wbprop": null
+          "wbprop": "P38"
         },
         "place": {
-          "wbprop": null
+          "wbprop": "P28"
         },
         "publisher": {
-          "wbprop": null
+          "wbprop": "P29"
         },
         "volume": {
-          "wbprop": null
+          "wbprop": "P26"
         },
         "pages": {
-          "wbprop": null
+          "wbprop": "P42"
         },
         "series": {
-          "wbprop": null
-        },
-        "language": {
           "wbprop": null
         },
         "DOI": {
           "wbprop": "P22"
         },
-        "ISBN": {
-          "wbprop": null
-        },
         "shortTitle": {
           "wbprop": null
         },
         "url": {
-          "wbprop": null
-        },
-        "accessDate": {
-          "wbprop": false
+          "wbprop": "P23"
         },
         "archive": {
           "wbprop": null
@@ -1333,21 +1324,18 @@
         },
         "rights": {
           "wbprop": false
-        },
-        "extra": {
-          "wbprop": null
         }
       },
       "creatorTypes": {
         "author": {
-          "wbprop": null,
+          "wbprop": "P40",
           "primary": true
         },
         "contributor": {
           "wbprop": null
         },
         "editor": {
-          "wbprop": null
+          "wbprop": "P41"
         },
         "translator": {
           "wbprop": null
@@ -1361,7 +1349,7 @@
       "bibtypeqid": null,
       "fields": {
         "title": {
-          "wbprop": null
+          "wbprop": "P25"
         },
         "abstractNote": {
           "wbprop": false
@@ -1377,7 +1365,7 @@
           "wbprop": null
         },
         "date": {
-          "wbprop": null
+          "wbprop": "P30"
         },
         "repository": {
           "wbprop": null,
@@ -1398,7 +1386,7 @@
           "wbprop": null
         },
         "url": {
-          "wbprop": null
+          "wbprop": "P23"
         },
         "accessDate": {
           "wbprop": false
@@ -1424,7 +1412,7 @@
       },
       "creatorTypes": {
         "author": {
-          "wbprop": null,
+          "wbprop": "P40",
           "primary": true
         },
         "contributor": {
@@ -1436,7 +1424,7 @@
       "bibtypeqid": null,
       "fields": {
         "title": {
-          "wbprop": null
+          "wbprop": "P25"
         },
         "abstractNote": {
           "wbprop": false
@@ -1452,25 +1440,25 @@
           "wbprop": null
         },
         "volume": {
-          "wbprop": null
+          "wbprop": "P26"
         },
         "numberOfVolumes": {
           "wbprop": null
         },
         "edition": {
-          "wbprop": null
+          "wbprop": "P27"
         },
         "place": {
-          "wbprop": null
+          "wbprop": "P28"
         },
         "publisher": {
-          "wbprop": null
+          "wbprop": "P29"
         },
         "date": {
-          "wbprop": null
+          "wbprop": "P30"
         },
         "pages": {
-          "wbprop": null
+          "wbprop": "P42"
         },
         "language": {
           "wbprop": null
@@ -1482,7 +1470,7 @@
           "wbprop": null
         },
         "url": {
-          "wbprop": null
+          "wbprop": "P23"
         },
         "accessDate": {
           "wbprop": false
@@ -1508,14 +1496,14 @@
       },
       "creatorTypes": {
         "author": {
-          "wbprop": null,
+          "wbprop": "P40",
           "primary": true
         },
         "contributor": {
           "wbprop": null
         },
         "editor": {
-          "wbprop": null
+          "wbprop": "P41"
         },
         "translator": {
           "wbprop": null
@@ -1529,16 +1517,16 @@
       "bibtypeqid": null,
       "fields": {
         "title": {
-          "wbprop": null
+          "wbprop": "P25"
         },
         "abstractNote": {
           "wbprop": false
         },
         "publisher": {
-          "wbprop": null
+          "wbprop": "P29"
         },
         "date": {
-          "wbprop": null
+          "wbprop": "P30"
         },
         "language": {
           "wbprop": null
@@ -1547,7 +1535,7 @@
           "wbprop": null
         },
         "url": {
-          "wbprop": null
+          "wbprop": "P23"
         },
         "accessDate": {
           "wbprop": false
@@ -1573,14 +1561,14 @@
       },
       "creatorTypes": {
         "author": {
-          "wbprop": null,
+          "wbprop": "P40",
           "primary": true
         },
         "contributor": {
           "wbprop": null
         },
         "editor": {
-          "wbprop": null
+          "wbprop": "P41"
         },
         "translator": {
           "wbprop": null
@@ -1601,13 +1589,13 @@
           "wbprop": false
         },
         "date": {
-          "wbprop": null
+          "wbprop": "P30"
         },
         "shortTitle": {
           "wbprop": null
         },
         "url": {
-          "wbprop": null
+          "wbprop": "P23"
         },
         "accessDate": {
           "wbprop": false
@@ -1624,7 +1612,7 @@
       },
       "creatorTypes": {
         "author": {
-          "wbprop": null,
+          "wbprop": "P40",
           "primary": true
         },
         "contributor": {
@@ -1639,7 +1627,7 @@
       "bibtypeqid": null,
       "fields": {
         "title": {
-          "wbprop": null
+          "wbprop": "P25"
         },
         "abstractNote": {
           "wbprop": false
@@ -1655,31 +1643,31 @@
           "wbprop": null
         },
         "volume": {
-          "wbprop": null
+          "wbprop": "P26"
         },
         "numberOfVolumes": {
           "wbprop": null
         },
         "edition": {
-          "wbprop": null
+          "wbprop": "P27"
         },
         "place": {
-          "wbprop": null
+          "wbprop": "P28"
         },
         "publisher": {
-          "wbprop": null
+          "wbprop": "P29"
         },
         "date": {
-          "wbprop": null
+          "wbprop": "P30"
         },
         "pages": {
-          "wbprop": null
+          "wbprop": "P42"
         },
         "shortTitle": {
           "wbprop": null
         },
         "url": {
-          "wbprop": null
+          "wbprop": "P23"
         },
         "accessDate": {
           "wbprop": false
@@ -1702,14 +1690,14 @@
       },
       "creatorTypes": {
         "author": {
-          "wbprop": null,
+          "wbprop": "P40",
           "primary": true
         },
         "contributor": {
           "wbprop": null
         },
         "editor": {
-          "wbprop": null
+          "wbprop": "P41"
         },
         "translator": {
           "wbprop": null
@@ -1723,7 +1711,7 @@
       "bibtypeqid": null,
       "fields": {
         "title": {
-          "wbprop": null
+          "wbprop": "P25"
         },
         "abstractNote": {
           "wbprop": false
@@ -1733,7 +1721,7 @@
           "baseField": "publisher"
         },
         "date": {
-          "wbprop": null
+          "wbprop": "P30"
         },
         "genre": {
           "wbprop": null,
@@ -1753,7 +1741,7 @@
           "wbprop": null
         },
         "url": {
-          "wbprop": null
+          "wbprop": "P23"
         },
         "accessDate": {
           "wbprop": false
@@ -1797,7 +1785,7 @@
       "bibtypeqid": null,
       "fields": {
         "title": {
-          "wbprop": null
+          "wbprop": "P25"
         },
         "abstractNote": {
           "wbprop": false
@@ -1811,7 +1799,7 @@
           "baseField": "type"
         },
         "date": {
-          "wbprop": null
+          "wbprop": "P30"
         },
         "language": {
           "wbprop": null
@@ -1820,7 +1808,7 @@
           "wbprop": null
         },
         "url": {
-          "wbprop": null
+          "wbprop": "P23"
         },
         "accessDate": {
           "wbprop": false
@@ -1834,7 +1822,7 @@
       },
       "creatorTypes": {
         "author": {
-          "wbprop": null,
+          "wbprop": "P40",
           "primary": true
         },
         "contributor": {
@@ -1846,7 +1834,7 @@
       "bibtypeqid": null,
       "fields": {
         "title": {
-          "wbprop": null
+          "wbprop": "P25"
         },
         "abstractNote": {
           "wbprop": false
@@ -1855,10 +1843,10 @@
           "wbprop": null
         },
         "place": {
-          "wbprop": null
+          "wbprop": "P28"
         },
         "publisher": {
-          "wbprop": null
+          "wbprop": "P29"
         },
         "numberOfVolumes": {
           "wbprop": null
@@ -1868,7 +1856,7 @@
           "baseField": "number"
         },
         "pages": {
-          "wbprop": null
+          "wbprop": "P42"
         },
         "legislativeBody": {
           "wbprop": null,
@@ -1881,7 +1869,7 @@
           "wbprop": null
         },
         "date": {
-          "wbprop": null
+          "wbprop": "P30"
         },
         "language": {
           "wbprop": null
@@ -1890,7 +1878,7 @@
           "wbprop": null
         },
         "url": {
-          "wbprop": null
+          "wbprop": "P23"
         },
         "accessDate": {
           "wbprop": false
@@ -1913,13 +1901,13 @@
       "bibtypeqid": null,
       "fields": {
         "title": {
-          "wbprop": null
+          "wbprop": "P25"
         },
         "abstractNote": {
           "wbprop": false
         },
         "date": {
-          "wbprop": null
+          "wbprop": "P30"
         },
         "language": {
           "wbprop": null
@@ -1928,7 +1916,7 @@
           "wbprop": null
         },
         "url": {
-          "wbprop": null
+          "wbprop": "P23"
         },
         "accessDate": {
           "wbprop": false
@@ -1942,7 +1930,7 @@
       },
       "creatorTypes": {
         "author": {
-          "wbprop": null,
+          "wbprop": "P40",
           "primary": true
         },
         "contributor": {
@@ -1957,13 +1945,13 @@
       "bibtypeqid": null,
       "fields": {
         "title": {
-          "wbprop": null
+          "wbprop": "P25"
         },
         "abstractNote": {
           "wbprop": false
         },
         "date": {
-          "wbprop": null
+          "wbprop": "P30"
         },
         "interviewMedium": {
           "wbprop": null,
@@ -1976,7 +1964,7 @@
           "wbprop": null
         },
         "url": {
-          "wbprop": null
+          "wbprop": "P23"
         },
         "accessDate": {
           "wbprop": false
@@ -2017,28 +2005,28 @@
       }
     },
     "journalArticle": {
-      "bibtypeqid": null,
+      "bibtypeqid": "Q9",
       "fields": {
         "title": {
-          "wbprop": null
+          "wbprop": "P25"
         },
         "abstractNote": {
           "wbprop": false
         },
         "publicationTitle": {
-          "wbprop": null
+          "wbprop": "P44"
         },
         "volume": {
-          "wbprop": null
+          "wbprop": "P26"
         },
         "issue": {
-          "wbprop": null
+          "wbprop": "P32"
         },
         "pages": {
-          "wbprop": null
+          "wbprop": "P42"
         },
         "date": {
-          "wbprop": null
+          "wbprop": "P30"
         },
         "series": {
           "wbprop": null
@@ -2052,23 +2040,17 @@
         "journalAbbreviation": {
           "wbprop": null
         },
-        "language": {
-          "wbprop": null
-        },
         "DOI": {
           "wbprop": "P22"
         },
         "ISSN": {
-          "wbprop": null
+          "wbprop": "P43"
         },
         "shortTitle": {
           "wbprop": null
         },
         "url": {
-          "wbprop": null
-        },
-        "accessDate": {
-          "wbprop": false
+          "wbprop": "P23"
         },
         "archive": {
           "wbprop": null
@@ -2084,21 +2066,18 @@
         },
         "rights": {
           "wbprop": false
-        },
-        "extra": {
-          "wbprop": null
         }
       },
       "creatorTypes": {
         "author": {
-          "wbprop": null,
+          "wbprop": "P40",
           "primary": true
         },
         "contributor": {
           "wbprop": null
         },
         "editor": {
-          "wbprop": null
+          "wbprop": "P41"
         },
         "translator": {
           "wbprop": null
@@ -2112,7 +2091,7 @@
       "bibtypeqid": null,
       "fields": {
         "title": {
-          "wbprop": null
+          "wbprop": "P25"
         },
         "abstractNote": {
           "wbprop": false
@@ -2122,7 +2101,7 @@
           "baseField": "type"
         },
         "date": {
-          "wbprop": null
+          "wbprop": "P30"
         },
         "language": {
           "wbprop": null
@@ -2131,7 +2110,7 @@
           "wbprop": null
         },
         "url": {
-          "wbprop": null
+          "wbprop": "P23"
         },
         "accessDate": {
           "wbprop": false
@@ -2157,7 +2136,7 @@
       },
       "creatorTypes": {
         "author": {
-          "wbprop": null,
+          "wbprop": "P40",
           "primary": true
         },
         "contributor": {
@@ -2172,7 +2151,7 @@
       "bibtypeqid": null,
       "fields": {
         "title": {
-          "wbprop": null
+          "wbprop": "P25"
         },
         "abstractNote": {
           "wbprop": false
@@ -2181,28 +2160,28 @@
           "wbprop": null
         },
         "volume": {
-          "wbprop": null
+          "wbprop": "P26"
         },
         "issue": {
-          "wbprop": null
+          "wbprop": "P32"
         },
         "date": {
-          "wbprop": null
+          "wbprop": "P30"
         },
         "pages": {
-          "wbprop": null
+          "wbprop": "P42"
         },
         "language": {
           "wbprop": null
         },
         "ISSN": {
-          "wbprop": null
+          "wbprop": "P43"
         },
         "shortTitle": {
           "wbprop": null
         },
         "url": {
-          "wbprop": null
+          "wbprop": "P23"
         },
         "accessDate": {
           "wbprop": false
@@ -2228,7 +2207,7 @@
       },
       "creatorTypes": {
         "author": {
-          "wbprop": null,
+          "wbprop": "P40",
           "primary": true
         },
         "contributor": {
@@ -2246,7 +2225,7 @@
       "bibtypeqid": null,
       "fields": {
         "title": {
-          "wbprop": null
+          "wbprop": "P25"
         },
         "abstractNote": {
           "wbprop": false
@@ -2256,13 +2235,13 @@
           "baseField": "type"
         },
         "place": {
-          "wbprop": null
+          "wbprop": "P28"
         },
         "date": {
-          "wbprop": null
+          "wbprop": "P30"
         },
         "numPages": {
-          "wbprop": null
+          "wbprop": "P31"
         },
         "language": {
           "wbprop": null
@@ -2271,7 +2250,7 @@
           "wbprop": null
         },
         "url": {
-          "wbprop": null
+          "wbprop": "P23"
         },
         "accessDate": {
           "wbprop": false
@@ -2297,7 +2276,7 @@
       },
       "creatorTypes": {
         "author": {
-          "wbprop": null,
+          "wbprop": "P40",
           "primary": true
         },
         "contributor": {
@@ -2312,7 +2291,7 @@
       "bibtypeqid": null,
       "fields": {
         "title": {
-          "wbprop": null
+          "wbprop": "P25"
         },
         "abstractNote": {
           "wbprop": false
@@ -2328,16 +2307,16 @@
           "wbprop": null
         },
         "edition": {
-          "wbprop": null
+          "wbprop": "P27"
         },
         "place": {
-          "wbprop": null
+          "wbprop": "P28"
         },
         "publisher": {
-          "wbprop": null
+          "wbprop": "P29"
         },
         "date": {
-          "wbprop": null
+          "wbprop": "P30"
         },
         "language": {
           "wbprop": null
@@ -2349,7 +2328,7 @@
           "wbprop": null
         },
         "url": {
-          "wbprop": null
+          "wbprop": "P23"
         },
         "accessDate": {
           "wbprop": false
@@ -2390,7 +2369,7 @@
       "bibtypeqid": null,
       "fields": {
         "title": {
-          "wbprop": null
+          "wbprop": "P25"
         },
         "abstractNote": {
           "wbprop": false
@@ -2399,19 +2378,19 @@
           "wbprop": null
         },
         "place": {
-          "wbprop": null
+          "wbprop": "P28"
         },
         "edition": {
-          "wbprop": null
+          "wbprop": "P27"
         },
         "date": {
-          "wbprop": null
+          "wbprop": "P30"
         },
         "section": {
           "wbprop": null
         },
         "pages": {
-          "wbprop": null
+          "wbprop": "P42"
         },
         "language": {
           "wbprop": null
@@ -2420,10 +2399,10 @@
           "wbprop": null
         },
         "ISSN": {
-          "wbprop": null
+          "wbprop": "P43"
         },
         "url": {
-          "wbprop": null
+          "wbprop": "P23"
         },
         "accessDate": {
           "wbprop": false
@@ -2449,7 +2428,7 @@
       },
       "creatorTypes": {
         "author": {
-          "wbprop": null,
+          "wbprop": "P40",
           "primary": true
         },
         "contributor": {
@@ -2472,13 +2451,13 @@
       "bibtypeqid": null,
       "fields": {
         "title": {
-          "wbprop": null
+          "wbprop": "P25"
         },
         "abstractNote": {
           "wbprop": false
         },
         "place": {
-          "wbprop": null
+          "wbprop": "P28"
         },
         "country": {
           "wbprop": null
@@ -2498,7 +2477,7 @@
           "wbprop": null
         },
         "pages": {
-          "wbprop": null
+          "wbprop": "P42"
         },
         "applicationNumber": {
           "wbprop": null
@@ -2524,7 +2503,7 @@
           "wbprop": null
         },
         "url": {
-          "wbprop": null
+          "wbprop": "P23"
         },
         "accessDate": {
           "wbprop": false
@@ -2553,7 +2532,7 @@
       "bibtypeqid": null,
       "fields": {
         "title": {
-          "wbprop": null
+          "wbprop": "P25"
         },
         "abstractNote": {
           "wbprop": false
@@ -2573,7 +2552,7 @@
           "wbprop": null
         },
         "url": {
-          "wbprop": null
+          "wbprop": "P23"
         },
         "accessDate": {
           "wbprop": false
@@ -2608,7 +2587,7 @@
       "bibtypeqid": null,
       "fields": {
         "title": {
-          "wbprop": null
+          "wbprop": "P25"
         },
         "abstractNote": {
           "wbprop": false
@@ -2626,10 +2605,10 @@
           "baseField": "number"
         },
         "place": {
-          "wbprop": null
+          "wbprop": "P28"
         },
         "date": {
-          "wbprop": null
+          "wbprop": "P30"
         },
         "series": {
           "wbprop": null
@@ -2644,7 +2623,7 @@
           "wbprop": null
         },
         "url": {
-          "wbprop": null
+          "wbprop": "P23"
         },
         "accessDate": {
           "wbprop": false
@@ -2676,14 +2655,14 @@
       },
       "creatorTypes": {
         "author": {
-          "wbprop": null,
+          "wbprop": "P40",
           "primary": true
         },
         "contributor": {
           "wbprop": null
         },
         "editor": {
-          "wbprop": null
+          "wbprop": "P41"
         },
         "translator": {
           "wbprop": null
@@ -2697,7 +2676,7 @@
       "bibtypeqid": null,
       "fields": {
         "title": {
-          "wbprop": null
+          "wbprop": "P25"
         },
         "abstractNote": {
           "wbprop": false
@@ -2707,16 +2686,16 @@
           "baseField": "type"
         },
         "date": {
-          "wbprop": null
+          "wbprop": "P30"
         },
         "place": {
-          "wbprop": null
+          "wbprop": "P28"
         },
         "meetingName": {
           "wbprop": null
         },
         "url": {
-          "wbprop": null
+          "wbprop": "P23"
         },
         "accessDate": {
           "wbprop": false
@@ -2748,7 +2727,7 @@
       "bibtypeqid": null,
       "fields": {
         "title": {
-          "wbprop": null
+          "wbprop": "P25"
         },
         "abstractNote": {
           "wbprop": false
@@ -2766,14 +2745,14 @@
           "baseField": "medium"
         },
         "place": {
-          "wbprop": null
+          "wbprop": "P28"
         },
         "network": {
           "wbprop": null,
           "baseField": "publisher"
         },
         "date": {
-          "wbprop": null
+          "wbprop": "P30"
         },
         "runningTime": {
           "wbprop": null
@@ -2785,7 +2764,7 @@
           "wbprop": null
         },
         "url": {
-          "wbprop": null
+          "wbprop": "P23"
         },
         "accessDate": {
           "wbprop": false
@@ -2835,7 +2814,7 @@
       "bibtypeqid": null,
       "fields": {
         "title": {
-          "wbprop": null
+          "wbprop": "P25"
         },
         "abstractNote": {
           "wbprop": false
@@ -2852,17 +2831,17 @@
           "wbprop": null
         },
         "place": {
-          "wbprop": null
+          "wbprop": "P28"
         },
         "institution": {
           "wbprop": null,
           "baseField": "publisher"
         },
         "date": {
-          "wbprop": null
+          "wbprop": "P30"
         },
         "pages": {
-          "wbprop": null
+          "wbprop": "P42"
         },
         "language": {
           "wbprop": null
@@ -2871,7 +2850,7 @@
           "wbprop": null
         },
         "url": {
-          "wbprop": null
+          "wbprop": "P23"
         },
         "accessDate": {
           "wbprop": false
@@ -2897,7 +2876,7 @@
       },
       "creatorTypes": {
         "author": {
-          "wbprop": null,
+          "wbprop": "P40",
           "primary": true
         },
         "contributor": {
@@ -2915,7 +2894,7 @@
       "bibtypeqid": null,
       "fields": {
         "title": {
-          "wbprop": null
+          "wbprop": "P25"
         },
         "abstractNote": {
           "wbprop": false
@@ -2940,13 +2919,13 @@
           "wbprop": null
         },
         "date": {
-          "wbprop": null
+          "wbprop": "P30"
         },
         "publisher": {
-          "wbprop": null
+          "wbprop": "P29"
         },
         "place": {
-          "wbprop": null
+          "wbprop": "P28"
         },
         "DOI": {
           "wbprop": "P22"
@@ -2955,7 +2934,7 @@
           "wbprop": null
         },
         "url": {
-          "wbprop": null
+          "wbprop": "P23"
         },
         "accessDate": {
           "wbprop": false
@@ -2970,7 +2949,7 @@
           "wbprop": null
         },
         "numPages": {
-          "wbprop": null
+          "wbprop": "P31"
         },
         "language": {
           "wbprop": null
@@ -2990,7 +2969,7 @@
       },
       "creatorTypes": {
         "author": {
-          "wbprop": null,
+          "wbprop": "P40",
           "primary": true
         },
         "contributor": {
@@ -3023,7 +3002,7 @@
           "baseField": "date"
         },
         "pages": {
-          "wbprop": null
+          "wbprop": "P42"
         },
         "section": {
           "wbprop": null
@@ -3041,7 +3020,7 @@
           "wbprop": null
         },
         "url": {
-          "wbprop": null
+          "wbprop": "P23"
         },
         "accessDate": {
           "wbprop": false
@@ -3055,7 +3034,7 @@
       },
       "creatorTypes": {
         "author": {
-          "wbprop": null,
+          "wbprop": "P40",
           "primary": true
         },
         "contributor": {
@@ -3064,42 +3043,36 @@
       }
     },
     "thesis": {
-      "bibtypeqid": null,
+      "bibtypeqid": "Q11",
       "fields": {
         "title": {
-          "wbprop": null
+          "wbprop": "P25"
         },
         "abstractNote": {
           "wbprop": false
         },
         "thesisType": {
-          "wbprop": null,
+          "wbprop": "P36",
           "baseField": "type"
         },
         "university": {
-          "wbprop": null,
+          "wbprop": "P37",
           "baseField": "publisher"
         },
         "place": {
-          "wbprop": null
+          "wbprop": "P28"
         },
         "date": {
-          "wbprop": null
+          "wbprop": "P30"
         },
         "numPages": {
-          "wbprop": null
-        },
-        "language": {
-          "wbprop": null
+          "wbprop": "P31"
         },
         "shortTitle": {
           "wbprop": null
         },
         "url": {
-          "wbprop": null
-        },
-        "accessDate": {
-          "wbprop": false
+          "wbprop": "P23"
         },
         "archive": {
           "wbprop": null
@@ -3115,14 +3088,11 @@
         },
         "rights": {
           "wbprop": false
-        },
-        "extra": {
-          "wbprop": null
         }
       },
       "creatorTypes": {
         "author": {
-          "wbprop": null,
+          "wbprop": "P40",
           "primary": true
         },
         "contributor": {
@@ -3134,7 +3104,7 @@
       "bibtypeqid": null,
       "fields": {
         "title": {
-          "wbprop": null
+          "wbprop": "P25"
         },
         "abstractNote": {
           "wbprop": false
@@ -3152,14 +3122,14 @@
           "baseField": "medium"
         },
         "place": {
-          "wbprop": null
+          "wbprop": "P28"
         },
         "network": {
           "wbprop": null,
           "baseField": "publisher"
         },
         "date": {
-          "wbprop": null
+          "wbprop": "P30"
         },
         "runningTime": {
           "wbprop": null
@@ -3171,7 +3141,7 @@
           "wbprop": null
         },
         "url": {
-          "wbprop": null
+          "wbprop": "P23"
         },
         "accessDate": {
           "wbprop": false
@@ -3221,7 +3191,7 @@
       "bibtypeqid": null,
       "fields": {
         "title": {
-          "wbprop": null
+          "wbprop": "P25"
         },
         "abstractNote": {
           "wbprop": false
@@ -3234,20 +3204,20 @@
           "wbprop": null
         },
         "volume": {
-          "wbprop": null
+          "wbprop": "P26"
         },
         "numberOfVolumes": {
           "wbprop": null
         },
         "place": {
-          "wbprop": null
+          "wbprop": "P28"
         },
         "studio": {
           "wbprop": null,
           "baseField": "publisher"
         },
         "date": {
-          "wbprop": null
+          "wbprop": "P30"
         },
         "runningTime": {
           "wbprop": null
@@ -3262,7 +3232,7 @@
           "wbprop": null
         },
         "url": {
-          "wbprop": null
+          "wbprop": "P23"
         },
         "accessDate": {
           "wbprop": false
@@ -3309,7 +3279,7 @@
       "bibtypeqid": null,
       "fields": {
         "title": {
-          "wbprop": null
+          "wbprop": "P25"
         },
         "abstractNote": {
           "wbprop": false
@@ -3323,13 +3293,13 @@
           "baseField": "type"
         },
         "date": {
-          "wbprop": null
+          "wbprop": "P30"
         },
         "shortTitle": {
           "wbprop": null
         },
         "url": {
-          "wbprop": null
+          "wbprop": "P23"
         },
         "accessDate": {
           "wbprop": false
@@ -3346,7 +3316,7 @@
       },
       "creatorTypes": {
         "author": {
-          "wbprop": null,
+          "wbprop": "P40",
           "primary": true
         },
         "contributor": {

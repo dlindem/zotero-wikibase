@@ -231,6 +231,10 @@
     "identifier_patterns": {
       "^OCLC: ([0-9]+)": "P55"
     },
+    "other_wb_externalid": {
+      "https://lexbib.elex.is": "P39",
+      "http://lexbib.elex.is": "P39"
+    },
     "zotero_group_id": "5449136",
     "zotero_group_name": "NeoCorpus",
     "zotero_export_tag": "wikibase-export",

@@ -1,0 +1,438 @@
+[
+  {
+    "key": "Z4CHEK2J",
+    "version": 1412,
+    "library": {
+      "type": "group",
+      "id": 5449136,
+      "name": "NeoCorpus",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/neocorpus",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5449136/items/Z4CHEK2J",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/neocorpus/items/Z4CHEK2J",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/5449136/items/3P5ZYZ73",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 1465828
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Verdizade",
+      "parsedDate": "2021",
+      "numChildren": 3
+    },
+    "data": {
+      "key": "Z4CHEK2J",
+      "version": 1412,
+      "itemType": "conferencePaper",
+      "title": "Lemmatisation, etymology and information overload on English and Swedish editions of Wiktionary",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Allahverdi",
+          "lastName": "Verdizade"
+        }
+      ],
+      "abstractNote": "Abstract  \nIn this paper, we present Language Monitor 1.0, a new online resource for monitoring language changes in Slovene, developed at the Centre for Language Resources and Technologies at the University of Ljubljana. The resource is another part of the newly developed infrastructure for researching and describing contemporary Slovene. Language Monitor 1.0 offers four sections to observe word usage: (1) a single-word list, (2) word groups, (2) a neologism section, and (4) word comparisons. The words for a single-word list are manually validated from a list of salient word candidates, which are identified using the Simple Maths method. The paper also describes future plans, including the setup of a relational database linked with a data warehouse solution for analysis purposes, which will include various statistical information on different language phenomena relevant for researchers, lexicographers, and other users, and will provide possibilities for adding several new features to the Language Monitor.  Keywords: Language Monitor; trends; neologisms; language cha Abstract Wiktionary is a user-generated wiki-project with the goal of building a universal dictionary covering all words in all languages. Various language editions of Wiktionary have community-specific policies regulating concrete lexicographic questions. The distinct entry structures of English and Swedish Wiktionaries are examined in the context of the relation between headword and etymological information, under special consideration of the user-friendliness of the respective approach. The English Wiktionary applies the etymological approach in setting the headword, which splits identical forms into parts of speech, but also into headwords based on word origin. Additionally, the semantic information is separated from non-semantic more rigorously than is done in the Swedish Wiktionary, placing lists of related and derived terms below the headword rather than under each definition. The Swedish Wiktionary applies the formal-grammatical approach, where division into headwords is made strictly based on identical form and part of speech. In this approach, homonymy is disregarded. The etymological information is nested under each definition rather than having a separate section above the headword. The analysis of the two language editions suggests that the different approaches lead to different amounts of information overload in users, depending on the extent of non-semantic information. Equally extensive entries are handled better within the layout structure of the English Wiktionary. \nKeywords: Wiktionary; information overload; etymologynge; corpus",
+      "date": "2021",
+      "proceedingsTitle": "Electronic Lexicography in the 21st Century: Proceedings of the eLex 2021 Conference",
+      "conferenceName": "Electronic lexicography in the 21st century: post-editing lexicography. Proceedings of the eLex 201 conference",
+      "place": "Brno",
+      "publisher": "Lexical Computing CZ s.r.o.",
+      "volume": "",
+      "pages": "463-478",
+      "series": "",
+      "language": "en",
+      "DOI": "",
+      "ISBN": "",
+      "shortTitle": "eLex (2021)",
+      "url": "https://elex.link/elex2021/wp-content/uploads/2021/08/eLex_2021_29_pp463-478.pdf",
+      "accessDate": "",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "",
+      "callNumber": "",
+      "rights": "",
+      "extra": "https://eneoli.wikibase.cloud/entity/Q203\nhttp://en.wikipedia.org/wiki/Uppsala;\nhttp://en.wikipedia.org/wiki/Brno",
+      "tags": [
+        {
+          "tag": "on-wikibase"
+        }
+      ],
+      "collections": [],
+      "relations": {
+        "owl:sameAs": "http://zotero.org/groups/1892855/items/FVT2H5AX"
+      },
+      "dateAdded": "2024-03-22T10:48:22Z",
+      "dateModified": "2024-03-29T20:33:45Z"
+    },
+    "wikibase_entity": "Q203"
+  },
+  {
+    "key": "V9TCA69T",
+    "version": 1411,
+    "library": {
+      "type": "group",
+      "id": 5449136,
+      "name": "NeoCorpus",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/neocorpus",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5449136/items/V9TCA69T",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/neocorpus/items/V9TCA69T",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/5449136/items/4EVQFTN2",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 520121
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 7366654,
+        "username": "ana.salgado",
+        "name": "Ana Salgado",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/ana.salgado",
+            "type": "text/html"
+          }
+        }
+      },
+      "lastModifiedByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Bach et al.",
+      "parsedDate": "2022",
+      "numChildren": 2
+    },
+    "data": {
+      "key": "V9TCA69T",
+      "version": 1411,
+      "itemType": "journalArticle",
+      "title": "N\u00e9ologismes en discours sp\u00e9cialis\u00e9. Analyse compar\u00e9e des noms de stades de football dans quatre pays europeens",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Matthieu",
+          "lastName": "Bach"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Javier",
+          "lastName": "Fern\u00e1ndez-Cruz"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Laurent",
+          "lastName": "Gautier"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Florian",
+          "lastName": "Koch"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Matthieu",
+          "lastName": "Llorca"
+        }
+      ],
+      "abstractNote": "The present contribution intends to innovate in neology and onomastic analysis, by relying on an empirical study of soccer stadium names in France, Germany, England and Spain, in order to validate on corpus a holistic, discursive, cognitive, and interdisciplinary approach of neology. For this purpose, we will establish a theoretical framework, based on the recognition of the limits of formal models of neology, in order to integrate discursive variables, and also to capture the totality of the social mechanisms governing the displayed use of linguistic structures. These structures are characterized by non-compositionality and specialized informational linearization. In fact, the soccer stadium names, result of the naming process, related to the commodification of the soccer sector, deploy a new neologic structure such as &lt;[SPONSOR]+ [GENERIC TOPONYM]&gt;, which gives birth to results such as Allianz Arena or Emirates Stadium. This analysis of stadium names is part of a larger project focused on specialized discourses.",
+      "publicationTitle": "Estudios Rom\u00e1nicos",
+      "volume": "31",
+      "issue": "",
+      "pages": "",
+      "date": "2022",
+      "series": "",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "",
+      "language": "fr",
+      "DOI": "10.6018/ER.510481",
+      "ISSN": "1989-614X",
+      "shortTitle": "",
+      "url": "https://revistas.um.es/estudiosromanicos/article/view/510481",
+      "accessDate": "2024-03-22T17:35:48Z",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "revistas.um.es",
+      "callNumber": "",
+      "rights": "Derechos de autor 2022 \u00c9tudes Romanes",
+      "extra": "https://eneoli.wikibase.cloud/entity/Q204\n",
+      "tags": [
+        {
+          "tag": "Task 1.1"
+        },
+        {
+          "tag": "on-wikibase"
+        }
+      ],
+      "collections": [
+        "HL3NBFQ8"
+      ],
+      "relations": {},
+      "dateAdded": "2024-03-22T17:35:48Z",
+      "dateModified": "2024-03-29T20:33:26Z"
+    },
+    "wikibase_entity": "Q204"
+  },
+  {
+    "key": "WT9H74NG",
+    "version": 1411,
+    "library": {
+      "type": "group",
+      "id": 5449136,
+      "name": "NeoCorpus",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/neocorpus",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5449136/items/WT9H74NG",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/neocorpus/items/WT9H74NG",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/5449136/items/AV9MXKC8",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 783066
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 7366654,
+        "username": "ana.salgado",
+        "name": "Ana Salgado",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/ana.salgado",
+            "type": "text/html"
+          }
+        }
+      },
+      "lastModifiedByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Wolfer and Klosa-K\u00fcckelhaus",
+      "parsedDate": "2023",
+      "numChildren": 1
+    },
+    "data": {
+      "key": "WT9H74NG",
+      "version": 1411,
+      "itemType": "journalArticle",
+      "title": "Tracking the acceptance of neologisms in German: Psycholinguistic factors and their correspondence with corpus-linguistic findings",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Sascha",
+          "lastName": "Wolfer"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Annette",
+          "lastName": "Klosa-K\u00fcckelhaus"
+        }
+      ],
+      "abstractNote": "Neologisms, i.e., new words or meanings, are finding their way into everyday language use all the time. In the process, already existing elements of a language are recombined or linguistic material from other languages is borrowed. But are borrowed neologisms accepted similarly well by the speech community as neologisms that were formed from \u201cnative\u201d material? We investigate this question based on neologisms in German. Building on the corresponding results of a corpus study, we test the hypothesis of whether \u201cnative\u201d neologisms are more readily accepted than those borrowed from English. To do so, we use a psycholinguistic experimental paradigm that allows us to estimate the degree of uncertainty of the participants based on the mouse trajectories of their responses. Unexpectedly, our results suggest that the neologisms borrowed from English are accepted more frequently, more quickly, and more easily than the \u201cnative\u201d ones. These effects, however, are restricted to people born after 1980, the so-called millenials. We propose potential explanations for this mismatch between corpus results and experimental data and argue, among other things, for a reinterpretation of previous corpus studies.",
+      "publicationTitle": "Humanities and Social Sciences Communications",
+      "volume": "10",
+      "issue": "1",
+      "pages": "1-10",
+      "date": "2023",
+      "series": "",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "Humanit Soc Sci Commun",
+      "language": "en",
+      "DOI": "10.1057/s41599-023-01977-4",
+      "ISSN": "2662-9992",
+      "shortTitle": "Tracking the acceptance of neologisms in German",
+      "url": "https://www.nature.com/articles/s41599-023-01977-4",
+      "accessDate": "2024-03-22T15:39:06Z",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "www.nature.com",
+      "callNumber": "",
+      "rights": "2023 The Author(s)",
+      "extra": "https://eneoli.wikibase.cloud/entity/Q205\nPublisher: Palgrave",
+      "tags": [
+        {
+          "tag": "Task 1.1"
+        },
+        {
+          "tag": "on-wikibase"
+        }
+      ],
+      "collections": [
+        "HL3NBFQ8"
+      ],
+      "relations": {},
+      "dateAdded": "2024-03-22T15:39:06Z",
+      "dateModified": "2024-03-29T20:33:26Z"
+    },
+    "wikibase_entity": "Q205"
+  },
+  {
+    "key": "Z4IX6KWT",
+    "version": 1411,
+    "library": {
+      "type": "group",
+      "id": 5449136,
+      "name": "NeoCorpus",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/neocorpus",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5449136/items/Z4IX6KWT",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/neocorpus/items/Z4IX6KWT",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/5449136/items/DUR4LAJS",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 65750028
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 7366654,
+        "username": "ana.salgado",
+        "name": "Ana Salgado",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/ana.salgado",
+            "type": "text/html"
+          }
+        }
+      },
+      "lastModifiedByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Bureau",
+      "parsedDate": "2023",
+      "numChildren": 2
+    },
+    "data": {
+      "key": "Z4IX6KWT",
+      "version": 1411,
+      "itemType": "thesis",
+      "title": "Variation terminologique et n\u00e9ologie dans le domaine du changement climatique.",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Pauline",
+          "lastName": "Bureau"
+        }
+      ],
+      "abstractNote": "L'objectif de la th\u00e8se est de proposer une caract\u00e9risation de la variation terminologique et de la n\u00e9ologie autour du changement climatique d\u2019origine anthropique (CCA) en tenant compte du r\u00f4le et des implications de ces deux ph\u00e9nom\u00e8nes linguistiques vis-\u00e0-vis des objectifs climatiques. L\u2019enjeu de ce projet est une meilleure compr\u00e9hension du r\u00f4le que peuvent jouer les termes d\u2019une part et la terminologie en tant que discipline d\u2019autre part vis-\u00e0-vis de la probl\u00e9matique climatique. Objet d\u2019\u00e9tude transdisciplinaire et sujet de d\u00e9bat entre diff\u00e9rents groupes sociaux, le changement climatique ne constitue pas une th\u00e9matique de recherche prototypique en terminologie. Nous consacrons ainsi une premi\u00e8re partie \u00e0 d\u00e9finir un domaine sp\u00e9cialis\u00e9 du changement climatique et \u00e0 d\u00e9montrer l\u2019int\u00e9r\u00eat d\u2019\u00e9tudier ce dernier selon une perspective variationniste et en consid\u00e9rant la n\u00e9ologie comme une forme de variation. Dans la deuxi\u00e8me partie, nous mobilisons des outils issus de la Terminologie textuelle et de l\u2019Analyse du discours pour identifier une terminologie sp\u00e9cialis\u00e9e du CCA, montrer comment celle-ci se renouvelle dans le temps et comment elle tend \u00e0 varier au sein de l\u2019expertise climatique, en l\u2019occurrence entre les organisations inter-gouvernementales (OIG) et les organisations non gouvernementales (ONG). Dans la derni\u00e8re partie, nous \u00e9tudions la variation entre ces deux communaut\u00e9s expertes et la presse et interrogeons l\u2019existence d\u2019une terminologie climatique sp\u00e9cifique \u00e0 cette derni\u00e8re instance, en phase avec le caract\u00e8re transdisciplinaire du domaine du CCA. Pour chaque forme de variation observ\u00e9e, nous pr\u00e9sentons ses implications potentielles vis-\u00e0-vis de la finalit\u00e9 de ce domaine, d\u00e9finie comme s\u2019articulant autour de trois grands objectifs : la r\u00e9duction des lacunes dans les connaissances autour du changement climatique, la diffusion de ces connaissances, et l\u2019action climatique.",
+      "thesisType": "phdthesis",
+      "university": "Universit\u00e9 Grenoble Alpes [2020-....]",
+      "place": "",
+      "date": "2023",
+      "numPages": "",
+      "language": "fr",
+      "shortTitle": "",
+      "url": "https://theses.hal.science/tel-04353683",
+      "accessDate": "2024-03-22T17:39:59Z",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "theses.hal.science",
+      "callNumber": "",
+      "rights": "",
+      "extra": "https://eneoli.wikibase.cloud/entity/Q206\n",
+      "tags": [
+        {
+          "tag": "Task 1.1"
+        },
+        {
+          "tag": "on-wikibase"
+        }
+      ],
+      "collections": [
+        "T4KHMSXP"
+      ],
+      "relations": {},
+      "dateAdded": "2024-03-22T17:39:59Z",
+      "dateModified": "2024-03-29T20:33:25Z"
+    },
+    "wikibase_entity": "Q206"
+  }
+]

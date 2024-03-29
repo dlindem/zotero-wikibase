@@ -51,6 +51,96 @@
       "enlabel": "URL",
       "type": "URL",
       "wdprop": "P953"
+    },
+    "P25": {
+      "enlabel": "Title",
+      "type": "String",
+      "wdprop": null
+    },
+    "P26": {
+      "enlabel": "Volume",
+      "type": "String",
+      "wdprop": "P478"
+    },
+    "P27": {
+      "enlabel": "Edition",
+      "type": "String",
+      "wdprop": "P393"
+    },
+    "P28": {
+      "enlabel": "Place",
+      "type": "String",
+      "wdprop": null
+    },
+    "P29": {
+      "enlabel": "Publisher",
+      "type": "String",
+      "wdprop": null
+    },
+    "P30": {
+      "enlabel": "Date",
+      "type": "Time",
+      "wdprop": null
+    },
+    "P31": {
+      "enlabel": "# of Pages",
+      "type": "String",
+      "wdprop": "P1104"
+    },
+    "P32": {
+      "enlabel": "Issue",
+      "type": "String",
+      "wdprop": "P433"
+    },
+    "P34": {
+      "enlabel": "Blog Title",
+      "type": "String",
+      "wdprop": null
+    },
+    "P35": {
+      "enlabel": "Book Title",
+      "type": "String",
+      "wdprop": null
+    },
+    "P36": {
+      "enlabel": "Type",
+      "type": "String",
+      "wdprop": null
+    },
+    "P37": {
+      "enlabel": "University",
+      "type": "String",
+      "wdprop": null
+    },
+    "P38": {
+      "enlabel": "Conference Name",
+      "type": "String",
+      "wdprop": null
+    },
+    "P40": {
+      "enlabel": "Author",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P41": {
+      "enlabel": "Editor",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P42": {
+      "enlabel": "Pages",
+      "type": "String",
+      "wdprop": "P304"
+    },
+    "P43": {
+      "enlabel": "ISSN",
+      "type": "ExternalId",
+      "wdprop": null
+    },
+    "P44": {
+      "enlabel": "Publication",
+      "type": "String",
+      "wdprop": null
     }
   }
 }
