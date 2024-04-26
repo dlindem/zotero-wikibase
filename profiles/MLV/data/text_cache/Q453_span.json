@@ -145,5 +145,36 @@
       "type": "literal",
       "value": "gero erantsia"
     }
+  },
+  {
+    "span": {
+      "type": "uri",
+      "value": "https://monumenta.wikibase.cloud/entity/Q1277"
+    },
+    "span_tokenak": {
+      "type": "literal",
+      "value": "Q811 Q812 Q813"
+    },
+    "span_label": {
+      "xml:lang": "eu",
+      "type": "literal",
+      "value": "Virgi\u00f1aren icenaren egunean"
+    },
+    "span_formak": {
+      "type": "literal",
+      "value": "1.0:Virgi\u00f1aren 2.0:icenaren 3.0:egunean"
+    },
+    "wikisource_paragraph": {
+      "type": "uri",
+      "value": "https://eu.wikisource.org/wiki/Azkoitiko_Sermoia#1"
+    },
+    "wd_ent_erref": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q2828"
+    },
+    "wd_erref_info": {
+      "type": "literal",
+      "value": "Abuztuaren 22 (urteko eguna)"
+    }
   }
 ]

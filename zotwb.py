@@ -805,7 +805,7 @@ def get_grobid():
                 citations = inguma_functions.get_biblstruct(citations=citations, doc_qid=doc_qid)
                 print(str(citations))
             botconfig.dump_mapping(citations)
-    cit_cache = {}
+    cit_slice = {}
     for doc_qid in doc_qids:
         if doc_qid in citations['mapping']:
             statuscounts = {}
@@ -815,21 +815,30 @@ def get_grobid():
                 else:
                     statuscounts[citations['mapping'][doc_qid][citation]['status']] += 1
 
-            cit_cache[doc_qid] = str(statuscounts)[1:-1]
+            cit_slice[doc_qid] = str(statuscounts)[1:-1]
         else:
-            cit_cache[doc_qid] = "new"
-    return render_template("inguma_get_grobid.html", wikibase_name=configdata['mapping']['wikibase_name'], wikibase_entity_ns=configdata['mapping']['wikibase_entity_ns'], doc_qids=doc_qids, cit_cache=cit_cache)
+            cit_slice[doc_qid] = "new"
+    return render_template("inguma_get_grobid.html", wikibase_name=configdata['mapping']['wikibase_name'], wikibase_entity_ns=configdata['mapping']['wikibase_entity_ns'], doc_qids=doc_qids, cit_slice=cit_slice)
 
 
 @app.route('/inguma/list_citations/<doc_qid>', methods= ['GET', 'POST'])
 def list_citations(doc_qid):
     configdata = botconfig.load_mapping('config')
     global citations
-    cit_cache = citations['mapping'][doc_qid]
 
+    status_options = ['undefined', 'NOISE', 'openalex', 'googlebooks', 'wikidata', 'wikibase']
+
+    if request.method == "POST":
+        if request.form:
+            for key in request.form:
+                cit_id = key.replace("status_","")
+                citations['mapping'][doc_qid][cit_id]['status'] = request.form.get(key)
+            botconfig.dump_mapping(citations)
+
+    cit_slice = citations['mapping'][doc_qid]
     return render_template("inguma_list_citations.html", wikibase_name=configdata['mapping']['wikibase_name'],
                            wikibase_entity_ns=configdata['mapping']['wikibase_entity_ns'], doc_qid=doc_qid,
-                           cit_cache=cit_cache)
+                           cit_slice=cit_slice, status_options=status_options)
 
 alex_results = None
 @app.route('/inguma/openalex/<code>', methods= ['GET', 'POST'])
@@ -841,27 +850,79 @@ def openalex(code):
     doc_qid = code_re.group(1)
     cit_id = code_re.group(2)
     configdata = botconfig.load_mapping('config')
-
-    cit_cache = citations['mapping'][doc_qid][cit_id]
-    bibentry = inguma_functions.get_xml(cit_cache['biblStruct'])
+    message = None
+    cit_slice = citations['mapping'][doc_qid][cit_id]
+    bibentry = inguma_functions.get_xml(cit_slice['biblStruct'])
     if request.method == 'GET':
         alex_results = inguma_functions.get_openalex(bibentry=bibentry)
+        search_string = alex_results['search_string']
         message = f"Got OpenAlex results for {doc_qid}, {cit_id}."
 
     elif request.method == 'POST':
         for key in request.form:
+            if key == "manual_search":
+                search_string = request.form.get(key)
+                alex_results = inguma_functions.get_openalex(bibentry=bibentry, search_string=search_string)
+                message = f"Got OpenAlex results for {doc_qid}, {cit_id}, search was: {search_string}"
             if key.startswith("lotu_"):
-                code_re = re.search(r'lotu_(W.*)', key)
-                target_id = code_re.group(1)
-                target_qid = inguma_functions.lotu_alex(source_doc=doc_qid, target_alexid=target_id, alex_results=alex_results)
+                try:
+                    code_re = re.search(r'lotu_(W.*)', key)
+                    target_alexid = code_re.group(1)
+                except:
+                    message = f"In '{code}' no valid OpenAlix Work identifier found."
+                    break
+                target_qid = inguma_functions.lotu_zitazioa(source_doc=doc_qid, target_alexid=target_alexid, results=alex_results)
                 citations['mapping'][doc_qid][cit_id]['status'] = "openalex"
                 citations['mapping'][doc_qid][cit_id]['target_wikibase'] = target_qid
                 botconfig.dump_mapping(citations)
-                message = f'Lotura egina: {doc_qid} dokumentuak <a href="{configdata["mapping"]["wikibase_entity_ns"]}{target_qid}" target="_blank">{target_qid}</a> aipatzen du.'
+                message = f'Lotura egina: {doc_qid} dokumentuak <a href="{configdata["mapping"]["wikibase_entity_ns"]}{target_qid}" target="_blank">{target_qid}</a> (OpenAlex <a href="https://openalex.org/{target_alexid}" target="_blank">{target_alexid}</a>) aipatzen du.'
 
     return render_template("inguma_openalex.html", wikibase_name=configdata['mapping']['wikibase_name'], wikibase_url=configdata['mapping']['wikibase_url'],
                            wikibase_entity_ns=configdata['mapping']['wikibase_entity_ns'], doc_qid=doc_qid, cit_id=cit_id,
-                           cit_cache=cit_cache, alex_results=alex_results, message=message)
+                           cit_slice=cit_slice, search_string=search_string, alex_results=alex_results, message=message)
+
+gb_results = None
+
+@app.route('/inguma/googlebooks/<code>', methods= ['GET', 'POST'])
+def googlebooks(code):
+    from bots import inguma_functions
+    global gb_results
+    global search_string
+    print(f"search string: {search_string}")
+    global citations
+    code_re = re.search(r'(Q\d+)_(.*)', code)
+    doc_qid = code_re.group(1)
+    cit_id = code_re.group(2)
+    configdata = botconfig.load_mapping('config')
+    message = None
+    cit_slice = citations['mapping'][doc_qid][cit_id]
+    bibentry = inguma_functions.get_xml(cit_slice['biblStruct'])
+    if request.method == 'GET':
+        gb_results = inguma_functions.get_googlebooks(bibentry=bibentry, search_string=None)
+        print(str(gb_results))
+        search_string = gb_results['search_string']
+        message = f"Results for {doc_qid}, {cit_id}, search was: {search_string}"
+
+    if request.method == 'POST':
+        for key in request.form:
+            print(f"key: {key}, value: {request.form.get(key)}")
+            if key == "manual_search":
+                search_string = request.form.get(key)
+                gb_results = inguma_functions.get_googlebooks(bibentry=bibentry, search_string=search_string)
+                message = f"Results for {doc_qid}, {cit_id}, search was: {search_string}"
+
+            if key.startswith("lotu_"):
+                code_re = re.search(r'lotu_(.*)', key)
+                target_id = code_re.group(1)
+                target_qid = inguma_functions.lotu_zitazioa(source_doc=doc_qid, target_gbid=target_id, results=gb_results)
+                citations['mapping'][doc_qid][cit_id]['status'] = "googlebooks"
+                citations['mapping'][doc_qid][cit_id]['target_wikibase'] = target_qid
+                botconfig.dump_mapping(citations)
+                message = f'Lotura egina: {doc_qid} dokumentuak <a href="{configdata["mapping"]["wikibase_entity_ns"]}{target_qid}" target="_blank">{target_qid}</a> (gbooks <a href="https://books.google.com/books?id={target_id}" target="_blank">{target_id}</a>) aipatzen du.'
+
+    return render_template("inguma_googlebooks.html", wikibase_name=configdata['mapping']['wikibase_name'], wikibase_url=configdata['mapping']['wikibase_url'],
+                           wikibase_entity_ns=configdata['mapping']['wikibase_entity_ns'], doc_qid=doc_qid, cit_id=cit_id,
+                           cit_slice=cit_slice, search_string=search_string, gb_results=gb_results, message=message)
 
 
 

@@ -1,0 +1,106 @@
+[
+  {
+    "lexinfopos": "https://serbian.wikibase.cloud/entity/Q23745",
+    "lexinfoposLabel": "Proper Noun",
+    "lexinfo_uri": "http://www.lexinfo.net/ontology/2.0/lexinfo#ProperNoun",
+    "oliacat": "https://serbian.wikibase.cloud/entity/Q27",
+    "oliacatLabel": "Proper Noun",
+    "oliacat_uri": "http://purl.org/olia/olia.owl#ProperNoun"
+  },
+  {
+    "lexinfopos": "https://serbian.wikibase.cloud/entity/Q23746",
+    "lexinfoposLabel": "Coordinating Conjunction",
+    "lexinfo_uri": "http://www.lexinfo.net/ontology/2.0/lexinfo#coordinatingConjunction",
+    "oliacat": "https://serbian.wikibase.cloud/entity/Q24",
+    "oliacatLabel": "Coordinating Conjunction",
+    "oliacat_uri": "http://purl.org/olia/olia.owl#CoordinatingConjunction"
+  },
+  {
+    "lexinfopos": "https://serbian.wikibase.cloud/entity/Q23747",
+    "lexinfoposLabel": "Subordinating Conjunction",
+    "lexinfo_uri": "http://www.lexinfo.net/ontology/2.0/lexinfo#subordinatingConjunction",
+    "oliacat": "https://serbian.wikibase.cloud/entity/Q34",
+    "oliacatLabel": "Subordinating Conjunction",
+    "oliacat_uri": "http://purl.org/olia/olia.owl#SubordinatingConjunction"
+  },
+  {
+    "lexinfopos": "https://serbian.wikibase.cloud/entity/Q23748",
+    "lexinfoposLabel": "Common Noun",
+    "lexinfo_uri": "http://www.lexinfo.net/ontology/2.0/lexinfo#commonNoun",
+    "oliacat": "https://serbian.wikibase.cloud/entity/Q29",
+    "oliacatLabel": "Common Noun",
+    "oliacat_uri": "http://purl.org/olia/olia.owl#CommonNoun"
+  },
+  {
+    "lexinfopos": "https://serbian.wikibase.cloud/entity/Q23750",
+    "lexinfoposLabel": "Verb",
+    "lexinfo_uri": "http://www.lexinfo.net/ontology/2.0/lexinfo#verb",
+    "oliacat": "https://serbian.wikibase.cloud/entity/Q22",
+    "oliacatLabel": "Verb",
+    "oliacat_uri": "http://purl.org/olia/olia.owl#Verb"
+  },
+  {
+    "lexinfopos": "https://serbian.wikibase.cloud/entity/Q23750",
+    "lexinfoposLabel": "Verb",
+    "lexinfo_uri": "http://www.lexinfo.net/ontology/2.0/lexinfo#verb",
+    "oliacat": "https://serbian.wikibase.cloud/entity/Q35",
+    "oliacatLabel": "Auxiliary Verb",
+    "oliacat_uri": "http://purl.org/olia/olia.owl#AuxiliaryVerb"
+  },
+  {
+    "lexinfopos": "https://serbian.wikibase.cloud/entity/Q23751",
+    "lexinfoposLabel": "Adjective",
+    "lexinfo_uri": "http://www.lexinfo.net/ontology/2.0/lexinfo#adjective",
+    "oliacat": "https://serbian.wikibase.cloud/entity/Q31",
+    "oliacatLabel": "Adjective",
+    "oliacat_uri": "http://purl.org/olia/olia.owl#Adjective"
+  },
+  {
+    "lexinfopos": "https://serbian.wikibase.cloud/entity/Q23752",
+    "lexinfoposLabel": "Preposition",
+    "lexinfo_uri": "http://www.lexinfo.net/ontology/2.0/lexinfo#preposition",
+    "oliacat": "https://serbian.wikibase.cloud/entity/Q30",
+    "oliacatLabel": "Adposition",
+    "oliacat_uri": "http://purl.org/olia/olia.owl#Adposition"
+  },
+  {
+    "lexinfopos": "https://serbian.wikibase.cloud/entity/Q23753",
+    "lexinfoposLabel": "Adverb",
+    "lexinfo_uri": "http://www.lexinfo.net/ontology/2.0/lexinfo#adverb",
+    "oliacat": "https://serbian.wikibase.cloud/entity/Q28",
+    "oliacatLabel": "Adverb",
+    "oliacat_uri": "http://purl.org/olia/olia.owl#Adverb"
+  },
+  {
+    "lexinfopos": "https://serbian.wikibase.cloud/entity/Q23754",
+    "lexinfoposLabel": "Pronoun",
+    "lexinfo_uri": "http://www.lexinfo.net/ontology/2.0/lexinfo#pronoun",
+    "oliacat": "https://serbian.wikibase.cloud/entity/Q26",
+    "oliacatLabel": "Determiner",
+    "oliacat_uri": "http://purl.org/olia/olia.owl#Determiner"
+  },
+  {
+    "lexinfopos": "https://serbian.wikibase.cloud/entity/Q23754",
+    "lexinfoposLabel": "Pronoun",
+    "lexinfo_uri": "http://www.lexinfo.net/ontology/2.0/lexinfo#pronoun",
+    "oliacat": "https://serbian.wikibase.cloud/entity/Q33",
+    "oliacatLabel": "Pronoun",
+    "oliacat_uri": "http://purl.org/olia/olia.owl#Pronoun"
+  },
+  {
+    "lexinfopos": "https://serbian.wikibase.cloud/entity/Q23756",
+    "lexinfoposLabel": "Number",
+    "lexinfo_uri": "http://www.lexinfo.net/ontology/2.0/lexinfo#number",
+    "oliacat": "https://serbian.wikibase.cloud/entity/Q21",
+    "oliacatLabel": "Numeral",
+    "oliacat_uri": "http://purl.org/olia/olia.owl#Numeral"
+  },
+  {
+    "lexinfopos": "https://serbian.wikibase.cloud/entity/Q23757",
+    "lexinfoposLabel": "Interjection",
+    "lexinfo_uri": "http://www.lexinfo.net/ontology/2.0/lexinfo#interjection",
+    "oliacat": "https://serbian.wikibase.cloud/entity/Q32",
+    "oliacatLabel": "Interjection",
+    "oliacat_uri": "http://purl.org/olia/olia.owl#Interjection"
+  }
+]

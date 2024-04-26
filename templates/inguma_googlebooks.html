@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+<link href="/static/favicon.ico" rel="shortcut icon"/>
+    <title>{{ cit_id }} Google Books</title>
+<style>
+    th { border: thin solid black; padding: 10px; }
+    td { border: thin solid black; padding: 10px; }
+</style>
+</head>
+<body style="background-color:#eceff1">
+
+<h1>Google Books</h1>
+{% if message %}<span style="background:limegreen">{{ message|safe }}</span>{% endif %}
+<p><small>(Itzuli <a href="/mlv">hasierara</a>)</small></p>
+<h2>Google Books: <a href="{{ wikibase_entity_ns }}{{ doc_qid }}" target="_blank">{{ doc_qid }}</a> citation {{ cit_id }}</h2>
+<p>Grobid abizenak: <b>{{ gb_results['bibnames'] }}</b></br>
+    Grobid izenburua: <b>{{ gb_results['bibtitle'] }}</b></br>
+    Grobid urtea: <b>{{ gb_results['bibdate'] }}</b></br></p>
+<p><form method="POST"><input style="width: 800px;" type="text" name="manual_search" value="{{ search_string }}"/><button type="submit">Bilatu GBooks</button></form>
+<br/><small>erabili operadoreak, adib. <i>intitle:</i>, <i>allintitle:</i>, <i>inauthor:</i></small></p>
+<table>
+    <tr><th>Lotu!</th><th>Xehet.</th><th>GBooks autoreak</th><th>urtea</th><th>GBooks izenburua</th><th>Link</th></tr>
+    {% for result in gb_results['results'] %}
+    <tr><td><form method="POST"><button type="submit" name="lotu_{{ result }}" value="link">Hau da!</button></form></td>
+        <td><button popovertarget="resultpop_{{ result }}">Ikusi</button></td>
+        <td>{{ gb_results['results'][result]['result_authors'] }}</td>
+        <td>{{ gb_results['results'][result]['result_pubyear'] }}</td>
+        <td>{{ gb_results['results'][result]['result_title'] }}</td>
+        <td><a href="https://books.google.com/books?id={{ result }}" target="_blank">GBLink</a></td></tr>
+
+    {% endfor %}
+</table>
+
+{% for result in gb_results['results'] %}
+<div style="width:70%" popover id="resultpop_{{ result }}"><h2>Google Books complete result</h2><code>{{ gb_results['results'][result]['complete_result'] }}</code><button style="vertical-center" popovertarget="resultpop_{{ result }}" popovertargetaction="hide">[itxi]</button>
+        </div>
+{% endfor %}
+<h3>Iturria: <a href="{{ wikibase_url }}/wiki/Grobid:{{ doc_qid }}.tei.xml" target="_blank">{{ doc_qid }}.tei.xml</a></h3>
+<h3>Aipu Osoa</h3>
+<table>
+    <tr><td><code>{{ cit_slice['biblSoup'] }}</code></td></tr>
+    <tr><td><code>{{ cit_slice['biblStruct'] }}</code></td></tr>
+</table>
+</body>
+</html>

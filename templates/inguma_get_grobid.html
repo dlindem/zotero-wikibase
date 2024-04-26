@@ -16,7 +16,7 @@
 <h2>GROBID TEI-XML dokumentuak</h2>
 <table>
     <tr><th>Iturri-dok.</th><th>GROBID listBibl</th><th>Status</th></tr>
-{% for doc_qid in cit_cache %}<tr><td><a href="{{ wikibase_entity_ns }}{{ doc_qid }}" target="_blank">{{ doc_qid }}</a></td><td><a href="/inguma/list_citations/{{ doc_qid }}" target="_blank">Landu zitazioak</a></td><td>{{ cit_cache[doc_qid] }}</td></tr>{% endfor %}
+{% for doc_qid in cit_slice %}<tr><td><a href="{{ wikibase_entity_ns }}{{ doc_qid }}" target="_blank">{{ doc_qid }}</a></td><td><a href="/inguma/list_citations/{{ doc_qid }}" target="_blank">Landu zitazioak</a></td><td>{{ cit_slice[doc_qid] }}</td></tr>{% endfor %}
 </table>
 
 </body>

@@ -13,16 +13,23 @@
 <h1>{{ doc_qid }} Zitazioak</h1>
 <p><small>(Itzuli <a href="/inguma/get_grobid">hasierara</a>)</small></p>
 <h2><a href="{{ wikibase_entity_ns }}{{ doc_qid }}" target="_blank">{{ doc_qid }}</a> dokumentuko zitazioak landu</h2>
+<form method="POST">
 <table>
-    <tr><th>#</th><th>Wikibase</th><th>Status</th><th>OpenAlex</th><th>Text</th></tr>
-{% for citation in cit_cache %}
+    <tr><th>#</th><th>Wikibase</th><th><button type="submit">Save Status</button></th><th>OpenAlex</th><th>GBooks</th><th>Bib reference text</th></tr>
+{% for citation in cit_slice %}
     <tr><td>{{ citation }}</td>
-        <td><a href="{{ wikibase_entity_ns }}{{ doc_qid }}" target="_blank">{{ cit_cache[citation]['target_wikibase'] }}</a></td>
-        <td>{{ cit_cache[citation]['status'] }}</td>
+        <td><a href="{{ wikibase_entity_ns }}{{ cit_slice[citation]['target_wikibase'] }}" target="_blank">{{ cit_slice[citation]['target_wikibase'] }}</a></td>
+        <td>
+            <select name="status_{{ citation }}" id="status_{{ citation }}" required="required">
+                {% for op in status_options %}
+                <option {%if cit_slice[citation]['status'] == op%}selected {% endif %}value="{{ op }}">{{ op }}</option>
+                {% endfor %}
+            </select></td>
         <td><a href="/inguma/openalex/{{ doc_qid }}_{{ citation }}" target="_blank">Bilatu: OpenAlex</a></td>
-        <td>{{ cit_cache[citation]['biblSoup'] }}</td></tr>
+        <td><a href="/inguma/googlebooks/{{ doc_qid }}_{{ citation }}" target="_blank">Bilatu: GBooks</a></td>
+        <td>{{ cit_slice[citation]['biblSoup'] }}</td></tr>
 {% endfor %}
 </table>
-
+</form>
 </body>
 </html>

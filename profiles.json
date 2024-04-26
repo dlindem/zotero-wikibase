@@ -1,9 +1,18 @@
 {
+<<<<<<< Updated upstream
   "last_profile": "eneoli",
+=======
+  "last_profile": "serbian",
+>>>>>>> Stashed changes
   "profiles_list": [
     "serbian",
     "eusterm",
     "MLV",
+<<<<<<< Updated upstream
     "eneoli"
+=======
+    "lexbib",
+    "inguma"
+>>>>>>> Stashed changes
   ]
 }

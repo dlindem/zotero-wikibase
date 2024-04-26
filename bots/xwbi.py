@@ -9,6 +9,8 @@ from wikibaseintegrator.datatypes.time import Time
 from wikibaseintegrator.datatypes.globecoordinate import GlobeCoordinate
 from wikibaseintegrator.datatypes.url import URL
 from wikibaseintegrator.models import Reference, References, Form, Sense
+from wikibaseintegrator.models.qualifiers import Qualifiers
+from wikibaseintegrator.models.claims import Claims
 from wikibaseintegrator import wbi_helpers
 from wikibaseintegrator.wbi_enums import ActionIfExists, WikibaseSnakType
 from bots import botconfig
@@ -123,6 +125,7 @@ def packstatements(statements, wbitem=None, qualifiers=False, references=False):
 	return wbitem
 
 def itemwrite(itemdata, clear=False, entitytype='Item', datatype=None):
+	global wbi
 	if itemdata['qid'] == False:
 		if entitytype == "Item":
 			xwbitem = wbi.item.new()
@@ -185,8 +188,14 @@ def itemwrite(itemdata, clear=False, entitytype='Item', datatype=None):
 				regex = re.search(r'(Q[0-9]+)\]\] already has label', str(ex))
 				if regex:
 					qid = regex.group(1)
-					print(f"Error: Item {qid} has the same label and the same description... Will use that in order to avoid duplicate creation.")
+					print(f"Error: Item {qid} has the same label and the same description... On ENTER we use that in order to avoid duplicate creation.")
 					return qid
+			if "Invalid CSRF token." in str(ex):
+				login_instance = wbi_login.Login(user=config_private['wb_bot_user'],
+												 password=config_private['wb_bot_pwd'])
+
+				wbi = WikibaseIntegrator(login=login_instance)
+				continue
 			presskey = input('Enter 0 for skipping and continue without writing statements, else retry writing.')
 			if presskey == "0":
 				d = True

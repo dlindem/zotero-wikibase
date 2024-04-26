@@ -20,7 +20,7 @@
       "b2": {
         "biblStruct": "<ns0:biblStruct xmlns:ns0=\"http://www.tei-c.org/ns/1.0\" xml:id=\"b2\" grobid_timestamp=\"2024-03-12\">\n\t<ns0:analytic>\n\t\t<ns0:title level=\"a\" type=\"main\">Die Rolle der Muttersprache im Deutschunterricht in zweisprachigen Gebieten am Beispiel des Baskenlandes</ns0:title>\n\t\t<ns0:author>\n\t\t\t<ns0:persName><ns0:forename type=\"first\">S</ns0:forename><ns0:surname>Braun</ns0:surname></ns0:persName>\n\t\t</ns0:author>\n\t</ns0:analytic>\n\t<ns0:monogr>\n\t\t<ns0:title level=\"m\">Bestandsaufnahme der Germanistik in Spanien: Kulturtransfer und methodologische Erneuerung</ns0:title>\n\t\t<ns0:editor>C. Jarrilot (arg</ns0:editor>\n\t\t<ns0:imprint>\n\t\t\t<ns0:publisher>Peter Lang</ns0:publisher>\n\t\t\t<ns0:date type=\"published\" when=\"2010\" />\n\t\t\t<ns0:biblScope unit=\"page\" from=\"25\" to=\"36\" />\n\t\t</ns0:imprint>\n\t</ns0:monogr>\n</ns0:biblStruct>\n\n",
         "biblSoup": "  Die Rolle der Muttersprache im Deutschunterricht in zweisprachigen Gebieten am Beispiel des Baskenlandes   S Braun     Bestandsaufnahme der Germanistik in Spanien: Kulturtransfer und methodologische Erneuerung  C. Jarrilot (arg   Peter Lang      ",
-        "status": "unvalidated",
+        "status": "undefined",
         "grobid_timestamp": "2024-03-12"
       },
       "b3": {
@@ -33,13 +33,13 @@
       "b4": {
         "biblStruct": "<ns0:biblStruct xmlns:ns0=\"http://www.tei-c.org/ns/1.0\" xml:id=\"b4\" grobid_timestamp=\"2024-03-12\">\n\t<ns0:analytic>\n\t\t\t\t<ns0:idno>40000g-2009-12-31-0.1</ns0:idno>\n\t</ns0:analytic>\n\t<ns0:monogr>\n\t\t<ns0:title level=\"m\">mit Benutzerdokumentation. Institut f&#252;r Deutsche Sprache</ns0:title>\n\t\t<ns0:imprint>\n\t\t\t<ns0:date type=\"published\" when=\"2009\" />\n\t\t</ns0:imprint>\n\t</ns0:monogr>\n\t<ns0:note>Korpusbasierte Wortgrundformenliste DEREWO. Programmbereich Korpuslinguistik</ns0:note>\n</ns0:biblStruct>\n\n",
         "biblSoup": "  40000g-2009-12-31-0.1    mit Benutzerdokumentation. Institut f\u00fcr Deutsche Sprache      Korpusbasierte Wortgrundformenliste DEREWO. Programmbereich Korpuslinguistik  ",
-        "status": "unvalidated",
+        "status": "undefined",
         "grobid_timestamp": "2024-03-12"
       },
       "b5": {
         "biblStruct": "<ns0:biblStruct xmlns:ns0=\"http://www.tei-c.org/ns/1.0\" xml:id=\"b5\" grobid_timestamp=\"2024-03-12\">\n\t<ns0:analytic>\n\t\t<ns0:title level=\"a\" type=\"main\">Polysemie oder Homonymie? Zur Praxis der Bedeutungsgliederung in den W&#246;rterbuchartikeln synchronischer einsprachiger W&#246;rterb&#252;cher der Deutschen Sprache</ns0:title>\n\t\t<ns0:author>\n\t\t\t<ns0:persName><ns0:forename type=\"first\">G</ns0:forename><ns0:surname>Kempcke</ns0:surname></ns0:persName>\n\t\t</ns0:author>\n\t</ns0:analytic>\n\t<ns0:monogr>\n\t\t<ns0:title level=\"j\">Lexicographica, Nr</ns0:title>\n\t\t<ns0:imprint>\n\t\t\t<ns0:biblScope unit=\"volume\">17</ns0:biblScope>\n\t\t\t<ns0:biblScope unit=\"page\" from=\"61\" to=\"68\" />\n\t\t\t<ns0:date type=\"published\" when=\"2001\" />\n\t\t</ns0:imprint>\n\t</ns0:monogr>\n</ns0:biblStruct>\n\n",
         "biblSoup": "  Polysemie oder Homonymie? Zur Praxis der Bedeutungsgliederung in den W\u00f6rterbuchartikeln synchronischer einsprachiger W\u00f6rterb\u00fccher der Deutschen Sprache   G Kempcke     Lexicographica, Nr   17      ",
-        "status": "unvalidated",
+        "status": "undefined",
         "grobid_timestamp": "2024-03-12"
       },
       "b6": {
@@ -66,7 +66,7 @@
       "b9": {
         "biblStruct": "<ns0:biblStruct xmlns:ns0=\"http://www.tei-c.org/ns/1.0\" xml:id=\"b9\" grobid_timestamp=\"2024-03-12\">\n\t<ns0:analytic>\n\t\t<ns0:title level=\"a\" type=\"main\">Euskarazko maiztasun lemategia gaurko teknologien ikuspuntutik</ns0:title>\n\t\t<ns0:author>\n\t\t\t<ns0:persName><ns0:forename type=\"first\">D</ns0:forename><ns0:surname>Lindemann</ns0:surname></ns0:persName>\n\t\t</ns0:author>\n\t\t<ns0:author>\n\t\t\t<ns0:persName><ns0:surname>Eta I. San</ns0:surname></ns0:persName>\n\t\t</ns0:author>\n\t\t<ns0:author>\n\t\t\t<ns0:persName><ns0:surname>Vicente</ns0:surname></ns0:persName>\n\t\t</ns0:author>\n\t</ns0:analytic>\n\t<ns0:monogr>\n\t\t<ns0:title level=\"m\">Ibon Sarasolari Gorazarre</ns0:title>\n\t\t<ns0:editor>B. Fernandez eta B. Salaburu</ns0:editor>\n\t\t<ns0:meeting><ns0:address><ns0:addrLine>Bilbao</ns0:addrLine></ns0:address></ns0:meeting>\n\t\t<ns0:imprint>\n\t\t\t<ns0:publisher>UPV/EHU</ns0:publisher>\n\t\t\t<ns0:date type=\"published\" when=\"2015\" />\n\t\t</ns0:imprint>\n\t</ns0:monogr>\n</ns0:biblStruct>\n\n",
         "biblSoup": "  Euskarazko maiztasun lemategia gaurko teknologien ikuspuntutik   D Lindemann    Eta I. San    Vicente     Ibon Sarasolari Gorazarre  B. Fernandez eta B. Salaburu  Bilbao   UPV/EHU     ",
-        "status": "unvalidated",
+        "status": "undefined",
         "grobid_timestamp": "2024-03-12"
       },
       "b10": {
@@ -79,8 +79,9 @@
       "b11": {
         "biblStruct": "<ns0:biblStruct xmlns:ns0=\"http://www.tei-c.org/ns/1.0\" xml:id=\"b11\" grobid_timestamp=\"2024-03-12\">\n\t<ns0:monogr>\n\t\t\t\t<ns0:author>\n\t\t\t<ns0:persName><ns0:forename type=\"first\">Mart&#237;nez</ns0:forename><ns0:surname>Rubio</ns0:surname></ns0:persName>\n\t\t</ns0:author>\n\t\t<ns0:author>\n\t\t\t<ns0:persName><ns0:forename type=\"first\">E</ns0:forename></ns0:persName>\n\t\t</ns0:author>\n\t\t<ns0:title level=\"m\">Euskara alemana hiztegia</ns0:title>\n\t\t<ns0:meeting><ns0:address><ns0:addrLine>Donostia</ns0:addrLine></ns0:address></ns0:meeting>\n\t\t<ns0:imprint>\n\t\t\t<ns0:publisher>Elkar</ns0:publisher>\n\t\t\t<ns0:date type=\"published\" when=\"2007\" />\n\t\t</ns0:imprint>\n\t</ns0:monogr>\n</ns0:biblStruct>\n\n",
         "biblSoup": "   Mart\u00ednez Rubio    E   Euskara alemana hiztegia  Donostia   Elkar     ",
-        "status": "unvalidated",
-        "grobid_timestamp": "2024-03-12"
+        "status": "googlebooks",
+        "grobid_timestamp": "2024-03-12",
+        "target_wikibase": "Q35804"
       },
       "b12": {
         "biblStruct": "<ns0:biblStruct xmlns:ns0=\"http://www.tei-c.org/ns/1.0\" xml:id=\"b12\" grobid_timestamp=\"2024-03-12\">\n\t<ns0:analytic>\n\t\t<ns0:title level=\"a\" type=\"main\">Bifid: un alineador de corpus paralelo a nivel de documento, oraci&#243;n y vocabulario</ns0:title>\n\t\t<ns0:author>\n\t\t\t<ns0:persName><ns0:forename type=\"first\">R</ns0:forename><ns0:surname>Nazar</ns0:surname></ns0:persName>\n\t\t</ns0:author>\n\t</ns0:analytic>\n\t<ns0:monogr>\n\t\t<ns0:title level=\"j\">Linguam&#225;tica</ns0:title>\n\t\t<ns0:imprint>\n\t\t\t<ns0:biblScope unit=\"volume\">4</ns0:biblScope>\n\t\t\t<ns0:biblScope unit=\"issue\">2</ns0:biblScope>\n\t\t\t<ns0:biblScope unit=\"page\" from=\"45\" to=\"56\" />\n\t\t\t<ns0:date type=\"published\" when=\"2012\" />\n\t\t</ns0:imprint>\n\t</ns0:monogr>\n</ns0:biblStruct>\n\n",
@@ -106,13 +107,13 @@
       "b15": {
         "biblStruct": "<ns0:biblStruct xmlns:ns0=\"http://www.tei-c.org/ns/1.0\" xml:id=\"b15\" grobid_timestamp=\"2024-03-12\">\n\t<ns0:analytic>\n\t\t<ns0:title level=\"a\" type=\"main\">Interkulturelles Lernen am Beispiel baskischer Muttersprachler im Deutschunterricht</ns0:title>\n\t\t<ns0:author>\n\t\t\t<ns0:persName><ns0:forename type=\"first\">D</ns0:forename><ns0:surname>Reuter</ns0:surname></ns0:persName>\n\t\t</ns0:author>\n\t</ns0:analytic>\n\t<ns0:monogr>\n\t\t<ns0:title level=\"m\">C. Jarrilot (arg): Bestandsaufnahme der Germanistik in Spanien: Kulturtransfer und methodologische Erneuerung</ns0:title>\n\t\t<ns0:imprint>\n\t\t\t<ns0:publisher>Peter Lang</ns0:publisher>\n\t\t\t<ns0:date type=\"published\" when=\"2010\" />\n\t\t\t<ns0:biblScope unit=\"page\" from=\"261\" to=\"66\" />\n\t\t</ns0:imprint>\n\t</ns0:monogr>\n</ns0:biblStruct>\n\n",
         "biblSoup": "  Interkulturelles Lernen am Beispiel baskischer Muttersprachler im Deutschunterricht   D Reuter     C. Jarrilot (arg): Bestandsaufnahme der Germanistik in Spanien: Kulturtransfer und methodologische Erneuerung   Peter Lang      ",
-        "status": "unvalidated",
+        "status": "undefined",
         "grobid_timestamp": "2024-03-12"
       },
       "b16": {
         "biblStruct": "<ns0:biblStruct xmlns:ns0=\"http://www.tei-c.org/ns/1.0\" xml:id=\"b16\" grobid_timestamp=\"2024-03-12\">\n\t<ns0:monogr>\n\t\t<ns0:title />\n\t\t<ns0:author>\n\t\t\t<ns0:persName><ns0:forename type=\"first\">D</ns0:forename><ns0:surname>Reuter</ns0:surname></ns0:persName>\n\t\t</ns0:author>\n\t\t<ns0:author>\n\t\t\t<ns0:persName><ns0:forename type=\"first\">J</ns0:forename><ns0:surname>Wolff</ns0:surname></ns0:persName>\n\t\t</ns0:author>\n\t\t<ns0:editor>Deutsch -Euskaldunentzat. Donostia: Erein</ns0:editor>\n\t\t<ns0:imprint>\n\t\t\t<ns0:date type=\"published\" when=\"2007\" />\n\t\t</ns0:imprint>\n\t</ns0:monogr>\n</ns0:biblStruct>\n\n",
         "biblSoup": "    D Reuter    J Wolff   Deutsch -Euskaldunentzat. Donostia: Erein      ",
-        "status": "unvalidated",
+        "status": "undefined",
         "grobid_timestamp": "2024-03-12"
       },
       "b17": {
@@ -132,7 +133,7 @@
       "b19": {
         "biblStruct": "<ns0:biblStruct xmlns:ns0=\"http://www.tei-c.org/ns/1.0\" xml:id=\"b19\" grobid_timestamp=\"2024-03-12\">\n\t<ns0:monogr>\n\t\t<ns0:title />\n\t\t<ns0:author>\n\t\t\t<ns0:persName><ns0:forename type=\"first\">I</ns0:forename><ns0:surname>Sarasola</ns0:surname></ns0:persName>\n\t\t</ns0:author>\n\t\t<ns0:author>\n\t\t\t<ns0:persName><ns0:forename type=\"first\">J</ns0:forename><ns0:surname>Landa</ns0:surname></ns0:persName>\n\t\t</ns0:author>\n\t\t<ns0:author>\n\t\t\t<ns0:persName><ns0:forename type=\"first\">P</ns0:forename><ns0:surname>Salaburu</ns0:surname></ns0:persName>\n\t\t</ns0:author>\n\t\t<ns0:editor>Egungo Testuen Corpusa. UPV/EHU</ns0:editor>\n\t\t<ns0:imprint>\n\t\t\t<ns0:date type=\"published\" when=\"2013\" />\n\t\t</ns0:imprint>\n\t</ns0:monogr>\n</ns0:biblStruct>\n\n",
         "biblSoup": "    I Sarasola    J Landa    P Salaburu   Egungo Testuen Corpusa. UPV/EHU      ",
-        "status": "unvalidated",
+        "status": "undefined",
         "grobid_timestamp": "2024-03-12"
       },
       "b20": {
@@ -159,7 +160,7 @@
       "b23": {
         "biblStruct": "<ns0:biblStruct xmlns:ns0=\"http://www.tei-c.org/ns/1.0\" xml:id=\"b23\" grobid_timestamp=\"2024-03-12\">\n\t<ns0:analytic>\n\t\t<ns0:title level=\"a\" type=\"main\">Sprachvergleich Baskisch/Deutsch und seine Auswirkungen f&#252;r den Unterricht</ns0:title>\n\t\t<ns0:author>\n\t\t\t<ns0:persName><ns0:forename type=\"first\">J&#252;rgen</ns0:forename><ns0:surname>Wolff</ns0:surname></ns0:persName>\n\t\t</ns0:author>\n\t</ns0:analytic>\n\t<ns0:monogr>\n\t\t<ns0:title level=\"m\">Bestandsaufnahme der Germanistik in Spanien: Kulturtransfer und methodologische Erneuerung</ns0:title>\n\t\t<ns0:editor>C. Jarrilot (arg</ns0:editor>\n\t\t<ns0:imprint>\n\t\t\t<ns0:publisher>Peter Lang</ns0:publisher>\n\t\t\t<ns0:date type=\"published\" when=\"2010\" />\n\t\t\t<ns0:biblScope unit=\"page\" from=\"37\" to=\"42\" />\n\t\t</ns0:imprint>\n\t</ns0:monogr>\n</ns0:biblStruct>\n\n\n\t\t\t\t",
         "biblSoup": "  Sprachvergleich Baskisch/Deutsch und seine Auswirkungen f\u00fcr den Unterricht   J\u00fcrgen Wolff     Bestandsaufnahme der Germanistik in Spanien: Kulturtransfer und methodologische Erneuerung  C. Jarrilot (arg   Peter Lang      ",
-        "status": "unvalidated",
+        "status": "undefined",
         "grobid_timestamp": "2024-03-12"
       }
     }

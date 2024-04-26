@@ -1,7 +1,7 @@
 [
   {
-    "key": "MYU3XQQ8",
-    "version": 1516,
+    "key": "8FDDJTJA",
+    "version": 1539,
     "library": {
       "type": "group",
       "id": 5165329,
@@ -15,12 +15,18 @@
     },
     "links": {
       "self": {
-        "href": "https://api.zotero.org/groups/5165329/items/MYU3XQQ8",
+        "href": "https://api.zotero.org/groups/5165329/items/8FDDJTJA",
         "type": "application/json"
       },
       "alternate": {
-        "href": "https://www.zotero.org/groups/mlv/items/MYU3XQQ8",
+        "href": "https://www.zotero.org/groups/mlv/items/8FDDJTJA",
         "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/5165329/items/LDUDHKIU",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 6260689
       }
     },
     "meta": {
@@ -35,70 +41,53 @@
           }
         }
       },
-      "creatorSummary": "Astarbe and Salaberria",
-      "parsedDate": "2008",
-      "numChildren": 0
+      "creatorSummary": "Alonso Arrospide",
+      "parsedDate": "2021",
+      "numChildren": 1
     },
     "data": {
-      "key": "MYU3XQQ8",
-      "version": 1516,
-      "itemType": "book",
-      "title": "Sagardoaren hiztegia",
+      "key": "8FDDJTJA",
+      "version": 1539,
+      "itemType": "thesis",
+      "title": "Larramendiren Hiztegi Hirukoitzaren digitalizazioa",
       "creators": [
         {
           "creatorType": "author",
-          "firstName": "Miel Joxe",
-          "lastName": "Astarbe"
-        },
-        {
-          "creatorType": "author",
-          "firstName": "Urkiri",
-          "lastName": "Salaberria"
+          "firstName": "Mikel",
+          "lastName": "Alonso Arrospide"
         }
       ],
       "abstractNote": "",
-      "series": "",
-      "seriesNumber": "",
-      "volume": "",
-      "numberOfVolumes": "",
-      "edition": "",
-      "place": "S.l.",
-      "publisher": "Sagardun Partzuergoa",
-      "date": "2008",
+      "thesisType": "MA Thesis",
+      "university": "UPV/EHU University of the Basque Country",
+      "place": "Vitoria-Gasteiz",
+      "date": "2021",
       "numPages": "",
-      "language": "eus",
-      "ISBN": "",
+      "language": "EU",
       "shortTitle": "",
-      "url": "http://www.habe.org/liburutegia_datuak/aurkibideak/pdf/32093.pdf",
-      "accessDate": "2022-12-29T13:59:59Z",
+      "url": "http://doi.org/10.13140/RG.2.2.27926.68169",
+      "accessDate": "2021-04-07T16:28:20Z",
       "archive": "",
       "archiveLocation": "",
-      "libraryCatalog": "Open WorldCat",
+      "libraryCatalog": "DOI.org (Datacite)",
       "callNumber": "",
       "rights": "",
-      "extra": "https://monumenta.wikibase.cloud/entity/Q1266\nOCLC: 863179420",
+      "extra": "https://monumenta.wikibase.cloud/entity/Q1276\n",
       "tags": [
-        {
-          "tag": ":period Q653"
-        },
         {
           "tag": "on-wikibase"
         }
       ],
-      "collections": [
-        "AEUY97BC"
-      ],
-      "relations": {
-        "owl:sameAs": "http://zotero.org/groups/1892855/items/CILYXSWI"
-      },
-      "dateAdded": "2023-09-02T13:46:19Z",
-      "dateModified": "2023-12-02T18:06:40Z"
+      "collections": [],
+      "relations": {},
+      "dateAdded": "2024-02-29T20:52:38Z",
+      "dateModified": "2024-02-29T20:52:51Z"
     },
-    "wikibase_entity": "Q1266"
+    "wikibase_entity": "Q1276"
   },
   {
-    "key": "SQQB2W6S",
-    "version": 1512,
+    "key": "7Y53U7IW",
+    "version": 1526,
     "library": {
       "type": "group",
       "id": 5165329,
@@ -112,12 +101,18 @@
     },
     "links": {
       "self": {
-        "href": "https://api.zotero.org/groups/5165329/items/SQQB2W6S",
+        "href": "https://api.zotero.org/groups/5165329/items/7Y53U7IW",
         "type": "application/json"
       },
       "alternate": {
-        "href": "https://www.zotero.org/groups/mlv/items/SQQB2W6S",
+        "href": "https://www.zotero.org/groups/mlv/items/7Y53U7IW",
         "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/5165329/items/925ZMJBM",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 5085246
       }
     },
     "meta": {
@@ -132,163 +127,55 @@
           }
         }
       },
-      "creatorSummary": "Arana et al.",
-      "parsedDate": "2022",
-      "numChildren": 0
+      "creatorSummary": "Lakarra",
+      "parsedDate": "1985-04-02",
+      "numChildren": 1
     },
     "data": {
-      "key": "SQQB2W6S",
-      "version": 1512,
-      "itemType": "book",
-      "title": "Hegoaldeko goi-nafarrera: Auritz eta Orreagako aldaera : hiztegia",
+      "key": "7Y53U7IW",
+      "version": 1526,
+      "itemType": "journalArticle",
+      "title": "Literatur gipuzkerarantz: Larramendiren Azkoitiko sermoia (1737)",
       "creators": [
         {
           "creatorType": "author",
-          "firstName": "Aitor",
-          "lastName": "Arana"
-        },
-        {
-          "creatorType": "author",
-          "firstName": "Koldo",
-          "lastName": "Colomo Castro"
-        },
-        {
-          "creatorType": "author",
-          "firstName": "Joxepe",
-          "lastName": "Irigarai"
+          "firstName": "Joseba Andoni",
+          "lastName": "Lakarra"
         }
       ],
-      "abstractNote": "",
-      "series": "Nafarroako euskalkiak",
-      "seriesNumber": "",
-      "volume": "",
-      "numberOfVolumes": "",
-      "edition": "",
-      "place": "Amorebieta",
-      "publisher": "Erroteta",
-      "date": "2022",
-      "numPages": "131",
-      "language": "eus",
-      "ISBN": "978-84-17607-49-4",
-      "shortTitle": "Hegoaldeko goi-nafarrera",
-      "url": "",
-      "accessDate": "",
-      "archive": "",
-      "archiveLocation": "",
-      "libraryCatalog": "Open WorldCat",
-      "callNumber": "",
-      "rights": "",
-      "extra": "https://monumenta.wikibase.cloud/entity/Q1267\nOCLC: 1346711101",
-      "tags": [
-        {
-          "tag": ":period Q653"
-        },
-        {
-          "tag": "on-wikibase"
-        }
-      ],
-      "collections": [
-        "AEUY97BC"
-      ],
-      "relations": {
-        "owl:sameAs": "http://zotero.org/groups/1892855/items/E45U5NNB"
-      },
-      "dateAdded": "2023-09-02T13:46:16Z",
-      "dateModified": "2023-12-02T18:02:45Z"
-    },
-    "wikibase_entity": "Q1267"
-  },
-  {
-    "key": "6CC6AVL9",
-    "version": 1509,
-    "library": {
-      "type": "group",
-      "id": 5165329,
-      "name": "MLV",
-      "links": {
-        "alternate": {
-          "href": "https://www.zotero.org/groups/mlv",
-          "type": "text/html"
-        }
-      }
-    },
-    "links": {
-      "self": {
-        "href": "https://api.zotero.org/groups/5165329/items/6CC6AVL9",
-        "type": "application/json"
-      },
-      "alternate": {
-        "href": "https://www.zotero.org/groups/mlv/items/6CC6AVL9",
-        "type": "text/html"
-      }
-    },
-    "meta": {
-      "createdByUser": {
-        "id": 772439,
-        "username": "david_lindemann",
-        "name": "David Lindemann",
-        "links": {
-          "alternate": {
-            "href": "https://www.zotero.org/david_lindemann",
-            "type": "text/html"
-          }
-        }
-      },
-      "creatorSummary": "Aramburu Carrera",
-      "parsedDate": "2014",
-      "numChildren": 0
-    },
-    "data": {
-      "key": "6CC6AVL9",
-      "version": 1509,
-      "itemType": "book",
-      "title": "Euskolatinus hiztegia: latinaeuskara",
-      "creators": [
-        {
-          "creatorType": "author",
-          "firstName": "Edurne",
-          "lastName": "Aramburu Carrera"
-        }
-      ],
-      "abstractNote": "",
+      "abstractNote": "-",
+      "publicationTitle": "Anuario del Seminario de Filolog\u00eda Vasca \"Julio de Urquijo\"",
+      "volume": "19",
+      "issue": "1",
+      "pages": "235-281",
+      "date": "1985-04-02",
       "series": "",
-      "seriesNumber": "",
-      "volume": "",
-      "numberOfVolumes": "",
-      "edition": "",
-      "place": "Berriozar, Navarra",
-      "publisher": "Denonartean",
-      "date": "2014",
-      "numPages": "229",
-      "language": "spa",
-      "ISBN": "978-84-15756-44-6",
-      "shortTitle": "Euskolatinus hiztegia",
-      "url": "",
-      "accessDate": "",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "",
+      "language": "eu",
+      "DOI": "10.1387/asju.7685",
+      "ISSN": "2444-2992",
+      "shortTitle": "Literatur gipuzkerarantz",
+      "url": "https://ojs.ehu.eus/index.php/ASJU/article/view/7685",
+      "accessDate": "2024-02-06T11:06:03Z",
       "archive": "",
       "archiveLocation": "",
-      "libraryCatalog": "Open WorldCat",
+      "libraryCatalog": "ojs.ehu.eus",
       "callNumber": "",
-      "rights": "",
-      "extra": "https://monumenta.wikibase.cloud/entity/Q1268\nOCLC: 898011321",
+      "rights": "Copyright (c) 2015 Anuario del Seminario de Filolog\u00eda Vasca \"Julio de Urquijo\"",
+      "extra": "https://monumenta.wikibase.cloud/entity/Q1271",
       "tags": [
         {
-          "tag": ":period Q653"
-        },
-        {
-          "tag": "on-wikibase"
+          "tag": "wikibase-export"
         }
       ],
-      "collections": [
-        "AEUY97BC"
-      ],
-      "relations": {
-        "owl:sameAs": "http://zotero.org/groups/1892855/items/CLRUUKN8"
-      },
-      "dateAdded": "2023-09-02T13:46:16Z",
-      "dateModified": "2023-12-02T18:01:24Z"
+      "collections": [],
+      "relations": {},
+      "dateAdded": "2024-02-06T11:06:03Z",
+      "dateModified": "2024-02-06T11:06:44Z"
     },
-    "wikibase_entity": "Q1268"
+    "wikibase_entity": "Q1271"
   },
   {
     "key": "WFAC63FG",
