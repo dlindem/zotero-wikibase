@@ -787,13 +787,13 @@ def mlv_andanak(code):
                            span_start=span_start, span_end=span_end, start_selected=start_selected, end_selected=end_selected, span_len=span_len,
                                   messages=messages, msgcolor=msgcolor)
 
-citations = {}
+citations = botconfig.load_mapping('citations')
 @app.route('/inguma/get_grobid', methods= ['GET', 'POST'])
 def get_grobid():
     configdata = botconfig.load_mapping('config')
     from bots import inguma_functions
     global citations
-    citations = botconfig.load_mapping('citations')
+
     doc_qids = []
     for file in os.listdir('/media/david/FATdisk/GROBID'):
         print(file)
@@ -802,7 +802,8 @@ def get_grobid():
     if request.form:
         if request.form.get("get_grobid") == "action":
             for doc_qid in doc_qids:
-                citations = inguma_functions.get_biblstruct(citations=citations, doc_qid=doc_qid)
+                if doc_qid not in citations['mapping']:
+                    citations = inguma_functions.get_biblstruct(citations=citations, doc_qid=doc_qid)
                 print(str(citations))
             botconfig.dump_mapping(citations)
     cit_slice = {}
@@ -865,6 +866,7 @@ def openalex(code):
                 alex_results = inguma_functions.get_openalex(bibentry=bibentry, search_string=search_string)
                 message = f"Got OpenAlex results for {doc_qid}, {cit_id}, search was: {search_string}"
             if key.startswith("lotu_"):
+                search_string = None
                 try:
                     code_re = re.search(r'lotu_(W.*)', key)
                     target_alexid = code_re.group(1)
@@ -882,7 +884,7 @@ def openalex(code):
                            cit_slice=cit_slice, search_string=search_string, alex_results=alex_results, message=message)
 
 gb_results = None
-
+search_string = None
 @app.route('/inguma/googlebooks/<code>', methods= ['GET', 'POST'])
 def googlebooks(code):
     from bots import inguma_functions

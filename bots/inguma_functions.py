@@ -9,7 +9,7 @@ from bots import botconfig, xwbi
 import requests
 
 def get_listbibl(doc_qid=None):
-    tei_file = f"/media/david/FATdisk/GROBID/{doc_qid}.tei.xml"
+    tei_file = f"/media/david/FATdisk/GROBID/{doc_qid}_full_text.tei.xml"
     timestamp = datetime.utcfromtimestamp(os.path.getmtime(tei_file)).strftime(
         '%Y-%m-%d')
     tree = ElementTree.parse(tei_file)
@@ -88,8 +88,10 @@ def get_googlebooks(bibentry=None, bibtitle=None, bibnames=[], search_string=Non
         result = {}
         result['result_id'] = item['id']
         result['result_title'] = item['volumeInfo']['title']
-        result['result_authors'] = item['volumeInfo']['authors']
-        result['result_pubyear'] = item['volumeInfo']['publishedDate'][0:4]
+        if 'authors' in item['volumeInfo']:
+            result['result_authors'] = item['volumeInfo']['authors']
+        if 'publishedDate' in item['volumeInfo']:
+            result['result_pubyear'] = item['volumeInfo']['publishedDate'][0:4]
         for id in item['volumeInfo']['industryIdentifiers']:
             if id['type'] == 'ISBN10':
                 result['result_isbn10'] = id['identifier']
