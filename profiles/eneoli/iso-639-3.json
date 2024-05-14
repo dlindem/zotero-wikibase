@@ -567,7 +567,7 @@
       "iso1": "ca",
       "wikilang": "ca",
       "wdqid": "Q7026",
-      "wbqid": null
+      "wbqid": "Q213"
     },
     "cbk": {
       "enlabel": "Chavacano",
@@ -602,7 +602,7 @@
       "iso1": "cs",
       "wikilang": "cs",
       "wdqid": "Q9056",
-      "wbqid": null
+      "wbqid": "Q211"
     },
     "cha": {
       "enlabel": "Chamorro",
@@ -798,7 +798,7 @@
       "iso1": "da",
       "wikilang": "da",
       "wdqid": "Q9035",
-      "wbqid": null
+      "wbqid": "Q452"
     },
     "dar": {
       "enlabel": "Dargwa",
@@ -812,7 +812,7 @@
       "iso1": "de",
       "wikilang": "de",
       "wdqid": "Q188",
-      "wbqid": null
+      "wbqid": "Q453"
     },
     "din": {
       "enlabel": "Dinka",
@@ -945,7 +945,7 @@
       "iso1": "eu",
       "wikilang": "eu",
       "wdqid": "Q8752",
-      "wbqid": null
+      "wbqid": "Q231"
     },
     "ewe": {
       "enlabel": "Ewe",
@@ -1379,7 +1379,7 @@
       "iso1": "hr",
       "wikilang": "hr",
       "wdqid": "Q6654",
-      "wbqid": null
+      "wbqid": "Q351"
     },
     "hrx": {
       "enlabel": "Hunsrik",
@@ -1498,7 +1498,7 @@
       "iso1": "it",
       "wikilang": "it",
       "wdqid": "Q652",
-      "wbqid": null
+      "wbqid": "Q230"
     },
     "jam": {
       "enlabel": "Jamaican Patois",
@@ -1946,7 +1946,7 @@
       "iso1": "lt",
       "wikilang": "lt",
       "wdqid": "Q9083",
-      "wbqid": null
+      "wbqid": "Q352"
     },
     "liv": {
       "enlabel": "Livonian",
@@ -2135,7 +2135,7 @@
       "iso1": "mk",
       "wikilang": "mk",
       "wdqid": "Q9296",
-      "wbqid": null
+      "wbqid": "Q216"
     },
     "mlg": {
       "enlabel": "Malagasy",
@@ -2674,7 +2674,7 @@
       "iso1": "pt",
       "wikilang": "pt",
       "wdqid": "Q5146",
-      "wbqid": null
+      "wbqid": "Q215"
     },
     "ppu": {
       "enlabel": "Papora-Hoanya",
@@ -2856,7 +2856,7 @@
       "iso1": "ru",
       "wikilang": "ru",
       "wdqid": "Q7737",
-      "wbqid": null
+      "wbqid": "Q212"
     },
     "rwr": {
       "enlabel": "Marwari",
@@ -3052,7 +3052,7 @@
       "iso1": "sl",
       "wikilang": "sl",
       "wdqid": "Q9063",
-      "wbqid": null
+      "wbqid": "Q217"
     },
     "sma": {
       "enlabel": "Southern Sami",
@@ -3136,14 +3136,14 @@
       "iso1": "es",
       "wikilang": "es",
       "wdqid": "Q1321",
-      "wbqid": null
+      "wbqid": "Q208"
     },
     "sqi": {
       "enlabel": "Albanian",
       "iso1": "sq",
       "wikilang": "sq",
       "wdqid": "Q8748",
-      "wbqid": null
+      "wbqid": "Q214"
     },
     "srd": {
       "enlabel": "Sardinian",
@@ -3227,7 +3227,7 @@
       "iso1": "sv",
       "wikilang": "sv",
       "wdqid": "Q9027",
-      "wbqid": null
+      "wbqid": "Q210"
     },
     "sxr": {
       "enlabel": "Saaroa",

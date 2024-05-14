@@ -1,0 +1,3620 @@
+[
+  {
+    "key": "M5VBVUHI",
+    "version": 4873,
+    "library": {
+      "type": "group",
+      "id": 5449136,
+      "name": "NeoCorpus",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/neocorpus",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5449136/items/M5VBVUHI",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/neocorpus/items/M5VBVUHI",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/5449136/items/KYI2GUQZ",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 452133
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 13871063,
+        "username": "dorinamacovei",
+        "name": "Dorina Macovei",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/dorinamacovei",
+            "type": "text/html"
+          }
+        }
+      },
+      "lastModifiedByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Barak\u00e9",
+      "parsedDate": "2014",
+      "numChildren": 1
+    },
+    "data": {
+      "key": "M5VBVUHI",
+      "version": 4873,
+      "itemType": "journalArticle",
+      "title": "Heurs et malheurs de la terminologie arabe d\u2019origine \u00e9trang\u00e8re",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Rima",
+          "lastName": "Barak\u00e9"
+        }
+      ],
+      "abstractNote": "After a brief presentation of the status of Arabic terminology in the official organisms\n(the academies) and the current state of the terminology of linguistics and space science,\nthis article outlines the results of a comparative study (French-English-Arabic) conducted\non the terminology of space science and linguistics. The objective is to study the fate\nof neologisms in scientific discourse and dictionaries. A comparison between the usage\nof these neologisms and their attestations in monolingual and bilingual dictionaries and\nin databases makes it possible to determine the means by which these neologisms are\nconsecrated in the language and consequently how they are lexicalized. The focus is on the\nrole played by common usage and the different dictionaries in this process.",
+      "publicationTitle": "Neologica",
+      "volume": "",
+      "issue": "8",
+      "pages": "93-111",
+      "date": "2014",
+      "series": "",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "Neologica (ISSN 2262-0354), 8, 2014",
+      "language": "fr",
+      "DOI": "10.15122/isbn.978-2-8124-2999-6.p.0093",
+      "ISSN": "2262-0354",
+      "shortTitle": "",
+      "url": "https://classiques-garnier.com/neologica-2014-n-8-revue-internationale-de-neologie-heurs-et-malheurs-de-la-terminologie-arabe-d-origine-etrangere-en.html",
+      "accessDate": "2024-05-07T07:31:02Z",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "classiques-garnier.com",
+      "callNumber": "",
+      "rights": "",
+      "extra": "Place: Paris\nPublisher: Classiques Garnier",
+      "tags": [
+        {
+          "tag": "WG1 Task 2.1"
+        },
+        {
+          "tag": "neologica_article"
+        },
+        {
+          "tag": "validated metadata"
+        }
+      ],
+      "collections": [
+        "D5MCL3U7"
+      ],
+      "relations": {
+        "dc:replaces": "http://zotero.org/groups/5449136/items/XV25IA5P"
+      },
+      "dateAdded": "2024-05-04T17:24:40Z",
+      "dateModified": "2024-05-13T12:17:09Z"
+    },
+    "wikibase_entity": false
+  },
+  {
+    "key": "W9YK7LIS",
+    "version": 4873,
+    "library": {
+      "type": "group",
+      "id": 5449136,
+      "name": "NeoCorpus",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/neocorpus",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5449136/items/W9YK7LIS",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/neocorpus/items/W9YK7LIS",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/5449136/items/VG4DITSP",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 525189
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 7366654,
+        "username": "ana.salgado",
+        "name": "Ana Salgado",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/ana.salgado",
+            "type": "text/html"
+          }
+        }
+      },
+      "lastModifiedByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Rossi",
+      "parsedDate": "2014",
+      "numChildren": 1
+    },
+    "data": {
+      "key": "W9YK7LIS",
+      "version": 4873,
+      "itemType": "journalArticle",
+      "title": "\u00c9mergence et traitement des m\u00e9taphores terminologiques dans les dictionnaires",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Micaela",
+          "lastName": "Rossi"
+        }
+      ],
+      "abstractNote": "Des nains dans le langage ferroviaire aux cordes de la th\u00e9orie de Gabriele\nVeneziano (1968), passant par la double h\u00e9lice de l\u2019ADN dans le langage de\nla biologie, les larmes et les jambes du vin (et bien d\u2019autres exemples tir\u00e9s\ndes domaines les plus divers), les langues de sp\u00e9cialit\u00e9 foisonnent en termes\nm\u00e9taphoriques, ou en m\u00e9taphores qui repr\u00e9sentent des termes \u00e0 part enti\u00e8re.\nNous avons \u00e0 plusieurs reprises analys\u00e9 les dynamiques discursives\npr\u00e9sidant \u00e0 la cr\u00e9ation de ces unit\u00e9s lexicales sp\u00e9cialis\u00e9es, ainsi que leurs valeurs\nlangagi\u00e8res et leur nature s\u00e9miotique (voir la bibliographie finale) ; dans cette\ncontribution, nous nous proposons en revanche d\u2019explorer leur traitement dans les\ndictionnaires de langue g\u00e9n\u00e9rale : qu\u2019en est-il de ces m\u00e9taphores terminologiques\ndans les r\u00e9pertoires lexicographiques ? Nous analyserons le traitement de ces\nm\u00e9taphores \u00e0 travers un corpus de termes choisis dans divers domaines, tous\npartageant la nature de m\u00e9taphores heuristiques ou constitutives de th\u00e9ories\nscientifiques ; nous nous int\u00e9resserons en particulier \u00e0 leur insertion dans la\nmacrostructure du dictionnaire de langue (nous privil\u00e9gierons les dictionnaires\nde consultation grand public, tels que le Petit Robert et le Larousse), ainsi qu\u2019\u00e0\nleur comportement au niveau de la microstructure (notamment par l\u2019analyse des\nmarques d\u2019usage et des exemples).",
+      "publicationTitle": "Neologica",
+      "volume": "",
+      "issue": "8",
+      "pages": "45-62",
+      "date": "2014",
+      "series": "",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "",
+      "language": "fr",
+      "DOI": "10.15122/isbn.978-2-8124-2999-6.p.0045",
+      "ISSN": "2262-0354",
+      "shortTitle": "",
+      "url": "https://classiques-garnier.com/neologica-2014-n-8-revue-internationale-de-neologie-emergence-et-traitement-des-metaphores-terminologiques-dans-les-dictionnaires-en.html",
+      "accessDate": "",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "classiques-garnier.com",
+      "callNumber": "",
+      "rights": "",
+      "extra": "Publisher: Classiques Garnier",
+      "tags": [
+        {
+          "tag": "WG1 Task 2.1"
+        },
+        {
+          "tag": "neologica_article"
+        },
+        {
+          "tag": "validated metadata"
+        }
+      ],
+      "collections": [
+        "D5MCL3U7"
+      ],
+      "relations": {},
+      "dateAdded": "2024-05-04T17:14:31Z",
+      "dateModified": "2024-05-13T12:17:09Z"
+    },
+    "wikibase_entity": false
+  },
+  {
+    "key": "I99MTYT9",
+    "version": 4873,
+    "library": {
+      "type": "group",
+      "id": 5449136,
+      "name": "NeoCorpus",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/neocorpus",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5449136/items/I99MTYT9",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/neocorpus/items/I99MTYT9",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/5449136/items/6KQBXJJJ",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 423608
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 7366654,
+        "username": "ana.salgado",
+        "name": "Ana Salgado",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/ana.salgado",
+            "type": "text/html"
+          }
+        }
+      },
+      "lastModifiedByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Cabr\u00e9 Castellv\u00ed and Nazar",
+      "parsedDate": "2012",
+      "numChildren": 1
+    },
+    "data": {
+      "key": "I99MTYT9",
+      "version": 4873,
+      "itemType": "journalArticle",
+      "title": "Towards a new approach to the study of neology",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Maria Teresa",
+          "lastName": "Cabr\u00e9 Castellv\u00ed"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Rogelio",
+          "lastName": "Nazar"
+        }
+      ],
+      "abstractNote": "This paper describes a series of methods for the analysis of new words from\nthe perspective of quantitative linguistics and reports on different experiments\non formal neology (both monolexical and polylexical units) as well as semantic\nneology. Our attempt to extract formal neology is based on the analysis of\ndiachronic corpora, where we compare the relative frequency distribution of words in the corpus with an exponential function which, according to our hypothesis, represents the typical behavior of a neologism. The analysis of semantic neology is also based on diachronic corpora, the difference being that the approach does not take into account the diachronic frequency distribution of the analyzed unit per se but rather its co-occurrence with other words, as we interpret that a change in the units that tend to co-occur with a word a is indicative of the creation of a new sense in a.",
+      "publicationTitle": "Neologica",
+      "volume": "",
+      "issue": "6",
+      "pages": "63-80",
+      "date": "2012",
+      "series": "",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "",
+      "language": "en",
+      "DOI": "10.15122/isbn.978-2-8124-4232-2.p.0063",
+      "ISSN": "2262-0354",
+      "shortTitle": "",
+      "url": "https://classiques-garnier.com/neologica-2012-n-6-revue-internationale-de-neologie-towards-a-new-approach-to-the-study-of-neology-en.html",
+      "accessDate": "",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "classiques-garnier.com",
+      "callNumber": "",
+      "rights": "",
+      "extra": "Publisher: Classiques Garnier",
+      "tags": [
+        {
+          "tag": "WG1 Task 2.1"
+        },
+        {
+          "tag": "neologica_article"
+        },
+        {
+          "tag": "validated metadata"
+        }
+      ],
+      "collections": [
+        "D5MCL3U7"
+      ],
+      "relations": {},
+      "dateAdded": "2024-05-04T17:12:26Z",
+      "dateModified": "2024-05-13T12:17:09Z"
+    },
+    "wikibase_entity": false
+  },
+  {
+    "key": "EKHV2NGI",
+    "version": 4873,
+    "library": {
+      "type": "group",
+      "id": 5449136,
+      "name": "NeoCorpus",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/neocorpus",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5449136/items/EKHV2NGI",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/neocorpus/items/EKHV2NGI",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/5449136/items/IPWFBU5P",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 1381192
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 7366654,
+        "username": "ana.salgado",
+        "name": "Ana Salgado",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/ana.salgado",
+            "type": "text/html"
+          }
+        }
+      },
+      "lastModifiedByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Kristiansen and Andersen",
+      "parsedDate": "2012",
+      "numChildren": 1
+    },
+    "data": {
+      "key": "EKHV2NGI",
+      "version": 4873,
+      "itemType": "journalArticle",
+      "title": "Corpus approaches to neology and their relevance for dynamic domains",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Marita",
+          "lastName": "Kristiansen"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Gisle",
+          "lastName": "Andersen"
+        }
+      ],
+      "abstractNote": "In this paper we study the emergence of new concepts and their designations in corpora representing Norwegian language. We argue that a large general corpus may compensate for the lack of specialist corpora in domains which are of general interest. We focus on two domains where new concepts regularly emerge, namely information and communication technology and finance. These are chosen due to the recency and fast development of new concepts, their pervasiveness in the community and the significance of English as a source language for terminology in these domains. Term variation and different term formation strategies are illustrated on the basis of the Norwegian Newspaper Corpus, which is a large, selfexpanding corpus which is updated with new texts on a daily basis. Our account includes a description of tools and methods for monitoring the development of neologisms and for extracting terminology. We aim to show that the corpus and its associated tools are well fit to illustrate the dynamics of term formation and the different strategies adopted in the designation of new concepts.",
+      "publicationTitle": "Neologica",
+      "volume": "",
+      "issue": "6",
+      "pages": "43-62",
+      "date": "2012",
+      "series": "",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "",
+      "language": "en",
+      "DOI": "10.15122/isbn.978-2-8124-4232-2.p.0043",
+      "ISSN": "2262-0354",
+      "shortTitle": "",
+      "url": "https://classiques-garnier.com/neologica-2012-n-6-revue-internationale-de-neologie-corpus-approaches-to-neology-and-their-relevance-for-dynamic-domains-en.html",
+      "accessDate": "",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "classiques-garnier.com",
+      "callNumber": "",
+      "rights": "",
+      "extra": "Publisher: Classiques Garnier",
+      "tags": [
+        {
+          "tag": "WG1 Task 2.1"
+        },
+        {
+          "tag": "neologica_article"
+        },
+        {
+          "tag": "validated metadata"
+        }
+      ],
+      "collections": [
+        "D5MCL3U7"
+      ],
+      "relations": {},
+      "dateAdded": "2024-05-04T17:10:23Z",
+      "dateModified": "2024-05-13T12:17:09Z"
+    },
+    "wikibase_entity": false
+  },
+  {
+    "key": "V9QZJ4Q9",
+    "version": 4873,
+    "library": {
+      "type": "group",
+      "id": 5449136,
+      "name": "NeoCorpus",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/neocorpus",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5449136/items/V9QZJ4Q9",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/neocorpus/items/V9QZJ4Q9",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/5449136/items/K84NBS6A",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 230166
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 7366654,
+        "username": "ana.salgado",
+        "name": "Ana Salgado",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/ana.salgado",
+            "type": "text/html"
+          }
+        }
+      },
+      "lastModifiedByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Humbley",
+      "parsedDate": "2012",
+      "numChildren": 1
+    },
+    "data": {
+      "key": "V9QZJ4Q9",
+      "version": 4873,
+      "itemType": "journalArticle",
+      "title": "Pr\u00e9sentation",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "John",
+          "lastName": "Humbley"
+        }
+      ],
+      "abstractNote": "Neologica, an international review concerning neology directed by Vincent Balnat and Christophe G\u00e9rard, aims to fill a gap in the field of language-sciences, which take only episodic or indirect interest in this phenomenon which is vital to all languages.",
+      "publicationTitle": "Neologica",
+      "volume": "",
+      "issue": "6",
+      "pages": "9-16",
+      "date": "2012",
+      "series": "",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "",
+      "language": "fr",
+      "DOI": "10.15122/isbn.978-2-8124-4232-2",
+      "ISSN": "1965-2542",
+      "shortTitle": "",
+      "url": "https://classiques-garnier.com/neologica-2012-n-6-revue-internationale-de-neologie-presentation-en.html",
+      "accessDate": "",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "classiques-garnier.com",
+      "callNumber": "",
+      "rights": "",
+      "extra": "Publisher: Classiques Garnier",
+      "tags": [
+        {
+          "tag": "WG1 Task 2.1"
+        },
+        {
+          "tag": "neologica_article"
+        },
+        {
+          "tag": "validated metadata"
+        }
+      ],
+      "collections": [
+        "D5MCL3U7"
+      ],
+      "relations": {},
+      "dateAdded": "2024-05-04T17:08:33Z",
+      "dateModified": "2024-05-13T12:17:09Z"
+    },
+    "wikibase_entity": false
+  },
+  {
+    "key": "AR67K7AX",
+    "version": 4872,
+    "library": {
+      "type": "group",
+      "id": 5449136,
+      "name": "NeoCorpus",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/neocorpus",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5449136/items/AR67K7AX",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/neocorpus/items/AR67K7AX",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/5449136/items/UPB4XPQG",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 612967
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 7366654,
+        "username": "ana.salgado",
+        "name": "Ana Salgado",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/ana.salgado",
+            "type": "text/html"
+          }
+        }
+      },
+      "lastModifiedByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Lanseur",
+      "parsedDate": "2014",
+      "numChildren": 1
+    },
+    "data": {
+      "key": "AR67K7AX",
+      "version": 4872,
+      "itemType": "journalArticle",
+      "title": "Les n\u00e9ologismes issus de l\u2019action sur la langue berb\u00e8re en Alg\u00e9rie : de la pratique aux dictionnaires",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Soufiane",
+          "lastName": "Lanseur"
+        }
+      ],
+      "abstractNote": "Cette contribution r\u00e9pond \u00e0 la probl\u00e9matique de la cr\u00e9ation et de\nl\u2019int\u00e9gration des n\u00e9ologismes dans la langue berb\u00e8re apr\u00e8s avoir eu acc\u00e8s \u00e0\nde nouvelles fonctions \u00e0 la suite de sa constitutionnalisation. Du fait qu\u2019elle\nest devenue une langue enseign\u00e9e et une langue d\u2019enseignement, son lexique\ns\u2019est \u00e9tendu par une pratique n\u00e9ologique qui s\u2019est r\u00e9alis\u00e9e dans deux directions\ncontradictoires, mais compl\u00e9mentaires. En effet, les chercheurs de leur c\u00f4t\u00e9\nr\u00e9digent des dictionnaires pour proposer des mots visant par l\u00e0 l\u2019\u00e9puration\nde cette langue, mais les usagers et les professionnels de la communication\npratiquent de leur c\u00f4t\u00e9 une tout autre sorte de n\u00e9ologie \u00e0 l\u2019aide de proc\u00e9d\u00e9s qui\nne sont pas utilis\u00e9s par les lexicographes.",
+      "publicationTitle": "Neologica",
+      "volume": "",
+      "issue": "8",
+      "pages": "113-132",
+      "date": "2014",
+      "series": "",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "",
+      "language": "fr",
+      "DOI": "10.15122/isbn.978-2-8124-2999-6.p.0113",
+      "ISSN": "2262-0354",
+      "shortTitle": "Les n\u00e9ologismes issus de l\u2019action sur la langue berb\u00e8re en Alg\u00e9rie",
+      "url": "https://classiques-garnier.com/neologica-2014-n-8-revue-internationale-de-neologie-les-neologismes-issus-de-l-action-sur-la-langue-berbere-en-algerie-de-la-pratique-aux-dictionnaires-en.html",
+      "accessDate": "",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "classiques-garnier.com",
+      "callNumber": "",
+      "rights": "",
+      "extra": "Publisher: Classiques Garnier",
+      "tags": [
+        {
+          "tag": "WG1 Task 2.1"
+        },
+        {
+          "tag": "neologica_article"
+        },
+        {
+          "tag": "validated metadata"
+        }
+      ],
+      "collections": [
+        "D5MCL3U7"
+      ],
+      "relations": {},
+      "dateAdded": "2024-05-04T17:29:34Z",
+      "dateModified": "2024-05-13T12:17:09Z"
+    },
+    "wikibase_entity": false
+  },
+  {
+    "key": "YZYFRD5I",
+    "version": 4872,
+    "library": {
+      "type": "group",
+      "id": 5449136,
+      "name": "NeoCorpus",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/neocorpus",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5449136/items/YZYFRD5I",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/neocorpus/items/YZYFRD5I",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/5449136/items/ZFJT3CP6",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 332484
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 7366654,
+        "username": "ana.salgado",
+        "name": "Ana Salgado",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/ana.salgado",
+            "type": "text/html"
+          }
+        }
+      },
+      "lastModifiedByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Gentile",
+      "parsedDate": "2012",
+      "numChildren": 1
+    },
+    "data": {
+      "key": "YZYFRD5I",
+      "version": 4872,
+      "itemType": "journalArticle",
+      "title": "N\u00e9ologie d\u2019origine, n\u00e9ologie de transfert : le cas des n\u00e9ologismes dans le domaine de la psychanalyse et leur traduction en espagnol",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Ana  Mar\u00eda",
+          "lastName": "Gentile"
+        }
+      ],
+      "abstractNote": "Comme les deux phrases en exergue l\u2019illustrent, Freud et Lacan avaient\ndeux points de vue oppos\u00e9s vis-\u00e0-vis des ph\u00e9nom\u00e8nes de langue que la nouvelle\ndiscipline de la psychanalyse entra\u00eenait. L\u2019un classique, attach\u00e9 aux formes\nh\u00e9rit\u00e9es, quoique r\u00e9volutionnaire dans leur conceptualisation, l\u2019autre pr\u00eat \u00e0\nrompre avec les sch\u00e9mas du pass\u00e9 et cr\u00e9ateur de n\u00e9ologismes, \u00e0 tel point qu\u2019une\npublication sp\u00e9cifique lui a \u00e9t\u00e9 consacr\u00e9e 1. C\u2019est \u00e0 partir de cette opposition que\nnous abordons les enjeux de la traduction en espagnol des n\u00e9ologismes d\u2019origine\net les probl\u00e8mes que la n\u00e9ologie de transfert pose dans ce domaine o\u00f9 r\u00e8gnent non seulement les notions centrales de la discipline psychanalytique mais aussi toute la force et le style du signifiant li\u00e9 \u00e0 la qu\u00eate de l\u2019in\u00e9dit.",
+      "publicationTitle": "Neologica",
+      "volume": "",
+      "issue": "6",
+      "pages": "111-127",
+      "date": "2012",
+      "series": "",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "",
+      "language": "fr",
+      "DOI": "10.15122/isbn.978-2-8124-4232-2.p.0111",
+      "ISSN": "2262-0354",
+      "shortTitle": "N\u00e9ologie d\u2019origine, n\u00e9ologie de transfert",
+      "url": "https://classiques-garnier.com/neologica-2012-n-6-revue-internationale-de-neologie-neologie-d-origine-neologie-de-transfert-le-cas-des-neologismes-dans-le-domaine-de-la-psychanalyse-et-leur-traduction-en-espagnol-en.html",
+      "accessDate": "2024-05-04T17:26:46Z",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "classiques-garnier.com",
+      "callNumber": "",
+      "rights": "",
+      "extra": "Place: Paris\nPublisher: Classiques Garnier",
+      "tags": [
+        {
+          "tag": "WG1 Task 2.1"
+        },
+        {
+          "tag": "neologica_article"
+        },
+        {
+          "tag": "validated metadata"
+        }
+      ],
+      "collections": [
+        "D5MCL3U7"
+      ],
+      "relations": {},
+      "dateAdded": "2024-05-04T17:26:46Z",
+      "dateModified": "2024-05-13T12:17:09Z"
+    },
+    "wikibase_entity": false
+  },
+  {
+    "key": "V79CFMWP",
+    "version": 4872,
+    "library": {
+      "type": "group",
+      "id": 5449136,
+      "name": "NeoCorpus",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/neocorpus",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5449136/items/V79CFMWP",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/neocorpus/items/V79CFMWP",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/5449136/items/WFCVS28M",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 477224
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 7366654,
+        "username": "ana.salgado",
+        "name": "Ana Salgado",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/ana.salgado",
+            "type": "text/html"
+          }
+        }
+      },
+      "lastModifiedByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Choi",
+      "parsedDate": "2014",
+      "numChildren": 1
+    },
+    "data": {
+      "key": "V79CFMWP",
+      "version": 4872,
+      "itemType": "journalArticle",
+      "title": "La pr\u00e9sentation des n\u00e9ologismes dans le dictionnaire fran\u00e7ais-cor\u00e9en informatis\u00e9",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Ji In",
+          "lastName": "Choi"
+        }
+      ],
+      "abstractNote": "L\u2019objectif de cet article est d\u2019observer comment le dictionnaire bilingue\nfran\u00e7ais-cor\u00e9en, en particulier dans sa version informatis\u00e9e, traite les n\u00e9ologismes.\nLes crit\u00e8res de s\u00e9lection diff\u00e8rent de ceux que les lexicographes monolingues ont\ncoutume d\u2019appliquer. En consid\u00e9rant la particularit\u00e9 du support, nous proposons\nl\u2019\u00e9tude d\u2019une source de donn\u00e9es lexicographiques, ainsi qu\u2019une r\u00e9flexion sur\nl\u2019\u00e9tat actuel de ce dictionnaire et son orientation future.",
+      "publicationTitle": "Neologica",
+      "volume": "",
+      "issue": "8",
+      "pages": "81-92",
+      "date": "2014",
+      "series": "",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "",
+      "language": "fr",
+      "DOI": "10.15122/isbn.978-2-8124-2999-6.p.0081",
+      "ISSN": "2262-0354",
+      "shortTitle": "",
+      "url": "https://classiques-garnier.com/neologica-2014-n-8-revue-internationale-de-neologie-la-presentation-des-neologismes-dans-le-dictionnaire-francais-coreen-informatise-en.html",
+      "accessDate": "",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "classiques-garnier.com",
+      "callNumber": "",
+      "rights": "",
+      "extra": "Publisher: Classiques Garnier",
+      "tags": [
+        {
+          "tag": "WG1 Task 2.1"
+        },
+        {
+          "tag": "neologica_article"
+        },
+        {
+          "tag": "validated metadata"
+        }
+      ],
+      "collections": [
+        "D5MCL3U7"
+      ],
+      "relations": {},
+      "dateAdded": "2024-05-04T17:23:30Z",
+      "dateModified": "2024-05-13T12:17:09Z"
+    },
+    "wikibase_entity": false
+  },
+  {
+    "key": "ZFLTDU86",
+    "version": 4872,
+    "library": {
+      "type": "group",
+      "id": 5449136,
+      "name": "NeoCorpus",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/neocorpus",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5449136/items/ZFLTDU86",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/neocorpus/items/ZFLTDU86",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/5449136/items/EB649BVJ",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 280905
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 7366654,
+        "username": "ana.salgado",
+        "name": "Ana Salgado",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/ana.salgado",
+            "type": "text/html"
+          }
+        }
+      },
+      "lastModifiedByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Dury",
+      "parsedDate": "2012",
+      "numChildren": 1
+    },
+    "data": {
+      "key": "ZFLTDU86",
+      "version": 4872,
+      "itemType": "journalArticle",
+      "title": "Le sentiment d\u2019un besoin n\u00e9ologique chez l\u2019expert pour remplacer un terme \u00e0 connotation p\u00e9jorative Quelques exemples tir\u00e9s du domaine m\u00e9dical",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Pascaline",
+          "lastName": "Dury"
+        }
+      ],
+      "abstractNote": "L\u2019article propos\u00e9 ici s\u2019int\u00e9resse \u00e0 un type de n\u00e9ologie bien particulier : celui\nqui correspond \u00e0 la cr\u00e9ation de termes nouveaux pour venir remplacer un terme qui existe d\u00e9j\u00e0, mais qui ne convient plus, en raison de sa connotation, jug\u00e9e inadapt\u00e9e par ceux qui l\u2019emploient. Cette n\u00e9ologie, ou n\u00e9ologie \u00ab d\u2019adaptation \u00bb, peut se rep\u00e9rer dans les discours des experts m\u00e9dicaux qui commentent fr\u00e9quemment, dans leurs \u00e9crits, les termes qu\u2019ils utilisent et qui parfois, lorsqu\u2019un terme ne leur convient pas, expriment leur \u00ab sentiment d\u2019un besoin n\u00e9ologique \u00bb. C\u2019est ce sentiment d\u2019un besoin n\u00e9ologique que nous pr\u00e9sentons ici, \u00e0 l\u2019aide de contextes extraits d\u2019un corpus ad-hoc de langue anglaise portant sur plusieurs sous-domaines m\u00e9dicaux. Les r\u00e9sultats issus de l\u2019analyse du corpus permettent \u00e9galement de s\u2019interroger sur le r\u00f4le de l\u2019expert qui cr\u00e9e un n\u00e9ologisme et sur celui du traducteur qui doit le traduire, sur le r\u00f4le de la connotation dans les langues de sp\u00e9cialit\u00e9 et sur le r\u00f4le de la synonymie en situation de cr\u00e9ation n\u00e9ologique, cette derni\u00e8re \u00e9tant alors envisag\u00e9e, dans un contexte m\u00e9dical, comme un \u00ab discours d\u2019interface \u00bb entre le m\u00e9decin et son patient.",
+      "publicationTitle": "Neologica",
+      "volume": "",
+      "issue": "6",
+      "pages": "81-93",
+      "date": "2012",
+      "series": "",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "",
+      "language": "fr",
+      "DOI": "10.15122/isbn.978-2-8124-4232-2.p.0081",
+      "ISSN": "2262-0354",
+      "shortTitle": "",
+      "url": "https://classiques-garnier.com/neologica-2012-n-6-revue-internationale-de-neologie-le-sentiment-d-un-besoin-neologique-chez-l-expert-pour-remplacer-un-terme-a-connotation-pejorative-en.html",
+      "accessDate": "",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "classiques-garnier.com",
+      "callNumber": "",
+      "rights": "",
+      "extra": "Publisher: Classiques Garnier",
+      "tags": [
+        {
+          "tag": "WG1 Task 2.1"
+        },
+        {
+          "tag": "neologica_article"
+        },
+        {
+          "tag": "validated metadata"
+        }
+      ],
+      "collections": [
+        "D5MCL3U7"
+      ],
+      "relations": {},
+      "dateAdded": "2024-05-04T17:20:01Z",
+      "dateModified": "2024-05-13T12:17:09Z"
+    },
+    "wikibase_entity": false
+  },
+  {
+    "key": "IVGZUJ9G",
+    "version": 4872,
+    "library": {
+      "type": "group",
+      "id": 5449136,
+      "name": "NeoCorpus",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/neocorpus",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5449136/items/IVGZUJ9G",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/neocorpus/items/IVGZUJ9G",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/5449136/items/NMYCM63N",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 422165
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 7366654,
+        "username": "ana.salgado",
+        "name": "Ana Salgado",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/ana.salgado",
+            "type": "text/html"
+          }
+        }
+      },
+      "lastModifiedByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Humbley and Sablayrolles",
+      "parsedDate": "2014",
+      "numChildren": 1
+    },
+    "data": {
+      "key": "IVGZUJ9G",
+      "version": 4872,
+      "itemType": "journalArticle",
+      "title": "Actualit\u00e9s de la n\u00e9ologie",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "John",
+          "lastName": "Humbley"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Jean-Fran\u00e7ois",
+          "lastName": "Sablayrolles"
+        }
+      ],
+      "abstractNote": "",
+      "publicationTitle": "Neologica",
+      "volume": "8",
+      "issue": "",
+      "pages": "245-263",
+      "date": "2014",
+      "series": "",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "",
+      "language": "fr",
+      "DOI": "10.15122/isbn.978-2-8124-2999-6.p.0245",
+      "ISSN": "2262-0354",
+      "shortTitle": "",
+      "url": "https://classiques-garnier.com/neologica-2014-n-8-revue-internationale-de-neologie-actualites-de-la-neologie-en.html",
+      "accessDate": "",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "classiques-garnier.com",
+      "callNumber": "",
+      "rights": "",
+      "extra": "Publisher: Classiques Garnier",
+      "tags": [
+        {
+          "tag": "WG1 Task 2.1"
+        },
+        {
+          "tag": "neologica_article"
+        },
+        {
+          "tag": "validated metadata"
+        }
+      ],
+      "collections": [
+        "D5MCL3U7"
+      ],
+      "relations": {},
+      "dateAdded": "2024-05-04T19:10:30Z",
+      "dateModified": "2024-05-13T12:17:09Z"
+    },
+    "wikibase_entity": false
+  },
+  {
+    "key": "A5GJF8S8",
+    "version": 4872,
+    "library": {
+      "type": "group",
+      "id": 5449136,
+      "name": "NeoCorpus",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/neocorpus",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5449136/items/A5GJF8S8",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/neocorpus/items/A5GJF8S8",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/5449136/items/9XWIDQJG",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 293835
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 7366654,
+        "username": "ana.salgado",
+        "name": "Ana Salgado",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/ana.salgado",
+            "type": "text/html"
+          }
+        }
+      },
+      "lastModifiedByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Humbley and Sablayrolles",
+      "parsedDate": "2012",
+      "numChildren": 1
+    },
+    "data": {
+      "key": "A5GJF8S8",
+      "version": 4872,
+      "itemType": "journalArticle",
+      "title": "Actualit\u00e9s de la n\u00e9ologie",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "John",
+          "lastName": "Humbley"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Jean-Fran\u00e7ois",
+          "lastName": "Sablayrolles"
+        }
+      ],
+      "abstractNote": "",
+      "publicationTitle": "Neologica",
+      "volume": "",
+      "issue": "6",
+      "pages": "209-212",
+      "date": "2012",
+      "series": "",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "",
+      "language": "fr",
+      "DOI": "10.15122/isbn.978-2-8124-4232-2.p.0209",
+      "ISSN": "2262-0354",
+      "shortTitle": "",
+      "url": "https://classiques-garnier.com/neologica-2012-n-6-revue-internationale-de-neologie-actualites-de-la-neologie-en.html",
+      "accessDate": "",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "classiques-garnier.com",
+      "callNumber": "",
+      "rights": "",
+      "extra": "Publisher: Classiques Garnier",
+      "tags": [
+        {
+          "tag": "WG1 Task 2.1"
+        },
+        {
+          "tag": "neologica_article"
+        },
+        {
+          "tag": "validated metadata"
+        }
+      ],
+      "collections": [
+        "D5MCL3U7"
+      ],
+      "relations": {},
+      "dateAdded": "2024-05-04T19:08:58Z",
+      "dateModified": "2024-05-13T12:17:09Z"
+    },
+    "wikibase_entity": false
+  },
+  {
+    "key": "TI6IUQXY",
+    "version": 4872,
+    "library": {
+      "type": "group",
+      "id": 5449136,
+      "name": "NeoCorpus",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/neocorpus",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5449136/items/TI6IUQXY",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/neocorpus/items/TI6IUQXY",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/5449136/items/2G96U9PX",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 352424
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 7366654,
+        "username": "ana.salgado",
+        "name": "Ana Salgado",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/ana.salgado",
+            "type": "text/html"
+          }
+        }
+      },
+      "lastModifiedByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Faure",
+      "parsedDate": "2012",
+      "numChildren": 1
+    },
+    "data": {
+      "key": "TI6IUQXY",
+      "version": 4872,
+      "itemType": "journalArticle",
+      "title": "Maux et mots ou la d\u00e9nomination des maladies \u00c9tude comparative anglais/fran\u00e7ais",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Pascaline",
+          "lastName": "Faure"
+        }
+      ],
+      "abstractNote": "L\u2019objectif de cet article est de mettre au jour les diff\u00e9rents proc\u00e9d\u00e9s stylistiques\nutilis\u00e9s dans la d\u00e9nomination des maladies \u00e0 partir de la mise en \u00e9vidence\ndes variations interlinguales en proposant une comparaison entre l\u2019anglais et\nle fran\u00e7ais. Ce travail permet de d\u00e9montrer que les proc\u00e9d\u00e9s ont \u00e9volu\u00e9 ces\nderni\u00e8res ann\u00e9es \u00e0 travers un recours grandissant \u00e0 la toponymie et \u00e0 l\u2019orthonymie\nqui concourt \u00e0 une internationalisation de la langue m\u00e9dicale mais que\nperdure malgr\u00e9 tout une terminologie ancr\u00e9e dans l\u2019histoire et la culture \u00e0 travers\nla m\u00e9taphorisation et l\u2019\u00e9ponymie.",
+      "publicationTitle": "Neologica",
+      "volume": "",
+      "issue": "6",
+      "pages": "191-207",
+      "date": "2012",
+      "series": "",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "",
+      "language": "fr",
+      "DOI": "10.15122/isbn.978-2-8124-4232-2.p.0191",
+      "ISSN": "2262-0354",
+      "shortTitle": "",
+      "url": "https://classiques-garnier.com/neologica-2012-n-6-revue-internationale-de-neologie-maux-et-mots-ou-la-denomination-des-maladies-en.html",
+      "accessDate": "",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "classiques-garnier.com",
+      "callNumber": "",
+      "rights": "",
+      "extra": "Publisher: Classiques Garnier",
+      "tags": [
+        {
+          "tag": "WG1 Task 2.1"
+        },
+        {
+          "tag": "neologica_article"
+        },
+        {
+          "tag": "validated metadata"
+        }
+      ],
+      "collections": [
+        "D5MCL3U7"
+      ],
+      "relations": {},
+      "dateAdded": "2024-05-04T19:07:29Z",
+      "dateModified": "2024-05-13T12:17:09Z"
+    },
+    "wikibase_entity": false
+  },
+  {
+    "key": "S4CSEM9H",
+    "version": 4872,
+    "library": {
+      "type": "group",
+      "id": 5449136,
+      "name": "NeoCorpus",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/neocorpus",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5449136/items/S4CSEM9H",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/neocorpus/items/S4CSEM9H",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/5449136/items/CLGVNS6M",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 697568
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 7366654,
+        "username": "ana.salgado",
+        "name": "Ana Salgado",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/ana.salgado",
+            "type": "text/html"
+          }
+        }
+      },
+      "lastModifiedByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Coy",
+      "parsedDate": "2012",
+      "numChildren": 1
+    },
+    "data": {
+      "key": "S4CSEM9H",
+      "version": 4872,
+      "itemType": "journalArticle",
+      "title": "Les recommandations officielles des Commissions de Terminologie et leur rapport \u00e0 la langue commune : indices pour un profil lexicologique du fran\u00e7ais",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Charlotte",
+          "lastName": "Coy"
+        }
+      ],
+      "abstractNote": "The present article analyses official recommendations made by the Commissions de terminologie. Terms coined to replace anglicisms are in a majority of cases motivated, i.e. semantically and morphologically transparent words. We take advantage of this almost systematic characteristic to propose a metholodology which accounts for the lexical motivation of the corpus. In a cognitive comparative approach we examine the terms adopted in 2005, and ascertain how they have been taken up in general language usage five years later. By comparing the results thus obtained with those of two earlier studies, it is possible to bring out specificities of specialized vocabulary, and at the same time show up morphological and cognitive preferences which seem to characterize the lexicon of French.",
+      "publicationTitle": "Neologica",
+      "volume": "",
+      "issue": "6",
+      "pages": "177-189",
+      "date": "2012",
+      "series": "",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "",
+      "language": "fr",
+      "DOI": "10.15122/isbn.978-2-8124-4232-2.p.0177",
+      "ISSN": "2262-0354",
+      "shortTitle": "Les recommandations officielles des Commissions de Terminologie et leur rapport \u00e0 la langue commune",
+      "url": "https://classiques-garnier.com/neologica-2012-n-6-revue-internationale-de-neologie-les-recommandations-officielles-des-commissions-de-terminologie-et-leur-rapport-a-la-langue-commune-indices-pour-un-profil-lexicologique-du-francais-en.html",
+      "accessDate": "",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "classiques-garnier.com",
+      "callNumber": "",
+      "rights": "",
+      "extra": "Publisher: Classiques Garnier",
+      "tags": [
+        {
+          "tag": "WG1 Task 2.1"
+        },
+        {
+          "tag": "neologica_article"
+        },
+        {
+          "tag": "validated metadata"
+        }
+      ],
+      "collections": [
+        "D5MCL3U7"
+      ],
+      "relations": {},
+      "dateAdded": "2024-05-04T19:05:55Z",
+      "dateModified": "2024-05-13T12:17:09Z"
+    },
+    "wikibase_entity": false
+  },
+  {
+    "key": "V8LG4D6I",
+    "version": 4872,
+    "library": {
+      "type": "group",
+      "id": 5449136,
+      "name": "NeoCorpus",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/neocorpus",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5449136/items/V8LG4D6I",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/neocorpus/items/V8LG4D6I",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/5449136/items/VBVXWRSP",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 644637
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 7366654,
+        "username": "ana.salgado",
+        "name": "Ana Salgado",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/ana.salgado",
+            "type": "text/html"
+          }
+        }
+      },
+      "lastModifiedByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Lemaire and Muraille",
+      "parsedDate": "2012",
+      "numChildren": 1
+    },
+    "data": {
+      "key": "V8LG4D6I",
+      "version": 4872,
+      "itemType": "journalArticle",
+      "title": "Sigles graphiques en langue de sp\u00e9cialit\u00e9 : typologie, variabilit\u00e9, enjeux",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Nathalie",
+          "lastName": "Lemaire"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Paul",
+          "lastName": "Muraille"
+        }
+      ],
+      "abstractNote": "Les sigles graphiques semblent se r\u00e9pandre dans un nombre croissant de domaines de sp\u00e9cialit\u00e9. Nous nous interrogeons sur les effets que l\u2019instabilit\u00e9 graphique, \u00e0 laquelle cette forme de sigles parait particuli\u00e8rement expos\u00e9e, peut avoir sur la communication sp\u00e9cialis\u00e9e et, partant, sur la compr\u00e9hension et la transmission de savoirs conceptualis\u00e9s. Nous tentons de cat\u00e9goriser les formes observ\u00e9es en langue sp\u00e9cialis\u00e9e, tous domaines confondus, afin d\u2019identifier les \u00e9l\u00e9ments graphiques sur lesquels la variation est susceptible de porter dans l\u2019usage. Nous nous concentrons ensuite sur un \u00e9chantillon de sigles graphiques du domaine biom\u00e9dical, dont nous observons et comparons la variation en fran\u00e7ais et en anglais. Ceci, dans le but d\u2019identifier les cas de variation d\u2019\u00e9l\u00e9ments graphiques rec\u00e9lant une ambig\u00fcit\u00e9 potentielle, \u00e0 soumettre, dans le cadre d\u2019une \u00e9tude ult\u00e9rieure, \u00e0 des usagers issus de communaut\u00e9s situ\u00e9es, de mani\u00e8re \u00e0 v\u00e9rifier la r\u00e9alisation ou l\u2019\u00e9ventuelle neutralisation du risque de confusion g\u00e9n\u00e9r\u00e9 par ladite variation en situation de communication ou dans le cadre de l\u2019application d\u2019outils de TAO.",
+      "publicationTitle": "Neologica",
+      "volume": "",
+      "issue": "6",
+      "pages": "161-176",
+      "date": "2012",
+      "series": "",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "",
+      "language": "fr",
+      "DOI": "10.15122/isbn.978-2-8124-4232-2.p.0161",
+      "ISSN": "2262-0354",
+      "shortTitle": "Sigles graphiques en langue de sp\u00e9cialit\u00e9",
+      "url": "https://classiques-garnier.com/neologica-2012-n-6-revue-internationale-de-neologie-sigles-graphiques-en-langue-de-specialite-typologie-variabilite-enjeux-en.html",
+      "accessDate": "",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "classiques-garnier.com",
+      "callNumber": "",
+      "rights": "",
+      "extra": "Publisher: Classiques Garnier",
+      "tags": [
+        {
+          "tag": "WG1 Task 2.1"
+        },
+        {
+          "tag": "neologica_article"
+        },
+        {
+          "tag": "validated metadata"
+        }
+      ],
+      "collections": [
+        "D5MCL3U7"
+      ],
+      "relations": {},
+      "dateAdded": "2024-05-04T19:04:18Z",
+      "dateModified": "2024-05-13T12:17:09Z"
+    },
+    "wikibase_entity": false
+  },
+  {
+    "key": "2IIFYMUA",
+    "version": 4872,
+    "library": {
+      "type": "group",
+      "id": 5449136,
+      "name": "NeoCorpus",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/neocorpus",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5449136/items/2IIFYMUA",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/neocorpus/items/2IIFYMUA",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/5449136/items/MTAWCNUY",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 323591
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 7366654,
+        "username": "ana.salgado",
+        "name": "Ana Salgado",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/ana.salgado",
+            "type": "text/html"
+          }
+        }
+      },
+      "lastModifiedByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Quirion",
+      "parsedDate": "2012",
+      "numChildren": 1
+    },
+    "data": {
+      "key": "2IIFYMUA",
+      "version": 4872,
+      "itemType": "journalArticle",
+      "title": "N\u00e9ologie traductive, n\u00e9ologie am\u00e9nagiste et n\u00e9ologie collaborative massive : l\u2019unit\u00e9 dans la disparit\u00e9",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Jean",
+          "lastName": "Quirion"
+        }
+      ],
+      "abstractNote": "La n\u00e9ologie d\u2019am\u00e9nagement est parfois oppos\u00e9e \u00e0 la n\u00e9ologie traductive.\nLa question est examin\u00e9e sous l\u2019angle du contexte linguistique minoritaire, o\u00f9 il est constat\u00e9 qu\u2019elles tendent plut\u00f4t \u00e0 se compl\u00e9ter mutuellement. Dans la mesure o\u00f9 les politiques en place visent \u00e0 favoriser l\u2019\u00e9panouissement d\u2019une langue minoritaire et, partant, l\u2019extension de son usage, la n\u00e9ologie traductive nourrit l\u2019effort en cours. Que ce soit pour des besoins particuliers ou g\u00e9n\u00e9raux, les deux types d\u2019enrichissement lexical interviennent indistinctement. Cette affirmation est fond\u00e9e sur une analyse terminom\u00e9trique du domaine de la nanotechnologie, o\u00f9 le taux de pr\u00e9sence du fran\u00e7ais atteint 90 % lorsque sont combin\u00e9es les deux formes de n\u00e9ologie, la traductive comptant pour le tiers de cette somme.\nDans un deuxi\u00e8me temps, les facteurs d\u2019adoption de n\u00e9ologismes sont discut\u00e9s.\nEn ce qui touche la validation de l\u2019acceptabilit\u00e9 socioterminologique, il est\navanc\u00e9 que la n\u00e9ologie collaborative massive repr\u00e9sente une avenue au fort potentiel. Bas\u00e9e sur une plate-forme en ligne, comme celle de Wikip\u00e9dia, elle constituerait un atout important pour la pr\u00e9servation et le d\u00e9veloppement des langues minoritaires en permettant \u00e0 ses locuteurs de participer \u00e0 son enrichissement. Unissant des efforts pour l\u2019instant men\u00e9s parall\u00e8lement et de fa\u00e7on d\u00e9sordonn\u00e9e, il est propos\u00e9 que cette approche favorise la cr\u00e9ation, la diffusion et l\u2019implantation de n\u00e9ologismes.",
+      "publicationTitle": "Neologica",
+      "volume": "",
+      "issue": "6",
+      "pages": "129-141",
+      "date": "2012",
+      "series": "",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "",
+      "language": "fr",
+      "DOI": "10.15122/isbn.978-2-8124-4232-2.p.0129",
+      "ISSN": "2262-0354",
+      "shortTitle": "N\u00e9ologie traductive, n\u00e9ologie am\u00e9nagiste et n\u00e9ologie collaborative massive",
+      "url": "https://classiques-garnier.com/neologica-2012-n-6-revue-internationale-de-neologie-neologie-traductive-neologie-amenagiste-et-neologie-collaborative-massive-l-unite-dans-la-disparite-en.html",
+      "accessDate": "",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "classiques-garnier.com",
+      "callNumber": "",
+      "rights": "",
+      "extra": "Publisher: Classiques Garnier",
+      "tags": [
+        {
+          "tag": "WG1 Task 2.1"
+        },
+        {
+          "tag": "neologica_article"
+        },
+        {
+          "tag": "validated metadata"
+        }
+      ],
+      "collections": [
+        "D5MCL3U7"
+      ],
+      "relations": {},
+      "dateAdded": "2024-05-04T17:32:51Z",
+      "dateModified": "2024-05-13T12:17:09Z"
+    },
+    "wikibase_entity": false
+  },
+  {
+    "key": "T5ZHCGQT",
+    "version": 4871,
+    "library": {
+      "type": "group",
+      "id": 5449136,
+      "name": "NeoCorpus",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/neocorpus",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5449136/items/T5ZHCGQT",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/neocorpus/items/T5ZHCGQT",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/5449136/items/9YDM6BNH",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 375043
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 7366654,
+        "username": "ana.salgado",
+        "name": "Ana Salgado",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/ana.salgado",
+            "type": "text/html"
+          }
+        }
+      },
+      "lastModifiedByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Trotter",
+      "parsedDate": "2013",
+      "numChildren": 2
+    },
+    "data": {
+      "key": "T5ZHCGQT",
+      "version": 4871,
+      "itemType": "journalArticle",
+      "title": "Les n\u00e9ologismes \u00e9ph\u00e9m\u00e8res : l'\u00e9volution de la science et des mots",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "David",
+          "lastName": "Trotter"
+        }
+      ],
+      "abstractNote": "This paper examines the durability of neologisms in medieval French and beyond, concentrating in particular on words derived from Arabic and transmitted through Latin translations. An examination of the Old French Chirurgie d\u2019Albucasis suggests that a high proportion of the technical terms from Arabic are attested only in that translation. Three of the Latin manuscripts of Albucasis contain proto-glossaries, probably a principal means by which technical loanwords could be transmitted; but these, in fact, are by no means exclusively glossaries to the text, but rather wider-ranging synonyma. A part of one of the manuscripts (British Library, MS. Additional 36617) is transcribed to make the point. The study also looks at the medical Arabicisms still present in the TLF, and those listed in vol. XIX of the FEW, and finds that there are very few. The conclusion is that the existence of (in this case) Arabic loanwords in an Old French translation does not mean that any lasting impact has been made on the lexis of French. Most of the words in the Albucasis translation have disappeared.",
+      "publicationTitle": "Neologica",
+      "volume": "",
+      "issue": "7",
+      "pages": "27-39",
+      "date": "2013",
+      "series": "",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "",
+      "language": "fr",
+      "DOI": "10.15122/isbn.978-2-8124-1261-5.p.0027",
+      "ISSN": "2262-0354",
+      "shortTitle": "Les n\u00e9ologismes \u00e9ph\u00e9m\u00e8res",
+      "url": "http://www.classiques-garnier.com/doi/garnier?article=JshMS07_27",
+      "accessDate": "",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "classiques-garnier.com",
+      "callNumber": "",
+      "rights": "",
+      "extra": "Publisher: Classiques Garnier",
+      "tags": [
+        {
+          "tag": "WG1 Task 2.1"
+        },
+        {
+          "tag": "neologica_article"
+        },
+        {
+          "tag": "validated metadata"
+        }
+      ],
+      "collections": [
+        "D5MCL3U7"
+      ],
+      "relations": {
+        "dc:replaces": "http://zotero.org/groups/5449136/items/GZ8QVCLT"
+      },
+      "dateAdded": "2024-05-04T20:25:21Z",
+      "dateModified": "2024-05-13T12:17:09Z"
+    },
+    "wikibase_entity": false
+  },
+  {
+    "key": "HNN7YLA8",
+    "version": 4871,
+    "library": {
+      "type": "group",
+      "id": 5449136,
+      "name": "NeoCorpus",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/neocorpus",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5449136/items/HNN7YLA8",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/neocorpus/items/HNN7YLA8",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/5449136/items/QKSGKZ6U",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 315846
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 7366654,
+        "username": "ana.salgado",
+        "name": "Ana Salgado",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/ana.salgado",
+            "type": "text/html"
+          }
+        }
+      },
+      "lastModifiedByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Sablayrolles and Humbley",
+      "parsedDate": "2014",
+      "numChildren": 1
+    },
+    "data": {
+      "key": "HNN7YLA8",
+      "version": 4871,
+      "itemType": "journalArticle",
+      "title": "Comptes rendus",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Jean-Fran\u00e7ois",
+          "lastName": "Sablayrolles"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "John",
+          "lastName": "Humbley"
+        }
+      ],
+      "abstractNote": "",
+      "publicationTitle": "Neologica",
+      "volume": "",
+      "issue": "8",
+      "pages": "269-278",
+      "date": "2014",
+      "series": "",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "",
+      "language": "fr",
+      "DOI": "10.15122/isbn.978-2-8124-2999-6.p.0269",
+      "ISSN": "2262-0354",
+      "shortTitle": "",
+      "url": "https://classiques-garnier.com/neologica-2014-n-8-revue-internationale-de-neologie-comptes-rendus-en.html",
+      "accessDate": "",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "classiques-garnier.com",
+      "callNumber": "",
+      "rights": "",
+      "extra": "Publisher: Classiques Garnier",
+      "tags": [
+        {
+          "tag": "WG1 Task 2.1"
+        },
+        {
+          "tag": "neologica_article"
+        },
+        {
+          "tag": "validated metadata"
+        }
+      ],
+      "collections": [
+        "D5MCL3U7"
+      ],
+      "relations": {},
+      "dateAdded": "2024-05-04T19:14:32Z",
+      "dateModified": "2024-05-13T12:17:09Z"
+    },
+    "wikibase_entity": false
+  },
+  {
+    "key": "FNGR4TQX",
+    "version": 4871,
+    "library": {
+      "type": "group",
+      "id": 5449136,
+      "name": "NeoCorpus",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/neocorpus",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5449136/items/FNGR4TQX",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/neocorpus/items/FNGR4TQX",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/5449136/items/6IXARFP5",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 206207
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 7366654,
+        "username": "ana.salgado",
+        "name": "Ana Salgado",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/ana.salgado",
+            "type": "text/html"
+          }
+        }
+      },
+      "lastModifiedByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Sablayrolles",
+      "parsedDate": "2012",
+      "numChildren": 1
+    },
+    "data": {
+      "key": "FNGR4TQX",
+      "version": 4871,
+      "itemType": "journalArticle",
+      "title": "Comptes rendus",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Jean-Fran\u00e7ois",
+          "lastName": "Sablayrolles"
+        }
+      ],
+      "abstractNote": "",
+      "publicationTitle": "Neologica",
+      "volume": "",
+      "issue": "6",
+      "pages": "225-226",
+      "date": "2012",
+      "series": "",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "",
+      "language": "fr",
+      "DOI": "10.15122/isbn.978-2-8124-4232-2.p.0225",
+      "ISSN": "2262-0354",
+      "shortTitle": "",
+      "url": "https://classiques-garnier.com/neologica-2012-n-6-revue-internationale-de-neologie-compte-rendu-en.html",
+      "accessDate": "",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "classiques-garnier.com",
+      "callNumber": "",
+      "rights": "",
+      "extra": "Publisher: Classiques Garnier",
+      "tags": [
+        {
+          "tag": "WG1 Task 2.1"
+        },
+        {
+          "tag": "neologica_article"
+        },
+        {
+          "tag": "validated metadata"
+        }
+      ],
+      "collections": [
+        "D5MCL3U7"
+      ],
+      "relations": {},
+      "dateAdded": "2024-05-04T19:13:40Z",
+      "dateModified": "2024-05-13T12:17:09Z"
+    },
+    "wikibase_entity": false
+  },
+  {
+    "key": "JPHQJB28",
+    "version": 4871,
+    "library": {
+      "type": "group",
+      "id": 5449136,
+      "name": "NeoCorpus",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/neocorpus",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5449136/items/JPHQJB28",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/neocorpus/items/JPHQJB28",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/5449136/items/R4SYTAZ3",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 265336
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 7366654,
+        "username": "ana.salgado",
+        "name": "Ana Salgado",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/ana.salgado",
+            "type": "text/html"
+          }
+        }
+      },
+      "lastModifiedByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "parsedDate": "2014",
+      "numChildren": 1
+    },
+    "data": {
+      "key": "JPHQJB28",
+      "version": 4871,
+      "itemType": "journalArticle",
+      "title": "Bibliographie de la n\u00e9ologie",
+      "creators": [],
+      "abstractNote": "",
+      "publicationTitle": "Neologica",
+      "volume": "",
+      "issue": "8",
+      "pages": "265-268",
+      "date": "2014",
+      "series": "",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "",
+      "language": "fr",
+      "DOI": "10.15122/isbn.978-2-8124-2999-6.p.0265",
+      "ISSN": "2262-0354",
+      "shortTitle": "",
+      "url": "https://classiques-garnier.com/neologica-2014-n-8-revue-internationale-de-neologie-bibliographie-de-la-neologie-en.html",
+      "accessDate": "",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "classiques-garnier.com",
+      "callNumber": "",
+      "rights": "",
+      "extra": "Publisher: Classiques Garnier",
+      "tags": [
+        {
+          "tag": "WG1 Task 2.1"
+        },
+        {
+          "tag": "neologica_article"
+        },
+        {
+          "tag": "validated metadata"
+        }
+      ],
+      "collections": [
+        "D5MCL3U7"
+      ],
+      "relations": {},
+      "dateAdded": "2024-05-04T19:12:48Z",
+      "dateModified": "2024-05-13T12:17:09Z"
+    },
+    "wikibase_entity": false
+  },
+  {
+    "key": "3R5UXRV4",
+    "version": 4871,
+    "library": {
+      "type": "group",
+      "id": 5449136,
+      "name": "NeoCorpus",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/neocorpus",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5449136/items/3R5UXRV4",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/neocorpus/items/3R5UXRV4",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/5449136/items/3VKRAWNV",
+        "type": "application/json",
+        "attachmentType": "text/plain"
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 7366654,
+        "username": "ana.salgado",
+        "name": "Ana Salgado",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/ana.salgado",
+            "type": "text/html"
+          }
+        }
+      },
+      "lastModifiedByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Goyens",
+      "parsedDate": "2013",
+      "numChildren": 1
+    },
+    "data": {
+      "key": "3R5UXRV4",
+      "version": 4871,
+      "itemType": "journalArticle",
+      "title": "Le sort des n\u00e9ologismes dans la langue des sciences au Moyen \u00c2ge : une question de morphologie ?",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Mich\u00e8le",
+          "lastName": "Goyens"
+        }
+      ],
+      "abstractNote": "This article discusses a series of criteria that can be used to formulate research hypotheses regarding the lexicalization or the disappearance of neologisms created during the Middle Ages. In concrete, a previous analysis of neologisms used in certain translations of medical texts have revealed the large majority of borrowings from Latin, next to formations in the vernacular French language, like derivatives. Moreover, borrowings from Latin seem to lexicalize more easily. In this contribution, we would like to explore in particular the possible influence of morphological characteristics of the neologism on its lexicalization in the language. We pay special attention to criteria emphasized for Modern French by psycholinguistic studies, in order to discuss the way in which they can be applied to a corpus of medieval neologisms.",
+      "publicationTitle": "Neologica",
+      "volume": "",
+      "issue": "7",
+      "pages": "41-56",
+      "date": "2013",
+      "series": "",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "",
+      "language": "fr",
+      "DOI": "10.15122/isbn.978-2-8124-1261-5.p.0041",
+      "ISSN": "2262-0354",
+      "shortTitle": "Le sort des n\u00e9ologismes dans la langue des sciences au Moyen \u00c2ge",
+      "url": "https://classiques-garnier.com/index.php/neologica-2013-n-7-revue-internationale-de-neologie-le-sort-des-neologismes-dans-la-langue-des-sciences-au-moyen-age-une-question-de-morphologie.html",
+      "accessDate": "",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "classiques-garnier.com",
+      "callNumber": "",
+      "rights": "",
+      "extra": "Publisher: Classiques Garnier",
+      "tags": [
+        {
+          "tag": "WG1 Task 2.1"
+        },
+        {
+          "tag": "neologica_article"
+        },
+        {
+          "tag": "validated metadata"
+        }
+      ],
+      "collections": [
+        "D5MCL3U7"
+      ],
+      "relations": {},
+      "dateAdded": "2024-05-04T20:26:35Z",
+      "dateModified": "2024-05-13T12:17:09Z"
+    },
+    "wikibase_entity": false
+  },
+  {
+    "key": "DM8XNCCM",
+    "version": 4871,
+    "library": {
+      "type": "group",
+      "id": 5449136,
+      "name": "NeoCorpus",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/neocorpus",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5449136/items/DM8XNCCM",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/neocorpus/items/DM8XNCCM",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/5449136/items/XEH59CY3",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 267688
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 7366654,
+        "username": "ana.salgado",
+        "name": "Ana Salgado",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/ana.salgado",
+            "type": "text/html"
+          }
+        }
+      },
+      "lastModifiedByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Humbley",
+      "parsedDate": "2012",
+      "numChildren": 1
+    },
+    "data": {
+      "key": "DM8XNCCM",
+      "version": 4871,
+      "itemType": "journalArticle",
+      "title": "Bibliographie de la n\u00e9ologie",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "John",
+          "lastName": "Humbley"
+        }
+      ],
+      "abstractNote": "",
+      "publicationTitle": "Neologica",
+      "volume": "",
+      "issue": "6",
+      "pages": "219-223",
+      "date": "2012",
+      "series": "",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "",
+      "language": "fr",
+      "DOI": "10.15122/isbn.978-2-8124-4232-2.p.0219",
+      "ISSN": "2262-0354",
+      "shortTitle": "",
+      "url": "https://classiques-garnier.com/neologica-2012-n-6-revue-internationale-de-neologie-bibliographie-de-la-neologie-en.html",
+      "accessDate": "",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "classiques-garnier.com",
+      "callNumber": "",
+      "rights": "",
+      "extra": "Publisher: Classiques Garnier",
+      "tags": [
+        {
+          "tag": "WG1 Task 2.1"
+        },
+        {
+          "tag": "neologica_article"
+        },
+        {
+          "tag": "validated metadata"
+        }
+      ],
+      "collections": [
+        "D5MCL3U7"
+      ],
+      "relations": {},
+      "dateAdded": "2024-05-04T19:11:37Z",
+      "dateModified": "2024-05-13T12:17:09Z"
+    },
+    "wikibase_entity": false
+  },
+  {
+    "key": "WARIP8YA",
+    "version": 4871,
+    "library": {
+      "type": "group",
+      "id": 5449136,
+      "name": "NeoCorpus",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/neocorpus",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5449136/items/WARIP8YA",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/neocorpus/items/WARIP8YA",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/5449136/items/I4YXT5AL",
+        "type": "application/json",
+        "attachmentType": "text/html"
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 7366654,
+        "username": "ana.salgado",
+        "name": "Ana Salgado",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/ana.salgado",
+            "type": "text/html"
+          }
+        }
+      },
+      "lastModifiedByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Veleanu",
+      "numChildren": 1
+    },
+    "data": {
+      "key": "WARIP8YA",
+      "version": 4871,
+      "itemType": "journalArticle",
+      "title": "La n\u00e9ologie juridique - Quelques observations en jurilinguistique contrastive",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Corina",
+          "lastName": "Veleanu"
+        }
+      ],
+      "abstractNote": "",
+      "publicationTitle": "Neologica",
+      "volume": "12",
+      "issue": "",
+      "pages": "203-218",
+      "date": "",
+      "series": "",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "",
+      "language": "fr",
+      "DOI": "",
+      "ISSN": "",
+      "shortTitle": "",
+      "url": "https://classiques-garnier.com/neologica-2018-n-12-lexique-nouveaute-et-productivite-la-neologie-juridique.html",
+      "accessDate": "2024-05-02T19:39:40Z",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "",
+      "callNumber": "",
+      "rights": "",
+      "extra": "",
+      "tags": [
+        {
+          "tag": "Task 3.3"
+        },
+        {
+          "tag": "WG1 Task 2.1"
+        },
+        {
+          "tag": "neologica_article"
+        },
+        {
+          "tag": "validated metadata"
+        }
+      ],
+      "collections": [
+        "NXKTQ4QX"
+      ],
+      "relations": {},
+      "dateAdded": "2024-05-02T19:39:40Z",
+      "dateModified": "2024-05-13T12:17:09Z"
+    },
+    "wikibase_entity": false
+  },
+  {
+    "key": "ZGKDK7W7",
+    "version": 4871,
+    "library": {
+      "type": "group",
+      "id": 5449136,
+      "name": "NeoCorpus",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/neocorpus",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5449136/items/ZGKDK7W7",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/neocorpus/items/ZGKDK7W7",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/5449136/items/YSJTVFWI",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 434511
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 13871063,
+        "username": "dorinamacovei",
+        "name": "Dorina Macovei",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/dorinamacovei",
+            "type": "text/html"
+          }
+        }
+      },
+      "lastModifiedByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Sablayrolles",
+      "parsedDate": "2020",
+      "numChildren": 1
+    },
+    "data": {
+      "key": "ZGKDK7W7",
+      "version": 4871,
+      "itemType": "journalArticle",
+      "title": "Emprunts et n\u00e9ologismes autochtones. Comparaison de leur place respective et de leur r\u00e9ception",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Jean-Fran\u00e7ois",
+          "lastName": "Sablayrolles"
+        }
+      ],
+      "abstractNote": "The position of borrowing in the set of the lexicon-expanding processes of a language varies from author to author. Borrowing may be included, excluded, or even remain unmentioned. The binary opposition between language-internal processes and borrowing is to be preferred to the traditional ternary division between formal processes, semantic processes and borrowing. Some external influences may be exerted through other means than borrowing, and one also needs to distinguish between xenisms, peregrinisms and statalisms. This article deals with classifying these units and analyzing how they are accepted and used in the receiving language.",
+      "publicationTitle": "Neologica",
+      "volume": "15",
+      "issue": "",
+      "pages": "127-143",
+      "date": "2020",
+      "series": "",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "",
+      "language": "fr",
+      "DOI": "",
+      "ISSN": "",
+      "shortTitle": "",
+      "url": "https://hal.science/hal-03086455",
+      "accessDate": "2024-04-13T19:37:54Z",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "HAL Archives Ouvertes",
+      "callNumber": "",
+      "rights": "",
+      "extra": "Publisher: Paris : Garnier",
+      "tags": [
+        {
+          "tag": "WG1 Task 2.1"
+        },
+        {
+          "tag": "neologica_article"
+        },
+        {
+          "tag": "validated metadata"
+        }
+      ],
+      "collections": [
+        "T4KHMSXP"
+      ],
+      "relations": {
+        "dc:replaces": "http://zotero.org/groups/5449136/items/5BEA877J"
+      },
+      "dateAdded": "2024-04-03T19:35:21Z",
+      "dateModified": "2024-05-13T12:17:09Z"
+    },
+    "wikibase_entity": false
+  },
+  {
+    "key": "HJBBT2VT",
+    "version": 4871,
+    "library": {
+      "type": "group",
+      "id": 5449136,
+      "name": "NeoCorpus",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/neocorpus",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5449136/items/HJBBT2VT",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/neocorpus/items/HJBBT2VT",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/5449136/items/SVRRZIZC",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 1599644
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 7366654,
+        "username": "ana.salgado",
+        "name": "Ana Salgado",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/ana.salgado",
+            "type": "text/html"
+          }
+        }
+      },
+      "lastModifiedByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Cartier",
+      "parsedDate": "2019",
+      "numChildren": 1
+    },
+    "data": {
+      "key": "HJBBT2VT",
+      "version": 4871,
+      "itemType": "journalArticle",
+      "title": "N\u00e9oveille, plateforme de rep\u00e9rage et de suivi des n\u00e9ologismes en corpus dynamique",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Emmanuel",
+          "lastName": "Cartier"
+        }
+      ],
+      "abstractNote": "We present a web platform devoted to the automatic detection, the linguistic description and the tracking of the life-cycle of lexical innovations in monitor corpora. We detail the general architecture of the system and its main modules : corpora manager, formal neology automatic detection, neologism linguistic description, tools to track the life-cycle of lexical innovations. The platform is available at : www.neoveille.org. The source code at : https://github.com/ecartierlipn/neoveille2016.",
+      "publicationTitle": "Neologica",
+      "volume": "",
+      "issue": "13",
+      "pages": "23-54",
+      "date": "2019",
+      "series": "",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "",
+      "language": "fr",
+      "DOI": "10.15122/ISBN.978-2-406-09663-4.P.0023",
+      "ISSN": "",
+      "shortTitle": "",
+      "url": "https://classiques-garnier.com/doi/garnier?article=JshMS13_23",
+      "accessDate": "2024-04-03T19:36:37Z",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "DOI.org (Datacite)",
+      "callNumber": "",
+      "rights": "",
+      "extra": "Artwork Size: 32 pages, pages 23-54\nISBN: 9782406096634\nMedium: application/xhtml+xml,application/pdf,online,database,application/xhtml+xml ; application/pdf\nPublisher: [object Object]",
+      "tags": [
+        {
+          "tag": "WG1 Task 2.1"
+        },
+        {
+          "tag": "neologica_article"
+        },
+        {
+          "tag": "validated metadata"
+        }
+      ],
+      "collections": [
+        "T4KHMSXP"
+      ],
+      "relations": {},
+      "dateAdded": "2024-04-03T19:36:37Z",
+      "dateModified": "2024-05-13T12:17:09Z"
+    },
+    "wikibase_entity": false
+  },
+  {
+    "key": "PNTHZP7Y",
+    "version": 4871,
+    "library": {
+      "type": "group",
+      "id": 5449136,
+      "name": "NeoCorpus",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/neocorpus",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5449136/items/PNTHZP7Y",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/neocorpus/items/PNTHZP7Y",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/5449136/items/7MSLVLQW",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 319617
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 7366654,
+        "username": "ana.salgado",
+        "name": "Ana Salgado",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/ana.salgado",
+            "type": "text/html"
+          }
+        }
+      },
+      "lastModifiedByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Manes Gallo and Portine",
+      "parsedDate": "2013",
+      "numChildren": 2
+    },
+    "data": {
+      "key": "PNTHZP7Y",
+      "version": 4871,
+      "itemType": "journalArticle",
+      "title": "Les locutions prendre effet ou fin : Figement vs n\u00e9ologisation",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Maria Caterina",
+          "lastName": "Manes Gallo"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Henri",
+          "lastName": "Portine"
+        }
+      ],
+      "abstractNote": "The purpose of this paper is to show that the neologization process depends on discourse strategies closely related to social activities in a specific domain (here, the domain of Law). It is centered on French prendre effet and prendre fin. The authors show how prendre effet is not only a set expression but also a neologism, in opposition to prendre fin. The analysis is partly based on Guillaume's notion of \" subduction \".",
+      "publicationTitle": "Neologica",
+      "volume": "",
+      "issue": "7",
+      "pages": "117-134",
+      "date": "2013",
+      "series": "",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "",
+      "language": "fr",
+      "DOI": "10.15122/isbn.978-2-8124-1261-5.p.0117",
+      "ISSN": "2262-0354",
+      "shortTitle": "Les locutions prendre effet ou fin",
+      "url": "https://hal.science/hal-01415465",
+      "accessDate": "2024-03-22T17:20:24Z",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "HAL Archives Ouvertes",
+      "callNumber": "",
+      "rights": "",
+      "extra": "Publisher: Paris : Garnier",
+      "tags": [
+        {
+          "tag": "WG1 Task 2.1"
+        },
+        {
+          "tag": "neologica_article"
+        },
+        {
+          "tag": "validated metadata"
+        }
+      ],
+      "collections": [
+        "T4KHMSXP",
+        "D5MCL3U7"
+      ],
+      "relations": {
+        "dc:replaces": [
+          "http://zotero.org/groups/5449136/items/9WDGKKXF",
+          "http://zotero.org/groups/5449136/items/YW7JJRAT",
+          "http://zotero.org/groups/5449136/items/IBLHT5DF"
+        ]
+      },
+      "dateAdded": "2024-03-22T17:20:24Z",
+      "dateModified": "2024-05-13T12:17:09Z"
+    },
+    "wikibase_entity": false
+  },
+  {
+    "key": "RLVB886H",
+    "version": 4870,
+    "library": {
+      "type": "group",
+      "id": 5449136,
+      "name": "NeoCorpus",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/neocorpus",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5449136/items/RLVB886H",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/neocorpus/items/RLVB886H",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/5449136/items/TI82GZWE",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 693577
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 7366654,
+        "username": "ana.salgado",
+        "name": "Ana Salgado",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/ana.salgado",
+            "type": "text/html"
+          }
+        }
+      },
+      "lastModifiedByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Bureau",
+      "parsedDate": "2022",
+      "numChildren": 1
+    },
+    "data": {
+      "key": "RLVB886H",
+      "version": 4870,
+      "itemType": "journalArticle",
+      "title": "Changement climatique, changement linguistique ?: Extraction semi-automatique et analyse des n\u00e9ologismes issus du domaine du changement climatique",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Pauline",
+          "lastName": "Bureau"
+        }
+      ],
+      "abstractNote": "The unprecedented nature of anthropogenic climate change forces language users to deploy new linguistic strategies. Resorting to neologisms may be a way to apprehend this contemporary phenomenon. Through the study of an English corpus composed of reports published between 2007 and 2021, this article presents an innovative method for extracting neologisms in the domain of climate change and an analysis that draws upon the most recent development in terminology for its theoretical framework.",
+      "publicationTitle": "Neologica",
+      "volume": "",
+      "issue": "16",
+      "pages": "61-83",
+      "date": "2022",
+      "series": "",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "",
+      "language": "fr",
+      "DOI": "10.48611/ISBN.978-2-406-13219-6.P.0061",
+      "ISSN": "",
+      "shortTitle": "Changement climatique, changement linguistique ?",
+      "url": "https://classiques-garnier.com/doi/garnier?article=JshMS16_61",
+      "accessDate": "2024-04-03T19:36:34Z",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "DOI.org (Datacite)",
+      "callNumber": "",
+      "rights": "",
+      "extra": "Artwork Size: 23 pages, pages 61-83\nISBN: 9782406132196\nMedium: application/xhtml+xml,application/pdf,online,database,application/xhtml+xml ; application/pdf\nPublisher: [object Object]",
+      "tags": [
+        {
+          "tag": "WG1 Task 2.1"
+        },
+        {
+          "tag": "neologica_article"
+        },
+        {
+          "tag": "validated metadata"
+        }
+      ],
+      "collections": [
+        "T4KHMSXP"
+      ],
+      "relations": {},
+      "dateAdded": "2024-04-03T19:36:34Z",
+      "dateModified": "2024-05-13T12:16:51Z"
+    },
+    "wikibase_entity": false
+  },
+  {
+    "key": "3D4RWZTU",
+    "version": 4869,
+    "library": {
+      "type": "group",
+      "id": 5449136,
+      "name": "NeoCorpus",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/neocorpus",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5449136/items/3D4RWZTU",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/neocorpus/items/3D4RWZTU",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/5449136/items/8VKYSESB",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 234486
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 7366654,
+        "username": "ana.salgado",
+        "name": "Ana Salgado",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/ana.salgado",
+            "type": "text/html"
+          }
+        }
+      },
+      "lastModifiedByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Arriv\u00e9",
+      "parsedDate": "2009",
+      "numChildren": 1
+    },
+    "data": {
+      "key": "3D4RWZTU",
+      "version": 4869,
+      "itemType": "journalArticle",
+      "title": "Un n\u00e9ologisme pris sur le vif : la bravitude",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Michel",
+          "lastName": "Arriv\u00e9"
+        }
+      ],
+      "abstractNote": "The french neologism bravitude is one of those whose first occurrence can be most precisely determined; it was first used by S\u00e9gol\u00e8ne Royal on 6th january 2007 during a visit to the Great Wall of China. The article first investigates the relations between this bravitude and its homonym previously used in an internet video game, and then tackles the following questions : \n1.Howcan the creation of the neologismbe explained? Why did s\u00e9gol\u00e8ne royal opt to use the neological suffix -itude when she could have used not only bravour but also the less common braverie and bravet\u00e9? this is likely to be subconscious morphological reasoning but none less real.\n2.What can account for the large number of commentsmade on this neologismand the violently negative character of most of them? many critics use \u201cneologism\u201d as an equivalent of barbarism or faulty language usage, and the implications of this are considered. it would seem that language is often imagined as a closed inventory of changeless items.\n3.The reception given to bravitude is contrasted to that which the neologisms courtesse d\u2019id\u00e9es, fatitude and h\u00e9ritation, made by male politicians. can the difference in reception be attributed to the gender of the speaker? finally, the possible effect of the neologism on the productivity of the suffix -itude is discussed.",
+      "publicationTitle": "Neologica",
+      "volume": "",
+      "issue": "3",
+      "pages": "67-77",
+      "date": "2009",
+      "series": "",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "",
+      "language": "fr",
+      "DOI": "10.15122/isbn.978-2-8124-4229-2.p.0071",
+      "ISSN": "2262-0354",
+      "shortTitle": "Un n\u00e9ologisme pris sur le vif",
+      "url": "",
+      "accessDate": "",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "classiques-garnier.com",
+      "callNumber": "",
+      "rights": "",
+      "extra": "Publisher: Classiques Garnier",
+      "tags": [
+        {
+          "tag": "WG1 Task 2.1"
+        },
+        {
+          "tag": "neologica_article"
+        },
+        {
+          "tag": "validated metadata"
+        }
+      ],
+      "collections": [
+        "T4KHMSXP"
+      ],
+      "relations": {},
+      "dateAdded": "2024-03-22T17:37:51Z",
+      "dateModified": "2024-05-13T12:16:50Z"
+    },
+    "wikibase_entity": false
+  },
+  {
+    "key": "SETY4J8Q",
+    "version": 4868,
+    "library": {
+      "type": "group",
+      "id": 5449136,
+      "name": "NeoCorpus",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/neocorpus",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5449136/items/SETY4J8Q",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/neocorpus/items/SETY4J8Q",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/5449136/items/G4Q9SX4X",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 576238
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 13871063,
+        "username": "dorinamacovei",
+        "name": "Dorina Macovei",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/dorinamacovei",
+            "type": "text/html"
+          }
+        }
+      },
+      "lastModifiedByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Sablayrolles",
+      "parsedDate": "2009-01-01",
+      "numChildren": 1
+    },
+    "data": {
+      "key": "SETY4J8Q",
+      "version": 4868,
+      "itemType": "journalArticle",
+      "title": "N\u00e9ologie et classes d'objet",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Jean-Fran\u00e7ois",
+          "lastName": "Sablayrolles"
+        }
+      ],
+      "abstractNote": "Le flou qui entoure le concept de n\u00e9ologisme, variable en fonction de l'unit\u00e9 lexicale adopt\u00e9e, de la dur\u00e9e de la nouveaut\u00e9, du rapport avec la \" faute \" et des fluctuations du sentiment n\u00e9ologique a abouti \u00e0 mettre au jour ce paradoxe que c'est moins le n\u00e9ologisme qui pose probl\u00e8me que l'insuffisance des descriptions traditionnelles, en particulier lexicographiques, du lexique. Le mod\u00e8le th\u00e9orique des classes d'objets a alors sembl\u00e9 ad\u00e9quat pour traiter la n\u00e9ologie avec sa conception de dictionnaires destin\u00e9s prioritairement au traitement automatique des langues, mais qui peuvent secondairement servir de pierre de touche pour tous les types de n\u00e9ologie. C'est donc dans ce cadre th\u00e9orique qu'ont \u00e9t\u00e9 d\u00e9velopp\u00e9es la veille n\u00e9ologique et l'analyse des donn\u00e9es recueillies dans une base de donn\u00e9es, afin de mieux conna\u00eetre la cr\u00e9ativit\u00e9 lexicale des locuteurs et l'\u00e9volution du lexique fran\u00e7ais contemporain.",
+      "publicationTitle": "Neologica",
+      "volume": "",
+      "issue": "3",
+      "pages": "25-36",
+      "date": "2009/01/01",
+      "series": "",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "",
+      "language": "fr",
+      "DOI": "",
+      "ISSN": "",
+      "shortTitle": "",
+      "url": "https://shs.hal.science/halshs-00608879",
+      "accessDate": "2024-04-13T19:48:09Z",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "shs.hal.science",
+      "callNumber": "",
+      "rights": "",
+      "extra": "",
+      "tags": [
+        {
+          "tag": "WG1 Task 2.1"
+        },
+        {
+          "tag": "neologica_article"
+        },
+        {
+          "tag": "validated metadata"
+        }
+      ],
+      "collections": [
+        "T4KHMSXP"
+      ],
+      "relations": {
+        "dc:replaces": "http://zotero.org/groups/5449136/items/HFMK485R"
+      },
+      "dateAdded": "2024-04-03T19:35:31Z",
+      "dateModified": "2024-05-13T12:16:50Z"
+    },
+    "wikibase_entity": false
+  },
+  {
+    "key": "KGV4NS6Q",
+    "version": 4867,
+    "library": {
+      "type": "group",
+      "id": 5449136,
+      "name": "NeoCorpus",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/neocorpus",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5449136/items/KGV4NS6Q",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/neocorpus/items/KGV4NS6Q",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/5449136/items/45QGNIG4",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 674413
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 13871063,
+        "username": "dorinamacovei",
+        "name": "Dorina Macovei",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/dorinamacovei",
+            "type": "text/html"
+          }
+        }
+      },
+      "lastModifiedByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Sablayrolles",
+      "parsedDate": "2007",
+      "numChildren": 1
+    },
+    "data": {
+      "key": "KGV4NS6Q",
+      "version": 4867,
+      "itemType": "journalArticle",
+      "title": "Nomination, d\u00e9nomination et n\u00e9ologie : intersection et diff\u00e9rences sym\u00e9triques",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Jean-Fran\u00e7ois",
+          "lastName": "Sablayrolles"
+        }
+      ],
+      "abstractNote": "Cet article se propose d'\u00e9tudier les rapports entre la n\u00e9ologie et la nomination consid\u00e9r\u00e9e comme l'acte d'imposition d'un nom et distingu\u00e9e de la d\u00e9nomination, r\u00e9sultat stabilis\u00e9 de cette op\u00e9ration. D'abord, la n\u00e9ologie et la nomination ne se superposent pas exactement. La pression du contexte syntaxique, le jeu ou la recherche de connivence ou d'expressivit\u00e9 font surgir des n\u00e9ologismes sans apparition concomitante de nouvelles r\u00e9alit\u00e9s \u00e0 nommer. Inversement la nomination ne s'accompagne pas toujours de n\u00e9ologismes : on observe des extensions d'emploi et des sp\u00e9cialisations de sens en contexte ainsi que la p\u00e9rennit\u00e9 de signes pour des r\u00e9alit\u00e9s nouvelles. Ensuite plusieurs param\u00e8tres sont \u00e0 prendre en compte dans les cas de nomination par n\u00e9ologisme. Le facteur du degr\u00e9 d'urgence est fondamental selon que le locuteur a du temps devant lui ou qu'il doit achever une phrase d\u00e9j\u00e0 \u00e0 moiti\u00e9 \u00e9mise. Son objectif de (se) convaincre de l'existence d'une nouveaut\u00e9 ou d'exprimer son opinion \u00e0 son sujet constitue un deuxi\u00e8me param\u00e8tre. Sont enfin examin\u00e9s divers cas de renomination et de nominations multiples. La n\u00e9cessit\u00e9 de donner des noms \u00e0 de nouveaux objets, de nouveaux concepts est la raison toujours invoqu\u00e9e pour justifier la cr\u00e9ation des n\u00e9ologismes. De tout temps les puristes les acceptent dans les domaines techniques et scientifiques, mais les r\u00e9cusent dans la langue g\u00e9n\u00e9rale, car, pour paraphraser Voltaire, on ne fait pas de nouvelles d\u00e9couvertes dans le coeur humain.",
+      "publicationTitle": "Neologica",
+      "volume": "",
+      "issue": "1",
+      "pages": "87-99",
+      "date": "2007",
+      "series": "",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "",
+      "language": "fr",
+      "DOI": "",
+      "ISSN": "",
+      "shortTitle": "Nomination, d\u00e9nomination et n\u00e9ologie",
+      "url": "https://shs.hal.science/halshs-00154402",
+      "accessDate": "2024-04-13T19:48:33Z",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "shs.hal.science",
+      "callNumber": "",
+      "rights": "",
+      "extra": "",
+      "tags": [
+        {
+          "tag": "WG1 Task 2.1"
+        },
+        {
+          "tag": "neologica_article"
+        },
+        {
+          "tag": "validated metadata"
+        }
+      ],
+      "collections": [
+        "T4KHMSXP"
+      ],
+      "relations": {
+        "dc:replaces": "http://zotero.org/groups/5449136/items/EJR59BU8"
+      },
+      "dateAdded": "2024-04-03T19:35:26Z",
+      "dateModified": "2024-05-13T12:16:49Z"
+    },
+    "wikibase_entity": false
+  },
+  {
+    "key": "YMK9Q8U6",
+    "version": 4866,
+    "library": {
+      "type": "group",
+      "id": 5449136,
+      "name": "NeoCorpus",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/neocorpus",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5449136/items/YMK9Q8U6",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/neocorpus/items/YMK9Q8U6",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/5449136/items/8YW4QUXJ",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 475405
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 13871063,
+        "username": "dorinamacovei",
+        "name": "Dorina Macovei",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/dorinamacovei",
+            "type": "text/html"
+          }
+        }
+      },
+      "lastModifiedByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Sablayrolles",
+      "parsedDate": "2019",
+      "numChildren": 1
+    },
+    "data": {
+      "key": "YMK9Q8U6",
+      "version": 4866,
+      "itemType": "journalArticle",
+      "title": "Traitement et suivi de la diffusion de n\u00e9ologismes rep\u00e9r\u00e9s par des extracteurs",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Jean-Fran\u00e7ois",
+          "lastName": "Sablayrolles"
+        }
+      ],
+      "abstractNote": "In spite of its advantages over manual extraction, automatic monitoring of neologisms is less than satisfactory, due to incomplete exclusion corpora, problems of homonymy, new uses of existing words\u2026 It can however be improved.  The analysis of neologisms identified as such, hapax revealing individual creativity or wide-spread neologisms pose many problems that only a competent human can deal with.",
+      "publicationTitle": "Neologica",
+      "volume": "13",
+      "issue": "",
+      "pages": "55-69",
+      "date": "2019",
+      "series": "La n\u00e9ologie \u00e0 l'\u00e8re de l'informatique et de la r\u00e9volution num\u00e9rique",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "",
+      "language": "fr",
+      "DOI": "",
+      "ISSN": "",
+      "shortTitle": "",
+      "url": "https://hal.science/hal-03086047",
+      "accessDate": "2024-04-13T19:48:48Z",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "HAL Archives Ouvertes",
+      "callNumber": "",
+      "rights": "",
+      "extra": "Publisher: Paris : Garnier",
+      "tags": [
+        {
+          "tag": "WG1 Task 2.1"
+        },
+        {
+          "tag": "neologica_article"
+        },
+        {
+          "tag": "validated metadata"
+        }
+      ],
+      "collections": [
+        "T4KHMSXP"
+      ],
+      "relations": {
+        "dc:replaces": "http://zotero.org/groups/5449136/items/K6DGFUBN"
+      },
+      "dateAdded": "2024-04-03T19:35:18Z",
+      "dateModified": "2024-05-13T12:16:49Z"
+    },
+    "wikibase_entity": false
+  },
+  {
+    "key": "4L4WTVFN",
+    "version": 4865,
+    "library": {
+      "type": "group",
+      "id": 5449136,
+      "name": "NeoCorpus",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/neocorpus",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5449136/items/4L4WTVFN",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/neocorpus/items/4L4WTVFN",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/5449136/items/28RRVM42",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 326257
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 13871063,
+        "username": "dorinamacovei",
+        "name": "Dorina Macovei",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/dorinamacovei",
+            "type": "text/html"
+          }
+        }
+      },
+      "lastModifiedByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Sajous et al.",
+      "parsedDate": "2020",
+      "numChildren": 1
+    },
+    "data": {
+      "key": "4L4WTVFN",
+      "version": 4865,
+      "itemType": "journalArticle",
+      "title": "Les domaines de sp\u00e9cialit\u00e9 dans les dictionnaires g\u00e9n\u00e9raux : le lexique de l'informatique analys\u00e9 par les foules et par les professionnels... de la lexicographie",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Franck",
+          "lastName": "Sajous"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Am\u00e9lie",
+          "lastName": "Josselin-Leray"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Nabil",
+          "lastName": "Hathout"
+        }
+      ],
+      "abstractNote": "Cet article compare le traitement d\u2019un domaine sp\u00e9cialis\u00e9 \u2013 l\u2019informatique \u2013 effectu\u00e9 par un dictionnaire g\u00e9n\u00e9ral de langue, le Petit Robert, \u00e0 celui de dictionnaires amateurs et gratuits : Wiktionnaire, Urban Dictionary et Le Jargon Fran\u00e7ais. La comparaison, qui porte sur les nomenclatures respectives et sur la formulation des d\u00e9finitions, montre la pertinence des dictionnaires amateurs qui se r\u00e9v\u00e8lent \u00eatre, pour le domaine \u00e9tudi\u00e9, des concurrents s\u00e9rieux au dictionnaire payant.",
+      "publicationTitle": "Neologica",
+      "volume": "14",
+      "issue": "",
+      "pages": "83-107",
+      "date": "2020",
+      "series": "",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "",
+      "language": "fr",
+      "DOI": "10.15122/isbn.978-2-406-10571-8.p.0083",
+      "ISSN": "",
+      "shortTitle": "Les domaines de sp\u00e9cialit\u00e9 dans les dictionnaires g\u00e9n\u00e9raux",
+      "url": "https://shs.hal.science/halshs-02928610",
+      "accessDate": "2024-04-13T20:00:51Z",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "shs.hal.science",
+      "callNumber": "",
+      "rights": "",
+      "extra": "",
+      "tags": [
+        {
+          "tag": "WG1 Task 2.1"
+        },
+        {
+          "tag": "neologica_article"
+        },
+        {
+          "tag": "validated metadata"
+        }
+      ],
+      "collections": [
+        "T4KHMSXP"
+      ],
+      "relations": {
+        "dc:replaces": "http://zotero.org/groups/5449136/items/LU85TJ5E"
+      },
+      "dateAdded": "2024-04-03T19:37:01Z",
+      "dateModified": "2024-05-13T12:16:48Z"
+    },
+    "wikibase_entity": false
+  },
+  {
+    "key": "KGDSNYFG",
+    "version": 4864,
+    "library": {
+      "type": "group",
+      "id": 5449136,
+      "name": "NeoCorpus",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/neocorpus",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5449136/items/KGDSNYFG",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/neocorpus/items/KGDSNYFG",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/5449136/items/INMDEFHH",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 699195
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 13871063,
+        "username": "dorinamacovei",
+        "name": "Dorina Macovei",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/dorinamacovei",
+            "type": "text/html"
+          }
+        }
+      },
+      "lastModifiedByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Sablayrolles and Jacquet-Pfau",
+      "parsedDate": "2008",
+      "numChildren": 1
+    },
+    "data": {
+      "key": "KGDSNYFG",
+      "version": 4864,
+      "itemType": "journalArticle",
+      "title": "Les emprunts : du rep\u00e9rage aux analyses. Diversit\u00e9 des objectifs et des traitements",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Jean-Fran\u00e7ois",
+          "lastName": "Sablayrolles"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Christine",
+          "lastName": "Jacquet-Pfau"
+        }
+      ],
+      "abstractNote": "Deux expos\u00e9s, compl\u00e9mentaires et non oppos\u00e9s, visent \u00e0 illustrer la complexit\u00e9 du concept d'emprunt : des points de vue et des objectifs diff\u00e9rents conduisent \u00e0 des pratiques diff\u00e9rentes. Cette complexit\u00e9 du concept d'emprunt est responsable de nombre de malentendus \u00e0 dissiper. JFS s'int\u00e9resse au processus (l'emprunt est un des - trois - types fondamentaux traditionnellement reconnus de la n\u00e9ologie) et examine les difficult\u00e9s concr\u00e8tes auxquelles on se heurte dans l'analyse des n\u00e9ologismes relev\u00e9s et dans l'identification de leur matrice lexicale. Quelques propositions sont esquiss\u00e9es. La dimension processuelle est en revanche absente des pr\u00e9occupations de CJP. Son objectif est le rep\u00e9rage, dans des productions \u00e9crites, d'unit\u00e9s lexicales dont certaines particularit\u00e9s formelles r\u00e9v\u00e8lent une origine \u00e9trang\u00e8re, donc non int\u00e9gr\u00e9e au syst\u00e8me de la langue emprunteuse. Ces informations sont utilisables dans diff\u00e9rentes \u00e9tapes et en vue de diff\u00e9rentes applications de l'analyse automatique : recherche d'information et indexation, identification de types de textes, de sp\u00e9cialit\u00e9 en particulier, domaines du savoir dont ils traitent, reconnaissance des langues utilis\u00e9es, notamment dans le contexte de la traduction...",
+      "publicationTitle": "Neologica",
+      "volume": "",
+      "issue": "2",
+      "pages": "19-38",
+      "date": "2008",
+      "series": "",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "",
+      "language": "fr",
+      "DOI": "",
+      "ISSN": "",
+      "shortTitle": "Les emprunts",
+      "url": "https://shs.hal.science/halshs-00411342",
+      "accessDate": "2024-04-13T19:03:29Z",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "shs.hal.science",
+      "callNumber": "",
+      "rights": "",
+      "extra": "",
+      "tags": [
+        {
+          "tag": "WG1 Task 2.1"
+        },
+        {
+          "tag": "neologica_article"
+        },
+        {
+          "tag": "validated metadata"
+        }
+      ],
+      "collections": [
+        "T4KHMSXP"
+      ],
+      "relations": {
+        "dc:replaces": "http://zotero.org/groups/5449136/items/VL7T6RWB"
+      },
+      "dateAdded": "2024-04-03T19:35:29Z",
+      "dateModified": "2024-05-13T12:16:48Z"
+    },
+    "wikibase_entity": false
+  }
+]

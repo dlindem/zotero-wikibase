@@ -112,6 +112,20 @@
       "name": "given name source literal",
       "comment": "A datatype String property, used as qualifier in creator statements."
     },
+    "prop_pref_given_name": {
+      "wikibase": "P51",
+      "type": "String",
+      "wikidata": null,
+      "name": "preferred given name",
+      "comment": "A datatype String property, used as property on items describing creators."
+    },
+    "prop_pref_family_name": {
+      "wikibase": "P52",
+      "type": "String",
+      "wikidata": null,
+      "name": "preferred family or last name",
+      "comment": "A datatype String property, used as property on items describing creators."
+    },
     "prop_family_name_source_literal": {
       "wikibase": "P11",
       "type": "String",
@@ -134,6 +148,14 @@
       "name": "ISBN-13",
       "comment": "Datatype ExternalId, Wikidata P212. Used for 10-digit-ISBN identifiers. Most conveniently with formatter URL \"https://worldcat.org/isbn/$1\".",
       "formatter_url": "https://worldcat.org/isbn/$1"
+    },
+    "prop_oclc": {
+      "wikibase": "P48",
+      "type": "ExternalId",
+      "wikidata": "P243",
+      "name": "OCLC",
+      "comment": "Datatype ExternalId, Wikidata P243. Identifier for a bibliographic record in OCLC WorldCat. Most conveniently with formatter URL \" https://www.worldcat.org/oclc/$1\".",
+      "formatter_url": "https://worldcat.org/oclc/$1"
     },
     "prop_language": {
       "wikibase": "P7",
@@ -229,7 +251,7 @@
       "wikidata": null
     },
     "identifier_patterns": {
-      "^OCLC: ([0-9]+)": "P55"
+      "^OCLC: ([0-9]+)": "P48"
     },
     "other_wb_externalid": {
       "https://lexbib.elex.is": "P39",

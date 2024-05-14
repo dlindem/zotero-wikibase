@@ -2,10 +2,47 @@
   "filename": "properties.json",
   "comment": "mapping keys are wikibase properties",
   "mapping": {
+    "P1": {
+      "enlabel": "wikidata entity",
+      "type": "ExternalId",
+      "wdprop": null,
+      "formatter_url": "http://www.wikidata.org/entity/$1",
+      "formatter_uri": "http://www.wikidata.org/entity/$1"
+    },
+    "P2": {
+      "enlabel": "formatter URL",
+      "type": "String",
+      "wdprop": null
+    },
+    "P3": {
+      "enlabel": "formatter URI for RDF",
+      "type": "String",
+      "wdprop": null
+    },
+    "P4": {
+      "enlabel": "subclass of",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P5": {
+      "enlabel": "instance of",
+      "type": "WikibaseItem",
+      "wdprop": "P31"
+    },
     "P6": {
       "enlabel": "bibliographical item type",
       "type": "WikibaseItem",
       "wdprop": null
+    },
+    "P7": {
+      "enlabel": "language of work or name",
+      "type": "WikibaseItem",
+      "wdprop": "P407"
+    },
+    "P8": {
+      "enlabel": "series ordinal",
+      "type": "String",
+      "wdprop": "P1545"
     },
     "P9": {
       "enlabel": "source literal",
@@ -22,9 +59,24 @@
       "type": "String",
       "wdprop": null
     },
+    "P12": {
+      "enlabel": "not used (item)",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P13": {
+      "enlabel": "ISBN-13",
+      "type": "ExternalId",
+      "wdprop": "P212"
+    },
+    "P14": {
+      "enlabel": "published in",
+      "type": "WikibaseItem",
+      "wdprop": "P1433"
+    },
     "P15": {
       "enlabel": "Wikipedia page URL",
-      "type": "URL",
+      "type": "Url",
       "wdprop": null
     },
     "P16": {
@@ -35,21 +87,38 @@
     "P17": {
       "enlabel": "Zotero item",
       "type": "ExternalId",
-      "wdprop": null
+      "wdprop": null,
+      "formatter_url": "https://www.zotero.org/groups/5449136/neocorpus/items/$1/item-details"
+    },
+    "P18": {
+      "enlabel": "equivalent class",
+      "type": "Url",
+      "wdprop": "P1709"
+    },
+    "P19": {
+      "enlabel": "equivalent property",
+      "type": "Url",
+      "wdprop": "P1628"
     },
     "P20": {
       "enlabel": "Zotero fulltext PDF",
       "type": "ExternalId",
       "wdprop": null
     },
+    "P21": {
+      "enlabel": "inverse property",
+      "type": "WikibaseProperty",
+      "wdprop": "P1696"
+    },
     "P22": {
       "enlabel": "DOI",
       "type": "ExternalId",
-      "wdprop": "P356"
+      "wdprop": "P356",
+      "formatter_url": "https://doi.org/$1"
     },
     "P23": {
-      "enlabel": "URL",
-      "type": "URL",
+      "enlabel": "full work available at URL",
+      "type": "Url",
       "wdprop": "P953"
     },
     "P25": {
@@ -58,12 +127,12 @@
       "wdprop": null
     },
     "P26": {
-      "enlabel": "Volume",
+      "enlabel": "volume",
       "type": "String",
       "wdprop": "P478"
     },
     "P27": {
-      "enlabel": "Edition",
+      "enlabel": "edition number",
       "type": "String",
       "wdprop": "P393"
     },
@@ -82,13 +151,8 @@
       "type": "Time",
       "wdprop": null
     },
-    "P31": {
-      "enlabel": "# of Pages",
-      "type": "String",
-      "wdprop": "P1104"
-    },
     "P32": {
-      "enlabel": "Issue",
+      "enlabel": "issue",
       "type": "String",
       "wdprop": "P433"
     },
@@ -117,6 +181,13 @@
       "type": "String",
       "wdprop": null
     },
+    "P39": {
+      "enlabel": "LexBib entity",
+      "type": "ExternalId",
+      "wdprop": null,
+      "formatter_url": "https://lexbib.elex.is/entity/$1",
+      "formatter_uri": "https://lexbib.elex.is/entity/$1"
+    },
     "P40": {
       "enlabel": "Author",
       "type": "WikibaseItem",
@@ -128,17 +199,58 @@
       "wdprop": null
     },
     "P42": {
-      "enlabel": "Pages",
+      "enlabel": "page(s)",
       "type": "String",
       "wdprop": "P304"
     },
     "P43": {
       "enlabel": "ISSN",
       "type": "ExternalId",
-      "wdprop": null
+      "wdprop": "P236",
+      "formatter_url": "https://portal.issn.org/resource/ISSN/$1"
     },
     "P44": {
       "enlabel": "Publication",
+      "type": "String",
+      "wdprop": null
+    },
+    "P45": {
+      "enlabel": "contains equivalent of concept",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P46": {
+      "enlabel": "mention count",
+      "type": "String",
+      "wdprop": null
+    },
+    "P47": {
+      "enlabel": "Series",
+      "type": "String",
+      "wdprop": null
+    },
+    "P48": {
+      "enlabel": "OCLC control number",
+      "type": "ExternalId",
+      "wdprop": "P243"
+    },
+    "P49": {
+      "enlabel": "# of Pages",
+      "type": "String",
+      "wdprop": null
+    },
+    "P50": {
+      "enlabel": "ISO 639-3 code",
+      "type": "ExternalId",
+      "wdprop": "P220"
+    },
+    "P51": {
+      "enlabel": "preferred given name",
+      "type": "String",
+      "wdprop": null
+    },
+    "P52": {
+      "enlabel": "preferred family or last name",
       "type": "String",
       "wdprop": null
     }

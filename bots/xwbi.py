@@ -43,11 +43,12 @@ try:
 	wbi_config['DEFAULT_LANGUAGE'] = 'en' # config['mapping']['wikibase_default_language']
 	wbi_config['DEFAULT_LEXEME_LANGUAGE'] = "Q207" # This is for Lexemes. Value None raises error.
 	wd_user_agent = config['mapping']['wikibase_site'] + ", User " + config_private['wb_bot_user']
-except Exception:
+except Exception as ex:
 	if profile == "profile.template":
 		print("Profile configuration not completed. Cannot configure wikibase bot.")
 	else:
 		print(f"{profile}: Profile configuration could not be done due to missing values in config.json file in profile folder.")
+		print(str(ex))
 
 if config_private['wb_bot_user'] and config_private['wb_bot_pwd']:
 	try:
