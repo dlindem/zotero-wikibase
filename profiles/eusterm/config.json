@@ -15,7 +15,8 @@
       "es",
       "en",
       "de",
-      "fr"
+      "fr",
+      "ca"
     ],
     "wikibase_sparql_endpoint": "https://eusterm.wikibase.cloud/query/sparql",
     "wikibase_sparql_prefixes": "PREFIX xwb: <https://eusterm.wikibase.cloud/entity/>\nPREFIX xdp: <https://eusterm.wikibase.cloud/prop/direct/>\nPREFIX xp: <https://eusterm.wikibase.cloud/prop/>\nPREFIX xps: <https://eusterm.wikibase.cloud/prop/statement/>\nPREFIX xpq: <https://eusterm.wikibase.cloud/prop/qualifier/>\nPREFIX xpr: <https://eusterm.wikibase.cloud/prop/reference/>\nPREFIX xno: <https://eusterm.wikibase.cloud/prop/novalue/>\n",

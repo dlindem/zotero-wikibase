@@ -74,8 +74,12 @@ where { ?item xdp:P6 xwb:"""+schemeqid+"""; xdp:P1 ?wikidata . filter (regex (st
         if couple not in couples:
             couples.append(couple)
     for couple in couples:
-        print(f"Will merge this couple of duplicates: {str(couple)}")
-        xwbi.wbi_helpers.merge_items(from_id=couple[1], to_id=couple[0], login=xwbi.login_instance)
+        print(f"Will try to merge this couple of duplicates: {str(couple)}")
+        try:
+            xwbi.wbi_helpers.merge_items(from_id=couple[1], to_id=couple[0], login=xwbi.login_instance)
+            print("Success.")
+        except:
+            print("Failed merging. One of the items to merge may have been merged before to another one.")
     #print(str(couples))
     return {'messages': [
         f"Finished merging {str(len(couples))} couples with the same P1 statement in scheme <a href=\"{config['mapping']['wikibase_entity_ns']}{schemeqid}\", target=\"_blank\">{schemeqid}</a>."],
