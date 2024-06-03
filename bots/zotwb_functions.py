@@ -576,6 +576,7 @@ def lookup_issn():
         message = f"Success [{str(count)}]: <a href=\"{checkurl}\" target=\"_blank\">{checkurl}</a>."
         print(message)
         messages.append(message)
+        time.sleep(0.2)
     print('Finished ISSN reconciliation.')
     return {'messages':messages, 'msgcolor':'background:limegreen'}
 

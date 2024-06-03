@@ -35,7 +35,7 @@
       "wdprop": null
     },
     "P7": {
-      "enlabel": "language of work or name",
+      "enlabel": "publication language",
       "type": "WikibaseItem",
       "wdprop": "P407"
     },
@@ -253,6 +253,11 @@
       "enlabel": "preferred family or last name",
       "type": "String",
       "wdprop": null
+    },
+    "P53": {
+      "enlabel": "guest of honor",
+      "type": "WikibaseItem",
+      "wdprop": "P957"
     }
   }
 }
