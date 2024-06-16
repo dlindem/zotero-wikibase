@@ -258,6 +258,11 @@
       "enlabel": "guest of honor",
       "type": "WikibaseItem",
       "wdprop": "P957"
+    },
+    "P60": {
+      "enlabel": "Zotero TEI-XML",
+      "type": "ExternalId",
+      "wdprop": null
     }
   }
 }
