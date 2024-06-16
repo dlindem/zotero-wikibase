@@ -518,7 +518,7 @@
       "iso1": "bg",
       "wikilang": "bg",
       "wdqid": "Q7918",
-      "wbqid": null
+      "wbqid": "Q1079"
     },
     "bxr": {
       "enlabel": "Russia Buriat",
@@ -896,7 +896,7 @@
       "iso1": "el",
       "wikilang": "el",
       "wdqid": "Q36510",
-      "wbqid": null
+      "wbqid": "Q981"
     },
     "eng": {
       "enlabel": "English",
@@ -1330,7 +1330,7 @@
       "iso1": "he",
       "wikilang": "he",
       "wdqid": "Q9288",
-      "wbqid": null
+      "wbqid": "Q985"
     },
     "her": {
       "enlabel": "Herero",
@@ -1400,7 +1400,7 @@
       "iso1": "hu",
       "wikilang": "hu",
       "wdqid": "Q9067",
-      "wbqid": null
+      "wbqid": "Q982"
     },
     "hye": {
       "enlabel": "Armenian",
@@ -1897,7 +1897,7 @@
       "iso1": "lv",
       "wikilang": "lv",
       "wdqid": "Q9078",
-      "wbqid": null
+      "wbqid": "Q984"
     },
     "lbe": {
       "enlabel": "Lak",
@@ -2352,7 +2352,7 @@
       "iso1": "nl",
       "wikilang": "nl",
       "wdqid": "Q7411",
-      "wbqid": null
+      "wbqid": "Q983"
     },
     "nno": {
       "enlabel": "Nynorsk",
@@ -3164,7 +3164,7 @@
       "iso1": "sr",
       "wikilang": "sr",
       "wdqid": "Q9299",
-      "wbqid": null
+      "wbqid": "1078"
     },
     "srq": {
       "enlabel": "Sirion\u00f3",
@@ -3472,7 +3472,7 @@
       "iso1": "tr",
       "wikilang": "tr",
       "wdqid": "Q256",
-      "wbqid": null
+      "wbqid": "Q979"
     },
     "tvl": {
       "enlabel": "Tuvaluan",
@@ -3542,7 +3542,7 @@
       "iso1": "uk",
       "wikilang": "uk",
       "wdqid": "Q8798",
-      "wbqid": null
+      "wbqid": "Q980"
     },
     "umu": {
       "enlabel": "Munsee",

@@ -15,7 +15,23 @@
       "fr",
       "eu",
       "de",
-      "pt"
+      "pt",
+      "lt",
+      "ro",
+      "tr",
+      "uk",
+      "ru",
+      "mk",
+      "el",
+      "hu",
+      "nl",
+      "es",
+      "it",
+      "lv",
+      "sq",
+      "sr",
+      "hr",
+      "bg"
     ],
     "wikibase_sparql_endpoint": "https://eneoli.wikibase.cloud/query/sparql",
     "wikibase_sparql_prefixes": "PREFIX xwb: <https://eneoli.wikibase.cloud/entity/>\nPREFIX xdp: <https://eneoli.wikibase.cloud/prop/direct/>\nPREFIX xp: <https://eneoli.wikibase.cloud/prop/>\nPREFIX xps: <https://eneoli.wikibase.cloud/prop/statement/>\nPREFIX xpq: <https://eneoli.wikibase.cloud/prop/qualifier/>\nPREFIX xpr: <https://eneoli.wikibase.cloud/prop/reference/>\nPREFIX xno: <https://eneoli.wikibase.cloud/prop/novalue/>\n",
@@ -96,7 +112,14 @@
       "type": "String",
       "wikidata": "P1545",
       "name": "series ordinal",
-      "comment": "Datatype String, Wikidata P1545, used e.g. in crator statements for representing the order in ordered lists."
+      "comment": "Datatype String, Wikidata P1545, used e.g. in creator statements for representing the order in ordered lists."
+    },
+    "prop_reference_date": {
+      "wikibase": "P56",
+      "type": "Time",
+      "wikidata": "P813",
+      "name": "reference access date",
+      "comment": "Datatype Time, Wikidata P813, used in references, e.g. for the Zotero item ID statement."
     },
     "prop_source_literal": {
       "wikibase": "P9",
