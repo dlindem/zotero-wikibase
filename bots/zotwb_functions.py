@@ -982,9 +982,11 @@ def wikibase_upload(data=[], onlynew=False):
                 # TODO: datatype date fields other than pubdate
         # add description
         descriptions = []
-        for lang in config['mapping']['wikibase_label_languages']:
-            creatorsummary = item['meta']['creatorSummary'] if 'creatorSummary' in item['meta'] else ""
-            descriptions.append({'lang': lang, 'value': f"{creatorsummary} {pubyear}"})
+        # for lang in config['mapping']['wikibase_label_languages']:
+        for lang in ['en']:
+            if 'creatorSummary' in item['meta']:
+                creatorsummary = item['meta']['creatorSummary'].replace(" and "," & ")
+                descriptions.append({'lang': lang, 'value': f"{creatorsummary} {pubyear}"})
 
         itemdata = {'qid': qid, 'statements': statements, 'descriptions': descriptions, 'labels': labels}
         # # debug output
