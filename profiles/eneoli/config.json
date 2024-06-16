@@ -79,6 +79,13 @@
       "name": "Zotero fulltext PDF",
       "comment": "externalId-prop for linking items to its full text PDF stored as Zotero attachment. formatter URL will be 'https://www.zotero.org/groups/[group_num]/[group_name]/items/$1/item-details'."
     },
+    "prop_zotero_TEI": {
+      "wikibase": "P60",
+      "type": "ExternalId",
+      "wikidata": null,
+      "name": "Zotero TEI-XML",
+      "comment": "externalId-prop for linking items to its TEI-XML version stored as Zotero attachment. formatter URL will be 'https://www.zotero.org/groups/[group_num]/[group_name]/items/$1/item-details'."
+    },
     "prop_instanceof": {
       "wikibase": "P5",
       "type": "WikibaseItem",
