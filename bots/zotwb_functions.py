@@ -986,7 +986,7 @@ def wikibase_upload(data=[], onlynew=False):
         for lang in ['en']:
             if 'creatorSummary' in item['meta']:
                 creatorsummary = item['meta']['creatorSummary'].replace(" and "," & ")
-                descriptions.append({'lang': lang, 'value': f"{creatorsummary} {pubyear}"})
+                descriptions.append({'lang': lang, 'value': f"Publication by {creatorsummary} ({pubyear})"})
 
         itemdata = {'qid': qid, 'statements': statements, 'descriptions': descriptions, 'labels': labels}
         # # debug output
