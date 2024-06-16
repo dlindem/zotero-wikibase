@@ -643,6 +643,7 @@ def get_creators(qid=None):
 
 def wikibase_upload(data=[], onlynew=False):
     # iterate through zotero records and do wikibase upload
+    clear_command = True
     config = botconfig.load_mapping('config')
     iso3mapping = botconfig.load_mapping('iso-639-3')
     iso1mapping = botconfig.load_mapping('iso-639-1')
@@ -681,6 +682,10 @@ def wikibase_upload(data=[], onlynew=False):
                 if child['data']['contentType'] == "application/pdf":
                     attqualis.append(
                         {'prop_nr': config['mapping']['prop_zotero_PDF']['wikibase'], 'type': 'ExternalId',
+                         'value': child['data']['key']})
+                if child['data']['contentType'] == "application/xml":
+                    attqualis.append(
+                        {'prop_nr': config['mapping']['prop_zotero_TEI']['wikibase'], 'type': 'ExternalId',
                          'value': child['data']['key']})
                 if child['data']['contentType'] == "" and child['data']['url'].startswith(config['mapping']['wikibase_entity_ns']):
                     qid = child['data']['url'].replace(config['mapping']['wikibase_entity_ns'], "")
@@ -871,7 +876,10 @@ def wikibase_upload(data=[], onlynew=False):
                         statements.append({"prop_nr": "P5", "type": "item", "value": "Q12"})  # LCR distribution
 
         # creators
-        existing_creators = get_creators(qid=qid)
+        if not clear_command:
+            existing_creators = get_creators(qid=qid) # creator statements with the same listpos-per-creatortype will not be touched
+        else:
+            existing_creators = [] # creator statements will be overwritten
         listpos = {}
         for creator in item['data']['creators']:
             if creator['creatorType'] not in listpos:
@@ -993,7 +1001,7 @@ def wikibase_upload(data=[], onlynew=False):
         # with open(f"parking/testout_{item['data']['key']}.json", 'w', encoding="utf-8") as file:
         #     json.dump({'zotero': item, 'output': itemdata}, file, indent=2)
         # do upload
-        qid = xwbi.itemwrite(itemdata, clear=False)
+        qid = xwbi.itemwrite(itemdata, clear=clear_command)
         if qid:  # if writing was successful (if not, qid is still False)
             patch_attempt = zoterobot.patch_item(qid=qid, zotitem=item, children=children)
             if patch_attempt.startswith("Versioning Error"):
