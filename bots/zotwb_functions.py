@@ -353,11 +353,16 @@ def check_export(zoterodata=[], zoteromapping={}):
         seen_creators = []
         fields_processed_before = ['itemType', 'creators', 'ISBN', 'extra', 'language']
         for fieldname in item['data']:
+            seen_fieldnames = []
             if (item['data'][fieldname] != "") and (fieldname not in fields_processed_before) and (itemtype + fieldname not in seen_fields) and (fieldname in zoteromapping['mapping'][itemtype]['fields']):
                 if zoteromapping['mapping'][itemtype]['fields'][fieldname]['wbprop'] == False:
-                    print(f"Skipping {itemtype} > {fieldname} as marked for permanent omission.")
+                    if fieldname not in seen_fieldnames:
+                        print(f"Skipping {itemtype} > {fieldname} as marked for permanent omission.")
+                        seen_fieldnames.append(fieldname)
                 elif zoteromapping['mapping'][itemtype]['fields'][fieldname]['wbprop']:
-                    print(f"Found existing mapping: {fieldname} > {zoteromapping['mapping'][itemtype]['fields'][fieldname]['wbprop']}")
+                    if fieldname not in seen_fieldnames:
+                        print(f"Found existing mapping: {fieldname} > {zoteromapping['mapping'][itemtype]['fields'][fieldname]['wbprop']}")
+                        seen_fieldnames.append(fieldname)
                 else:
                     newmsg = f"<i>{itemtype}</i> '<b>{fieldname}</b>': No wikibase property defined."
                     messages.append(newmsg+missing_mapping_message)
@@ -392,6 +397,7 @@ def check_language(zoterodata=[]):
     language_literals = botconfig.load_mapping('language-literals')
     messages = {'nullitems':[], 'nomaps':{}, 'languages': set()}
     nomaps = {}
+    seen_codes = []
     for item in zoterodata:
         if 'language' not in item['data']:
             continue
@@ -403,18 +409,23 @@ def check_language(zoterodata=[]):
             if langval.lower() in iso1mapping['mapping']:
                 oldval = langval
                 langval = iso1mapping['mapping'][langval.lower()]
-                print(f"Language field: Found two-digit language code '{oldval}' and converted to three-letter code '{langval}'.")
+                if langval not in seen_codes:
+                    print(f"Language field: Found two-digit language code '{oldval}' and converted to three-letter code '{langval}'.")
+                    seen_codes.append(langval)
         if len(langval) == 3:  # should be a ISO-639-3 code
             if langval.lower() in iso3mapping['mapping']:
                 languageqid = iso3mapping['mapping'][langval.lower()]['wbqid']
-                print('Language field: Found three-digit language code, mapped to ' +
+                if langval not in seen_codes:
+                    print('Language field: Found three-digit language code, mapped to ' +
                       iso3mapping['mapping'][langval.lower()]['enlabel'], languageqid)
+                    seen_codes.append(langval)
                 messages['languages'].add(iso3mapping['mapping'][langval.lower()]['enlabel'])
         if languageqid == False:  # Can't identify language using ISO 639-1 or 639-3
             if langval in language_literals['mapping']:
                 iso3 = language_literals['mapping'][langval].lower()
                 languageqid = iso3mapping['mapping'][iso3]['wbqid']
-                print('Language field: Found stored language literal, mapped to ' +
+                if langval not in seen_codes:
+                    print('Language field: Found stored language literal, mapped to ' +
                       iso3mapping['mapping'][iso3]['enlabel'] + ', ' + str(languageqid) + ' on wikibase.')
                 action = batchedit_literal(fieldname='language', literal=langval, replace_value=iso3, zoterodata=zoterodata, remove_tag=None)
                 messages['nomaps'][langval] = action['messages']
@@ -768,7 +779,7 @@ def wikibase_upload(data=[], onlynew=False):
                 languagewdqid = iso3mapping['mapping'][langval]['wdqid']
                 print(
                     f"No item defined for this language on your Wikibase. This language is {languagewdqid} on Wikidata. I'll import that and use it from now on.")
-                languageqid = zotwb_functions.import_wikidata_entity(languagewdqid,
+                languageqid = import_wikidata_entity(languagewdqid,
                                                                    classqid=config['mapping']['class_language']['wikibase'])
                 iso3mapping['mapping'][langval]['wbqid'] = languageqid
                 botconfig.dump_mapping(iso3mapping)
@@ -945,7 +956,7 @@ def wikibase_upload(data=[], onlynew=False):
                     if qid and existing_item:
                         if wbprop in existing_item.claims:
                             for claim in existing_item.claims.get(wbprop):
-                                print(claim.mainsnak.datavalue['value'])
+                                print(f"Found existing value for {wbprop}: {claim.mainsnak.datavalue['value']}")
                                 if claim.mainsnak.datavalue['value'] == item['data'][fieldname].strip(): # same literal already on wikibase, skip writing this (in order to preserve any qualifiers of the existing statement)
                                     skip = True
                     if not skip:
