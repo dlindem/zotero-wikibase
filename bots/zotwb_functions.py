@@ -1065,6 +1065,30 @@ def get_recon_pd(folder=""):
     print(f"Will get reconciled data from {infile}...")
     return {'data':pandas.read_csv(infile),'filename':infile}
 
+def search_creators(data=None, infile=None):
+    data.loc[:, "Wikibase_search"] = []
+    for rowindex, row in data.iterrows():
+
+        if "Wikibase_Qid" in row or "Wikidata_Qid" in row:
+            continue
+        lastName = row['lastName']
+        # {
+        #     "action": "query",
+        #     "format": "json",
+        #     "prop": "",
+        #     "list": "wbsearch",
+        #     "wbssearch": lastName,
+        #     "wbstype": "item",
+        #     "wbslimit": "500",
+        #     "wbsprofile": "default"
+        # }
+        result = requests.get(f'https://eneoli.wikibase.cloud/wiki/Special:ApiSandbox#action=query&format=json&prop=&list=wbsearch&wbssearch={lastName}&wbstype=item&wbslimit=500&wbsprofile=default')
+        data[rowindex]['Wikibase_search'] = result.json()
+        time.sleep(0.2)
+
+    data.to_csv(infile, index=False)
+
+
 def import_creators(data=None, infile=None, wikidata=False, wikibase=False, unrecon=False):
     from bots import xwb
     config = botconfig.load_mapping("config")
@@ -1096,7 +1120,7 @@ def import_creators(data=None, infile=None, wikidata=False, wikibase=False, unre
         df = df.dropna(subset=['Wikibase_Qid'])
         jobdesc = f"Wikibase-reconciled creators ({str(len(df))} creator statements)"
     elif unrecon:
-        df = df[df['Wikidata_Qid'].isnull() & df['Wikidata_Qid'].isnull()]
+        df = df[df['Wikidata_Qid'].isnull() & df['Wikibase_Qid'].isnull()]
         jobdesc = f"Unreconciled creators ({str(len(df))} creator statements)"
 
 
