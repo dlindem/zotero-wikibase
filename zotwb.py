@@ -449,6 +449,8 @@ def openrefine_creators():
         recon_unrecon = str(len(recon_df.loc[~recon_df.index.isin(recon_df.dropna(subset=['Wikibase_Qid', 'Wikidata_Qid']).index)]))
     elif "Wikidata_Qid" in recon_df.columns:
         recon_unrecon = str(len(recon_df)-int(recon_wd))
+    elif "Wikidata_Qid" not in recon_df.columns and "Wikibase_Qid" in recon_df.columns:
+        print('ERROR: CSV contains no columns named "Wikidata_Qid" or "Wikibase_Qid.')
 
     if request.method == 'GET':
 
@@ -485,6 +487,8 @@ def openrefine_creators():
                     messages = zotwb_functions.import_creators(data=recon_df, infile=get_recon['filename'], wikibase=True)
                 if key == "import_unreconciled":
                     messages = zotwb_functions.import_creators(data=recon_df, infile=get_recon['filename'], unrecon=True)
+                if key == "search_unreconciled":
+                    messages = zotwb_functions.search_creators(data=recon_df, infile=get_recon['filename'])
 
         return render_template("openrefine_creators.html", wikibase_name=configdata['mapping']['wikibase_name'],
                                messages=messages, msgcolor=msgcolor, profile=profile,
