@@ -458,7 +458,7 @@ def openrefine_creators():
     elif request.method == 'POST':
         if request.form:
             for key in request.form:
-                messages = [f"Operation sucessful. Operation name was '{key.replace('_',' ')}'."]
+                messages = [f"Operation successful. Operation name was '{key.replace('_',' ')}'."]
                 msgcolor = "background:limegreen"
                 if key == "export_unreconciled_creators":
                     messages = zotwb_functions.export_creators(folder=f"profiles/{profile}/data/creators_unreconciled/")
@@ -817,7 +817,7 @@ def get_grobid():
     for file in os.listdir('/media/david/FATdisk/GROBID'):
         print(file)
         if str(file).endswith('.tei.xml'):
-            doc_qids.append(re.search('Q\d+', file).group(0))
+            doc_qids.append(re.search(r'Q\d+', file).group(0))
     if request.form:
         if request.form.get("get_grobid") == "action":
             for doc_qid in doc_qids:
