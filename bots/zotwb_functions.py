@@ -791,9 +791,9 @@ def wikibase_upload(data=[], onlynew=False):
         ## title to labels
         if 'title' in item['data']:
             labels = []
-            # for lang in config['mapping']['wikibase_label_languages']:
-                # labels.append({'lang': lang, 'value': item['data']['title']})
-            labels.append({'lang': wikilang, 'value': item['data']['title']})
+            for lang in config['mapping']['wikibase_label_languages']:
+                labels.append({'lang': lang, 'value': item['data']['title']})
+            # labels.append({'lang': wikilang, 'value': item['data']['title']})
             if wikilang != "en":
                 labels.append({'lang': 'en', 'value': item['data']['title']})
 
@@ -968,6 +968,16 @@ def wikibase_upload(data=[], onlynew=False):
                         }
                         statements.append(stat)
                         print(stat)
+                        # only if dialnet prop in config (ingumazit)
+                        if config['mapping']['prop_dialnet']['wikibase'] and "https://dialnet.unirioja.es" in item['data'][fieldname]:
+                            stat = {
+                                'prop_nr': config['mapping']['prop_dialnet']['wikibase'],
+                                'type': 'ExternalID',
+                                'value': item['data'][fieldname].strip().replace("https://dialnet.unirioja.es/servlet/",""),
+                                'action': 'replace'
+                            }
+                            statements.append(stat)
+
                 # elif dtype == "WikibaseItem": # this will produce an 'unknown value' statement with 'source literal' qualifier
                 #     statements.append({
                 #         'prop_nr': zoteromapping['mapping'][itemtype]['fields'][fieldname]['wbprop'],
