@@ -1,0 +1,425 @@
+{
+  "filename": "properties.json",
+  "comment": "mapping keys are wikibase properties",
+  "mapping": {
+    "P1": {
+      "enlabel": "wikidata entity",
+      "type": "ExternalId",
+      "wdprop": null,
+      "formatter_url": "http://www.wikidata.org/entity/$1"
+    },
+    "P2": {
+      "enlabel": "formatter url",
+      "type": "String",
+      "wdprop": null
+    },
+    "P3": {
+      "enlabel": "INGUMA author ID",
+      "type": "ExternalId",
+      "wdprop": null,
+      "formatter_url": "https://www.inguma.eus/egilea/ikusi/$1"
+    },
+    "P4": {
+      "enlabel": "subclass of",
+      "type": "WikibaseItem",
+      "wdprop": "P279"
+    },
+    "P5": {
+      "enlabel": "instance of",
+      "type": "WikibaseItem",
+      "wdprop": "P31"
+    },
+    "P6": {
+      "enlabel": "given name",
+      "type": "String",
+      "wdprop": null
+    },
+    "P7": {
+      "enlabel": "family name",
+      "type": "String",
+      "wdprop": null
+    },
+    "P8": {
+      "enlabel": "first family name",
+      "type": "String",
+      "wdprop": null
+    },
+    "P9": {
+      "enlabel": "second family name",
+      "type": "String",
+      "wdprop": null
+    },
+    "P10": {
+      "enlabel": "publication title",
+      "type": "Monolingualtext",
+      "wdprop": "P1476"
+    },
+    "P11": {
+      "enlabel": "INGUMA organization ID",
+      "type": "ExternalId",
+      "wdprop": null,
+      "formatter_url": "https://www.inguma.eus/erakundea/ikusi/$1"
+    },
+    "P12": {
+      "enlabel": "INGUMA publication ID",
+      "type": "ExternalId",
+      "wdprop": null,
+      "formatter_url": "https://www.inguma.eus/produkzioa/ikusi/$1"
+    },
+    "P15": {
+      "enlabel": "location",
+      "type": "WikibaseItem",
+      "wdprop": "P291"
+    },
+    "P16": {
+      "enlabel": "publication language",
+      "type": "WikibaseItem",
+      "wdprop": "P407"
+    },
+    "P17": {
+      "enlabel": "author",
+      "type": "WikibaseItem",
+      "wdprop": "P50"
+    },
+    "P18": {
+      "enlabel": "editor",
+      "type": "WikibaseItem",
+      "wdprop": "P98"
+    },
+    "P19": {
+      "enlabel": "publication date",
+      "type": "Time",
+      "wdprop": "P577"
+    },
+    "P20": {
+      "enlabel": "DOI",
+      "type": "ExternalId",
+      "wdprop": "P356",
+      "formatter_url": "http://doi.org/$1"
+    },
+    "P21": {
+      "enlabel": "ISBN-13",
+      "type": "ExternalId",
+      "wdprop": "P212"
+    },
+    "P22": {
+      "enlabel": "ISBN-10",
+      "type": "ExternalId",
+      "wdprop": "P957"
+    },
+    "P23": {
+      "enlabel": "ISSN",
+      "type": "ExternalId",
+      "wdprop": "P236"
+    },
+    "P24": {
+      "enlabel": "distribution location",
+      "type": "Url",
+      "wdprop": "P953"
+    },
+    "P25": {
+      "enlabel": "issue",
+      "type": "String",
+      "wdprop": "P433"
+    },
+    "P26": {
+      "enlabel": "volume",
+      "type": "String",
+      "wdprop": "P478"
+    },
+    "P27": {
+      "enlabel": "start page",
+      "type": "String",
+      "wdprop": null
+    },
+    "P28": {
+      "enlabel": "end page",
+      "type": "String",
+      "wdprop": null
+    },
+    "P29": {
+      "enlabel": "is review of",
+      "type": "WikibaseItem",
+      "wdprop": "P6977"
+    },
+    "P30": {
+      "enlabel": "reviewed in",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P31": {
+      "enlabel": "subject",
+      "type": "WikibaseItem",
+      "wdprop": "P921"
+    },
+    "P32": {
+      "enlabel": "part of",
+      "type": "WikibaseItem",
+      "wdprop": "P361"
+    },
+    "P33": {
+      "enlabel": "part of conference series",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P34": {
+      "enlabel": "has part",
+      "type": "WikibaseItem",
+      "wdprop": "P527"
+    },
+    "P35": {
+      "enlabel": "ISO 639-3 code",
+      "type": "ExternalId",
+      "wdprop": "P220",
+      "formatter_url": "http://lexvo.org/id/iso639-3/$1"
+    },
+    "P36": {
+      "enlabel": "series ordinal",
+      "type": "String",
+      "wdprop": "P1545"
+    },
+    "P37": {
+      "enlabel": "publisher",
+      "type": "WikibaseItem",
+      "wdprop": "P123"
+    },
+    "P38": {
+      "enlabel": "event",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P39": {
+      "enlabel": "ORCID",
+      "type": "ExternalId",
+      "wdprop": "P496",
+      "formatter_url": "https://orcid.org/$1"
+    },
+    "P40": {
+      "enlabel": "wikimedia language code",
+      "type": "String",
+      "wdprop": "P424"
+    },
+    "P41": {
+      "enlabel": "official website",
+      "type": "Url",
+      "wdprop": "P856"
+    },
+    "P42": {
+      "enlabel": "published in",
+      "type": "WikibaseItem",
+      "wdprop": "P1433"
+    },
+    "P43": {
+      "enlabel": "VIAF ID",
+      "type": "ExternalId",
+      "wdprop": "P214",
+      "formatter_url": "https://viaf.org/viaf/$1/"
+    },
+    "P44": {
+      "enlabel": "date of birth",
+      "type": "Time",
+      "wdprop": "P569"
+    },
+    "P45": {
+      "enlabel": "date of death",
+      "type": "Time",
+      "wdprop": "P570"
+    },
+    "P46": {
+      "enlabel": "OCLC",
+      "type": "ExternalId",
+      "wdprop": "P243",
+      "formatter_url": "http://worldcat.org/oclc/$1"
+    },
+    "P47": {
+      "enlabel": "edition number",
+      "type": "String",
+      "wdprop": "P393"
+    },
+    "P48": {
+      "enlabel": "download location",
+      "type": "Url",
+      "wdprop": "P953"
+    },
+    "P49": {
+      "enlabel": "Inguma API ID",
+      "type": "String",
+      "wdprop": null
+    },
+    "P50": {
+      "enlabel": "gender",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P51": {
+      "enlabel": "UDC gloss",
+      "type": "String",
+      "wdprop": null
+    },
+    "P52": {
+      "enlabel": "reserved (ext)",
+      "type": "ExternalId",
+      "wdprop": "P1190"
+    },
+    "P53": {
+      "enlabel": "UDC",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P54": {
+      "enlabel": "container title",
+      "type": "String",
+      "wdprop": null
+    },
+    "P55": {
+      "enlabel": "P55",
+      "type": "String",
+      "wdprop": null
+    },
+    "P56": {
+      "enlabel": "P56",
+      "type": "String",
+      "wdprop": null
+    },
+    "P57": {
+      "enlabel": "coordinate location",
+      "type": "GlobeCoordinate",
+      "wdprop": "P625"
+    },
+    "P58": {
+      "enlabel": "P58",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P59": {
+      "enlabel": "P59",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P60": {
+      "enlabel": "P60",
+      "type": "String",
+      "wdprop": null
+    },
+    "P61": {
+      "enlabel": "employer or affiliation",
+      "type": "WikibaseItem",
+      "wdprop": "P108"
+    },
+    "P62": {
+      "enlabel": "cites",
+      "type": "WikibaseItem",
+      "wdprop": "P2860"
+    },
+    "P63": {
+      "enlabel": "P63",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P64": {
+      "enlabel": "IkerGazte Zotero item",
+      "type": "ExternalId",
+      "wdprop": null,
+      "formatter_url": "https://www.zotero.org/groups/4916343/items/$1"
+    },
+    "P65": {
+      "enlabel": "P65",
+      "type": "ExternalId",
+      "wdprop": null,
+      "formatter_url": "https://www.zotero.org/groups/4916343/ikergazte_kongresua/items/$1/item-details"
+    },
+    "P66": {
+      "enlabel": "P66",
+      "type": "ExternalId",
+      "wdprop": null,
+      "formatter_url": "https://openalex.org/$1"
+    },
+    "P67": {
+      "enlabel": "P67",
+      "type": "String",
+      "wdprop": null
+    },
+    "P68": {
+      "enlabel": "P68",
+      "type": "ExternalId",
+      "wdprop": null,
+      "formatter_url": "https://wikibase.inguma.eus/wiki/Grobid:$1"
+    },
+    "P69": {
+      "enlabel": "P69",
+      "type": "ExternalId",
+      "wdprop": "P675",
+      "formatter_url": "https://books.google.com/books?id=$1"
+    },
+    "P70": {
+      "enlabel": "P70",
+      "type": "String",
+      "wdprop": null
+    },
+    "P71": {
+      "enlabel": "P71",
+      "type": "ExternalId",
+      "wdprop": null
+    },
+    "P72": {
+      "enlabel": "P72",
+      "type": "ExternalId",
+      "wdprop": null
+    },
+    "P73": {
+      "enlabel": "Referenced Wikidata Entity",
+      "type": "ExternalId",
+      "wdprop": null
+    },
+    "P74": {
+      "enlabel": "formatter URI for RDF resource",
+      "type": "String",
+      "wdprop": "P1921"
+    },
+    "P75": {
+      "enlabel": "source literal",
+      "type": "String",
+      "wdprop": null
+    },
+    "P76": {
+      "enlabel": "given name source literal",
+      "type": "String",
+      "wdprop": null
+    },
+    "P77": {
+      "enlabel": "family name source literal",
+      "type": "String",
+      "wdprop": null
+    },
+    "P78": {
+      "enlabel": "Wikipedia page URL",
+      "type": "Url",
+      "wdprop": null
+    },
+    "P79": {
+      "enlabel": "Conference Name",
+      "type": "String",
+      "wdprop": null
+    },
+    "P80": {
+      "enlabel": "page(s)",
+      "type": "String",
+      "wdprop": "P304"
+    },
+    "P83": {
+      "enlabel": "Place",
+      "type": "String",
+      "wdprop": null
+    },
+    "P84": {
+      "enlabel": "University",
+      "type": "String",
+      "wdprop": null
+    },
+    "P87": {
+      "enlabel": "reference date",
+      "type": "Time",
+      "wdprop": null
+    }
+  }
+}

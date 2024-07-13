@@ -1,0 +1,93 @@
+[
+  {
+    "key": "NSBXCRAY",
+    "version": 477,
+    "library": {
+      "type": "group",
+      "id": 5597887,
+      "name": "ziterauzi",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/ziterauzi",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5597887/items/NSBXCRAY",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/ziterauzi/items/NSBXCRAY",
+        "type": "text/html"
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Mitxelena",
+      "parsedDate": "1984",
+      "numChildren": 0
+    },
+    "data": {
+      "key": "NSBXCRAY",
+      "version": 477,
+      "itemType": "bookSection",
+      "title": "Palabras para la presente edici\u00f3n",
+      "creators": [
+        {
+          "creatorType": "bookAuthor",
+          "firstName": "Julien",
+          "lastName": "Vinson"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Koldo",
+          "lastName": "Mitxelena"
+        }
+      ],
+      "abstractNote": "",
+      "bookTitle": "Essai d'une bibliographie de la langue basque",
+      "series": "",
+      "seriesNumber": "",
+      "volume": "",
+      "numberOfVolumes": "",
+      "edition": "",
+      "place": "San Sebasti\u00e1n",
+      "publisher": "Seminario de Filolog\u00eda \"Julio de Urquijo\"",
+      "date": "1984",
+      "pages": "",
+      "language": "fr",
+      "ISBN": "978-84-500-8578-5",
+      "shortTitle": "",
+      "url": "",
+      "accessDate": "",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "Open WorldCat",
+      "callNumber": "",
+      "rights": "",
+      "extra": "OCLC: 863192740\nhttps://wikibase.inguma.eus/entity/Q40383",
+      "tags": [
+        {
+          "tag": "on-wikibase"
+        }
+      ],
+      "collections": [],
+      "relations": {},
+      "dateAdded": "2024-07-13T14:46:08Z",
+      "dateModified": "2024-07-13T14:52:26Z"
+    },
+    "wikibase_entity": "Q40383"
+  }
+]
