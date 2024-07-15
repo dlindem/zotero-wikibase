@@ -449,7 +449,7 @@ def openrefine_creators():
         recon_unrecon = str(len(recon_df.loc[~recon_df.index.isin(recon_df.dropna(subset=['Wikibase_Qid', 'Wikidata_Qid']).index)]))
     elif "Wikidata_Qid" in recon_df.columns:
         recon_unrecon = str(len(recon_df)-int(recon_wd))
-    elif "Wikidata_Qid" not in recon_df.columns and "Wikibase_Qid" in recon_df.columns:
+    elif "Wikidata_Qid" not in recon_df.columns and "Wikibase_Qid" not in recon_df.columns:
         print('ERROR: CSV contains no columns named "Wikidata_Qid" or "Wikibase_Qid.')
 
     if request.method == 'GET':
@@ -493,6 +493,46 @@ def openrefine_creators():
         return render_template("openrefine_creators.html", wikibase_name=configdata['mapping']['wikibase_name'],
                                messages=messages, msgcolor=msgcolor, profile=profile,
                                recon_all =recon_all, recon_unrecon=recon_unrecon, recon_wd = recon_wd, recon_wb = recon_wb, filename = get_recon['filename'])
+
+
+@app.route('/wb_recon', methods= ['GET', 'POST'])
+def wb_recon():
+    configdata = botconfig.load_mapping('config')
+    get_recon = zotwb_functions.get_recon_pd(folder=f"profiles/{profile}/data/creators_reconciled/")
+    recon_df = get_recon['data']
+    if "Wikibase_Qid" not in recon_df.columns:
+        recon_df["Wikibase_Qid"] = None
+    print(recon_df)
+    for rowindex, row in recon_df.dropna(subset=['Wikibase_search']).iterrows():
+
+        resultjson = json.loads(row["Wikibase_search"])
+        if len(resultjson['query']['wbsearch']) > 0:
+            resultjson['query']['wbsearch'][0]['checked'] = "checked"
+        print(f"Row {rowindex}, search result: {row["Wikibase_search"]}")
+        recon_df.at[rowindex, "Wikibase_search"] = resultjson
+
+
+
+    messages = {}
+    msgcolor = "background:limegreen"
+
+    if request.form:
+        recon_count = 0
+        for key in request.form:
+            rowindex_re = re.search(r'^[0-9]+', key)
+            if rowindex_re:
+                rowindex = int(rowindex_re.group(0))
+                value = request.form.get(key)
+                print(f"key: {key}, value: {value}")
+                if value.startswith("Q"):
+                    recon_df.at[rowindex, "Wikibase_Qid"] = value
+                    recon_count += 1
+        recon_df.to_csv(get_recon['filename'])
+        messages = [f"Saved selection for {recon_count} items."]
+
+    return render_template("wb_recon.html", wikibase_name=configdata['mapping']['wikibase_name'],
+                           wikibase_entity_ns = configdata['mapping']['wikibase_entity_ns'],
+                           messages=messages, msgcolor=msgcolor, creatordata = recon_df.dropna(subset=['Wikibase_search']))
 
 
 source_prop = None

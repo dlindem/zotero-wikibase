@@ -1090,27 +1090,57 @@ def get_recon_pd(folder=""):
     return {'data':pandas.read_csv(infile),'filename':infile}
 
 def search_creators(data=None, infile=None):
-    data.loc[:, "Wikibase_search"] = []
+    data["Wikibase_search"] = None
+    print(data)
+    count = 0
+    seen_names = {}
     for rowindex, row in data.iterrows():
+        print(rowindex)
+        if pandas.isnull(row['lastName']):
+            searchname = row['fullName']
+        else:
+            searchname = row['lastName'].split(" ")[0]
+        if "Wikidata_Qid" in row:
+            if not pandas.isnull(row['Wikidata_Qid']):
+                print(f"{searchname} is aligned to wd:{row['Wikidata_Qid']}")
+                continue
+        if "Wikibase_Qid" in row:
+            if not pandas.isnull(row['Wikibase_Qid']):
+                print(f"{searchname} is aligned to wb:{row['Wikibase_Qid']}")
+                continue
 
-        if "Wikibase_Qid" in row or "Wikidata_Qid" in row:
-            continue
-        lastName = row['lastName']
-        # {
-        #     "action": "query",
-        #     "format": "json",
-        #     "prop": "",
-        #     "list": "wbsearch",
-        #     "wbssearch": lastName,
-        #     "wbstype": "item",
-        #     "wbslimit": "500",
-        #     "wbsprofile": "default"
-        # }
-        result = requests.get(f'https://eneoli.wikibase.cloud/wiki/Special:ApiSandbox#action=query&format=json&prop=&list=wbsearch&wbssearch={lastName}&wbstype=item&wbslimit=500&wbsprofile=default')
-        data[rowindex]['Wikibase_search'] = result.json()
-        time.sleep(0.2)
+        if searchname in seen_names:
+            resultjson = json.dumps(seen_names[searchname])
+            data.at[rowindex, "Wikibase_search"] = resultjson
+            print(f"{searchname} has been searched for before in this run.")
+            count += 1
+        else:
+            print(f"Will search for {searchname}...")
+            params = {
+                "action": "query",
+                "format": "json",
+                "prop": "",
+                "list": "wbsearch",
+                "wbssearch": searchname,
+                "wbstype": "item",
+                "wbslimit": "50",
+                "wbsprofile": "default"
+            }
+
+            result = requests.get('https://eneoli.wikibase.cloud/w/api.php', params=params)
+            # data[rowindex]['Wikibase_search'] = result
+            print(f"Search result: {result.json()}")
+            seen_names[searchname] = result.json()
+            data.at[rowindex, "Wikibase_search"] = json.dumps(result.json())
+
+            count += 1
+            time.sleep(0.2)
+            print(f"Finished searching for'{searchname}'. Returning result.")
 
     data.to_csv(infile, index=False)
+    with open('seen_names.json', 'w') as jsonfile:
+        json.dump(seen_names, jsonfile, indent=2)
+    return [f"Searched for {count} last names ({len(seen_names)} different last names) in {len(data)} csv lines."]
 
 
 def import_creators(data=None, infile=None, wikidata=False, wikibase=False, unrecon=False):
