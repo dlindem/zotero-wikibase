@@ -701,7 +701,7 @@ def wikibase_upload(data=[], onlynew=False):
                 if child['data']['contentType'] == "" and child['data']['url'].startswith(config['mapping']['wikibase_entity_ns']):
                     qid = child['data']['url'].replace(config['mapping']['wikibase_entity_ns'], "")
                     print('Found link attachment: This item is linked to ' + config['mapping']['wikibase_entity_ns'] + qid)
-                if child['data']['contentType'] == "":
+                elif child['data']['contentType'] == "":
                     # print('Found link attachment: This item is linked to ' + child['data']['url'])
                     url_re = re.search(r'(https?://[^/]+)/entity/(Q\d+)', child['data']['url'])
                     if url_re:
@@ -950,15 +950,17 @@ def wikibase_upload(data=[], onlynew=False):
             if zoteromapping['mapping'][itemtype]['fields'][fieldname]['wbprop']:
                 dtype = zoteromapping['mapping']['all_types']['fields'][fieldname]['dtype']
                 wbprop = zoteromapping['mapping'][itemtype]['fields'][fieldname]['wbprop']
+                print(f"Reading Zotero field '{fieldname}' mapped to {wbprop} ({dtype}): '{item['data'][fieldname].strip()}'")
                 string_like_datatypes = ['ExternalId', "String", "URL"]
                 skip = False
                 if dtype in string_like_datatypes: # this will just use the Zotero literal as value
                     if qid and existing_item:
                         if wbprop in existing_item.claims:
                             for claim in existing_item.claims.get(wbprop):
-                                print(f"Found existing value for {wbprop}: {claim.mainsnak.datavalue['value']}")
+                                print(f"  >>Found existing value for {wbprop}: {claim.mainsnak.datavalue['value']}")
                                 if claim.mainsnak.datavalue['value'] == item['data'][fieldname].strip(): # same literal already on wikibase, skip writing this (in order to preserve any qualifiers of the existing statement)
                                     skip = True
+                                    print("  >>This statement will be skipped, no writing operation.")
                     if not skip:
                         stat= {
                             'prop_nr': wbprop,
@@ -967,7 +969,7 @@ def wikibase_upload(data=[], onlynew=False):
                             'action': 'replace'
                         }
                         statements.append(stat)
-                        print(stat)
+                        print(f"  >>Will write: {stat}")
                         # only if dialnet prop in config (ingumazit)
                         if config['mapping']['prop_dialnet']['wikibase'] and "https://dialnet.unirioja.es" in item['data'][fieldname]:
                             stat = {
@@ -977,6 +979,7 @@ def wikibase_upload(data=[], onlynew=False):
                                 'action': 'replace'
                             }
                             statements.append(stat)
+                            print(f"  >>Will write dialnet id: {stat}")
 
                 # elif dtype == "WikibaseItem": # this will produce an 'unknown value' statement with 'source literal' qualifier
                 #     statements.append({
