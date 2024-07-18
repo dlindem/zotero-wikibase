@@ -1,7 +1,7 @@
 [
   {
-    "key": "NSBXCRAY",
-    "version": 477,
+    "key": "IMQNPFFN",
+    "version": 536,
     "library": {
       "type": "group",
       "id": 5597887,
@@ -15,11 +15,11 @@
     },
     "links": {
       "self": {
-        "href": "https://api.zotero.org/groups/5597887/items/NSBXCRAY",
+        "href": "https://api.zotero.org/groups/5597887/items/IMQNPFFN",
         "type": "application/json"
       },
       "alternate": {
-        "href": "https://www.zotero.org/groups/ziterauzi/items/NSBXCRAY",
+        "href": "https://www.zotero.org/groups/ziterauzi/items/IMQNPFFN",
         "type": "text/html"
       }
     },
@@ -35,40 +35,34 @@
           }
         }
       },
-      "creatorSummary": "Mitxelena",
-      "parsedDate": "1984",
+      "creatorSummary": "Michelena",
+      "parsedDate": "1963",
       "numChildren": 0
     },
     "data": {
-      "key": "NSBXCRAY",
-      "version": 477,
-      "itemType": "bookSection",
-      "title": "Palabras para la presente edici\u00f3n",
+      "key": "IMQNPFFN",
+      "version": 536,
+      "itemType": "book",
+      "title": "Lenguas y protolenguas",
       "creators": [
         {
-          "creatorType": "bookAuthor",
-          "firstName": "Julien",
-          "lastName": "Vinson"
-        },
-        {
           "creatorType": "author",
-          "firstName": "Koldo",
-          "lastName": "Mitxelena"
+          "firstName": "Luis",
+          "lastName": "Michelena"
         }
       ],
       "abstractNote": "",
-      "bookTitle": "Essai d'une bibliographie de la langue basque",
-      "series": "",
+      "series": "Acta Salmanticensia",
       "seriesNumber": "",
       "volume": "",
       "numberOfVolumes": "",
       "edition": "",
-      "place": "San Sebasti\u00e1n",
-      "publisher": "Seminario de Filolog\u00eda \"Julio de Urquijo\"",
-      "date": "1984",
-      "pages": "",
-      "language": "fr",
-      "ISBN": "978-84-500-8578-5",
+      "place": "",
+      "publisher": "",
+      "date": "1963",
+      "numPages": "84",
+      "language": "und",
+      "ISBN": "",
       "shortTitle": "",
       "url": "",
       "accessDate": "",
@@ -77,7 +71,7 @@
       "libraryCatalog": "Open WorldCat",
       "callNumber": "",
       "rights": "",
-      "extra": "OCLC: 863192740\nhttps://wikibase.inguma.eus/entity/Q40383",
+      "extra": "https://wikibase.inguma.eus/entity/Q40533\nOCLC: 251113745",
       "tags": [
         {
           "tag": "on-wikibase"
@@ -85,9 +79,9 @@
       ],
       "collections": [],
       "relations": {},
-      "dateAdded": "2024-07-13T14:46:08Z",
-      "dateModified": "2024-07-13T14:52:26Z"
+      "dateAdded": "2024-07-16T21:34:05Z",
+      "dateModified": "2024-07-16T21:34:43Z"
     },
-    "wikibase_entity": "Q40383"
+    "wikibase_entity": "Q40533"
   }
 ]

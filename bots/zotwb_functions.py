@@ -669,6 +669,7 @@ def wikibase_upload(data=[], onlynew=False):
     returndata = []
     for item in data:
         count += 1
+        print(item)
         print(f"\n[{str(count)}] Now processing item '{item['links']['alternate']['href']}'...")
         qid = item['wikibase_entity'] # is False if zotero getexport function has not found an item URI in this wb entity namespace in 'extra'
         # instance of and bibItem type
