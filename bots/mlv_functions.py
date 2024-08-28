@@ -125,7 +125,7 @@ def split_token(token_qid=None, split_position=None):
     right_token_forma = token_forma[split_position:]
     right_next_token = left_token.claims.get('P150')[0].mainsnak.datavalue['value']['id']
     left_token_zbk = left_token.claims.get('P148')[0].mainsnak.datavalue['value']
-    right_token_zbk = str(int(left_token_zbk + 0.1))
+    right_token_zbk = str(int(left_token_zbk) + 0.1)
     right_token_desc = re.sub(left_token_zbk,right_token_zbk,left_token_desc)
 
     right_token_itemdata = {'qid': False, 'labels':[{'lang':'eu', 'value':right_token_forma}],
