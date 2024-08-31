@@ -508,7 +508,7 @@ def wb_recon():
         resultjson = json.loads(row["Wikibase_search"])
         if len(resultjson['query']['wbsearch']) > 0:
             resultjson['query']['wbsearch'][0]['checked'] = "checked"
-        print(f"Row {rowindex}, search result: {row["Wikibase_search"]}")
+        print(f'Row {rowindex}, search result: {row["Wikibase_search"]}')
         recon_df.at[rowindex, "Wikibase_search"] = resultjson
 
 
