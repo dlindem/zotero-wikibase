@@ -465,7 +465,7 @@ def batchedit_literal(fieldname="", literal=None, exact_length=None, replace_val
         if fieldname in item['data']:
             if item['data'][fieldname].strip() == literal or literal == None:
                 item['data'][fieldname] = replace_value
-                print(f"Updated content in '{fieldname}' from '{literal}' to '{replace_value} in item {item['key']}.")
+                print(f"Updated content in '{fieldname}' to '{replace_value}' in item {item['key']}.")
                 messages.append(zoterobot.zotero_update_item(item))
 
 
@@ -654,7 +654,7 @@ def get_creators(qid=None):
 
 def wikibase_upload(data=[], onlynew=False):
     # iterate through zotero records and do wikibase upload
-    clear_command = True
+    clear_command = False # this clears the item's statements
     config = botconfig.load_mapping('config')
     iso3mapping = botconfig.load_mapping('iso-639-3')
     iso1mapping = botconfig.load_mapping('iso-639-1')
@@ -732,13 +732,14 @@ def wikibase_upload(data=[], onlynew=False):
 
         ## archiveLocation (special for items stemming from LexBib) TODO - delete for generic tool
         if 'archiveLocation' in item['data']:
-            if item['data']['archiveLocation'].startswith('https://lexbib.elex.is/entity/'):
-                statements.append({'type': 'externalid', 'prop_nr': 'P10',
-                                   'value': item['data']['archiveLocation'].replace("https://lexbib.elex.is/entity/", "")})
-            if item['data']['archiveLocation'].startswith('http://lexbib.elex.is/entity/'):
-                statements.append({'type': 'externalid', 'prop_nr': 'P10',
-                                   'value': item['data']['archiveLocation'].replace("http://lexbib.elex.is/entity/", "")})
-            item['data']['archiveLocation'] = ""
+            oocc = item['data']['archiveLocation']
+        #     if item['data']['archiveLocation'].startswith('https://lexbib.elex.is/entity/'):
+        #         statements.append({'type': 'externalid', 'prop_nr': 'P10',
+        #                            'value': item['data']['archiveLocation'].replace("https://lexbib.elex.is/entity/", "")})
+        #     if item['data']['archiveLocation'].startswith('http://lexbib.elex.is/entity/'):
+        #         statements.append({'type': 'externalid', 'prop_nr': 'P10',
+        #                            'value': item['data']['archiveLocation'].replace("http://lexbib.elex.is/entity/", "")})
+            # item['data']['archiveLocation'] = ""
 
         ## language
         if 'language' in item['data']:
@@ -885,7 +886,9 @@ def wikibase_upload(data=[], onlynew=False):
                 if tag["tag"].startswith(':type '):
                     type = tag["tag"].replace(":type ", "")
                     if type == "DictionaryDistribution":
-                        statements.append({"prop_nr": "P5", "type": "item", "value": "Q12"})  # LCR distribution
+                        statement
+                    if type == "Review":
+                        statements.append({"prop_nr": "P5", "type": "item", "value": "Q22"})  # in inguma, review
 
         # creators
         if not clear_command:
@@ -1016,10 +1019,11 @@ def wikibase_upload(data=[], onlynew=False):
         # add description
         descriptions = []
         # for lang in config['mapping']['wikibase_label_languages']:
-        for lang in ['en']:
+        for lang in ['en', 'eu']:
             if 'creatorSummary' in item['meta']:
                 creatorsummary = item['meta']['creatorSummary'].replace(" and "," & ")
-                descriptions.append({'lang': lang, 'value': f"Publication by {creatorsummary} ({pubyear})"})
+                # descriptions.append({'lang': lang, 'value': f"Publication by {creatorsummary} ({pubyear})"})
+                descriptions.append({'lang': lang, 'value': f"Mitxelena {oocc}"})
 
         itemdata = {'qid': qid, 'statements': statements, 'descriptions': descriptions, 'labels': labels}
         # # debug output
@@ -1180,7 +1184,7 @@ def import_creators(data=None, infile=None, wikidata=False, wikibase=False, unre
 
 
     wikidatacreators = {}
-
+    seen_variants = []
     for rowindex, row in df.iterrows():
         newitem = False
         creatorwdqid = None
@@ -1220,7 +1224,7 @@ def import_creators(data=None, infile=None, wikidata=False, wikibase=False, unre
             else:
                 creatorqid = wikidatacreators[creatorwdqid]
                 print(
-                    f"A person for {row['fullName']}, Wikidata {creatorwdqid} has been created in this run of the script: {creatorqid}")
+                    f"A person for {row['fullName']}, Wikidata {creatorwdqid} has been found on Wikibase or created new in this run of the script: {creatorqid}")
 
         else:
             print('This row contains no Wikidata and no Wikibase Qid.')
@@ -1285,9 +1289,10 @@ def import_creators(data=None, infile=None, wikidata=False, wikibase=False, unre
                 if isinstance(row['givenName'], str) and isinstance(row['lastName'], str):
                     name_variants.append(row['lastName'] + ', ' + row['givenName'])
                 for name_variant in name_variants:
-                    if name_variant != existing_preflabel and name_variant not in existing_aliases:
+                    if name_variant != existing_preflabel and name_variant not in existing_aliases and name_variant not in seen_variants:
                         print(language + ': This is a new name variant for ' + creatorqid + ': ' + name_variant)
                         creatoritem.aliases.set(language, name_variant)
+                        seen_variants.append(name_variant)
                         itemchange = True
             if itemchange:
                 creatoritem.write()

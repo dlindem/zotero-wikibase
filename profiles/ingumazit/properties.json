@@ -420,6 +420,11 @@
       "enlabel": "reference date",
       "type": "Time",
       "wdprop": null
+    },
+    "P89": {
+      "enlabel": "Loc. in Archive",
+      "type": "String",
+      "wdprop": null
     }
   }
 }
