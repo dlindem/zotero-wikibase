@@ -100,7 +100,7 @@
       "comment": "A datatype String property, used as qualifier, e.g. in creator statements."
     },
     "prop_reference_date": {
-      "wikibase": "P56",
+      "wikibase": null,
       "type": "Time",
       "wikidata": "P813",
       "name": "reference access date",
@@ -121,14 +121,14 @@
       "comment": "A datatype String property, used as qualifier in creator statements."
     },
     "prop_pref_given_name": {
-      "wikibase": "P51",
+      "wikibase": null,
       "type": "String",
       "wikidata": null,
       "name": "preferred given name",
       "comment": "A datatype String property, used as property on items describing creators."
     },
     "prop_pref_family_name": {
-      "wikibase": "P52",
+      "wikibase": null,
       "type": "String",
       "wikidata": null,
       "name": "preferred family or last name",
