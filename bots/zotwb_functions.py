@@ -624,6 +624,7 @@ def link_chapters():
         count += 1
         statements = [{'prop_nr':config['mapping']['prop_published_in']['wikibase'], 'type':'Item', 'value':item['container']['value'].replace(config['mapping']['wikibase_entity_ns'],''), 'action':'replace'}]
         uploadqid = str(xwbi.itemwrite({'qid': item['chapter']['value'].replace(config['mapping']['wikibase_entity_ns'],''), 'statements': statements}))
+        time.sleep(0.2)
         checkurl = f"{config['mapping']['wikibase_url']}/wiki/Item:{uploadqid}#{config['mapping']['prop_published_in']['wikibase']}"
         message = f"Success [{str(count)}]: <a href=\"{checkurl}\" target=\"_blank\">{checkurl}</a>."
         print(message)
@@ -672,6 +673,7 @@ def wikibase_upload(data=[], onlynew=False):
         print(item)
         print(f"\n[{str(count)}] Now processing item '{item['links']['alternate']['href']}'...")
         qid = item['wikibase_entity'] # is False if zotero getexport function has not found an item URI in this wb entity namespace in 'extra'
+        existing_item = None
         # instance of and bibItem type
         itemtype = item['data']['itemType']
         wikilang = "en"  # language for labels and monolingualtext fields: fall back to "en" if not specified in ## language
@@ -731,8 +733,8 @@ def wikibase_upload(data=[], onlynew=False):
                            'qualifiers': attqualis, 'references':references, 'action':'replace'})
 
         ## archiveLocation (special for items stemming from LexBib) TODO - delete for generic tool
-        if 'archiveLocation' in item['data']:
-            oocc = item['data']['archiveLocation']
+       # if 'archiveLocation' in item['data']:
+         #   oocc = item['data']['archiveLocation']
         #     if item['data']['archiveLocation'].startswith('https://lexbib.elex.is/entity/'):
         #         statements.append({'type': 'externalid', 'prop_nr': 'P10',
         #                            'value': item['data']['archiveLocation'].replace("https://lexbib.elex.is/entity/", "")})
@@ -889,6 +891,9 @@ def wikibase_upload(data=[], onlynew=False):
                         statement
                     if type == "Review":
                         statements.append({"prop_nr": "P5", "type": "item", "value": "Q22"})  # in inguma, review
+                if tag["tag"].startswith(':oocc '):
+                    oocc = tag["tag"].replace(":oocc ", "")
+                    statements.append({"prop_nr": "P88", "type": "item", "value": oocc})
 
         # creators
         if not clear_command:
@@ -975,15 +980,16 @@ def wikibase_upload(data=[], onlynew=False):
                         statements.append(stat)
                         print(f"  >>Will write: {stat}")
                         # only if dialnet prop in config (ingumazit)
-                        if config['mapping']['prop_dialnet']['wikibase'] and "https://dialnet.unirioja.es" in item['data'][fieldname]:
-                            stat = {
-                                'prop_nr': config['mapping']['prop_dialnet']['wikibase'],
-                                'type': 'ExternalID',
-                                'value': item['data'][fieldname].strip().replace("https://dialnet.unirioja.es/servlet/",""),
-                                'action': 'replace'
-                            }
-                            statements.append(stat)
-                            print(f"  >>Will write dialnet id: {stat}")
+                        if 'prop_dialnet' in config['mapping']:
+                            if config['mapping']['prop_dialnet']['wikibase'] and "https://dialnet.unirioja.es" in item['data'][fieldname]:
+                                stat = {
+                                    'prop_nr': config['mapping']['prop_dialnet']['wikibase'],
+                                    'type': 'ExternalID',
+                                    'value': item['data'][fieldname].strip().replace("https://dialnet.unirioja.es/servlet/",""),
+                                    'action': 'replace'
+                                }
+                                statements.append(stat)
+                                print(f"  >>Will write dialnet id: {stat}")
 
                 # elif dtype == "WikibaseItem": # this will produce an 'unknown value' statement with 'source literal' qualifier
                 #     statements.append({
@@ -1019,11 +1025,12 @@ def wikibase_upload(data=[], onlynew=False):
         # add description
         descriptions = []
         # for lang in config['mapping']['wikibase_label_languages']:
-        for lang in ['en', 'eu']:
-            if 'creatorSummary' in item['meta']:
-                creatorsummary = item['meta']['creatorSummary'].replace(" and "," & ")
-                # descriptions.append({'lang': lang, 'value': f"Publication by {creatorsummary} ({pubyear})"})
-                descriptions.append({'lang': lang, 'value': f"Mitxelena {oocc}"})
+        if not existing_item: # prevents overwriting existing descriptions
+            for lang in ['en']:
+                if 'creatorSummary' in item['meta']:
+                    creatorsummary = item['meta']['creatorSummary'].replace(" and "," & ")
+                    descriptions.append({'lang': lang, 'value': f"Publication by {creatorsummary} ({pubyear})"})
+                    # descriptions.append({'lang': lang, 'value': f"Mitxelena {oocc}"})
 
         itemdata = {'qid': qid, 'statements': statements, 'descriptions': descriptions, 'labels': labels}
         # # debug output
