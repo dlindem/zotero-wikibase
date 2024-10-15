@@ -1,0 +1,131 @@
+{
+  "filename": "properties.json",
+  "comment": "mapping keys are wikibase properties",
+  "mapping": {
+    "P8": {
+      "enlabel": "bibliographical item type",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P10": {
+      "enlabel": "source literal",
+      "type": "String",
+      "wdprop": null
+    },
+    "P13": {
+      "enlabel": "given name source literal",
+      "type": "String",
+      "wdprop": null
+    },
+    "P14": {
+      "enlabel": "family name source literal",
+      "type": "String",
+      "wdprop": null
+    },
+    "P15": {
+      "enlabel": "preferred given name",
+      "type": "String",
+      "wdprop": null
+    },
+    "P16": {
+      "enlabel": "preferred family or last name",
+      "type": "String",
+      "wdprop": null
+    },
+    "P22": {
+      "enlabel": "Wikipedia page URL",
+      "type": "URL",
+      "wdprop": null
+    },
+    "P23": {
+      "enlabel": "Referenced Wikidata Entity",
+      "type": "ExternalId",
+      "wdprop": null
+    },
+    "P24": {
+      "enlabel": "Title",
+      "type": "Monolingualtext",
+      "wdprop": null
+    },
+    "P25": {
+      "enlabel": "ISSN",
+      "type": "ExternalId",
+      "wdprop": null
+    },
+    "P26": {
+      "enlabel": "Date",
+      "type": "Time",
+      "wdprop": null
+    },
+    "P27": {
+      "enlabel": "Issue",
+      "type": "String",
+      "wdprop": "P433"
+    },
+    "P28": {
+      "enlabel": "Volume",
+      "type": "String",
+      "wdprop": "P478"
+    },
+    "P29": {
+      "enlabel": "Author",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P30": {
+      "enlabel": "Editor",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P31": {
+      "enlabel": "Publisher",
+      "type": "String",
+      "wdprop": null
+    },
+    "P32": {
+      "enlabel": "Pages",
+      "type": "String",
+      "wdprop": "P304"
+    },
+    "P33": {
+      "enlabel": "URL",
+      "type": "URL",
+      "wdprop": "P953"
+    },
+    "P34": {
+      "enlabel": "Conference Name",
+      "type": "String",
+      "wdprop": null
+    },
+    "P35": {
+      "enlabel": "Publication",
+      "type": "String",
+      "wdprop": null
+    },
+    "P36": {
+      "enlabel": "Presenter",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P37": {
+      "enlabel": "Type",
+      "type": "String",
+      "wdprop": null
+    },
+    "P38": {
+      "enlabel": "Place",
+      "type": "String",
+      "wdprop": null
+    },
+    "P39": {
+      "enlabel": "Meeting Name",
+      "type": "String",
+      "wdprop": null
+    },
+    "P40": {
+      "enlabel": "Proceedings Title",
+      "type": "String",
+      "wdprop": null
+    }
+  }
+}

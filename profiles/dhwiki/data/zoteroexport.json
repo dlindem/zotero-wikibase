@@ -1,0 +1,471 @@
+[
+  {
+    "key": "7NE2Z22D",
+    "version": 330,
+    "library": {
+      "type": "group",
+      "id": 5639268,
+      "name": "DARIAH WG DHWiki",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/dariah_wg_dhwiki",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5639268/items/7NE2Z22D",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/dariah_wg_dhwiki/items/7NE2Z22D",
+        "type": "text/html"
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Terras",
+      "parsedDate": "2022",
+      "numChildren": 1
+    },
+    "data": {
+      "key": "7NE2Z22D",
+      "version": 330,
+      "itemType": "bookSection",
+      "title": "Digital Humanities and Digitized Cultural Heritage",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Melissa",
+          "lastName": "Terras"
+        },
+        {
+          "creatorType": "editor",
+          "firstName": "James",
+          "lastName": "O\u2019Sullivan"
+        }
+      ],
+      "abstractNote": "",
+      "bookTitle": "The Bloomsbury Handbook to the Digital Humanities",
+      "series": "",
+      "seriesNumber": "",
+      "volume": "",
+      "numberOfVolumes": "",
+      "edition": "",
+      "place": "",
+      "publisher": "Bloomsbury",
+      "date": "2022",
+      "pages": "255-266",
+      "language": "en",
+      "ISBN": "978-1-350-23214-3",
+      "shortTitle": "",
+      "url": "https://doi.org/10.5040/9781350232143.ch-24",
+      "accessDate": "",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "",
+      "callNumber": "",
+      "rights": "",
+      "extra": "https://dhwiki.wikibase.cloud/entity/Q219\nOCLC: 1409439087\nDOI: 10.5040/9781350232143.ch-24",
+      "tags": [
+        {
+          "tag": "on-wikibase"
+        }
+      ],
+      "collections": [],
+      "relations": {},
+      "dateAdded": "2024-08-28T09:57:01Z",
+      "dateModified": "2024-09-28T17:01:05Z"
+    },
+    "wikibase_entity": "Q219"
+  },
+  {
+    "key": "LE68YHAX",
+    "version": 330,
+    "library": {
+      "type": "group",
+      "id": 5639268,
+      "name": "DARIAH WG DHWiki",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/dariah_wg_dhwiki",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5639268/items/LE68YHAX",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/dariah_wg_dhwiki/items/LE68YHAX",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/5639268/items/PBK5HCR7",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 10660538
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 5243408,
+        "username": "olea",
+        "name": "Ismael Olea",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/olea",
+            "type": "text/html"
+          }
+        }
+      },
+      "lastModifiedByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "parsedDate": "2021-12-31",
+      "numChildren": 2
+    },
+    "data": {
+      "key": "LE68YHAX",
+      "version": 330,
+      "itemType": "report",
+      "title": "Recomendaciones para proyectos de digitalizaci\u00f3n de patrimonio bibliogr\u00e1fico y fotograf\u00eda hist\u00f3rica - Ministerio de Cultura y Deporte",
+      "creators": [],
+      "abstractNote": "A iniciativa de la Subdirecci\u00f3n General de Coordinaci\u00f3n Bibliotecaria, el Consejo de Cooperaci\u00f3n Bibliotecaria ha considerado conveniente crear un grupo de ...",
+      "reportNumber": "",
+      "reportType": "",
+      "seriesTitle": "",
+      "place": "",
+      "institution": "Ministerio de Cultura y Deporte",
+      "date": "31-12-2021",
+      "pages": "",
+      "language": "es",
+      "shortTitle": "",
+      "url": "https://www.libreria.cultura.gob.es/libro/recomendaciones-para-proyectos-de-digitalizacion-de-patrimonio-bibliografico-y-fotografia-historica_5465/edicion/ebook-5291/",
+      "accessDate": "2024-06-03T11:01:23Z",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "",
+      "callNumber": "",
+      "rights": "",
+      "extra": "https://dhwiki.wikibase.cloud/entity/Q261",
+      "tags": [
+        {
+          "tag": "on-wikibase"
+        }
+      ],
+      "collections": [],
+      "relations": {},
+      "dateAdded": "2024-08-28T10:47:31Z",
+      "dateModified": "2024-09-28T16:56:06Z"
+    },
+    "wikibase_entity": "Q261"
+  },
+  {
+    "key": "DQKANBU9",
+    "version": 330,
+    "library": {
+      "type": "group",
+      "id": 5639268,
+      "name": "DARIAH WG DHWiki",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/dariah_wg_dhwiki",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5639268/items/DQKANBU9",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/dariah_wg_dhwiki/items/DQKANBU9",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/5639268/items/99CE2V74",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 26813768
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 5243408,
+        "username": "olea",
+        "name": "Ismael Olea",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/olea",
+            "type": "text/html"
+          }
+        }
+      },
+      "lastModifiedByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "parsedDate": "2024",
+      "numChildren": 2
+    },
+    "data": {
+      "key": "DQKANBU9",
+      "version": 330,
+      "itemType": "report",
+      "title": "Common European data space for cultural heritage: annual report 2022/2023.",
+      "creators": [],
+      "abstractNote": "",
+      "reportNumber": "",
+      "reportType": "",
+      "seriesTitle": "",
+      "place": "Luxembourg",
+      "institution": "European Commission. Directorate General for Communications Networks, Content and Technology",
+      "date": "2024",
+      "pages": "",
+      "language": "eng",
+      "shortTitle": "Common European data space for cultural heritage",
+      "url": "https://data.europa.eu/doi/10.2759/642559",
+      "accessDate": "2024-06-04T14:16:48Z",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "DOI.org (CSL JSON)",
+      "callNumber": "",
+      "rights": "",
+      "extra": "https://dhwiki.wikibase.cloud/entity/Q250\nDOI: 10.2759/642559",
+      "tags": [
+        {
+          "tag": "on-wikibase"
+        }
+      ],
+      "collections": [],
+      "relations": {},
+      "dateAdded": "2024-08-28T10:46:00Z",
+      "dateModified": "2024-09-28T16:55:08Z"
+    },
+    "wikibase_entity": "Q250"
+  },
+  {
+    "key": "U3TZP9EL",
+    "version": 330,
+    "library": {
+      "type": "group",
+      "id": 5639268,
+      "name": "DARIAH WG DHWiki",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/dariah_wg_dhwiki",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5639268/items/U3TZP9EL",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/dariah_wg_dhwiki/items/U3TZP9EL",
+        "type": "text/html"
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 5243408,
+        "username": "olea",
+        "name": "Ismael Olea",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/olea",
+            "type": "text/html"
+          }
+        }
+      },
+      "lastModifiedByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Matos",
+      "parsedDate": "2022",
+      "numChildren": 1
+    },
+    "data": {
+      "key": "U3TZP9EL",
+      "version": 330,
+      "itemType": "report",
+      "title": "Manual pr\u00e1ctico para la digitalizaci\u00f3n de colecciones para difusi\u00f3n digital",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Carolina",
+          "lastName": "Matos"
+        }
+      ],
+      "abstractNote": "",
+      "reportNumber": "",
+      "reportType": "",
+      "seriesTitle": "",
+      "place": "",
+      "institution": "Ministerio de Cultura, Per\u00fa",
+      "date": "2022",
+      "pages": "55",
+      "language": "ES",
+      "shortTitle": "",
+      "url": "https://museos.cultura.pe/node/1285",
+      "accessDate": "",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "",
+      "callNumber": "",
+      "rights": "",
+      "extra": "https://dhwiki.wikibase.cloud/entity/Q265\nQID: Q125625865",
+      "tags": [
+        {
+          "tag": "on-wikibase"
+        }
+      ],
+      "collections": [],
+      "relations": {},
+      "dateAdded": "2024-08-28T10:47:31Z",
+      "dateModified": "2024-09-28T16:53:10Z"
+    },
+    "wikibase_entity": "Q265"
+  },
+  {
+    "key": "B577QLVF",
+    "version": 330,
+    "library": {
+      "type": "group",
+      "id": 5639268,
+      "name": "DARIAH WG DHWiki",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/dariah_wg_dhwiki",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5639268/items/B577QLVF",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/dariah_wg_dhwiki/items/B577QLVF",
+        "type": "text/html"
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 5243408,
+        "username": "olea",
+        "name": "Ismael Olea",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/olea",
+            "type": "text/html"
+          }
+        }
+      },
+      "lastModifiedByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Pfeiffer and Labra Gayo",
+      "parsedDate": "2021-12-03",
+      "numChildren": 1
+    },
+    "data": {
+      "key": "B577QLVF",
+      "version": 330,
+      "itemType": "conferencePaper",
+      "title": "Representing the Luxembourg Shared Authority File based on CIDOC-CRM in Wikibase",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Michelle",
+          "lastName": "Pfeiffer"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Jos\u00e9 Emilio",
+          "lastName": "Labra Gayo"
+        }
+      ],
+      "abstractNote": "The Luxembourg Competency Network on Digital Cultural Heritage is developing a Shared Authority File, to combine the knowledge from national heritage institutions and to increase the impact of the member institutions' digitised collections. The data of the authority file uses a custom developed CIDOC-CRM RDF/XML data model, starting with a model for authority records for person entities. The Shared Authority File uses the open source product Wikibase as its main data store and internal user interface.\nReferring to CIDOC-CRM as an ontological standard in the context of Wikibase is challenged in a particular manner due to the event-centric approach of the domain ontology.\nThis contribution describes how the project solved the challenge of hosting data conforming to CIDOC-CRM on a Wikibase instance, while leveraging the qualifier/reference model of Wikibase. This solution takes into account some quality attributes like intuitiveness, expressiveness and consistency of the hosted data. We have created a prototype of a populated Wikibase from existing database dumps, which demonstrates the feasibility of the proposed approach.\nWe consider that the mapping between the developed CIDOC-CRM model and the Wikibase model that we present in this paper can be valuable for other cultural heritage institutions working with Wikibase.",
+      "date": "2021/12/03",
+      "proceedingsTitle": "",
+      "conferenceName": "",
+      "place": "online",
+      "publisher": "",
+      "volume": "",
+      "pages": "",
+      "series": "",
+      "language": "en",
+      "DOI": "",
+      "ISBN": "",
+      "shortTitle": "",
+      "url": "https://www.youtube.com/watch?v=MDjyiYrOWJQ",
+      "accessDate": "",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "",
+      "callNumber": "",
+      "rights": "",
+      "extra": "https://dhwiki.wikibase.cloud/entity/Q276",
+      "tags": [
+        {
+          "tag": "on-wikibase"
+        }
+      ],
+      "collections": [],
+      "relations": {},
+      "dateAdded": "2024-08-28T10:47:31Z",
+      "dateModified": "2024-09-28T16:44:54Z"
+    },
+    "wikibase_entity": "Q276"
+  }
+]
