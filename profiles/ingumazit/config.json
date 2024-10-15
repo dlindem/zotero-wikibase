@@ -243,7 +243,8 @@
       "wikidata": "Q5"
     },
     "identifier_patterns": {
-      "^OCLC: ([0-9]+)": "P46"
+      "^OCLC: (^10\\.\\d{4,9}/[-\\._;()/:A-Za-z0-9]+)": "P46",
+      "^DOI: ([0-9]+)": "P20"
     },
     "zotero_group_id": "5597887",
     "zotero_group_name": "Ziterauzi",
