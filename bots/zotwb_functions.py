@@ -510,6 +510,7 @@ def geteditbatch(tag=""):
     return {'messages': [f"Successfully ingested {str(len(batchitems))} records to batch edit."], 'msgcolor': 'background:limegreen', 'batchitems': batchitems, 'datafields':list(datafields)}
 
 def lookup_doi():
+    print("Starting DOI lookup and link function...")
     zoteromapping = botconfig.load_mapping(('zotero'))
     if not zoteromapping['mapping']['all_types']['fields']['DOI']['wbprop']:
         message = f"You have to configure a Wikibase property as mapped to the Zotero 'DOI' field for all types to use this function.</br>Do that <a href=\"./zoterofields/all_types\">here</a>."
@@ -527,7 +528,7 @@ def lookup_doi():
     ?wdqid wdt:P356 ?doi4wd .} } } """
     bindings = xwbi.wbi_helpers.execute_sparql_query(query=query, prefix=config['mapping']['wikibase_sparql_prefixes'])['results'][
         'bindings']
-    message = 'Found on Wikidata: ' + str(len(bindings)) + ' DOI in bibitems with DIU still not linked to Wikidata.'
+    message = 'Found on Wikidata: ' + str(len(bindings)) + ' DOI in bibitems with DOI still not linked to Wikidata.'
     print(message)
     messages.append(message)
     result = []
@@ -545,6 +546,7 @@ def lookup_doi():
         message = f"Success [{str(count)}]: <a href=\"{checkurl}\" target=\"_blank\">{checkurl}</a>."
         print(message)
         messages.append(message)
+        time.sleep(0.4)
     print('Finished DOI reconciliation.')
     return {'messages': messages, 'msgcolor':'background:limegreen'}
 
