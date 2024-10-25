@@ -893,8 +893,8 @@ def wikibase_upload(data=[], onlynew=False):
                         statement
                     if type == "Review":
                         statements.append({"prop_nr": "P5", "type": "item", "value": "Q22"})  # in inguma, review
-                if tag["tag"].startswith(':oocc '):
-                    oocc = tag["tag"].replace(":oocc ", "")
+                if tag["tag"].startswith('oocc:'):
+                    oocc = tag["tag"].replace("oocc:", "Q")
                     statements.append({"prop_nr": "P88", "type": "item", "value": oocc})
 
         # creators
@@ -1248,11 +1248,11 @@ def import_creators(data=None, infile=None, wikidata=False, wikibase=False, unre
                     if isinstance(row['givenName'], str) and isinstance(row['lastName'], str):
                         newitem['aliases'].append(
                             {'lang': language, 'value': row['lastName'] + ', ' + row['givenName']})
-                if isinstance(row['givenName'], str):
+                if 'prop_pref_given_name' in config['mapping'] and config['mapping']['prop_pref_given_name']['wikibase'] and isinstance(row['givenName'], str):
                 	newitem['statements'].append(
                 		{'type': 'String', 'prop_nr': config['mapping']['prop_pref_given_name']['wikibase'],
                 		 'value': row['givenName'].strip()})
-                if isinstance(row['lastName'], str):
+                if 'prop_pref_family_name' in config['mapping'] and config['mapping']['prop_pref_family_name']['wikibase'] and isinstance(row['lastName'], str):
                 	newitem['statements'].append({'type': 'String',
                 								  'prop_nr': config['mapping']['prop_pref_family_name'][
                 									  'wikibase'], 'value': row['lastName'].strip()})
