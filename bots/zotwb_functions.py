@@ -840,14 +840,14 @@ def wikibase_upload(data=[], onlynew=False):
                         
         ## ISBN
         if 'ISBN' in item['data']:
-            val = item['data']['ISBN'].replace("-", "")  # normalize ISBN
-            valsearch = re.search(r'^\d+', val)  # only take the first block of digits (i.e., only the first ISBN listed)
+            val = item['data']['ISBN']  # do not delete hyphens normalize ISBN
+            valsearch = re.search(r'^[\d\-]+', val)  # only take the first block of digits (i.e., only the first ISBN listed)
             if valsearch:
                 val = valsearch.group(0)
-                if len(val) == 10:
+                if len(val.replace("-","")) == 10:
                     statements.append(
                         {"prop_nr": config['mapping']['prop_isbn_10']['wikibase'], "type": "ExternalId", "value": val, 'action':'replace'})
-                elif len(val) == 13:
+                elif len(val.replace("-","")) == 13:
                     statements.append(
                         {"prop_nr": config['mapping']['prop_isbn_13']['wikibase'], "type": "ExternalId", "value": val, 'action':'replace'})
                 else:
