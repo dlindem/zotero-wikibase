@@ -43,6 +43,11 @@
       "type": "String",
       "wdprop": null
     },
+    "P9": {
+      "enlabel": "P9",
+      "type": "Url",
+      "wdprop": null
+    },
     "P10": {
       "enlabel": "attestation context",
       "type": "String",
@@ -63,60 +68,14 @@
       "type": "String",
       "wdprop": null
     },
-    "P15": {
-      "enlabel": "UZEI hiztegiko ID",
-      "type": "String",
-      "wdprop": null
-    },
-    "P18": {
-      "enlabel": "UZEI termino maila",
-      "type": "String",
-      "wdprop": null
-    },
-    "P26": {
-      "enlabel": "Fandom wiki ID",
-      "type": "ExternalId",
-      "wdprop": "P6262",
-      "formatter_url": "https://www.wikia.com/wiki/w:c:$1"
-    },
-    "P31": {
-      "enlabel": "field of work",
-      "type": "WikibaseItem",
-      "wdprop": "P101"
-    },
-    "P52": {
-      "enlabel": "not to be confused with",
-      "type": "WikibaseItem",
-      "wdprop": "P1889"
-    },
-    "P84": {
-      "enlabel": "formatter URI for RDF resource",
-      "type": "String",
-      "wdprop": "P1921"
-    },
-    "P85": {
-      "enlabel": "equivalent property",
-      "type": "Url",
-      "wdprop": "P1628"
-    },
-    "P86": {
-      "enlabel": "published in",
-      "type": "WikibaseItem",
-      "wdprop": "P1433"
-    },
-    "P92": {
-      "enlabel": "parent taxon",
-      "type": "WikibaseItem",
-      "wdprop": "P171"
-    },
-    "P9": {
-      "enlabel": "P9",
-      "type": "Url",
-      "wdprop": null
-    },
     "P14": {
       "enlabel": "P14",
       "type": "Url",
+      "wdprop": null
+    },
+    "P15": {
+      "enlabel": "UZEI hiztegiko ID",
+      "type": "String",
       "wdprop": null
     },
     "P16": {
@@ -127,6 +86,11 @@
     "P17": {
       "enlabel": "P17",
       "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P18": {
+      "enlabel": "UZEI termino maila",
+      "type": "String",
       "wdprop": null
     },
     "P19": {
@@ -144,6 +108,12 @@
       "type": "ExternalId",
       "wdprop": "P10192",
       "formatter_url": "https://homosaurus.org/v3/$1"
+    },
+    "P26": {
+      "enlabel": "Fandom wiki ID",
+      "type": "ExternalId",
+      "wdprop": "P6262",
+      "formatter_url": "https://www.wikia.com/wiki/w:c:$1"
     },
     "P27": {
       "enlabel": "P27",
@@ -164,6 +134,11 @@
       "enlabel": "P30",
       "type": "WikibaseItem",
       "wdprop": "P21"
+    },
+    "P31": {
+      "enlabel": "field of work",
+      "type": "WikibaseItem",
+      "wdprop": "P101"
     },
     "P32": {
       "enlabel": "P32",
@@ -267,6 +242,11 @@
       "enlabel": "P51",
       "type": "WikibaseItem",
       "wdprop": null
+    },
+    "P52": {
+      "enlabel": "not to be confused with",
+      "type": "WikibaseItem",
+      "wdprop": "P1889"
     },
     "P53": {
       "enlabel": "P53",
@@ -423,6 +403,21 @@
       "type": "WikibaseItem",
       "wdprop": null
     },
+    "P84": {
+      "enlabel": "formatter URI for RDF resource",
+      "type": "String",
+      "wdprop": "P1921"
+    },
+    "P85": {
+      "enlabel": "equivalent property",
+      "type": "Url",
+      "wdprop": "P1628"
+    },
+    "P86": {
+      "enlabel": "published in",
+      "type": "WikibaseItem",
+      "wdprop": "P1433"
+    },
     "P87": {
       "enlabel": "P87",
       "type": "WikibaseItem",
@@ -447,6 +442,11 @@
       "enlabel": "P91",
       "type": "Quantity",
       "wdprop": null
+    },
+    "P92": {
+      "enlabel": "parent taxon",
+      "type": "WikibaseItem",
+      "wdprop": "P171"
     },
     "P93": {
       "enlabel": "P93",
@@ -573,6 +573,267 @@
       "type": "ExternalId",
       "wdprop": null,
       "formatter_url": "http://pagotxa.eus/errezeta/$1"
+    },
+    "P118": {
+      "enlabel": "P118",
+      "type": "WikibaseProperty",
+      "wdprop": null
+    },
+    "P119": {
+      "enlabel": "P119",
+      "type": "WikibaseProperty",
+      "wdprop": null
+    },
+    "P120": {
+      "enlabel": "P120",
+      "type": "WikibaseProperty",
+      "wdprop": null
+    },
+    "P121": {
+      "enlabel": "P121",
+      "type": "WikibaseProperty",
+      "wdprop": null
+    },
+    "P122": {
+      "enlabel": "P122",
+      "type": "WikibaseProperty",
+      "wdprop": null
+    },
+    "P123": {
+      "enlabel": "P123",
+      "type": "WikibaseProperty",
+      "wdprop": null
+    },
+    "P124": {
+      "enlabel": "P124",
+      "type": "WikibaseProperty",
+      "wdprop": null
+    },
+    "P125": {
+      "enlabel": "P125",
+      "type": "WikibaseProperty",
+      "wdprop": null
+    },
+    "P126": {
+      "enlabel": "P126",
+      "type": "WikibaseProperty",
+      "wdprop": null
+    },
+    "P127": {
+      "enlabel": "P127",
+      "type": "WikibaseProperty",
+      "wdprop": null
+    },
+    "P128": {
+      "enlabel": "P128",
+      "type": "WikibaseProperty",
+      "wdprop": null
+    },
+    "P129": {
+      "enlabel": "P129",
+      "type": "WikibaseProperty",
+      "wdprop": null
+    },
+    "P130": {
+      "enlabel": "P130",
+      "type": "WikibaseProperty",
+      "wdprop": null
+    },
+    "P131": {
+      "enlabel": "P131",
+      "type": "WikibaseProperty",
+      "wdprop": null
+    },
+    "P132": {
+      "enlabel": "P132",
+      "type": "WikibaseProperty",
+      "wdprop": null
+    },
+    "P133": {
+      "enlabel": "P133",
+      "type": "WikibaseProperty",
+      "wdprop": null
+    },
+    "P134": {
+      "enlabel": "P134",
+      "type": "WikibaseProperty",
+      "wdprop": null
+    },
+    "P135": {
+      "enlabel": "P135",
+      "type": "WikibaseProperty",
+      "wdprop": null
+    },
+    "P136": {
+      "enlabel": "P136",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P137": {
+      "enlabel": "P137",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P138": {
+      "enlabel": "P138",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P139": {
+      "enlabel": "P139",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P140": {
+      "enlabel": "P140",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P141": {
+      "enlabel": "P141",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P142": {
+      "enlabel": "P142",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P143": {
+      "enlabel": "P143",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P144": {
+      "enlabel": "P144",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P145": {
+      "enlabel": "P145",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P146": {
+      "enlabel": "P146",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P147": {
+      "enlabel": "P147",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P148": {
+      "enlabel": "P148",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P149": {
+      "enlabel": "P149",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P150": {
+      "enlabel": "P150",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P151": {
+      "enlabel": "P151",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P152": {
+      "enlabel": "P152",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P153": {
+      "enlabel": "P153",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P154": {
+      "enlabel": "P154",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P155": {
+      "enlabel": "P155",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P156": {
+      "enlabel": "P156",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P157": {
+      "enlabel": "P157",
+      "type": "WikibaseProperty",
+      "wdprop": null
+    },
+    "P158": {
+      "enlabel": "P158",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P159": {
+      "enlabel": "P159",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P160": {
+      "enlabel": "P160",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P161": {
+      "enlabel": "P161",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P162": {
+      "enlabel": "P162",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P163": {
+      "enlabel": "P163",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P164": {
+      "enlabel": "P164",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P165": {
+      "enlabel": "P165",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P166": {
+      "enlabel": "P166",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P167": {
+      "enlabel": "P167",
+      "type": "Url",
+      "wdprop": null
+    },
+    "P168": {
+      "enlabel": "P168",
+      "type": "ExternalId",
+      "wdprop": null,
+      "formatter_url": "https://www.ivap.euskadi.eus/webivap00-a5app3/eu/ac36aEuskaltermWar/publiko/fitxa?param=$1"
+    },
+    "P169": {
+      "enlabel": "P169",
+      "type": "String",
+      "wdprop": "P18"
     }
   }
 }
