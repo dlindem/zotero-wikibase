@@ -522,6 +522,7 @@ def lookup_doi():
     doiwbprop = zoteromapping['mapping']['all_types']['fields']['DOI']['wbprop']
     query = """SELECT ?wbqid ?doi ?wdqid WHERE {
     ?wbqid xdp:"""+doiwbprop+""" ?doi. filter not exists {?wbqid xdp:"""+config['mapping']['prop_wikidata_entity']['wikibase']+""" ?wd.}
+    
     bind(UCASE(?doi) as ?doi4wd)
     SERVICE <https://query.wikidata.org/sparql> {
     select ?wdqid ?doi4wd where {
