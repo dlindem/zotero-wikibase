@@ -86,8 +86,11 @@ where { ?item xdp:P6 xwb:"""+schemeqid+"""; xdp:P1 ?wikidata . filter (regex (st
         time.sleep(1)
         try:
             xwbi.wbi_helpers.merge_items(from_id=couple[1], to_id=couple[0], login=xwbi.login_instance)
-            print("Success.")
-        except:
+            print("Success. No conflict detected.")
+        except Exception as ex:
+            print(str(ex))
+
+
             print("Failed merging. One of the items to merge may have been merged before to another one.")
             # TODO: check labels and merge, check defs and merge
     #print(str(couples))
