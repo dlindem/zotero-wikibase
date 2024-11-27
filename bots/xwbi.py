@@ -50,7 +50,9 @@ except Exception as ex:
 		print(f"{profile}: Profile configuration could not be done due to missing values in config.json file in profile folder.")
 		print(str(ex))
 
+login_instance = None
 def wbi_do_login():
+	global login_instance
 	if config_private['wb_bot_user'] and config_private['wb_bot_pwd']:
 		try:
 			login_instance = wbi_login.Login(user=config_private['wb_bot_user'], password=config_private['wb_bot_pwd'])
