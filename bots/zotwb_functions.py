@@ -891,12 +891,17 @@ def wikibase_upload(data=[], onlynew=False):
                 if tag["tag"].startswith(':type '):
                     type = tag["tag"].replace(":type ", "")
                     if type == "DictionaryDistribution":
-                        statement
+                        pass
                     if type == "Review":
                         statements.append({"prop_nr": "P5", "type": "item", "value": "Q22"})  # in inguma, review
                 if tag["tag"].startswith('oocc:'):
                     oocc = tag["tag"].replace("oocc:", "Q")
                     statements.append({"prop_nr": "P88", "type": "item", "value": oocc})
+                eneoli_tags = ["WG1", "Task 2.5", "Task 3.1", "Task 3.3", "WG4"]
+                if tag["tag"].strip() in eneoli_tags:
+                    print(f"Will write eneoli tag: {tag["tag"]}")
+                    time.sleep(0.2)
+                    statements.append({"prop_nr": "P73", "type": "string", "value": tag["tag"].strip()})
 
         # creators
         if not clear_command:
