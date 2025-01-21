@@ -263,6 +263,11 @@
       "enlabel": "Zotero TEI-XML",
       "type": "ExternalId",
       "wdprop": null
+    },
+    "P74": {
+      "enlabel": "Translator",
+      "type": "WikibaseItem",
+      "wdprop": null
     }
   }
 }
