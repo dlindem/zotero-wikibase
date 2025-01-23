@@ -180,7 +180,7 @@
           "name": "Edition"
         },
         "encyclopediaTitle": {
-          "wbprop": null,
+          "wbprop": "P35",
           "dtype": "String",
           "name": "Encyclopedia Title"
         },
@@ -678,7 +678,7 @@
         },
         "translator": {
           "name": "Translator",
-          "wbprop": null,
+          "wbprop": "P74",
           "dtype": "WikibaseItem"
         },
         "wordsBy": {
@@ -1021,7 +1021,7 @@
           "wbprop": "P41"
         },
         "translator": {
-          "wbprop": null
+          "wbprop": "P74"
         },
         "seriesEditor": {
           "wbprop": null
@@ -1105,7 +1105,7 @@
           "wbprop": "P41"
         },
         "translator": {
-          "wbprop": null
+          "wbprop": "P74"
         },
         "seriesEditor": {
           "wbprop": null
@@ -1326,7 +1326,7 @@
           "wbprop": "P41"
         },
         "translator": {
-          "wbprop": null
+          "wbprop": "P74"
         },
         "seriesEditor": {
           "wbprop": null
@@ -1494,7 +1494,7 @@
           "wbprop": "P41"
         },
         "translator": {
-          "wbprop": null
+          "wbprop": "P74"
         },
         "seriesEditor": {
           "wbprop": null
@@ -1550,7 +1550,7 @@
           "wbprop": "P41"
         },
         "translator": {
-          "wbprop": null
+          "wbprop": "P74"
         },
         "reviewedAuthor": {
           "wbprop": null
@@ -1603,7 +1603,7 @@
       }
     },
     "encyclopediaArticle": {
-      "bibtypeqid": null,
+      "bibtypeqid": "Q2030",
       "fields": {
         "title": {
           "wbprop": "P55"
@@ -1612,7 +1612,7 @@
           "wbprop": false
         },
         "encyclopediaTitle": {
-          "wbprop": null,
+          "wbprop": "P35",
           "baseField": "publicationTitle"
         },
         "series": {
@@ -1648,9 +1648,6 @@
         "url": {
           "wbprop": "P23"
         },
-        "accessDate": {
-          "wbprop": false
-        },
         "archive": {
           "wbprop": null
         },
@@ -1679,7 +1676,7 @@
           "wbprop": "P41"
         },
         "translator": {
-          "wbprop": null
+          "wbprop": "P74"
         },
         "seriesEditor": {
           "wbprop": null
@@ -1979,7 +1976,7 @@
           "wbprop": null
         },
         "translator": {
-          "wbprop": null
+          "wbprop": "P74"
         }
       }
     },
@@ -2059,7 +2056,7 @@
           "wbprop": "P41"
         },
         "translator": {
-          "wbprop": null
+          "wbprop": "P74"
         },
         "reviewedAuthor": {
           "wbprop": null
@@ -2193,7 +2190,7 @@
           "wbprop": null
         },
         "translator": {
-          "wbprop": null
+          "wbprop": "P74"
         },
         "reviewedAuthor": {
           "wbprop": null
@@ -2253,7 +2250,7 @@
           "wbprop": null
         },
         "translator": {
-          "wbprop": null
+          "wbprop": "P74"
         }
       }
     },
@@ -2405,7 +2402,7 @@
           "wbprop": null
         },
         "translator": {
-          "wbprop": null
+          "wbprop": "P74"
         },
         "reviewedAuthor": {
           "wbprop": null
@@ -2635,7 +2632,7 @@
           "wbprop": "P41"
         },
         "translator": {
-          "wbprop": null
+          "wbprop": "P74"
         },
         "reviewedAuthor": {
           "wbprop": null
@@ -2844,7 +2841,7 @@
           "wbprop": null
         },
         "translator": {
-          "wbprop": null
+          "wbprop": "P74"
         },
         "seriesEditor": {
           "wbprop": null
@@ -3284,7 +3281,7 @@
           "wbprop": null
         },
         "translator": {
-          "wbprop": null
+          "wbprop": "P74"
         }
       }
     }
