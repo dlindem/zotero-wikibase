@@ -3,6 +3,7 @@ from wikibaseintegrator import wbi_login, WikibaseIntegrator
 from wikibaseintegrator.datatypes.string import String
 from wikibaseintegrator.datatypes.externalid import ExternalID
 from wikibaseintegrator.datatypes.item import Item
+from wikibaseintegrator.datatypes.property import Property
 from wikibaseintegrator.datatypes.lexeme import Lexeme
 from wikibaseintegrator.datatypes.monolingualtext import MonolingualText
 from wikibaseintegrator.datatypes.time import Time
@@ -117,6 +118,8 @@ def packstatements(statements, wbitem=None, qualifiers=False, references=False):
 			packed_statement = MonolingualText(text=statement['value'], language=statement['lang'], prop_nr=statement['prop_nr'],qualifiers=packed_qualifiers,references=packed_references)
 		elif statement['type'].lower() == "url":
 			packed_statement = URL(value=statement['value'], prop_nr=statement['prop_nr'],qualifiers=packed_qualifiers,references=packed_references)
+		elif statement['type'].lower() == "property":
+			packed_statement = Property(value=statement['value'], prop_nr=statement['prop_nr'],qualifiers=packed_qualifiers,references=packed_references)
 		if not packed_statement:
 			print('***ERROR: Unknown datatype in '+str(statement))
 		# print(str(packed_statement))
@@ -184,6 +187,7 @@ def itemwrite(itemdata, clear=False, entitytype='Item', datatype=None):
 			r = xwbitem.write(clear=clear)
 			d = True
 			print('successfully written to entity: '+xwbitem.id)
+			time.sleep(0.2)
 		except Exception:
 			ex = traceback.format_exc()
 			print(ex)
