@@ -2563,7 +2563,7 @@
       }
     },
     "preprint": {
-      "bibtypeqid": null,
+      "bibtypeqid": "Q523",
       "fields": {
         "title": {
           "wbprop": "P24"
@@ -2604,9 +2604,6 @@
         "url": {
           "wbprop": "P33"
         },
-        "accessDate": {
-          "wbprop": false
-        },
         "archive": {
           "wbprop": null
         },
@@ -2616,9 +2613,6 @@
         "shortTitle": {
           "wbprop": false
         },
-        "language": {
-          "wbprop": null
-        },
         "libraryCatalog": {
           "wbprop": false
         },
@@ -2627,9 +2621,6 @@
         },
         "rights": {
           "wbprop": false
-        },
-        "extra": {
-          "wbprop": null
         }
       },
       "creatorTypes": {
@@ -3004,7 +2995,7 @@
       }
     },
     "thesis": {
-      "bibtypeqid": null,
+      "bibtypeqid": "Q522",
       "fields": {
         "title": {
           "wbprop": "P24"
@@ -3029,17 +3020,11 @@
         "numPages": {
           "wbprop": null
         },
-        "language": {
-          "wbprop": null
-        },
         "shortTitle": {
           "wbprop": false
         },
         "url": {
           "wbprop": "P33"
-        },
-        "accessDate": {
-          "wbprop": false
         },
         "archive": {
           "wbprop": null
@@ -3055,9 +3040,6 @@
         },
         "rights": {
           "wbprop": false
-        },
-        "extra": {
-          "wbprop": null
         }
       },
       "creatorTypes": {
