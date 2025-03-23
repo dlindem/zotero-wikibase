@@ -899,7 +899,7 @@ def wikibase_upload(data=[], onlynew=False):
                     statements.append({"prop_nr": "P88", "type": "item", "value": oocc})
                 eneoli_tags = ["WG1", "Task 2.5", "Task 3.1", "Task 3.3", "WG4"]
                 if tag["tag"].strip() in eneoli_tags:
-                    print(f"Will write eneoli tag: {tag["tag"]}")
+                    print(f"Will write eneoli tag: {tag['tag']}")
                     time.sleep(0.2)
                     statements.append({"prop_nr": "P73", "type": "string", "value": tag["tag"].strip()})
 
