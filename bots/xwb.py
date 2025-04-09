@@ -54,7 +54,7 @@ def get_token():
 	token = csrfquery['query']['tokens']['csrftoken']
 	print(f"Got fresh CSRF token for {config['mapping']['wikibase_name']}.")
 	return token
-token = ""
+token = get_token()
 
 # def load_wdmappings():
 # 	wdids = {}
@@ -309,6 +309,29 @@ def itemclaim(s, p, o):
 
 	done = False
 	value = json.dumps({"entity-type":"item","numeric-id":int(o.replace("Q",""))})
+	while (not done):
+		try:
+			request = site.post('wbcreateclaim', token=token, entity=s, property=p, snaktype="value", value=value, bot=1)
+			if request['success'] == 1:
+				done = True
+				claimId = request['claim']['id']
+				print('Claim creation done: '+s+' ('+p+') '+o+'.')
+				#time.sleep(1)
+		except Exception as ex:
+			if 'Invalid CSRF token.' in str(ex):
+				print('Wait a sec. Must get a new CSRF token...')
+				token = get_token()
+			else:
+				print('Claim creation failed, will try again...\n'+str(ex))
+				time.sleep(4)
+	return claimId
+
+#create item claim
+def senseclaim(s, p, o):
+	global token
+
+	done = False
+	value = json.dumps({"entity-type":"sense","id":o})
 	while (not done):
 		try:
 			request = site.post('wbcreateclaim', token=token, entity=s, property=p, snaktype="value", value=value, bot=1)
