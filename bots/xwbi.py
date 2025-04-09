@@ -4,6 +4,7 @@ from wikibaseintegrator.datatypes.string import String
 from wikibaseintegrator.datatypes.externalid import ExternalID
 from wikibaseintegrator.datatypes.item import Item
 from wikibaseintegrator.datatypes.lexeme import Lexeme
+from wikibaseintegrator.datatypes.sense import Sense as SenseClaim
 from wikibaseintegrator.datatypes.monolingualtext import MonolingualText
 from wikibaseintegrator.datatypes.time import Time
 from wikibaseintegrator.datatypes.globecoordinate import GlobeCoordinate
