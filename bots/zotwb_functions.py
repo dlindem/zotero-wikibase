@@ -217,10 +217,13 @@ def import_wikidata_entity(wdid, wbid=False, wd_to_wb={}, process_labels=True, p
         for lang in languages_to_consider:
             existing_preflabel = None
             if wbid:
-                existing_preflabel = str(wb_existing_entity.labels.get(lang))
+                existing_preflabel = wb_existing_entity.labels.get(lang)
+                if existing_preflabel:
+                    existing_preflabel = str(existing_preflabel)
+                print(f"Found existing preflabel: {existing_preflabel}")
             if lang in importentityjson['labels']:
                 importlabel = importentityjson['labels'][lang]['value']
-                if existing_preflabel and len(existing_preflabel) > 1:
+                if existing_preflabel:
                     if importlabel.lower() != existing_preflabel.lower():
                         wbentityjson['aliases'].append({'lang': lang, 'value': importlabel})
                         # wikidata label becomes wikibase alias if different to existing wikibase label
@@ -1084,6 +1087,7 @@ def export_creators(folder=""):
      optional {?creatorstatement xpq:""" + config['mapping']['prop_family_name_source_literal']['wikibase'] + """ ?lastName .}
     SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
        } order by ?lastName ?givenName"""
+    print(query)
     query_result = xwbi.wbi_helpers.execute_sparql_query(query=query, prefix=config['mapping']['wikibase_sparql_prefixes'])
     data = pandas.DataFrame(columns=query_result['head']['vars'])
     for binding in query_result['results']['bindings']:
