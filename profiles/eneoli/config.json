@@ -31,7 +31,14 @@
       "sq",
       "sr",
       "hr",
-      "bg"
+      "bg",
+      "ca",
+      "cs",
+      "da",
+      "sl",
+      "et",
+      "is",
+      "pl"
     ],
     "wikibase_sparql_endpoint": "https://eneoli.wikibase.cloud/query/sparql",
     "wikibase_sparql_prefixes": "PREFIX xwb: <https://eneoli.wikibase.cloud/entity/>\nPREFIX xdp: <https://eneoli.wikibase.cloud/prop/direct/>\nPREFIX xp: <https://eneoli.wikibase.cloud/prop/>\nPREFIX xps: <https://eneoli.wikibase.cloud/prop/statement/>\nPREFIX xpq: <https://eneoli.wikibase.cloud/prop/qualifier/>\nPREFIX xpr: <https://eneoli.wikibase.cloud/prop/reference/>\nPREFIX xno: <https://eneoli.wikibase.cloud/prop/novalue/>\n",
