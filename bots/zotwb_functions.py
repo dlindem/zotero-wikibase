@@ -695,6 +695,7 @@ def wikibase_upload(data=[], onlynew=False):
         attqualis = []
 
         if item['meta']['numChildren'] > 0:
+            link_attachment = False
             children = zoterobot.getchildren(item['data']['key'])
             for child in children:
                 if 'contentType' not in child['data']:  # these are notes attachments
@@ -710,6 +711,11 @@ def wikibase_upload(data=[], onlynew=False):
                 if child['data']['contentType'] == "" and child['data']['url'].startswith(config['mapping']['wikibase_entity_ns']):
                     qid = child['data']['url'].replace(config['mapping']['wikibase_entity_ns'], "")
                     print('Found link attachment: This item is linked to ' + config['mapping']['wikibase_entity_ns'] + qid)
+                    if link_attachment:
+                        zoterobot.delete_item(child['key'])
+                        print(f"Have deleted duplicate link attachment {child['key']}")
+                    else:
+                        link_attachment = True
                 elif child['data']['contentType'] == "":
                     # print('Found link attachment: This item is linked to ' + child['data']['url'])
                     url_re = re.search(r'(https?://[^/]+)/entity/(Q\d+)', child['data']['url'])
