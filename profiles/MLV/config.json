@@ -63,6 +63,13 @@
       "name": "Zotero fulltext PDF",
       "comment": "externalId-prop for linking items to its full text PDF stored as Zotero attachment. formatter URL will be 'https://www.zotero.org/groups/[group_num]/[group_name]/items/$1/item-details'."
     },
+    "prop_reference_date": {
+      "wikibase": "P188",
+      "type": "Time",
+      "wikidata": "P813",
+      "name": "reference access date",
+      "comment": "Datatype Time, Wikidata P813, used in references, e.g. for the Zotero item ID statement."
+    },
     "prop_instanceof": {
       "wikibase": "P5",
       "type": "WikibaseItem",
