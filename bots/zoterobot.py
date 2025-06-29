@@ -57,8 +57,12 @@ def patch_item(qid=None, zotitem=None, children=[]):
                 continue
             if child['data']['url'].startswith(config['mapping']['wikibase_entity_ns']):
                 if child['data']['url'].endswith(qid):
-                    print('Correct link attachment already present.')
-                    attachment_present = True
+                    if attachment_present:
+                        print('Detected double link attachment... will delete duplicate.')
+
+                    else:
+                        print('Correct link attachment already present.')
+                        attachment_present = True
                 else:
                     print('Fatal error: Zotero item was linked before to this other Q-id:\n'+child['data']['url'])
                     input('Press enter to continue or CTRL+C to abort.')
@@ -110,6 +114,9 @@ def patch_item(qid=None, zotitem=None, children=[]):
         return (zotero_update_item(zotitem))
     else:
         return f"Item {zotitem} successfully updated."
+
+def delete_item(zotitem):
+    pyzot.delete_item(pyzot.item(zotitem))
 
 def zotero_update_item(zotitem):
     del zotitem['wikibase_entity']  # raises zotero api error if left in item
