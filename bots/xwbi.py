@@ -3,6 +3,7 @@ from wikibaseintegrator import wbi_login, WikibaseIntegrator
 from wikibaseintegrator.datatypes.string import String
 from wikibaseintegrator.datatypes.externalid import ExternalID
 from wikibaseintegrator.datatypes.item import Item
+from wikibaseintegrator.datatypes.sense import Sense as SenseClaim
 from wikibaseintegrator.datatypes.property import Property
 from wikibaseintegrator.datatypes.lexeme import Lexeme
 from wikibaseintegrator.datatypes.sense import Sense as SenseClaim
