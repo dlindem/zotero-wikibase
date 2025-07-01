@@ -2,24 +2,21 @@
   "filename": "config.json",
   "comment": "This contains basic configurations for the zotero-wikibase tool.",
   "mapping": {
-    "wikibase_name": "llod-training",
-    "wikibase_url": "https://llod-training.wikibase.cloud",
-    "wikibase_site": "llod-training.wikibase.cloud",
-    "wikibase_entity_ns": "https://llod-training.wikibase.cloud/entity/",
+    "wikibase_name": "bop-ontoterminology",
+    "wikibase_url": "https://bop-ontoterminology.wikibase.cloud",
+    "wikibase_site": "bop-ontoterminology.wikibase.cloud",
+    "wikibase_entity_ns": "https://bop-ontoterminology.wikibase.cloud/entity/",
     "wikibase_default_language": null,
-    "wikibase_api_url": "https://llod-training.wikibase.cloud/w/api.php",
-    "wikibase_rest_url": "https://llod-training.wikibase.cloud/w/rest.php",
-    "wikibase_index_url": "https://llod-training.wikibase.cloud/w/index.php",
+    "wikibase_api_url": "https://bop-ontoterminology.wikibase.cloud/w/api.php",
+    "wikibase_rest_url": "https://bop-ontoterminology.wikibase.cloud/w/rest.php",
+    "wikibase_index_url": "https://bop-ontoterminology.wikibase.cloud/w/index.php",
     "wikibase_label_languages": [
       "en",
-      "es",
-      "pt",
-      "eu",
-      "hr",
+      "de",
       "fr"
     ],
-    "wikibase_sparql_endpoint": "https://llod-training.wikibase.cloud/query/sparql",
-    "wikibase_sparql_prefixes": "PREFIX xwb: <https://llod-training.wikibase.cloud/entity/>\nPREFIX xdp: <https://llod-training.wikibase.cloud/prop/direct/>\nPREFIX xp: <https://llod-training.wikibase.cloud/prop/>\nPREFIX xps: <https://llod-training.wikibase.cloud/prop/statement/>\nPREFIX xpq: <https://llod-training.wikibase.cloud/prop/qualifier/>\nPREFIX xpr: <https://llod-training.wikibase.cloud/prop/reference/>\nPREFIX xno: <https://llod-training.wikibase.cloud/prop/novalue/>\n",
+    "wikibase_sparql_endpoint": "https://bop-ontoterminology.wikibase.cloud/query/sparql",
+    "wikibase_sparql_prefixes": "PREFIX xwb: <https://bop-ontoterminology.wikibase.cloud/entity/>\nPREFIX xdp: <https://bop-ontoterminology.wikibase.cloud/prop/direct/>\nPREFIX xp: <https://bop-ontoterminology.wikibase.cloud/prop/>\nPREFIX xps: <https://bop-ontoterminology.wikibase.cloud/prop/statement/>\nPREFIX xpq: <https://bop-ontoterminology.wikibase.cloud/prop/qualifier/>\nPREFIX xpr: <https://bop-ontoterminology.wikibase.cloud/prop/reference/>\nPREFIX xno: <https://bop-ontoterminology.wikibase.cloud/prop/novalue/>\n",
     "prop_formatterurl": {
       "wikibase": "P2",
       "type": "String",
@@ -44,7 +41,7 @@
       "formatter_url": "http://www.wikidata.org/entity/"
     },
     "prop_formatterurirdf": {
-      "wikibase": "P6",
+      "wikibase": null,
       "type": "String",
       "wikidata": "P1921",
       "name": "formatter URI for RDF resource",
@@ -93,7 +90,7 @@
       "comment": "A property needed for linking inverse properties to each other, Wikidata P1696."
     },
     "prop_series_ordinal": {
-      "wikibase": "P7",
+      "wikibase": null,
       "type": "String",
       "wikidata": "P1545",
       "name": "series ordinal",
@@ -184,7 +181,7 @@
       "comment": "Datatype item, for linking publications to their container (a journal, for journal articles, a book, for book sections)."
     },
     "prop_wikidata_sitelinks": {
-      "wikibase": "P8",
+      "wikibase": null,
       "type": "URL",
       "wikidata": null,
       "name": "Wikipedia page URL",
@@ -241,19 +238,19 @@
       "wikidata": null
     },
     "class_language": {
-      "wikibase": "Q3",
+      "wikibase": "Q2",
       "comment": "The class that groups natural languages.",
       "name": "Language",
       "wikidata": null
     },
     "class_organization": {
-      "wikibase": null,
+      "wikibase": "Q3",
       "comment": "The class that groups organizations (can be creators, publishers,...).",
       "name": "Organization",
       "wikidata": null
     },
     "class_person": {
-      "wikibase": null,
+      "wikibase": "Q5",
       "comment": "The class that groups natural persons.",
       "name": "Human",
       "wikidata": "Q5"
