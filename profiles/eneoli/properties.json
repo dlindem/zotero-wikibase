@@ -60,9 +60,9 @@
       "wdprop": null
     },
     "P12": {
-      "enlabel": "not used (item)",
+      "enlabel": "concept for this sense",
       "type": "WikibaseItem",
-      "wdprop": null
+      "wdprop": "P5137"
     },
     "P13": {
       "enlabel": "ISBN-13",
@@ -103,7 +103,8 @@
     "P20": {
       "enlabel": "Zotero fulltext PDF",
       "type": "ExternalId",
-      "wdprop": null
+      "wdprop": null,
+      "formatter_url": "https://www.zotero.org/groups/5449136/neocorpus/items/$1/item-details"
     },
     "P21": {
       "enlabel": "inverse property",
@@ -255,19 +256,241 @@
       "wdprop": null
     },
     "P53": {
-      "enlabel": "guest of honor",
+      "enlabel": "gender",
       "type": "WikibaseItem",
       "wdprop": "P957"
+    },
+    "P54": {
+      "enlabel": "ISBN-10",
+      "type": "ExternalId",
+      "wdprop": "P957"
+    },
+    "P55": {
+      "enlabel": "title",
+      "type": "Monolingualtext",
+      "wdprop": null
+    },
+    "P56": {
+      "enlabel": "retrieved",
+      "type": "Time",
+      "wdprop": "P813"
+    },
+    "P57": {
+      "enlabel": "equivalent",
+      "type": "Monolingualtext",
+      "wdprop": null
+    },
+    "P58": {
+      "enlabel": "warning",
+      "type": "String",
+      "wdprop": null
+    },
+    "P59": {
+      "enlabel": "[unused sense prop]",
+      "type": "WikibaseSense",
+      "wdprop": null
     },
     "P60": {
       "enlabel": "Zotero TEI-XML",
       "type": "ExternalId",
+      "wdprop": null,
+      "formatter_url": "https://www.zotero.org/groups/5449136/neocorpus/items/$1/item-details"
+    },
+    "P61": {
+      "enlabel": "reference URL",
+      "type": "Url",
+      "wdprop": null
+    },
+    "P62": {
+      "enlabel": "reference note",
+      "type": "String",
+      "wdprop": null
+    },
+    "P63": {
+      "enlabel": "linked lexeme sense ID",
+      "type": "ExternalId",
+      "wdprop": null,
+      "formatter_url": "https://eneoli.wikibase.cloud/entity/$1"
+    },
+    "P64": {
+      "enlabel": "validated by",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P65": {
+      "enlabel": "text contains lexeme",
+      "type": "WikibaseLexeme",
+      "wdprop": null
+    },
+    "P66": {
+      "enlabel": "absolute frequency",
+      "type": "String",
+      "wdprop": null
+    },
+    "P67": {
+      "enlabel": "ORCID ID",
+      "type": "ExternalId",
+      "wdprop": "P496",
+      "formatter_url": "https://orcid.org/$1"
+    },
+    "P68": {
+      "enlabel": "domain",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P69": {
+      "enlabel": "has result",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P70": {
+      "enlabel": "has member",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P71": {
+      "enlabel": "termhood",
+      "type": "String",
+      "wdprop": null
+    },
+    "P72": {
+      "enlabel": "combines lexeme",
+      "type": "WikibaseLexeme",
+      "wdprop": null
+    },
+    "P73": {
+      "enlabel": "ENEOLI Zotero collection",
+      "type": "String",
       "wdprop": null
     },
     "P74": {
-      "enlabel": "Translator",
+      "enlabel": "translator",
       "type": "WikibaseItem",
       "wdprop": null
+    },
+    "P75": {
+      "enlabel": "manual fulltext TXT",
+      "type": "ExternalId",
+      "wdprop": null,
+      "formatter_url": "https://www.zotero.org/groups/5449136/neocorpus/items/$1/item-details"
+    },
+    "P76": {
+      "enlabel": "processed fulltext JSON",
+      "type": "ExternalId",
+      "wdprop": null,
+      "formatter_url": "https://www.zotero.org/groups/5449136/neocorpus/items/$1/item-details"
+    },
+    "P77": {
+      "enlabel": "wikimedia language code",
+      "type": "String",
+      "wdprop": null
+    },
+    "P78": {
+      "enlabel": "is translingual borrowing of",
+      "type": "WikibaseLexeme",
+      "wdprop": null
+    },
+    "P79": {
+      "enlabel": "grammatical gender",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P80": {
+      "enlabel": "P80",
+      "type": "WikibaseProperty",
+      "wdprop": null
+    },
+    "P81": {
+      "enlabel": "P81",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P82": {
+      "enlabel": "part of collection",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P83": {
+      "enlabel": "neologism type",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P84": {
+      "enlabel": "lexical innovation process type",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P85": {
+      "enlabel": "source lexeme",
+      "type": "WikibaseLexeme",
+      "wdprop": null
+    },
+    "P86": {
+      "enlabel": "described at URL",
+      "type": "Url",
+      "wdprop": null
+    },
+    "P87": {
+      "enlabel": "text page about this item",
+      "type": "ExternalId",
+      "wdprop": null,
+      "formatter_url": "https://eneoli.wikibase.cloud/wiki/$1"
+    },
+    "P88": {
+      "enlabel": "attested in",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P89": {
+      "enlabel": "member of word family",
+      "type": "WikibaseLexeme",
+      "wdprop": null
+    },
+    "P90": {
+      "enlabel": "domain part or facet",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P91": {
+      "enlabel": "part or facet of",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P92": {
+      "enlabel": "terms part of speech",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P93": {
+      "enlabel": "lexical innovation result type",
+      "type": "WikibaseItem",
+      "wdprop": null
+    },
+    "P94": {
+      "enlabel": "attestation in context",
+      "type": "Monolingualtext",
+      "wdprop": null
+    },
+    "P95": {
+      "enlabel": "source URL",
+      "type": "Url",
+      "wdprop": null
+    },
+    "P96": {
+      "enlabel": "attestation date",
+      "type": "Time",
+      "wdprop": null
+    },
+    "P97": {
+      "enlabel": "subject sense",
+      "type": "WikibaseSense",
+      "wdprop": null
+    },
+    "P98": {
+      "enlabel": "Fandom article ID",
+      "type": "ExternalId",
+      "wdprop": "P6262",
+      "formatter_url": "https://community.fandom.com/wiki/w:c:$1"
     }
   }
 }

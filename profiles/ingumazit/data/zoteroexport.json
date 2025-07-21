@@ -1,7 +1,7 @@
 [
   {
-    "key": "ZVN4ERVU",
-    "version": 8773,
+    "key": "L8WJ3NEN",
+    "version": 9118,
     "library": {
       "type": "group",
       "id": 5597887,
@@ -15,11 +15,11 @@
     },
     "links": {
       "self": {
-        "href": "https://api.zotero.org/groups/5597887/items/ZVN4ERVU",
+        "href": "https://api.zotero.org/groups/5597887/items/L8WJ3NEN",
         "type": "application/json"
       },
       "alternate": {
-        "href": "https://www.zotero.org/groups/ziterauzi/items/ZVN4ERVU",
+        "href": "https://www.zotero.org/groups/ziterauzi/items/L8WJ3NEN",
         "type": "text/html"
       }
     },
@@ -35,122 +35,20 @@
           }
         }
       },
-      "creatorSummary": "Mitxelena Elissalt",
-      "parsedDate": "1988",
-      "numChildren": 1
+      "creatorSummary": "Michelena",
+      "parsedDate": "1997",
+      "numChildren": 0
     },
     "data": {
-      "key": "ZVN4ERVU",
-      "version": 8773,
+      "key": "L8WJ3NEN",
+      "version": 9118,
       "itemType": "book",
-      "title": "Sobre historia de la lengua vasca",
+      "title": "Languages and protolanguages",
       "creators": [
         {
           "creatorType": "author",
-          "firstName": "Koldo",
-          "lastName": "Mitxelena Elissalt"
-        },
-        {
-          "creatorType": "editor",
-          "firstName": "Joseba Andoni",
-          "lastName": "Lakarra Andrinua"
-        },
-        {
-          "creatorType": "editor",
-          "firstName": "Mar\u00eda Teresa",
-          "lastName": "Echenique Elizondo"
-        },
-        {
-          "creatorType": "editor",
-          "firstName": "Blanca",
-          "lastName": "Urgell"
-        }
-      ],
-      "abstractNote": "",
-      "series": "Anejos del Anuario del Seminario de Filolog\u00eda Vasca \"Julio de Urquijo\"",
-      "seriesNumber": "10",
-      "volume": "",
-      "numberOfVolumes": "",
-      "edition": "",
-      "place": "Donostia",
-      "publisher": "Seminario de Filolog\u00eda Vasca \"Julio de Urquijo\"",
-      "date": "1988",
-      "numPages": "",
-      "language": "spa",
-      "ISBN": "978-84-505-8247-5",
-      "shortTitle": "Sobre historia de la lengua vasca",
-      "url": "https://dialnet.unirioja.es/servlet/libro?codigo=157785",
-      "accessDate": "2024-07-12T22:14:58Z",
-      "archive": "",
-      "archiveLocation": "",
-      "libraryCatalog": "dialnet.unirioja.es",
-      "callNumber": "",
-      "rights": "",
-      "extra": "https://wikibase.inguma.eus/entity/Q40416\nOCLC: 635686267",
-      "tags": [
-        {
-          "tag": "on-wikibase"
-        }
-      ],
-      "collections": [
-        "Z9N72IF5"
-      ],
-      "relations": {},
-      "dateAdded": "2024-07-12T22:14:55Z",
-      "dateModified": "2024-09-09T17:09:15Z"
-    },
-    "wikibase_entity": "Q40416"
-  },
-  {
-    "key": "UYJ84JF9",
-    "version": 8773,
-    "library": {
-      "type": "group",
-      "id": 5597887,
-      "name": "ziterauzi",
-      "links": {
-        "alternate": {
-          "href": "https://www.zotero.org/groups/ziterauzi",
-          "type": "text/html"
-        }
-      }
-    },
-    "links": {
-      "self": {
-        "href": "https://api.zotero.org/groups/5597887/items/UYJ84JF9",
-        "type": "application/json"
-      },
-      "alternate": {
-        "href": "https://www.zotero.org/groups/ziterauzi/items/UYJ84JF9",
-        "type": "text/html"
-      }
-    },
-    "meta": {
-      "createdByUser": {
-        "id": 772439,
-        "username": "david_lindemann",
-        "name": "David Lindemann",
-        "links": {
-          "alternate": {
-            "href": "https://www.zotero.org/david_lindemann",
-            "type": "text/html"
-          }
-        }
-      },
-      "creatorSummary": "Mitxelena Elissalt",
-      "parsedDate": "1987",
-      "numChildren": 1
-    },
-    "data": {
-      "key": "UYJ84JF9",
-      "version": 8773,
-      "itemType": "book",
-      "title": "Palabras y textos",
-      "creators": [
-        {
-          "creatorType": "author",
-          "firstName": "Koldo",
-          "lastName": "Mitxelena Elissalt"
+          "firstName": "Luis",
+          "lastName": "Michelena"
         },
         {
           "creatorType": "editor",
@@ -164,22 +62,696 @@
       "volume": "",
       "numberOfVolumes": "",
       "edition": "",
-      "place": "",
-      "publisher": "",
-      "date": "1987",
-      "numPages": "",
-      "language": "spa",
-      "ISBN": "978-84-7585-092-4",
+      "place": "Bilbao",
+      "publisher": "Universidad del Pa\u00eds Vasco",
+      "date": "1997",
+      "numPages": "92",
+      "language": "eng",
+      "ISBN": "978-84-7585-955-2",
       "shortTitle": "",
-      "url": "https://dialnet.unirioja.es/servlet/libro?codigo=154003",
-      "accessDate": "2024-07-12T22:14:58Z",
+      "url": "",
+      "accessDate": "",
       "archive": "",
       "archiveLocation": "",
-      "libraryCatalog": "dialnet.unirioja.es",
+      "libraryCatalog": "Open WorldCat",
       "callNumber": "",
       "rights": "",
-      "extra": "https://wikibase.inguma.eus/entity/Q40398\nOCLC: 605070446",
+      "extra": "https://wikibase.inguma.eus/entity/Q45157\nOCLC: 38863152",
       "tags": [
+        {
+          "tag": "on-wikibase"
+        }
+      ],
+      "collections": [],
+      "relations": {},
+      "dateAdded": "2024-10-25T11:43:42Z",
+      "dateModified": "2024-10-25T11:44:20Z"
+    },
+    "wikibase_entity": "Q45157"
+  },
+  {
+    "key": "BWUHEUWR",
+    "version": 9115,
+    "library": {
+      "type": "group",
+      "id": 5597887,
+      "name": "ziterauzi",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/ziterauzi",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5597887/items/BWUHEUWR",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/ziterauzi/items/BWUHEUWR",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/5597887/items/X339INWD",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 2327322
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Michelena, Luis",
+      "parsedDate": "1953-01-01",
+      "numChildren": 2
+    },
+    "data": {
+      "key": "BWUHEUWR",
+      "version": 9115,
+      "itemType": "journalArticle",
+      "title": "J. Hubschmid, Sardische Studien",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "",
+          "lastName": "Michelena, Luis"
+        }
+      ],
+      "abstractNote": "",
+      "publicationTitle": "Bolet\u00edn de la Real Sociedad Bascongada de Amigos del Pa\u00eds",
+      "volume": "9",
+      "issue": "3",
+      "pages": "479-483",
+      "date": "1953-01-01",
+      "series": "",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "",
+      "language": "es",
+      "DOI": "",
+      "ISSN": "0211-111X",
+      "shortTitle": "",
+      "url": "http://rsbap.org/index.php/boletin/article/view/2283",
+      "accessDate": "2024-10-24T20:26:02Z",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "rsbap.org",
+      "callNumber": "",
+      "rights": "Derechos de autor 0",
+      "extra": "https://wikibase.inguma.eus/entity/Q45155\nNumber: 3",
+      "tags": [
+        {
+          "tag": ":type Review"
+        },
+        {
+          "tag": "on-wikibase"
+        },
+        {
+          "tag": "oocc:44417"
+        }
+      ],
+      "collections": [],
+      "relations": {},
+      "dateAdded": "2024-10-24T20:26:02Z",
+      "dateModified": "2024-10-25T11:20:49Z"
+    },
+    "wikibase_entity": "Q45155"
+  },
+  {
+    "key": "MXFB2MXQ",
+    "version": 9115,
+    "library": {
+      "type": "group",
+      "id": 5597887,
+      "name": "ziterauzi",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/ziterauzi",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5597887/items/MXFB2MXQ",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/ziterauzi/items/MXFB2MXQ",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/5597887/items/KAMZVS3Z",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 3326963
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Michelena",
+      "parsedDate": "1958-08-01",
+      "numChildren": 2
+    },
+    "data": {
+      "key": "MXFB2MXQ",
+      "version": 9115,
+      "itemType": "journalArticle",
+      "title": "Wagner, Dizionario etimologico sardo (2)",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Luis",
+          "lastName": "Michelena"
+        }
+      ],
+      "abstractNote": "",
+      "publicationTitle": "Word",
+      "volume": "14",
+      "issue": "2-3",
+      "pages": "405-406",
+      "date": "1958-08-01",
+      "series": "",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "",
+      "language": "fr",
+      "DOI": "10.1080/00437956.1958.11659678",
+      "ISSN": "0043-7956",
+      "shortTitle": "",
+      "url": "https://doi.org/10.1080/00437956.1958.11659678",
+      "accessDate": "2024-10-24T20:10:30Z",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "Taylor and Francis+NEJM",
+      "callNumber": "",
+      "rights": "",
+      "extra": "https://wikibase.inguma.eus/entity/Q45153\nPublisher: Routledge\n_eprint: https://doi.org/10.1080/00437956.1958.11659678",
+      "tags": [
+        {
+          "tag": ":type Review"
+        },
+        {
+          "tag": "on-wikibase"
+        },
+        {
+          "tag": "oocc:44615"
+        }
+      ],
+      "collections": [],
+      "relations": {},
+      "dateAdded": "2024-10-24T20:10:30Z",
+      "dateModified": "2024-10-25T11:20:49Z"
+    },
+    "wikibase_entity": "Q45153"
+  },
+  {
+    "key": "C4SJLCKY",
+    "version": 9115,
+    "library": {
+      "type": "group",
+      "id": 5597887,
+      "name": "ziterauzi",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/ziterauzi",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5597887/items/C4SJLCKY",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/ziterauzi/items/C4SJLCKY",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/5597887/items/T6VRKGR9",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 1948434
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Urquijo",
+      "parsedDate": "1967-03-19",
+      "numChildren": 2
+    },
+    "data": {
+      "key": "C4SJLCKY",
+      "version": 9115,
+      "itemType": "journalArticle",
+      "title": "Los refranes del cuaderno de Oihenart",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Julio de",
+          "lastName": "Urquijo"
+        }
+      ],
+      "abstractNote": "-",
+      "publicationTitle": "Anuario del Seminario de Filolog\u00eda Vasca \"Julio de Urquijo\"",
+      "volume": "1",
+      "issue": "",
+      "pages": "11-44",
+      "date": "1967-03-19",
+      "series": "",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "",
+      "language": "eu",
+      "DOI": "",
+      "ISSN": "2444-2992",
+      "shortTitle": "",
+      "url": "https://ojs.ehu.eus/index.php/ASJU/article/view/7191",
+      "accessDate": "2024-10-24T18:22:06Z",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "ojs.ehu.eus",
+      "callNumber": "",
+      "rights": "Copyright (c) 2015 Anuario del Seminario de Filolog\u00eda Vasca \"Julio de Urquijo\"",
+      "extra": "https://wikibase.inguma.eus/entity/Q45151",
+      "tags": [
+        {
+          "tag": "on-wikibase"
+        },
+        {
+          "tag": "oocc:44326"
+        }
+      ],
+      "collections": [],
+      "relations": {},
+      "dateAdded": "2024-10-24T18:22:06Z",
+      "dateModified": "2024-10-25T11:20:49Z"
+    },
+    "wikibase_entity": "Q45151"
+  },
+  {
+    "key": "7PZUC23N",
+    "version": 9115,
+    "library": {
+      "type": "group",
+      "id": 5597887,
+      "name": "ziterauzi",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/ziterauzi",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5597887/items/7PZUC23N",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/ziterauzi/items/7PZUC23N",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/5597887/items/SDRCJFMZ",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 1477871
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Michelena",
+      "parsedDate": "1958-04-01",
+      "numChildren": 2
+    },
+    "data": {
+      "key": "7PZUC23N",
+      "version": 9115,
+      "itemType": "journalArticle",
+      "title": "Wagner, Dizionario etimologico sardo (1)",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Luis",
+          "lastName": "Michelena"
+        }
+      ],
+      "abstractNote": "",
+      "publicationTitle": "Word",
+      "volume": "14",
+      "issue": "1",
+      "pages": "100-101",
+      "date": "1958-04-01",
+      "series": "",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "",
+      "language": "fr",
+      "DOI": "10.1080/00437956.1958.11659659",
+      "ISSN": "0043-7956",
+      "shortTitle": "",
+      "url": "https://doi.org/10.1080/00437956.1958.11659659",
+      "accessDate": "2024-10-24T20:12:58Z",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "Taylor and Francis+NEJM",
+      "callNumber": "",
+      "rights": "",
+      "extra": "https://wikibase.inguma.eus/entity/Q45154\nPublisher: Routledge\n_eprint: https://doi.org/10.1080/00437956.1958.11659659",
+      "tags": [
+        {
+          "tag": ":type Review"
+        },
+        {
+          "tag": "on-wikibase"
+        },
+        {
+          "tag": "oocc:44616"
+        }
+      ],
+      "collections": [],
+      "relations": {},
+      "dateAdded": "2024-10-24T20:12:58Z",
+      "dateModified": "2024-10-25T11:20:49Z"
+    },
+    "wikibase_entity": "Q45154"
+  },
+  {
+    "key": "H8Y5LW3W",
+    "version": 9115,
+    "library": {
+      "type": "group",
+      "id": 5597887,
+      "name": "ziterauzi",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/ziterauzi",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5597887/items/H8Y5LW3W",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/ziterauzi/items/H8Y5LW3W",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/5597887/items/V29FK8VA",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 3602356
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Michelena",
+      "parsedDate": "1959-01-01",
+      "numChildren": 2
+    },
+    "data": {
+      "key": "H8Y5LW3W",
+      "version": 9115,
+      "itemType": "journalArticle",
+      "title": "Wagner, Dizionario etimologico sardo (3-6)",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Luis",
+          "lastName": "Michelena"
+        }
+      ],
+      "abstractNote": "",
+      "publicationTitle": "Word",
+      "volume": "15",
+      "issue": "3",
+      "pages": "523-527",
+      "date": "1959-01-01",
+      "series": "",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "",
+      "language": "fr",
+      "DOI": "10.1080/00437956.1959.11659713",
+      "ISSN": "0043-7956",
+      "shortTitle": "",
+      "url": "https://doi.org/10.1080/00437956.1959.11659713",
+      "accessDate": "2024-10-24T20:02:44Z",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "Taylor and Francis+NEJM",
+      "callNumber": "",
+      "rights": "",
+      "extra": "https://wikibase.inguma.eus/entity/Q45152",
+      "tags": [
+        {
+          "tag": ":type Review"
+        },
+        {
+          "tag": "on-wikibase"
+        },
+        {
+          "tag": "oocc:44567"
+        }
+      ],
+      "collections": [],
+      "relations": {},
+      "dateAdded": "2024-10-24T20:02:44Z",
+      "dateModified": "2024-10-25T11:20:49Z"
+    },
+    "wikibase_entity": "Q45152"
+  },
+  {
+    "key": "UZ3QUFB8",
+    "version": 9115,
+    "library": {
+      "type": "group",
+      "id": 5597887,
+      "name": "ziterauzi",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/ziterauzi",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5597887/items/UZ3QUFB8",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/ziterauzi/items/UZ3QUFB8",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/5597887/items/6WG32HDC",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 4067495
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Mitxelena",
+      "parsedDate": "1953-01-01",
+      "numChildren": 2
+    },
+    "data": {
+      "key": "UZ3QUFB8",
+      "version": 9115,
+      "itemType": "journalArticle",
+      "title": "Arnaut Oihenart",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Luis",
+          "lastName": "Mitxelena"
+        }
+      ],
+      "abstractNote": "",
+      "publicationTitle": "Bolet\u00edn de la Real Sociedad Bascongada de Amigos del Pa\u00eds",
+      "volume": "9",
+      "issue": "3",
+      "pages": "445-463",
+      "date": "1953/01/01",
+      "series": "",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "",
+      "language": "eu",
+      "DOI": "",
+      "ISSN": "0211-111X",
+      "shortTitle": "Arnaut Oihenart",
+      "url": "https://rsbap.org/ojs/index.php/boletin/article/view/2281",
+      "accessDate": "2024-10-24T19:11:34Z",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "rsbap.org",
+      "callNumber": "",
+      "rights": "Derechos de autor 0",
+      "extra": "https://wikibase.inguma.eus/entity/Q40038",
+      "tags": [
+        {
+          "tag": "on-wikibase"
+        }
+      ],
+      "collections": [],
+      "relations": {},
+      "dateAdded": "2024-10-24T19:11:34Z",
+      "dateModified": "2024-10-25T11:20:49Z"
+    },
+    "wikibase_entity": "Q40038"
+  },
+  {
+    "key": "VAMWBAEA",
+    "version": 9115,
+    "library": {
+      "type": "group",
+      "id": 5597887,
+      "name": "ziterauzi",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/ziterauzi",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5597887/items/VAMWBAEA",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/ziterauzi/items/VAMWBAEA",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/5597887/items/5HCS7QAT",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 931167
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Michelena",
+      "parsedDate": "1954-02-23",
+      "numChildren": 2
+    },
+    "data": {
+      "key": "VAMWBAEA",
+      "version": 9115,
+      "itemType": "journalArticle",
+      "title": "De la pronunciaci\u00f3n medieval a la moderna en espa\u00f1ol, de Amado Alonso",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Luis",
+          "lastName": "Michelena"
+        }
+      ],
+      "abstractNote": "-",
+      "publicationTitle": "Anuario del Seminario de Filolog\u00eda Vasca \"Julio de Urquijo\"",
+      "volume": "",
+      "issue": "",
+      "pages": "119-126",
+      "date": "1954-02-23",
+      "series": "",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "",
+      "language": "es",
+      "DOI": "10.1387/asju.7421",
+      "ISSN": "2444-2992",
+      "shortTitle": "",
+      "url": "https://ojs.ehu.eus/index.php/ASJU/article/view/7421",
+      "accessDate": "2024-10-24T18:26:59Z",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "ojs.ehu.eus",
+      "callNumber": "",
+      "rights": "Copyright (c) 2015 Anuario del Seminario de Filolog\u00eda Vasca \"Julio de Urquijo\"",
+      "extra": "https://wikibase.inguma.eus/entity/Q40486\nPublisher: Diputaci\u00f3n Foral de Guip\u00fazcoa = Gipuzkoako Foru Aldundia\nSection: Anuario del Seminario de Filolog\u00eda Vasca Julio de Urquijo: International journal of basque linguistics and philology",
+      "tags": [
+        {
+          "tag": ":type Review"
+        },
         {
           "tag": "on-wikibase"
         }
@@ -188,11 +760,11 @@
         "Z9N72IF5"
       ],
       "relations": {
-        "dc:relation": "http://zotero.org/groups/5597887/items/E6EJAA2S"
+        "dc:replaces": "http://zotero.org/groups/5597887/items/9AN84UQA"
       },
       "dateAdded": "2024-07-12T22:14:55Z",
-      "dateModified": "2024-09-09T17:08:57Z"
+      "dateModified": "2024-10-25T11:20:49Z"
     },
-    "wikibase_entity": "Q40398"
+    "wikibase_entity": "Q40486"
   }
 ]

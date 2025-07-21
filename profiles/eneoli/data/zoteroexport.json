@@ -1,1 +1,1315 @@
-[]
+[
+  {
+    "key": "U5P7ZAQX",
+    "version": 26469,
+    "library": {
+      "type": "group",
+      "id": 5449136,
+      "name": "NeoCorpus",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/neocorpus",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5449136/items/U5P7ZAQX",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/neocorpus/items/U5P7ZAQX",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/5449136/items/ECLKT3SR",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 2206640
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 7366654,
+        "username": "ana.salgado",
+        "name": "Ana Salgado",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/ana.salgado",
+            "type": "text/html"
+          }
+        }
+      },
+      "lastModifiedByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Tomi\u0107",
+      "parsedDate": "2019",
+      "numChildren": 9
+    },
+    "data": {
+      "key": "U5P7ZAQX",
+      "version": 26469,
+      "itemType": "journalArticle",
+      "title": "On a New Type of Word-Forming Element in Serbian",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Gorica",
+          "lastName": "Tomi\u0107"
+        }
+      ],
+      "abstractNote": "This paper qualitatively and quantitatively analyses a new type of wordforming element in Serbian, known as a splinter, used in the formation of lexical blends. The aims of the present research are: (a) to identify the most frequent splinters in Serbian blends, (b) to investigate which words or parts of words they tend to combine with and how, (c) to identify the meanings of these splinters, and (d) to explore whether the splinters show the potential to develop into new combining forms. The research is corpus-based. The examples of 172 lexical blends containing the 14 most frequent splinters are collected from several sources, including the studies and papers on blends in Serbian, the Serbian Web Corpus, and various other Internet and print sources. The analysis indicates that the vast majority of the splinters, which are segmented from nouns whose meanings they retain, combine also with nouns. Some of the splinters show the potential to become well-established bound morphemes, i.e. combining forms, through regularity in use or semantic generalisation and specialisation.",
+      "publicationTitle": "Filolog - \u010casopis Za Jezik, Knji\u017eevnost I Kulturu",
+      "volume": "",
+      "issue": "",
+      "pages": "",
+      "date": "2019",
+      "series": "",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "O JEDNOM NOVOM TIPU TVORBENOG FORMANTA U SRPSKOM JEZIKU",
+      "language": "en",
+      "DOI": "10.21618/fil1920248t",
+      "ISSN": "1986-5864",
+      "shortTitle": "",
+      "url": "https://scidar.kg.ac.rs/handle/123456789/18483",
+      "accessDate": "2025-01-21T10:17:18Z",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "scidar.kg.ac.rs",
+      "callNumber": "",
+      "rights": "Attribution-NonCommercial 3.0 United States",
+      "extra": "https://eneoli.wikibase.cloud/entity/Q2169\nPublisher: Univerzitet u Banjoj Luci, Filolo\u0161ki fakultet",
+      "tags": [
+        {
+          "tag": "T3.1"
+        },
+        {
+          "tag": "blending_subcorpus"
+        },
+        {
+          "tag": "on-wikibase"
+        },
+        {
+          "tag": "processed_fulltext"
+        },
+        {
+          "tag": "term-indexed"
+        },
+        {
+          "tag": "validated metadata"
+        }
+      ],
+      "collections": [
+        "4VVJDXGU",
+        "KSJST7SI",
+        "ASPUCB3R"
+      ],
+      "relations": {
+        "dc:replaces": [
+          "http://zotero.org/groups/5449136/items/97Z799LR",
+          "http://zotero.org/groups/5449136/items/TSWLLBLW",
+          "http://zotero.org/groups/5449136/items/W35IPUVP"
+        ]
+      },
+      "dateAdded": "2025-01-21T10:17:18Z",
+      "dateModified": "2025-03-27T08:24:30Z"
+    },
+    "wikibase_entity": "Q2169"
+  },
+  {
+    "key": "TEJKZWZS",
+    "version": 26466,
+    "library": {
+      "type": "group",
+      "id": 5449136,
+      "name": "NeoCorpus",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/neocorpus",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5449136/items/TEJKZWZS",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/neocorpus/items/TEJKZWZS",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/5449136/items/4JBHU9Q3",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 646324
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 7366654,
+        "username": "ana.salgado",
+        "name": "Ana Salgado",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/ana.salgado",
+            "type": "text/html"
+          }
+        }
+      },
+      "lastModifiedByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Cacchiani",
+      "parsedDate": "2016",
+      "numChildren": 12
+    },
+    "data": {
+      "key": "TEJKZWZS",
+      "version": 26466,
+      "itemType": "conferencePaper",
+      "title": "On Italian Lexical Blends: Borrowings, Hybridity, Adaptations, and Native Word Formations",
+      "creators": [
+        {
+          "creatorType": "editor",
+          "firstName": "Sebastian",
+          "lastName": "Knospe"
+        },
+        {
+          "creatorType": "editor",
+          "firstName": "Alexander",
+          "lastName": "Onysko"
+        },
+        {
+          "creatorType": "editor",
+          "firstName": "Maik",
+          "lastName": "Goth"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Silvia",
+          "lastName": "Cacchiani"
+        }
+      ],
+      "abstractNote": ": This paper addresses intentional lexical blending in Italian as conscious wordplay (cf. e.g. Renner 2015; Sablayrolles 2015a; Zirker and Winter-Froemel 2015). Working on the assumption that the obvious increase in lexical blends in Italian suggests ongoing processes of language change, which, at least partly, appear to be contact-induced, we address the transfer of lexical blends from English, including borrowings, adaptations, and hybrid blends. To this purpose, a preliminary exploration of native blends and lexical blending techniques and the scalar notion of morphotactic (non-)transparency (or opacity) (Dressler 1987; Ronneberger-Sibold 2010, 2012; Cacchiani 2011), will make it possible to discuss types of wordplay \u2013 not only formal complexity, transgres-sion, or semantic play on words (Renner 2015) but also graphic play in hybrid blends, pseudo-anglicisms and foreign-sounding word formations. Based on the assumption that discourse mode and genre conventions interact with the selection of blending technique, type of wordplay and pragmatic purpose of the lexical blend \u2013 from maximally descriptive to maximally ludic (cf. e.g. Sablay-rolles 2015a) \u2013 we will suggest some preliminary equations between these dimensions grounded in qualitative analysis of examples from journalese, advertising, names of brands, companies, events, etc., children and nonsense literature. Crucially, where making meta-sense from phonological motivation and play with sound shapes is the goal (e.g. in Lewis Carroll\u02bcs \u201cThe Jabberwocky\u201d), choosing to render more transparent ST techniques by means of more morpho-tactically opaque types in the Italian TT demonstrates the remarkable ability of Italian to exploit lexical blending \u2013 if only in specific contexts.",
+      "date": "2016",
+      "proceedingsTitle": "",
+      "conferenceName": "",
+      "place": "",
+      "publisher": "De Gruyter",
+      "volume": "",
+      "pages": "305-336",
+      "series": "",
+      "language": "en",
+      "DOI": "10.1515/9783110465600-015",
+      "ISBN": "978-3-11-046560-0",
+      "shortTitle": "On Italian Lexical Blends",
+      "url": "https://www.degruyter.com/document/doi/10.1515/9783110465600-015/html",
+      "accessDate": "2025-01-21T13:19:14Z",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "Semantic Scholar",
+      "callNumber": "",
+      "rights": "http://creativecommons.org/licenses/by-nc-nd/4.0",
+      "extra": "https://eneoli.wikibase.cloud/entity/Q2168\nBook Title: Crossing Languages to Play with Words\nDOI: 10.1515/9783110465600-015",
+      "tags": [
+        {
+          "tag": "T3.1"
+        },
+        {
+          "tag": "blending_subcorpus"
+        },
+        {
+          "tag": "on-wikibase"
+        },
+        {
+          "tag": "processed_fulltext"
+        },
+        {
+          "tag": "term-indexed"
+        },
+        {
+          "tag": "validated metadata"
+        }
+      ],
+      "collections": [
+        "4VVJDXGU",
+        "9ESF8MFH",
+        "ASPUCB3R"
+      ],
+      "relations": {
+        "dc:replaces": [
+          "http://zotero.org/groups/5449136/items/SUB8D8QZ",
+          "http://zotero.org/groups/5449136/items/2GEJJPSV",
+          "http://zotero.org/groups/5449136/items/WSPHDGKP"
+        ]
+      },
+      "dateAdded": "2025-01-21T13:19:14Z",
+      "dateModified": "2025-03-27T08:24:26Z"
+    },
+    "wikibase_entity": "Q2168"
+  },
+  {
+    "key": "ARCDDJI6",
+    "version": 26463,
+    "library": {
+      "type": "group",
+      "id": 5449136,
+      "name": "NeoCorpus",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/neocorpus",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5449136/items/ARCDDJI6",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/neocorpus/items/ARCDDJI6",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/5449136/items/GLDNLYZ9",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 339396
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 14234329,
+        "username": "Maria_Leonor_Reis",
+        "name": "",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/maria_leonor_reis",
+            "type": "text/html"
+          }
+        }
+      },
+      "lastModifiedByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Villalva and Minussi",
+      "parsedDate": "2022",
+      "numChildren": 9
+    },
+    "data": {
+      "key": "ARCDDJI6",
+      "version": 26463,
+      "itemType": "journalArticle",
+      "title": "Description and analysis of a Portuguese blend corpus",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Alina",
+          "lastName": "Villalva"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Rafael Dias",
+          "lastName": "Minussi"
+        }
+      ],
+      "abstractNote": "Multi-word formation processes in Portuguese comprise root-compounding (e.g., toxicodependente \u2018drug addict\u2019, agridoce \u2018sour sweet\u2019), word-compounding (e.g., barco-casa \u2018houseboat\u2019, guarda-roupa \u2018wardrobe\u2019, cantora-atriz \u2018singer/actress\u2019), and blending (e.g., cartomente \u2018lying fortune teller\u2019 < cartomante \u2018fortune teller\u2019 + mente \u2018he/she lies\u2019, tristemunho \u2018sad testimony\u2019 < triste \u2018sad\u2019 + testemunho \u2018testimony\u2019, cantautor \u2018singer and composer\u2019 < cantor singer + autor \u2018composer\u2019). Compound structures have been quite thoroughly described by several authors (e.g., Villalva & Gon\u00e7alves 2015), whereas blending has garnered some controversial and even contradictory analyses. Some authors claim that blends and compounds have similar structures, while others consider that they have completely different structures (e.g., Gries 2004b, Minussi & N\u00f3brega 2014).\nThis paper focuses on the description and analysis of an annotated corpus of Portuguese blends, and on the presentation of experimental evidence that aims to assess the knowledge of these words by native young adult European and Brazilian Portuguese speakers.\nThe first section is devoted to the presentation of Portuguese blends, namely regarding the status of their constituents and their linear relationships, grammatical structure, and the phonetic/prosodic relationship that holds between the blends and their base words. The second section focuses on the description of the Portuguese blend corpus. Although new coinages make this a never-ending work in progress, it is presently formed by (circa) 300 blends, collected in a variety of sources, from literary texts to political and social commenting, advertising, or even individual ad hoc instances. The information gathered in the corpus comprehends all the features considered in the analysis of the blends, presented in section 1, and it also provides data on attestation and frequency. The third section presents an analysis of a sub-corpus (184 forms), related to their linear structure, grammatical and prosodic relationships, and a cross-analysis that suggests that there is a strong link between headedness and cliphood. Finally, the fourth section offers a brief presentation of experimental work that suggests that clips facilitate the processing of blends, since the clipped word is more frequently used in replies to a familiarity test, and the same happens with reaction time values obtained in a lexical decision test.",
+      "publicationTitle": "Corpus",
+      "volume": "",
+      "issue": "23",
+      "pages": "",
+      "date": "2022",
+      "series": "",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "corpus",
+      "language": "en",
+      "DOI": "10.4000/corpus.6436",
+      "ISSN": "1638-9808",
+      "shortTitle": "",
+      "url": "http://journals.openedition.org/corpus/6436",
+      "accessDate": "2025-01-21T15:25:46Z",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "DOI.org (Crossref)",
+      "callNumber": "",
+      "rights": "",
+      "extra": "https://eneoli.wikibase.cloud/entity/Q2166",
+      "tags": [
+        {
+          "tag": "T3.1"
+        },
+        {
+          "tag": "blending_subcorpus"
+        },
+        {
+          "tag": "on-wikibase"
+        },
+        {
+          "tag": "processed_fulltext"
+        },
+        {
+          "tag": "term-indexed"
+        },
+        {
+          "tag": "validated metadata"
+        }
+      ],
+      "collections": [
+        "4VVJDXGU",
+        "XWJ6AKLI",
+        "ASPUCB3R"
+      ],
+      "relations": {
+        "dc:replaces": [
+          "http://zotero.org/groups/5449136/items/G8DF9MH6",
+          "http://zotero.org/groups/5449136/items/M7BBJ9ZE",
+          "http://zotero.org/groups/5449136/items/MZG88QLW"
+        ]
+      },
+      "dateAdded": "2025-01-21T15:25:46Z",
+      "dateModified": "2025-03-27T08:24:22Z"
+    },
+    "wikibase_entity": "Q2166"
+  },
+  {
+    "key": "UTNXLQRD",
+    "version": 26460,
+    "library": {
+      "type": "group",
+      "id": 5449136,
+      "name": "NeoCorpus",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/neocorpus",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5449136/items/UTNXLQRD",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/neocorpus/items/UTNXLQRD",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/5449136/items/4WIW7RUC",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 155396
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 7366654,
+        "username": "ana.salgado",
+        "name": "Ana Salgado",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/ana.salgado",
+            "type": "text/html"
+          }
+        }
+      },
+      "lastModifiedByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Brdar-Szab\u00f3 and Brdar",
+      "parsedDate": "2008",
+      "numChildren": 9
+    },
+    "data": {
+      "key": "UTNXLQRD",
+      "version": 26460,
+      "itemType": "journalArticle",
+      "title": "On the marginality of lexical blending",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Rita",
+          "lastName": "Brdar-Szab\u00f3"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "Mario",
+          "lastName": "Brdar"
+        }
+      ],
+      "abstractNote": "In spite of a recent surge of interest in it, blending remains among the most poorly understood and elusive word formation processes. What almost everybody seems to be agreed on is that, although it appears to be attested in many languages, it is...",
+      "publicationTitle": "Jezikoslovlje",
+      "volume": "9",
+      "issue": "1-2",
+      "pages": "171-194",
+      "date": "2008",
+      "series": "",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "",
+      "language": "en",
+      "DOI": "",
+      "ISSN": "1331-7202",
+      "shortTitle": "",
+      "url": "https://hrcak.srce.hr/30684",
+      "accessDate": "2025-01-21T15:53:06Z",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "hrcak.srce.hr",
+      "callNumber": "",
+      "rights": "",
+      "extra": "https://eneoli.wikibase.cloud/entity/Q2162\nPublisher: Sveu\u010dili\u0161te Josipa Jurja Strossmayera u Osijeku, Filozofski fakultet",
+      "tags": [
+        {
+          "tag": "T3.1"
+        },
+        {
+          "tag": "blending_subcorpus"
+        },
+        {
+          "tag": "on-wikibase"
+        },
+        {
+          "tag": "processed_fulltext"
+        },
+        {
+          "tag": "term-indexed"
+        },
+        {
+          "tag": "validated metadata"
+        }
+      ],
+      "collections": [
+        "4VVJDXGU",
+        "XWJ6AKLI",
+        "ASPUCB3R"
+      ],
+      "relations": {
+        "dc:replaces": [
+          "http://zotero.org/groups/5449136/items/SWJ745DF",
+          "http://zotero.org/groups/5449136/items/U6BZ42M4",
+          "http://zotero.org/groups/5449136/items/HMIPFT6I"
+        ]
+      },
+      "dateAdded": "2025-01-21T15:53:06Z",
+      "dateModified": "2025-03-27T08:24:17Z"
+    },
+    "wikibase_entity": "Q2162"
+  },
+  {
+    "key": "BJE6WKWE",
+    "version": 26457,
+    "library": {
+      "type": "group",
+      "id": 5449136,
+      "name": "NeoCorpus",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/neocorpus",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5449136/items/BJE6WKWE",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/neocorpus/items/BJE6WKWE",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/5449136/items/HC3RQZAV",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 437780
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 7366654,
+        "username": "ana.salgado",
+        "name": "Ana Salgado",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/ana.salgado",
+            "type": "text/html"
+          }
+        }
+      },
+      "lastModifiedByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Tomi\u0107",
+      "parsedDate": "2022",
+      "numChildren": 9
+    },
+    "data": {
+      "key": "BJE6WKWE",
+      "version": 26457,
+      "itemType": "journalArticle",
+      "title": "Lexical Blends in Serbian: An Analysis of Morphosemantic Transparency",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Gorica",
+          "lastName": "Tomi\u0107"
+        }
+      ],
+      "abstractNote": "The present paper investigates the two data sets of Serbian lexical blends by applying a typology of the four blending techniques (i.e. complete blending, contour blending, semi-complete blending, and fragment blending) scaled according to the relative morphosemantic transparency of the resulting blends, as proposed by Ronneberger-Sibold (2006, pp. 168&ndash;169) for German blends, with the aim of determining whether the users of contemporary Serbian are able to consciously and deliberately use the different degrees of morphosemantic transparency of blends for achieving various communicative purposes, namely humorous-satirical purposes and purposes of brand naming. Additionally, the paper aims to compare and contrast these results with the results obtained by Ronneberger-Sibold (2006) for 612 German satirical blends and brand names, thereby examining differences and similarities between the two typologically different languages. The data collection for the qualitative and quantitative analyses consists of 202 humorous-satirical blends and 102 brand names created by humorists, satirists, journalists, branding or marketing agencies, manufacturers, etc. The examples of blends are partly taken from a number of existing studies into Serbian blends and partly collected from a wide variety of sources including literary works, (political) satirical shows, journalistic media, official websites of companies and other manufacturers, etc., as well as by field research methods. The results of the analyses show that the creators of the Serbian humorous-satirical blends and brand names are actually well aware of the varying degrees of morphosemantic transparency of blends produced by the four blending techniques and are perfectly able to utilize these techniques for fulfilling various communicative functions. In addition, it has been shown that the users of the Serbian blends tend to prefer the same blending techniques as the users of the German blends (Ronneberger-Sibold, 2006, p. 175) for the creation of humorous-satirical blends and brand names, respectively, though not in the same proportions.",
+      "publicationTitle": "\u0417\u0431\u043e\u0440\u043d\u0438\u043a \u0440\u0430\u0434\u043e\u0432\u0430 \u0424\u0438\u043b\u043e\u0437\u043e\u0444\u0441\u043a\u043e\u0433 \u0444\u0430\u043a\u0443\u043b\u0442\u0435\u0442\u0430 \u0443 \u041f\u0440\u0438\u0448\u0442\u0438\u043d\u0438",
+      "volume": "52",
+      "issue": "3",
+      "pages": "",
+      "date": "2022",
+      "series": "",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "1",
+      "language": "en",
+      "DOI": "10.5937/zrffp52-32090",
+      "ISSN": "2217-8082",
+      "shortTitle": "Lexical Blends in Serbian",
+      "url": "https://aseestant.ceon.rs/index.php/zrffp/article/view/32090",
+      "accessDate": "2025-01-21T10:03:05Z",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "aseestant.ceon.rs",
+      "callNumber": "",
+      "rights": "Sva prava zadr\u017eana (c) 2022 Collection of Papers of the Faculty of Philosophy in Pri\u0161tina",
+      "extra": "https://eneoli.wikibase.cloud/entity/Q2172\nNumber: 3",
+      "tags": [
+        {
+          "tag": "T3.1"
+        },
+        {
+          "tag": "blending_subcorpus"
+        },
+        {
+          "tag": "on-wikibase"
+        },
+        {
+          "tag": "processed_fulltext"
+        },
+        {
+          "tag": "term-indexed"
+        },
+        {
+          "tag": "validated metadata"
+        }
+      ],
+      "collections": [
+        "4VVJDXGU",
+        "KSJST7SI",
+        "ASPUCB3R"
+      ],
+      "relations": {
+        "dc:replaces": [
+          "http://zotero.org/groups/5449136/items/ZQN88CLD",
+          "http://zotero.org/groups/5449136/items/77UGEVKA",
+          "http://zotero.org/groups/5449136/items/L37Q6DS6"
+        ]
+      },
+      "dateAdded": "2025-01-21T10:03:05Z",
+      "dateModified": "2025-03-27T08:24:13Z"
+    },
+    "wikibase_entity": "Q2172"
+  },
+  {
+    "key": "MCYQXXH7",
+    "version": 26454,
+    "library": {
+      "type": "group",
+      "id": 5449136,
+      "name": "NeoCorpus",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/neocorpus",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5449136/items/MCYQXXH7",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/neocorpus/items/MCYQXXH7",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/5449136/items/68LKRIMT",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 535518
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 7366654,
+        "username": "ana.salgado",
+        "name": "Ana Salgado",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/ana.salgado",
+            "type": "text/html"
+          }
+        }
+      },
+      "lastModifiedByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Tomi\u0107",
+      "parsedDate": "2022",
+      "numChildren": 9
+    },
+    "data": {
+      "key": "MCYQXXH7",
+      "version": 26454,
+      "itemType": "journalArticle",
+      "title": "Hybrid English-Serbian and Serbian-English Lexical Blends in Serbian",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Gorica",
+          "lastName": "Tomi\u0107"
+        }
+      ],
+      "abstractNote": "The present paper analyzes 111 contact-induced hybrid lexical blends in contemporary Serbian, i.e. new words which combine two other words belonging to different languages, namely English and Serbian. It aims at determining: (a) the preferences (if any) for the arrangement of the blends\u2019 source words as to whether they are native or non-native, (b) (the frequencies of) the blending mechanisms, (c) the semantics of the blends, including their semantic transparency, as well as (d) some social aspects of the blends\u2019 use. Additionally, the results obtained herein are compared with those for the contact-induced hybrid Spanish-English blends (BALTEIRO 2017) to determine whether the tendencies observed for the Serbian data are also characteristic of the Spanish data. The results show that: (a) non-native or English words tend to be arranged first, as well as fully preserved, as opposed to native words which are normally clipped if appear in first position, (b) discontinuous overlapping blends and blends of two full source words which necessarily overlap constitute the majority of the data, (c) most of the hybrid blends are of the attributive endocentric type, being fairly semantically transparent, and that (d) the Serbian hybrid blends are generally used in those social contexts such as advertising, business and product naming, or entertainment where linguistic creativity is not only highly desirable, but may have an important social function in creatively expressing identities. Finally, the comparative analysis indicates that there are fairly similar formal and semantic tendencies in the creation of the Serbian and Spanish hybrid blends.",
+      "publicationTitle": "PHILOLOGIA MEDIANA",
+      "volume": "14",
+      "issue": "14",
+      "pages": "",
+      "date": "2022",
+      "series": "",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "",
+      "language": "en",
+      "DOI": "10.46630/phm.14.2022.29",
+      "ISSN": "2620-2794",
+      "shortTitle": "",
+      "url": "https://philologiamediana.com/index.php/phm/article/view/750",
+      "accessDate": "2025-01-21T10:07:37Z",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "philologiamediana.com",
+      "callNumber": "",
+      "rights": "Copyright (c) 2022",
+      "extra": "https://eneoli.wikibase.cloud/entity/Q2171\nNumber: 14",
+      "tags": [
+        {
+          "tag": "T3.1"
+        },
+        {
+          "tag": "blending_subcorpus"
+        },
+        {
+          "tag": "on-wikibase"
+        },
+        {
+          "tag": "processed_fulltext"
+        },
+        {
+          "tag": "term-indexed"
+        },
+        {
+          "tag": "validated metadata"
+        }
+      ],
+      "collections": [
+        "4VVJDXGU",
+        "KSJST7SI",
+        "ASPUCB3R"
+      ],
+      "relations": {
+        "dc:replaces": [
+          "http://zotero.org/groups/5449136/items/LMX5ABGC",
+          "http://zotero.org/groups/5449136/items/QPLITUSG",
+          "http://zotero.org/groups/5449136/items/SQ5GPQD3"
+        ]
+      },
+      "dateAdded": "2025-01-21T10:07:37Z",
+      "dateModified": "2025-03-27T08:24:08Z"
+    },
+    "wikibase_entity": "Q2171"
+  },
+  {
+    "key": "LGPY5ZD8",
+    "version": 26450,
+    "library": {
+      "type": "group",
+      "id": 5449136,
+      "name": "NeoCorpus",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/neocorpus",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5449136/items/LGPY5ZD8",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/neocorpus/items/LGPY5ZD8",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/5449136/items/T2QX65RN",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 388201
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 7366654,
+        "username": "ana.salgado",
+        "name": "Ana Salgado",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/ana.salgado",
+            "type": "text/html"
+          }
+        }
+      },
+      "lastModifiedByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Gries",
+      "parsedDate": "2004",
+      "numChildren": 10
+    },
+    "data": {
+      "key": "LGPY5ZD8",
+      "version": 26450,
+      "itemType": "bookSection",
+      "title": "Isn\u2019t that Fantabulous? How Similarity Motivates Intentional Morphological Blends in English",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Stefan Thomas",
+          "lastName": "Gries"
+        }
+      ],
+      "abstractNote": "",
+      "bookTitle": "Language, Culture, and Mind",
+      "series": "",
+      "seriesNumber": "",
+      "volume": "",
+      "numberOfVolumes": "",
+      "edition": "",
+      "place": "Stanford",
+      "publisher": "CSLI publications",
+      "date": "2004",
+      "pages": "415-428",
+      "language": "en",
+      "ISBN": "978-1-57586-464-8",
+      "shortTitle": "",
+      "url": "https://www.stgries.info/research/2004_STG_Blends_LangCultMind.pdf",
+      "accessDate": "",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "",
+      "callNumber": "",
+      "rights": "",
+      "extra": "https://eneoli.wikibase.cloud/entity/Q2228\nOCLC: 55098805",
+      "tags": [
+        {
+          "tag": "T3.1"
+        },
+        {
+          "tag": "blending_subcorpus"
+        },
+        {
+          "tag": "on-wikibase"
+        },
+        {
+          "tag": "processed_fulltext"
+        },
+        {
+          "tag": "term-indexed"
+        },
+        {
+          "tag": "validated metadata"
+        }
+      ],
+      "collections": [
+        "4VVJDXGU",
+        "XWJ6AKLI",
+        "ASPUCB3R"
+      ],
+      "relations": {
+        "owl:sameAs": "http://zotero.org/groups/5392498/items/JBQ46X76",
+        "dc:replaces": [
+          "http://zotero.org/groups/5449136/items/NJA87MW4",
+          "http://zotero.org/groups/5449136/items/JJ22AWYD",
+          "http://zotero.org/groups/5449136/items/HRDLHYEG",
+          "http://zotero.org/groups/5449136/items/SLW6SDRB"
+        ]
+      },
+      "dateAdded": "2024-04-03T18:11:04Z",
+      "dateModified": "2025-03-27T08:24:01Z"
+    },
+    "wikibase_entity": "Q2228"
+  },
+  {
+    "key": "8J6ET9DX",
+    "version": 26448,
+    "library": {
+      "type": "group",
+      "id": 5449136,
+      "name": "NeoCorpus",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/neocorpus",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5449136/items/8J6ET9DX",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/neocorpus/items/8J6ET9DX",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/5449136/items/HCKCW7AN",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 314335
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 7366654,
+        "username": "ana.salgado",
+        "name": "Ana Salgado",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/ana.salgado",
+            "type": "text/html"
+          }
+        }
+      },
+      "lastModifiedByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Mattiello",
+      "parsedDate": "2021",
+      "numChildren": 10
+    },
+    "data": {
+      "key": "8J6ET9DX",
+      "version": 26448,
+      "itemType": "journalArticle",
+      "title": "Blends vis-\u00e0-vis compounds in English",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Elisa",
+          "lastName": "Mattiello"
+        }
+      ],
+      "abstractNote": "This paper analyses blending and compounding from the viewpoint of their regularity, predictability, and grammaticalness. Like mixtures and compounds in chemistry, these two word-formation processes are dissimilar in terms of mor- photactic mechanisms employed and morphosemantic patterns involved. While novel compounds are created according to productive word-formation rules, new blends only exhibit regularities and (mutually exclusive) constraints. Yet, unlike other extra-grammatical abbreviatory mechanisms, such as acronyms or clippings (including clipped compounds), blending creates new words for novel objects or concepts. Hence, it deserves attention and needs to be included in a morphological description of the English language. The aims of this study are: (a) to distinguish blends from compounds in formal and semantic terms and (b) to identify degrees of predictability and grammaticalness for blend formation. Results show that the AD (i.e. initial part of Source Word1 + final part of Source Word2) overlapping type of blends is preferred over the AC (i.e. initial part of both Source Word1 and Source Word2) type: in AD-forms, D can also become a frequent splinter and form productive series. This is a further confirmation of the differentiation between blends and clipped compounds, which, in spite of their AC form, are not productive. By contrast, semantically, blends are as compositional as coordinate or attributive compounds, but often display a lower degree of opacity. Finally, blend names are commonly used to designate hybrid mixtures, whereas compound names are given to chemical compounds according to the chemical nomenclature set of rules developed by the International Union of Pure and Applied Chemistry (IUPAC). This suggests that names are often pur- posefully chosen to reflect \u2013 iconically \u2013 the structure or chemistry of the mix- ture or compound they refer to.",
+      "publicationTitle": "Italian Journal of Linguistics",
+      "volume": "33",
+      "issue": "1",
+      "pages": "3-34",
+      "date": "2021",
+      "series": "",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "",
+      "language": "en",
+      "DOI": "10.26346/1120-2726-165",
+      "ISSN": "-",
+      "shortTitle": "",
+      "url": "https://www.italian-journal-linguistics.com/app/uploads/2021/07/1_Mattiello.pdf",
+      "accessDate": "",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "",
+      "callNumber": "",
+      "rights": "",
+      "extra": "https://eneoli.wikibase.cloud/entity/Q2225",
+      "tags": [
+        {
+          "tag": "T3.1"
+        },
+        {
+          "tag": "blending_subcorpus"
+        },
+        {
+          "tag": "on-wikibase"
+        },
+        {
+          "tag": "processed_fulltext"
+        },
+        {
+          "tag": "term-indexed"
+        },
+        {
+          "tag": "validated metadata"
+        }
+      ],
+      "collections": [
+        "4VVJDXGU",
+        "XWJ6AKLI",
+        "ASPUCB3R"
+      ],
+      "relations": {
+        "owl:sameAs": "http://zotero.org/groups/5392498/items/SHBXUPN3",
+        "dc:replaces": [
+          "http://zotero.org/groups/5449136/items/LCN2WVFC",
+          "http://zotero.org/groups/5449136/items/ID566EEF",
+          "http://zotero.org/groups/5449136/items/XKVR3UGZ"
+        ]
+      },
+      "dateAdded": "2024-04-03T18:11:04Z",
+      "dateModified": "2025-03-27T08:23:58Z"
+    },
+    "wikibase_entity": "Q2225"
+  },
+  {
+    "key": "8VHCKS6X",
+    "version": 26445,
+    "library": {
+      "type": "group",
+      "id": 5449136,
+      "name": "NeoCorpus",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/neocorpus",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5449136/items/8VHCKS6X",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/neocorpus/items/8VHCKS6X",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/5449136/items/CBNZNGJZ",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 2537902
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 13804236,
+        "username": "JM_KTU",
+        "name": "Jurgita Mikelionien\u0117",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/jm_ktu",
+            "type": "text/html"
+          }
+        }
+      },
+      "lastModifiedByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Aleksait\u0117",
+      "parsedDate": "2021",
+      "numChildren": 9
+    },
+    "data": {
+      "key": "8VHCKS6X",
+      "version": 26445,
+      "itemType": "journalArticle",
+      "title": "Lexical blends in the Lithuanian language: the case of the Database of Lithuanian Neologisms",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Agn\u0117",
+          "lastName": "Aleksait\u0117"
+        }
+      ],
+      "abstractNote": "Lithuanian linguistics tracts have long approached lexical blends exclusively as speech-error blends. Latest research based on the continuously updated Database of Lithuanian Neologisms (DLN) shows that, when it comes to the Lithuanian language, there are the distinct speech-error blends and intentional blends, accounting for 2.4 % of all new lexis in the DLN. The aim of this paper is to look into the recorded blends from the following perspectives: (a) origin; (b) structure; (c) type of blending, and so on. The article also contains a brief introduction of the DLN that has been in the works at the Institute of the Lithuanian Language since 2011, it being the source of the material covered in the study, as well as a concise overview of the scarce studies of blends in Lithuania.",
+      "publicationTitle": "Buletin \u015ftiin\u0163ific - Universitatea de Nord din Baia Mare. Seria A, Fascicula filologie",
+      "volume": "30",
+      "issue": "",
+      "pages": "17-34",
+      "date": "2021",
+      "series": "",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "",
+      "language": "en",
+      "DOI": "10.37193/BSFF",
+      "ISSN": "1583-1264",
+      "shortTitle": "",
+      "url": "https://bslr.ubm.ro/files/2021/01.Aleksaite_Agne_(17-34)_BSLR_2021.pdf",
+      "accessDate": "",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "www.lituanistika.lt",
+      "callNumber": "",
+      "rights": "",
+      "extra": "https://eneoli.wikibase.cloud/entity/Q2204",
+      "tags": [
+        {
+          "tag": "T3.1"
+        },
+        {
+          "tag": "blending_subcorpus"
+        },
+        {
+          "tag": "on-wikibase"
+        },
+        {
+          "tag": "processed_fulltext"
+        },
+        {
+          "tag": "term-indexed"
+        },
+        {
+          "tag": "validated metadata"
+        }
+      ],
+      "collections": [
+        "4VVJDXGU",
+        "CNQN4I8Q",
+        "ASPUCB3R"
+      ],
+      "relations": {
+        "owl:sameAs": [
+          "http://zotero.org/groups/5392498/items/XIAVNR4R",
+          "http://zotero.org/groups/5392498/items/K6E6QYFE"
+        ],
+        "dc:replaces": [
+          "http://zotero.org/groups/5449136/items/6JR33WH5",
+          "http://zotero.org/groups/5449136/items/KX76TW7Z",
+          "http://zotero.org/groups/5449136/items/AUUDGXXF",
+          "http://zotero.org/groups/5449136/items/GGSXXDZI"
+        ]
+      },
+      "dateAdded": "2024-09-11T08:27:55Z",
+      "dateModified": "2025-03-27T08:23:53Z"
+    },
+    "wikibase_entity": "Q2204"
+  },
+  {
+    "key": "ZCEVSDC5",
+    "version": 26443,
+    "library": {
+      "type": "group",
+      "id": 5449136,
+      "name": "NeoCorpus",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/neocorpus",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/5449136/items/ZCEVSDC5",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/neocorpus/items/ZCEVSDC5",
+        "type": "text/html"
+      },
+      "attachment": {
+        "href": "https://api.zotero.org/groups/5449136/items/N8W5EG5R",
+        "type": "application/json",
+        "attachmentType": "application/pdf",
+        "attachmentSize": 3544740
+      }
+    },
+    "meta": {
+      "createdByUser": {
+        "id": 7366654,
+        "username": "ana.salgado",
+        "name": "Ana Salgado",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/ana.salgado",
+            "type": "text/html"
+          }
+        }
+      },
+      "lastModifiedByUser": {
+        "id": 772439,
+        "username": "david_lindemann",
+        "name": "David Lindemann",
+        "links": {
+          "alternate": {
+            "href": "https://www.zotero.org/david_lindemann",
+            "type": "text/html"
+          }
+        }
+      },
+      "creatorSummary": "Devereux",
+      "parsedDate": "1984",
+      "numChildren": 10
+    },
+    "data": {
+      "key": "ZCEVSDC5",
+      "version": 26443,
+      "itemType": "journalArticle",
+      "title": "Shortenings, Blends and Acronyms",
+      "creators": [
+        {
+          "creatorType": "author",
+          "firstName": "Robert",
+          "lastName": "Devereux"
+        }
+      ],
+      "abstractNote": "",
+      "publicationTitle": "Word Ways",
+      "volume": "17",
+      "issue": "4",
+      "pages": "210-215",
+      "date": "1984",
+      "series": "",
+      "seriesTitle": "",
+      "seriesText": "",
+      "journalAbbreviation": "",
+      "language": "en",
+      "DOI": "",
+      "ISSN": "-",
+      "shortTitle": "",
+      "url": "https://digitalcommons.butler.edu/wordways/vol17/iss4/4/",
+      "accessDate": "2024-05-01",
+      "archive": "",
+      "archiveLocation": "",
+      "libraryCatalog": "",
+      "callNumber": "",
+      "rights": "",
+      "extra": "https://eneoli.wikibase.cloud/entity/Q2192",
+      "tags": [
+        {
+          "tag": "T3.1"
+        },
+        {
+          "tag": "blending_subcorpus"
+        },
+        {
+          "tag": "on-wikibase"
+        },
+        {
+          "tag": "processed_fulltext"
+        },
+        {
+          "tag": "term-indexed"
+        },
+        {
+          "tag": "validated metadata"
+        }
+      ],
+      "collections": [
+        "4VVJDXGU",
+        "XWJ6AKLI",
+        "ASPUCB3R"
+      ],
+      "relations": {
+        "owl:sameAs": "http://zotero.org/groups/5392498/items/RE636TU5",
+        "dc:replaces": [
+          "http://zotero.org/groups/5449136/items/5W2NXSGN",
+          "http://zotero.org/groups/5449136/items/IMCI8EZH",
+          "http://zotero.org/groups/5449136/items/RJMS4967"
+        ]
+      },
+      "dateAdded": "2025-01-14T15:14:02Z",
+      "dateModified": "2025-03-27T08:23:50Z"
+    },
+    "wikibase_entity": "Q2192"
+  }
+]

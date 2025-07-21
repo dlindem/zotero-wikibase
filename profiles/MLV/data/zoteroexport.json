@@ -1,7 +1,7 @@
 [
   {
-    "key": "8FDDJTJA",
-    "version": 1539,
+    "key": "JUIS4KQK",
+    "version": 1649,
     "library": {
       "type": "group",
       "id": 5165329,
@@ -15,18 +15,12 @@
     },
     "links": {
       "self": {
-        "href": "https://api.zotero.org/groups/5165329/items/8FDDJTJA",
+        "href": "https://api.zotero.org/groups/5165329/items/JUIS4KQK",
         "type": "application/json"
       },
       "alternate": {
-        "href": "https://www.zotero.org/groups/mlv/items/8FDDJTJA",
+        "href": "https://www.zotero.org/groups/mlv/items/JUIS4KQK",
         "type": "text/html"
-      },
-      "attachment": {
-        "href": "https://api.zotero.org/groups/5165329/items/LDUDHKIU",
-        "type": "application/json",
-        "attachmentType": "application/pdf",
-        "attachmentSize": 6260689
       }
     },
     "meta": {
@@ -41,49 +35,70 @@
           }
         }
       },
-      "creatorSummary": "Alonso Arrospide",
-      "parsedDate": "2021",
-      "numChildren": 1
+      "creatorSummary": "Bilbao",
+      "parsedDate": "2020",
+      "numChildren": 0
     },
     "data": {
-      "key": "8FDDJTJA",
-      "version": 1539,
-      "itemType": "thesis",
-      "title": "Larramendiren Hiztegi Hirukoitzaren digitalizazioa",
+      "key": "JUIS4KQK",
+      "version": 1649,
+      "itemType": "book",
+      "title": "Oinarrizko hiztegia: Latina-euskara",
       "creators": [
         {
           "creatorType": "author",
-          "firstName": "Mikel",
-          "lastName": "Alonso Arrospide"
+          "firstName": "Gidor",
+          "lastName": "Bilbao"
         }
       ],
       "abstractNote": "",
-      "thesisType": "MA Thesis",
-      "university": "UPV/EHU University of the Basque Country",
-      "place": "Vitoria-Gasteiz",
-      "date": "2021",
-      "numPages": "",
-      "language": "EU",
+      "series": "",
+      "seriesNumber": "",
+      "volume": "",
+      "numberOfVolumes": "",
+      "edition": "",
+      "place": "Bilbao",
+      "publisher": "Vox-Larrouse; UPV/EHU Argitalpen Zerbitzua",
+      "date": "2020",
+      "numPages": "797",
+      "language": "eu",
+      "ISBN": "978-84-1319-134-8",
       "shortTitle": "",
-      "url": "http://doi.org/10.13140/RG.2.2.27926.68169",
-      "accessDate": "2021-04-07T16:28:20Z",
+      "url": "",
+      "accessDate": "",
       "archive": "",
       "archiveLocation": "",
-      "libraryCatalog": "DOI.org (Datacite)",
+      "libraryCatalog": "",
       "callNumber": "",
       "rights": "",
-      "extra": "https://monumenta.wikibase.cloud/entity/Q1276\n",
+      "extra": "OCLC: 1260195250",
       "tags": [
         {
-          "tag": "on-wikibase"
+          "tag": "Basque"
+        },
+        {
+          "tag": "CLARIAH paper"
+        },
+        {
+          "tag": "Dictionaries"
+        },
+        {
+          "tag": "Latin language"
+        },
+        {
+          "tag": "wikibase-export"
         }
       ],
-      "collections": [],
-      "relations": {},
-      "dateAdded": "2024-02-29T20:52:38Z",
-      "dateModified": "2024-02-29T20:52:51Z"
+      "collections": [
+        "AEUY97BC"
+      ],
+      "relations": {
+        "owl:sameAs": "http://zotero.org/groups/5352039/items/4J6Q8LYS"
+      },
+      "dateAdded": "2024-03-01T21:09:10Z",
+      "dateModified": "2025-03-29T23:16:34Z"
     },
-    "wikibase_entity": "Q1276"
+    "wikibase_entity": false
   },
   {
     "key": "7Y53U7IW",
