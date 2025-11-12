@@ -193,7 +193,7 @@ def import_wikidata_entity(wdid, wbid=False, wd_to_wb={}, process_labels=True, p
     print('Will import ' + wdid + ' from wikidata... to existing wikibase entity: '+str(wbid))
     apiurl = 'https://www.wikidata.org/w/api.php?action=wbgetentities&ids=' + wdid + '&format=json'
     print(apiurl)
-    wdjsonsource = requests.get(url=apiurl)
+    wdjsonsource = requests.get(url=apiurl, headers={'User-Agent': 'User:DavidL wikibaseintegrator'})
     if wdid in wdjsonsource.json()['entities']:
         importentityjson = wdjsonsource.json()['entities'][wdid]
         # print(str(importentityjson))
